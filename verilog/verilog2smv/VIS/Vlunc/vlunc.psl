@@ -1,0 +1,2 @@
+PSLSPEC
+never ((m_lunc.Lcmd = 0d1_1 & m_lunc.Ucmd = 0d1_1) | (m_lunc.Lcmd = 0d1_1 & m_lunc.Ccmd = 0d1_1) | (m_lunc.Lcmd = 0d1_1 & m_lunc.Ncmd = 0d1_1) | (m_lunc.Ucmd = 0d1_1 & m_lunc.Ccmd = 0d1_1) | (m_lunc.Ucmd = 0d1_1 & m_lunc.Ncmd = 0d1_1) | (m_lunc.Ccmd = 0d1_1 & m_lunc.Ncmd = 0d1_1));

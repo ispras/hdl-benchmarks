@@ -1,0 +1,17 @@
+AG(
+((State<0>=1)*(State<1>=1)*(State<2>=0))*(monitor_lw=1)*(monitor_reset=0)
+->
+AX((State<0>=0)*(State<1>=0)*(State<2>=1))
+);
+
+EF( (monitor_sw=1) *((State<0>=1)*(State<1>=1)*(State<2>=0)));
+EF(MDRW=1);
+EF(MemRW=1);
+EF(JmpE=1);
+EF((State<0>=0)*(State<1>=0)*(State<2>=1));
+
+AG(
+((State<0>=1)*(State<1>=1)*(State<2>=0))*(monitor_reset=0)
+->
+EX(((State<0>=1)*(State<1>=1)*(State<2>=0)))
+);

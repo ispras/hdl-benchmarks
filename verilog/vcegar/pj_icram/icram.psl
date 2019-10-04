@@ -1,0 +1,6 @@
+DEFINE
+old_di_23_16 := m_main_SUBSTITUTED.old_di[23:16];
+icram_adr := m_main_SUBSTITUTED.ic_ram[(m_main_SUBSTITUTED.old_adr::0b3_001)];
+
+PSLSPEC
+always (m_main_SUBSTITUTED.init_state = 0d1_1 | (m_main_SUBSTITUTED.init_state = 0d1_0 & ((m_main_SUBSTITUTED.old_we_1 = 0d1_1 & (icram_adr = old_di_23_16)) | m_main_SUBSTITUTED.old_we_1 = 0d1_0)));

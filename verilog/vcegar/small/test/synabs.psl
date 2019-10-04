@@ -1,0 +1,2 @@
+PSLSPEC
+always (m_main_SUBSTITUTED.a < m_main_SUBSTITUTED.b);

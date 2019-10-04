@@ -1,0 +1,14 @@
+//#PASS: The antecedent is never satisfied for the reachable states.
+//assert property G(reg_file<*0*>[11:0]=0 * !sp[2:1]=b11);
+assert property (reg_file[0]==0 && (sp!=3'd6 || sp!=3'd7));
+//#PASS: the 0-th entry of the stack is never written and the stack pointer
+//# is never 6 or 7.
+//assert property G(sp[2:0]=6 -> X(sp[2:0]=7));
+assert property (old == 1'b0 || sp_old != 3'd6 || sp == 3'd7);
+//#PASS: The antecedent is never satisfied for the reachable states.
+// assert property G(reg_file<*0*>[11:0]=b000000000010 -> X(reg_file<*0*>[11:0]=b000000000001));
+assert property (old == 1'b0 || reg_file0_old != 12'd2 || reg_file[0] ==12'd1);
+//#PASS: the contents of the fifth entry of the stack cannot change in the
+//# next clock cycle unless the stack pointer is either 4 or 5.
+// assert property G(!(sp[2:0]=b100) * !(sp[2:0]=b101) -> (reg_file<*5*>[11:0]=b101010101010 -> X(reg_file<*5*>[11:0]=b101010101010)));
+assert property (old == 1'b0 || !(sp_old!=3'd4 && sp_old!=3'd5) || (reg_file5_old!=12'b101010101010 || reg_file[5]==12'b101010101010));

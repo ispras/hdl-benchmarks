@@ -1,0 +1,32 @@
+//invariant #PASS: The program counter is always aligned on a half-word boundary.
+//PC[0]=0 * NPC[0]=0;
+assert property (!PC[0] && !NPC[0]);
+
+//invariant #PASS: Register R0 is never written.
+//Registers<*0*>[15:0]=0;
+assert property (Registers[0] == 16'd0);
+
+//invariant #PASS: The state is between 0 and 4.
+//State[2]=0 + State[1:0]=0;
+assert property (!State[2] || State[1:0]==2'd0);
+
+//invariant #PASS: If the two source fields are the same, the ALU input register
+//# will hold the same  value during the EXE, MEM, and WB states.
+//adFld1[1:0]==adFld2[1:0] -> (State[2:1]=0 + A[15:0]==B[15:0]);
+assert property (!(adFld1[1:0]==adFld2[1:0]) || (State[2:1]==2'd0 || A[15:0]==B[15:0]));
+
+//invariant #PASS: in case of branch, Cond is consistent with A in the MEM and WB states.
+//opcode[2:0]=b010 * State[2]=1 -> ((Cond=1 -> A[15:0]=0) * (A[15:0]=0 -> Cond=1));
+assert property (!(opcode[2:0]==3'b010 && State[2]) || ((!Cond || A[15:0]==16'd0) && (!(A[15:0]==16'd0) || Cond)));
+
+//invariant #PASS: a XOR a = 0
+//opcode[2:0]=b011 * funFld[2:0]=b100 * adFld1[1:0]==adFld2[1:0] -> (State[2]=1 -> ALUOutput[15:0]=0);
+assert property (!(opcode[2:0]==3'b011 && funFld[2:0]==3'b100 && adFld1[1:0]==adFld2[1:0]) || (!State[2] || ALUOutput[15:0]==16'd0));
+
+//invariant #PASS: a OR a = a AND a = a
+//opcode[2:0]=b011 * funFld[2:1]=b01 * adFld1[1:0]==adFld2[1:0] -> (State[2]=1 -> ALUOutput[15:0]==A[15:0]);
+assert property (!(opcode[2:0]==3'b011 && funFld[2:1]==2'b01 && adFld1[1:0]==adFld2[1:0]) || (!State[2] || ALUOutput[15:0]==A[15:0]));
+
+//invariant #PASS: a - a = 0
+// opcode[2:0]=b011 * funFld[2:0]=b001 * adFld1[1:0]==adFld2[1:0] -> (State[2]=1 -> ALUOutput[15:0]=0);
+assert property (!(opcode[2:0]==3'b011 && funFld[2:0]==3'b001 && adFld1[1:0]==adFld2[1:0]) || (!State[2] || ALUOutput[15:0]==16'd0));

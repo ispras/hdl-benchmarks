@@ -1,0 +1,2 @@
+PSLSPEC
+always (!(m_main_SUBSTITUTED.mpx = 0d1_1) | m_main_SUBSTITUTED.rdy = 0d1_1);

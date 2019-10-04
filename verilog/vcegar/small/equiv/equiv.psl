@@ -1,0 +1,2 @@
+PSLSPEC
+always (!(m_main_SUBSTITUTED.in2 = 0d8_0) | m_main_SUBSTITUTED.out1 = m_main_SUBSTITUTED.out2);

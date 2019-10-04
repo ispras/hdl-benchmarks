@@ -1,0 +1,3 @@
+(~(RxValid_o==1) | (RxActive_o==1))
+
+

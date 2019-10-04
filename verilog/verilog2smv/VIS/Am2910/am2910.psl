@@ -1,0 +1,11 @@
+PSLSPEC
+always (m_am2910.reg_file[0] = 0d12_0 & (m_am2910.sp != 0d3_6 | m_am2910.sp != 0d3_7));
+
+PSLSPEC
+always (m_am2910.old = 0b1_0 | m_am2910.sp_old != 0d3_6 | m_am2910.sp = 0d3_7);
+
+PSLSPEC
+always (m_am2910.old = 0b1_0 | m_am2910.reg_file0_old != 0d12_2 | m_am2910.reg_file[0] = 0d12_1);
+
+PSLSPEC
+always (m_am2910.old = 0b1_0 | !(m_am2910.sp_old != 0d3_4 & m_am2910.sp_old != 0d3_5) | (m_am2910.reg_file5_old != 0b12_101010101010 | m_am2910.reg_file[5] = 0b12_101010101010));

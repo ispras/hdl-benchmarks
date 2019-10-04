@@ -1,0 +1,5 @@
+//invariant property: MdoEn=1 -> Busy=1;
+assert property (!MdoEn || Busy);
+
+//invariant property: Busy=1 -> MdoEn=1;
+assert property (!Busy || MdoEn);

@@ -1,0 +1,2 @@
+PSLSPEC
+always (!(m_main_SUBSTITUTED.RxValid_o = 0d1_1) | (m_main_SUBSTITUTED.RxActive_o = 0d1_1));

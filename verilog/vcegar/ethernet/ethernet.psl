@@ -1,0 +1,8 @@
+PSLSPEC
+always (m_main_SUBSTITUTED.ack0 = m_main_SUBSTITUTED.ack1);
+
+PSLSPEC
+always ((m_main_SUBSTITUTED.old_cs = 0d1_0 | m_main_SUBSTITUTED.send_plr0 = 0d1_1) & (m_main_SUBSTITUTED.old_cs = 0d1_0 | m_main_SUBSTITUTED.send_plr1 = 0d1_1) & (m_main_SUBSTITUTED.old_cs = 0d1_1 | m_main_SUBSTITUTED.send_plr0 = 0d1_0) & (m_main_SUBSTITUTED.old_cs = 0d1_1 | m_main_SUBSTITUTED.send_plr1 = 0d1_0));
+
+PSLSPEC
+always ((m_main_SUBSTITUTED.cntr < 0d2_3) | (!((m_main_SUBSTITUTED.in0_cycle4 = 0d2_2) & (m_main_SUBSTITUTED.in0_cycle3 = 0d2_1) & (m_main_SUBSTITUTED.in0_cycle2 = 0d2_1)) | m_main_SUBSTITUTED.frame_ready0 = 0d1_1));

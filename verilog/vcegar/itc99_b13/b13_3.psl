@@ -1,0 +1,5 @@
+DEFINE
+tx_conta_9_8 := m_main_SUBSTITUTED.tx_conta[9:8];
+
+PSLSPEC
+always (tx_conta_9_8 = 0d2_0);

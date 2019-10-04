@@ -1,0 +1,2 @@
+PSLSPEC
+always (m_bcu.customer != 0d2_3 | m_bcu.write_accept_n_reg = 0d1_1);

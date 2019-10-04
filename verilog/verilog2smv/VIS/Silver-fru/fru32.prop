@@ -1,0 +1,8 @@
+//invariant: !(RegA[4:0]=31 * dOpd1[31:26]=0); 
+assert property (!(RegA[4:0]==5'd31 && dOpd1[31:26]==6'd0));
+
+//invariant: !(RegB[4:0]=31 * dOpd1[31:26]=0);
+assert property (!(RegB[4:0]==5'd31 && dOpd1[31:26]==6'd0));
+
+//invariant: !(SEL_A[1:0]=2 -> dOpd1[31:26]==EXU_ResData[31:26]);
+assert property (!(!(SEL_A==2'd2) || dOpd1[31:26]==EXU_ResData[31:26]));

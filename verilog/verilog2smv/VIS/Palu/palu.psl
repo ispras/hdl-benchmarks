@@ -1,0 +1,2 @@
+PSLSPEC
+never ( m_palu.bubbleEx = 0d1_1 & m_palu.bubbleWb = 0d1_1 & (m_palu.regFile[3] = 0d4_9 | m_palu.regFile[1] = 0d4_9 | m_palu.regFile[2] = 0d4_9 | m_palu.regFile[0] = 0d4_9 ) );

@@ -1,0 +1,1 @@
+~(~EX_MEM_valid & ~MEM_WB_update_pc & ~PC_valid & ~ID_EX_valid & IF_ID_valid & ~IF_ID_update_pc & ~ID_EX_update_pc & ~EX_MEM_update_pc)

@@ -1,0 +1,6 @@
+DEFINE
+dout_31 := m_main_SUBSTITUTED.pi_dataout[31:31];
+data_tmp_31 := m_main_SUBSTITUTED.mst_data_tmp1[31:31];
+
+PSLSPEC
+always (!((m_main_SUBSTITUTED.pi_state = 0b2_01 | m_main_SUBSTITUTED.pi_state = 0b2_10) & (m_main_SUBSTITUTED.acknowledge = 0b3_100) & (m_main_SUBSTITUTED.read = 0d1_1) & (dout_31 = 0d1_1) & (m_main_SUBSTITUTED.select = 0d1_1)) | (data_tmp_31 = 0d1_1));

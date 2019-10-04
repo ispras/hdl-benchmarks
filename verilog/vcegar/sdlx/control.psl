@@ -1,0 +1,7 @@
+DEFINE
+state_0 := m_main_SUBSTITUTED.State[0:0];
+state_1 := m_main_SUBSTITUTED.State[1:1];
+state_2 := m_main_SUBSTITUTED.State[2:2];
+
+PSLSPEC
+always (!((state_0 = 0d1_0) & (state_1 = 0d1_1) & (state_2 = 0d1_0) & (m_main_SUBSTITUTED.monitor_nop = 0d1_0)) | ((m_main_SUBSTITUTED.ARW = 0d1_1) & (m_main_SUBSTITUTED.BRW = 0d1_1) &(m_main_SUBSTITUTED.RegRW = 0d1_0)& (m_main_SUBSTITUTED.IRW = 0d1_1)&(m_main_SUBSTITUTED.IRRW = 0d1_0)&(m_main_SUBSTITUTED.PCRW = 0d1_1) & (m_main_SUBSTITUTED.NPCRW = 0d1_0)&(m_main_SUBSTITUTED.ALUoutRW = 0d1_0) & (m_main_SUBSTITUTED.MDRW = 0d1_0)&(m_main_SUBSTITUTED.BCRW = 0d1_0)));

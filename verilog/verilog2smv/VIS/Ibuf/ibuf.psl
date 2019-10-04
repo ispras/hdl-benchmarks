@@ -1,0 +1,18 @@
+DEFINE
+qAge_0 := m_iqc.qAge[0:0];
+qAge_1 := m_iqc.qAge[1:1];
+qAge_2 := m_iqc.qAge[2:2];
+valid_0 := m_iqc.valid[0:0];
+valid_1 := m_iqc.valid[1:1];
+valid_2 := m_iqc.valid[2:2];
+
+PSLSPEC
+always ((qAge_0 = 0d1_0 | qAge_1 = 0d1_1 | qAge_2 = 0d1_0) &
+                (qAge_0 = 0d1_1 | qAge_1 = 0d1_0 | qAge_2 = 0d1_1) &
+                (qAge_0 = 0d1_0 | valid_0 = 0d1_1) &
+                (qAge_1 = 0d1_0 | valid_0 = 0d1_1) &
+                (qAge_2 = 0d1_0 | valid_1 = 0d1_1) &
+                (!(valid_0 = 0d1_1 & valid_1 = 0d1_0) | qAge_0 = 0d1_1) &
+                (!(valid_0 = 0d1_1 & valid_2 = 0d1_0) | qAge_1 = 0d1_1) &
+                (!(valid_1 = 0d1_1 & valid_2 = 0d1_0) | qAge_2 = 0d1_1));
+                

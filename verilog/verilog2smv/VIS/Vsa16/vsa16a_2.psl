@@ -1,0 +1,5 @@
+DEFINE
+regs_0 := m_vsa16a.Registers[0];
+
+PSLSPEC
+always (regs_0 = 0d16_0);

@@ -1,0 +1,151 @@
+/*#PASS: From strong taken it is impossible to transition to not taken.
+# From strong not taken it is impossible to transition to taken.
+G((state_bank0<*0*>[1:0]=3 -> X(state_bank0<*0*>[1]=1)) *
+  (state_bank0<*1*>[1:0]=3 -> X(state_bank0<*1*>[1]=1)) *
+  (state_bank0<*2*>[1:0]=3 -> X(state_bank0<*2*>[1]=1)) *
+  (state_bank0<*3*>[1:0]=3 -> X(state_bank0<*3*>[1]=1)) *
+  (state_bank1<*0*>[1:0]=3 -> X(state_bank1<*0*>[1]=1)) *
+  (state_bank1<*1*>[1:0]=3 -> X(state_bank1<*1*>[1]=1)) *
+  (state_bank1<*2*>[1:0]=3 -> X(state_bank1<*2*>[1]=1)) *
+  (state_bank1<*3*>[1:0]=3 -> X(state_bank1<*3*>[1]=1)) *
+  (state_bank2<*0*>[1:0]=3 -> X(state_bank2<*0*>[1]=1)) *
+  (state_bank2<*1*>[1:0]=3 -> X(state_bank2<*1*>[1]=1)) *
+  (state_bank2<*2*>[1:0]=3 -> X(state_bank2<*2*>[1]=1)) *
+  (state_bank2<*3*>[1:0]=3 -> X(state_bank2<*3*>[1]=1)) *
+  (state_bank3<*0*>[1:0]=3 -> X(state_bank3<*0*>[1]=1)) *
+  (state_bank3<*1*>[1:0]=3 -> X(state_bank3<*1*>[1]=1)) *
+  (state_bank3<*2*>[1:0]=3 -> X(state_bank3<*2*>[1]=1)) *
+  (state_bank3<*3*>[1:0]=3 -> X(state_bank3<*3*>[1]=1)) *
+  (state_bank0<*0*>[1:0]=0 -> X(state_bank0<*0*>[1]=0)) *
+  (state_bank0<*1*>[1:0]=0 -> X(state_bank0<*1*>[1]=0)) *
+  (state_bank0<*2*>[1:0]=0 -> X(state_bank0<*2*>[1]=0)) *
+  (state_bank0<*3*>[1:0]=0 -> X(state_bank0<*3*>[1]=0)) *
+  (state_bank1<*0*>[1:0]=0 -> X(state_bank1<*0*>[1]=0)) *
+  (state_bank1<*1*>[1:0]=0 -> X(state_bank1<*1*>[1]=0)) *
+  (state_bank1<*2*>[1:0]=0 -> X(state_bank1<*2*>[1]=0)) *
+  (state_bank1<*3*>[1:0]=0 -> X(state_bank1<*3*>[1]=0)) *
+  (state_bank2<*0*>[1:0]=0 -> X(state_bank2<*0*>[1]=0)) *
+  (state_bank2<*1*>[1:0]=0 -> X(state_bank2<*1*>[1]=0)) *
+  (state_bank2<*2*>[1:0]=0 -> X(state_bank2<*2*>[1]=0)) *
+  (state_bank2<*3*>[1:0]=0 -> X(state_bank2<*3*>[1]=0)) *
+  (state_bank3<*0*>[1:0]=0 -> X(state_bank3<*0*>[1]=0)) *
+  (state_bank3<*1*>[1:0]=0 -> X(state_bank3<*1*>[1]=0)) *
+  (state_bank3<*2*>[1:0]=0 -> X(state_bank3<*2*>[1]=0)) *
+  (state_bank3<*3*>[1:0]=0 -> X(state_bank3<*3*>[1]=0)))*/
+
+assert property (old == 1'b0 || (
+                (state_bank0_old[0]<2'd3 || state_bank0[0]>=2'd2) &&
+                (state_bank0_old[1]<2'd3 || state_bank0[1]>=2'd2) &&
+                (state_bank0_old[2]<2'd3 || state_bank0[2]>=2'd2) &&
+                (state_bank0_old[3]<2'd3 || state_bank0[3]>=2'd2) &&
+                (state_bank1_old[0]<2'd3 || state_bank1[0]>=2'd2) &&
+                (state_bank1_old[1]<2'd3 || state_bank1[1]>=2'd2) &&
+                (state_bank1_old[2]<2'd3 || state_bank1[2]>=2'd2) &&
+                (state_bank1_old[3]<2'd3 || state_bank1[3]>=2'd2) &&
+                (state_bank2_old[0]<2'd3 || state_bank2[0]>=2'd2) &&
+                (state_bank2_old[1]<2'd3 || state_bank2[1]>=2'd2) &&
+                (state_bank2_old[2]<2'd3 || state_bank2[2]>=2'd2) &&
+                (state_bank2_old[3]<2'd3 || state_bank2[3]>=2'd2) &&
+                (state_bank3_old[0]<2'd3 || state_bank3[0]>=2'd2) &&
+                (state_bank3_old[1]<2'd3 || state_bank3[1]>=2'd2) &&
+                (state_bank3_old[2]<2'd3 || state_bank3[2]>=2'd2) &&
+                (state_bank3_old[3]<2'd3 || state_bank3[3]>=2'd2) &&
+                (state_bank0_old[0]!=2'd0 || state_bank0[0]<2'd2 ) &&
+                (state_bank0_old[1]!=2'd0 || state_bank0[1]<2'd2 ) &&
+                (state_bank0_old[2]!=2'd0 || state_bank0[2]<2'd2 ) &&
+                (state_bank0_old[3]!=2'd0 || state_bank0[3]<2'd2 ) &&
+                (state_bank1_old[0]!=2'd0 || state_bank1[0]<2'd2 ) &&
+                (state_bank1_old[1]!=2'd0 || state_bank1[1]<2'd2 ) &&
+                (state_bank1_old[2]!=2'd0 || state_bank1[2]<2'd2 ) &&
+                (state_bank1_old[3]!=2'd0 || state_bank1[3]<2'd2 ) &&
+                (state_bank2_old[0]!=2'd0 || state_bank2[0]<2'd2 ) &&
+                (state_bank2_old[1]!=2'd0 || state_bank2[1]<2'd2 ) &&
+                (state_bank2_old[2]!=2'd0 || state_bank2[2]<2'd2 ) &&
+                (state_bank2_old[3]!=2'd0 || state_bank2[3]<2'd2 ) &&
+                (state_bank3_old[0]!=2'd0 || state_bank3[0]<2'd2 ) &&
+                (state_bank3_old[1]!=2'd0 || state_bank3[1]<2'd2 ) &&
+                (state_bank3_old[2]!=2'd0 || state_bank3[2]<2'd2 ) &&
+                (state_bank3_old[3]!=2'd0 || state_bank3[3]<2'd2 ) ) );
+
+ /*#PASS: If all lines agree on taken/not taken, the prediction has to agree
+# as well on the next clock cycle. To avoid referring to stall, we weaken
+# the property and look only at the case in which the prediction already
+# agrees in the current state.
+G((state_bank3<*0*>[1]=1 * state_bank3<*1*>[1]=1 * state_bank3<*2*>[1]=1 *
+   state_bank3<*3*>[1]=1 * prediction[3]=1 -> X(prediction[3]=1)) *
+  (state_bank2<*0*>[1]=1 * state_bank2<*1*>[1]=1 * state_bank2<*2*>[1]=1 *
+   state_bank2<*3*>[1]=1 * prediction[2]=1 -> X(prediction[2]=1)) *
+  (state_bank1<*0*>[1]=1 * state_bank1<*1*>[1]=1 * state_bank1<*2*>[1]=1 *
+   state_bank1<*3*>[1]=1 * prediction[1]=1 -> X(prediction[1]=1)) *
+  (state_bank0<*0*>[1]=1 * state_bank0<*1*>[1]=1 * state_bank0<*2*>[1]=1 *
+   state_bank0<*3*>[1]=1 * prediction[0]=1 -> X(prediction[0]=1)) *
+  (state_bank3<*0*>[1]=0 * state_bank3<*1*>[1]=0 * state_bank3<*2*>[1]=0 *
+   state_bank3<*3*>[1]=0 * prediction[3]=0 -> X(prediction[3]=0)) *
+  (state_bank2<*0*>[1]=0 * state_bank2<*1*>[1]=0 * state_bank2<*2*>[1]=0 *
+   state_bank2<*3*>[1]=0 * prediction[2]=0 -> X(prediction[2]=0)) *
+  (state_bank1<*0*>[1]=0 * state_bank1<*1*>[1]=0 * state_bank1<*2*>[1]=0 *
+   state_bank1<*3*>[1]=0 * prediction[1]=0 -> X(prediction[1]=0)) *
+  (state_bank0<*0*>[1]=0 * state_bank0<*1*>[1]=0 * state_bank0<*2*>[1]=0 *
+   state_bank0<*3*>[1]=0 * prediction[0]=0 -> X(prediction[0]=0))
+);*/
+
+assert property (old == 1'b0 || (
+                (!(state_bank3_old[0]>=2'd2 && state_bank3_old[1]>=2'd2 && state_bank3_old[2]>=2'd2 &&
+                state_bank3_old[3]>=2'd2 && prediction_old[3]==1'd1) || prediction[3]==1'd1) &&
+                (!(state_bank2_old[0]>=2'd2 && state_bank2_old[1]>=2'd2 && state_bank2_old[2]>=2'd2 &&
+                state_bank2_old[3]>=2'd2 && prediction_old[2]==1'd1) || prediction[2]==1'd1) &&
+                (!(state_bank1_old[0]>=2'd2 && state_bank1_old[1]>=2'd2 && state_bank1_old[2]>=2'd2 &&
+                state_bank1_old[3]>=2'd2 && prediction_old[1]==1'd1) || prediction[1]==1'd1) &&
+                (!(state_bank0_old[0]>=2'd2 && state_bank0_old[1]>=2'd2 && state_bank0_old[2]>=2'd2 &&
+                state_bank0_old[3]>=2'd2 && prediction_old[0]==1'd1) || prediction[0]==1'd1) &&
+                ( state_bank3_old[0]>=2'd2 || state_bank3_old[1]>=2'd2 || state_bank3_old[2]>=2'd2 ||
+                state_bank3_old[3]>=2'd2 || prediction_old[3]==1'd1 || prediction[3]==1'd0 ) &&
+                ( state_bank2_old[0]>=2'd2 || state_bank2_old[1]>=2'd2 || state_bank2_old[2]>=2'd2 ||
+                state_bank2_old[3]>=2'd2 || prediction_old[2]==1'd1 || prediction[2]==1'd0 ) &&
+                ( state_bank1_old[0]>=2'd2 || state_bank1_old[1]>=2'd2 || state_bank1_old[2]>=2'd2 ||
+                state_bank1_old[3]>=2'd2 || prediction_old[1]==1'd1 || prediction[1]==1'd0 ) &&
+                ( state_bank0_old[0]>=2'd2 || state_bank0_old[1]>=2'd2 || state_bank0_old[2]>=2'd2 ||
+                state_bank0_old[3]>=2'd2 || prediction_old[0]==1'd1 || prediction[0]==1'd0 ) )	);
+
+/*#FAIL: If all lines agree on taken/not taken, the prediction has to agree
+# as well on the next clock cycle. It fails because it ignores stalls.
+G((state_bank3<*0*>[1]=1 * state_bank3<*1*>[1]=1 * state_bank3<*2*>[1]=1 *
+   state_bank3<*3*>[1]=1 -> X(prediction[3]=1)) *
+  (state_bank2<*0*>[1]=1 * state_bank2<*1*>[1]=1 * state_bank2<*2*>[1]=1 *
+   state_bank2<*3*>[1]=1 -> X(prediction[2]=1)) *
+  (state_bank1<*0*>[1]=1 * state_bank1<*1*>[1]=1 * state_bank1<*2*>[1]=1 *
+   state_bank1<*3*>[1]=1 -> X(prediction[1]=1)) *
+  (state_bank0<*0*>[1]=1 * state_bank0<*1*>[1]=1 * state_bank0<*2*>[1]=1 *
+   state_bank0<*3*>[1]=1 -> X(prediction[0]=1)) *
+  (state_bank3<*0*>[1]=0 * state_bank3<*1*>[1]=0 * state_bank3<*2*>[1]=0 *
+   state_bank3<*3*>[1]=0 -> X(prediction[3]=0)) *
+  (state_bank2<*0*>[1]=0 * state_bank2<*1*>[1]=0 * state_bank2<*2*>[1]=0 *
+   state_bank2<*3*>[1]=0 -> X(prediction[2]=0)) *
+  (state_bank1<*0*>[1]=0 * state_bank1<*1*>[1]=0 * state_bank1<*2*>[1]=0 *
+   state_bank1<*3*>[1]=0 -> X(prediction[1]=0)) *
+  (state_bank0<*0*>[1]=0 * state_bank0<*1*>[1]=0 * state_bank0<*2*>[1]=0 *
+   state_bank0<*3*>[1]=0 -> X(prediction[0]=0))
+);*/
+
+assert property (old == 1'b0 || (
+                (!(state_bank3_old[0]>=2'd2 && state_bank3_old[1]>=2'd2 && state_bank3_old[2]>=2'd2 &&
+                state_bank3_old[3]>=2'd2) || prediction[3]==1'd1) &&
+                (!(state_bank2_old[0]>=2'd2 && state_bank2_old[1]>=2'd2 && state_bank2_old[2]>=2'd2 &&
+                state_bank2_old[3]>=2'd2) || prediction[2]>=1'd1) &&
+                (!(state_bank1_old[0]>=2'd2 && state_bank1_old[1]>=2'd2 && state_bank1_old[2]>=2'd2 &&
+                state_bank1_old[3]>=2'd2) || prediction[1]>=1'd1) &&
+                (!(state_bank0_old[0]>=2'd2 && state_bank0_old[1]>=2'd2 && state_bank0_old[2]>=2'd2 &&
+                state_bank0_old[3]>=2'd2) || prediction[0]>=1'd1) &&
+                ( state_bank3_old[0]>=2'd2 || state_bank3_old[1]>=2'd2 || state_bank3_old[2]>=2'd2 ||
+                state_bank3_old[3]>=2'd2 || prediction[3]==1'd0) &&
+                ( state_bank2_old[0]>=2'd2 || state_bank2_old[1]>=2'd2 || state_bank2_old[2]>=2'd2 ||
+                state_bank2_old[3]>=2'd2 || prediction[2]==1'd0 ) &&
+                ( state_bank1_old[0]>=2'd2 || state_bank1_old[1]>=2'd2 || state_bank1_old[2]>=2'd2 ||
+                state_bank1_old[3]>=2'd2 || prediction[1]==1'd0 ) &&
+                ( state_bank0_old[0]>=2'd2 || state_bank0_old[1]>=2'd2 || state_bank0_old[2]>=2'd2 ||
+                state_bank0_old[3]>=2'd2 || prediction[0]==1'd0 ) )	);
+
+/*# FAIL
+!(prediction[3:0]=b1111 * state_bank3<*3*>[1:0]=0 *
+state_bank3<*2*>[1:0]=0 * state_bank3<*1*>[1:0]=0 * state_bank3<*0*>[1:0]=0);*/
+assert property ( ! (prediction==4'b1111 && state_bank3[3]==2'd0 && state_bank3[2]==2'd0 && state_bank3[1]==2'd0 && state_bank3[0]==2'd0) );

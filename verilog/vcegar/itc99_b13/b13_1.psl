@@ -1,0 +1,2 @@
+PSLSPEC
+always (!(m_main_SUBSTITUTED.error = 0d1_1) | m_main_SUBSTITUTED.tre = 0d1_1);

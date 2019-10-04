@@ -1,0 +1,2 @@
+PSLSPEC
+always (m_buffer_alloc.count_SUBSTITUTED <= 0d5_16);

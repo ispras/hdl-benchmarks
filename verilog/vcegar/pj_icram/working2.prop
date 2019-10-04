@@ -1,0 +1,1 @@
+(init_state | (~init_state & ((old_we_1 & (ic_ram[{old_adr,3'b001}] == old_di[23:16])) | ~old_we_1)))

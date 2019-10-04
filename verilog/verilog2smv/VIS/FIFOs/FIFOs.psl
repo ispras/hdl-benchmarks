@@ -1,0 +1,2 @@
+PSLSPEC
+always (m_compareFIFOs.equal = 0d1_1);

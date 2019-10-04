@@ -1,0 +1,6 @@
+DEFINE
+state_2 := m_vsa16a.State[2:2];
+state_1_0 := m_vsa16a.State[1:0];
+
+PSLSPEC
+always (state_2 = 0d1_0 | state_1_0 = 0d2_0);

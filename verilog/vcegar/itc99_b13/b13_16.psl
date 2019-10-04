@@ -1,0 +1,2 @@
+PSLSPEC
+always (!(m_main_SUBSTITUTED.load_dato = 0d1_1) | (m_main_SUBSTITUTED.soc = 0d1_1));

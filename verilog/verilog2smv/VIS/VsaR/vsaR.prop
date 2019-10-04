@@ -1,0 +1,109 @@
+//invariant #FAIL: !(Registers<*1*>[4:2]=3 * Registers<*2*>[4:2]=2 * Registers<*3*>[4:2]=1 *  LMD[4:0]=0 * ALUOutput[4:0]=0 * PC[4:0]=30);
+assert property (((Registers[1]>=12 && Registers[1]<=15)) &&
+                ((Registers[2]>=8 && Registers[2]<=11 )) &&
+                ((Registers[3]>=4 && Registers[3]<=7  )) &&
+                LMD==5'd0 && ALUOutput==5'd0 && PC==5'd0);
+
+//property: #PASS: The program counter is always aligned on a half-word boundary.
+//G(PC[0]=0 * NPC[0]=0);
+assert property (PC[0]==1'b0 && NPC[0]==1'b0);
+
+//property: #PASS: Register R0 is never written.
+//G(Registers<*0*>[4:0]=0);
+assert property (Registers[0]==5'd0);
+
+//property : #PASS: The state is between 0 and 4.
+//G(State[2]=0 + State[1:0]=0);
+assert property (State[2]==1'd0 || State[1:0]==2'd0);
+
+//property : #PASS: If the two source fields are the same, the ALU input registers
+//# will hold the same value during the EXE, MEM, and WB states.
+//G(adFld1[1:0]==adFld2[1:0] -> (State[2:1]=0 + A[4:0]==B[4:0]));
+assert property (adFld1[1:0]!=adFld2[1:0] || (State[2:1]==2'd0 || A[4:0]==B[4:0]));
+
+//property: #PASS: In case of branch, Cond is consistent with A in the MEM and WB states.
+//G(branch=1 * State[2]=1 -> ((Cond=1 -> A[4:0]=0) * (A[4:0]=0 -> Cond=1)));
+assert property (!(branch && State[2]) || ((!Cond || A[4:0]==5'd0) && (A[4:0]!=5'd0 || Cond)));
+
+//#PASS: a XOR a = 0.
+//G(regRegALU=1 * funFld[2:0]=b100 * adFld1[1:0]==adFld2[1:0] ->  (State[2]=1 -> ALUOutput[4:0]=0));
+assert property (!(regRegALU && funFld[2:0]==3'b100 && adFld1[1:0]==adFld2[1:0]) || (!State[2] || ALUOutput[4:0]==5'd0));
+
+//property: #PASS: XOR is performed correctly.
+/*G(regRegALU=1 * funFld[2:0]=b100 * 
+  (State[2]=1 + State[1:0]=0 + State[1:0]=3) ->
+   (A[4]==B[4] -> ALUOutput[4]=0) * (ALUOutput[4]=0 -> A[4]==B[4]) *
+   (A[3]==B[3] -> ALUOutput[3]=0) * (ALUOutput[3]=0 -> A[3]==B[3]) *
+   (A[2]==B[2] -> ALUOutput[2]=0) * (ALUOutput[2]=0 -> A[2]==B[2]) *
+   (A[1]==B[1] -> ALUOutput[1]=0) * (ALUOutput[1]=0 -> A[1]==B[1]) *
+   (A[0]==B[0] -> ALUOutput[0]=0) * (ALUOutput[0]=0 -> A[0]==B[0]));*/
+assert property (!(regRegALU && funFld[2:0]==3'b100 && (State[2]==1'b1 || State[1:0]==2'd0 || State[1:0]==2'd3)) || 
+                ((A[4]!=B[4] || ALUOutput[4]==1'b0) && (ALUOutput[4]!=1'b0 || A[4]==B[4]) &&
+                (A[3]!=B[3] || ALUOutput[3]==1'b0) && (ALUOutput[3]!=1'b0 || A[3]==B[3]) &&
+                (A[2]!=B[2] || ALUOutput[2]==1'b0) && (ALUOutput[2]!=1'b0 || A[2]==B[2]) &&
+                (A[1]!=B[1] || ALUOutput[1]==1'b0) && (ALUOutput[1]!=1'b0 || A[1]==B[1]) &&
+                (A[0]!=B[0] || ALUOutput[0]==1'b0) && (ALUOutput[0]!=1'b0 || A[0]==B[0]) ));
+
+//property: #PASS: AND is performed correctly.
+/*G(regRegALU=1 * funFld[2:0]=b010 * 
+  (State[2]=1 + State[1:0]=0 + State[1:0]=3) ->
+   (A[4]=1 * B[4]=1 -> ALUOutput[4]=1) * (ALUOutput[4]=1 -> A[4]=1 * B[4]=1) *
+   (A[3]=1 * B[3]=1 -> ALUOutput[3]=1) * (ALUOutput[3]=1 -> A[3]=1 * B[3]=1) *
+   (A[2]=1 * B[2]=1 -> ALUOutput[2]=1) * (ALUOutput[2]=1 -> A[2]=1 * B[2]=1) *
+   (A[1]=1 * B[1]=1 -> ALUOutput[1]=1) * (ALUOutput[1]=1 -> A[1]=1 * B[1]=1) *
+   (A[0]=1 * B[0]=1 -> ALUOutput[0]=1) * (ALUOutput[0]=1 -> A[0]=1 * B[0]=1));*/
+assert property (!(regRegALU && funFld[2:0]==3'b010 && (State[2]==1'd1 || State[1:0]==2'd0 || State[1:0]==2'd3)) ||
+                ((!(A[4]==1'd1 && B[4]==1'd1) || ALUOutput[4]==1'd1) && (ALUOutput[4]==1'd0 || (A[4]==1'd1 && B[4]==1'd1)) &&
+                (!(A[3]==1'd1 && B[3]==1'd1) || ALUOutput[3]==1'd1) && (ALUOutput[3]==1'd0 || (A[3]==1'd1 && B[3]==1'd1)) &&
+                (!(A[2]==1'd1 && B[2]==1'd1) || ALUOutput[2]==1'd1) && (ALUOutput[2]==1'd0 || (A[2]==1'd1 && B[2]==1'd1)) &&
+                (!(A[1]==1'd1 && B[1]==1'd1) || ALUOutput[1]==1'd1) && (ALUOutput[1]==1'd0 || (A[1]==1'd1 && B[1]==1'd1)) &&
+                (!(A[0]==1'd1 && B[0]==1'd1) || ALUOutput[0]==1'd1) && (ALUOutput[0]==1'd0 || (A[0]==1'd1 && B[0]==1'd1)) ));
+
+///property: #PASS: OR is performed correctly.
+/*G(regRegALU=1 * funFld[2:0]=b011 * 
+  (State[2]=1 + State[1:0]=0 + State[1:0]=3) ->
+   (A[4]=0 * B[4]=0 -> ALUOutput[4]=0) * (ALUOutput[4]=0 -> A[4]=0 * B[4]=0) *
+   (A[3]=0 * B[3]=0 -> ALUOutput[3]=0) * (ALUOutput[3]=0 -> A[3]=0 * B[3]=0) *
+   (A[2]=0 * B[2]=0 -> ALUOutput[2]=0) * (ALUOutput[2]=0 -> A[2]=0 * B[2]=0) *
+   (A[1]=0 * B[1]=0 -> ALUOutput[1]=0) * (ALUOutput[1]=0 -> A[1]=0 * B[1]=0) *
+   (A[0]=0 * B[0]=0 -> ALUOutput[0]=0) * (ALUOutput[0]=0 -> A[0]=0 * B[0]=0));*/
+assert property (!(regRegALU && funFld[2:0]==3'b011 && (State[2]==1'd1 || State[1:0]==2'd0 || State[1:0]==2'd3)) ||
+                ((!(A[4]==1'd0 && B[4]==1'd0) || ALUOutput[4]==1'd0) && (ALUOutput[4]==1'd1 || (A[4]==1'd0 && B[4]==1'd0)) &&
+                (!(A[3]==1'd0 && B[3]==1'd0) || ALUOutput[3]==1'd0) && (ALUOutput[3]==1'd1 || (A[3]==1'd0 && B[3]==1'd0)) &&
+                (!(A[2]==1'd0 && B[2]==1'd0) || ALUOutput[2]==1'd0) && (ALUOutput[2]==1'd1 || (A[2]==1'd0 && B[2]==1'd0)) &&
+                (!(A[1]==1'd0 && B[1]==1'd0) || ALUOutput[1]==1'd0) && (ALUOutput[1]==1'd1 || (A[1]==1'd0 && B[1]==1'd0)) &&
+                (!(A[0]==1'd0 && B[0]==1'd0) || ALUOutput[0]==1'd0) && (ALUOutput[0]==1'd1 || (A[0]==1'd0 && B[0]==1'd0)) ));
+
+///#PASS: a - a = 0.
+//G(regRegALU=1 * funFld[2:0]=b001 * adFld1[1:0]==adFld2[1:0] ->  (State[2]=1 -> ALUOutput[4:0]=0));
+assert property (!(regRegALU && funFld[2:0]==3'b001 && adFld1[1:0]==adFld2[1:0]) || (State[2]==1'd0 || ALUOutput[4:0]==5'd0));
+
+//property: #PASS: In the decode, execute, and memory access states, PC and NPC differ
+/*# exactly by 2.  Hence, if the bit next to the MSB of PC is 0, then the MSBs
+# of PC and NPC must be the same, etc..
+G(State[0]=1 + State[1]=1 ->
+  (PC[1]=0 -> (NPC[4:2]==PC[4:2]) *
+   PC[2]=0 -> (NPC[4:3]==PC[4:3]) *
+   PC[3]=0 -> (NPC[4]==PC[4])));*/
+assert property (!(State[0] || State[1]) || ( (PC[1] || NPC[4:2]==PC[4:2]) && (PC[2] || NPC[4:3]==PC[4:3]) && (PC[3] || NPC[4]==PC[4]) ));
+
+//property: #PASS: In case of a taken branch, ALUOutput ends up in the PC.
+//G(State[2]=1 * branch=1 * Cond=1 * !(ALUOutput[4:0]==NPC[4:0]) ->  !(PC[4:0]==NPC[4:0]));
+assert property (!(State[2] && branch && Cond && !(ALUOutput[4:0]==NPC[4:0])) || !(PC[4:0]==NPC[4:0]));
+
+//property: #PASS: If no branch is taken, PC and NPC are the same in the WB state.
+//G(State[2]=1 * (branch=0 + Cond=0) -> PC[4:0]==NPC[4:0]);
+assert property (!(State[2] && (!branch || !Cond)) || PC[4:0]==NPC[4:0]);
+
+//property: #PASS: Choosing R0 as branch register always leads to a taken branch.
+//G(\WB * branch=1 * adFld1[1:0]=0 -> PC[4:0]==ALUOutput[4:0]);
+assert property (!(WB && branch && adFld1[1:0]==2'd0) || PC[4:0]==ALUOutput[4:0]);
+
+//property: #PASS: Since A and B come from the register file, they cannot both be
+/*# different from all registers and different among themselves, because
+# only one of the registers may have been updated since they were fetched.
+#!EF(Registers<*1*>[4:3]=3 * Registers<*2*>[4:3]=2 * Registers<*3*>[4:3]=1 *
+#    A[4:0]=1 * B[4:0]=2);
+G(\R0eqR1 + \R0eqR2 + \R0eqR3 + \R1eqR2 + \R1eqR3 + \R2eqR3 + \AeqR0 +
+  \AeqR1 + \AeqR2 + \AeqR3 + \BeqR0 + \BeqR1 + \BeqR2 + \BeqR3 + \AeqB);*/
+assert property (R0eqR1 || R0eqR2 || R0eqR3 || R1eqR2 || R1eqR3 || R2eqR3 || AeqR0 || AeqR1 || AeqR2 || AeqR3 || BeqR0 || BeqR1 || BeqR2 || BeqR3 || AeqB);

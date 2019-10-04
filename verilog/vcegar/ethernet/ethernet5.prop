@@ -1,0 +1,3 @@
+((cntr <3) | (~((in0_cycle4 == 2) & (in0_cycle3 == 1) & (in0_cycle2 == 1)) | frame_ready0))
+
+# the property is derived from the description of Frame Receiver

@@ -1,0 +1,2 @@
+!((pi_state==2'b01 | pi_state==2'b10) & (acknowledge==3'b100) & (read==1) & (pi_dataout[31]==1) & (select==1)) | (mst_data_tmp1[31]== 1)
+ 
