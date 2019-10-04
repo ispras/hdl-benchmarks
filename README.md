@@ -16,8 +16,8 @@ The project has the following catalog structure:
 
 The following public benchmarks are updated (several bugs and formatting issues are fixed) and are used in this project:
 
- - [Texas-97 Benchmarks](https://ptolemy.berkeley.edu/projects/embedded/research/vis/texas-97) are developed at the University of Texas (USA) as a part of the formal verification course of Dr. Adnan Aziz;
+ - [Texas-97 Benchmarks](https://ptolemy.berkeley.edu/projects/embedded/research/vis/texas-97) are developed at the [University of Texas](https://www.utexas.edu/) as a part of the formal verification course of Dr. Adnan Aziz;
 
- - [VCEGAR Benchmarks](http://www.cprover.org/hardware/benchmarks/vcegar-benchmarks.tgz) are developed at the University of Oxford (UK) by the system verification team led by Daniel Kroening as a test suite for the VCEGAR (now [EBMC](http://www.cprover.org/ebmc/)) tool;
+ - [VCEGAR Benchmarks](http://www.cprover.org/hardware/benchmarks/vcegar-benchmarks.tgz) are developed at the [University of Oxford](http://www.ox.ac.uk/) by the system verification team led by Daniel Kroening as a test suite for the VCEGAR (now [EBMC](http://www.cprover.org/ebmc/)) tool;
 
- - [Verilog2SMV Benchmarks](https://es-static.fbk.eu/tools/verilog2smv/dload/date2016-experiments.tar.bz2) are developed at the Bruno Kessler Foundation (Italy) by a team of researchers as a test suite for the [Verilog2SMV](https://es-static.fbk.eu/tools/verilog2smv/) tool.
+ - [Verilog2SMV Benchmarks](https://es-static.fbk.eu/tools/verilog2smv/dload/date2016-experiments.tar.bz2) are developed at the [Bruno Kessler Foundation](https://www.fbk.eu/en/) by a team of researchers as a test suite for the [Verilog2SMV](https://es-static.fbk.eu/tools/verilog2smv/) tool.
