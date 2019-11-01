@@ -7,7 +7,7 @@ Collection of HDL modules, subsystems and microprocessors (benchmarks) that are 
 The project has the following catalog structure:
 
  - `bash` - Bash scripts directory
- - `verilog` - Verilog benchmarks directory
+ - `hdl` - HDL benchmarks directory
    - `texas97` - Texas-97 benchmarks
    - `vcegar` - VCEGAR benchmarks
    - `verilog2smv` - Verilog2SMV benchmarks
