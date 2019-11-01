@@ -1,0 +1,68 @@
+
+ ITC'99 Benchmarks
+ -----------------
+
+ Fulvio Corno, Matteo Sonze Reorda, Giovanni Squillero
+ Politecnico di Torino
+
+ Downloaded from http://www.cad.polito.it/tools/itc99.html
+
+ NAME | ORIGINAL FUNCTIONALITY
+-------------------------------------------------------------
+  b01 | FSM that compares serial flows
+  b02 | FSM that recognizes BCD numbers
+  b03 | Resource arbiter
+  b04 | Compute min and max
+  b05 | Elaborate the contents of a memory
+  b06 | Interrupt handler
+  b07 | Count points on a straight line
+  b08 | Find inclusions in sequences of numbers
+  b09 | Serial to serial converter
+  b10 | Voting system
+  b11 | Scramble string with variable cipher
+  b12 | 1-player game (guess a sequence)
+  b13 | Interface to meteo sensors
+  b14 | Viper processor (subset)
+  b15 | 80386 processor (subset)
+  b16 | Hard to initialize circuit (parametric)
+  b17 | Three copies of b15
+  b18 | Two copies of b14 and two of b17
+  b19 | Two copies of b14 and two of b17
+  b20 | A copy of b14 and a modified version of b14
+  b21 | Two copies of b14
+  b22 | A copy of b14 and two modified versions of b14
+
+
+ design | sequential | inverter | buffer |  logic | tristate | unresolved |  total
+------------------------------------------------------------------------------------
+    b01 |          5 |       27 |      3 |     51 |        - |          - |     86
+    b02 |          4 |       14 |      2 |     25 |        - |          - |     45
+    b03 |         30 |       82 |      2 |    271 |        - |          - |    385
+    b04 |         66 |      257 |     21 |    537 |        - |          - |    881
+    b05 |         34 |      228 |     33 |    726 |        - |          - |   1021
+    b06 |          9 |       33 |      1 |     43 |        - |          - |     86
+    b07 |         49 |      177 |     20 |    492 |        - |          - |    738
+    b08 |         21 |       59 |      4 |    143 |        - |          - |    227
+    b09 |         28 |       58 |      4 |    170 |        - |          - |    260
+    b10 |         17 |       75 |      9 |    210 |        - |          - |    311
+    b11 |         31 |      178 |     32 |    564 |        - |          - |    805
+    b12 |        121 |      411 |     73 |   1412 |        - |          - |   2017
+    b13 |         53 |       92 |      4 |    253 |        - |          - |    402
+  b14_1 |        245 |     1557 |    218 |   6696 |        - |          - |   8716
+    b14 |        245 |     1518 |    188 |   6728 |        - |          - |   8679
+  b15_1 |        449 |     1565 |    149 |  10295 |        - |          - |  12458
+    b15 |        449 |     1569 |    201 |  10343 |        - |          - |  12562
+  b17_1 |       1415 |     4627 |    368 |  30973 |        - |          - |  37383
+    b17 |       1415 |     4564 |    319 |  30819 |        - |          - |  37117
+  b18_1 |       3296 |    11332 |    422 |  76616 |        - |          - |  91666
+    b18 |       3296 |    11429 |    407 |  76916 |        - |          - |  92048
+  b19_1 |       6594 |    20812 |    531 | 146582 |        - |          - | 174519
+    b19 |       6594 |    20866 |    439 | 146258 |        - |          - | 174157
+  b20_1 |        490 |     3303 |    289 |  15049 |        - |          - |  19131
+    b20 |        490 |     3537 |    332 |  14748 |        - |          - |  19107
+  b21_1 |        490 |     3189 |    325 |  14554 |        - |          - |  18558
+    b21 |        490 |     3392 |    334 |  14502 |        - |          - |  18718
+  b22_1 |        703 |     4767 |    511 |  22147 |        - |          - |  28128
+    b22 |        703 |     5131 |    390 |  22093 |        - |          - |  28317
+    b30 |          - |        - |      - |      - |        - |          - |      -
+------------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+    bool 'SDRAM controller       ' CONFIG_MCTRL_SDRAM
+    if [ "$CONFIG_MCTRL_SDRAM" = "y" ]; then
+      if [ "$CONFIG_MCTRL_LEON2" = "y" ]; then
+        bool 'Separate address and data buses' CONFIG_MCTRL_SDRAM_SEPBUS
+      fi
+      bool '64-bit SDRAM data bus' CONFIG_MCTRL_SDRAM_BUS64
+    fi

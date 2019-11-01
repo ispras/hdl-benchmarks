@@ -1,0 +1,6 @@
+ethernet
+pci
+spi
+systemcaes
+systemcdes
+vga_lcd

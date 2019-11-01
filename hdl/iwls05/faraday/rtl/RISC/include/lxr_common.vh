@@ -1,0 +1,79 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`define TST_BASE 32'ha07f0000 
+`define TST_START 32'ha07f0000 
+`define TST_RESET2 32'ha07f0004 
+`define TST_STACK 32'ha07f0008 
+`define TST_GBPTR 32'ha07f000c 
+`define TST_DRAMBASE 32'ha07f0010 
+`define TST_DRAMTOP 32'ha07f0014 
+`define TST_IRAMBASE 32'ha07f0018 
+`define TST_IRAMTOP 32'ha07f001c 
+`define TST_INFO_TMPSAVE 32'ha07f0020 
+`define TST_PASS_ADDR 32'ha07f0024 
+`define TST_FAIL_ADDR 32'ha07f0028 
+`define TST_COUNT_ENABLE 32'ha07f002c 
+`define TST_BEV0_COUNT 32'ha07f0030 
+`define TST_BEV1_COUNT 32'ha07f00b0 
+`define TST_DBG_COUNT 32'ha07f0130 
+`define TST_INFO_REGS 32'ha07f0280 
+`define TST_INFO_DREGS 32'ha07f0300 
+`define TST_EJX_START_PTR 32'ha07f0380 
+`define TST_EJX_TABLE_PTR 32'ha07f0384 
+`define TST_INFO_DBGVECS 32'ha07f038c 
+`define TST_INFO_DBGV16S 32'ha07f03ac 
+`define EJTAG_DSS_ENABLE 32'ha07f03c8 
+`define EJTAG_DCR_ENABLE 32'ha07f03cc 
+`define DEPC_PTR 32'ha07f03d0 
+`define DEPC_LADDR 32'h007f03d0 
+`define DEBUG_FUNCTION_PTR 32'ha07f03d4 
+`define TST_SCRATCH_DATA 32'ha07f1000 
+`define TST_RESET2_ADDR 32'h807f2000 
+`define TST_EJX_START_ADDR 32'ha07f4000 
+`define TST_PASS_LADDR 32'h007f0024 
+`define TST_FAIL_LADDR 32'h007f0028 
+`define LXR_EXIT_SUCCESS 32'h0000abcd 
+`define LXR_EXIT_FAILURE 32'h0000dead 
+`define SIG_DRAMBASE 32'h00000001 
+`define SIG_DROMBASE 32'h00000002 
+`define SIG_IRAMBASE 32'h00000003 
+`define SIG_IROMBASE 32'h00000004 
+`define SIG_WATCH_ADDR 32'h00000005 
+`define SIG_WATCH_MASK 32'h00000006 
+`define SIG_WATCH_STOP 32'h00000007 
+`define SIG_WATCH_TRACE 32'h00000008 
+`define SIG_SEED 32'h00000009 
+`define BUSCYCLECOUNT 32'hbfbfff0c 
+`define SYSCYCLECOUNT 32'hbfbfff08 
+`define INTERRUPTW1S 32'hbfbfff04 
+`define INTERRUPTW1C 32'hbfbfff00 
+`define INTERRUPTMASK 32'h0000003f 
+`define GBBusCycleCount 32'h1fbfff0c 
+`define GBSysCycleCount 32'h1fbfff08 
+`define GBRuptW1SAddr 32'h1fbfff04 
+`define GBRuptW1CAddr 32'h1fbfff00 
+`define PHY_EJ_CAUSE_PROBE_RST 32'h1fbfff10 
+`define PHY_EJ_CAUSE_PROBE_TRST 32'h1fbfff14 
+`define PHY_EJ_CAUSE_PROBE_TMS 32'h1fbfff18 
+`define LOG_EJ_CAUSE_PROBE_RST 32'hbfbfff10 
+`define LOG_EJ_CAUSE_PROBE_TRST 32'hbfbfff14 
+`define LOG_EJ_CAUSE_PROBE_TMS 32'hbfbfff18 
+`define PHY_MEM_SEMAPHORE 32'h1fbfff1c 
+`define LOG_MEM_SEMAPHORE 32'hbfbfff1c 
+`define UART_DATA_ADDRESS 32'hbc00000c 
+`define UART_DATA_ADDRESS_PHYS 32'h1c00000c 
+`define CP0_PROCESSOR_ID 32'h0000c101 

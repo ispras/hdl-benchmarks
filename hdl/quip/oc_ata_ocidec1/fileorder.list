@@ -1,0 +1,6 @@
+atahost_controller.vhd
+atahost_pio_tctrl.vhd
+atahost_wb_slave.vhd
+oc_ata_ocidec1.vhd
+ro_cnt.vhd
+ud_cnt.vhd

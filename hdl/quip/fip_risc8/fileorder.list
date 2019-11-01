@@ -1,0 +1,7 @@
+alu.v
+dram.v
+exp.v
+fip_risc8.v
+idec.v
+pram.v
+regs.v

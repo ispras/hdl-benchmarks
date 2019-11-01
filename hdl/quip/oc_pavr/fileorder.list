@@ -1,0 +1,8 @@
+oc_pavr.vhd
+pavr_alu.vhd
+pavr_constants.vhd
+pavr_data_mem.vhd
+pavr_io_file.vhd
+pavr_register_file.vhd
+pavr_util.vhd
+std_util.vhd

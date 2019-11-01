@@ -1,0 +1,314 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`include "../include/lxr_symbols.vh"
+
+module lmi_icache_bus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(
+CLK, TMODE, RESET_D1_R_N,
+
+
+
+SEN,
+
+DISABLEC,
+INVALIDATE,
+
+MEMSEQUENTIAL, MEMZEROFIRST,
+
+EXT_ICREQRAM_R, IC_GNTRAM_R,
+
+
+IX_DATAUPI, IC_DATAUPO,
+
+
+IC_LBCOE,
+
+NEXTADDR, RDOP_N, IS_VAL, IC_VAL, LACK,
+
+X_HALT_R,
+
+IC_MISS_P, IC_MISS_R, IC_HALT_S_R,
+
+IC_TAGINDEX, ICR_TAGRD0, IC_TAGWR0,
+
+IC_TAG0WE, IC_TAG0WEN, IC_TAG0RE, IC_TAG0REN, IC_TAG0CS, IC_TAG0CSN,
+
+IC_DATAINDEX,
+IC_DATA0WE, IC_DATA0WEN, IC_DATA0RE, IC_DATA0REN, IC_DATA0CS, IC_DATA0CSN,
+IC_DATAWR, ICR_DATA0RD,
+
+
+
+ICC_TAGMASK
+
+);
+
+
+
+
+
+
+
+parameter DATA_INDEX_HI = `IC_ADDR_HI;
+parameter DATA_INDEX_LO = 2;
+parameter TAG_INDEX_HI = `IC_ADDR_HI;
+parameter TAG_INDEX_LO = `LINE_ADDR_HI+1;
+parameter TAG_STATE_HI = 32;
+parameter TAG_STATE_LO = `IC_ADDR_HI+1-`IC_TAG_EXTRA_SIZE;
+parameter TAG_MASK_HI = `IC_ADDR_HI;
+parameter TAG_MASK_LO = `IC_ADDR_HI+1-`IC_TAG_EXTRA_SIZE;
+
+
+
+
+
+input CLK;
+input TMODE;
+input RESET_D1_R_N;
+
+
+
+input SEN;
+
+input DISABLEC;
+
+
+input INVALIDATE;
+input MEMSEQUENTIAL;
+input MEMZEROFIRST;
+
+input EXT_ICREQRAM_R;
+output IC_GNTRAM_R;
+
+
+input [31:0] IX_DATAUPI;
+output [31:0] IC_DATAUPO;
+
+
+output IC_LBCOE;
+
+input [31:0] NEXTADDR;
+input RDOP_N;
+input IS_VAL;
+output IC_VAL;
+input [1:0] LACK;
+
+output IC_MISS_P;
+output IC_MISS_R;
+
+output [`HALT_DRV_RANGE] IC_HALT_S_R;
+input [`HALT_SIG_RANGE] X_HALT_R;
+
+output [TAG_INDEX_HI:TAG_INDEX_LO] IC_TAGINDEX;
+
+input [TAG_STATE_HI:TAG_STATE_LO] ICR_TAGRD0;
+
+output [TAG_STATE_HI:TAG_STATE_LO] IC_TAGWR0;
+
+output IC_TAG0WE;
+output IC_TAG0WEN;
+output IC_TAG0RE;
+output IC_TAG0REN;
+output IC_TAG0CS;
+output IC_TAG0CSN;
+
+output [DATA_INDEX_HI:DATA_INDEX_LO] IC_DATAINDEX;
+output IC_DATA0WE;
+output IC_DATA0WEN;
+output IC_DATA0RE;
+output IC_DATA0REN;
+output IC_DATA0CS;
+output IC_DATA0CSN;
+output [31:0] IC_DATAWR;
+
+input [31:0] ICR_DATA0RD;
+
+input [TAG_MASK_HI:TAG_MASK_LO] ICC_TAGMASK;
+
+
+
+wire DATAOE;
+wire [31:0] DATARD;
+
+
+
+wire TAG0COMPARE;
+
+
+
+
+
+lmi_icache ICACHE
+(
+.CLK ( CLK ),
+.TMODE ( TMODE ),
+.RESET_D1_R_N ( RESET_D1_R_N ),
+.DISABLEC ( DISABLEC ),
+.INVALIDATE ( INVALIDATE ),
+.MEMSEQUENTIAL ( MEMSEQUENTIAL ),
+.MEMZEROFIRST ( MEMZEROFIRST ),
+.EXT_ICREQRAM_R ( EXT_ICREQRAM_R),
+.IC_GNTRAM_R ( IC_GNTRAM_R ),
+.NEXTADDR ( NEXTADDR ),
+.RDOP_N ( RDOP_N ),
+.IS_VAL ( IS_VAL ),
+.IC_VAL ( IC_VAL ),
+.LACK ( LACK ),
+.X_HALT_R ( X_HALT_R ),
+.IC_MISS_P ( IC_MISS_P ),
+.IC_MISS_R ( IC_MISS_R ),
+.IC_HALT_S_R ( IC_HALT_S_R ),
+.IC_TAGINDEX ( IC_TAGINDEX ),
+.ICR_TAGRD0 ( ICR_TAGRD0 ),
+.IC_TAGWR0 ( IC_TAGWR0 ),
+
+.IC_TAG0WE ( IC_TAG0WE ),
+.IC_TAG0WEN ( IC_TAG0WEN ),
+.IC_TAG0RE ( IC_TAG0RE ),
+.IC_TAG0REN ( IC_TAG0REN ),
+.IC_TAG0CS ( IC_TAG0CS ),
+.IC_TAG0CSN ( IC_TAG0CSN ),
+
+.IC_DATAINDEX ( IC_DATAINDEX ),
+.IC_DATA0WE ( IC_DATA0WE ),
+.IC_DATA0WEN ( IC_DATA0WEN ),
+.IC_DATA0RE ( IC_DATA0RE ),
+.IC_DATA0REN ( IC_DATA0REN ),
+.IC_DATA0CS ( IC_DATA0CS ),
+.IC_DATA0CSN ( IC_DATA0CSN ),
+.IC_DATAOE ( DATAOE ),
+.IC_LBCOE ( IC_LBCOE ),
+.ICC_TAGMASK ( ICC_TAGMASK ),
+
+.IC_TAG0COMPARE ( TAG0COMPARE )
+);
+
+wire DATAOD = |({ LACK, X_HALT_R[`IW_HALT_S_INDEX], X_HALT_R[`IT_HALT_S_INDEX] }) & ~IC_HALT_S_R[0];
+
+
+assign DATARD = ICR_DATA0RD;
+
+
+
+
+assign IC_DATAWR = IX_DATAUPI;
+
+mux32 MUX_INSTC_UP
+(
+.OUT ( IC_DATAUPO ),
+.THRU ( IX_DATAUPI ),
+.IN ( DATARD ),
+.EN1 ( DATAOE ),
+.DIS1 ( DATAOD ),
+.DIS2 ( SEN )
+);
+
+
+
+
+
+endmodule
+
+
+
+
+
+
+

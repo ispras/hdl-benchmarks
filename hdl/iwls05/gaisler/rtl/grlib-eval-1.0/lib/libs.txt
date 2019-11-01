@@ -1,0 +1,17 @@
+grlib
+tech/atmel
+tech/actel
+tech/actel/actelpci_lib
+tech/actel/axcelerator
+tech/actel/adpms_lib
+tech/xilinx/unisim
+tech/virage
+tech/altera
+tech/synplify
+tech/umc
+tech/ihp25
+fpu
+gaisler
+esa
+opencores
+gleichmann

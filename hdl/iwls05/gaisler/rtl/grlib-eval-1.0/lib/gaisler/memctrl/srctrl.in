@@ -1,0 +1,7 @@
+    bool '8/32-bit PROM/SRAM controller    ' CONFIG_MCTRL_SMALL
+    if [ "$CONFIG_MCTRL_SMALL" = "y" ]; then
+      bool '8-bit PROM interface ' CONFIG_MCTRL_SMALL_8BIT
+      int 'PROM waitstates' CONFIG_MCTRL_PROMWS 3
+      int 'RAM waitstates' CONFIG_MCTRL_RAMWS 0
+      bool 'Use read-modify-write for sub-word writes  ' CONFIG_MCTRL_RMW
+    fi

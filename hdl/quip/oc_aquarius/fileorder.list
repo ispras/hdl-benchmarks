@@ -1,0 +1,17 @@
+clk_gate.v
+cpu.v
+datapath.v
+decode.v
+defines.v
+mem.v
+memory.v
+mult.v
+oc_aquarius.v
+pio.v
+register.v
+sasc_brg.v
+sasc_fifo4.v
+sasc_top.v
+sys.v
+timescale.v
+uart.v

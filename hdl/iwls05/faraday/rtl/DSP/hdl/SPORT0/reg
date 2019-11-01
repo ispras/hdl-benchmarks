@@ -1,0 +1,73 @@
+s_autoctl.v:155:     always @(posedge DSPCLK) RST <= #`db T_RST;
+s_autoctl.v:168:     always @(posedge DSPCLK or posedge RST) 
+s_autoctl.v:189:     always @(posedge DSPCLK or posedge RST)	
+s_autoctl.v:196:     always @(posedge DSPCLK or posedge RST)
+s_autoctl.v:203:     always @(posedge DSPCLK or posedge RST)
+s_autoctl.v:210:     always @(posedge DSPCLK or posedge RST)
+s_autoctl.v:221:     always @(posedge DSPCLK or posedge RST)
+s_autoctl.v:229:     always @(posedge DSPCLK or posedge RST)
+s_autoctl_dummy.v:160:     always @(posedge DSPCLK) RST <= #`db T_RST;
+s_autoctl_dummy.v:171:     always @(posedge DSPCLK or posedge RST) 
+s_autoctl_dummy.v:191:     always @(posedge DSPCLK or posedge RST)	
+s_autoctl_dummy.v:198:     always @(posedge DSPCLK or posedge RST)
+s_autoctl_dummy.v:219:     always @(posedge DSPCLK or posedge RST)
+s_autoctl_dummy.v:226:     always @(posedge DSPCLK or posedge RST)
+s_autoctl_dummy.v:246:     always @(posedge DSPCLK or posedge RST)
+s_expand.v:48:     sign bit is always inverted
+s_expand.v:49:     even bits (6, 4, 2, 0) are always inverted
+s_rxctl0.v:100:     always @(RCS or RFSsm or Bcnteq0 or Wcnteq0) 
+s_rxctl0.v:116:     always @(posedge SCLKg4 or negedge SP_EN) begin
+s_rxctl0.v:121:     always @(posedge SCLKg4) begin
+s_rxctl0.v:131:     always @(posedge SCLKg4)
+s_rxctl0.v:134:     always @(posedge SCLKg4 or negedge SP_EN) begin
+s_rxctl0.v:148:     always @(posedge SCLKg4 or negedge SP_EN) begin
+s_rxctl0.v:162:     always @(posedge SCLKg4 or negedge SP_EN) begin
+s_rxctl0.v:176:     always @(posedge SCLKg4 or posedge RST ) begin
+s_rxctl0.v:182:     always @(posedge SCLKg4 or posedge RST ) begin
+s_rxctl0.v:238:     always @(posedge SCLKg3_) 
+s_rxctl0.v:253:     always @(posedge DSPCLK) 
+s_rxctl0.v:269: *                  (RSack always keeps 1 DSPCLK cycle)                *
+s_rxctl0.v:285:     always @(posedge SCLKg3_) ldRX_spt <= #`db RCS[1] && !RNS[1];
+s_rxctl0.v:287:     always @(posedge DSPCLK) begin
+s_rxctl0.v:298:     always @(posedge DSPCLK) begin
+s_rxctl0.v:324:     always @(posedge DSPCLK or posedge rRSreq) begin
+s_rxctl0.v:351:     always @(posedge DSPCLK) 
+s_scfg0.v:92:     always @(posedge DSPCLK) SCLKi_enb <= #`db !(SP_EN && ISCLK);
+s_scfg0.v:112:     always @(posedge SCLKin or posedge RST) begin
+s_scfg0.v:121:     always @(posedge SCLKin or posedge RST) begin
+s_scfg0.v:129:     always @(posedge SCLKin or posedge RST) begin
+s_scfg0.v:181: *  - 1. FSi   : internal RX/TX frame sync   (always active high)      *
+s_scfg0.v:186: *       RFSg  : global RX frame sync        (always active high)      *
+s_scfg0.v:187: *       TFSg  : global TX frame sync        (always active high)      *
+s_scfg0.v:188: *       RFSsm : RX frame sync of RX S.M     (always active high)      *
+s_scfg0.v:189: *       TFSsm : TX frame sync of TX S.M     (always active high)      *
+s_scfg0.v:232:     always @(posedge SCLKg1 or posedge RST) begin
+s_scfg0.v:248:     always @(posedge SCLKg2 or posedge RST) begin
+s_scfg0.v:265://    > RFSg/TFSg are always active high.
+s_scfg0.v:280:/*     always @(posedge SCLKg2 or posedge RST) begin
+s_scfg0.v:293:     always @(posedge SCLKg2 or posedge RST) begin
+s_scfg0.v:299:     always @(posedge SCLKg2) begin
+s_scfg0.v:304:     assign #`da RFSg = SP_ENg && RFSgi;		// always active high
+s_scfg0.v:305:     assign #`da TFSg = SP_ENg && TFSgi;		// always active high
+s_scfg0.v:310:     always @(posedge SCLKg2 or posedge RST) begin
+s_screg0.v:186:     always @(posedge DSPCLK or posedge RST) 
+s_screg0.v:200:     always @(posedge DSPCLK or posedge RST) begin
+s_sport0.v:197:     always @(posedge DSPCLK) RST <= #`db T_RST;
+s_sport0_dummy.v:120:     always @(posedge DSPCLK) RST <= #`db T_RST;
+s_sport0_dummy.v:124:     always @(posedge DSPCLK or posedge RST)
+s_sport0_dummy.v:138:     always @(posedge DSPCLK or posedge RST) begin
+s_txctl0.v:94:     always @(TCS or TFSsm or Bcnteq0 or Wcnteq0) 
+s_txctl0.v:110:     always @(posedge SCLKg5 or negedge SP_ENg) begin
+s_txctl0.v:120:     always @(posedge SCLKg5) 
+s_txctl0.v:123:     always @(posedge SCLKg5 or negedge SP_ENg) begin
+s_txctl0.v:138:     always @(posedge SCLKg5 or negedge SP_ENg) begin
+s_txctl0.v:159: *          (compressed data is always sign-extended before writing    *
+s_txctl0.v:179:     always @(posedge SCLKg6) TXSHT[15:0] <= #`db TXSHT_di[15:0];
+s_txctl0.v:195:     always @(posedge DSPCLK) if (TX_we) TX[15:0] <= #`db TX_di;
+s_txctl0.v:211: *                  (TSack always keeps 1 DSPCLK cycle)                *
+s_txctl0.v:224:     always @(posedge DSPCLK) begin
+s_txctl0.v:244:     always @(posedge DSPCLK) SP_EN_D1 <= #`db SP_EN;
+s_txctl0.v:250:     always @(posedge SCLKg5 or posedge rTSreq) begin
+s_txctl0.v:255:     always @(posedge DSPCLK or posedge rTSreq) begin
+s_txctl0.v:277:     always @(posedge SCLKg5 or posedge RST) 
+s_txctl0.v:281:     always @(posedge DSPCLK) begin

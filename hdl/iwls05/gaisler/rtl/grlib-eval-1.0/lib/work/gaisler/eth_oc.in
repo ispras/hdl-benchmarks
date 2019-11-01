@@ -1,0 +1,4 @@
+    bool 'Enable 10/100 Mbit Ethernet MAC (opencores)    ' CONFIG_ETH_ENABLE
+    if [ "$CONFIG_ETH_ENABLE" = "y" ]; then
+      hex 'Ethernet I/O area start address (haddr[19:8]) ' CONFIG_ETH_START B00
+    fi

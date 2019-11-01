@@ -1,0 +1,26 @@
+  choice 'Target technology                           ' \
+	"Inferred		CONFIG_SYN_INFERRED \
+	Atmel-ATC18		CONFIG_SYN_ATC18 \
+	RH-UMC     		CONFIG_SYN_RHUMC \
+        IHP25                   CONFIG_SYN_IHP25 \
+	Actel-Proasic		CONFIG_SYN_PROASIC \
+	Actel-ProasicPlus	CONFIG_SYN_PROASICPLUS \
+	Actel-Proasic3   	CONFIG_SYN_PROASIC3 \
+	Actel-Axcelerator	CONFIG_SYN_AXCEL \
+	Xilinx-Spartan2		CONFIG_SYN_SPARTAN2 \
+	Xilinx-Spartan3		CONFIG_SYN_SPARTAN3 \
+	Xilinx-Virtex		CONFIG_SYN_VIRTEX \
+	Xilinx-VirtexE		CONFIG_SYN_VIRTEXE \
+	Xilinx-Virtex2		CONFIG_SYN_VIRTEX2" Inferred
+  if [ "$CONFIG_SYN_ATC18" = "y" -o "$CONFIG_SYN_INFERRED" = "y" \
+	-o "$CONFIG_SYN_RHUMC" = "y" -o "$CONFIG_SYN_IHP25" = "y"]; then
+    choice 'Memory Library                           ' \
+	"Inferred		CONFIG_MEM_INFERRED \
+	RH-UMC			CONFIG_MEM_RHUMC \
+        IHP25                   CONFIG_MEM_IHP25 \
+	Virage			CONFIG_MEM_VIRAGE" Inferred
+  fi
+  if [ "$CONFIG_SYN_INFERRED" != "y" ]; then
+    bool 'Infer RAM' CONFIG_SYN_INFER_RAM
+    bool 'Infer pads' CONFIG_SYN_INFER_PADS
+  fi

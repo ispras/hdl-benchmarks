@@ -1,0 +1,9 @@
+
+    if [ "$CONFIG_MCTRL_SMALL" != "y" ]; then
+      bool 'Leon2 memory controller  ' CONFIG_MCTRL_LEON2
+      if [ "$CONFIG_MCTRL_LEON2" = "y" ]; then
+        bool '8-bit PROM/SRAM bus support    ' CONFIG_MCTRL_8BIT
+        bool '16-bit PROM/SRAM bus support    ' CONFIG_MCTRL_16BIT
+        bool '5th SRAM chip-select  ' CONFIG_MCTRL_5CS
+      fi
+    fi

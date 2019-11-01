@@ -1,0 +1,20 @@
+These designs were developed by Faraday Technology Corporation, a fabless ASIC
+vendor and silicon Intellectual property (SIP) provider in order too compare
+Faraday's Structured ASIC library with other vendors'.
+
+The designs were downloaded from the webpage at
+http://www.faraday-tech.com/StructuredASIC/download.html.
+
+Three commonly used functional blocks:
+
+DSP:  16-bit digital signal processor (DSP) with SRAM blocks
+RISC: 32-bit RISC CPU
+DMA:  Direct Memory Access (DMA) Controller
+
+
+ design | sequential | inverter | buffer | logic | tristate | unresolved | total
+----------------------------------------------------------------------------------
+    DMA |       2192 |     2678 |    253 | 13995 |        - |          - | 19118
+    DSP |       3611 |     5258 |     42 | 23523 |        - |          2 | 32436
+   RISC |       7599 |     7370 |    126 | 44872 |        - |          7 | 59974
+----------------------------------------------------------------------------------

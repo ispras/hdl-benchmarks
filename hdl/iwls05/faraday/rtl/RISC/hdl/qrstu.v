@@ -1,0 +1,285 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`include "../include/lxr_symbols.vh"
+
+module lmi_dram_bus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(
+CLK, TMODE, RESET_D1_R_N,
+
+CFG_DWDISW,
+
+EXT_DWREQRAM_R, DW_GNTRAM_R,
+
+
+
+SEN,
+
+DISABLEC,
+
+
+DATAUPI, DW_DATAUPO, DATADOWNI, DW_DATADOWNO,
+
+
+NEXTADDR, NEXTRDOP, NEXTWROP, NEXTBE, NEXTSX, DW_VAL,
+
+EXCP,
+
+DW_ACK,
+
+X_HALT_R,
+
+DC_RPQUIETIFNBA, DC_RPQUIETIFB, DC_RPALGNIFNBNA, DC_RPALGNIFB,
+
+DW_HALT_W_R,
+
+DW_DATAINDEX, DWR_DATARD, DW_DATAWR,
+DW_DATAWE, DW_DATAWEN, DW_DATARE, DW_DATAREN, DW_DATACS, DW_DATACSN,
+
+CONFIGBASE, CONFIGTOP
+
+);
+
+parameter BASE_HI = 31;
+parameter BASE_LO = `LM_BASE_LO;
+parameter RANGE_HI = `LM_TOP_HI;
+parameter RANGE_LO = 4;
+parameter DATA_INDEX_HI = `DW_ADDR_HI;
+parameter DATA_INDEX_LO = 2;
+
+input CLK;
+input TMODE;
+input RESET_D1_R_N;
+
+
+
+input SEN;
+
+input DISABLEC;
+input CFG_DWDISW;
+
+input EXT_DWREQRAM_R;
+output DW_GNTRAM_R;
+
+
+input [31:0] DATAUPI;
+output [31:0] DW_DATAUPO;
+input [31:0] DATADOWNI;
+output [31:0] DW_DATADOWNO;
+
+
+input [31:0] NEXTADDR;
+input NEXTRDOP;
+input NEXTWROP;
+input [3:0] NEXTBE;
+input NEXTSX;
+input EXCP;
+
+output DW_ACK;
+
+output [`HALT_DRV_RANGE] DW_HALT_W_R;
+input [`HALT_SIG_RANGE] X_HALT_R;
+
+input DC_RPQUIETIFNBA;
+input DC_RPQUIETIFB;
+input DC_RPALGNIFNBNA;
+input DC_RPALGNIFB;
+output DW_VAL;
+
+
+
+output [DATA_INDEX_HI:DATA_INDEX_LO] DW_DATAINDEX;
+input [31:0] DWR_DATARD;
+output [31:0] DW_DATAWR;
+output DW_DATAWE;
+output DW_DATAWEN;
+output DW_DATARE;
+output DW_DATAREN;
+output DW_DATACS;
+output DW_DATACSN;
+
+input [BASE_HI:BASE_LO] CONFIGBASE;
+input [RANGE_HI:RANGE_LO] CONFIGTOP;
+
+wire [31:0] DATAOUT;
+wire DATAOE;
+
+
+
+
+lmi_dram DRAM
+(
+
+.CLK ( CLK ),
+.TMODE ( TMODE ),
+.RESET_D1_R_N ( RESET_D1_R_N ),
+.DISABLEC ( DISABLEC ),
+.CFG_DWDISW ( CFG_DWDISW ),
+.EXT_DWREQRAM_R ( EXT_DWREQRAM_R ),
+.DW_GNTRAM_R ( DW_GNTRAM_R ),
+
+.DATAIN ( DATADOWNI ),
+
+.DW_DATAOUT ( DATAOUT ),
+.DW_DATAOE ( DATAOE ),
+.NEXTADDR ( NEXTADDR ),
+.NEXTRDOP ( NEXTRDOP ),
+.NEXTWROP ( NEXTWROP ),
+.NEXTBE ( NEXTBE ),
+.NEXTSX ( NEXTSX ),
+.EXCP ( EXCP ),
+.DW_VAL ( DW_VAL ),
+.DW_ACK ( DW_ACK ),
+.X_HALT_R ( X_HALT_R ),
+.DC_RPQUIETIFNBA( DC_RPQUIETIFNBA ),
+.DC_RPQUIETIFB ( DC_RPQUIETIFB ),
+.DC_RPALGNIFNBNA( DC_RPALGNIFNBNA ),
+.DC_RPALGNIFB ( DC_RPALGNIFB ),
+.DW_HALT_W_R ( DW_HALT_W_R ),
+.DW_DATAINDEX ( DW_DATAINDEX ),
+.DWR_DATARD ( DWR_DATARD ),
+.DW_DATAWR ( DW_DATAWR ),
+.DW_DATAWE ( DW_DATAWE ),
+.DW_DATAWEN ( DW_DATAWEN ),
+.DW_DATARE ( DW_DATARE ),
+.DW_DATAREN ( DW_DATAREN ),
+.DW_DATACS ( DW_DATACS ),
+.DW_DATACSN ( DW_DATACSN ),
+.CONFIGBASE ( CONFIGBASE ),
+.CONFIGTOP ( CONFIGTOP )
+
+);
+
+
+wire DATAOD = X_HALT_R[`DC_HALT_W_INDEX] | X_HALT_R[`DC_HALT_M_INDEX] | X_HALT_R[`DT_HALT_W_INDEX];
+
+
+
+mux32 MUX_DATAW_UP
+(
+.OUT ( DW_DATAUPO ),
+.THRU ( DATAUPI ),
+.IN ( DATAOUT ),
+.EN1 ( DATAOE ),
+.DIS1 ( DATAOD ),
+.DIS2 ( SEN )
+);
+
+mux32 MUX_DATAW_DOWN
+(
+.OUT ( DW_DATADOWNO ),
+.THRU ( DATADOWNI ),
+.IN ( DATAOUT ),
+.EN1 ( DATAOE ),
+.DIS1 ( DATAOD ),
+.DIS2 ( SEN )
+);
+
+
+
+
+
+
+endmodule
+
+
+
+
+
+

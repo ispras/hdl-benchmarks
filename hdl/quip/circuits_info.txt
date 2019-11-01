@@ -1,0 +1,61 @@
+Circuit						License
+------------------------------------------------------------------------------------------------------------
+barrel16					LGPL
+barrel16a					LGPL
+barrel32					LGPL
+barrel64					LGPL
+fip_cordic_cla					Free IP General Public License
+fip_cordic_rca					Free IP General Public License
+fip_risc8					Free IP General Public License
+MD_top						LGPL
+mux32_16bit					LGPL
+mux64_16bit					LGPL
+mux8_128bit					LGPL
+mux8_64bit					LGPL
+nut_000						LGPL
+nut_001						LGPL
+nut_002						LGPL
+nut_003						LGPL
+nut_004						LGPL
+oc_aes_core					Custom
+oc_aes_core_inv					Custom
+oc_aquarius					Custom
+oc_ata_ocidec1					Custom
+oc_ata_ocidec2					Custom
+oc_ata_ocidec3					Custom
+oc_correlator					Custom
+oc_dct_slow					Custom
+oc_des_area_opt					Custom
+oc_des_des3area					Custom
+oc_des_des3perf					Custom
+oc_des_perf_opt					Custom
+oc_ethernet					LGPL
+oc_fcmp						Custom
+oc_fpu						Custom
+oc_gpio						LGPL
+oc_hdlc						Custom
+oc_i2c						Custom
+oc_mem_ctrl					Custom
+oc_minirisc					Custom
+oc_miniuart					GPL
+oc_mips						Custom
+oc_oc8051					LGPL
+oc_pavr						GPL
+oc_pci						LGPL
+oc_rtc						LGPL
+oc_sdram					GPL
+oc_simple_fm_receiver				Custom
+oc_vga_lcd					Custom
+oc_video_compression_systems_dct		Custom
+oc_video_compression_systems_huffman_dec	Custom
+oc_video_compression_systems_huffman_enc	Custom
+oc_video_compression_systems_jpeg		Custom
+oc_wb_dma					Custom
+os_blowfish					GPL
+os_sdram16					GPL
+pong						LGPL
+radar12	Permission granted			LGPL
+radar20	Permission granted			LGPL
+ts_mike_fsm					LGPL
+uoft_raytracer					LGPL
+xbar_16x16					LGPL

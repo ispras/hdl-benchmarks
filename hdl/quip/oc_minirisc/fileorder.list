@@ -1,0 +1,6 @@
+alu.v
+oc_minirisc.v
+presclr_wdt.v
+primitives.v
+register_file.v
+risc_core_top.v

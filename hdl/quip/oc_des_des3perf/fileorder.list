@@ -1,0 +1,13 @@
+crp.v
+des.v
+des3.v
+key_sel.v
+oc_des_des3perf.v
+sbox1.v
+sbox2.v
+sbox3.v
+sbox4.v
+sbox5.v
+sbox6.v
+sbox7.v
+sbox8.v

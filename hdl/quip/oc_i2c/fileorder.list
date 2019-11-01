@@ -1,0 +1,5 @@
+i2c_master_bit_ctrl.v
+i2c_master_byte_ctrl.v
+i2c_master_defines.v
+oc_i2c.v
+timescale.v

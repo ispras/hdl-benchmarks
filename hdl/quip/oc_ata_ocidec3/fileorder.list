@@ -1,0 +1,13 @@
+atahost_controller.vhd
+atahost_dma_actrl.vhd
+atahost_dma_tctrl.vhd
+atahost_fifo.vhd
+atahost_lfsr.vhd
+atahost_pio_actrl.vhd
+atahost_pio_controller.vhd
+atahost_pio_tctrl.vhd
+atahost_reg_buf.vhd
+atahost_wb_slave.vhd
+oc_ata_ocidec3.vhd
+ro_cnt.vhd
+ud_cnt.vhd

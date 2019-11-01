@@ -1,0 +1,2 @@
+  bool 'Enable PCI arbiter APB interface ' CONFIG_PCI_ARBITER_APB
+

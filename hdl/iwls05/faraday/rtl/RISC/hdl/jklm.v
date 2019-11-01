@@ -1,0 +1,68 @@
+module ejtag_datain 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+( 
+
+EJDI_ADDR, EJDI_DATA, EJDI_RW, EJDI_SELDCR, EJDI_SELIBS, EJDI_SELDBS, 
+EJDI_SELPBS, EJDI_SELIBRS, EJDI_SELDBRS, EJDI_SELPBRS, EJDI_SELDBG, 
+EJDI_SELPROBE, 
+
+LBC_MDATA, LBC_MADDR, LBC_MEJDEST, LBC_MRW 
+); 
+
+
+
+input [31:0] LBC_MDATA; 
+input [31:0] LBC_MADDR; 
+input LBC_MEJDEST; 
+input LBC_MRW; 
+
+output [7:2] EJDI_ADDR; 
+output [31:0] EJDI_DATA; 
+output EJDI_RW; 
+
+output EJDI_SELDCR; 
+output EJDI_SELIBS; 
+output EJDI_SELDBS; 
+output EJDI_SELPBS; 
+output EJDI_SELIBRS; 
+output EJDI_SELDBRS; 
+output EJDI_SELPBRS; 
+output EJDI_SELDBG; 
+
+output EJDI_SELPROBE; 
+
+assign EJDI_ADDR = LBC_MADDR [7:2]; 
+assign EJDI_DATA = LBC_MDATA; 
+assign EJDI_RW = LBC_MRW; 
+
+
+
+
+
+
+assign EJDI_SELDCR = LBC_MEJDEST & (LBC_MADDR == 32'hff30_0000); 
+assign EJDI_SELIBS = LBC_MEJDEST & (LBC_MADDR == 32'hff30_0004); 
+assign EJDI_SELDBS = LBC_MEJDEST & (LBC_MADDR == 32'hff30_0008); 
+assign EJDI_SELPBS = LBC_MEJDEST & (LBC_MADDR == 32'hff30_000c); 
+
+assign EJDI_SELIBRS = LBC_MEJDEST & (LBC_MADDR [31:8] == 24'hff30_01); 
+assign EJDI_SELDBRS = LBC_MEJDEST & (LBC_MADDR [31:8] == 24'hff30_02); 
+assign EJDI_SELPBRS = LBC_MEJDEST & (LBC_MADDR [31:8] == 24'hff30_03); 
+
+assign EJDI_SELDBG = LBC_MEJDEST & (LBC_MADDR [31:20] == 12'hff3); 
+assign EJDI_SELPROBE = ~EJDI_SELDBG & LBC_MEJDEST; 
+
+endmodule 

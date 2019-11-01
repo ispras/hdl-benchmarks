@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><title>AHB/APB Bridge</title>
+  
+  <meta name="author" content="Jiri Gaisler"></head>
+<body>
+<h2 style="font-family: helvetica,arial,sans-serif;"><small>AMBA
+AHB/APB Bridge with Plug&amp;Play Support<br>
+</small></h2>
+<h3 style="font-family: helvetica,arial,sans-serif;"><small>Introduction</small></h3>
+<small style="font-family: helvetica,arial,sans-serif;">APB is
+single-master bus hosting devices with low bandwidth requirements used
+in conjunction with AHB bus. The AMBA AHB/APB Bridge unit acts as a
+slave on AHB bus and master on APB bus providing an interface between
+the two buses. The full GRLIB Plug&amp;Play functionality is supported
+for both the AHB/APB bridge and slaves on the APB bus. For&nbsp; more
+information on AMBA, APB and Plug&amp;Play configuration refer to <a href="../../../doc/grlib/grlib.pdf">GRLIB
+IP Library User's Manual</a>.<br>
+</small>
+<h3><small style="font-family: helvetica,arial,sans-serif;">Component declaration</small></h3>
+<small style="font-family: helvetica,arial,sans-serif;"><span style="font-family: courier new,courier,monospace;">library grlib;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">use <a href="amba.vhd">grlib.amba.all</a>;</span><br style="font-family: courier new,courier,monospace;">
+<br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; <a href="apbctrl.vhd">component apbctrl</a></span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; generic (</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; hindex&nbsp; : integer := 0;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; haddr&nbsp;&nbsp; : integer := 0;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; hmask&nbsp;&nbsp; : integer := 16#fff#</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; );</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; port (</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; rst&nbsp;&nbsp;&nbsp;&nbsp; : in&nbsp; std_ulogic;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; clk&nbsp;&nbsp;&nbsp;&nbsp; : in&nbsp; std_ulogic;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; ahbi&nbsp;&nbsp;&nbsp; : in&nbsp; ahb_slv_in_type;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; ahbo&nbsp;&nbsp;&nbsp; : out ahb_slv_out_type;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; apbi&nbsp;&nbsp;&nbsp; : out apb_slv_in_type;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp; apbo&nbsp;&nbsp;&nbsp; : in&nbsp; apb_slv_out_vector</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; );</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; end component;</span><br>
+</small>
+<h3 style="font-family: helvetica,arial,sans-serif;"><small>Configuration
+options</small></h3>
+<small style="font-family: helvetica,arial,sans-serif;">The AHB/APB
+Bridge has the following configuration options (VHDL generics):<br>
+<br>
+</small>
+<small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small><small style="font-family: helvetica,arial,sans-serif;"> </small>
+<table style="text-align: left; width: 100%; font-family: helvetica,arial,sans-serif;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;"><small>Generics<br>
+      </small></td>
+      <td style="vertical-align: top; font-weight: bold;"><small>Description<br>
+      </small></td>
+      <td style="vertical-align: top; font-weight: bold;"><small>Range<br>
+      </small></td>
+      <td style="vertical-align: top; font-weight: bold;"><small>Default<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;"><small>hindex<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>Selects which AHB select
+signal (HSEL) will be used to access the bridge<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>0 to NAHBMAX-1<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>0<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;"><small>haddr<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>ADDR field of the AHB BAR.<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>0 to 16#FFF#<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>0<br>
+      </small></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;"><small>hmask<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>MASK field of the AHB BAR.<br>
+      </small></td>
+      <td style="vertical-align: top;"><small>0 to 16#FFF#</small></td>
+      <td style="vertical-align: top;"><small>16#FFF#<br>
+      </small></td>
+    </tr>
+  </tbody>
+</table>
+<small style="font-family: helvetica,arial,sans-serif;"><br>
+</small>
+<h3 style="font-family: helvetica,arial,sans-serif;"><font size="-1">Vendor and device id<br>
+</font></h3>
+<font style="font-family: helvetica,arial,sans-serif;" size="-1">The AHB/APB
+bridge has vendor id 0x01 (Gaisler Research) and device id 0x006.<br>
+</font>
+<h3 style="font-family: helvetica,arial,sans-serif;"><font size="-1">Registers</font></h3>
+<font style="font-family: helvetica,arial,sans-serif;" size="-1">The module does not implement any user programmable
+registers.<br>
+</font>
+<h3 style="font-family: helvetica,arial,sans-serif;"><font size="-1">Signal description</font></h3>
+<font style="font-family: helvetica,arial,sans-serif;" size="-1">Table below shows AHB/APB bridge signals.<br>
+<br>
+</font>
+<table style="text-align: left; width: 100%; font-family: helvetica,arial,sans-serif;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1"><span style="font-weight: bold;">Signal</span><br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1"><span style="font-weight: bold;">Type</span><br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1"><span style="font-weight: bold;">Function</span><br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1"><span style="font-weight: bold;">Active</span><br>
+      </font> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1">RST<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Input<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Reset<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Low<br>
+      </font> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1">CLK<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Input<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Clock<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">-<br>
+      </font> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1">AHBI<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Input<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">AHB slave input
+signals<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">-<br>
+      </font> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1">AHBO <br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Output<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">AHB slave output
+signals<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">-<br>
+      </font> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1">APBI<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Input<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">APB slave input
+signals<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">-<br>
+      </font> </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="-1">APBO<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">Output<br>
+      </font> </td>
+      <td style="vertical-align: top;"><font size="-1">APB slave output
+signals</font></td>
+      <td style="vertical-align: top;"><font size="-1">-<br>
+      </font> </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body></html>

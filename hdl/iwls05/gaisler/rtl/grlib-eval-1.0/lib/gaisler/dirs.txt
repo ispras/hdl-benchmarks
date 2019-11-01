@@ -1,0 +1,2 @@
+devices arith memctrl memory pads
+leon3 leon3ft misc ambatest net pci uart sim jtag

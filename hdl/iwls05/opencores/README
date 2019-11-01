@@ -1,0 +1,58 @@
+  OpenCores Benchmarks
+  
+  Downloaded from http://www.opencores.org
+  
+  
+  pci_conf_cyc_addr_dec: PCI
+  steppermotordrive: Stepper Motor Drive
+  ss_pcm: Single Slot PCM Interface
+  usb_phy: USB 1.1 PHY
+  sasc: Simple Asynchronous Serial Controller
+  simple_spi: MC68HC11E based SPI interface
+  i2c: WISHBONE revB.2 compliant I2C Master controller
+  pci_spoci_ctrl: PCI
+  des_area: DES optimized for area
+  spi: SPI IP
+  systemcdes: SystemC DES
+  wb_dma: WISHBONE DMA/Bridge IP Core
+  des3_area: Tripe DES optimized for performance
+  tv80: TV80 8-Bit Microprocessor Core
+  systemcaes: SystemC AES
+  mem_ctrl: WISHBONE Memory Controller
+  ac97_ctrl: WISHBONE AC 97 Controller
+  usb_funct: USB function core
+  pci_bridge32: PCI
+  aes_core: AES Cipher
+  wb_conmax: WISHBONE Conmax IP Core
+  ethernet: Ethernet IP core
+  des_perf: DES optimized for performance
+  vga_lcd: WISHBONE rev.B2 compliant Enhanced VGA/LCD Controller
+
+
+                design | sequential | inverter | buffer | logic | tristate | unresolved |  total
+--------------------------------------------------------------------------------------------------
+ pci_conf_cyc_addr_dec |          - |       14 |      1 |    82 |        - |          - |     97
+     steppermotordrive |         25 |       68 |      4 |   129 |        - |          - |    226
+                ss_pcm |         87 |      102 |      3 |   278 |        - |          - |    470
+               usb_phy |         98 |      118 |     17 |   313 |        - |          - |    546
+                  sasc |        117 |       79 |      7 |   346 |        - |          - |    549
+            simple_spi |        132 |      143 |      8 |   538 |        - |          - |    821
+                   i2c |        128 |      211 |     45 |   758 |        - |          - |   1142
+        pci_spoci_ctrl |         60 |      260 |     34 |   913 |        - |          - |   1267
+              des_area |         64 |      851 |     92 |  2125 |        - |          - |   3132
+                   spi |        229 |      462 |     49 |  2487 |        - |          - |   3227
+            systemcdes |        190 |      832 |    136 |  2164 |        - |          - |   3322
+                wb_dma |        563 |      516 |     38 |  2272 |        - |          - |   3389
+             des3_area |        128 |     1135 |    142 |  3476 |        - |          - |   4881
+                  tv80 |        359 |     1101 |     97 |  5604 |        - |          - |   7161
+            systemcaes |        670 |      786 |     66 |  6437 |        - |          - |   7959
+              mem_ctrl |       1083 |     1462 |    221 |  8674 |        - |          - |  11440
+             ac97_ctrl |       2199 |     1525 |    111 |  8020 |        - |          - |  11855
+             usb_funct |       1746 |     1865 |     33 |  9164 |        - |          - |  12808
+          pci_bridge32 |       3359 |     3095 |    100 | 10262 |        - |          - |  16816
+              aes_core |        530 |     5589 |    274 | 14402 |        - |          - |  20795
+             wb_conmax |        770 |     3366 |     86 | 24812 |        - |          - |  29034
+              ethernet |      10544 |     3404 |    234 | 32557 |       32 |          - |  46771
+              des_perf |       8808 |    28372 |   1489 | 59672 |        - |          - |  98341
+               vga_lcd |      17079 |    21397 |   2542 | 83013 |        - |          - | 124031
+--------------------------------------------------------------------------------------------------

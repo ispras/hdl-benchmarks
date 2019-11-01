@@ -1,0 +1,46 @@
+//  
+//  These design were downloaded from http://www.cbl.ncsu.edu.
+//  (Currently available from: http://www.archive.org)
+//  
+//  Users may copy and distribute the benchmarks as long as they do not 
+//  charge for these services.
+//  All users of these benchmarks are request to refer to them in presentations 
+//  and publications as named in the respective directories (e. g. ISCAS'95,
+//  LayoutSynth92, etc.), while providing a pointer to the benchmark access by 
+//  ftp from benchmarks@cbl.ncsu.edu.
+//  
+
+
+  design | sequential | inverter | buffer | logic | tristate | unresolved | total
+-----------------------------------------------------------------------------------
+     s27 |          3 |        7 |      - |     9 |        - |          - |    19
+  s208_1 |          8 |       17 |      3 |    45 |        - |          - |    73
+    s349 |         15 |       29 |      9 |    70 |        - |          - |   123
+    s344 |         15 |       36 |      5 |    76 |        - |          - |   132
+    s298 |         14 |       34 |      7 |    86 |        - |          - |   141
+    s382 |         21 |       44 |      2 |    92 |        - |          - |   159
+    s444 |         21 |       47 |      2 |    92 |        - |          - |   162
+    s400 |         21 |       41 |      6 |    95 |        - |          - |   163
+    s386 |          6 |       50 |      6 |   105 |        - |          - |   167
+  s420_1 |         16 |       48 |     13 |   110 |        - |          - |   187
+    s713 |         19 |       52 |      6 |   115 |        - |          - |   192
+    s641 |         19 |       48 |      6 |   120 |        - |          - |   193
+   s526n |         21 |       56 |      8 |   143 |        - |          - |   228
+    s526 |         21 |       74 |      7 |   135 |        - |          - |   237
+    s510 |          6 |       67 |     21 |   162 |        - |          - |   256
+    s832 |          5 |       83 |     10 |   235 |        - |          - |   333
+    s820 |          5 |       98 |     18 |   230 |        - |          - |   351
+  s838_1 |         32 |       90 |     21 |   224 |        - |          - |   367
+   s1196 |         18 |      105 |     27 |   333 |        - |          - |   483
+   s1238 |         18 |      139 |     46 |   383 |        - |          - |   586
+   s1423 |         74 |      121 |     12 |   400 |        - |          - |   607
+   s1488 |          6 |      176 |     26 |   428 |        - |          - |   636
+   s1494 |          6 |      172 |     23 |   442 |        - |          - |   643
+  s15850 |        165 |      130 |     21 |   369 |        - |          - |   685
+ s9234_1 |        145 |      227 |      4 |   598 |        - |          - |   974
+  s13207 |        333 |      168 |     49 |   669 |        - |          - |  1219
+   s5378 |        163 |      265 |     31 |   835 |        - |          - |  1294
+  s38584 |       1178 |     1017 |    134 |  4395 |        - |          - |  6724
+  s35932 |       1728 |      495 |     88 |  4962 |        - |          - |  7273
+  s38417 |       1564 |     1300 |     85 |  5329 |        - |          - |  8278
+-----------------------------------------------------------------------------------

@@ -1,0 +1,13 @@
+101:     always @(posedge DSPCLK) begin
+164:     //always @(posedge BTBCLK or posedge PPclr_h) begin
+165:     always @(posedge BTBCLK) begin
+182:     always @(posedge DSPCLK)
+188:     always @(posedge BTBCLK) begin
+229:     //always @(posedge BTBCLK or posedge PPclr_h) begin
+230:     always @(posedge BTBCLK) begin
+247:     always @(posedge DSPCLK)
+253:     always @(posedge BTBCLK) begin
+272:     always @(Bhit_E or BTaken_E or Ctrue or Bterr_E or nEntry or 
+302:     always @(Dor_E_temp or Ctrue) begin
+327:     always @(posedge BTBCLK) begin
+338:     always @(posedge BTBCLK) begin

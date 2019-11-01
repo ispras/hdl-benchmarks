@@ -1,0 +1,10 @@
+alu.vhd
+bus_mux.vhd
+control.vhd
+mem_ctrl.vhd
+mips_pack.vhd
+mult.vhd
+oc_mips.vhd
+pc_next.vhd
+reg_bank.vhd
+shifter.vhd

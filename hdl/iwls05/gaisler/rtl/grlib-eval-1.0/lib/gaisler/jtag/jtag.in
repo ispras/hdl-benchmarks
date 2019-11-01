@@ -1,0 +1,6 @@
+  if [ "$CONFIG_SYN_VIRTEX2" = "y" -o "$CONFIG_SYN_SPARTAN3" = "y" \
+       -o "$CONFIG_SYN_IHP25" = "y" ] ; then	
+     bool 'JTAG Debug Link' 			  CONFIG_DSU_JTAG
+  fi
+
+

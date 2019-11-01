@@ -1,0 +1,1 @@
+  bool 	'PCI interface, target-only     '  CONFIG_PCI_SIMPLE_TARGET

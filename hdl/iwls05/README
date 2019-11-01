@@ -1,0 +1,53 @@
+IWLS 2005 Benchmarks
+====================
+
+Initiated by Christoph Albrecht, Cadence Berkeley Laboratories.
+
+    * 84 designs with up to 185,000 registers and 900,000 gates collected from
+      different websites
+
+    * All designs mapped with Cadence RTL Compiler in a quick synthesis run to
+      a 180 nm library
+
+    * Available in two formats, in Verilog and in OpenAccess
+
+
+Download:
+---------
+RTL-source files and the mapped netlists in Verilog and OpenAccess (compressed
+tar-file, 208 MB)
+Presentation given at the workshop (pdf-file)
+
+
+Benchmarks:
+-----------
+OpenCores
+http://www.opencores.org/
+Gaisler Reserarch
+http://www.gaisler.com/
+Faraday
+http://www.faraday-tech.com/
+ITC99
+http://www.cad.polito.it/tools/itc99.html
+ISCAS
+
+
+Library:
+--------
+CRETE: Cadence University Campus Program
+http://crete.cadence.com/
+
+
+OpenAccess:
+-----------
+Silicon Integration Initiative
+http://www.si2.org/
+
+
+OA Gear:
+--------
+OA Gear Project Page on OpenEDATools at SI
+http://openedatools.si2.org/oagear/
+
+
+06/14/2005 Christoph Albrecht (calb@cadence.com)
