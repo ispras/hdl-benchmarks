@@ -14,7 +14,7 @@ module Control(
         SESel,
 
         Reset,
-        Clk ,
+        Clk
               );
    reg monitor_lw;
    reg monitor_j;
