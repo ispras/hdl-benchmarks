@@ -195,14 +195,14 @@ reg		int_re;
 
 // Aliases
 wire	[31:0]	csr;
-wire	[31:0]	int;
+wire	[31:0]	wint;
 wire		dma_en;
 wire	[10:0]	max_pl_sz;
 wire		ep_in;
 wire		ep_out;
 
 assign csr = {uc_bsel, uc_dpd, csr1, 1'h0, ots_stop, csr0};
-assign int = {2'h0, iena, 2'h0,ienb, 9'h0, int_stat};
+assign wint = {2'h0, iena, 2'h0,ienb, 9'h0, int_stat};
 assign dma_en = csr[15];
 assign max_pl_sz = csr[10:0];
 assign ep_in  = csr[27:26]==2'b01;
@@ -213,10 +213,10 @@ assign ep_out = csr[27:26]==2'b10;
 // WISHBONE Access
 //
 
-always @(adr or csr or int or buf0 or buf1)
+always @(adr or csr or wint or buf0 or buf1)
 	case(adr)	// synopsys full_case parallel_case
 	   2'h0: dout = csr;
-	   2'h1: dout = int;
+	   2'h1: dout = wint;
 	   2'h2: dout = buf0;
 	   2'h3: dout = buf1;
 	endcase

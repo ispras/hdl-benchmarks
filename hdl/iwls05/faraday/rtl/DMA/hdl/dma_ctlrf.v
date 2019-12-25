@@ -533,7 +533,7 @@ wire [`DMA_MAX_CHNO-1:0] err_st;
 wire [`DMA_MAX_CHNO-1:0] abt_st; 
 wire [7:0] ch_en; 
 wire [7:0] ch_busy; 
-wire [`DMA_MAX_CHNO-1:0] int; 
+wire [`DMA_MAX_CHNO-1:0] wint; 
 wire [`DMA_MAX_CHNO-1:0] int_tc; 
 wire [`DMA_MAX_CHNO-1:0] int_err; 
 
@@ -1048,10 +1048,10 @@ default: mux_ms = 32'bx;
 endcase 
 
 
-always @(slv_ad or int or int_tc or int_err or tc or 
+always @(slv_ad or wint or int_tc or int_err or tc or 
 err or ch_en or ch_busy or csr or sync or int_abt or abt) 
 case(slv_ad[5:2]) 
-4'h0: mux_gl = {{{32-`DMA_MAX_CHNO}{1'b0}},int}; 
+4'h0: mux_gl = {{{32-`DMA_MAX_CHNO}{1'b0}},wint}; 
 4'h1: mux_gl = {{{32-`DMA_MAX_CHNO}{1'b0}},int_tc}; 
 4'h3: mux_gl = {{{16-`DMA_MAX_CHNO}{1'b0}},int_abt,{{16-`DMA_MAX_CHNO}{1'b0}},int_err}; 
 4'h5: mux_gl = {{{32-`DMA_MAX_CHNO}{1'b0}},tc}; 
@@ -1732,7 +1732,7 @@ assign interrin = | int_err;
 
 assign intabtin = | int_abt; 
 
-assign int = int_tc | int_err | int_abt; 
+assign wint = int_tc | int_err | int_abt; 
 
 assign int_tc[0] = ~c0cfg[`DMA_CHCFG_INTTC]&tc[0]; 
 assign int_err[0] = ~c0cfg[`DMA_CHCFG_INTERR]&err[0]; 

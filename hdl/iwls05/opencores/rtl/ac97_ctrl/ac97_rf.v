@@ -82,7 +82,7 @@
 module ac97_rf(clk, rst,
 
 		adr, rf_dout, rf_din,
-		rf_we, rf_re, int, ac97_rst_force,
+		rf_we, rf_re, rint, ac97_rst_force,
 		resume_req, suspended,
 
 		crac_we, crac_din, crac_out,
@@ -103,7 +103,7 @@ output	[31:0]	rf_dout;
 input	[31:0]	rf_din;
 input		rf_we;
 input		rf_re;
-output		int;
+output		rint;
 output		ac97_rst_force;
 output		resume_req;
 input		suspended;
@@ -148,7 +148,7 @@ reg	[23:0]	icc_r;
 reg	[31:0]	crac_r;
 reg	[28:0]	intm_r;
 reg	[28:0]	ints_r;
-reg		int;
+reg		rint;
 wire	[28:0]	int_all;
 wire	[31:0]	csr, occ0, occ1, icc, crac, intm, ints;
 reg	[15:0]	crac_dout_r;
@@ -301,6 +301,6 @@ assign ic2_cfg = icc[23:16];
 assign int_all = intm_r & ints_r;
 
 always @(posedge clk)
-	int <= #1 |int_all;
+	rint <= #1 |int_all;
 
 endmodule

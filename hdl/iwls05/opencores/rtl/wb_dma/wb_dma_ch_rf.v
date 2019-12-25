@@ -94,7 +94,7 @@
 
 module wb_dma_ch_rf(	clk, rst,
 			pointer, pointer_s, ch_csr, ch_txsz, ch_adr0, ch_adr1,
-			ch_am0, ch_am1, sw_pointer, ch_stop, ch_dis, int,
+			ch_am0, ch_am1, sw_pointer, ch_stop, ch_dis, wint,
 
 			wb_rf_din, wb_rf_adr, wb_rf_we, wb_rf_re,
 
@@ -131,7 +131,7 @@ output	[31:0]	ch_am1;
 output	[31:0]	sw_pointer;
 output		ch_stop;
 output		ch_dis;
-output		int;
+output		wint;
 
 input	[31:0]	wb_rf_din;
 input	[7:0]	wb_rf_adr;
@@ -400,7 +400,7 @@ always @(posedge clk or negedge rst)
 	   end
 
 // Interrupt Output
-assign int = |(int_src_r & ch_csr_r3) & CH_EN;
+assign wint = |(int_src_r & ch_csr_r3) & CH_EN;
 
 // ---------------------------------------------------
 // TXZS
@@ -513,7 +513,7 @@ endmodule
 
 module wb_dma_ch_rf_dummy(clk, rst,
 			pointer, pointer_s, ch_csr, ch_txsz, ch_adr0, ch_adr1,
-			ch_am0, ch_am1, sw_pointer, ch_stop, ch_dis, int,
+			ch_am0, ch_am1, sw_pointer, ch_stop, ch_dis, wint,
 
 			wb_rf_din, wb_rf_adr, wb_rf_we, wb_rf_re,
 
@@ -549,7 +549,7 @@ output	[31:0]	ch_am1;
 output	[31:0]	sw_pointer;
 output		ch_stop;
 output		ch_dis;
-output		int;
+output		wint;
 
 input	[31:0]	wb_rf_din;
 input	[7:0]	wb_rf_adr;
@@ -582,6 +582,6 @@ assign		ch_am1 = 32'h0;
 assign		sw_pointer = 32'h0;
 assign		ch_stop = 1'b0;
 assign		ch_dis = 1'b0;
-assign		int = 1'b0;
+assign		wint = 1'b0;
 
 endmodule
