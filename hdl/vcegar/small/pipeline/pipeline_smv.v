@@ -35,7 +35,7 @@ initial
  end
 
  always begin
-   assert property: ((dataOut == tmp_stageTwo + tmp_stageOne) || (dataOut == 0));
+   assert property ((dataOut == tmp_stageTwo + tmp_stageOne) || (dataOut == 0));
  end 
 
 endmodule 
