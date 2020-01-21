@@ -35,6 +35,7 @@ module sampleq (reset, inaddr, validin, readin, clkin, bus_gnt_raw,
     // Signals used in properties.
     reg 		bus_gnt;
     reg [LOGLENGTH-1:0] storeaddr; // output addres
+    reg                 monitor;
     wire [WIDTH-1:0]	writetailentry;
 
     initial begin
