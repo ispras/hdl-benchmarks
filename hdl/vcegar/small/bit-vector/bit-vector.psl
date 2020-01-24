@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.a >= 0d3_2);
+always (m_main_SUBSTITUTED.main_a >= 0d3_2);

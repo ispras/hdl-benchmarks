@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_field5.cnt != 0d5_1);
+always (m_field5.field5_cnt != 0d5_1);

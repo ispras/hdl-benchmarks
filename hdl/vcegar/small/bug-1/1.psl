@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.impl_PC_valid = 0d1_1);
+always (m_main_SUBSTITUTED.main_impl_PC_valid = 0d1_1);

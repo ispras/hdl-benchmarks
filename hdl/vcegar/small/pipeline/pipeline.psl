@@ -1,2 +1,2 @@
 PSLSPEC
-always ((m_main_SUBSTITUTED.dataOut = m_main_SUBSTITUTED.tmp_stageTwo + m_main_SUBSTITUTED.tmp_stageOne) | m_main_SUBSTITUTED.dataOut = 0d32_0);
+always ((m_main_SUBSTITUTED.main_dataOut = m_main_SUBSTITUTED.main_tmp_stageTwo + m_main_SUBSTITUTED.main_tmp_stageOne) | m_main_SUBSTITUTED.main_dataOut = 0d32_0);

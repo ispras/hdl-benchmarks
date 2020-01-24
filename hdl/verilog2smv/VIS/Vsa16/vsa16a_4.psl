@@ -1,9 +1,9 @@
 DEFINE
-state_2_1 := m_vsa16a.State[2:1];
-adFld1_1_0 := m_vsa16a.adFld1[1:0];
-adFld2_1_0 := m_vsa16a.adFld2[1:0];
-a_15_0 := m_vsa16a.A_SUBSTITUTED[15:0];
-b_15_0 := m_vsa16a.B[15:0];
+state_2_1 := m_vsa16a.vsa16a_State[2:1];
+adFld1_1_0 := m_vsa16a.vsa16a_adFld1[1:0];
+adFld2_1_0 := m_vsa16a.vsa16a_adFld2[1:0];
+a_15_0 := m_vsa16a.vsa16a_A_SUBSTITUTED[15:0];
+b_15_0 := m_vsa16a.vsa16a_B[15:0];
 
 PSLSPEC
 always (!(adFld1_1_0 = adFld2_1_0) | (state_2_1 = 0d2_0 | a_15_0 = b_15_0));

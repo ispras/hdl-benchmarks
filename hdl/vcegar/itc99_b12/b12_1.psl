@@ -1,9 +1,9 @@
 DEFINE
-cntr_2_0 := m_main_SUBSTITUTED.counter[2:0];
-nl_3_0 := m_main_SUBSTITUTED.nl[3:0];
+cntr_2_0 := m_main_SUBSTITUTED.main_counter[2:0];
+nl_3_0 := m_main_SUBSTITUTED.main_nl[3:0];
 
 PSLSPEC
-always (!(cntr_2_0 = 0d3_0 &  m_main_SUBSTITUTED.play = 0d1_1) | (m_main_SUBSTITUTED.speaker = m_main_SUBSTITUTED.s));
+always (!(cntr_2_0 = 0d3_0 &  m_main_SUBSTITUTED.main_play = 0d1_1) | (m_main_SUBSTITUTED.main_speaker = m_main_SUBSTITUTED.main_s));
 
 PSLSPEC
-always (!(m_main_SUBSTITUTED.nloss = 0d1_0) | (!(nl_3_0 = 0d4_15)));
+always (!(m_main_SUBSTITUTED.main_nloss = 0d1_0) | (!(nl_3_0 = 0d4_15)));

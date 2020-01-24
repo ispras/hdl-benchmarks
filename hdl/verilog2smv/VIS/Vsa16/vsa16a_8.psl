@@ -1,10 +1,10 @@
 DEFINE
-state_2 := m_vsa16a.State[2:2];
-opcode_2_0 := m_vsa16a.opcode[2:0];
-adFld1_1_0 := m_vsa16a.adFld1[1:0];
-adFld2_1_0 := m_vsa16a.adFld2[1:0];
-funFld_2_0 := m_vsa16a.funFld[2:0];
-aluOut_15_0 := m_vsa16a.ALUOutput[15:0];
+state_2 := m_vsa16a.vsa16a_State[2:2];
+opcode_2_0 := m_vsa16a.vsa16a_opcode[2:0];
+adFld1_1_0 := m_vsa16a.vsa16a_adFld1[1:0];
+adFld2_1_0 := m_vsa16a.vsa16a_adFld2[1:0];
+funFld_2_0 := m_vsa16a.vsa16a_funFld[2:0];
+aluOut_15_0 := m_vsa16a.vsa16a_ALUOutput[15:0];
 
 PSLSPEC
 always (!(opcode_2_0 = 0b3_011 & funFld_2_0 = 0b3_001 & adFld1_1_0 = adFld2_1_0) | (state_2 = 0d1_0 | aluOut_15_0 = 0d16_0));

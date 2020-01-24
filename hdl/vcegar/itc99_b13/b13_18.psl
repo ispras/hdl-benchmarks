@@ -1,2 +1,2 @@
 PSLSPEC
-always (!(m_main_SUBSTITUTED.mpx = 0d1_1) | (m_main_SUBSTITUTED.add_mpx2 = 0d1_1));
+always (!(m_main_SUBSTITUTED.main_mpx = 0d1_1) | (m_main_SUBSTITUTED.main_add_mpx2 = 0d1_1));

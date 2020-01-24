@@ -1,5 +1,5 @@
 DEFINE
-canale_3 := m_main_SUBSTITUTED.canale[3:3];
+canale_3 := m_main_SUBSTITUTED.main_canale[3:3];
 
 PSLSPEC
 always (canale_3 = 0d1_0);

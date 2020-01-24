@@ -1,8 +1,8 @@
 DEFINE
-state_2 := m_vsa16a.State[2:2];
-state_2_1 := m_vsa16a.State[2:1];
-opcode_2_0 := m_vsa16a.opcode[2:0];
-a_15_0 := m_vsa16a.A_SUBSTITUTED[15:0];
+state_2 := m_vsa16a.vsa16a_State[2:2];
+state_2_1 := m_vsa16a.vsa16a_State[2:1];
+opcode_2_0 := m_vsa16a.vsa16a_opcode[2:0];
+a_15_0 := m_vsa16a.vsa16a_A_SUBSTITUTED[15:0];
 
 PSLSPEC
-always (!(opcode_2_0 = 0b3_010 & state_2 = 0d1_1) | ((m_vsa16a.Cond = 0d1_0 | a_15_0 = 0d16_0) & (!(a_15_0 = 0d16_0) | m_vsa16a.Cond = 0d1_1)));
+always (!(opcode_2_0 = 0b3_010 & state_2 = 0d1_1) | ((m_vsa16a.vsa16a_Cond = 0d1_0 | a_15_0 = 0d16_0) & (!(a_15_0 = 0d16_0) | m_vsa16a.vsa16a_Cond = 0d1_1)));

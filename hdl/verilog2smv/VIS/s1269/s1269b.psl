@@ -1,17 +1,17 @@
 DEFINE
-tmp := m_s1269.qINSo[2:1];
+tmp := m_s1269.s1269_qINSo[2:1];
 
 PSLSPEC
-always (m_s1269.I679 = 0d1_1 | m_s1269.I680 = 0d1_1 | m_s1269.I681 = 0d1_1 | m_s1269.I682 = 0d1_0 | m_s1269.I683 = 0d1_1);
+always (m_s1269.s1269_I679 = 0d1_1 | m_s1269.s1269_I680 = 0d1_1 | m_s1269.s1269_I681 = 0d1_1 | m_s1269.s1269_I682 = 0d1_0 | m_s1269.s1269_I683 = 0d1_1);
 
 PSLSPEC
-always (!(m_s1269.I679 = 0d1_1 | m_s1269.I680 = 0d1_1 | m_s1269.I681 = 0d1_1) | m_s1269.I683 = 0d1_0);
+always (!(m_s1269.s1269_I679 = 0d1_1 | m_s1269.s1269_I680 = 0d1_1 | m_s1269.s1269_I681 = 0d1_1) | m_s1269.s1269_I683 = 0d1_0);
 
 PSLSPEC
-always (!(m_s1269.I679 = 0d1_1 | m_s1269.I680 = 0d1_1 | m_s1269.I681 = 0d1_1) | m_s1269.qShiftRight = 0d1_1);
+always (!(m_s1269.s1269_I679 = 0d1_1 | m_s1269.s1269_I680 = 0d1_1 | m_s1269.s1269_I681 = 0d1_1) | m_s1269.s1269_qShiftRight = 0d1_1);
 
 PSLSPEC
-always (!(m_s1269.I679 = 0d1_1 | m_s1269.I680 = 0d1_1 | m_s1269.I681 = 0d1_1) | m_s1269.qLDALUout = 0d1_1);
+always (!(m_s1269.s1269_I679 = 0d1_1 | m_s1269.s1269_I680 = 0d1_1 | m_s1269.s1269_I681 = 0d1_1) | m_s1269.s1269_qLDALUout = 0d1_1);
 
 PSLSPEC
-always (!(m_s1269.I679 = 0d1_1 | m_s1269.I680 = 0d1_1 | m_s1269.I681 = 0d1_1) | tmp = 0b2_10);
+always (!(m_s1269.s1269_I679 = 0d1_1 | m_s1269.s1269_I680 = 0d1_1 | m_s1269.s1269_I681 = 0d1_1) | tmp = 0b2_10);

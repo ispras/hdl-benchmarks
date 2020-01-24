@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.error = 0d1_0 | m_main_SUBSTITUTED.tx_end = 0d1_0);
+always (m_main_SUBSTITUTED.main_error = 0d1_0 | m_main_SUBSTITUTED.main_tx_end = 0d1_0);

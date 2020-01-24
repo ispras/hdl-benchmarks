@@ -1,2 +1,2 @@
 PSLSPEC
-always ((!(m_main_SUBSTITUTED.is_sharedA = 0d1_1)) | (m_main_SUBSTITUTED.is_sharedB = 0d1_1) | (m_main_SUBSTITUTED.is_sharedC = 0d1_1));
+always ((!(m_main_SUBSTITUTED.main_is_sharedA = 0d1_1)) | (m_main_SUBSTITUTED.main_is_sharedB = 0d1_1) | (m_main_SUBSTITUTED.main_is_sharedC = 0d1_1));

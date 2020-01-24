@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.confirm = 0d1_0 | m_main_SUBSTITUTED.send_en = 0d1_0);
+always (m_main_SUBSTITUTED.main_confirm = 0d1_0 | m_main_SUBSTITUTED.main_send_en = 0d1_0);

@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_spinner.dout != 0b32_10101010101010101010101010101010);
+always (m_spinner.spinner_dout != 0b32_10101010101010101010101010101010);

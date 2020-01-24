@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_IPBDP_hier.P_0 = m_IPBDP_hier.P_1);
+always (m_IPBDP_hier.IPBDP_hier_P_0 = m_IPBDP_hier.IPBDP_hier_P_1);

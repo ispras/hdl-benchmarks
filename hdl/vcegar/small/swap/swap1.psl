@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.a = 0d20_100 | m_main_SUBSTITUTED.a = 0d20_20);
+always (m_main_SUBSTITUTED.main_a = 0d20_100 | m_main_SUBSTITUTED.main_a = 0d20_20);

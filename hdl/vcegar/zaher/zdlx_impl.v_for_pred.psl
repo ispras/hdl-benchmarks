@@ -1,2 +1,2 @@
 PSLSPEC
-never (m_main_SUBSTITUTED.EX_MEM_valid = 0d1_0 & m_main_SUBSTITUTED.MEM_WB_update_pc = 0d1_0 & m_main_SUBSTITUTED.PC_valid = 0d1_0 & m_main_SUBSTITUTED.ID_EX_valid = 0d1_0 & m_main_SUBSTITUTED.IF_ID_valid = 0d1_1 & m_main_SUBSTITUTED.IF_ID_update_pc = 0d1_0 & m_main_SUBSTITUTED.ID_EX_update_pc = 0d1_0 & m_main_SUBSTITUTED.EX_MEM_update_pc = 0d1_0);
+never (m_main_SUBSTITUTED.main_EX_MEM_valid = 0d1_0 & m_main_SUBSTITUTED.main_MEM_WB_update_pc = 0d1_0 & m_main_SUBSTITUTED.main_PC_valid = 0d1_0 & m_main_SUBSTITUTED.main_ID_EX_valid = 0d1_0 & m_main_SUBSTITUTED.main_IF_ID_valid = 0d1_1 & m_main_SUBSTITUTED.main_IF_ID_update_pc = 0d1_0 & m_main_SUBSTITUTED.main_ID_EX_update_pc = 0d1_0 & m_main_SUBSTITUTED.main_EX_MEM_update_pc = 0d1_0);

@@ -1,5 +1,5 @@
 PSLSPEC
-always (m_miim.MdoEn = 0d1_0 | m_miim.Busy = 0d1_1);
+always (m_miim.miim_MdoEn = 0d1_0 | m_miim.miim_Busy = 0d1_1);
 
 PSLSPEC
-always (m_miim.Busy = 0d1_0 | m_miim.MdoEn = 0d1_1);
+always (m_miim.miim_Busy = 0d1_0 | m_miim.miim_MdoEn = 0d1_1);

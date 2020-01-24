@@ -1,2 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.canale = m_main_SUBSTITUTED.conta_tmp);
+always (m_main_SUBSTITUTED.main_canale = m_main_SUBSTITUTED.main_conta_tmp);

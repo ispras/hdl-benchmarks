@@ -1,2 +1,2 @@
 PSLSPEC
-always (!(m_main_SUBSTITUTED.MdoEn = 0d1_1)) | (m_main_SUBSTITUTED.Busy = 0d1_1);
+always (!(m_main_SUBSTITUTED.main_MdoEn = 0d1_1)) | (m_main_SUBSTITUTED.main_Busy = 0d1_1);

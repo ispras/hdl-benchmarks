@@ -1,2 +1,2 @@
 PSLSPEC
-always (!(m_main_SUBSTITUTED.tx_end = 0d1_1) | (m_main_SUBSTITUTED.next_bit = 0b1_1));
+always (!(m_main_SUBSTITUTED.main_tx_end = 0d1_1) | (m_main_SUBSTITUTED.main_next_bit = 0b1_1));

@@ -1,2 +1,2 @@
 PSLSPEC
-always ((m_main_SUBSTITUTED.out_reg = 0d8_0) | (m_main_SUBSTITUTED.tre = 0d1_1));
+always ((m_main_SUBSTITUTED.main_out_reg = 0d8_0) | (m_main_SUBSTITUTED.main_tre = 0d1_1));

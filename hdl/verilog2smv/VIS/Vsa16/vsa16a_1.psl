@@ -1,6 +1,6 @@
 DEFINE
-pc_0 := m_vsa16a.PC[0:0];
-npc_0 := m_vsa16a.NPC[0:0];
+pc_0 := m_vsa16a.vsa16a_PC[0:0];
+npc_0 := m_vsa16a.vsa16a_NPC[0:0];
 
 PSLSPEC
 always (pc_0 = 0d1_0 & npc_0 = 0d1_0);
