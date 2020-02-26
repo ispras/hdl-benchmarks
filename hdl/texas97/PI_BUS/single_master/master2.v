@@ -18,7 +18,7 @@ module
    master_controller(clk,A,OPC,DIN,DOUT,LOCK,READ,REQ,GNT,TOUT,ACK);
    input clk;
    input [0:31] DIN;
-   input  	ACK;
+   input wire [2:0] ACK;
    input 	GNT;
    input 	TOUT;
    output [0:31] DOUT;
@@ -29,7 +29,6 @@ module
    output 	 REQ;
 
 
-   wire [2:0] ACK;
    wire 	 mst_rd;
    wire 	 mst_wr;
    wire 	 mst_lock;

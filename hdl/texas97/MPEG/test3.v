@@ -41,10 +41,9 @@ module input_buffer (clk,input_stream,output_buffer);
 
 input clk;
 input input_stream;
-output output_buffer;
+output reg [7:0] output_buffer;
 
 wire input_stream;
-reg [7:0] output_buffer;
 reg [6:0] temp;
 
 initial 

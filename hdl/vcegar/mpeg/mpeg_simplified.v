@@ -117,10 +117,9 @@ module input_buffer (clk,input_stream,output_buffer);
 
 input clk;
 input input_stream;
-output output_buffer;
+output reg [7:0] output_buffer;
 
 wire input_stream;
-reg [7:0] output_buffer;
 reg [6:0] temp;
 
 initial 
@@ -445,23 +444,18 @@ endmodule
 module parse_system_header(one_byte,start,enable,stop,syshead_len_reg,rate_bnd_reg,flag_reg,resvd_byte_reg);
 
 //input clk;
-input one_byte;
+input wire[7:0] one_byte;
 input start;
 input enable;
 output stop;
-output syshead_len_reg;
-output rate_bnd_reg;
-output flag_reg;
-output resvd_byte_reg;
+output reg[15:0] syshead_len_reg;
+output reg[23:0] rate_bnd_reg;
+output reg[15:0] flag_reg;
+output reg[7:0] resvd_byte_reg;
 
-wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
-reg[15:0] syshead_len_reg;
-reg[23:0] rate_bnd_reg;
-reg[15:0] flag_reg;
-reg[7:0] resvd_byte_reg;
 
 reg[2:0] count;
 reg flag;

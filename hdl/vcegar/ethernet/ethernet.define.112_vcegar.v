@@ -116,11 +116,11 @@ endmodule
 module BitTransmitter(clk, send_bt, finished_bt, send_pls);
 
 input clk;
-input send_bt;
-output finished_bt, send_pls;
+input wire [0:1] send_bt;
+output finished_bt;
+output wire [0:1] send_pls;
 
 wire finished_bt;
-wire [0:1] send_pls, send_bt;
 
 reg [0:1] sendpls;
 reg finishedbt;
@@ -558,10 +558,10 @@ endmodule
 
 module CHNL(clk, data_in_1, data_in_2, carrier_sense, collision_detect, data_out);
 input clk;
-input data_in_1, data_in_2;
-output carrier_sense, collision_detect, data_out;
+input wire [0:1] data_in_1, data_in_2;
+output carrier_sense, collision_detect;
+output wire [0:1] data_out;
 
-wire [0:1] data_in_1, data_in_2, data_out;
 wire carrier_sense, collision_detect;
 
 reg carrier_sense_reg;

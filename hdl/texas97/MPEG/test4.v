@@ -2,18 +2,16 @@ module read_packet (start,input_stream,read_signal,done,buffer_out,stream_done);
    
 
  input start;
- input input_stream;
+ input wire [7:0] input_stream;
  input read_signal;
  output done; 
- output buffer_out;
+ output reg [7:0] buffer_out;
  output stream_done;
    
 
  reg 	stream_done;
  reg done;
 // reg buffer_in;
- wire[7:0] input_stream;
- reg[7:0] buffer_out;
  wire prefix_stop;
  reg[3:0] state;
  reg[7:0] stream_id;

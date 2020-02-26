@@ -3,7 +3,7 @@ module read_packet (start,done,input_stream,read_signal,buffer_out,sys_header,st
 
  input start;
  output done;
- input input_stream;
+ input wire [7:0] input_stream;
  input read_signal;
  output buffer_out;
  output stream_done;
@@ -14,7 +14,6 @@ module read_packet (start,done,input_stream,read_signal,buffer_out,sys_header,st
    reg sys_header;
    
 // reg buffer_in;
- wire[7:0] input_stream;
  reg[7:0] buffer_out;
  wire prefix_stop;
  reg[3:0] state;

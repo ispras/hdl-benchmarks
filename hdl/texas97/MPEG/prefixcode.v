@@ -2,12 +2,11 @@ module start_code_prefix(start,done,input_stream,read_signal);
    
    input start;
    output done;
-   input  input_stream;
+   input wire [7:0] input_stream;
    input  read_signal;
 
    reg 	  monitor;
    reg 	  done;
-   wire [7:0] input_stream;
    wire       read_signal;
    reg [1:0]  state;
    wire       start;

@@ -142,23 +142,29 @@ module P6( PID,BREQ1,BREQ2,BREQ3,EXT_DATA_I,EXT_ADDR_I,TRDY,
               BREQ0,EXT_DATA_O,EXT_ADDR_O,DRDY_O,ADS_O,TID_O,EXT_TRANS_REQ_O,
               HIT_HITM_O);
 
-input PID,BREQ1,BREQ2,BREQ3,EXT_DATA_I,EXT_ADDR_I,TRDY,
-              DRDY_I,ADS_I,TID_I,EXT_TRANS_REQ_I,HIT_HITM_I,TRAN_OVER;
+input TRDY,HIT_HITM_I,TRAN_OVER;
 
-output BREQ0,EXT_DATA_O,EXT_ADDR_O,DRDY_O,ADS_O,TID_O,EXT_TRANS_REQ_O,
-              HIT_HITM_O;
+output HIT_HITM_O;
 
 wire TRAN_OVER;
-wire[1:0] PID;
-wire BREQ0,BREQ1,BREQ2,BREQ3;
-wire[`DATA_WIDTH-1:0] EXT_DATA_I,EXT_DATA_O;
-wire[`ADDRESS_WIDTH-1:0] EXT_ADDR_I, EXT_ADDR_O;
-wire DRDY_I,DRDY_O;
+input wire[1:0] PID;
+output wire BREQ0;
+input wire BREQ1,BREQ2,BREQ3;
+input wire[`DATA_WIDTH-1:0] EXT_DATA_I;
+output wire[`DATA_WIDTH-1:0] EXT_DATA_O;
+input wire[`ADDRESS_WIDTH-1:0] EXT_ADDR_I;
+output wire[`ADDRESS_WIDTH-1:0] EXT_ADDR_O;
+input wire DRDY_I;
+output wire DRDY_O;
 wire TRDY;
-wire ADS_I,ADS_O;
-wire[1:0] TID_I,TID_O;
-wire[2:0] EXT_TRANS_REQ_I,EXT_TRANS_REQ_O;
-wire[1:0] HIT_HITM_I,HIT_HITM_O;
+input wire ADS_I;
+output wire ADS_O;
+input wire[1:0] TID_I;
+output wire[1:0] TID_O;
+input wire[2:0] EXT_TRANS_REQ_I;
+output wire[2:0] EXT_TRANS_REQ_O;
+input wire[1:0] HIT_HITM_I;
+output wire[1:0] HIT_HITM_O;
 
 
 wire DATA_RDY,CACHE_RDY,REQ_GRANTED,SNOOP_REQ;

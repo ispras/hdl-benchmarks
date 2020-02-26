@@ -1,12 +1,11 @@
 
 module test(clk, buffer);
    input clk;
-   input buffer;
+   input wire [7:0] buffer;
    
    
    
    reg start;
-   wire [7:0] buffer;
    wire       stop;
    reg 	      enable;
    

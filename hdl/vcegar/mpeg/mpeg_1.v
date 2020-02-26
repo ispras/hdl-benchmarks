@@ -117,10 +117,9 @@ module input_buffer (clk,input_stream,output_buffer);
 
 input clk;
 input input_stream;
-output output_buffer;
+output reg [7:0] output_buffer;
 
 wire input_stream;
-reg [7:0] output_buffer;
 reg [6:0] temp;
 
 initial 
@@ -637,17 +636,15 @@ module read_packet (start,done,input_stream,read_signal,buffer_out,stream_done);
 
  input start;
  output done;
- input input_stream;
+ input wire [7:0] input_stream;
  input read_signal;
- output buffer_out;
+ output reg[7:0] buffer_out;
  output stream_done;
    
 
  reg 	stream_done;
  reg done;
 // reg buffer_in;
- wire[7:0] input_stream;
- reg[7:0] buffer_out;
  wire prefix_stop;
  reg[3:0] state;
  reg[7:0] stream_id;
