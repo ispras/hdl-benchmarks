@@ -77,7 +77,7 @@ if [ -n "${FIND_VLOG}" ]; then
     
     if [ -f "${sby_file}" ]; then
       printf "Use the generated SBY file.\n"
-      #timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
+      timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
     else
 
       # Get first module name
@@ -114,7 +114,7 @@ EOF
 
       done < "${f}"
 
-      #timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
+      timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
 
     fi
     printf "Stop time: $(date +"%x %r")\n"
