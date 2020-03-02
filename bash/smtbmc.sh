@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright 2019-2020 ISP RAS (http://www.ispras.ru), UniTESK Lab (http://www.unitesk.com)
+# Copyright 2019 ISP RAS (http://www.ispras.ru), UniTESK Lab (http://www.unitesk.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
 # in compliance with the License. You may obtain a copy of the License at
@@ -72,12 +72,14 @@ if [ -n "${FIND_VLOG}" ]; then
     eval "file_name_with_ext=${f##*/}"
     eval "file_name=${file_name_with_ext%.*}"
     printf "Filename: ${file_name}\n"
-    file_path=$(dirname "${f}")
+    file_path="$(dirname "${f}")"
     sby_file="${file_path}"/"${file_name}".sby
     
     if [ -f "${sby_file}" ]; then
-      timeout ${TIMEOUT_SEC} "${TOOL} -f -t ${sby_file}"
+      printf "Use the generated SBY file.\n"
+      #timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
     else
+
       # Get first module name
       while read -r line
       do
@@ -109,14 +111,15 @@ ${f}
 EOF
           break
         fi
-        done < "${f}"
 
-        timeout ${TIMEOUT_SEC} "${TOOL} -f -t ${sby_file}"
-    
-        printf "Stop time: $(date +"%x %r")\n"
-        printf "done.\n"
-      done
+      done < "${f}"
+
+      #timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
+
     fi
+    printf "Stop time: $(date +"%x %r")\n"
+    printf "done.\n"
+  done
 else
   echo "No Verilog modules have been found."
 fi
