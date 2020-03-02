@@ -76,7 +76,7 @@ if [ -n "${FIND_VLOG}" ]; then
     sby_file="${file_path}"/"${file_name}".sby
     
     if [ -f "${sby_file}" ]; then
-      timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
+      timeout ${TIMEOUT_SEC} "${TOOL} -f -t ${sby_file}"
     else
       # Get first module name
       while read -r line
@@ -111,7 +111,7 @@ EOF
         fi
         done < "${f}"
 
-        timeout ${TIMEOUT_SEC} "${TOOL} -t ${file_path}/${file_name}.sby"
+        timeout ${TIMEOUT_SEC} "${TOOL} -f -t ${sby_file}"
     
         printf "Stop time: $(date +"%x %r")\n"
         printf "done.\n"
