@@ -15,14 +15,12 @@ input wire [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output scr_reg;
-output mux_rate_reg;
 
 wire start;
 wire enable;
 reg stop;
-reg[39:0] scr_reg;
-reg[23:0] mux_rate_reg;
+output reg[39:0] scr_reg;
+output reg[23:0] mux_rate_reg;
    reg 	  monitor;
    
 reg[3:0] count;

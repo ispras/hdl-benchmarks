@@ -4,20 +4,16 @@ input wire [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output syshead_len_reg;
-output rate_bnd_reg;
-output flag_reg;
-output resvd_byte_reg;
 
 wire start;
 wire enable;
    reg monitor;
    
 reg stop;
-reg[15:0] syshead_len_reg;
-reg[23:0] rate_bnd_reg;
-reg[15:0] flag_reg;
-reg[7:0] resvd_byte_reg;
+output reg[15:0] syshead_len_reg;
+output reg[23:0] rate_bnd_reg;
+output reg[15:0] flag_reg;
+output reg[7:0] resvd_byte_reg;
 
 reg[2:0] count;
 reg flag;

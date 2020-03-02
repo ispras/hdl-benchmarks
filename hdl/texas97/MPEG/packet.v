@@ -5,7 +5,6 @@ module read_packet (start,done,input_stream,read_signal,buffer_out,sys_header,st
  output done;
  input wire [7:0] input_stream;
  input read_signal;
- output buffer_out;
  output stream_done;
    output sys_header;   
 
@@ -14,7 +13,7 @@ module read_packet (start,done,input_stream,read_signal,buffer_out,sys_header,st
    reg sys_header;
    
 // reg buffer_in;
- reg[7:0] buffer_out;
+output reg[7:0] buffer_out;
  wire prefix_stop;
  reg[3:0] state;
  reg[7:0] stream_id;
@@ -223,14 +222,12 @@ module time_stamps(start,done,input_stream,read_signal,timeBytes,flag);
 input start;
 
 input read_signal;
-input input_stream;
+input wire [7:0] input_stream;
 output done;
-output timeBytes;
 input flag;
 
-wire[7:0] input_stream;
 reg done;
-reg [3:0] timeBytes;
+output reg [3:0] timeBytes;
 reg[3:0] state;
 reg[32:0] PTS;
 reg[32:0] DTS;
@@ -401,11 +398,10 @@ module start_code_prefix(start,done,input_stream,read_signal);
    
    input start;
    output done;
-   input  input_stream;
    input  read_signal;
    
    reg 	  done;
-   wire [7:0] input_stream;
+   input wire [7:0] input_stream;
    wire       read_signal;
    reg [1:0]  state;
    wire       start;

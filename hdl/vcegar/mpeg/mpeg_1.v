@@ -183,13 +183,12 @@ endmodule
 module fsm_for_pack_start(one_byte,start,enable,stop);
 
 //input clk;
-input one_byte;
+input wire[7:0] one_byte;
 input start;
 input enable;
 output stop;
 
 //wire clk;
-wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
@@ -265,19 +264,16 @@ endmodule	/* fsm_pack_head_start */
 module parse_pack_header(one_byte,start,enable,stop,scr_reg,mux_rate_reg);
 
 //input clk;
-input one_byte;
 input start;
 input enable;
 output stop;
-output scr_reg;
-output mux_rate_reg;
 
-wire[7:0] one_byte;
+input wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
-reg[39:0] scr_reg;
-reg[23:0] mux_rate_reg;
+output reg[39:0] scr_reg;
+output reg[23:0] mux_rate_reg;
 
 reg[2:0] count;
 
@@ -355,12 +351,11 @@ endmodule
 module fsm_for_syshead_start(one_byte,start,enable,stop);
 
 //input clk;
-input one_byte;
 input start;
 input enable;
 output stop;
 
-wire[7:0] one_byte;
+input wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
@@ -444,23 +439,18 @@ endmodule
 module parse_system_header(one_byte,start,enable,stop,syshead_len_reg,rate_bnd_reg,flag_reg,resvd_byte_reg);
 
 //input clk;
-input one_byte;
 input start;
 input enable;
 output stop;
-output syshead_len_reg;
-output rate_bnd_reg;
-output flag_reg;
-output resvd_byte_reg;
 
-wire[7:0] one_byte;
+input wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
-reg[15:0] syshead_len_reg;
-reg[23:0] rate_bnd_reg;
-reg[15:0] flag_reg;
-reg[7:0] resvd_byte_reg;
+output reg[15:0] syshead_len_reg;
+output reg[23:0] rate_bnd_reg;
+output reg[15:0] flag_reg;
+output reg[7:0] resvd_byte_reg;
 
 reg[2:0] count;
 reg flag;
@@ -840,14 +830,12 @@ module time_stamps(start,done,input_stream,read_signal,timeBytes,flag);
 input start;
 
 input read_signal;
-input input_stream;
+input wire[7:0] input_stream;
 output done;
-output timeBytes;
+output reg [3:0] timeBytes;
 input flag;
 
-wire[7:0] input_stream;
 reg done;
-reg [3:0] timeBytes;
 reg[3:0] state;
 reg[32:0] PTS;
 reg[32:0] DTS;
@@ -993,12 +981,11 @@ endmodule
 module start_code_prefix(start,done,input_stream,read_signal);
    
    input start;
+   input wire [7:0] input_stream;
    output done;
-   input  input_stream;
    input  read_signal;
    
    reg 	  done;
-   wire [7:0] input_stream;
    wire       read_signal;
    reg [1:0]  state;
    wire       start;

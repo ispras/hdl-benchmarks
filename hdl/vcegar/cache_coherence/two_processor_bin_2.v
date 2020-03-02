@@ -69,7 +69,7 @@ module pcache(clk, shared_snoop, is_snoop, master_in, ND_in, bus_ack, all_shared
    input all_shared;   // Are all processors in shared state?
    input mem_served;   // Request serviced by memory
    input invalidate;   // invalidate info received from the arbiter, sent by other processors
-   output snoop_type;  // state_comb type snooping information generated based on State, R/W, Hit/Miss
+   output reg [2:0] snoop_type;  // state_comb type snooping information generated based on State, R/W, Hit/Miss
    output bus_req;     // request for bus; sent to the bus arbiter
    output master_out;  // master status outputed for other processors
    output is_shared;   // flags if the processor state is shared
@@ -92,7 +92,6 @@ module pcache(clk, shared_snoop, is_snoop, master_in, ND_in, bus_ack, all_shared
    reg[1:0] state;
 //   reg t_req_enable;
 //   reg[2:0] t_snoop_type;   
-   reg[2:0] snoop_type;
 //   reg t_read, t_write;
 //   reg t_info_avail;
    reg update;
@@ -496,7 +495,7 @@ module arbiter(clk, bus_reqA, bus_reqB, snoop_typeA, snoop_typeB,
    input inv_outA, inv_outB;
    output bus_ackA, bus_ackB;
    output is_snoop;
-   output shared_snoop;
+   output reg [2:0] shared_snoop;
    output invalidate;
    
    wire clk;
@@ -504,7 +503,6 @@ module arbiter(clk, bus_reqA, bus_reqB, snoop_typeA, snoop_typeB,
    wire inv_outA, inv_outB;
    reg bus_ackA, bus_ackB;
    reg is_snoop, invalidate;
-   reg [2:0] shared_snoop;
    
    initial
     begin

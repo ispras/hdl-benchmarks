@@ -133,7 +133,6 @@ endmodule
 module counter (clk,count_over);
 
    input clk;
-   input clk;
    
    output count_over;
    
@@ -172,12 +171,11 @@ module fsm_for_pack_start(clk,one_byte,start,enable,stop);
 
 input clk;
    
-input one_byte;
 input start;
 input enable;
 output stop;
 
-wire[7:0] one_byte;
+input wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
@@ -267,20 +265,17 @@ endmodule	/* fsm_pack_head_start */
 module parse_pack_header(clk,one_byte,start,enable,stop,scr_reg,mux_rate_reg);
 
 input clk;   
-input one_byte;
 input start;
 input enable;
 output stop;
-output scr_reg;
-output mux_rate_reg;
 
 
-wire[7:0] one_byte;
+input wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
-reg[39:0] scr_reg;
-reg[23:0] mux_rate_reg;
+output reg[39:0] scr_reg;
+output reg[23:0] mux_rate_reg;
    reg 	  monitor;
    
 reg[3:0] count;
@@ -373,23 +368,18 @@ module parse_system_header(clk,one_byte,start,enable,stop,syshead_len_reg,rate_b
 
    input clk;
    
-input one_byte;
 input start;
 input enable;
 output stop;
-output syshead_len_reg;
-output rate_bnd_reg;
-output flag_reg;
-output resvd_byte_reg;
 
-wire[7:0] one_byte;
+input wire[7:0] one_byte;
 wire start;
 wire enable;
 reg stop;
-reg[15:0] syshead_len_reg;
-reg[23:0] rate_bnd_reg;
-reg[15:0] flag_reg;
-reg[7:0] resvd_byte_reg;
+output reg[15:0] syshead_len_reg;
+output reg[23:0] rate_bnd_reg;
+output reg[15:0] flag_reg;
+output reg[7:0] resvd_byte_reg;
 
 reg[2:0] count;
 reg flag;
@@ -576,9 +566,7 @@ module read_packet (clk,start,done,input_stream,read_signal,buffer_out,sys_heade
  input clk;
  input start;
  output done;
- input input_stream;
  input read_signal;
- output buffer_out;
  output stream_done;
  output sys_header;   
 
@@ -586,8 +574,8 @@ module read_packet (clk,start,done,input_stream,read_signal,buffer_out,sys_heade
  reg done;
  reg sys_header;
    
- wire[7:0] input_stream;
- reg[7:0] buffer_out;
+ input wire[7:0] input_stream;
+ output reg[7:0] buffer_out;
  wire prefix_stop;
  reg[3:0] state;
  reg[7:0] stream_id;
@@ -800,14 +788,12 @@ input start;
 input clk;
    
 input read_signal;
-input input_stream;
 output done;
-output timeBytes;
 input flag;
 
-wire[7:0] input_stream;
+input wire[7:0] input_stream;
 reg done;
-reg [3:0] timeBytes;
+output reg [3:0] timeBytes;
 reg[3:0] state;
 reg[32:0] PTS;
 reg[32:0] DTS;
@@ -984,11 +970,10 @@ module start_code_prefix(clk,start,done,input_stream,read_signal);
    input clk;
    input start;
    output done;
-   input  input_stream;
    input  read_signal;
    
    reg 	  done;
-   wire [7:0] input_stream;
+   input wire [7:0] input_stream;
    wire       read_signal;
    reg [1:0]  state;
    wire       start;

@@ -175,18 +175,17 @@ endmodule
  *
  */
 
-module FrameTransmitter(clk, llc_f_ready, okay, send_bt, finished_bt, CS, CD);
+module FrameTransmitter(clk, llc_f_ready, okay, send_bt, finished_bt, CS, CD, end_bt);
 
 input clk;
 input llc_f_ready, finished_bt, CS, CD;
-output okay, send_bt;
+output end_bt;
+output wire [0:1] okay;
 
 wire	finished_bt, CS, CD;
-wire [0:1] okay;
-wire [0:1] send_bt;
+output wire reg [0:1] send_bt;
 wire llc_f_ready;
 
-reg [0:1] sendbt;
 reg [0:1] oka;
 
 assign send_bt = sendbt;
@@ -363,10 +362,10 @@ endmodule
  */
 module LLC(clk, req, ack, frame_ready, llc_ack);
 input clk;
-input ack, frame_ready;
+input frame_ready;
+input wire [0:1] ack;
 output req, llc_ack;
 
-wire [0:1] ack;
 wire req;
 wire llc_ack, frame_ready;
 
@@ -445,11 +444,11 @@ endmodule
  */
 module FrameReceiver(clk, data_in, send_plr, frame_ready, llc_ack, CS);
 input clk;
-input data_in, llc_ack, CS;
+input llc_ack, CS;
+input wire [0:1] data_in;
 output frame_ready, send_plr;
 
 wire send_plr, frame_ready, llc_ack, CS;
-wire [0:1] data_in;
 
 reg frm_ready;
 reg reqbit;
@@ -505,10 +504,8 @@ endmodule
 
 module PLS(clk, send_signal, channel );
 input clk;
-input  send_signal;
-output channel;
-
-wire [0:1] send_signal, channel;
+input wire [0:1] send_signal;
+output wire [0:1] channel;
 
 reg [0:1] channel_send_data;
 
@@ -527,10 +524,11 @@ endmodule
 
 module PLR(clk, send_next_bit, send_FR_signal, channel);
 input clk;
-input send_next_bit, channel;
-output send_FR_signal;
+input send_next_bit;
+input wire [0:1] channel;
+output wire [0:1] send_FR_signal;
 
-wire [0:1] channel, send_FR_signal, connect;
+wire [0:1] connect;
 wire send_next_bit;
 
 reg [0:1] channel_receive_data;

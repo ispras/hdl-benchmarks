@@ -13,7 +13,6 @@ module
 
    input [0:29] A;
    input [0:3] 	OPC;
-   input  	ACK;
    input 	LOCK;
    input 	READ;
    input 	clk;
@@ -22,7 +21,7 @@ module
    output 	SEL_0;
    output 	TOUT;
   
-   wire [2:0] ACK;
+   input wire [2:0] ACK;
    
    wire 	GNT_0;
    wire 	SEL_0;
