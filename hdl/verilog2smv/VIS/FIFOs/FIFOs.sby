@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/FIFOs/FIFOs.v
+prep -top compareFIFOs
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/FIFOs/FIFOs.v

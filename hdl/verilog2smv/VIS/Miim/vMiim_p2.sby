@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Miim/vMiim_p2.v
+prep -top miim
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Miim/vMiim_p2.v

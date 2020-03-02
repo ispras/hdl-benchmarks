@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/itc99_b12/b12_1.v
+prep -top main
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/itc99_b12/b12_1.v

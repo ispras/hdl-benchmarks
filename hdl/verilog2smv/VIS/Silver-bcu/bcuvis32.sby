@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Silver-bcu/bcuvis32.v
+prep -top bcu
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Silver-bcu/bcuvis32.v

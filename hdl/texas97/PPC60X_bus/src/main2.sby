@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/PPC60X_bus/src/main2.v
+prep -top main
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/texas97/PPC60X_bus/src/main2.v

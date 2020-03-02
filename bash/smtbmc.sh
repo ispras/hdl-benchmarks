@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright 2019 ISP RAS (http://www.ispras.ru), UniTESK Lab (http://www.unitesk.com)
+# Copyright 2019-2020 ISP RAS (http://www.ispras.ru), UniTESK Lab (http://www.unitesk.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
 # in compliance with the License. You may obtain a copy of the License at
@@ -72,23 +72,27 @@ if [ -n "${FIND_VLOG}" ]; then
     eval "file_name_with_ext=${f##*/}"
     eval "file_name=${file_name_with_ext%.*}"
     printf "Filename: ${file_name}\n"
+    file_path=$(dirname "${f}")
+    sby_file="${file_path}"/"${file_name}".sby
+    
+    if [ -f "${sby_file}" ]; then
+      timeout ${TIMEOUT_SEC} "${TOOL} -t ${sby_file}"
+    else
+      # Get first module name
+      while read -r line
+      do
+        if [[ $line == "module"* ]]; then
+          echo "\"${line}\""
+          top_name=$(echo "${line}" | sed -n 's/^module \([a-zA-Z0-9_]*\)[ |(||;].*$/\1/p')
+          echo "Top name: \"${top_name}\""
 
-    # Get first module name
-    while read -r line
-    do
-      if [[ $line == "module"* ]]; then
-        echo "\"${line}\""
-        top_name=$(echo "${line}" | sed -n 's/^module \([a-zA-Z0-9_]*\)[ |(||;].*$/\1/p')
-        echo "Top name: \"${top_name}\""
+          if [[ -z "${top_name}" ]]; then
+            echo "Error: top level module name is empty!"
+            break
+          fi
 
-        if [[ -z "${top_name}" ]]; then
-          echo "Error: top level module name is empty!"
-          break
-        fi
-
-        file_path=$(dirname "${f}")
-        echo "${file_path}"
-        cat > "${file_path}"/"${file_name}".sby << EOF
+          echo "${file_path}"
+          cat > "${sby_file}" << EOF
 [options]
 mode bmc
 depth 100
@@ -103,16 +107,16 @@ prep -top ${top_name}
 [files]
 ${f}
 EOF
-        break
-      fi
+          break
+        fi
+        done < "${f}"
 
-    done < "${f}"
-
-    timeout ${TIMEOUT_SEC} "${TOOL} -t ${file_path}/${file_name}.sby"
+        timeout ${TIMEOUT_SEC} "${TOOL} -t ${file_path}/${file_name}.sby"
     
-    printf "Stop time: $(date +"%x %r")\n"
-    printf "done.\n"
-  done
+        printf "Stop time: $(date +"%x %r")\n"
+        printf "done.\n"
+      done
+    fi
 else
   echo "No Verilog modules have been found."
 fi

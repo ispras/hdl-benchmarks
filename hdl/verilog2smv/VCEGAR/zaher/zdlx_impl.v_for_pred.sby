@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/zaher/zdlx_impl.v_for_pred.v
+prep -top main
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/zaher/zdlx_impl.v_for_pred.v

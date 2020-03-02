@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/PI_BUS/multi_master/slave.v
+prep -top pi_state_machine
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/texas97/PI_BUS/multi_master/slave.v

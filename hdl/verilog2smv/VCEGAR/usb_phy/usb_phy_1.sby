@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/usb_phy/usb_phy_1.v
+prep -top main
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/usb_phy/usb_phy_1.v
