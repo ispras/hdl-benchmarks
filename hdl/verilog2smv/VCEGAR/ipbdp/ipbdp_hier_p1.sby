@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/ipbdp/ipbdp_hier_p1.v
+prep -top IPBDP_hier
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/ipbdp/ipbdp_hier_p1.v

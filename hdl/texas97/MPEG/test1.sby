@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/MPEG/test1.v
+prep -top fsm_for_pack_start
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/texas97/MPEG/test1.v

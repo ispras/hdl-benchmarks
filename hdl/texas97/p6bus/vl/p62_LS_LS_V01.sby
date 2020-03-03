@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/p6bus/vl/p62_LS_LS_V01.v
+prep -top PENTIUM_PRO_SYSTEM
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/texas97/p6bus/vl/p62_LS_LS_V01.v

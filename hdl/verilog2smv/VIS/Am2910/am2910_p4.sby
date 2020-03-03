@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Am2910/am2910_p4.v
+prep -top am2910
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Am2910/am2910_p4.v

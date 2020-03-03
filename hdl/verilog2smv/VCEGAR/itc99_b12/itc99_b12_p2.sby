@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/itc99_b12/itc99_b12_p2.v
+prep -top main
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/itc99_b12/itc99_b12_p2.v

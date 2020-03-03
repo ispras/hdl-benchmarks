@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/pj_icu/pj_icu_icctl_p4.v
+prep -top icctl
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/pj_icu/pj_icu_icctl_p4.v

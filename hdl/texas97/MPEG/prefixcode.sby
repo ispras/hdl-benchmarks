@@ -1,0 +1,13 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/MPEG/prefixcode.v
+prep -top start_code_prefix
+
+[files]
+/home/ssedai/projects/hdl-benchmarks/hdl/texas97/MPEG/prefixcode.v
