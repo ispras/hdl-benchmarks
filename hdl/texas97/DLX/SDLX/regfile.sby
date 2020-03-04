@@ -6,8 +6,11 @@ depth 100
 smtbmc
 
 [script]
-read -formal regfile.v
+read -formal regfile.v misc.v
 prep -top RegFile
 
 [files]
 regfile.v
+misc.v
+alu.h
+sdlx.h
