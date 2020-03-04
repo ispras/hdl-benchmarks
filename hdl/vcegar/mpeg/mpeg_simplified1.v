@@ -1,14 +1,14 @@
 module main(one_byte,start,enable,stop,syshead_len_reg,rate_bnd_reg,flag_reg,resvd_byte_reg);
 
 //input clk;
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output syshead_len_reg;
-output rate_bnd_reg;
-output flag_reg;
-output resvd_byte_reg;
+output [15:0] syshead_len_reg;
+output [23:0] rate_bnd_reg;
+output [15:0] flag_reg;
+output [7:0] resvd_byte_reg;
 
 wire[7:0] one_byte;
 wire start;

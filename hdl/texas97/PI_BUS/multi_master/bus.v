@@ -14,8 +14,8 @@ module
    bus_cont(A,OPC,ACK,LOCK,READ,SEL_0,GNT_0,GNT_1,REQ_0,REQ_1,TOUT,clk);
 
    input [0:29] A;
-   input [0:3] 	OPC;
-   input  	ACK;
+   input [0:3]  OPC;
+   input [2:0]  ACK;
    input 	LOCK;
    input 	READ;
    input 	clk;

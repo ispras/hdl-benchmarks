@@ -2,7 +2,7 @@ module start_code_prefix(start,done,input_stream,read_signal);
    
    input start;
    output done;
-   input  input_stream;
+   input [7:0] input_stream;
    input  read_signal;
 
    reg 	  monitor;

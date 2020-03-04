@@ -1,7 +1,7 @@
 module fsm_for_pack_start(clk,one_byte,start,enable,stop);
 
 input clk;
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;

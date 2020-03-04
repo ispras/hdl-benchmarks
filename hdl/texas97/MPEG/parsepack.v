@@ -11,12 +11,12 @@
  
 module parse_pack_header(one_byte,start,enable,stop,scr_reg,mux_rate_reg);
 
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output scr_reg;
-output mux_rate_reg;
+output [39:0] scr_reg;
+output [23:0] mux_rate_reg;
 
 wire[7:0] one_byte;
 wire start;

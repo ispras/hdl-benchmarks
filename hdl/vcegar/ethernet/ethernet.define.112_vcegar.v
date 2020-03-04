@@ -116,8 +116,9 @@ endmodule
 module BitTransmitter(clk, send_bt, finished_bt, send_pls);
 
 input clk;
-input send_bt;
-output finished_bt, send_pls;
+input [0:1] send_bt;
+output [0:1] send_pls;
+output finished_bt;
 
 wire finished_bt;
 wire [0:1] send_pls, send_bt;
@@ -179,7 +180,7 @@ module FrameTransmitter(clk, llc_f_ready, okay, send_bt, finished_bt, CS, CD);
 
 input clk;
 input llc_f_ready, finished_bt, CS, CD;
-output okay, send_bt;
+output [0:1] okay, send_bt;
 
 wire	finished_bt, CS, CD;
 wire [0:1] okay;
@@ -363,7 +364,8 @@ endmodule
  */
 module LLC(clk, req, ack, frame_ready, llc_ack);
 input clk;
-input ack, frame_ready;
+input [0:1] ack;
+input frame_ready;
 output req, llc_ack;
 
 wire [0:1] ack;
@@ -445,7 +447,8 @@ endmodule
  */
 module FrameReceiver(clk, data_in, send_plr, frame_ready, llc_ack, CS);
 input clk;
-input data_in, llc_ack, CS;
+input [0:1] data_in;
+input llc_ack, CS;
 output frame_ready, send_plr;
 
 wire send_plr, frame_ready, llc_ack, CS;
@@ -505,8 +508,8 @@ endmodule
 
 module PLS(clk, send_signal, channel );
 input clk;
-input  send_signal;
-output channel;
+input [0:1] send_signal;
+output [0:1] channel;
 
 wire [0:1] send_signal, channel;
 
@@ -527,8 +530,9 @@ endmodule
 
 module PLR(clk, send_next_bit, send_FR_signal, channel);
 input clk;
-input send_next_bit, channel;
-output send_FR_signal;
+input send_next_bit;
+input [0:1] channel;
+output [0:1] send_FR_signal;
 
 wire [0:1] channel, send_FR_signal, connect;
 wire send_next_bit;
@@ -558,8 +562,9 @@ endmodule
 
 module CHNL(clk, data_in_1, data_in_2, carrier_sense, collision_detect, data_out);
 input clk;
-input data_in_1, data_in_2;
-output carrier_sense, collision_detect, data_out;
+input [0:1] data_in_1, data_in_2;
+output [0:1] data_out;
+output carrier_sense, collision_detect;
 
 wire [0:1] data_in_1, data_in_2, data_out;
 wire carrier_sense, collision_detect;

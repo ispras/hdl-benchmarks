@@ -142,11 +142,16 @@ module P6( PID,BREQ1,BREQ2,BREQ3,EXT_DATA_I,EXT_ADDR_I,TRDY,
               BREQ0,EXT_DATA_O,EXT_ADDR_O,DRDY_O,ADS_O,TID_O,EXT_TRANS_REQ_O,
               HIT_HITM_O);
 
-input PID,BREQ1,BREQ2,BREQ3,EXT_DATA_I,EXT_ADDR_I,TRDY,
-              DRDY_I,ADS_I,TID_I,EXT_TRANS_REQ_I,HIT_HITM_I,TRAN_OVER;
+input [1:0] PID;
+input [`ADDRESS_WIDTH-1:0] EXT_ADDR_I;
+input [1:0] TID_I,HIT_HITM_I;
+input [2:0] EXT_TRANS_REQ_I;
+input BREQ1,BREQ2,BREQ3,EXT_DATA_I,TRDY,DRDY_I,ADS_I,TRAN_OVER;
 
-output BREQ0,EXT_DATA_O,EXT_ADDR_O,DRDY_O,ADS_O,TID_O,EXT_TRANS_REQ_O,
-              HIT_HITM_O;
+output [`ADDRESS_WIDTH-1:0] EXT_ADDR_O;
+output [1:0] TID_O,HIT_HITM_O;
+input [2:0] EXT_TRANS_REQ_O;
+output BREQ0,EXT_DATA_O,DRDY_O,ADS_O;
 
 wire TRAN_OVER;
 wire[1:0] PID;
@@ -344,15 +349,23 @@ module CACHE(clk, CACHE_REQ,ADDR,DATA_I,EXE_STAGE,
 	INT_TRANS_REQ,INT_DATA_O,INT_ADDR,
 	SNOOP_DATA,SNOOP_TAG_O);
 
-	
 input clk;
-input CACHE_REQ,ADDR,DATA_I,EXE_STAGE;
-input REQ_GRANTED,INT_DATA_I,INT_TAG;
-input SNOOP_REQ,SNOOP_ADDR,SNOOP_TAG_I;
+input [2:0] CACHE_REQ;
+input [`ADDRESS_WIDTH-1:0] ADDR;
+input [1:0] EXE_STAGE;
+input DATA_I;
+input [`TAG_WIDTH-1:0] INT_TAG;
+input REQ_GRANTED,INT_DATA_I;
+input [`ADDRESS_WIDTH-1:0] SNOOP_ADDR;
+input SNOOP_REQ;
+input [`TAG_WIDTH-1:0] SNOOP_TAG_I;
 
 output DATA_RDY,CACHE_RDY,DATA_O;
-output INT_TRANS_REQ,INT_DATA_O,INT_ADDR;
-output SNOOP_DATA,SNOOP_TAG_O;
+output [2:0] INT_TRANS_REQ;
+output [`ADDRESS_WIDTH-1:0] INT_ADDR;
+output INT_DATA_O;
+output [`TAG_WIDTH-1:0] SNOOP_TAG_O;
+output SNOOP_DATA;
 
 wire[2:0] CACHE_REQ;
 wire[`ADDRESS_WIDTH-1:0] ADDR;
@@ -765,38 +778,38 @@ module REQUEST_AGENT(clk,
 	ADS_O,  TID_O, EXT_TRANS_REQ_O, BR0, EXT_ADDR_O, SNOOP_TAG_O,SNOOP_ADDR,  
 	HIT_HITM_O, EXT_DATA_O,INT_DATA_O,DRDY_O,INT_TAG, REQ_GRANTED);
 
-
 input clk;
 input  BR1,BR2,BR3;
-input INT_TRANS_REQ;
-input PID;
+input [2:0] INT_TRANS_REQ;
+input [1:0] PID;
 input ADS_I;
-input TID_I;
-input EXT_TRANS_REQ_I;
-input EXT_ADDR_I;
-input SNOOP_TAG_I;
-input SNOOP_DATA;
+input [1:0] TID_I;
+input [2:0] EXT_TRANS_REQ_I;
+input [`ADDRESS_WIDTH-1:0] EXT_ADDR_I;
+input [`TAG_WIDTH-1:0] SNOOP_TAG_I;
+input [`DATA_WIDTH-1:0] SNOOP_DATA;
 
-input HIT_HITM_I;
+input [1:0] HIT_HITM_I;
 
-input EXT_DATA_I;
-input INT_DATA_I;
+input [`DATA_WIDTH-1:0] EXT_DATA_I;
+input [`DATA_WIDTH-1:0] INT_DATA_I;
 input DRDY_I,TRDY;
 input TRAN_OVER;
-input INT_ADDR;
+input [`ADDRESS_WIDTH-1:0] INT_ADDR;
 
 output REQ_GRANTED;
 output SNOOP_REQ;
 output ADS_O;
-output TID_O;
-output EXT_TRANS_REQ_O;
+output [1:0] TID_O;
+output [2:0] EXT_TRANS_REQ_O;
 output BR0;
-output EXT_ADDR_O;
-output SNOOP_TAG_O;
-output SNOOP_ADDR;
-output HIT_HITM_O;
-output EXT_DATA_O,INT_DATA_O,DRDY_O;
-output INT_TAG;
+output [`ADDRESS_WIDTH-1:0] EXT_ADDR_O;
+output [`TAG_WIDTH-1:0] SNOOP_TAG_O;
+output [`ADDRESS_WIDTH-1:0] SNOOP_ADDR;
+output [1:0] HIT_HITM_O;
+output [`DATA_WIDTH-1:0] EXT_DATA_O,INT_DATA_O;
+output DRDY_O;
+output [`TAG_WIDTH-1:0] INT_TAG;
    
 
 wire BR1,BR2,BR3;
@@ -1312,13 +1325,14 @@ module MEMORY(clk, ADS_I,   EXT_TRANS_REQ_I,
 
 
 input ADS_I;
-input EXT_TRANS_REQ_I;
-input EXT_ADDR_I;
-input HIT_HITM_I;
-input EXT_DATA_I;
+input [2:0] EXT_TRANS_REQ_I;
+input [`ADDRESS_WIDTH-1:0] EXT_ADDR_I;
+input [1:0] HIT_HITM_I;
+input [`DATA_WIDTH-1:0] EXT_DATA_I;
 input DRDY_I;
 output TRDY;
-output EXT_DATA_O,DRDY_O;
+output DRDY_O;
+output [`DATA_WIDTH-1:0] EXT_DATA_O;
 output TRAN_OVER;
 
 input clk;

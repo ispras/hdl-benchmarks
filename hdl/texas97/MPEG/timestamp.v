@@ -3,9 +3,9 @@ module time_stamps(start,done,input_stream,read_signal,timeBytes,flag);
 input start;
 
 input read_signal;
-input input_stream;
+input [7:0] input_stream;
 output done;
-output timeBytes;
+output [3:0] timeBytes;
 input flag;
 
 wire[7:0] input_stream;

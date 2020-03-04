@@ -108,7 +108,7 @@ module input_buffer (clk,input_stream,output_buffer);
 
 input clk;
 input input_stream;
-output output_buffer;
+output [7:0] output_buffer;
 
 wire input_stream;
 reg [7:0] output_buffer;
@@ -133,7 +133,6 @@ endmodule
 
 module counter (clk,count_over);
 
-   input clk;
    input clk;
    
    output count_over;
@@ -173,7 +172,7 @@ module fsm_for_pack_start(clk,one_byte,start,enable,stop);
 
 input clk;
    
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
@@ -268,12 +267,12 @@ endmodule	/* fsm_pack_head_start */
 module parse_pack_header(clk,one_byte,start,enable,stop,scr_reg,mux_rate_reg);
 
 input clk;   
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output scr_reg;
-output mux_rate_reg;
+output [39:0] scr_reg;
+output [23:0] mux_rate_reg;
 
 
 wire[7:0] one_byte;
@@ -374,14 +373,14 @@ module parse_system_header(clk,one_byte,start,enable,stop,syshead_len_reg,rate_b
 
    input clk;
    
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output syshead_len_reg;
-output rate_bnd_reg;
-output flag_reg;
-output resvd_byte_reg;
+output [15:0] syshead_len_reg;
+output [23:0] rate_bnd_reg;
+output [15:0] flag_reg;
+output [7:0] resvd_byte_reg;
 
 wire[7:0] one_byte;
 wire start;
@@ -577,9 +576,9 @@ module read_packet (clk,start,done,input_stream,read_signal,buffer_out,sys_heade
  input clk;
  input start;
  output done;
- input input_stream;
+ input [7:0] input_stream;
  input read_signal;
- output buffer_out;
+ output [7:0] buffer_out;
  output stream_done;
  output sys_header;   
 
@@ -801,9 +800,9 @@ input start;
 input clk;
    
 input read_signal;
-input input_stream;
+input [7:0] input_stream;
 output done;
-output timeBytes;
+output [3:0] timeBytes;
 input flag;
 
 wire[7:0] input_stream;
@@ -985,7 +984,7 @@ module start_code_prefix(clk,start,done,input_stream,read_signal);
    input clk;
    input start;
    output done;
-   input  input_stream;
+   input [7:0] input_stream;
    input  read_signal;
    
    reg 	  done;
