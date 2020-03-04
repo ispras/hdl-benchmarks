@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/small/bit-vector/bit-vector.v
+read -formal bit-vector.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/small/bit-vector/bit-vector.v
+bit-vector.v

@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/usb_phy/usb_phy_1.v
+read -formal usb_phy_1.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/usb_phy/usb_phy_1.v
+usb_phy_1.v

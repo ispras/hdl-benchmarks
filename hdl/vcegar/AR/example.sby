@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/AR/example.v
+read -formal example.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/AR/example.v
+example.v

@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/miim/vMiim.v
+read -formal vMiim.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/miim/vMiim.v
+vMiim.v

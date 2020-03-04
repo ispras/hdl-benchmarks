@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/itc99_b13/itc99_b13_p13.v
+read -formal itc99_b13_p13.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/itc99_b13/itc99_b13_p13.v
+itc99_b13_p13.v

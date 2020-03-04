@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/PCI_BUS/Verilog-MV-files/PCIabnorm.v
+read -formal PCIabnorm.v
 prep -top bus
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/texas97/PCI_BUS/Verilog-MV-files/PCIabnorm.v
+PCIabnorm.v

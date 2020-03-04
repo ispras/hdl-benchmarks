@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/pj_icram/icram_2.v
+read -formal icram_2.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/pj_icram/icram_2.v
+icram_2.v

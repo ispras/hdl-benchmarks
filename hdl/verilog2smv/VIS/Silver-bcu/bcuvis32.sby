@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Silver-bcu/bcuvis32.v
+read -formal bcuvis32.v
 prep -top bcu
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Silver-bcu/bcuvis32.v
+bcuvis32.v

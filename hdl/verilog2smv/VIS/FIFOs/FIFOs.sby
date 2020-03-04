@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/FIFOs/FIFOs.v
+read -formal FIFOs.v
 prep -top compareFIFOs
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/FIFOs/FIFOs.v
+FIFOs.v

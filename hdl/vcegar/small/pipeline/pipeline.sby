@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/small/pipeline/pipeline.v
+read -formal pipeline.v
 prep -top main
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/small/pipeline/pipeline.v
+pipeline.v

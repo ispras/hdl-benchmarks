@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/cache_coherence/three_processor_bin.v
+read -formal three_processor_bin.v
 prep -top protocol
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/texas97/cache_coherence/three_processor_bin.v
+three_processor_bin.v

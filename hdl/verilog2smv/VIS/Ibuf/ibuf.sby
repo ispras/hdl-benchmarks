@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Ibuf/ibuf.v
+read -formal ibuf.v
 prep -top iqc
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Ibuf/ibuf.v
+ibuf.v

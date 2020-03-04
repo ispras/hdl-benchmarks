@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/VsaR/vsaR_p08.v
+read -formal vsaR_p08.v
 prep -top vsaR
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/VsaR/vsaR_p08.v
+vsaR_p08.v

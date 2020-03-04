@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/PI_BUS/single_master/master2.v
+read -formal master2.v
 prep -top master_controller
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/texas97/PI_BUS/single_master/master2.v
+master2.v

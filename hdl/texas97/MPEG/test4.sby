@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/MPEG/test4.v
+read -formal test4.v
 prep -top read_packet
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/texas97/MPEG/test4.v
+test4.v

@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/ipbdp/ipbdp_hier_p2.v
+read -formal ipbdp_hier_p2.v
 prep -top IPBDP_hier
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VCEGAR/ipbdp/ipbdp_hier_p2.v
+ipbdp_hier_p2.v

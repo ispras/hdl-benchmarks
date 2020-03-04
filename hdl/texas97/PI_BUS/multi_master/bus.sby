@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/texas97/PI_BUS/single_master/bus.v
+read -formal bus.v
 prep -top bus_cont
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/texas97/PI_BUS/single_master/bus.v
+bus.v

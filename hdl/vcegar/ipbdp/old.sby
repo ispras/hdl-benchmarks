@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/vcegar/ipbdp/old.v
+read -formal old.v
 prep -top IPBDP_hier
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/vcegar/ipbdp/old.v
+old.v

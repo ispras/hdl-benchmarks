@@ -6,8 +6,8 @@ depth 100
 smtbmc
 
 [script]
-read -formal /home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Am2910/am2910_p2.v
+read -formal am2910_p2.v
 prep -top am2910
 
 [files]
-/home/ssedai/projects/hdl-benchmarks/hdl/verilog2smv/VIS/Am2910/am2910_p2.v
+am2910_p2.v
