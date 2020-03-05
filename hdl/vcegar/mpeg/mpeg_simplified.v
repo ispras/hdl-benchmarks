@@ -117,7 +117,7 @@ module input_buffer (clk,input_stream,output_buffer);
 
 input clk;
 input input_stream;
-output output_buffer;
+output [7:0] output_buffer;
 
 wire input_stream;
 reg [7:0] output_buffer;
@@ -184,7 +184,7 @@ endmodule
 module fsm_for_pack_start(one_byte,start,enable,stop);
 
 //input clk;
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
@@ -266,12 +266,12 @@ endmodule	/* fsm_pack_head_start */
 module parse_pack_header(one_byte,start,enable,stop,scr_reg,mux_rate_reg);
 
 //input clk;
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
-output scr_reg;
-output mux_rate_reg;
+output [39:0] scr_reg;
+output [23:0] mux_rate_reg;
 
 wire[7:0] one_byte;
 wire start;
@@ -356,7 +356,7 @@ endmodule
 module fsm_for_syshead_start(one_byte,start,enable,stop);
 
 //input clk;
-input one_byte;
+input [7:0] one_byte;
 input start;
 input enable;
 output stop;
@@ -637,9 +637,9 @@ module read_packet (start,done,input_stream,read_signal,buffer_out,stream_done);
 
  input start;
  output done;
- input input_stream;
+ input [7:0] input_stream;
  input read_signal;
- output buffer_out;
+ output [7:0] buffer_out;
  output stream_done;
    
 
