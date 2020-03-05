@@ -10,4 +10,7 @@ read -formal main.v
 prep -top main
 
 [files]
+bus.v
 main.v
+master2.v
+slave.v
