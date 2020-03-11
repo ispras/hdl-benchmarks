@@ -1,0 +1,3 @@
+
+PSLSPEC
+always (m_am2910.am2910_old = 0b1_0 | m_am2910.am2910_reg_file0_old != 0d12_2 | m_am2910.am2910_reg_file[0] = 0d12_1);

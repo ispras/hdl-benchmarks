@@ -1,0 +1,6 @@
+DEFINE
+regA_4_0 := m_fru.fru_RegA[4:0];
+dOpdl_31_26 := m_fru.fru_dOpd1[31:26];
+
+PSLSPEC
+never (regA_4_0 = 0d5_31 & dOpdl_31_26 = 0d6_0);

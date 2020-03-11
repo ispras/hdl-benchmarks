@@ -1,0 +1,2 @@
+PSLSPEC
+never ( m_sampleq.sampleq_monitor = 0d2_2 & !(m_sampleq.sampleq_storeaddr = m_sampleq.sampleq_readhead) );

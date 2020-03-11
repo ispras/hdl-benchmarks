@@ -1,0 +1,6 @@
+DEFINE
+npc_0 := m_vsaR.vsaR_NPC[0:0];
+pc_0 := m_vsaR.vsaR_PC[0:0];
+
+PSLSPEC
+always (pc_0 = 0b1_0 & npc_0 = 0b1_0);

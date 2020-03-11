@@ -1,8 +1,0 @@
-PSLSPEC
-never ( m_sampleq.sampleq_monitor = 0d2_2 & !(m_sampleq.sampleq_storeaddr = m_sampleq.sampleq_readhead) );
-
-PSLSPEC
-always (m_sampleq.sampleq_monitor = 0d2_0 | (m_sampleq.sampleq_match = 0d1_1 & m_sampleq.sampleq_bus_gnt = 0d2_3));
-
-PSLSPEC
-never (!(m_sampleq.sampleq_storeaddr = 0d2_0) & m_sampleq.sampleq_monitor = 0d1_1 & m_sampleq.sampleq_outisaread = 0d1_1 & m_sampleq.sampleq_storeaddr = m_sampleq.sampleq_outaddr );

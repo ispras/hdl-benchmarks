@@ -1,0 +1,6 @@
+DEFINE
+dOpdl_31_26 := m_fru.fru_dOpd1[31:26];
+resData_31_26 := m_fru.fru_EXU_ResData[31:26];
+
+PSLSPEC
+never (!(m_fru.fru_SEL_A = 0d2_2) | dOpdl_31_26 = resData_31_26);

@@ -1,0 +1,3 @@
+
+PSLSPEC
+always (!(m_s1269.s1269_I679 = 0d1_1 | m_s1269.s1269_I680 = 0d1_1 | m_s1269.s1269_I681 = 0d1_1) | m_s1269.s1269_qShiftRight = 0d1_1);

@@ -1,0 +1,7 @@
+DEFINE
+adFld1_10 := m_vsaR.vsaR_adFld1[1:0];
+adFld2_10 := m_vsaR.vsaR_adFld2[1:0];
+state_21 := m_vsaR.vsaR_State[2:1];
+
+PSLSPEC
+always (adFld1_10 != adFld2_10 | (state_21 = 0d2_0 | m_vsaR.vsaR_A_SUBSTITUTED = m_vsaR.vsaR_B));

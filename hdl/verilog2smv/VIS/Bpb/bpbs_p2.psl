@@ -1,0 +1,28 @@
+DEFINE
+pred_0 := m_branchPredictionBuffer.branchPredictionBuffer_prediction[0:0];
+pred_1 := m_branchPredictionBuffer.branchPredictionBuffer_prediction[1:1];
+pred_2 := m_branchPredictionBuffer.branchPredictionBuffer_prediction[2:2];
+pred_3 := m_branchPredictionBuffer.branchPredictionBuffer_prediction[3:3];
+pred_0_old := m_branchPredictionBuffer.branchPredictionBuffer_prediction_old[0:0];
+pred_1_old := m_branchPredictionBuffer.branchPredictionBuffer_prediction_old[1:1];
+pred_2_old := m_branchPredictionBuffer.branchPredictionBuffer_prediction_old[2:2];
+pred_3_old := m_branchPredictionBuffer.branchPredictionBuffer_prediction_old[3:3];
+
+PSLSPEC
+always (m_branchPredictionBuffer.branchPredictionBuffer_old = 0b1_0 | (
+                (!(m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[0] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[1] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[2] >= 0d2_2 &
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[3] >= 0d2_2 & pred_3_old = 0d1_1) | pred_3 = 0d1_1) &
+                (!(m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[0] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[1] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[2] >= 0d2_2 &
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[3] >= 0d2_2 & pred_2_old = 0d1_1) | pred_2 = 0d1_1) &
+                (!(m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[0] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[1] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[2] >= 0d2_2 &
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[3] >= 0d2_2 & pred_1_old = 0d1_1) | pred_1 = 0d1_1) &
+                (!(m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[0] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[1] >= 0d2_2 & m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[2] >= 0d2_2 &
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[3] >= 0d2_2 & pred_0_old = 0d1_1) | pred_0 = 0d1_1) &
+                ( m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[0] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[1] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[2] >= 0d2_2 |
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank3_old[3] >= 0d2_2 | pred_3_old = 0d1_1 | pred_3 = 0d1_0 ) &
+                ( m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[0] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[1] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[2] >= 0d2_2 |
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank2_old[3] >= 0d2_2 | pred_2_old = 0d1_1 | pred_2 = 0d1_0 ) &
+                ( m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[0] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[1] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[2] >= 0d2_2 |
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank1_old[3] >= 0d2_2 | pred_1_old = 0d1_1 | pred_1 = 0d1_0 ) &
+                ( m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[0] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[1] >= 0d2_2 | m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[2] >= 0d2_2 |
+                m_branchPredictionBuffer.branchPredictionBuffer_state_bank0_old[3] >= 0d2_2 | pred_0_old = 0d1_1 | pred_0 = 0d1_0 ) )	);

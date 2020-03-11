@@ -1,0 +1,27 @@
+DEFINE
+alu_0 := m_vsaR.vsaR_ALUOutput[0:0];
+alu_1 := m_vsaR.vsaR_ALUOutput[1:1];
+alu_2 := m_vsaR.vsaR_ALUOutput[2:2];
+alu_3 := m_vsaR.vsaR_ALUOutput[3:3];
+alu_4 := m_vsaR.vsaR_ALUOutput[4:4];
+state_2 := m_vsaR.vsaR_State[2:2];
+state_10 := m_vsaR.vsaR_State[1:0];
+a_0 := m_vsaR.vsaR_A_SUBSTITUTED[0:0];
+a_1 := m_vsaR.vsaR_A_SUBSTITUTED[1:1];
+a_2 := m_vsaR.vsaR_A_SUBSTITUTED[2:2];
+a_3 := m_vsaR.vsaR_A_SUBSTITUTED[3:3];
+a_4 := m_vsaR.vsaR_A_SUBSTITUTED[4:4];
+b_0 := m_vsaR.vsaR_B[0:0];
+b_1 := m_vsaR.vsaR_B[1:1];
+b_2 := m_vsaR.vsaR_B[2:2];
+b_3 := m_vsaR.vsaR_B[3:3];
+b_4 := m_vsaR.vsaR_B[4:4];
+funFld_20 := m_vsaR.vsaR_funFld[2:0];
+
+PSLSPEC
+always (!(m_vsaR.vsaR_regRegALU = 0d1_1 & funFld_20 = 0b3_100 & (state_2 = 0b1_1 | state_10 = 0d2_0 | state_10 = 0d2_3)) | 
+                ((a_4 != b_4 | alu_4 = 0b1_0) & (alu_4 != 0b1_0 | a_4 = b_4) &
+                (a_3 != b_3 | alu_3 = 0b1_0) & (alu_3 != 0b1_0 | a_3 = b_3) &
+                (a_2 != b_2 | alu_2 = 0b1_0) & (alu_2 != 0b1_0 | a_2 = b_2) &
+                (a_1 != b_1 | alu_1 = 0b1_0) & (alu_1 != 0b1_0 | a_1 = b_1) &
+                (a_0 != b_0 | alu_0 = 0b1_0) & (alu_0 != 0b1_0 | a_0 = b_0) ));

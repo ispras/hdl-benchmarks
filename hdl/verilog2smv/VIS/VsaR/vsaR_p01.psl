@@ -1,0 +1,6 @@
+
+PSLSPEC
+always (((m_vsaR.vsaR_Registers[1] >= 0d5_12 & m_vsaR.vsaR_Registers[1] <= 0d5_15)) &
+                ((m_vsaR.vsaR_Registers[2] >= 0d5_8 & m_vsaR.vsaR_Registers[2] <= 0d5_11 )) &
+                ((m_vsaR.vsaR_Registers[3] >= 0d5_4 & m_vsaR.vsaR_Registers[3] <= 0d5_7  )) &
+                m_vsaR.vsaR_LMD = 0d5_0 & m_vsaR.vsaR_ALUOutput = 0d5_0 & m_vsaR.vsaR_PC = 0d5_0);

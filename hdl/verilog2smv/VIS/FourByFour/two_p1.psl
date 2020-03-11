@@ -1,0 +1,3 @@
+
+PSLSPEC
+never (m_twoByFour.twoByFour_b[0] = 0d3_0 & m_twoByFour.twoByFour_b[1] = 0d3_1 & m_twoByFour.twoByFour_b[2] = 0d3_2 & m_twoByFour.twoByFour_b[3] = 0d3_3 & m_twoByFour.twoByFour_b[4] = 0d3_4 & m_twoByFour.twoByFour_b[5] = 0d3_5 & m_twoByFour.twoByFour_b[6] = 0d3_6 & m_twoByFour.twoByFour_b[7] = 0d3_7);

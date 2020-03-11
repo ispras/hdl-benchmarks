@@ -1,0 +1,3 @@
+
+PSLSPEC
+always (m_miim.miim_Busy = 0d1_0 | m_miim.miim_MdoEn = 0d1_1);

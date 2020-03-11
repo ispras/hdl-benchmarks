@@ -1,0 +1,5 @@
+DEFINE
+adFld1_10 := m_vsaR.vsaR_adFld1[1:0];
+
+PSLSPEC
+always (!(m_vsaR.vsaR_St_WB = 0d1_1 & m_vsaR.vsaR_branch = 0d1_1 & adFld1_10 = 0d2_0) | m_vsaR.vsaR_PC = m_vsaR.vsaR_ALUOutput);

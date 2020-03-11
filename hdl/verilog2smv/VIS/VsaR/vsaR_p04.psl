@@ -1,0 +1,6 @@
+DEFINE
+state_2 := m_vsaR.vsaR_State[2:2];
+state_10 := m_vsaR.vsaR_State[1:0];
+
+PSLSPEC
+always (state_2 = 0d1_0 | state_10 = 0d2_0);

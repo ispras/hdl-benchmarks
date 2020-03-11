@@ -1,0 +1,15 @@
+DEFINE
+npc_4 := m_vsaR.vsaR_NPC[4:4];
+pc_1 := m_vsaR.vsaR_PC[1:1];
+pc_2 := m_vsaR.vsaR_PC[2:2];
+pc_3 := m_vsaR.vsaR_PC[3:3];
+pc_4 := m_vsaR.vsaR_PC[4:4];
+npc_42 := m_vsaR.vsaR_NPC[4:2];
+pc_42 := m_vsaR.vsaR_PC[4:2];
+npc_43 := m_vsaR.vsaR_NPC[4:3];
+pc_43 := m_vsaR.vsaR_PC[4:3];
+state_0 := m_vsaR.vsaR_State[0:0];
+state_1 := m_vsaR.vsaR_State[1:1];
+
+PSLSPEC
+always (!(state_0 = 0d1_1 | state_1 = 0d1_1) | ( (pc_1 = 0d1_1 | npc_42 = pc_42) & (pc_2 = 0d1_1 | npc_43 = pc_43) & (pc_3 = 0d1_1 | npc_4 = pc_4) ));

@@ -1,0 +1,3 @@
+
+PSLSPEC
+always (m_twoByFour.twoByFour_parity = 0d1_0);

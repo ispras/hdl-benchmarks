@@ -1,0 +1,3 @@
+
+PSLSPEC
+never (!(m_sampleq.sampleq_storeaddr = 0d2_0) & m_sampleq.sampleq_monitor = 0d1_1 & m_sampleq.sampleq_outisaread = 0d1_1 & m_sampleq.sampleq_storeaddr = m_sampleq.sampleq_outaddr );

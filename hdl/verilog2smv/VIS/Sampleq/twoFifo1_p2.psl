@@ -1,0 +1,3 @@
+
+PSLSPEC
+always (m_sampleq.sampleq_monitor = 0d2_0 | (m_sampleq.sampleq_match = 0d1_1 & m_sampleq.sampleq_bus_gnt = 0d2_3));
