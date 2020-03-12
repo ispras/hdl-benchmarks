@@ -223,7 +223,8 @@ G((state_bank3<*0*>[1]=1 * state_bank3<*1*>[1]=1 * state_bank3<*2*>[1]=1 *
   (state_bank0<*0*>[1]=0 * state_bank0<*1*>[1]=0 * state_bank0<*2*>[1]=0 *
    state_bank0<*3*>[1]=0 -> X(prediction[0]=0))
 );*/
-	assert property (	old == 1'b0 || (
+always @(posedge clock) begin
+	assert(	old == 1'b0 || (
                                 (!(state_bank3_old[0]>=2'd2 && state_bank3_old[1]>=2'd2 && state_bank3_old[2]>=2'd2 &&
 				state_bank3_old[3]>=2'd2) || prediction[3]==1'd1) &&
 				(!(state_bank2_old[0]>=2'd2 && state_bank2_old[1]>=2'd2 && state_bank2_old[2]>=2'd2 &&
@@ -240,6 +241,7 @@ G((state_bank3<*0*>[1]=1 * state_bank3<*1*>[1]=1 * state_bank3<*2*>[1]=1 *
 				state_bank1_old[3]>=2'd2 || prediction[1]==1'd0 ) &&
 				( state_bank0_old[0]>=2'd2 || state_bank0_old[1]>=2'd2 || state_bank0_old[2]>=2'd2 ||
 				state_bank0_old[3]>=2'd2 || prediction[0]==1'd0 ) )	);
+end
 
 /*# FAIL
 !(prediction[3:0]=b1111 * state_bank3<*3*>[1:0]=0 *

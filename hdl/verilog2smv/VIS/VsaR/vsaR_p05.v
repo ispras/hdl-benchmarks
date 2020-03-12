@@ -226,6 +226,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 //property : #PASS: If the two source fields are the same, the ALU input registers
 //# will hold the same value during the EXE, MEM, and WB states.
 //G(adFld1[1:0]==adFld2[1:0] -> (State[2:1]=0 + A[4:0]==B[4:0]));
-	assert property (	adFld1[1:0]!=adFld2[1:0] || (State[2:1]==2'd0 || A[4:0]==B[4:0])	);
+always @(posedge clock) begin
+	assert(	adFld1[1:0]!=adFld2[1:0] || (State[2:1]==2'd0 || A[4:0]==B[4:0])	);
+end
 
 endmodule // vsaR

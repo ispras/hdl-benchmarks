@@ -197,7 +197,9 @@ module vsa16a(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //invariant #PASS: Register R0 is never written.
 //Registers<*0*>[15:0]=0;
-	assert property (	Registers[0] == 16'd0	);
+always @(posedge clock) begin
+	assert(	Registers[0] == 16'd0	);
+end
 //invariant #PASS: The state is between 0 and 4.
 //State[2]=0 + State[1:0]=0;
 

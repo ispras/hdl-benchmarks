@@ -174,7 +174,8 @@ G((state_bank0<*0*>[1:0]=3 -> X(state_bank0<*0*>[1]=1)) *
   (state_bank3<*2*>[1:0]=0 -> X(state_bank3<*2*>[1]=0)) *
   (state_bank3<*3*>[1:0]=0 -> X(state_bank3<*3*>[1]=0)))*/
 	
-	assert property (	old == 1'b0 || (
+always @(posedge clock) begin
+	assert(	old == 1'b0 || (
                                 (state_bank0_old[0]<2'd3 || state_bank0[0]>=2'd2) &&
 				(state_bank0_old[1]<2'd3 || state_bank0[1]>=2'd2) &&
 				(state_bank0_old[2]<2'd3 || state_bank0[2]>=2'd2) &&	
@@ -207,6 +208,7 @@ G((state_bank0<*0*>[1:0]=3 -> X(state_bank0<*0*>[1]=1)) *
 				(state_bank3_old[1]!=2'd0 || state_bank3[1]<2'd2 ) &&
 				(state_bank3_old[2]!=2'd0 || state_bank3[2]<2'd2 ) &&	
 				(state_bank3_old[3]!=2'd0 || state_bank3[3]<2'd2 ) ) 	);	
+end
 /*#PASS: If all lines agree on taken/not taken, the prediction has to agree
 # as well on the next clock cycle. To avoid referring to stall, we weaken
 # the property and look only at the case in which the prediction already

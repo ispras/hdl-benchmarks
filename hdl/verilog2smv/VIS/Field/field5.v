@@ -96,6 +96,8 @@ module field5(clk,from,dir,cnt);
 		 {4'b0,board[24]};
 
 //invariant property
-	assert property (cnt!=5'd1);
+always @(posedge clk) begin
+	assert(cnt!=5'd1);
+end
 
 endmodule // field5

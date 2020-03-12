@@ -210,7 +210,9 @@ module vsa16a(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //invariant #PASS: a XOR a = 0
 //opcode[2:0]=b011 * funFld[2:0]=b100 * adFld1[1:0]==adFld2[1:0] -> (State[2]=1 -> ALUOutput[15:0]=0);
-	assert property ( !(opcode[2:0]==3'b011 && funFld[2:0]==3'b100 && adFld1[1:0]==adFld2[1:0]) || (!State[2] || ALUOutput[15:0]==16'd0)	);
+always @(posedge clock) begin
+	assert( !(opcode[2:0]==3'b011 && funFld[2:0]==3'b100 && adFld1[1:0]==adFld2[1:0]) || (!State[2] || ALUOutput[15:0]==16'd0)	);
+end
 //invariant #PASS: a OR a = a AND a = a
 //opcode[2:0]=b011 * funFld[2:1]=b01 * adFld1[1:0]==adFld2[1:0] -> (State[2]=1 -> ALUOutput[15:0]==A[15:0]);
 

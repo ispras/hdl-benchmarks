@@ -225,7 +225,9 @@ G((state_bank3<*0*>[1]=1 * state_bank3<*1*>[1]=1 * state_bank3<*2*>[1]=1 *
 /*# FAIL
 !(prediction[3:0]=b1111 * state_bank3<*3*>[1:0]=0 *
 state_bank3<*2*>[1:0]=0 * state_bank3<*1*>[1:0]=0 * state_bank3<*0*>[1:0]=0);*/
-	assert property ( ! (prediction==4'b1111 && state_bank3[3]==2'd0 && state_bank3[2]==2'd0 &&	
+always @(posedge clock) begin
+	assert( ! (prediction==4'b1111 && state_bank3[3]==2'd0 && state_bank3[2]==2'd0 &&	
 				state_bank3[1]==2'd0 && state_bank3[0]==2'd0) );
+end
 
 endmodule // branchPredictionBuffer

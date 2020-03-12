@@ -119,6 +119,8 @@ module palu(clock,stall,opcode,src1,src2,dest,aluOut);
     end // always @ (posedge clock)
 
 //invariant: !((bubbleEx=1)*(bubbleWb=1)*(regFile<*3*>[3:0]=9)+(regFile<*1*>[3:0]=9)+(regFile<*2*>[3:0]=9)+(regFile<*0*>[3:0]=9));
-	assert property ( !( bubbleEx==1 && bubbleWb==1 && (regFile[3]==4'd9 || regFile[1]==4'd9 || regFile[2]==4'd9 || regFile[0]==4'd9 ) )	);
+always @(posedge clock) begin
+	assert( !( bubbleEx==1 && bubbleWb==1 && (regFile[3]==4'd9 || regFile[1]==4'd9 || regFile[2]==4'd9 || regFile[0]==4'd9 ) )	);
+end
 
 endmodule // palu

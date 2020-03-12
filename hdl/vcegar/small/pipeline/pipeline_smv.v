@@ -34,8 +34,8 @@ initial
       dataOut <= 0; 
  end
 
- always begin
-   assert property ((dataOut == tmp_stageTwo + tmp_stageOne) || (dataOut == 0));
+ always @(posedge clock) begin
+   assert ((dataOut == tmp_stageTwo + tmp_stageOne) || (dataOut == 0));
  end 
 
 endmodule 

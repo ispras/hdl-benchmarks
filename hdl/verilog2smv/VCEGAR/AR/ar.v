@@ -20,9 +20,8 @@ always @ (posedge clk) begin
 	b <=a;
 end
 
-//always begin
-
-assert property (a<200);
-//end
+always @(posedge clk) begin
+  assert(a<200);
+end
 
 endmodule

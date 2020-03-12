@@ -194,7 +194,9 @@ module vsa16a(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //invariant #PASS: The program counter is always aligned on a half-word boundary.
 //PC[0]=0 * NPC[0]=0;
-	assert property (	!PC[0] && !NPC[0]	);
+always @(posedge clock) begin
+	assert(	!PC[0] && !NPC[0]	);
+end
 //invariant #PASS: Register R0 is never written.
 //Registers<*0*>[15:0]=0;
 

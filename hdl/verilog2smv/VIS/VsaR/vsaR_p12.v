@@ -229,6 +229,8 @@ G(State[0]=1 + State[1]=1 ->
   (PC[1]=0 -> (NPC[4:2]==PC[4:2]) *
    PC[2]=0 -> (NPC[4:3]==PC[4:3]) *
    PC[3]=0 -> (NPC[4]==PC[4])));*/
-	assert property (	!(State[0] || State[1]) || ( (PC[1] || NPC[4:2]==PC[4:2]) && (PC[2] || NPC[4:3]==PC[4:3]) && (PC[3] || NPC[4]==PC[4]) )	);
+always @(posedge clock) begin
+	assert(	!(State[0] || State[1]) || ( (PC[1] || NPC[4:2]==PC[4:2]) && (PC[2] || NPC[4:3]==PC[4:3]) && (PC[3] || NPC[4]==PC[4]) )	);
+end
 
 endmodule // vsaR

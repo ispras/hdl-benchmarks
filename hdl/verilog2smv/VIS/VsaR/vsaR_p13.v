@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property: #PASS: In case of a taken branch, ALUOutput ends up in the PC.
 //G(State[2]=1 * branch=1 * Cond=1 * !(ALUOutput[4:0]==NPC[4:0]) ->  !(PC[4:0]==NPC[4:0]));
-	assert property (	!(State[2] && branch && Cond && !(ALUOutput[4:0]==NPC[4:0])) || !(PC[4:0]==NPC[4:0])	);
+always @(posedge clock) begin
+	assert(	!(State[2] && branch && Cond && !(ALUOutput[4:0]==NPC[4:0])) || !(PC[4:0]==NPC[4:0])	);
+end
 
 endmodule // vsaR

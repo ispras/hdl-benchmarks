@@ -62,8 +62,10 @@ module twoByFour(clock,from,to);
 /*invariant property
 !(b<*0*>[2:0]=0 * b<*1*>[2:0]=1 * b<*2*>[2:0]=2 * b<*3*>[2:0]=3 *
   b<*4*>[2:0]=4 * b<*5*>[2:0]=5 * b<*6*>[2:0]=6 * b<*7*>[2:0]=7);*/
-	assert property (	!(b[0]==3'd0 && b[1]==3'd1 && b[2]==3'd2 && b[3]==3'd3 &&
+always @(posedge clock) begin
+	assert(	!(b[0]==3'd0 && b[1]==3'd1 && b[2]==3'd2 && b[3]==3'd3 &&
 				b[4]==3'd4 && b[5]==3'd5 && b[6]==3'd6 && b[7]==3'd7)		);
+end
 
 //G(parity=0);
 

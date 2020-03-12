@@ -223,9 +223,11 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 	wire AeqB =	A[4:0]==B[4:0];
 
 //invariant #FAIL: !(Registers<*1*>[4:2]=3 * Registers<*2*>[4:2]=2 * Registers<*3*>[4:2]=1 *  LMD[4:0]=0 * ALUOutput[4:0]=0 * PC[4:0]=30);
-	assert property (	((Registers[1]>=12 && Registers[1]<=15)) &&
+always @(posedge clock) begin
+	assert(	((Registers[1]>=12 && Registers[1]<=15)) &&
 				((Registers[2]>=8 && Registers[2]<=11 )) &&
 				((Registers[3]>=4 && Registers[3]<=7  )) &&
 				LMD==5'd0 && ALUOutput==5'd0 && PC==5'd0			);
+end
 
 endmodule // vsaR

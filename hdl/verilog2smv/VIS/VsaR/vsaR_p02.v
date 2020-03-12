@@ -223,6 +223,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property: #PASS: The program counter is always aligned on a half-word boundary.
 //G(PC[0]=0 * NPC[0]=0);
-	assert property (	PC[0]==1'b0 && NPC[0]==1'b0	);
+always @(posedge clock) begin
+	assert(	PC[0]==1'b0 && NPC[0]==1'b0	);
+end
 
 endmodule // vsaR

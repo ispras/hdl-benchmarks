@@ -159,7 +159,9 @@ IPBDP_hier_lossless  IPBDP_hier_lossless ( .E_286029953032 ( E_286029953032 )
 		 , .e2963 ( e2963 )  , .E_287829933030 ( E_287829933030 )  , .e2966 ( e2966 )  , .e ( e )  );
    //assert property (P_0 == P_1);
 
-   assert property (e == e2959);
+always @* begin
+   assert(e == e2959);
+end
    
 endmodule
 

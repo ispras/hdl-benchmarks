@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property : #PASS: The state is between 0 and 4.
 //G(State[2]=0 + State[1:0]=0);
-	assert property (	State[2]==1'd0 || State[1:0]==2'd0	);
+always @(posedge clock) begin
+	assert(	State[2]==1'd0 || State[1:0]==2'd0	);
+end
 
 endmodule // vsaR

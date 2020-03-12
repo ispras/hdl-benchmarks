@@ -315,7 +315,9 @@ module main(eoc, soc, load_dato, add_mpx2, canale, mux_en,  clock, data_in,
 
 //   assert property (canale[3]==0);
 
-   assert property (tx_conta[9:8]==0);
+always @(posedge clock) begin
+   assert(tx_conta[9:8]==0);
+end
 
 //   assert property (~(mpx==1) | rdy==1);
 

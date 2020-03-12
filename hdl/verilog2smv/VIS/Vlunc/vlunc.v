@@ -39,7 +39,9 @@ module lunc (clock,reset,dataIn,dataOut);
 //invariant: #PASS: The command lines are 1-hot encoded.
 //!(Lcmd=1 * Ucmd=1 + Lcmd=1 * Ccmd=1 + Lcmd=1 * Ncmd=1 + Ucmd=1 * Ccmd=1
 //+ Ucmd=1 * Ncmd=1 + Ccmd=1 * Ncmd=1);
-	assert property (	!((Lcmd && Ucmd) || (Lcmd && Ccmd) || (Lcmd && Ncmd) || (Ucmd && Ccmd) || (Ucmd && Ncmd) || (Ccmd && Ncmd))	);
+always @(posedge clock) begin
+	assert(	!((Lcmd && Ucmd) || (Lcmd && Ccmd) || (Lcmd && Ncmd) || (Ucmd && Ccmd) || (Ucmd && Ncmd) || (Ccmd && Ncmd))	);
+end
 endmodule // lunc
 
 

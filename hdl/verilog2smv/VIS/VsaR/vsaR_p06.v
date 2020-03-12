@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property: #PASS: In case of branch, Cond is consistent with A in the MEM and WB states.
 //G(branch=1 * State[2]=1 -> ((Cond=1 -> A[4:0]=0) * (A[4:0]=0 -> Cond=1)));
-	assert property (	!(branch && State[2]) || ((!Cond || A[4:0]==5'd0) && (A[4:0]!=5'd0 || Cond))	);
+always @(posedge clock) begin
+	assert(	!(branch && State[2]) || ((!Cond || A[4:0]==5'd0) && (A[4:0]!=5'd0 || Cond))	);
+end
 
 endmodule // vsaR

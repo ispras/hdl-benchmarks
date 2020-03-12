@@ -230,8 +230,9 @@ module main(clk, rst, phy_tx_mode, usb_rst,
 
     always @(posedge clk)
       usb_rst = (rst_cnt == 5'd31);
-
-   assert property (~(RxValid_o==1) | (RxActive_o==1));
+    always @(posedge clk) begin
+      assert(~(RxValid_o==1) | (RxActive_o==1));
+    end
    
 endmodule // usb_phy
 

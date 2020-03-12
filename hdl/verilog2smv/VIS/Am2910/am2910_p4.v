@@ -148,6 +148,8 @@ module am2910(I,CCEN_BAR,CC_BAR,RLD_BAR,CI,OEbar,clk,D,Y,PL_BAR,
 	     reg_file0_old = 12'd0;
 	     reg_file5_old = 12'd0;
 	  end
-   
-	assert property (old == 1'b0 || !(sp_old!=3'd4 && sp_old!=3'd5) || (reg_file5_old!=12'b101010101010 || reg_file[5]==12'b101010101010));
+
+always @(posedge clk) begin
+	assert(old == 1'b0 || !(sp_old!=3'd4 && sp_old!=3'd5) || (reg_file5_old!=12'b101010101010 || reg_file[5]==12'b101010101010));
+end
 endmodule // am2910

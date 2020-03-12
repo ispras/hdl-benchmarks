@@ -56,6 +56,8 @@ module spinner(clock,spin,amount,din,dout);
 
 //invariant: # FAIL:
 //!(dout[31:0]=b10101010101010101010101010101010);
-	assert property (	dout!=32'b10101010101010101010101010101010	);
+always @(posedge clock) begin
+	assert(	dout!=32'b10101010101010101010101010101010	);
+end
 
 endmodule // rotate

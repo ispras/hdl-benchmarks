@@ -229,6 +229,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 #    A[4:0]=1 * B[4:0]=2);
 G(\R0eqR1 + \R0eqR2 + \R0eqR3 + \R1eqR2 + \R1eqR3 + \R2eqR3 + \AeqR0 +
   \AeqR1 + \AeqR2 + \AeqR3 + \BeqR0 + \BeqR1 + \BeqR2 + \BeqR3 + \AeqB);*/
-	assert property (	R0eqR1 || R0eqR2 || R0eqR3 || R1eqR2 || R1eqR3 || R2eqR3 || AeqR0 || AeqR1 || AeqR2 || AeqR3 || BeqR0 || BeqR1 || BeqR2 || BeqR3 || AeqB	);
+always @(posedge clock) begin
+	assert(	R0eqR1 || R0eqR2 || R0eqR3 || R1eqR2 || R1eqR3 || R2eqR3 || AeqR0 || AeqR1 || AeqR2 || AeqR3 || BeqR0 || BeqR1 || BeqR2 || BeqR3 || AeqB	);
+end
 
 endmodule // vsaR

@@ -889,9 +889,9 @@ module main(
    end
    
 
-always begin
+always @(posedge Clk) begin
 
-assert property (~((State[0]==0) & (State[1]==1) & (State[2]==0) & (monitor_nop==0)) | ((ARW==1) & (BRW==1) &(RegRW==0)& (IRW==1)&(IRRW==0)&(PCRW==1) & (NPCRW==0)&(ALUoutRW==0) & (MDRW==0)&(BCRW==0)));
+assert(~((State[0]==0) & (State[1]==1) & (State[2]==0) & (monitor_nop==0)) | ((ARW==1) & (BRW==1) &(RegRW==0)& (IRW==1)&(IRRW==0)&(PCRW==1) & (NPCRW==0)&(ALUoutRW==0) & (MDRW==0)&(BCRW==0)));
 
 end
 

@@ -128,7 +128,9 @@ module am2910(I,CCEN_BAR,CC_BAR,RLD_BAR,CI,OEbar,clk,D,Y,PL_BAR,
 
 	//#PASS: The antecedent is never satisfied for the reachable states.
 	//assert property G(reg_file<*0*>[11:0]=0 * !sp[2:1]=b11);
-	assert property (reg_file[0]==0 && (sp!=3'd6 || sp!=3'd7));
+always @(posedge clock) begin
+	assert(reg_file[0]==0 && (sp!=3'd6 || sp!=3'd7));
+end
 	//#PASS: the 0-th entry of the stack is never written and the stack pointer
 	//# is never 6 or 7.
 	//assert property G(sp[2:0]=6 -> X(sp[2:0]=7));

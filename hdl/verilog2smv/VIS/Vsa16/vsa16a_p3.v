@@ -200,7 +200,9 @@ module vsa16a(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //invariant #PASS: The state is between 0 and 4.
 //State[2]=0 + State[1:0]=0;
-	assert property (	!State[2] || State[1:0]==2'd0	);
+always @(posedge clock) begin
+	assert(	!State[2] || State[1:0]==2'd0	);
+end
 //invariant #PASS: If the two source fields are the same, the ALU input register
 //# will hold the same  value during the EXE, MEM, and WB states.
 //adFld1[1:0]==adFld2[1:0] -> (State[2:1]=0 + A[15:0]==B[15:0]);

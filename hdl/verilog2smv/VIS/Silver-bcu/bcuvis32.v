@@ -320,7 +320,9 @@ end
 
 //invariant: #Any where in the state when customer is 3 write_accept_n_reg is 1
 //customer[1:0]= 3 -> write_accept_n_reg = 1;   
-	assert property (	customer!=2'd3 || write_accept_n_reg == 1'd1	);
+always @(posedge sys_clk) begin
+	assert(	customer!=2'd3 || write_accept_n_reg == 1'd1	);
+end
 endmodule // bcu
 
 

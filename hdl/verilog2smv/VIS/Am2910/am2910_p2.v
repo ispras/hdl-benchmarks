@@ -133,7 +133,9 @@ module am2910(I,CCEN_BAR,CC_BAR,RLD_BAR,CI,OEbar,clk,D,Y,PL_BAR,
 	//# is never 6 or 7.
 	//assert property G(sp[2:0]=6 -> X(sp[2:0]=7));
 	
-	assert property (old == 1'b0 || sp_old != 3'd6 || sp == 3'd7);
+always @(posedge clk) begin
+	assert(old == 1'b0 || sp_old != 3'd6 || sp == 3'd7);
+end
 	//#PASS: The antecedent is never satisfied for the reachable states.
 	// assert property G(reg_file<*0*>[11:0]=b000000000010 -> X(reg_file<*0*>[11:0]=b000000000001));
 	

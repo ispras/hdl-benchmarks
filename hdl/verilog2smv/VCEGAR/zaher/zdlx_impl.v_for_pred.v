@@ -467,7 +467,8 @@ module main;
                 end
         end // always @(IF_ID_IR)
 
-   assert property (~(~EX_MEM_valid & ~MEM_WB_update_pc & ~PC_valid & ~ID_EX_valid & IF_ID_valid & ~IF_ID_update_pc & ~ID_EX_update_pc & ~EX_MEM_update_pc));
-   
+always @(posedge Clk) begin
+   assert(~(~EX_MEM_valid & ~MEM_WB_update_pc & ~PC_valid & ~ID_EX_valid & IF_ID_valid & ~IF_ID_update_pc & ~ID_EX_update_pc & ~EX_MEM_update_pc));
+end
 
 endmodule

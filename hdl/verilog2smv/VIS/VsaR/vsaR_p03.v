@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property: #PASS: Register R0 is never written.
 //G(Registers<*0*>[4:0]=0);
-	assert property (	Registers[0]==5'd0	);
+always @(posedge clock) begin
+	assert(	Registers[0]==5'd0	);
+end
 
 endmodule // vsaR

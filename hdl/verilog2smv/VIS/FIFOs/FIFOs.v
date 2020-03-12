@@ -38,7 +38,9 @@ module compareFIFOs(clock,dataIn,push,pop,equal);
     assign equal = (srFull == rbFull) & (srEmpty == rbEmpty) &
 	(srEmpty | (srDataOut == rbDataOut));
 	
-	assert property (equal == 1'd1);
+always @(posedge clock) begin
+	assert(equal == 1'd1);
+end
 endmodule // compareFIFOs
 
 

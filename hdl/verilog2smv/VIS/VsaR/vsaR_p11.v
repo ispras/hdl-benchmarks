@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 ///#PASS: a - a = 0.
 //G(regRegALU=1 * funFld[2:0]=b001 * adFld1[1:0]==adFld2[1:0] ->  (State[2]=1 -> ALUOutput[4:0]=0));
-	assert property (	!(regRegALU && funFld[2:0]==3'b001 && adFld1[1:0]==adFld2[1:0]) || (State[2]==1'd0 || ALUOutput[4:0]==5'd0)	);
+always @(posedge clock) begin
+	assert(	!(regRegALU && funFld[2:0]==3'b001 && adFld1[1:0]==adFld2[1:0]) || (State[2]==1'd0 || ALUOutput[4:0]==5'd0)	);
+end
 
 endmodule // vsaR

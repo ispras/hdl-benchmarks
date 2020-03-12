@@ -230,11 +230,13 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
    (A[2]==B[2] -> ALUOutput[2]=0) * (ALUOutput[2]=0 -> A[2]==B[2]) *
    (A[1]==B[1] -> ALUOutput[1]=0) * (ALUOutput[1]=0 -> A[1]==B[1]) *
    (A[0]==B[0] -> ALUOutput[0]=0) * (ALUOutput[0]=0 -> A[0]==B[0]));*/
-	assert property (	!(regRegALU && funFld[2:0]==3'b100 && (State[2]==1'b1 || State[1:0]==2'd0 || State[1:0]==2'd3)) || 
+always @(posedge clock) begin
+	assert(	!(regRegALU && funFld[2:0]==3'b100 && (State[2]==1'b1 || State[1:0]==2'd0 || State[1:0]==2'd3)) || 
 				(	(A[4]!=B[4] || ALUOutput[4]==1'b0) && (ALUOutput[4]!=1'b0 || A[4]==B[4]) &&
 					(A[3]!=B[3] || ALUOutput[3]==1'b0) && (ALUOutput[3]!=1'b0 || A[3]==B[3]) &&
 					(A[2]!=B[2] || ALUOutput[2]==1'b0) && (ALUOutput[2]!=1'b0 || A[2]==B[2]) &&
 					(A[1]!=B[1] || ALUOutput[1]==1'b0) && (ALUOutput[1]!=1'b0 || A[1]==B[1]) &&
 					(A[0]!=B[0] || ALUOutput[0]==1'b0) && (ALUOutput[0]!=1'b0 || A[0]==B[0]) 	)	);
+end
 
 endmodule // vsaR

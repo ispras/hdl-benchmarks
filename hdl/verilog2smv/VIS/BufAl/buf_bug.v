@@ -64,6 +64,8 @@ module buffer_alloc(clock,alloc_raw,nack,alloc_addr,free_raw,free_addr_raw);
 
 /*#PASS: count is less than or equal to 16.
 count[4]=0 + count[3:0]=0;*/	
-	assert property (count<=5'd16);
+always @(posedge clock) begin
+	assert(count<=5'd16);
+end
 
 endmodule // buffer_alloc

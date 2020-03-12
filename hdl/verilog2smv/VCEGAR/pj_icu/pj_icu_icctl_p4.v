@@ -795,8 +795,9 @@ assign icu_in_powerdown = ic_miss_state[6] & !jmp_e;
 //   assert property (tmp_ic_miss_state==7'b0000001 | tmp_ic_miss_state==7'b0000010 | tmp_ic_miss_state==7'b0000100 | tmp_ic_miss_state==7'b0001000 | tmp_ic_miss_state==7'b0010000 | tmp_ic_miss_state==7'b0100000 | tmp_ic_miss_state==7'b1000000 |  tmp_ic_miss_state==7'b0000000 );
 //   assert property (tmp_ic_miss_state==7'b0000001 | tmp_ic_miss_state==7'b0000010 | (tmp_ic_miss_state==7'b0000100  && (ic_miss_state==7'b0001000 | ic_miss_state==7'b0000001 | ic_miss_state==7'b0000000 | ic_miss_state==7'b0000100))| tmp_ic_miss_state==7'b0001000 | tmp_ic_miss_state==7'b0010000 | tmp_ic_miss_state==7'b0100000 | tmp_ic_miss_state==7'b1000000 |  tmp_ic_miss_state==7'b0000000 );
 //   assert property ((tmp_ic_miss_state==7'b0000100  && (ic_miss_state==7'b0001000 | ic_miss_state==7'b0000001 | ic_miss_state==7'b0000000 | ic_miss_state==7'b0000100)) | ~(tmp_ic_miss_state==7'b0000100));
-   assert property ((tmp_ic_miss_state==7'b0000001  && (ic_miss_state==7'b0000000 | ic_miss_state==7'b0000001 | ic_miss_state==7'b0000010   | ic_miss_state==7'b0000100 | ic_miss_state==7'b1000000)) | ~(tmp_ic_miss_state==7'b00000001));
-   
+always @(posedge clk) begin
+   assert((tmp_ic_miss_state==7'b0000001  && (ic_miss_state==7'b0000000 | ic_miss_state==7'b0000001 | ic_miss_state==7'b0000010   | ic_miss_state==7'b0000100 | ic_miss_state==7'b1000000)) | ~(tmp_ic_miss_state==7'b00000001));
+end
 
 //always begin
 //assert property3 (tmp_ic_miss_state==7'b0000001 | tmp_ic_miss_state==7'b0000010 | (tmp_ic_miss_state==7'b0000100  && (ic_miss_state==7'b0001000 | ic_miss_state==7'b0000001 | ic_miss_state==7'b0000000))| tmp_ic_miss_state==7'b0001000 | tmp_ic_miss_state==7'b0010000 | tmp_ic_miss_state==7'b0100000 | tmp_ic_miss_state==7'b1000000|  tmp_ic_miss_state==7'b0000000);

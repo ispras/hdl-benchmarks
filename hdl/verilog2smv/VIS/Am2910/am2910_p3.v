@@ -135,7 +135,9 @@ module am2910(I,CCEN_BAR,CC_BAR,RLD_BAR,CI,OEbar,clk,D,Y,PL_BAR,
 	//#PASS: The antecedent is never satisfied for the reachable states.
 	// assert property G(reg_file<*0*>[11:0]=b000000000010 -> X(reg_file<*0*>[11:0]=b000000000001));
 
-	assert property (old == 1'b0 || reg_file0_old != 12'd2 || reg_file[0] ==12'd1);
+always @(posedge clk) begin
+	assert(old == 1'b0 || reg_file0_old != 12'd2 || reg_file[0] ==12'd1);
+end
 	//#PASS: the contents of the fifth entry of the stack cannot change in the
 	//# next clock cycle unless the stack pointer is either 4 or 5.
 	// assert property G(!(sp[2:0]=b100) * !(sp[2:0]=b101) -> (reg_file<*5*>[11:0]=b101010101010 -> X(reg_file<*5*>[11:0]=b101010101010)));

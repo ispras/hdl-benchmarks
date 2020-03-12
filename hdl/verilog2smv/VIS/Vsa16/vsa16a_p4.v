@@ -204,7 +204,9 @@ module vsa16a(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 //invariant #PASS: If the two source fields are the same, the ALU input register
 //# will hold the same  value during the EXE, MEM, and WB states.
 //adFld1[1:0]==adFld2[1:0] -> (State[2:1]=0 + A[15:0]==B[15:0]);
-	assert property (	!(adFld1[1:0]==adFld2[1:0]) || (State[2:1]==2'd0 || A[15:0]==B[15:0])	);
+always @(posedge clock) begin
+	assert(	!(adFld1[1:0]==adFld2[1:0]) || (State[2:1]==2'd0 || A[15:0]==B[15:0])	);
+end
 //invariant #PASS: in case of branch, Cond is consistent with A in the MEM and WB states.
 //opcode[2:0]=b010 * State[2]=1 -> ((Cond=1 -> A[15:0]=0) * (A[15:0]=0 -> Cond=1));
 

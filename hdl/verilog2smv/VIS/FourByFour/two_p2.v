@@ -64,6 +64,8 @@ module twoByFour(clock,from,to);
   b<*4*>[2:0]=4 * b<*5*>[2:0]=5 * b<*6*>[2:0]=6 * b<*7*>[2:0]=7);*/
 
 //G(parity=0);
-	assert property (	!parity	);
+always @(posedge clock) begin
+	assert(	!parity	);
+end
 
 endmodule // twoByFour

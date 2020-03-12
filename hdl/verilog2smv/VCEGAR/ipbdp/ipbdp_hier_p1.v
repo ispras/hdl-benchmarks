@@ -157,7 +157,9 @@ IPBDP_hier_lossy  IPBDP_hier_lossy ( .E_28782993 ( E_28782993 )  , .E_2878299330
 IPBDP_hier_lossless  IPBDP_hier_lossless ( .E_286029953032 ( E_286029953032 ) 
 		 , .e2973 ( e2973 )  , .e2968 ( e2968 )  , .e2967 ( e2967 )  , .e2975 ( e2975 )  , .E_2899 ( E_2899 ) 
 		 , .e2963 ( e2963 )  , .E_287829933030 ( E_287829933030 )  , .e2966 ( e2966 )  , .e ( e )  );
-   assert property (P_0 == P_1);
+always @* begin
+   assert(P_0 == P_1);
+end
 
    //assert property (e == e2959);
    

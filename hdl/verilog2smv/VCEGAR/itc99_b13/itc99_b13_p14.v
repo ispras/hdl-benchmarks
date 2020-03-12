@@ -337,7 +337,9 @@ module main(eoc, soc, load_dato, add_mpx2, canale, mux_en,  clock, data_in,
 
 //   assert property (confirm==0 | send_en==0);
 
-   assert property (~(send_en==0) | (tx_end==0));
+always @(posedge clock) begin
+   assert(~(send_en==0) | (tx_end==0));
+end
 
 //   assert property (~(tx_end==1) | (next_bit==4'b0001));
 

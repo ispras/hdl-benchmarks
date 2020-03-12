@@ -1017,7 +1017,9 @@ wire [0:31] pi_dataout;
    master_controller M_cnt_1(clk,address_1,opcode_1,data_slave2master,data_master2slave_1,lock_1,read_1,req_1,gnt_1,timeout,acknowledge, mst_data_tmp2, state2);
    bus_cont B_cnt(address,opcode,acknowledge,lock,read,select,gnt_0,gnt_1,req_0,req_1,timeout,clk);// cahneg lock_temp back to lock and change req_temp back to request
 
-   assert property (!((pi_state==2'b01 | pi_state==2'b10) & (acknowledge==3'b100) & (read==1) & (pi_dataout[31]==1) & (select==1)) | (mst_data_tmp1[31]== 1));
+always @(posedge clk) begin
+   assert(!((pi_state==2'b01 | pi_state==2'b10) & (acknowledge==3'b100) & (read==1) & (pi_dataout[31]==1) & (select==1)) | (mst_data_tmp1[31]== 1));
+end
    
 endmodule
 

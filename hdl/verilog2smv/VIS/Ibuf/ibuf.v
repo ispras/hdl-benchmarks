@@ -103,7 +103,8 @@ G((qAge[0]=0 + qAge[1]=1 + qAge[2]=0) *
   (valid[0]=1 * valid[1]=0 -> qAge[0]=1) *
   (valid[0]=1 * valid[2]=0 -> qAge[1]=1) *
   (valid[1]=1 * valid[2]=0 -> qAge[2]=1));*/
-	assert property (	(!qAge[0] || qAge[1] || !qAge[2]) &&
+always @(posedge clock) begin
+	assert(	(!qAge[0] || qAge[1] || !qAge[2]) &&
 				(qAge[0] || !qAge[1] || qAge[2]) &&
 				(!qAge[0] || valid[0]) &&
 				(!qAge[1] || valid[0]) &&
@@ -111,5 +112,6 @@ G((qAge[0]=0 + qAge[1]=1 + qAge[2]=0) *
 				(!(valid[0] && !valid[1]) || qAge[0]) &&
 				(!(valid[0] && !valid[2]) || qAge[1]) &&
 				(!(valid[1] && !valid[2]) || qAge[2])		);
+end
 
 endmodule // iqc

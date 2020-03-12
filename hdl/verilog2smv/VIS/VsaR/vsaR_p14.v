@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property: #PASS: If no branch is taken, PC and NPC are the same in the WB state.
 //G(State[2]=1 * (branch=0 + Cond=0) -> PC[4:0]==NPC[4:0]);
-	assert property (	!(State[2] && (!branch || !Cond)) || PC[4:0]==NPC[4:0]	);
+always @(posedge clock) begin
+	assert(	!(State[2] && (!branch || !Cond)) || PC[4:0]==NPC[4:0]	);
+end
 
 endmodule // vsaR

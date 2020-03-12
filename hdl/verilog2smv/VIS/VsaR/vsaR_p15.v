@@ -224,6 +224,8 @@ module vsaR(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //property: #PASS: Choosing R0 as branch register always leads to a taken branch.
 //G(\WB * branch=1 * adFld1[1:0]=0 -> PC[4:0]==ALUOutput[4:0]);
-	assert property (	!(WB && branch && adFld1[1:0]==2'd0) || PC[4:0]==ALUOutput[4:0]	);
+always @(posedge clock) begin
+	assert(	!(WB && branch && adFld1[1:0]==2'd0) || PC[4:0]==ALUOutput[4:0]	);
+end
 
 endmodule // vsaR

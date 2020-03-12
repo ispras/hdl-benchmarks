@@ -114,7 +114,9 @@ module sampleq (reset, inaddr, validin, readin, clkin, bus_gnt_raw,
     assign writetailentry = writefifo[writetail];
 
 //invariant: !((monitor[1:0] = 2) *!(storeaddr[1:0] == readhead[1:0]));
-	assert property (	!( monitor==2'd2 && !(storeaddr == readhead) )	);
+always @(posedge clkin) begin
+	assert(	!( monitor==2'd2 && !(storeaddr == readhead) )	);
+end
 //invariant: (monitor = 0) + (match = 1) *(bus_gnt[1:0] = 3);
 //invariant: #!(!(storeaddr[1:0] = 0) * (monitor = 1) * (outisaread = 1) * (storeaddr[1:0] == outaddr[1:0]));
 

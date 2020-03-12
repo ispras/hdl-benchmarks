@@ -586,5 +586,7 @@ always @(posedge sys_clk) if (LStep_WB)
 //invariant: !(RegA[4:0]=31 * dOpd1[31:26]=0); 
 //invariant: !(RegB[4:0]=31 * dOpd1[31:26]=0);
 //invariant: !(SEL_A[1:0]=2 -> dOpd1[31:26]==EXU_ResData[31:26]);
-	assert property (	!(!(SEL_A==2'd2) || dOpd1[31:26]==EXU_ResData[31:26])	);
+always @(posedge sys_clk) begin
+	assert(	!(!(SEL_A==2'd2) || dOpd1[31:26]==EXU_ResData[31:26])	);
+end
 endmodule //fru   

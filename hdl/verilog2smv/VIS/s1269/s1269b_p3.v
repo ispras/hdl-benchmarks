@@ -191,7 +191,9 @@ module s1269(clock, INS, LDAcc, LDMQ, LDDR, STAcc, STMQ, STDR, TESTMODE,
     (I679=1 + I680=1 + I681=1) -> qINSo[2:1]=b10;
     */
 
-   assert property (!(I679 || I680 || I681) || qShiftRight);
+always @(posedge clock) begin
+   assert(!(I679 || I680 || I681) || qShiftRight);
+end
 
    
 endmodule // s1269

@@ -150,6 +150,8 @@ module am2901(I,Aadd,Badd,D,Y,RAM0in,RAM0out,RAM3in,RAM3out,
     RAM<*7*><3>=1 * RAM<*6*><3>=1 * RAM<*5*><3>=1 * RAM<*4*><3>=1 *
     RAM<*3*><3>=1 * RAM<*2*><3>=1 * RAM<*1*><3>=1 * RAM<*0*><3>=1 * Q<3>=1);
     */
-   assert property ( !(RAM[0]>=8 && RAM[1]>=8 && RAM[2]>=8 && RAM[3]>=8 && RAM[4]>=8 && RAM[5]>=8 && RAM[6]>=8 && RAM[7]>=8 && RAM[8]>=8 && RAM[9]>=8 && RAM[10]>=8 && RAM[11]>=8 && RAM[12]>=8 && RAM[13]>=8 && RAM[14]>=8 && RAM[15]>=8 && Q[3]==1)); 
+always @(posedge clock) begin
+   assert( !(RAM[0]>=8 && RAM[1]>=8 && RAM[2]>=8 && RAM[3]>=8 && RAM[4]>=8 && RAM[5]>=8 && RAM[6]>=8 && RAM[7]>=8 && RAM[8]>=8 && RAM[9]>=8 && RAM[10]>=8 && RAM[11]>=8 && RAM[12]>=8 && RAM[13]>=8 && RAM[14]>=8 && RAM[15]>=8 && Q[3]==1)); 
+end
 
 endmodule // am2901

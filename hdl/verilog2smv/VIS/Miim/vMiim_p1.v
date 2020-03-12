@@ -446,7 +446,9 @@ OutputControl OutCtrl(.Clk(Clk), .Reset(Reset), .MdcEn(MdcEn), .InProgress(InPro
                      );
 
 //invariant property: MdoEn=1 -> Busy=1;
-	assert property (	!MdoEn || Busy	);
+always @(posedge Clk) begin
+	assert(	!MdoEn || Busy	);
+end
 //invariant property: Busy=1 -> MdoEn=1;
 endmodule
 

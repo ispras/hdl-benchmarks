@@ -207,7 +207,9 @@ module vsa16a(clock,PC,instruction,ALUOutput,datain,dataout,wr);
 
 //invariant #PASS: in case of branch, Cond is consistent with A in the MEM and WB states.
 //opcode[2:0]=b010 * State[2]=1 -> ((Cond=1 -> A[15:0]=0) * (A[15:0]=0 -> Cond=1));
-	assert property (	!(opcode[2:0]==3'b010 && State[2]) || ((!Cond || A[15:0]==16'd0) && (!(A[15:0]==16'd0) || Cond))	);
+always @(posedge clock) begin
+	assert(	!(opcode[2:0]==3'b010 && State[2]) || ((!Cond || A[15:0]==16'd0) && (!(A[15:0]==16'd0) || Cond))	);
+end
 //invariant #PASS: a XOR a = 0
 //opcode[2:0]=b011 * funFld[2:0]=b100 * adFld1[1:0]==adFld2[1:0] -> (State[2]=1 -> ALUOutput[15:0]=0);
 

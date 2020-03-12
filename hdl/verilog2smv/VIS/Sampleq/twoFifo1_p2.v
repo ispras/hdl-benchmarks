@@ -115,7 +115,9 @@ module sampleq (reset, inaddr, validin, readin, clkin, bus_gnt_raw,
 
 //invariant: !((monitor[1:0] = 2) *!(storeaddr[1:0] == readhead[1:0]));
 //invariant: (monitor = 0) + (match = 1) *(bus_gnt[1:0] = 3);
-	assert property (	monitor==2'd0 || (match==1'd1 && bus_gnt==2'd3)	);
+always @(posedge clkin) begin
+	assert(	monitor==2'd0 || (match==1'd1 && bus_gnt==2'd3)	);
+end
 //invariant: #!(!(storeaddr[1:0] = 0) * (monitor = 1) * (outisaread = 1) * (storeaddr[1:0] == outaddr[1:0]));
 
 endmodule // sampleq
