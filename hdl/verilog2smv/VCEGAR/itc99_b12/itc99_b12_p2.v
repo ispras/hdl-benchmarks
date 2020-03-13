@@ -563,7 +563,8 @@ module main(clock, start, k, nloss, nl, speaker);
     end
 
 //   assert property (~(counter[2:0]==0 &  play==1) | (speaker == s));
-
-   assert property (~(nloss==0) | (~(nl[3:0]==15)));
+always @(posedge clock) begin
+   assert(~(nloss==0) | (~(nl[3:0]==15)));
+end
    
 endmodule // b12

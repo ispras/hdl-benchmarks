@@ -8,7 +8,6 @@
 // benchmark set.
 
 // Author: Fabio Somenzi <Fabio@Colorado.EDU>
-
 //typedef enum {G0, G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G10a, G11,
 //	      G12, Ea, E0, E1, K0, K1, K2, K3, K4, K5, K6, W0, W1} Gamma;
 
@@ -561,7 +560,9 @@ module main(clock, start, k, nloss, nl, speaker);
 	endcase
     end
 
-   assert property (~(counter[2:0]==0 &  play==1) | (speaker == s));
+always @(posedge clock) begin
+   assert(~(counter[2:0]==0 &  play==1) | (speaker == s));
+end
 
 //   assert property (~(nloss==0) | (~(nl[3:0]==15)));
    
