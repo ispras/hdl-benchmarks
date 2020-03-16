@@ -1,5 +1,2 @@
 PSLSPEC
-always (m_main_SUBSTITUTED.main_packHeadStop = 0d1_0);
-
-PSLSPEC
 always (m_main_SUBSTITUTED.main_packHeadStart = 0d1_1);

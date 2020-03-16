@@ -1,0 +1,2 @@
+PSLSPEC
+always (m_main_SUBSTITUTED.main_ack0 = m_main_SUBSTITUTED.main_ack1);

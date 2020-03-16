@@ -1,0 +1,2 @@
+PSLSPEC
+always ((m_main_SUBSTITUTED.main_cntr < 0d2_3) | (!((m_main_SUBSTITUTED.main_in0_cycle4 = 0d2_2) & (m_main_SUBSTITUTED.main_in0_cycle3 = 0d2_1) & (m_main_SUBSTITUTED.main_in0_cycle2 = 0d2_1)) | m_main_SUBSTITUTED.main_frame_ready0 = 0d1_1));
