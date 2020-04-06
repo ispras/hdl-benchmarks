@@ -3,3 +3,4 @@ module carry_sum (sin, cin, sout, cout);
   input cin;
   output sout;
   output cout;
+endmodule
