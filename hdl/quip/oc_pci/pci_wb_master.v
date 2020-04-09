@@ -166,12 +166,12 @@ module pci_wb_master
 /*----------------------------------------------------------------------------------------------------------------------
 Various parameters needed for state machine and other stuff
 ----------------------------------------------------------------------------------------------------------------------*/
-parameter       S_IDLE          = `WB_FSM_BITS'h0 ; 
-parameter       S_WRITE         = `WB_FSM_BITS'h1 ;
-parameter       S_WRITE_ERR_RTY = `WB_FSM_BITS'h2 ;
-parameter       S_READ          = `WB_FSM_BITS'h3 ;
-parameter       S_READ_RTY      = `WB_FSM_BITS'h4 ;
-parameter       S_TURN_ARROUND  = `WB_FSM_BITS'h5 ;
+parameter       S_IDLE          = 3'h0 ; 
+parameter       S_WRITE         = 3'h1 ;
+parameter       S_WRITE_ERR_RTY = 3'h2 ;
+parameter       S_READ          = 3'h3 ;
+parameter       S_READ_RTY      = 3'h4 ;
+parameter       S_TURN_ARROUND  = 3'h5 ;
 
 /*----------------------------------------------------------------------------------------------------------------------
 System signals inputs

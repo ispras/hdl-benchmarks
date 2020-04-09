@@ -209,22 +209,22 @@
 `define     TS          4
 `define     TSn         `TS-1
 
-`define state_idle             `TS'b0001
-`define state_set_ras          `TS'b0011
-`define state_ras_dly          `TS'b0010
-`define state_set_cas          `TS'b0110
-`define state_cas_latency1     `TS'b0111
-`define state_cas_latency2     `TS'b0101
-`define state_write            `TS'b0100
-`define state_read             `TS'b1100
-`define state_auto_refresh     `TS'b1101
-`define state_auto_refresh_dly `TS'b1111
-`define state_precharge        `TS'b1110
-`define state_powerup          `TS'b1010
-`define state_modeset          `TS'b1011
-`define state_delay_Trp        `TS'b0000
-`define state_delay_Tras1      `TS'b1000
-`define state_delay_Tras2      `TS'b1001
+`define state_idle             4'b0001
+`define state_set_ras          4'b0011
+`define state_ras_dly          4'b0010
+`define state_set_cas          4'b0110
+`define state_cas_latency1     4'b0111
+`define state_cas_latency2     4'b0101
+`define state_write            4'b0100
+`define state_read             4'b1100
+`define state_auto_refresh     4'b1101
+`define state_auto_refresh_dly 4'b1111
+`define state_precharge        4'b1110
+`define state_powerup          4'b1010
+`define state_modeset          4'b1011
+`define state_delay_Trp        4'b0000
+`define state_delay_Tras1      4'b1000
+`define state_delay_Tras2      4'b1001
 
 // Fresh timer states
 `define   state_count                3'b001
