@@ -1,1 +1,1 @@
-task [1:0] $sscanf
+task $sscanf
