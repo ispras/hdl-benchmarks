@@ -5,7 +5,7 @@
 
 
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 
 

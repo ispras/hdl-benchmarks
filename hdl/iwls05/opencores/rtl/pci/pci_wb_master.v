@@ -83,9 +83,6 @@
 //
 //
 
-`define WB_FSM_BITS 3 // number of bits needed for FSM states
-
-
 `include "bus_commands.v"
 `include "pci_constants.v"
 //synopsys translate_off
@@ -166,12 +163,12 @@ module pci_wb_master
 /*----------------------------------------------------------------------------------------------------------------------
 Various parameters needed for state machine and other stuff
 ----------------------------------------------------------------------------------------------------------------------*/
-parameter       S_IDLE          = `WB_FSM_BITS'h0 ; 
-parameter       S_WRITE         = `WB_FSM_BITS'h1 ;
-parameter       S_WRITE_ERR_RTY = `WB_FSM_BITS'h2 ;
-parameter       S_READ          = `WB_FSM_BITS'h3 ;
-parameter       S_READ_RTY      = `WB_FSM_BITS'h4 ;
-parameter       S_TURN_ARROUND  = `WB_FSM_BITS'h5 ;
+parameter       S_IDLE          = 3'h0 ;
+parameter       S_WRITE         = 3'h1 ;
+parameter       S_WRITE_ERR_RTY = 3'h2 ;
+parameter       S_READ          = 3'h3 ;
+parameter       S_READ_RTY      = 3'h4 ;
+parameter       S_TURN_ARROUND  = 3'h5 ;
 
 /*----------------------------------------------------------------------------------------------------------------------
 System signals inputs
@@ -615,8 +612,8 @@ begin
 end
 assign  burst_transfer = first_data_is_burst || first_data_is_burst_reg ;
 
-reg [(`WB_FSM_BITS - 1):0]  c_state ; //current state register
-reg [(`WB_FSM_BITS - 1):0]  n_state ; //next state input to current state register
+reg [2:0]  c_state ; //current state register
+reg [2:0]  n_state ; //next state input to current state register
 
 //##################################
 // WISHBONE B3 master state machine

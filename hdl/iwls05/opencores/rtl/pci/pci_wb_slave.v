@@ -148,14 +148,14 @@ parameter WBR_SEL  = 1'b0 ;
 parameter CONF_SEL = 1'b1 ;
 
 `define FSM_BITS 3
-parameter S_IDLE         = `FSM_BITS'h0 ;
-parameter S_DEC1         = `FSM_BITS'h1 ;
-parameter S_DEC2         = `FSM_BITS'h2 ;
-parameter S_START        = `FSM_BITS'h3 ;
-parameter S_W_ADDR_DATA  = `FSM_BITS'h4 ;
-parameter S_READ         = `FSM_BITS'h5 ;
-parameter S_CONF_WRITE   = `FSM_BITS'h6 ;
-parameter S_CONF_READ    = `FSM_BITS'h7 ;
+parameter S_IDLE         = 3'h0 ;
+parameter S_DEC1         = 3'h1 ;
+parameter S_DEC2         = 3'h2 ;
+parameter S_START        = 3'h3 ;
+parameter S_W_ADDR_DATA  = 3'h4 ;
+parameter S_READ         = 3'h5 ;
+parameter S_CONF_WRITE   = 3'h6 ;
+parameter S_CONF_READ    = 3'h7 ;
 
 /*----------------------------------------------------------------------------------------------------------------------
 System signals inputs

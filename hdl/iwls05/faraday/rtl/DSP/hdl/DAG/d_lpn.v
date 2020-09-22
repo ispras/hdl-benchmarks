@@ -1,6 +1,6 @@
 
 `define del 1
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module DLPN (/* IN  */ L,
              /* OUT */ PB, Pa);

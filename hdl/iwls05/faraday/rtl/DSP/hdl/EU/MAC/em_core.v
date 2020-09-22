@@ -14,7 +14,7 @@
 
 /*--------------------------------------------------------------*/
 
-`include "../../../include/x_def.v"
+`include "x_def.v"
 
 module EM_CORE(/* IN */
 unsignX_E, unsignY_E, FracMode_E,

@@ -5,7 +5,7 @@
 
 
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module GtCLK_OR_NOT ( Z, A, B );
 input A, B;

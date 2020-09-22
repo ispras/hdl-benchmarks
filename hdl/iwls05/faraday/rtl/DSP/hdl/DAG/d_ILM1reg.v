@@ -16,7 +16,7 @@
 
 
 `define del 1
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module ILM1REG(/* IN */
 DSPCLK, T_RST, GO_C, GO_E, EX_en, Post1_E, IR, IRE,

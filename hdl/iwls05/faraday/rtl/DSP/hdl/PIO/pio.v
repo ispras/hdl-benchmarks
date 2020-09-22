@@ -1,5 +1,5 @@
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 module PIO(
 
 DSPCLK, T_RST, DMD, PIO_IN,

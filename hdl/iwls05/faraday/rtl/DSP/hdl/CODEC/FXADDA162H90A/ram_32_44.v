@@ -226,3 +226,12 @@ output [ 43 : 0 ] DO ;
     QDLHRBN DO_reg_43 ( .Q(DO[43]), .D(DI[43]), .CK(wr_lat), .RB(resetb) );
 
 endmodule // ram_latch
+
+module QDLHRB (Q, D, CK, RB);
+
+input Q;
+input D;
+input CK;
+input RB;
+
+endmodule // QDLHRB

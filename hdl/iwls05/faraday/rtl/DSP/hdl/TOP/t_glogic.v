@@ -1,4 +1,4 @@
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module Glogic(/* input */
 T_RSTn,

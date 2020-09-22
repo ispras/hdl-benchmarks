@@ -1,5 +1,5 @@
 
-`include "../../../include/x_def.v"
+`include "x_def.v"
 
 module EM_PART(/* In  */
 	       unsignX_E, unsignY_E, FracMode_E, mzero_E, msub1_E,

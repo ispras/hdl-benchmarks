@@ -5,7 +5,7 @@
 
 
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 
 module DMDbuf (I, O);
@@ -26,8 +26,21 @@ assign O = I;
 endmodule
 
 
+module GTECH_MUX2(Z, S, A, B);
 
+input Z;
+input S;
+input A;
+input B;
 
+endmodule
+
+module GTECH_NOT(Z, A);
+
+input Z;
+input A;
+
+endmodule
 
 
 

@@ -1,4 +1,4 @@
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module PSEL (/* IN */
 msub, Y,

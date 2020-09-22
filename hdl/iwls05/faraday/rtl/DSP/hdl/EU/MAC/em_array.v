@@ -1,5 +1,5 @@
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module EM_ARRAY(/* IN */
 		Cin_E, MRb_E, MRa_E,

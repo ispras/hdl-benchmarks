@@ -19,7 +19,7 @@
 
 
 `define del 1
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module MODULO1 (/* OUT */ newI, T0wrap, T1wrap, R0wrap, R1wrap,
  T0sack, T1sack, R0sack, R1sack, STEAL_IE2, wrap2,

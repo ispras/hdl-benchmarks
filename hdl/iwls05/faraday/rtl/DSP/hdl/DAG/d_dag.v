@@ -14,7 +14,7 @@
 
 /*--------------------------------------------------------------*/
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module DAG(/*------------------- Inputs ------------------------*/
  DSPCLK, T_RST, GO_E, GO_C, EX_en, STBY,

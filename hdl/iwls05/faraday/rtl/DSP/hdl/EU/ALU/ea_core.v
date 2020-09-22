@@ -26,7 +26,7 @@
 
 
 `define del 1
-`include "../../../include/x_def.v"
+`include "x_def.v"
 
 module EA_CORE (K, L, ADD, Cin, X, Y, cout, ovf_, ALU);
 

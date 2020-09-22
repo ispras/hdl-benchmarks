@@ -676,3 +676,24 @@ begin
 end
 
 endmodule    // decode 
+
+module DELB (O, I);
+
+output O;
+input I;
+
+endmodule // DELB
+
+module DELC (O, I);
+
+output O;
+input I;
+
+endmodule // DELC
+
+module DELD (O, I);
+
+output O;
+input I;
+
+endmodule // DELD

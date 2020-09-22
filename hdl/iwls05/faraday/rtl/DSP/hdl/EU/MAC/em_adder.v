@@ -1,5 +1,5 @@
 
-`include "../../include/x_def.v"
+`include "x_def.v"
 
 module EM_CLA36 (/* IN */
                  SUM_E, CRY_E, MLSB_E,
