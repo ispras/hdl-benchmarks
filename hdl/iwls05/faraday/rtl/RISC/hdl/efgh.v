@@ -82,7 +82,7 @@
 
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 module fifo_data
 
   // == lbc/fifo_data.v; version 1.3; LX-4180 release 4.0 ==

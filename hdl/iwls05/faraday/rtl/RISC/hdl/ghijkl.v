@@ -140,8 +140,8 @@ CNTDMISS_R, CNTDSTALL_R, CNTDLOAD_R, CNTDSTORE_R
 `define CI_SREQUEST 4'b0100
 `define CI_S1STBEAT 4'b1000
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 

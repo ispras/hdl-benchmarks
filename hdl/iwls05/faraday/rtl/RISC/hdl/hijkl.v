@@ -113,8 +113,8 @@ CLK, TMODE, SEN, RESET_D1_R_N, CFG_CEENBL, CEI_CEHOLD, CEI_XCPN_M,
 CEI_OP_S_R, CEI_INSTM32_S_R_N, CEI_AOP_E_R, CEI_BOP_E_R
 );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 

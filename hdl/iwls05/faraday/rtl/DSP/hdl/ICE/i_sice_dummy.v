@@ -1,4 +1,4 @@
-
+`include "x_def.v"
 
 module SICE (/* ------------ Inputs : ------------- */
              /* glob */ T_PWRONn, ICK, IMS, DSPCLK, CM_rd[23:0],

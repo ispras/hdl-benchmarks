@@ -66,8 +66,8 @@ output [31:0] REGB_S;
 input TMODE;
 input SEN;
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 /* regs and wires */

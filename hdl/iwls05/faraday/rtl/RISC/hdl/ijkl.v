@@ -111,7 +111,7 @@ CORE_CLOCK, JPT_DBM2PCSTSET_P, RESET_D1_JR_N, RESET_D1_R_N,
 RESET_PWRON_N, TMODE
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

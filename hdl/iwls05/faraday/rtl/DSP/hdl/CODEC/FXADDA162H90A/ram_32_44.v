@@ -235,3 +235,12 @@ input CK;
 input RB;
 
 endmodule // QDLHRB
+
+module QDLHRBN (Q, D, CK, RB);
+
+input Q;
+input D;
+input CK;
+input RB;
+
+endmodule // QDLHRBN

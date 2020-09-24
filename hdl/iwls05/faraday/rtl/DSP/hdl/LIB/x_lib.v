@@ -42,38 +42,97 @@ input A;
 
 endmodule
 
+module GTECH_AND_NOT( A, B, Z);
+
+input A;
+input B;
+output Z;
+
+endmodule // GTECH_AND_NOT
+
+module GTECH_MUX2( Z, A, B, S);
+
+input Z;
+input A;
+input B;
+input S;
+
+endmodule // GTECH_MUX2
+
+module GTECH_MUX4( Z, B, A, D0, D1);
+
+input Z;
+input B;
+input A;
+input D0;
+input D1;
+
+endmodule // GTECH_MUX4
+
+module GTECH_MUX8( D0, D1, D2, D3, D4);
+
+input D0;
+input D1;
+input D2;
+input D3;
+input D4;
+
+endmodule // GTECH_MUX8
+
+module GTECH_NAND2( Z, A, B);
+
+output Z;
+input A;
+input B;
+
+endmodule // GTECH_NAND2
 
 
+module XSCIOM5( IO, I, E, O, FEB);
 
+output IO;
+input I;
+input E;
+output O;
+input FEB;
 
+endmodule // XSCIOM5
 
+module UROSCAHB (IO, I, E, O, FEB, EB, S0, S1);
 
+input IO;
+input I;
+input E;
+output O;
+input FEB;
+input EB;
+input S0;
+input S1;
 
+endmodule // UROSCAHB
 
+module XFAB ( O, I, PU, PD, SMT);
 
+output O;
+input I;
+input PU;
+input PD;
+input SMT;
 
+endmodule // XFAB
 
+module XOSCAHB (IO, I, E, O, FEB, EB, S0, S1);
 
+input IO;
+input I;
+input E;
+output O;
+input FEB;
+input EB;
+input S0;
+input S1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+endmodule // XOSCAHB
 
 
 `ifdef FD_DFT

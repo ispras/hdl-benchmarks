@@ -108,7 +108,7 @@ CP0_JXCPN1STIFDMBH_M_P, CP0_JXCPN1STIFNOTDMBH_M_P,
 CP0_DIBIFNOTDMBH_M_P, TMODE, SEN
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 parameter NIBRK=`EJTAG_RTL_INSTS;
 

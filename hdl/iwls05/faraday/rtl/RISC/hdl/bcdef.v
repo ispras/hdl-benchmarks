@@ -120,7 +120,7 @@ LBC_EJUMBILICAL
 );
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

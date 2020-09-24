@@ -106,7 +106,7 @@ EJSN_UPDATECTL, EJC_DMAACC, EJC_DMAINC, JTAG_CLOCK, RESET_D1_JR_N,
 CORE_CLOCK, RESET_D1_R_N, TMODE, LBC_EJDATA, LBC_EVAL
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 input [31:0] EJSN_DATA;
 input [31:0] EJSN_ADDR;

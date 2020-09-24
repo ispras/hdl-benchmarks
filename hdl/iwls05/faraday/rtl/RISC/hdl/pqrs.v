@@ -108,7 +108,7 @@ EJC_CTL, EJ_DIS, CFG_EJTNMINUS1, CFG_EJTMLOG2, CFG_EJTBIT0M16, JTAG_CLOCK,
 RESET_D1_JR_N, TMODE
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 parameter
 TAP_EJTAG_IMPLEMENTATION = 5'b00011,

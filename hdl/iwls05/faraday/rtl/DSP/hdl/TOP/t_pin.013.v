@@ -396,3 +396,4 @@ ZFMA28SB io59 (.IO(X_EA[0]), .O(T_EA[0]), .I(EA_do[0]), .E(EA_oex), .E4(1'b0), .
 
 
 endmodule
+

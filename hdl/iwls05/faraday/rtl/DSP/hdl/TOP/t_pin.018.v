@@ -348,15 +348,3 @@ ZFA2GSB io59 (.IO(X_EA[0]), .O(T_EA[0]), .I(EA_do[0]), .E(EA_oex), .E8(1'b0), .E
 
 endmodule
 
-module UROSCAHB (IO, I, E, O, FEB, EB, S0, S1);
-
-input IO;
-input I;
-input E;
-output O;
-input FEB;
-input EB;
-input S0;
-input S1;
-
-endmodule // UROSCAHB

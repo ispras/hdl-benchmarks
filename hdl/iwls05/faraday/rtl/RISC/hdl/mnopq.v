@@ -122,8 +122,8 @@ EXT_DCREQRAM_R,
 EXCP
 );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/lmi_symbols.vh"
+`include "lxr_symbols.vh"
+`include "lmi_symbols.vh"
 
 input CLK;
 output nxtBusyState;

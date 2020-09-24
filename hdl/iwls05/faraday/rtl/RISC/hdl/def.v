@@ -140,7 +140,7 @@ reg Ack3;
 
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

@@ -1,3 +1,4 @@
+`include "x_def.v"
 
 module SPARSER (/* In  */ RSTn, ICK, nSTBx, nAufdx,
                 /* Out */ Busy, IMS,

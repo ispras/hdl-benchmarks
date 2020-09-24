@@ -113,8 +113,8 @@ DivDCycLast_P, DivDCyc0_R, DivDCyc0Go, DivDCycFirst_R,
 DivDCycLast_R, DivDCycZF_R_N, DivDCycFL_R_N, DIVxInProg, DivIsU_R
 );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 

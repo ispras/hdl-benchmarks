@@ -192,8 +192,8 @@ CE_RES_E,
 CE_SEL_E_R, CE_HALT_E_R_C);
 
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 

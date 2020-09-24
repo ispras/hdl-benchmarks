@@ -60,8 +60,8 @@ IMMED_S, SELA_S, SELBR_S, SELBI_S, ALURES_E, SELC_M, CP0_PCREL_S,
 RDBUSINM
 );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 input SYSCLK;

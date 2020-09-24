@@ -110,7 +110,7 @@ LBCSYNCMODE, RESET_DIS
 );
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 input [31:0] LBUS_DATA;
 

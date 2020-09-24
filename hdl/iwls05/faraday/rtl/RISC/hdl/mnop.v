@@ -97,7 +97,7 @@ module ejtag_dmatch_4180
 
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 (
 

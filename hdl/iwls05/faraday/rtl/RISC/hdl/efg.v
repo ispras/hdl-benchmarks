@@ -107,7 +107,7 @@ CBUS_DUC, CBUS_DRW, CBUS_DSZ, CBUS_DLINE, CBUS_DO, CBUS_DADDR_E1,
 CBUS_DDM, CBUS_IREQ, CBUS_IADDR, CBUS_IUC, CBUS_IDM, EJ_LBCUMBILICAL
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

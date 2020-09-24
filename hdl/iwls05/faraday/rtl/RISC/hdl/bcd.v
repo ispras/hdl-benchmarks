@@ -82,7 +82,7 @@
 
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 module fifo_ctl
 
 

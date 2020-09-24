@@ -118,8 +118,8 @@ MTG_A_P, MAND2PPA_A_P, M2PPA_A_P, Mult_M2_P, Mult_M3_P
 
 
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 

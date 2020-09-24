@@ -109,8 +109,8 @@ EXT_ICREQRAM_R,
 InvalPending
 );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/lmi_symbols.vh"
+`include "lxr_symbols.vh"
+`include "lmi_symbols.vh"
 
 output [`IC_CST_LAST:0] nxtCST;
 reg [`IC_CST_LAST:0] nxtCST;

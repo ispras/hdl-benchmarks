@@ -184,7 +184,7 @@ EJT_DREN_R, EJT_DCLK,
 CLK, CLK_N, CLKDELAYED, RESET_D1_R_N, RESET_DIS, CFG_EJTNMINUS1
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 `define DCLK_IDLE 2'b00
 `define DCLK_STE1 2'b01

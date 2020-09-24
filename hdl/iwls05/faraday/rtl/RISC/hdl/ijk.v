@@ -103,7 +103,7 @@ JTAG_ESCANOUT, RESET_PWRON_N, CP0_JCTRLJRST_R, EJC_PCTRON_R,
 JPT_TPC_DR, JTAG_USR, TMODE
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 parameter

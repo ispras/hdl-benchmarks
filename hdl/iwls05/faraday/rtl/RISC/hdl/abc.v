@@ -362,8 +362,8 @@ CP0_JCTRLDM_M_R, CP0_JXCPN_M_R
 
 
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 

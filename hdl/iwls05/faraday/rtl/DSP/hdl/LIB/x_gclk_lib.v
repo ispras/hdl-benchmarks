@@ -80,4 +80,3 @@ output Q, QN;
 GTECH_FJK3 STDCLK_reg (.Q(Q), .QN(QN), .CP(CP), .CD(CD),
 .SD(SD), .J(J), .K(K));
 endmodule
-

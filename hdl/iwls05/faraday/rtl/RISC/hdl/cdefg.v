@@ -104,7 +104,7 @@ EJ_DONE, SYSCLK, RESET_DIS, RESET_D1_R_N, LD_MEJDEST, LDN_CGOACK_R,
 LD_FCTLHIT, WBDISABLE, LBCSYNCMODE, LL_IDLE_LR
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 input CBUS_DREQ;

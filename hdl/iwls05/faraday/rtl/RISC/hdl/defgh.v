@@ -121,7 +121,7 @@ LUP_CDATAACK_LR, LBCSYNCMODE, RESET_D1_LR_N, RESET_DIS
 
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

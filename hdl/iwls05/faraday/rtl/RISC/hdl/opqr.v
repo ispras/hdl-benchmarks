@@ -107,7 +107,7 @@ LBC_MID, LBC_MTOGGLE, EJ_STROBE, CORE_CLOCK, RESET_D1_R_N,
 RESET_DIS
 );
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 parameter NPBRK=`EJTAG_RTL_PROCS;
 

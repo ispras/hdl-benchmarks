@@ -156,7 +156,7 @@ RESET_N, RESET_PWRON_N, EJC_ECRPRRST_R
 );
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 input SYSCLKF;
 

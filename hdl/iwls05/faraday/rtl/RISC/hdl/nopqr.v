@@ -104,7 +104,7 @@ module lmi_dcache_tag
 wrPartial, wrWord,
 CMP, RCMP_N, wrPartialHit, wrWordHit);
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

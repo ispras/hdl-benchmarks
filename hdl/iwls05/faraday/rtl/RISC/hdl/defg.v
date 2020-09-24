@@ -246,7 +246,7 @@ CEI_INSTM32_S_R_N, CEI_AOP_E_R, CFG_CEENBL, MAC_RES_E, MAC_SEL_E_R
 );
 
 
-`include "../include/lxr_symbols.vh"
+`include "lxr_symbols.vh"
 
 
 

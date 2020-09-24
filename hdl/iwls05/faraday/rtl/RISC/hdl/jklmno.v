@@ -126,8 +126,8 @@ READB_S,
 WRITEC_W_R
 );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
 
 input SYSCLK;
