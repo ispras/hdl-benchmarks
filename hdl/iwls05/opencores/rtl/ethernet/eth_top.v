@@ -969,3 +969,10 @@ eth_macstatus macstatus1
 
 
 endmodule
+
+module RAM16X1D(DPO, SPO, A0, A1, A2, A3, D, DPRA0, DPRA1, DPRA2, DPRA3, WCLK, WE);
+
+output DPO, SPO;
+input A0, A1, A2, A3, D, DPRA0, DPRA1, DPRA2, DPRA3, WCLK, WE;
+
+endmodule // RAM16X1D

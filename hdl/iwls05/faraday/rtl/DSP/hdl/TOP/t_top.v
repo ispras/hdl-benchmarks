@@ -2265,3 +2265,13 @@ dm7 (.A0(DMAinx[0]),
 
 
 endmodule
+
+module PLL( T_PLLsel, CLKI, CLKO, PDN, Sel_PLL);
+
+input T_PLLsel;
+input CLKI;
+output CLKO;
+input PDN;
+input Sel_PLL;
+
+endmodule // PLL

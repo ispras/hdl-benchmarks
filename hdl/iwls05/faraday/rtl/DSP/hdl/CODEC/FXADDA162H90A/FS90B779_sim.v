@@ -5,7 +5,8 @@
 `define DEBUG			1	       
 `define SIM_ITER	        100           
 `define SIM_ITER_128_136        200           
-`define DATA_FORMAT             1'b1          
+`define DATA_FORMAT             1'b1
+`define HALF_SYS_CLOCK_TIME 1
 //`define DEL 10
 `define test_mode               0
 // TOP MODULE
