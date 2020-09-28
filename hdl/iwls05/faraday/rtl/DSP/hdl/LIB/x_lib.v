@@ -25,6 +25,26 @@ output [13:0] O;
 assign O = I;
 endmodule
 
+module AO12JSS(O, A1, B1, B2);
+
+output O;
+input A1, B1, B2;
+
+endmodule
+
+module AO12P(O, A1, B1, B2);
+
+output O;
+input A1, B1, B2;
+
+endmodule
+
+module GTECH_BUF( Z, A);
+
+output Z;
+input A;
+
+endmodule
 
 module GTECH_MUX2(Z, S, A, B);
 
@@ -113,6 +133,106 @@ input B;
 
 endmodule // GTECH_NAND2
 
+module GTECH_NAND3( Z, A, B, C);
+
+output Z;
+input A;
+input B;
+input C;
+
+endmodule // GTECH_NAND3
+
+module GTECH_OR2( Z, A, B);
+
+output Z;
+input A;
+input B;
+
+endmodule // GTECH_OR2
+
+module GTECH_OA21(Z, C, A, B);
+
+output Z;
+input C, A, B;
+
+endmodule // GTECH_OA21
+
+module GTECH_FJK3(Q, QN, CP, CD, SD, J, K);
+
+output Q;
+input QN, CP, CD, SD, J, K;
+
+endmodule // GTECH_FJK3
+
+module BUF4(O, I);
+
+output O;
+input I;
+
+endmodule // BUF4
+
+module BUFJSS(O, I);
+
+output O;
+input I;
+
+endmodule // BUFJSS
+
+module INV2(O, I);
+
+output O;
+input I;
+
+endmodule // INV2
+
+module INVHSS(O, I);
+
+output O;
+input I;
+
+endmodule // INVHSS
+
+module OR2HSS(O, I1, I2);
+
+output O;
+input I1, I2;
+
+endmodule // OR2HSS
+
+module OR2P(O, I1, I2);
+
+output O;
+input I1, I2;
+
+endmodule // OR2P
+
+module YFA28SB(O, I, E, E2, E4, SR);
+
+output O;
+input I, E, E2, E4, SR;
+
+endmodule // YFA28SB
+
+module YFA2GSB(O, I, E, E2, E4, E8, SR);
+
+output O;
+input I, E, E2, E4, E8, SR;
+
+endmodule // YFA2GSB
+
+module YC04A(O, I, E);
+
+output O;
+input I, E;
+
+endmodule // YC04A
+
+module YC04T(O, I, E);
+
+output O;
+input I, E;
+
+endmodule // YC04T
 
 module XSCIOM5( IO, I, E, O, FEB);
 
@@ -134,6 +254,13 @@ output O;
 
 endmodule // XFMB
 
+module XCD8(O, I);
+
+input I;
+output O;
+
+endmodule // XCD8
+
 module INV1 (O, I);
 
 output O;
@@ -141,12 +268,34 @@ input I;
 
 endmodule // INV1
 
+module INVGSS (O, I);
+
+output O;
+input I;
+
+endmodule // INVGSS
+
+module AN2P (O, I1, I2);
+
+output O;
+input I1;
+input I2;
+
+endmodule // AN2P
+
 module XC (O, I);
 
 output O;
 input I;
 
 endmodule // XC
+
+module XCU8 (O, I);
+
+output O;
+input I;
+
+endmodule // XCU8
 
 module UROSCAHB (IO, I, E, O, FEB, EB, S0, S1);
 
@@ -952,6 +1101,27 @@ GtCLK_NOT U1 (.Z (O),.A (N1));
 
 endmodule
 
+module ZFMA28SB(IO, O, I, E, E4, E2, SMT, PU, PD, SR);
+
+input IO, I, E, E4, E2, SMT, PU, PD, SR;
+output O;
+
+endmodule // ZFMA28SB
+
+module ZFA2GSB(IO, O, I, E, E8, E4, E2, SMT, PU, PD, SR);
+
+input IO, I, E, E8, E4, E2, SMT, PU, PD, SR;
+output O;
+
+endmodule // ZFA2GSB
+
+module ZCC04A(IO, O, I, E);
+
+input IO, I, E;
+output O;
+
+endmodule // ZCC04A
+
 module SH208018 ( A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2, DI3,
                   DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16, DI17,
                   DI18, DI19, DI20, DI21, DI22, DI23, DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8,
@@ -979,6 +1149,20 @@ output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13,
        DO17, DO18, DO19, DO20, DO21, DO22, DO23;
 
 endmodule // SH210018
+
+module SU208018 (A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, DO0, DO1, DO2, DO3, DO4, DO5,
+                 DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16, DO17, DO18, DO19,
+                 DO20, DO21, DO22, DO23, DI0, DI1, DI2, DI3, DI4, DI5, DI6, DI7, DI8, DI9, DI10,
+                 DI11, DI12, DI13, DI14, DI15, DI16, DI17, DI18, DI19, DI20, DI21, DI22, DI23,
+                 CK, WEB, CS, OE);
+
+input A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, DO0, DO1, DO2, DO3, DO4, DO5,
+      CK, WEB, CS, OE;
+output DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16, DO17, DO18, DO19,
+       DO20, DO21, DO22, DO23, DI0, DI1, DI2, DI3, DI4, DI5, DI6, DI7, DI8, DI9, DI10,
+       DI11, DI12, DI13, DI14, DI15, DI16, DI17, DI18, DI19, DI20, DI21, DI22, DI23;
+
+endmodule // SU208018
 
 module SH304010 ( A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2,
                   DI3, DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16,
@@ -1022,6 +1206,20 @@ output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13,
 
 endmodule // SU208010
 
+module SU210018 ( A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2,
+                  DI3, DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16,
+                  DI17, DI18, DI19, DI20, DI21, DI22, DI23, DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7,
+                  DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16, DO17, DO18, DO19, DO20, DO21,
+                  DO22, DO23, OE, WEB);
+
+input A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2, DI3,
+      DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16, DI17,
+      DI18, DI19, DI20, DI21, DI22, DI23, OE, WEB;
+output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16,
+       DO17, DO18, DO19, DO20, DO21, DO22, DO23;
+
+endmodule // SU210018
+
 module SW10201A ( A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2,
                   DI3, DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16,
                   DI17, DI18, DI19, DI20, DI21, DI22, DI23, DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7,
@@ -1034,4 +1232,35 @@ input A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, D
 output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16,
        DO17, DO18, DO19, DO20, DO21, DO22, DO23;
 
-endmodule // SW 10201A
+endmodule // SW10201A
+
+module SW10200C(A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI0, DI1, DI2, DI3,
+                DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7,
+                DO8, DO9, DO10, DO11, OE, WEB);
+
+input A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI0, DI1, DI2, DI3,
+      DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, OE, WEB;
+output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11;
+
+endmodule // SW10200C
+
+
+module SU20E010(A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, DO0, DO1, DO2, DO3, DO4,
+                DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DI0, DI1, DI2, DI3,
+                DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, CK, WEB, CS, OE);
+
+input A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, DI0, DI1, DI2, DI3,
+      DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, CK, WEB, CS, OE;
+output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15;
+
+endmodule // SU20E010
+
+module SU210010(A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, DO0, DO1, DO2, DO3, DO4,
+                DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DI0, DI1, DI2, DI3,
+                DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, CK, WEB, CS, OE);
+
+input A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, DI0, DI1, DI2, DI3,
+      DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, CK, WEB, CS, OE;
+output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15;
+
+endmodule // SU210010
