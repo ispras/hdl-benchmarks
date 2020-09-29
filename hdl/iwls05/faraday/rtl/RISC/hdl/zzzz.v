@@ -84,6 +84,27 @@
 
 `include "lxr_symbols.vh"
 
+module tsyncram_512x32(CLK, CLKN, ADDR, WEN, WE, REN, RE, CSB, DATA_IN, DATA_OUT);
+
+input CLK, CLKN, ADDR, WEN, WE, REN, RE, CSB, DATA_IN;
+output DATA_OUT;
+
+endmodule // tsyncram_512x32
+
+module tsyncram_128x22(CLK, CLKN, ADDR, WEN, WE, REN, RE, CSB, DATA_IN, DATA_OUT);
+
+input CLK, CLKN, ADDR, WEN, WE, REN, RE, CSB, DATA_IN;
+output DATA_OUT;
+
+endmodule // tsyncram_128x22
+
+module tsyncram_4x32(CLK, CLKN, ADDR, WEN, WE, REN, RE, CSB, DATA_IN, DATA_OUT);
+
+input CLK, CLKN, ADDR, WEN, WE, REN, RE, CSB, DATA_IN;
+output DATA_OUT;
+
+endmodule // tsyncram_4x32
+
 module frisc
 
 
