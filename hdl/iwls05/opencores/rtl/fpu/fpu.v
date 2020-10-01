@@ -489,7 +489,7 @@ delay1  #0 ud000(clk, underflow_fmul1, mul_uf_del);
 delay1  #0 ud001(clk, underflow_fmul_r[0], uf2_del);
 delay1  #0 ud002(clk, underflow_fmul_r[1], ufb2_del);
 delay1  #0 ud003(clk, underflow_d, underflow_d_del);
-delay1  #0 ud004(clk, test.u0.u4.exp_out1_co, co_del);
+//delay1  #0 ud004(clk, test.u0.u4.exp_out1_co, co_del);
 delay1  #0 ud005(clk, underflow_fmul_r[2], ufc2_del);
 delay1 #30 ud006(clk, out_d, out_d_del);
 
@@ -502,7 +502,7 @@ delay3  #4 ud010(clk, div_opa_ldz_d, ldza_del);
 
 delay1  #49 ud012(clk, quo, quo_del);
 
-always @(test.error_event)
+/*always @(test.error_event)
    begin
 	#0.2
 	$display("muf: %b uf0: %b uf1: %b uf2: %b, tx0: %b, co: %b, out_d: %h (%h %h), ov_fasu: %b, ov_fmul: %b, fop: %h",
@@ -510,7 +510,7 @@ always @(test.error_event)
 			ov_fasu_del, ov_fmul_del, fop );
 	$display("ldza: %h, quo: %b",
 			ldza_del, quo_del);
-   end
+   end*/
 // synopsys translate_on
 
 
