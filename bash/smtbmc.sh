@@ -103,11 +103,11 @@ depth 100
 smtbmc
 
 [script]
-read -formal ${file_name}
+read -formal ${f}
 prep -top ${top_name}
 
 [files]
-${file_name}
+${f}
 EOF
           break
         fi
