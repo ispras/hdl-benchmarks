@@ -855,6 +855,7 @@ case(fix_pri_sel)
 'h1: arb_ch_sel = gnt_p1; 
 'h2: arb_ch_sel = gnt_p2; 
 'h3: arb_ch_sel = gnt_p3; 
+default: arb_ch_sel = 0;
 endcase 
 
 
