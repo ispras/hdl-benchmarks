@@ -692,7 +692,7 @@ dm0 (.addr(DMAinx[12:0]),
 .web(DMo_web),
 .clk(DSPCLK_dm0)
 );
-`else
+`endif
 
 
 `ifdef FD_PM8K
