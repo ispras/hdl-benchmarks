@@ -87,32 +87,33 @@ output Z;
 
 endmodule // GTECH_AND3
 
-module GTECH_MUX2( Z, A, B, S);
+module GTECH_MUX4( Z, B, A, D0, D1, D2, D3);
 
-input Z;
-input A;
-input B;
-input S;
-
-endmodule // GTECH_MUX2
-
-module GTECH_MUX4( Z, B, A, D0, D1);
-
-input Z;
+output Z;
 input B;
 input A;
 input D0;
 input D1;
+input D2;
+input D3;
 
 endmodule // GTECH_MUX4
 
-module GTECH_MUX8( D0, D1, D2, D3, D4);
+module GTECH_MUX8( Z, A, B, C, D0, D1, D2, D3, D4, D5, D6, D7);
 
+output Z;
+input A;
+input B;
+input C;
 input D0;
 input D1;
 input D2;
 input D3;
 input D4;
+input D5;
+input D6;
+input D7;
+
 
 endmodule // GTECH_MUX8
 
