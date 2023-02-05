@@ -356,8 +356,10 @@ assign T_PWDn = X_PWDn;
 assign T_IRQ1n = 1'b1;
 assign T_IRQ0n = 1'b1;
 `else
-pullup(T_IRQ1n);
-pullup(T_IRQ0n);
+// pullup(T_IRQ1n);
+// pullup(T_IRQ0n);
+assign T_IRQ1n = 1'b1;
+assign T_IRQ0n = 1'b1;
 `endif
 assign T_IRDn = X_IRDn;
 assign T_IWRn = X_IWRn;
