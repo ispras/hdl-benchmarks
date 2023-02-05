@@ -1,16 +1,16 @@
 `include "x_def.v"
 
 module SICE (/* ------------ Inputs : ------------- */
-             /* glob */ T_PWRONn, ICK, IMS, DSPCLK, CM_rd[23:0],
-                        DMD[15:0], T_GOICE, PM_bdry_sel,
+             /* glob */ T_PWRONn, ICK, IMS, DSPCLK, CM_rd,
+                        DMD, T_GOICE, PM_bdry_sel,
              /* clkc */ enTRAP_RL,
-             /* psq  */ GO_F, GO_E, GO_C, ICE_ST, DRA[13:0], 
-                        EXA[13:0], HALTclr_h, 
+             /* psq  */ GO_F, GO_E, GO_C, ICE_ST, DRA, 
+                        EXA, HALTclr_h, 
                         GOICEclr_h, GOICEdis,
-                        PMOVL_dsp[7:0], DMOVL_dsp[3:0],
-             /* dec  */ IR[23:0], Dummy_R, nNOP_Eg, MTIDR_Eg, 
+                        PMOVL_dsp, DMOVL_dsp,
+             /* dec  */ IR, Dummy_R, nNOP_Eg, MTIDR_Eg, 
                         SBP_R, readCM_E,
-             /* memc */ BGn, PMA[13:0], DMA[13:0], EXTC_Eg,
+             /* memc */ BGn, PMA, DMA, EXTC_Eg,
                         accPM_Eg, accDM_Eg,
              /* emc  */ eRDY, 
              /* dma  */ BRST, IACKn,
@@ -19,15 +19,15 @@ module SICE (/* ------------ Inputs : ------------- */
 `endif           
              /* ------------ Outputs : ------------ */
              /* glob */ GRST, GO_Fx, GO_Ex, GO_Cx, HALT_E,
-	     /* psq  */ IRR[13:0], IDR[23:0], GOICE, GOICE_syn,
+	     /* psq  */ IRR, IDR, GOICE, GOICE_syn,
                         ICE_wakeup,
-             /* dec  */ Upd_IR, SPC[23:0], SBP_EN, enTYP3, 
+             /* dec  */ Upd_IR, SPC, SBP_EN, enTYP3, 
    
              /* ------------ Inouts : ------------- */
              /* glob */ T_ID, IDo, IDoe,
              /* for CPI */
               EX_en, selIVER,
-              SICEmmio[15:0]);
+              SICEmmio);
 
 
 input  [15:0] DMD;	

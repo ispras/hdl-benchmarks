@@ -1,5 +1,5 @@
 
-module EEPROM ( A[17:0], IO[7:0], CEn, OEn, WEn ); 
+module EEPROM ( A, IO, CEn, OEn, WEn ); 
 
 input [17:0] A; 
 input OEn, CEn, WEn; 

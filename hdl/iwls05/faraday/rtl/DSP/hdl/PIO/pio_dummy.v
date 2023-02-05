@@ -7,7 +7,7 @@
 
 
 module PIO( 
-DSPCLK, T_RST, DMD[15:0], PIO_IN[11:0], 
+DSPCLK, T_RST, DMD, PIO_IN, 
 
 selPMASK, selPINT, selPFTYPE, selPFDATA, 
 PMASK_we, PINT_we, PFTYPE_we, PFDATA_we, 
@@ -15,7 +15,7 @@ MMR_web,
 `ifdef FD_DFT 
 /* dft */ SCAN_TEST, 
 `endif 
-PIO_INTn, PIO_DMD[15:0], PIO_EN[11:0], PIO_OUT[11:0]); 
+PIO_INTn, PIO_DMD, PIO_EN, PIO_OUT); 
 
 input DSPCLK; 
 input T_RST; 

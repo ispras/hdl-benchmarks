@@ -110,8 +110,8 @@ endmodule
 
 
 
-module PCS16x14 (PCSCLK, WE, WA[3:0], stkin[13:0], RA[3:0], RA_m[3:0],
-TopPC[13:0], nTopPC[13:0]);
+module PCS16x14 (PCSCLK, WE, WA, stkin, RA, RA_m,
+TopPC, nTopPC);
 
 output [13:0] TopPC, nTopPC;
 input [13:0] stkin;

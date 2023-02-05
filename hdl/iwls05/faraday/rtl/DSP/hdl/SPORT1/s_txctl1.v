@@ -14,7 +14,7 @@
 module TXctl1 (/* in */ RST, DSPCLK, GO_Cx, EX_en, SCLKg5, SCLKg6,
 SP_EN, SP_ENg, TFSsm, TSack, Twrap, SLEN,
 MWORD, TBUF, SLEN_ex, FSi_set,
-/*logTX[7:0],*/ MTTX_E, DMD,
+/*logTX,*/ MTTX_E, DMD,
 `ifdef FD_DFT
 SCAN_TEST,
 `endif

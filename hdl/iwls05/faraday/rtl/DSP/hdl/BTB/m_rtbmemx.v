@@ -17,7 +17,7 @@
 
 
 
-module RTBmem (clk, wa[4:0], web, cs, wd[11:0], ra[4:0], rd[11:0]
+module RTBmem (clk, wa, web, cs, wd, ra, rd
 `ifdef FD_DFT
 , SCAN_TEST);
 `else

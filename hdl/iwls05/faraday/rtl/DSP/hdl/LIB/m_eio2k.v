@@ -6,7 +6,7 @@
 
 
 
-module EIO2k (data[15:0], addr[10:0], cs_, we_, oe_); 
+module EIO2k (data, addr, cs_, we_, oe_); 
 
 inout [15:0] data; 
 input [10:0] addr; 

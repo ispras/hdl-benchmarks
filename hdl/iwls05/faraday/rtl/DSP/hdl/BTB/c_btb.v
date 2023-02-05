@@ -13,21 +13,21 @@
 
 module BTB (/* ------------ Inputs : ------------- */
  /*T_RST,*/ DSPCLK,
- PPclr_h, GO_F, GO_D, GO_E, GO_C, IFA_nx[4:0],
-IFA[13:0], EXA[13:0], Bterr_E, Taddr_E[13:0],
+ PPclr_h, GO_F, GO_D, GO_E, GO_C, IFA_nx,
+IFA, EXA, Bterr_E, Taddr_E,
  RTS_R, RTS_Ed, BR_Ed,
  Ctrue,
  TB_EN,
- BTB_rd[25:0],
- RTB_rd[11:0],
+ BTB_rd,
+ RTB_rd,
 `ifdef FD_DFT
  SCAN_TEST,
 `endif
 
 
 
- BTB_ra[4:0], BTB_wa[4:0], BTB_wd[25:0], BTB_web,
- /*RTB_wd[11:0],*/ RTB_web,
+ BTB_ra, BTB_wa, BTB_wd, BTB_web,
+ /*RTB_wd,*/ RTB_web,
  BTaken_I, RTaken_I, PTaken_R, PTaken_E);
 
 

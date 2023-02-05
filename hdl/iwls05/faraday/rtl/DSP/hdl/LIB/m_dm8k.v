@@ -7,7 +7,7 @@
 
 
 
-module DM8k (datai[15:0], datao[15:0], addr[13:0], cs, web, oe, ck); 
+module DM8k (datai, datao, addr, cs, web, oe, ck); 
 
 output [15:0] datao; 
 input [15:0] datai; 

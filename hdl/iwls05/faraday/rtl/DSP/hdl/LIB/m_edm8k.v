@@ -5,7 +5,7 @@
 
 
 
-module EDM8k (data[15:0], addr[12:0], cs_, we_, oe_); 
+module EDM8k (data, addr, cs_, we_, oe_); 
 
 inout [15:0] data; 
 input [12:0] addr; 

@@ -29,7 +29,7 @@ endmodule
 /*--------------------------------------------------------------*/
 module PPART(/* IN */ PX_1p, PX_2p, PX_1m, PX_2m,
  PX1p, PX2p, PX1m, PX2m,
- PX[17:0]);
+ PX);
 
 input PX_1p, PX_2p, PX_1m, PX_2m;
 input [17:0] PX1p;

@@ -5,7 +5,7 @@
 
 
 
-module EM8K (data[15:0], addr[12:0], cs_, we_, oe_); 
+module EM8K (data, addr, cs_, we_, oe_); 
 
 inout [15:0] data; 
 input [12:0] addr; 

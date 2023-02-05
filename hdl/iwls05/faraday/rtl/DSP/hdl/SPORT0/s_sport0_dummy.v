@@ -10,7 +10,7 @@
 module SPORT0 (/* -------- Inputs : --------- */
 /* pin */ RDx,
 /* core */ T_RST, DSPCLK, GO_Cx, EX_en, MTTX_E,
-MTRX_E, Twrap, Rwrap, DMD[15:0],
+MTRX_E, Twrap, Rwrap, DMD,
 /* memc */ SP_EN, selAUTO, selFSDIV, selSCLKDIV,
 selSCTL, selMWORD, AUTO_we, FSDIV_we,
 SCLKDIV_we, SCTL_we, MWORD_we, MMR_web,
@@ -21,11 +21,11 @@ SCLKDIV_we, SCTL_we, MWORD_we, MMR_web,
 
 
 /* pin */ TDx,
-/* core */ ISR, IST, TIREG[2:0], TMREG[1:0],
-RIREG[2:0], RMREG[1:0], PDFORCE,
+/* core */ ISR, IST, TIREG, TMREG,
+RIREG, RMREG, PDFORCE,
 /* clkc */ XTALDIS, XTALDELAY, PUCR,
-/* auto */ TSreq, RSreq, RX[15:0], TX[15:0],
-/* rego */ DMD_do[15:0],
+/* auto */ TSreq, RSreq, RX, TX,
+/* rego */ DMD_do,
 
 /* pin */ SCLKo, T_SCLK, ISCLK,
 RFSi, T_RFS, IRFS,

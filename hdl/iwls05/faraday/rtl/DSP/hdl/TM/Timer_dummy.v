@@ -7,10 +7,10 @@
 
 
 module TM(
-TMCLK, DSPCLK, T_RST, TMODE, DMD[15:0], 
+TMCLK, DSPCLK, T_RST, TMODE, DMD, 
 
 selTSR, selTCR, selTPR, TSR_we, TCR_we, 
-TPR_we, MSTAT5, TMOUT[15:0], MMR_web, 
+TPR_we, MSTAT5, TMOUT, MMR_web, 
 ICE_ST, 
 `ifdef FD_DFT 
 /* dft */ SCAN_TEST, 
