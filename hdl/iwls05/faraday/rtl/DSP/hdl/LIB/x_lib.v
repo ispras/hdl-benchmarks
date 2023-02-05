@@ -70,6 +70,14 @@ input B;
 
 endmodule
 
+module GTECH_AND2(Z, A, B);
+
+output Z;
+input A;
+input B;
+
+endmodule
+
 module GTECH_AND_NOT( A, B, Z);
 
 input A;
