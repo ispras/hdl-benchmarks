@@ -14,7 +14,7 @@
 module RXctl1 (/* in */ RST, DSPCLK, GO_Cx, EX_en, SCLKg3_, SCLKg4,
 SP_EN, RFSsm, RD, RSack, Rwrap, SLEN,
 MWORD, RBUF, FSi_set,
-/*expRX[15:0],*/ MTRX_E, DTYPE, DMD,
+/*expRX,*/ MTRX_E, DTYPE, DMD,
 `ifdef FD_DFT
 SCAN_TEST,
 `endif

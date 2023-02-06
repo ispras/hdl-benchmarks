@@ -5,12 +5,12 @@
 
 module BDMA (/* ---------- Inputs : ---------- */
               BSreqx, BSack,
-              X_MMAP, X_BMODE, T_ED[7:0], T_RSTn,
+              X_MMAP, X_BMODE, T_ED, T_RSTn,
                         GRST, PM_bdry_sel,
               ENS12, ECS12, ENS13, ECS13,
                         ENS14, ECS14, ENS0,
-              DSPCLK, CM_rd[23:0], PMDin[15:0],
-                        DMDin[15:0],
+              DSPCLK, CM_rd, PMDin,
+                        DMDin,
               BOOT, GO_STEAL,
               BCNT_we, BCTL_we, BOVL_we, BIAD_we,
                         BEAD_we, selBCNT, selBCTL, selBOVL,
@@ -23,14 +23,14 @@ module BDMA (/* ---------- Inputs : ---------- */
              /* pin  */
              /* auctl*/ BDMWR_cyc, BPMWR_cyc, BDMRD_cyc,
                         BPMRD_cyc, BSreq,
-             /* emc  */ BDMAmode, BMpage[7:0], BEAD[13:0],
-                        BWdataBUF[7:0], BDIR, BWRn,
+             /* emc  */ BDMAmode, BMpage, BEAD,
+                        BWdataBUF, BDIR, BWRn,
                         BWend,
              /* idma */ BDMA_end, BDMA_boot, BCM_cyc, BCMRD_cyc,
-                        BRdataBUF[23:0], BOVL[11:0], BM_cyc,
+                        BRdataBUF, BOVL, BM_cyc,
              /* core */ T_BDMA, BPM_cyc, BDM_cyc,
-                        BIAD[13:0], BRST,
-             /* rego */ BDMAmmio[15:0], bdmaDMD_oe, bdmaPMD_oe
+                        BIAD, BRST,
+             /* rego */ BDMAmmio, bdmaDMD_oe, bdmaPMD_oe
              );
 
 input [23:0] CM_rd;  // Global CM data bus

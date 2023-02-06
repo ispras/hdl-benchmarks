@@ -17,7 +17,7 @@
 
 
 
-module BTBmem (clk, wa[4:0], web, cs, wd[25:0], ra[4:0], rd[25:0]
+module BTBmem (clk, wa, web, cs, wd, ra, rd
 `ifdef FD_DFT
 , SCAN_TEST);
 `else

@@ -8,14 +8,14 @@ module IDMA  (/* -------- Inputs : --------- */
                          selECM, PM_bdry_sel,
               /* clkc */ STBY, Awake_h,
               /* core */ T_RSTn, GRST, DSPCLK, GO_Fx, GO_Ex, IDLE_ST_h,
-                         ICE_ST_h, ICE_ST, DMDin[15:0],PMOVL_dsp[7:0],
-                         DMOVL_dsp[3:0], CMAin[13:12], redoIF_h,
-              /* memc */ DWWAIT[2:0], DRWAIT[2:0], DCTL_wei, DOVL_wei,
+                         ICE_ST_h, ICE_ST, DMDin,PMOVL_dsp,
+                         DMOVL_dsp, CMAin, redoIF_h,
+              /* memc */ DWWAIT, DRWAIT, DCTL_wei, DOVL_wei,
                          MMR_web,
               /* auto */ STEAL, DSack, DSreqx,
-              /* sice */ IDR[23:0], accCM_R, accCM_E, wrCM_R,
+              /* sice */ IDR, accCM_R, accCM_E, wrCM_R,
               /* bdma */ BDMA_end, BDMA_boot, BCMRD_cyc,
-                         BOVL[11:0], BRdataBUF[23:0], BCM_cyc,
+                         BOVL, BRdataBUF, BCM_cyc,
                          BSreqx, BM_cyc, ECYC,
 `ifdef FD_DFT
              /* dft  */ SCAN_TEST,
@@ -24,9 +24,9 @@ module IDMA  (/* -------- Inputs : --------- */
 
               /* -------- Outputs : -------- */
               /* pin  */ IACKn,
-              /* core */ BOOT, DCTL[14:0], DOVL[11:0],
-              /* memc */ PMOVL[3:0], DMOVL[3:0],
-              /* rego */ idmaDMD_oe, idmaPMD_oe, idmaPMD_do[15:0],
+              /* core */ BOOT, DCTL, DOVL,
+              /* memc */ PMOVL, DMOVL,
+              /* rego */ idmaDMD_oe, idmaPMD_oe, idmaPMD_do,
               /* auto */ DSreq, DWRcyc, PWRcyc, DRDcyc, PRDcyc,
               /* CM   */ CM_cs, CM_web, CM_oe,
                          CMo_cs0, CMo_cs1, CMo_cs2, CMo_cs3, CMo_cs4,
@@ -35,8 +35,8 @@ module IDMA  (/* -------- Inputs : --------- */
                          CMo_oe4, CMo_oe5, CMo_oe6, CMo_oe7,
 
               /* -------- Inouts : -------- */
-              /* pin  */ T_IAD[15:0], IAD_do[15:0], IAD_oe,
-              /* core */ PMDin[15:0], CM_rd[23:0], CM_wd[23:0],
+              /* pin  */ T_IAD, IAD_do, IAD_oe,
+              /* core */ PMDin, CM_rd, CM_wd,
               /* bdma */ GO_STEAL);
 
 input [23:0] BRdataBUF;

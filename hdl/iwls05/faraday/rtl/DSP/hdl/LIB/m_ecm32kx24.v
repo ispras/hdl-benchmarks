@@ -6,7 +6,7 @@
 
 
 
-module ECM32kx24 (data[23:0], addr[14:0], cs_, we_, oe_); 
+module ECM32kx24 (data, addr, cs_, we_, oe_); 
 
 inout [23:0] data; 
 input [14:0] addr; 

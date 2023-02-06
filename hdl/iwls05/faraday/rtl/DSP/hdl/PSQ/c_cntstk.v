@@ -108,7 +108,7 @@ endmodule
 
 
 
-module CNTS4x14 (CNSCLK, WE, WA[1:0], stkin[13:0], RA[1:0], TopCNT[13:0]);
+module CNTS4x14 (CNSCLK, WE, WA, stkin, RA, TopCNT);
 
 output [13:0] TopCNT;
 input [13:0] stkin;

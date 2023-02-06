@@ -7,7 +7,7 @@
 
 
 
-module CM8k (datai[23:0], datao[23:0], addr[13:0], cs, web, oe, ck); 
+module CM8k (datai, datao, addr, cs, web, oe, ck); 
 
 output [23:0] datao; 
 input [23:0] datai; 

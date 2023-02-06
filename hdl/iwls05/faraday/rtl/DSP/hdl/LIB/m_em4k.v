@@ -5,7 +5,7 @@
 
 
 
-module EM4K (data[15:0], addr[11:0], cs_, we_, oe_); 
+module EM4K (data, addr, cs_, we_, oe_); 
 
 inout [15:0] data; 
 input [11:0] addr; 

@@ -12,8 +12,8 @@
 /* ---------------------------------------------------------------------- */
 
 module PINs (/* Input pins : (21) : */
-/* glb */ X_RSTn, X_ICE_RSTn, X_BMODE, X_TMODE[1:0],
-X_PLLsel[3:0], X_MMAP, X_GOICE,
+/* glb */ X_RSTn, X_ICE_RSTn, X_BMODE, X_TMODE,
+X_PLLsel, X_MMAP, X_GOICE,
 
 /* core */ X_PWDn, X_IRQ2n, /*X_IRQ1n, X_IRQ0n,*/
 X_IRQL1n, X_IRQE1n, X_IRQE0n, X_BRn,
@@ -23,8 +23,8 @@ X_IRQL1n, X_IRQE1n, X_IRQE0n, X_BRn,
 
 /* -------- Outputs : (27) -------- */
 /* glb */ X_CLKO, X_PWDACK,
-/* memc */ X_BGn, /*X_BGHn, X_EA[14:0],*/
-X_EA_U[14:8], X_EA[7:0], X_PMSn,
+/* memc */ X_BGn, /*X_BGHn, X_EA,*/
+X_EA_U, X_EA, X_PMSn,
 X_DMSn, X_IOSn, /*X_CMSn,*/ X_RDn, X_WRn,
 X_ECMSn, X_ECMA_EN,
 /* spt */ X_TD0, X_TD1,
@@ -33,38 +33,38 @@ X_ECMSn, X_ECMA_EN,
 
 /* -------- Inouts : (51) -------- */
 /* xtal */ X_CLKI, XTAL,
-/* emem */ X_ED[15:0],
+/* emem */ X_ED,
 /* spt */ X_SCLK0, X_RFS0, X_TFS0,
 X_SCLK1, X_RFS1, X_TFS1,
-/* idma */ X_IAD[15:0],
-/* pio */ X_PIO[7:0],
+/* idma */ X_IAD,
+/* pio */ X_PIO,
 /* sice */ X_ID,
 
 /* ------------------------------------ */
 /* Internal signals : */
 /* ------------------------------------ */
 /* outputs : */
-/* glb */ T_RSTn, T_CLKI, T_BMODE, T_PLLsel[3:0],
-T_TMODE, T_ED[15:0], T_EA[7:0],
+/* glb */ T_RSTn, T_CLKI, T_BMODE, T_PLLsel,
+T_TMODE, T_ED, T_EA,
 T_selECM, T_GOICE,
 /* core */ T_PWDn, T_IRQ2n, T_IRQ1n, T_IRQ0n,
 T_IRQL1n, T_IRQE1n, T_IRQE0n, T_BRn,
 /* spt */ T_RD0, T_RD1, T_SCLK0, T_SCLK1, T_RFS0,
 T_TFS0, T_RFS1, T_TFS1,
-/* idma */ T_IRDn, T_IWRn, T_ISn, T_IAL, T_IAD[15:0],
-/* pio */ T_PIOin[11:0],
+/* idma */ T_IRDn, T_IWRn, T_ISn, T_IAL, T_IAD,
+/* pio */ T_PIOin,
 /* sice */ T_ICK, T_IMS, T_ID,
 
 /* inputs : */
 /* clkc */ CLKO, PWDACK, XTALoffn,
-/* emc */ BGn, EA_oe, EA_do[14:0], PMSn, DMSn, BMSn,
-IOSn, CMSn, RDn, WRn, ED_oe, ED_do[15:0],
+/* emc */ BGn, EA_oe, EA_do, PMSn, DMSn, BMSn,
+IOSn, CMSn, RDn, WRn, ED_oe, ED_do,
 ECMSn, ECMA_EN,
 /* spt */ TD0, TD1, SCLK0, ISCLK0, SCLK1, ISCLK1,
 RFS0, IRFS0, TFS0, ITFS0, RFS1, IRFS1,
 TFS1, ITFS1,
-/* idma */ IACKn, IAD_oe, IAD_do[15:0], T_MMAP,
-/* pio */ PIO_oe[11:0], PIO_out[11:0],
+/* idma */ IACKn, IAD_oe, IAD_do, T_MMAP,
+/* pio */ PIO_oe, PIO_out,
 /* sice */ IDo, IDoe,
 /* bdma */ BMcs, BDIR);
 

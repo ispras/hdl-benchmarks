@@ -3,14 +3,14 @@
 
 module EM_PART(/* In  */
 	       unsignX_E, unsignY_E, FracMode_E, mzero_E, msub1_E,
-	       rnd_E, MXOP_E[15:0], MYOP_E[15:0], MR2di[7:0],
-	       MR1di[15:0], MR0di[15:0], msub2_E, msub3_E, msub4_E,
+	       rnd_E, MXOP_E, MYOP_E, MR2di,
+	       MR1di, MR0di, msub2_E, msub3_E, msub4_E,
 	       msub5_E, msub6_E, msub7_E, msub8_E, MACop_E,
 
 	       /* Out */
-	       Cin_E[16:0], MRb_E[39:14], MRa_E[15:0], P0_E[17:0],
-	       P1_E[19:2],  P2_E[21:4],  P3_E[23:6],  P4_E[25:8],
-	       P5_E[27:10], P6_E[29:12], P7_E[31:14], P8_E[32:16]);
+	       Cin_E, MRb_E, MRa_E, P0_E,
+	       P1_E,  P2_E,  P3_E,  P4_E,
+	       P5_E, P6_E, P7_E, P8_E);
 
 
 /*----------------------------------------------------------------*/
@@ -147,7 +147,7 @@ endmodule
 
 /*--------------------------------------------------------------*/
 module PSEL (/* IN */
-             msub, Y[2:0],
+             msub, Y,
              /* OUT */
              P_1p, P_2p, P_1m, P_2m);
 
@@ -175,7 +175,7 @@ endmodule
 /*--------------------------------------------------------------*/
 module PPART(/* IN  */ PX_1p, PX_2p, PX_1m, PX_2m,
 	     /* IN  */ PX1p,  PX2p,  PX1m,  PX2m,
-	     /* OUT */ PX[17:0]);
+	     /* OUT */ PX);
 
 input PX_1p, PX_2p, PX_1m, PX_2m;
 input [17:0] PX1p;

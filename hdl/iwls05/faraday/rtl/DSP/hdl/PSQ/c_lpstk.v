@@ -110,7 +110,7 @@ endmodule
 
 
 
-module LPS4x22 (LPSCLK, WE, WA[1:0], stkin[21:0], RA[1:0], TopLP[21:0]);
+module LPS4x22 (LPSCLK, WE, WA, stkin, RA, TopLP);
 
 output [21:0] TopLP;
 input [21:0] stkin;

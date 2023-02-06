@@ -2,7 +2,7 @@
 
 module SPARSER (/* In  */ RSTn, ICK, nSTBx, nAufdx,
                 /* Out */ Busy, IMS,
-                /* IO  */ PPD[7:0], ID);
+                /* IO  */ PPD, ID);
 
 //verisureoff
 

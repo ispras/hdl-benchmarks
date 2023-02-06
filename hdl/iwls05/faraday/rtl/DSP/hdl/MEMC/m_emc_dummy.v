@@ -9,34 +9,34 @@
 
 
 module EMC (/* ------------ Inputs : ------------- */
-/* glob */ DSPCLK, T_RST, PPclr_h, DMD[15:0], selECM,
+/* glob */ DSPCLK, T_RST, PPclr_h, DMD, selECM,
 PM_bdry_sel,
-/* psq */ GO_Fx, GO_Ex, GO_EC, ECYC, BGn, PMOVL_dsp[7:0],
-DMOVL_dsp[3:0], Dummy_E,
-/* dec */ IOaddr[10:0], Double_E, accCM_E, rdCM_E,
-/* memc */ DMA[13:0], PMA[13:0], WSCR_we, WSCR_ext_we, EXTC_Eg,
+/* psq */ GO_Fx, GO_Ex, GO_EC, ECYC, BGn, PMOVL_dsp,
+DMOVL_dsp, Dummy_E,
+/* dec */ IOaddr, Double_E, accCM_E, rdCM_E,
+/* memc */ DMA, PMA, WSCR_we, WSCR_ext_we, EXTC_Eg,
 Pread_Ei, Pwrite_Ei, Dread_Ei, Dwrite_Ei,
 IOcmd_Ei, IOread_Ei, IOwrite_Ei, MMR_web,
-CMAin[13:0], ECMAWAITi[1:0],
-/* sice */ IDR[23:0],
-/* pins */ T_EA[7:0], T_ED[15:0],
-/* glob */ PMDin[15:0],
-/* CM */ CM_rd[23:0],
-/* bdma */ BDMAmode, BMpage[7:0],
-BDIR, BWdataBUF[7:0], BWRn, BEAD[13:0],
+CMAin, ECMAWAITi,
+/* sice */ IDR,
+/* pins */ T_EA, T_ED,
+/* glob */ PMDin,
+/* CM */ CM_rd,
+/* bdma */ BDMAmode, BMpage,
+BDIR, BWdataBUF, BWRn, BEAD,
 BSreq, BSack, BWend,
 `ifdef FD_DFT
 /* dft */ SCAN_TEST,
 `endif
 
 /* ------------ Outputs : ------------ */
-/* pin */ EA_oe, EA_do[14:0], ED_oe, ED_do[15:0],
+/* pin */ EA_oe, EA_do, ED_oe, ED_do,
 PMSn, DMSn, IOSn, BMSn,
 CMSn, RDn, WRn, ECMSn, ECMA_EN,
 /* psq */ eRDY,
-/* rego */ WSCR[14:0], WSCR_ext[7:0], emcDMD_oe, emcDMD_do[15:0],
-emcPMD_oe, emcPMD_do[15:0],
-CM_rdata[23:0],
+/* rego */ WSCR, WSCR_ext, emcDMD_oe, emcDMD_do,
+emcPMD_oe, emcPMD_do,
+CM_rdata,
 /* bdma */ ENS12, ECS12, ENS13, ECS13, ENS14,
 ECS14, ENS0, BMcs
 );

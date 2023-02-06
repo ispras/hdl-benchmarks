@@ -70,6 +70,14 @@ input B;
 
 endmodule
 
+module GTECH_AND2(Z, A, B);
+
+output Z;
+input A;
+input B;
+
+endmodule
+
 module GTECH_AND_NOT( A, B, Z);
 
 input A;
@@ -87,32 +95,33 @@ output Z;
 
 endmodule // GTECH_AND3
 
-module GTECH_MUX2( Z, A, B, S);
+module GTECH_MUX4( Z, B, A, D0, D1, D2, D3);
 
-input Z;
-input A;
-input B;
-input S;
-
-endmodule // GTECH_MUX2
-
-module GTECH_MUX4( Z, B, A, D0, D1);
-
-input Z;
+output Z;
 input B;
 input A;
 input D0;
 input D1;
+input D2;
+input D3;
 
 endmodule // GTECH_MUX4
 
-module GTECH_MUX8( D0, D1, D2, D3, D4);
+module GTECH_MUX8( Z, A, B, C, D0, D1, D2, D3, D4, D5, D6, D7);
 
+output Z;
+input A;
+input B;
+input C;
 input D0;
 input D1;
 input D2;
 input D3;
 input D4;
+input D5;
+input D6;
+input D7;
+
 
 endmodule // GTECH_MUX8
 
@@ -1220,17 +1229,16 @@ output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13,
 
 endmodule // SU210018
 
-module SW10201A ( A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2,
+module SW10201A ( A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI0, DI1, DI2,
                   DI3, DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16,
-                  DI17, DI18, DI19, DI20, DI21, DI22, DI23, DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7,
+                  DI17, DI18, DI19, DI20, DI21, DI22, DI23, DI24, DI25, DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7,
                   DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16, DO17, DO18, DO19, DO20, DO21,
-                  DO22, DO23, OE, WEB);
+                  DO22, DO23, DO24, DO25, OE, WEB);
 
-input A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, CK, CS, DI0, DI1, DI2, DI3,
-      DI4, DI5, DI6, DI7, DI8, DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16, DI17,
-      DI18, DI19, DI20, DI21, DI22, DI23, OE, WEB;
+input A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI0, DI1, DI2, DI3, DI4, DI5, DI6, DI7, DI8, 
+      DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16, DI17, DI18, DI19, DI20, DI21, DI22, DI23, DI24, DI25, OE, WEB;
 output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16,
-       DO17, DO18, DO19, DO20, DO21, DO22, DO23;
+       DO17, DO18, DO19, DO20, DO21, DO22, DO23, DO24, DO25;
 
 endmodule // SW10201A
 

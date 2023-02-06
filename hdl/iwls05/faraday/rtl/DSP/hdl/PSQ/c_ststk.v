@@ -109,7 +109,7 @@ endmodule
 
 
 
-module STS7x23 (STSCLK, WE, WA[2:0], stkin[24:0], RA[2:0], TopST[24:0]);
+module STS7x23 (STSCLK, WE, WA, stkin, RA, TopST);
 
 output [24:0] TopST;
 input [24:0] stkin;

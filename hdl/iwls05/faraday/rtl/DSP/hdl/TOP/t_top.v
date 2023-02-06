@@ -65,14 +65,7 @@ X_SCLK1,
 X_RFS1,
 X_TFS1,
 X_IAD,
-X_PIO[7],
-X_PIO[6],
-X_PIO[5],
-X_PIO[4],
-X_PIO[3],
-X_PIO[2],
-X_PIO[1],
-X_PIO[0],
+X_PIO,
 X_ID
 );
 
@@ -699,7 +692,7 @@ dm0 (.addr(DMAinx[12:0]),
 .web(DMo_web),
 .clk(DSPCLK_dm0)
 );
-`else
+`endif
 
 
 `ifdef FD_PM8K

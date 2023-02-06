@@ -130,7 +130,7 @@ endmodule
 
 
 
-module cpen4 (e[1:0], nz, w[3:0]);
+module cpen4 (e, nz, w);
 
 output [1:0] e;
 output nz;
@@ -144,7 +144,7 @@ endmodule
 
 
 
-module cpen2 (nzero, sc, in[1:0]);
+module cpen2 (nzero, sc, in);
 
 output nzero,
 sc;
