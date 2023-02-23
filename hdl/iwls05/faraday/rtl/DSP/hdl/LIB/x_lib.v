@@ -44,6 +44,8 @@ module GTECH_BUF( Z, A);
 output Z;
 input A;
 
+buf    U(Z,A);
+
 endmodule
 
 module GTECH_MUX2(Z, S, A, B);
@@ -53,12 +55,16 @@ input S;
 input A;
 input B;
 
+assign Z = S ? B : A;
+
 endmodule
 
 module GTECH_NOT(Z, A);
 
 output Z;
 input A;
+
+not    U(Z,A);
 
 endmodule
 
@@ -67,6 +73,8 @@ module GTECH_NOR2(Z, A, B);
 output Z;
 input A;
 input B;
+
+nor    U(Z,A,B);
 
 endmodule
 
@@ -84,6 +92,9 @@ input A;
 input B;
 output Z;
 
+not    U1(BN,B);
+and    U2(Z,A,BN);
+
 endmodule // GTECH_AND_NOT
 
 module GTECH_AND3( Z, A, B, C);
@@ -92,6 +103,8 @@ input A;
 input B;
 input C;
 output Z;
+
+and    U(Z,A,B,C);
 
 endmodule // GTECH_AND3
 
@@ -104,6 +117,18 @@ input D0;
 input D1;
 input D2;
 input D3;
+
+reg Z_int;
+always @ (*)
+begin
+      case ( A | B )
+      2'b00 : Z_int <= D0;
+      2'b01 : Z_int <= D1;
+      2'b10 : Z_int <= D2;
+      2'b11 : Z_int <= D3;
+      endcase
+end
+assign Z = Z_int;
 
 endmodule // GTECH_MUX4
 
@@ -122,6 +147,11 @@ input D5;
 input D6;
 input D7;
 
+reg D1_int, D2_int, Z_int;
+GTECH_MUX4 M4_1 (D1_int, D0, D1, D2, D3, A, B);
+GTECH_MUX4 M4_2 (D2_int, D4, D5, D6, D7, A, B);
+GTECH_MUX2 M2 (Z_int, D1_int, D2_int, C);
+assign Z = Z_int;
 
 endmodule // GTECH_MUX8
 
@@ -132,6 +162,10 @@ input S;
 input A;
 input B;
 
+reg Z_int;
+GTECH_MUX2 M2 (Z_int, A, B, S);
+assign Z = ~ Z_int;
+
 endmodule // GTECH_MUXI2
 
 module GTECH_NAND2( Z, A, B);
@@ -139,6 +173,8 @@ module GTECH_NAND2( Z, A, B);
 output Z;
 input A;
 input B;
+
+nand    U(Z,A,B);
 
 endmodule // GTECH_NAND2
 
@@ -149,6 +185,8 @@ input A;
 input B;
 input C;
 
+nand    U(Z,A,B,C);
+
 endmodule // GTECH_NAND3
 
 module GTECH_OR2( Z, A, B);
@@ -157,12 +195,17 @@ output Z;
 input A;
 input B;
 
+or    U(Z,A,B);
+
 endmodule // GTECH_OR2
 
 module GTECH_OA21(Z, C, A, B);
 
 output Z;
 input C, A, B;
+
+or     U1(AB,A,B);
+and    U2(Z,AB,C);
 
 endmodule // GTECH_OA21
 
