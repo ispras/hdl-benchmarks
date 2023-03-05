@@ -601,7 +601,7 @@ dsp (
 `ifdef FD_EVB
 `else
 PLL pll (
-.T_PLLsel(T_PLLsel[3:0]),
+.T_PLLsel(T_PLLsel[0]),
 .CLKI(T_CLKI_OSC),
 .CLKO(T_CLKI_PLL),
 .PDN(XTALoffn),
