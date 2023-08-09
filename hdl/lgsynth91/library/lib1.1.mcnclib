@@ -1,0 +1,117 @@
+
+
+
+
+cell begin nor1
+   area=1.000000
+   equation="y = !a"
+   transistors=2
+   max_loads=999.000000
+   primitive=INV
+   termlist
+      a
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      y ; 
+
+cell end nor1
+
+cell begin nor2
+   area=2.000000
+   equation="y = !(a + b)"
+   transistors=4
+   max_loads=999.000000
+   primitive=NOR2
+   termlist
+      a
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      b
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      y ; 
+
+cell end nor2
+
+cell begin nor3
+   area=3.000000
+   equation="y = !(a + b + c)"
+   transistors=6
+   max_loads=999.000000
+   primitive=NOR3
+   termlist
+      a
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      b
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      c
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      y ; 
+
+cell end nor3
+
+cell begin nor4
+   area=4.000000
+   equation="y = !(a + b + c + d)"
+   transistors=8
+   max_loads=999.000000
+   primitive=NOR4
+   termlist
+      a
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      b
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      c
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      d
+      unateness=INV
+      loads=1.000000
+      nominal_rise_delay=1.000000
+      nominal_rise_fan=0.200000
+      nominal_fall_delay=1.000000
+      nominal_fall_fan=0.200000 ;
+      y ; 
+
+cell end nor4

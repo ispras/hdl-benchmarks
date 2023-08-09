@@ -1,0 +1,48 @@
+
+.model misex2.pla ;
+
+	.date 910103090750 ;	# January 3 1991, 09:07.50
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u v w x y ;
+	.outputs z a1 b1 c1 d1 e1 f1 g1 h1 i1 j1 k1 l1 m1 n1 o1 p1 q1 ;
+
+	[3] = a' b' c' r' s t' ;
+	[4] = a b c j' k l m ;
+	[8] = a b' c ;
+	[9] = a c j' k l m' ;
+	[11] = a' b s t' u' v' w' ;
+	[12] = a' b' c l' m n' o' p' q' u v' w' ;
+	[13] = a' b s t' u' v w ;
+	[14] = a' b' c l' m n' o' p q u v' w' ;
+	[15] = a' b s t' u' v w' ;
+	[16] = a' b' c l' m n' o' p q' u v' w' ;
+	[17] = a b c' j y' ;
+	[18] = a b j k' y' ;
+	[19] = a' b' c j x y' ;
+	[20] = a' b' j t x y' ;
+	[21] = a' b' c' j r t' y' ;
+	[24] = a c' ;
+	[25] = a b k' ;
+	[26] = b' c' t ;
+	z = a' b' c' j' k r' s' t' ;
+	a1 = a' b' c' j k r' s' t' ;
+	b1 = a' b' c' j k' r' s' t' ;
+	c1 = ( [3]' [4]' )' ;
+	d1 = a b c j' k l' m' ;
+	e1 = a b c j k ;
+	f1 = a b c j' k l ;
+	g1 = ( [8]' [9]' )' ;
+	h1 = a' b' c d' e f' g' h' i' r s' t ;
+	i1 = ( [11]' [12]' )' ;
+	j1 = ( [13]' [14]' )' ;
+	k1 = ( [15]' [16]' )' ;
+	l1 = ( [17]' [18]' [19]' [20]' [21]' )' ;
+	m1 = a' b' c' r t' ;
+	n1 = a' b' c' j' k' r' s' t' ;
+	o1 = ( [24]' [25]' [26]' )' ;
+	p1 = a' b ;
+	q1 = a' b' c ;
+
+
+.endmodel misex2.pla ;
+

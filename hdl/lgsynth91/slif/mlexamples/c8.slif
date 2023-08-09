@@ -1,0 +1,67 @@
+
+.model c8 ;
+
+	.date 910103085109 ;	# January 3 1991, 08:51.09
+
+	.inputs  a b c d e f g h i j k l m n o p q r s u v w x y z a0 b0 c0 ;
+	.outputs d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 ;
+	.net c0 l0 ;
+
+	d0 = u' c0' + i' c0 + i' u' ;
+	e0 = v' c0' + j' c0 + j' v' ;
+	f0 = w' c0' + k' c0 + k' w' ;
+	g0 = x' c0' + l' c0 + l' x' ;
+	h0 = y' c0' + m' c0 + m' y' ;
+	i0 = z' c0' + n' c0 + n' z' ;
+	j0 = a0' c0' + o' c0 + o' a0' ;
+	k0 = b0' c0' + p' c0 + p' b0' ;
+	m0 = i q' s' + q r u + q r' u' + i q' a + q' s a + i r' s' u' + i r u a 
+		+ i r s' u + r s u a + i r' u' a + r' s u' a ;
+	n0 = u1' v1' + q' v1' + v v1' ;
+	o0 = q' z1' + r y1' z1' + u y1' z1' + w1' w z1' + r w z1' + u w z1' + 
+		w1' y1' z1' ;
+	p0 = q' d2' + r c2' d2' + u c2' d2' + a2' x d2' + r x d2' + u x d2' + 
+		a2' c2' d2' ;
+	q0 = q' h2' + r g2' h2' + u g2' h2' + e2' y h2' + r y h2' + u y h2' + 
+		e2' g2' h2' ;
+	r0 = q' n2' + j2' m2' n2' + r m2' n2' + k2' z n2' + j2' z n2' + r z n2' 
+		+ k2' m2' n2' ;
+	s0 = q' t2' + p2' s2' t2' + r s2' t2' + q2' a0 t2' + p2' a0 t2' + r a0 
+		t2' + q2' s2' t2' ;
+	t0 = q' z2' + v2' y2' z2' + r y2' z2' + w2' b0 z2' + v2' b0 z2' + r b0 
+		z2' + w2' y2' z2' ;
+	u0 = q r c0 + q r' c3' d3' ;
+	u1 = r + u ;
+	v1 = j' q' s' + b' q' s + q r' u' v ;
+	w1 = w v' ;
+	y1 = r + u + v ;
+	z1 = k' q' s' + c' q' s + c' k' q' ;
+	a2 = x w' v' ;
+	c2 = r + u + v + w ;
+	d2 = l' q' s' + d' q' s + d' l' q' ;
+	e2 = y x' w' v' ;
+	g2 = i2' + r + u + v ;
+	h2 = m' q' s' + e' q' s + e' m' q' ;
+	j2 = v' u' ;
+	k2 = z y' x' w' ;
+	m2 = o2' + r + u + v ;
+	n2 = n' q' s' + f' q' s + f' n' q' ;
+	p2 = w' v' u' ;
+	q2 = a0 z' y' x' ;
+	s2 = u2' + r + u + v ;
+	t2 = o' q' s' + g' q' s + g' o' q' ;
+	v2 = x' w' v' u' ;
+	w2 = b0 a0' z' y' ;
+	y2 = b3' + a3' + r + u ;
+	z2 = p' q' s' + h' q' s + h' p' q' ;
+	c3 = u' + v + w + x ;
+	d3 = y + z + a0 + b0 ;
+	i2 = x' w' ;
+	o2 = y' x' w' ;
+	u2 = z' y' x' w' ;
+	a3 = w' v' ;
+	b3 = a0' z' y' x' ;
+
+
+.endmodel c8 ;
+

@@ -1,0 +1,48 @@
+.model CM42
+.inputs a b c d
+.outputs e f g h i j k l m n
+.names a b o0 e
+1-- 1
+-1- 1
+--0 1
+.names a b o0 f
+0-- 1
+-1- 1
+--0 1
+.names a b o0 g
+1-- 1
+-0- 1
+--0 1
+.names a b o0 h
+0-- 1
+-0- 1
+--0 1
+.names a b p0 i
+1-- 1
+-1- 1
+--0 1
+.names a b p0 j
+0-- 1
+-1- 1
+--0 1
+.names a b p0 k
+1-- 1
+-0- 1
+--0 1
+.names a b p0 l
+0-- 1
+-0- 1
+--0 1
+.names a n0 m
+1- 1
+-0 1
+.names a n0 n
+0- 1
+-0 1
+.names b c d n0
+001 1
+.names c d o0
+00 1
+.names o0 d p0
+00 1
+.end

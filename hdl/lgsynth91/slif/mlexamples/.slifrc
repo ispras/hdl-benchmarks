@@ -1,0 +1,4 @@
+r pcler8
+cd sim
+s2 >pcler8.sim
+q

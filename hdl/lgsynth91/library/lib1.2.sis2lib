@@ -1,0 +1,208 @@
+# --- COMBINATIONAL GATES
+
+GATE	"inv:comb"		16	O=!1A; 
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"buffer:comb"		16	O=1A; 
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"nor2:comb"		24	O=!(1A+1B);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"nor3:comb"		32	O=!(1A+1B+1C);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"nor4:comb"		40	O=!(1A+1B+1C+1D);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"nand2:comb"		24	O=!(1A*1B);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"nand3:comb"		32	O=!(1A*1B*1C);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"nand4:comb"		40	O=!(1A*1B*1C*1D);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"and2:comb"		32	O2=1A*1B;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"and3:comb"		40	O2=1A*1B*1C;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"and4:comb"		48	O2=1A*1B*1C*1D;	 
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"or2:comb"		32	O1=1A+1B;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"or3:comb"		40	O1=1A+1B+1C;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"or4:comb"		48	O=1A+1B+1C+1D;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"aoi22:comb"		40	O=!(1A*1B+2C*2D);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"aoi12:comb"		32	O=!(1A+2B*2C);
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"oai22:comb"	40	O=!((1A+1B)*(2C+2D));
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"oai12:comb"		32	O=!(1A*(2B+2C));
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"ao22:comb"		56	O=1A*1B+2C*2D;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"ao222:comb"		72	O=1A*1B+2C*2D+3E*3F;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"ao2222:comb"		96	O=1A*1B+2C*2D+3E*3F+4G*4H; 
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"ao33:comb"		64	O=1A*1B*1C+2D*2E*2F;
+PIN	* NONINV 1 999 1 .2 1 .2
+
+GATE	"xor:comb"		40	O=1A*!1B+!1A*1B;
+PIN	* UNKNOWN 1 999 1 .2 1 .2
+
+GATE	"xor:comb"		40	O=!(1A*1B+!1A*!1B);
+PIN	* UNKNOWN 1 999 1 .2 1 .2
+
+GATE	"xorbar:comb"		48	O=1A*1B+!1A*!1B;
+PIN	* UNKNOWN 1 999 1 .2 1 .2
+
+GATE	"xorbar:comb"		48	O=!(1A*!1B+!1A*1B);
+PIN	* UNKNOWN 1 999 1 .2 1 .2
+
+GATE	"invand:comb"		32	O=!1A*2B;			
+PIN	1A INV 1 999 1 .2 1 .2
+PIN	2B NONINV 1 999 1 .2 1 .2
+
+GATE	"invor:comb"		32	O=1A+!2B;
+PIN	1A NONINV 1 999 1 .2 1 .2
+PIN	2B INV 1 999 1 .2 1 .2
+
+GATE	"mux2:comb"		48	O=1D1*3SEL+2D2*!3SEL;		
+PIN	1D1 NONINV 1 999 1 .2 1 .2
+PIN	2D2 NONINV 1 999 1 .2 1 .2
+PIN	3SEL UNKNOWN 1 999 1 .2 1 .2
+
+GATE 	"const1:comb"		8	O=CONST1;
+GATE 	"const0:comb"		8	O=CONST0;
+
+# --- TRANSPARENT LATCHES
+
+# Clocked Latch - ah
+LATCH	"dff:ah"	80	Q=D;
+PIN	D	NONINV 1 999 1 .2 1 .2
+SEQ	Q ANY ACTIVE_HIGH
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# Clocked Latch - al
+LATCH	"dff:al"	80	Q=D;
+PIN	D	NONINV 1 999 1 .2 1 .2
+SEQ	Q ANY ACTIVE_LOW
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# --- EDGE_TRIGGERED FLIP FLOPS
+
+# D-FF
+LATCH	"dff:re"	88	Q=D; 
+PIN	D	NONINV 1 999 1 .2 1 .2
+SEQ	Q ANY RISING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# D-FF with ENABLE
+LATCH	"dff_enable:re"	100	Q=D*E+Q_NEXT*!E;
+PIN	D	NONINV 1 999 1 .2 1 .2
+PIN	E	UNKNOWN 1 999 1 .2 1 .2
+SEQ	Q Q_NEXT RISING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# D-FF with synchronous reset
+LATCH	"dff_reset:re"	104	Q=D*!R;
+PIN	D	NONINV 1 999 1 .2 1 .2
+PIN	R	INV 1 999 1 .2 1 .2
+SEQ	Q D RISING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# D-FF with synchronous set/reset
+LATCH	"dff_set_reset:re"	136	Q=(D+S)*!R;
+PIN	D	NONINV 1 999 1 .2 1 .2
+PIN	S	NONINV 1 999 1 .2 1 .2
+PIN	R	INV 1 999 1 .2 1 .2
+SEQ	Q D RISING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# JK-FF
+LATCH	"jkff:re"	100	Q=(J*!Q_NEXT)+(!K*Q_NEXT);
+PIN	J	NONINV 1 999 1 .2 1 .2
+PIN	K	INV 1 999 1 .2 1 .2
+SEQ	Q Q_NEXT RISING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT  * .2 .2
+
+# Toggle-FF
+LATCH	"tff:re"	90	Q=(T*!Q_NEXT)+(!T*Q_NEXT);
+PIN	T	UNKNOWN 1 999 1 .2 1 .2
+SEQ	Q Q_NEXT RISING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT  * .2 .2
+
+# D-FF
+LATCH	"dff:fe"	88	Q=D; 
+PIN	D	NONINV 1 999 1 .2 1 .2
+SEQ	Q ANY FALLING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# D-FF with ENABLE
+LATCH	"dff_enable:fe"	100	Q=D*E+Q_NEXT*!E;
+PIN	D	NONINV 1 999 1 .2 1 .2
+PIN	E	UNKNOWN 1 999 1 .2 1 .2
+SEQ	Q Q_NEXT FALLING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# D-FF with synchronous reset
+LATCH	"dff_reset:fe"	104	Q=D*!R;
+PIN	D	NONINV 1 999 1 .2 1 .2
+PIN	R	INV 1 999 1 .2 1 .2
+SEQ	Q D FALLING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# D-FF with synchronous set/reset
+LATCH	"dff_set_reset:fe"	136	Q=(D+S)*!R;
+PIN	D	NONINV 1 999 1 .2 1 .2
+PIN	S	NONINV 1 999 1 .2 1 .2
+PIN	R	INV 1 999 1 .2 1 .2
+SEQ	Q D FALLING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT * .2 .2
+
+# JK-FF
+LATCH	"jkff:fe"	100	Q=(J*!Q_NEXT)+(!K*Q_NEXT);
+PIN	J	NONINV 1 999 1 .2 1 .2
+PIN	K	INV 1 999 1 .2 1 .2
+SEQ	Q Q_NEXT FALLING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT  * .2 .2
+
+# Toggle-FF
+LATCH	"tff:fe"	90	Q=(T*!Q_NEXT)+(!T*Q_NEXT);
+PIN	T	UNKNOWN 1 999 1 .2 1 .2
+SEQ	Q Q_NEXT FALLING_EDGE
+CONTROL 	CLK 1 999 1 .2 1 .2
+CONSTRAINT  * .2 .2
+

@@ -1,0 +1,39 @@
+.model source.pla
+.inputs cAin0 cselaluSUM caluZout cBIprocessedMSB cAIprocessedMSB cALUmsb \
+cDST1s<0> cDST1s<1> cDST1s<2> cDST1s<3> cDST1s<4>
+.outputs pCONDvalid aluVout
+.names cAin0 cselaluSUM caluZout cBIprocessedMSB cAIprocessedMSB cALUmsb \
+cDST1s<0> cDST1s<1> cDST1s<2> cDST1s<3> cDST1s<4> pCONDvalid
+-0---101--0 1
+--1---011-0 1
+-0----01-10 1
+--0---10-00 1
+--1---0-100 1
+------10000 1
+1-----11001 1
+---01101--0 1
+---10101--0 1
+---00-01-10 1
+-00--01--00 1
+-0---01-000 1
+00----01001 1
+0-1---01001 1
+-1000-1--00 1
+-1-11-01-00 1
+-1-00-1-000 1
+0--0110100- 1
+0--1010100- 1
+0--00-01001 1
+-1001011--0 1
+-1010011--0 1
+-1-010110-0 1
+-1-100110-0 1
+-1011-11-10 1
+-1-11-11010 1
+-100101100- 1
+-101001100- 1
+-1011-11001 1
+.names cselaluSUM cBIprocessedMSB cAIprocessedMSB cALUmsb aluVout
+1001 1
+1110 1
+.end

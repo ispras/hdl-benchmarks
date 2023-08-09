@@ -1,0 +1,29 @@
+
+.i 1 
+.o 1 
+.p 24 
+.s 12
+0 st0 st0 0
+1 st0 st1 0
+0 st1 st1 0
+1 st1 st2 0
+0 st2 st2 0
+1 st2 st3 0
+0 st3 st3 0
+1 st3 st4 0
+0 st4 st4 0
+1 st4 st5 0
+0 st5 st5 0
+1 st5 st6 0
+0 st6 st6 0
+1 st6 st7 0
+0 st7 st7 0
+1 st7 st8 0
+0 st8 st8 0
+1 st8 st9 0
+0 st9 st9 0
+1 st9 st10 0
+0 st10 st10 0
+1 st10 st11 0
+0 st11 st11 0
+1 st11 st0 0

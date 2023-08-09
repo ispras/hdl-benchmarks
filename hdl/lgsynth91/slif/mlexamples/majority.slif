@@ -1,0 +1,14 @@
+
+.model majority ;
+
+	.date 910103085353 ;	# January 3 1991, 08:53.53
+
+	.inputs  a b c d e ;
+	.outputs f ;
+
+	f = ( d' c' e' + d' b' e' + d' a' e' + d' b' c' + d' a' c' + d' a' b' 
+		)' ;
+
+
+.endmodel majority ;
+

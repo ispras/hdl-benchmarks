@@ -1,0 +1,275 @@
+.model example2.blif
+.inputs a b d e f g h i j k l m n o p q r s t u v w x y z a0 b0 c0 d0 e0 f0 \
+g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0 y0 z0 a1 b1 c1 d1 e1 f1 \
+g1 h1 i1 j1 k1 l1 m1 n1 o1 p1 q1 r1 s1 t1 u1 v1 w1 x1 y1 z1 a2 b2 c2 d2 e2 f2 \
+g2 h2
+.outputs i2 j2 k2 l2 m2 n2 o2 p2 q2 r2 s2 t2 u2 v2 w2 x2 y2 z2 a3 b3 c3 d3 e3 \
+f3 g3 h3 i3 j3 k3 l3 m3 n3 o3 p3 q3 r3 s3 t3 u3 v3 w3 x3 y3 z3 a4 b4 c4 d4 e4 \
+f4 g4 h4 i4 j4 k4 l4 m4 n4 o4 p4 q4 r4 s4 t4 u4 v4
+.names h p0 b1 m2 i2
+10-- 1
+-11- 1
+-1-1 1
+.names b a2 b2 c2 c10 j2
+0--0- 1
+0---0 1
+000-- 1
+.names h10 p1 y1 j10 k10 k2
+11-1- 1
+1-1-1 1
+.names b1 b l10 l2
+101 1
+.names b c10 h10 m2
+--1 1
+01- 1
+.names y p0 o1 n2
+10- 1
+-11 1
+.names z p0 n1 o2
+10- 1
+-11 1
+.names a0 p0 m1 p2
+10- 1
+-11 1
+.names b0 p0 l1 q2
+10- 1
+-11 1
+.names c0 p0 k1 r2
+10- 1
+-11 1
+.names d0 p0 j1 s2
+10- 1
+-11 1
+.names e0 p0 i1 t2
+10- 1
+-11 1
+.names f0 p0 h1 u2
+10- 1
+-11 1
+.names g0 p0 g1 v2
+10- 1
+-11 1
+.names h0 p0 a1 w2
+10- 1
+-11 1
+.names i0 p0 z0 x2
+10- 1
+-11 1
+.names j0 p0 y0 y2
+10- 1
+-11 1
+.names k0 p0 x0 z2
+10- 1
+-11 1
+.names l0 p0 w0 a3
+10- 1
+-11 1
+.names m0 p0 v0 b3
+10- 1
+-11 1
+.names n0 p0 u0 c3
+10- 1
+-11 1
+.names o0 p0 t0 d3
+10- 1
+-11 1
+.names q0 g10 k2 d10 e3
+-1-- 1
+0-10 1
+.names a b g f c2 f3
+0---- 1
+-1--- 1
+--100 1
+.names b g f s0 c2 c10 g3
+01000- 1
+0100-0 1
+.names g z9 h3
+11 1
+.names t0 z9 i3
+11 1
+.names u0 z9 j3
+11 1
+.names v0 z9 k3
+11 1
+.names w0 z9 l3
+11 1
+.names x0 z9 m3
+11 1
+.names y0 z9 n3
+11 1
+.names z0 z9 o3
+11 1
+.names g a1 z9 a10 b10 r0 p3
+-11--- 1
+1--111 1
+.names b1 y9 q3
+11 1
+.names c1 y9 r3
+11 1
+.names d1 y9 s3
+11 1
+.names e1 y9 t3
+11 1
+.names f1 y9 u3
+11 1
+.names g1 y9 v3
+11 1
+.names h1 y9 w3
+11 1
+.names i1 y9 x3
+11 1
+.names j1 y9 y3
+11 1
+.names k1 y9 z3
+11 1
+.names l1 y9 a4
+11 1
+.names m1 y9 b4
+11 1
+.names n1 y9 c4
+11 1
+.names j10 o10 p10 i b q c2 e10 d10 d2 q1 y1 q0 p1 d4
+--11---------- 1
+-1---1-------- 1
+1---0-1-0-1--- 1
+1---0-1-0--1-- 1
+1---0-1111--11 1
+1---0-1111--00 1
+.names j r r1 o10 p10 q10 e4
+-1-1-- 1
+1---1- 1
+--1--1 1
+.names k s s1 o10 p10 q10 f4
+-1-1-- 1
+1---1- 1
+--1--1 1
+.names l t t1 o10 p10 q10 g4
+-1-1-- 1
+1---1- 1
+--1--1 1
+.names m u u1 o10 p10 q10 h4
+-1-1-- 1
+1---1- 1
+--1--1 1
+.names n v v1 o10 p10 q10 i4
+-1-1-- 1
+1---1- 1
+--1--1 1
+.names o w w1 o10 p10 q10 j4
+-1-1-- 1
+1---1- 1
+--1--1 1
+.names p x o10 p10 k4
+-11- 1
+1--1 1
+.names d2 g2 h2 a10 v10 l4
+01111 1
+.names b a a2 b2 c2 c10 d10 z1 d2 e10 q0 y1 m4
+1----------- 1
+-0---------- 1
+--00-------- 1
+----1101---- 1
+----111-0--- 1
+----111--0-- 1
+--0-1-1---11 1
+--0-1-1---00 1
+.names a b d e n4
+1001 1
+.names n10 h10 b a2 c2 p0 r0 f j10 k10 u10 o4
+--0-0--0--- 1
+--0-0----1- 1
+11-1-01---- 1
+--0-010-1-- 1
+11-1--0---0 1
+.names b m10 a2 l10 p0 c2 n10 p4
+01----- 1
+0-11--- 1
+0-1-10- 1
+0-1-1-1 1
+.names b m10 l10 d10 e10 d2 k10 c2 j10 q4
+01------- 1
+0-1------ 1
+0--10-1-- 1
+0--1-01-- 1
+0--10--11 1
+0--1-0-11 1
+.names h10 d2 i10 e10 j10 k10 r4
+111--- 1
+11-11- 1
+11-1-1 1
+.names e2 f10 g10 s4
+--1 1
+11- 1
+.names f2 f10 t4
+11 1
+.names g2 f10 b l10 f a2 u4
+11---- 1
+--0110 1
+.names h2 f10 v4
+11 1
+.names z9 a10 b10 r0 y9
+1--- 1
+-111 1
+.names a10 r0 h2 r10 z9
+1011 1
+1000 1
+.names h10 f c10 a10
+100 1
+.names h2 s10 b10
+01 1
+10 1
+.names a2 b2 c10
+0- 1
+-0 1
+.names e2 h2 d10
+01 1
+10 1
+.names g2 h2 v10 e10
+001 1
+.names i10 h10 f10
+11 1
+.names n10 b c2 t10 g10
+100- 1
+10-1 1
+.names b c2 h10
+01 1
+.names c10 d10 f j10 k10 i10
+0-0-- 1
+-0-1- 1
+-0--1 1
+.names a2 b2 j10
+10 1
+.names a2 b2 k10
+01 1
+.names b2 c2 l10
+10 1
+.names t10 n10 f c2 m10
+11-- 1
+--00 1
+.names f b2 n10
+11 1
+.names l2 f a2 o10
+110 1
+.names b1 b l10 f a2 p10
+00110 1
+.names d10 b c2 j10 q10
+0011 1
+.names e2 f2 v10 r10
+--1 1
+11- 1
+.names g2 r10 s10
+11 1
+00 1
+.names r0 a2 u10 t10
+011 1
+.names s0 x1 d2 e2 f2 g2 h2 u10
+0------ 1
+-1----- 1
+--0---- 1
+---0--- 1
+----0-- 1
+-----1- 1
+------0 1
+.names e2 f2 v10
+00 1
+.end

@@ -1,0 +1,121 @@
+
+.model traffic ;
+
+	.date 910104120448 ;	# January 4 1991, 12:04.48
+
+	.inputs  CLK RESET run[0:0] Cars[0:0] TimeoutL[0:0] TimeoutS[0:0] ;
+	.outputs DN HiWayL[0:0] HiWayL[1:1] HiWayL[2:2] FarmL[0:0] FarmL[1:1] 
+	         FarmL[2:2] StartTimer[0:0] ;
+
+	.call traffic_1 traffic_1 (state[0:0], state[1:1], state[2:2], 
+	         Cars[0:0], TimeoutL[0:0], TimeoutS[0:0], run[0:0] ;;M1[0:0], 
+	         M1[1:1], M1[2:2], X1[0:0], X2[0:0], X3[0:0], X4[0:0], X5[0:0], 
+	         T9[0:0] ) ;
+	.call FF_SR_EN1 FF_SR_EN (newST[0:0]_in, newST[0:0]_en, CLK, 0, RESET ;;
+	         StartTimer[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (0, newFL[2:2]_en, CLK, 0, RESET ;;FarmL[2:2] ) ;
+	.call FF_SR_EN3 FF_SR_EN (newFL[1:1]_in, newFL[1:1]_en, CLK, 0, RESET ;;
+	         FarmL[1:1] ) ;
+	.call FF_SR_EN4 FF_SR_EN (newFL[0:0]_in, newFL[0:0]_en, CLK, 0, RESET ;;
+	         FarmL[0:0] ) ;
+	.call FF_SR_EN5 FF_SR_EN (0, newHL[2:2]_en, CLK, 0, RESET ;;HiWayL[2:2] ) ;
+	.call FF_SR_EN6 FF_SR_EN (newHL[1:1]_in, newHL[1:1]_en, CLK, 0, RESET ;;
+	         HiWayL[1:1] ) ;
+	.call FF_SR_EN7 FF_SR_EN (newHL[0:0]_in, newHL[0:0]_en, CLK, 0, RESET ;;
+	         HiWayL[0:0] ) ;
+	.call FF_SR_EN8 FF_SR_EN (state[2:2]_in, state[2:2]_en, CLK, 0, RESET ;;
+	         state[2:2] ) ;
+	.call FF_SR_EN9 FF_SR_EN (state[1:1]_in, state[1:1]_en, CLK, 0, RESET ;;
+	         state[1:1] ) ;
+	.call FF_SR_EN10 FF_SR_EN (state[0:0]_in, state[0:0]_en, CLK, 0, RESET ;;
+	         state[0:0] ) ;
+	.call TcL1_1[1] FF_EN (DN', 1, CLK, RESET ;;RQ1_2' ) ;
+	.call Sw1_3 FF_EN (Sw1_3_i, 1, CLK, RESET ;;Sr1_3' ) ;
+	.call FF_EN.1_3_La FF_EN (AK1_3, 1, CLK, RESET ;;Lak1_3 ) ;
+	newST[0:0]_en = RQ1_2 + RQ2_3 ;
+	newST[0:0]_in = X1[0:0] RQ2_3 ;
+	newFL[2:2]_en = RQ1_2 + RQ2_3 ;
+	newFL[1:1]_en = RQ1_2 + RQ2_3 ;
+	newFL[1:1]_in = X2[0:0] RQ2_3 ;
+	newFL[0:0]_en = RQ1_2 + RQ2_3 ;
+	newFL[0:0]_in = X3[0:0] RQ2_3 ;
+	newHL[2:2]_en = RQ1_2 + RQ2_3 ;
+	newHL[1:1]_en = RQ1_2 + RQ2_3 ;
+	newHL[1:1]_in = X4[0:0] RQ2_3 ;
+	newHL[0:0]_en = RQ1_2 + RQ2_3 ;
+	newHL[0:0]_in = X5[0:0] RQ2_3 ;
+	state[2:2]_en = RQ1_2 + RQ2_3 ;
+	state[2:2]_in = M1[2:2] RQ2_3 ;
+	state[1:1]_en = RQ1_2 + RQ2_3 ;
+	state[1:1]_in = M1[1:1] RQ2_3 ;
+	state[0:0]_en = RQ1_2 + RQ2_3 ;
+	state[0:0]_in = M1[0:0] RQ2_3 ;
+	RQ1_3 = Sr1_3 RQ1_2' ;
+	Sw1_3_i = DN' ( Sr1_3' + Sr1_3 RQ1_2' AK1_3 ) ;
+	AK1_3 = T9[0:0] RQ2_3 ;
+	RQ2_3 = RQ1_3 Lak1_3' ;
+	DN = Sr1_3' + Sr1_3 RQ1_2' AK1_3 ;
+
+
+.endmodel traffic ;
+
+
+.model traffic_1 ;
+
+	.date 910104120448 ;	# January 4 1991, 12:04.48
+
+	.inputs  state[0:0] state[1:1] state[2:2] Cars[0:0] TimeoutL[0:0] 
+	         TimeoutS[0:0] run[0:0] ;
+	.outputs M1[0:0] M1[1:1] M1[2:2] X1[0:0] X2[0:0] X3[0:0] X4[0:0] 
+	         X5[0:0] T9[0:0] ;
+	.net 0 M1[2:2] ;
+	.net run[0:0]' T9[0:0] ;
+
+	X1[0:0] = V000_T1_0_2[0:0] X8[0:0] + V100_T1_0_2[0:0] TimeoutS[0:0] + 
+		V010_T1_0_2[0:0] T4[0:0] + V110_T1_0_2[0:0] TimeoutS[0:0] ;
+	X2[0:0] = V000_T1_0_2[0:0] + V100_T1_0_2[0:0] + V110_T1_0_2[0:0] ;
+	X3[0:0] = V000_T1_0_2[0:0] + V100_T1_0_2[0:0] + V010_T1_0_2[0:0] ;
+	X4[0:0] = V100_T1_0_2[0:0] + V010_T1_0_2[0:0] + V110_T1_0_2[0:0] ;
+	X5[0:0] = V000_T1_0_2[0:0] + V010_T1_0_2[0:0] + V110_T1_0_2[0:0] ;
+	X8[0:0] = Cars[0:0] TimeoutL[0:0] ;
+	V110_T1_0_2[0:0] = state[0:0] state[1:1] state[2:2]' ;
+	V010_T1_0_2[0:0] = state[0:0]' state[1:1] state[2:2]' ;
+	V100_T1_0_2[0:0] = state[0:0] state[1:1]' state[2:2]' ;
+	V000_T1_0_2[0:0] = state[0:0]' state[1:1]' state[2:2]' ;
+	M1[0:0] = V000_T1_0_2[0:0] X8[0:0] + V100_T1_0_2[0:0] TimeoutS[0:0]' + 
+		V010_T1_0_2[0:0] T4[0:0] + V110_T1_0_2[0:0] TimeoutS[0:0]' ;
+	M1[1:1] = V100_T1_0_2[0:0] + V010_T1_0_2[0:0] + V110_T1_0_2[0:0] 
+		TimeoutS[0:0]' ;
+	T4[0:0] = Cars[0:0]' + TimeoutL[0:0] ;
+
+
+.endmodel traffic_1 ;
+
+
+.model FF_SR_EN ;
+
+	.date 910104120448 ;	# January 4 1991, 12:04.48
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	latchin = set + res' ( din den + dout den' ) ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_SR_EN ;
+
+
+.model FF_EN ;
+
+	.date 910104120448 ;	# January 4 1991, 12:04.48
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	latchin = dout res' den' + din res' den ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_EN ;
+

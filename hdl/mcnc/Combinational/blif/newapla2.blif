@@ -1,0 +1,19 @@
+.model source.pla
+.inputs DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid
+.outputs writetoSHA1 writetoSHB1 writetoPSW1 writetoCWP1 pwritetoTB \
+pwritetoSWP pwritetoPC
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid writetoSHA1
+110011 1
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid writetoSHB1
+010011 1
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid writetoPSW1
+111011 1
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid writetoCWP1
+011011 1
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid pwritetoTB
+101011 1
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid pwritetoSWP
+001011 1
+.names DST2s<0> DST2s<1> DST2s<2> DST2s<3> DST2s<4> DSTvalid pwritetoPC
+100011 1
+.end

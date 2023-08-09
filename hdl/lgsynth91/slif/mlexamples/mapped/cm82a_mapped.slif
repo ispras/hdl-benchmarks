@@ -1,0 +1,28 @@
+
+.model CM82 ;
+
+	.date 910108215000 ;	# January 8 1991, 21:50.00
+
+	.inputs  a b c d e ;
+	.outputs f g h ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_2310_s CMOS3_2310 (b, c ;;s ) ;
+	.call CMOS3_2310_r CMOS3_2310 (d, e ;;r ) ;
+	.call CMOS3_2310_g CMOS3_2310 (r, o' ;;g ) ;
+	.call CMOS3_2310_f CMOS3_2310 (a, s ;;f ) ;
+	.call CMOS3_1230_h CMOS3_1230 (zz_7', zz_6', zz_5' ;;h ) ;
+	.call CMOS3_1130_o CMOS3_1130 (zz_11, zz_10, zz_9 ;;o' ) ;
+	.call CMOS3_1120_zz_9 CMOS3_1120 (b, a ;;zz_9 ) ;
+	.call CMOS3_1120_zz_11 CMOS3_1120 (c, b ;;zz_11 ) ;
+	.call CMOS3_1120_zz_10 CMOS3_1120 (c, a ;;zz_10 ) ;
+	.call CMOS3_1220_zz_7 CMOS3_1220 (d, e ;;zz_7' ) ;
+	.call CMOS3_1220_zz_6 CMOS3_1220 (e, o' ;;zz_6' ) ;
+	.call CMOS3_1220_zz_5 CMOS3_1220 (d, o' ;;zz_5' ) ;
+
+.endmodel CM82 ;
+

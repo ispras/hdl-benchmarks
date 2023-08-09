@@ -1,0 +1,19 @@
+
+.i 1 
+.o 2 
+.p 14 
+.s 7
+0 START state6 00
+0 state2 state5 00
+0 state3 state5 00
+0 state4 state6 00
+0 state5 START 10
+0 state6 START 01
+0 state7 state5 00
+1 state6 state2 01
+1 state5 state2 10
+1 state4 state6 10
+1 state7 state6 10
+1 START state4 00
+1 state2 state3 00
+1 state3 state7 00

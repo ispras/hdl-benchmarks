@@ -1,0 +1,396 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Printed 5/4/90                                                  1
+
+
+
+
+
+
+SLIF(5CAD)      Stanford CAD Tools User's Manual       SLIF(5CAD)
+
+
+
+NAME
+     SLIF - Structure Logic Intermediate Format
+
+DESCRIPTION
+     SLIF is a concise format used to describe a structural view
+     of logic circuits and their interconnections.  It is an
+     hierarchical, non-procedural notation that is described in
+     ASCII files.
+
+SYNTAX
+     SLIF is a free-format notation; i.e., statements may begin
+     at any point on a line, and whitespace may be used freely.
+     Each statement must be terminated by a semicolon. Statements
+     may appear in any order within the description of a model,
+     with the restriction that inputs, outputs, inouts and types
+     must be declared before they are used and that the last
+     statement in the model description must be the .endmodel
+     statement (see the COMMANDS section below for more details).
+
+     Identifiers are character strings restricted to alphanumeric
+     characters and the following symbols:
+                    : ^ % [ ] _ . / ~ -
+     Variables, model names and instance names are all identif-
+     iers.  There are two special variables, "1" and "0", which
+     represent the logic values TRUE and FALSE, respectively.
+
+     Commands in SLIF are command words preceded by a period
+     (e.g., .library). and are summarized in the next section.
+     Any declaration that does not begin with a command is a
+     logic statement and has the form
+                    var = expression ;
+     where var is an identifier and expression is an expression
+     in Boolean form, consisting of variables and operators. The
+     operators +, * and ' represent Boolean addition, multiplica-
+     tion and inversion (i.e., AND, OR and NOT), respectively;
+     the `*' operator is optional and may be omitted.  e.g.,
+               out = reset' + clock * (in0' + (in1 * in2)) ;
+     is equivalent to
+               out = reset' + clock (in0' + in1 in2) ;
+     An expression, like a literal, may be complemented using the
+     prime (i.e., apostrophe) symbol; e.g.,
+                    x = (a (b + c)' + d)' ;
+
+     By default, the expression represents the ON SET of the
+     variable var. Two symbols, ' and ~ are appended to var to
+     indicate the expression is its OFF SET or DON'T CARE SET
+     respectively.  The ~ can also be used in the expression to
+     indicate the DON'T CARE SET of a variable.  Used alone, ~
+     means the global DON'T CARE SET of the surrounding model.
+
+
+
+
+
+
+Printed 5/4/90            5 August 1988                         1
+
+
+
+
+
+
+SLIF(5CAD)      Stanford CAD Tools User's Manual       SLIF(5CAD)
+
+
+
+     There are two built-in functions. The arguments of these
+     functions must be variables (not expressions).  The built-in
+     functions are:
+
+     D(a,c)
+          A flow-through generic D-type latch, which has input a
+          and is clocked by c.
+
+     T(a,b)
+          A three-state gate whose output is a when b is true, or
+          high-impedance otherwise.
+
+     The use of a built-in function is indicated by the `@' sym-
+     bol; e.g.,
+                    out1 = @ D (sig1, clock') ;
+     In addition to built-in functions, library functions may be
+     called; these are defined as a separate model (see .library
+     below).
+
+     Comments are identified by the symbol `#'.  This symbol
+     indicates that the remainder of the line is to be ignored by
+     any program reading the SLIF description.
+
+COMMANDS
+     .attribute type_name variable_name parameters ;
+          Specifies parameters for one variable (or one
+          instance), named variable_name. The parameters consist
+          of a sequence of strings, integers and floats, defined
+          in the type type_name. If the type used allows for a
+          variable number of parameters, the corresponding list
+          has to be enclosed in parentheses "(" and ")".
+
+     .call instance_name model_name ( inputs ; inouts ; outputs ) ;
+          Creates an instance instance_name of the SLIF model
+          model_name, which may be described in the same file or
+          in a file specified by a .search statement.  The called
+          model may be a library element.  Variables are linked
+          according to the parameter listing; inputs, inouts and
+          outputs are lists of variables separated by commas,
+          which must agree in number and order with those in the
+          called model.
+
+     .date time_stamp ;
+          Specify the time of the last modification (optional).
+          The time_stamp format is YYMMDDHHmmSS where YY is the
+          year, MM the month, DD the day, HH the hour, mm the
+          minutes, and SS the seconds. Each element of the
+          time_stamp is a two-digit number.
+
+     .endmodel name ;
+          Terminates the model. Each model has to be terminated
+          by this declaration. There may be more than one model
+
+
+
+Printed 5/4/90            5 August 1988                         2
+
+
+
+
+
+
+SLIF(5CAD)      Stanford CAD Tools User's Manual       SLIF(5CAD)
+
+
+
+          within the same file.
+
+     .global_attribute type_name parameters ;
+          Specifies parameters valid for an entire model.
+
+     .include file_name ;
+          Indicates that the information in file_name will be
+          read as if it was part of the current file.
+
+     .inouts var1 var2 ... varn ;
+          Declares variables var1 ... varn as global bidirec-
+          tional ``inouts.''
+
+     .inputs var1 var2 ... varn ;
+          Declares variables var1 ... varn as global inputs.
+
+     .library ;
+          Identifies the model as a library element.
+
+     .model name ;
+          Indicates the beginning of a new model and assigns it
+          name name. Each model has to be declared using this
+          declaration.  Multiple models may be described in a
+          single file.
+
+     .net var1 var2 ... varn ;
+          Lists variables that are connected together.  The net
+          will be named after one of the variables.  If there are
+          global inputs, outputs or inouts then the net will be
+          inherit one of their names; otherwise it will be named
+          after var1.
+
+     .outputs var1 var2 ... varn ;
+          Declares variables var1 ... varn as global outputs.
+
+     .search file_name ;
+          Indicates that models included in file_name may be
+          used, if they are needed.  Users are encouraged to use
+          the absolute path to the file.
+
+     .type type_name spec1 spec2 ... specn ;
+          Declares a type type_name as a sequence of specifica-
+          tions spec1 spec2 ... specn where spec is any of %d %f
+          %s (integer, float or string). A number may be used in
+          front of a spec, to tell how many specs are to be used.
+          A spec or set of specs can also be included inside
+          parentheses, to indicate a variable number of that spec
+          (or set of specs ).  A type is used whenever a .attri-
+          bute or .global_attribute command is used. The type
+          defines all the information that follows the type name.
+          For .attribute, a string HAS to be inserted between the
+          type name and the typed information. This string
+
+
+
+Printed 5/4/90            5 August 1988                         3
+
+
+
+
+
+
+SLIF(5CAD)      Stanford CAD Tools User's Manual       SLIF(5CAD)
+
+
+
+          indicates the variable (or instance) to which the
+          attribute will be attached.
+
+EXAMPLE
+     fileA:
+
+      .model main ;                        # definition of model "main"
+      .inputs a b c d ;                    # inputs list
+      .outputs w x y z ;                   # outputs list
+      .inouts t ;                          # inouts list
+      .include fileC ;                     # fileC will be inserted here
+      .search fileB ;                      # fileB may contain needed
+                                           #  models
+      .type FORMAT1 2 %s %d ;              # type definition
+      .type FORMAT2 (%s (%f));
+      .attribute FORMAT2 r (a (2.0));      # annotation of signal "r"
+      .attribute FORMAT1 inst0 z b 5 ;     # annotation of instance "inst0"
+      q = a b ;   r = a b' + a' b ;        # logic equations
+      x = r'  ;   s = a' b' c'    ;
+      y = d + d' (s + c q) ;
+      w = @ T (y, enable) ;                # tristate latch
+      .net enable clock r ;                # all 3 signals are the same net
+      .call inst0 OR2 (b, c; ; z) ;        # OR-gate described externally
+      .call inst1 d_latch (c, clock; ;w);  # D-latch described externally
+      .endmodel main ;                     # end definition (model "main")
+
+     fileB:
+
+      #   Externally-called models.  Calling model must have
+      #   argument lists of correct size and in correct order.
+      .model d_latch ;
+      .inputs a b ;
+      .outputs t ;
+      t = @ D(a,b) ;               # built-in function
+      .endmodel d_latch ;
+
+      .model OR2;
+      .inputs x y;
+      .outputs z;
+      .library;                    # identifies as a library element
+      .endmodel OR2;
+
+     fileC:
+
+      #      Information that will be inserted in model main
+
+      .type FORMAT1 2 %s %d ;      # types may be redefined if all
+      .type FORMAT2 (%s (%f));     # definitions are consistent
+
+      .global_attribute FORMAT1 cap low 5;
+      .global_attribute FORMAT2 (min_res (3.0) typ_res (5.0 0.2));
+      .global_attribute FORMAT2 (delay (0.1 0.3 1.0 2.1));
+
+
+
+Printed 5/4/90            5 August 1988                         4
+
+
+
+
+
+
+SLIF(5CAD)      Stanford CAD Tools User's Manual       SLIF(5CAD)
+
+
+
+COMMENTS
+     Problems, comments and suggestions should be addressed to
+     mailhot@Pegasus.Stanford.EDU.
+
+SEE ALSO
+     sliftools(5CAD), janus(1CAD)
+
+
+AUTHORS
+     Giovanni DeMicheli
+     Philip Johnson
+     David Ku
+     Frederic Mailhot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Printed 5/4/90            5 August 1988                         5
+
+
+

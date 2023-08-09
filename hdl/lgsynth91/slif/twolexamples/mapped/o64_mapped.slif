@@ -1,0 +1,77 @@
+
+.model o64.pla ;
+
+	.date 910108195824 ;	# January 8 1991, 19:58.24
+
+	.inputs  v0 v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13 v14 v15 v16 v17 
+	         v18 v19 v20 v21 v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 
+	         v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 v45 v46 v47 v48 v49 
+	         v50 v51 v52 v53 v54 v55 v56 v57 v58 v59 v60 v61 v62 v63 v64 v65 
+	         v66 v67 v68 v69 v70 v71 v72 v73 v74 v75 v76 v77 v78 v79 v80 v81 
+	         v82 v83 v84 v85 v86 v87 v88 v89 v90 v91 v92 v93 v94 v95 v96 v97 
+	         v98 v99 v100 v101 v102 v103 v104 v105 v106 v107 v108 v109 v110 
+	         v111 v112 v113 v114 v115 v116 v117 v118 v119 v120 v121 v122 
+	         v123 v124 v125 v126 v127 v128 v129 ;
+	.outputs v130.0 ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_v130.0 CMOS3_1220 (zz_32', zz_0' ;;v130.0 ) ;
+	.call CMOS3_1680_zz_0 CMOS3_1680 (zz_25', zz_18', zz_10', zz_2' ;;
+	         zz_0' ) ;
+	.call CMOS3_1680_zz_56 CMOS3_1680 (zz_62', zz_61', zz_59', zz_58' ;;
+	         zz_56' ) ;
+	.call CMOS3_1680_zz_49 CMOS3_1680 (zz_55', zz_54', zz_52', zz_51' ;;
+	         zz_49' ) ;
+	.call CMOS3_1680_zz_41 CMOS3_1680 (zz_47', zz_46', zz_44', zz_43' ;;
+	         zz_41' ) ;
+	.call CMOS3_1680_zz_34 CMOS3_1680 (zz_40', zz_39', zz_37', zz_36' ;;
+	         zz_34' ) ;
+	.call CMOS3_1680_zz_32 CMOS3_1680 (zz_56', zz_49', zz_41', zz_34' ;;
+	         zz_32' ) ;
+	.call CMOS3_1680_zz_25 CMOS3_1680 (zz_31', zz_30', zz_28', zz_27' ;;
+	         zz_25' ) ;
+	.call CMOS3_1680_zz_18 CMOS3_1680 (zz_24', zz_23', zz_21', zz_20' ;;
+	         zz_18' ) ;
+	.call CMOS3_1680_zz_10 CMOS3_1680 (zz_16', zz_15', zz_13', zz_12' ;;
+	         zz_10' ) ;
+	.call CMOS3_1870_zz_62 CMOS3_1870 (v0, v129, v64, v128 ;;zz_62' ) ;
+	.call CMOS3_1870_zz_59 CMOS3_1870 (v61, v125, v60, v124 ;;zz_59' ) ;
+	.call CMOS3_1870_zz_61 CMOS3_1870 (v63, v127, v62, v126 ;;zz_61' ) ;
+	.call CMOS3_1870_zz_58 CMOS3_1870 (v59, v123, v58, v122 ;;zz_58' ) ;
+	.call CMOS3_1870_zz_55 CMOS3_1870 (v57, v121, v56, v120 ;;zz_55' ) ;
+	.call CMOS3_1870_zz_54 CMOS3_1870 (v55, v119, v54, v118 ;;zz_54' ) ;
+	.call CMOS3_1870_zz_52 CMOS3_1870 (v53, v117, v52, v116 ;;zz_52' ) ;
+	.call CMOS3_1870_zz_51 CMOS3_1870 (v51, v115, v50, v114 ;;zz_51' ) ;
+	.call CMOS3_1870_zz_47 CMOS3_1870 (v49, v113, v48, v112 ;;zz_47' ) ;
+	.call CMOS3_1870_zz_46 CMOS3_1870 (v47, v111, v46, v110 ;;zz_46' ) ;
+	.call CMOS3_1870_zz_44 CMOS3_1870 (v45, v109, v44, v108 ;;zz_44' ) ;
+	.call CMOS3_1870_zz_43 CMOS3_1870 (v43, v107, v42, v106 ;;zz_43' ) ;
+	.call CMOS3_1870_zz_39 CMOS3_1870 (v39, v103, v38, v102 ;;zz_39' ) ;
+	.call CMOS3_1870_zz_40 CMOS3_1870 (v41, v105, v40, v104 ;;zz_40' ) ;
+	.call CMOS3_1870_zz_37 CMOS3_1870 (v37, v101, v36, v100 ;;zz_37' ) ;
+	.call CMOS3_1870_zz_36 CMOS3_1870 (v35, v99, v34, v98 ;;zz_36' ) ;
+	.call CMOS3_1870_zz_31 CMOS3_1870 (v33, v97, v32, v96 ;;zz_31' ) ;
+	.call CMOS3_1870_zz_28 CMOS3_1870 (v29, v93, v28, v92 ;;zz_28' ) ;
+	.call CMOS3_1870_zz_30 CMOS3_1870 (v31, v95, v30, v94 ;;zz_30' ) ;
+	.call CMOS3_1870_zz_27 CMOS3_1870 (v27, v91, v26, v90 ;;zz_27' ) ;
+	.call CMOS3_1870_zz_24 CMOS3_1870 (v25, v89, v24, v88 ;;zz_24' ) ;
+	.call CMOS3_1870_zz_23 CMOS3_1870 (v23, v87, v22, v86 ;;zz_23' ) ;
+	.call CMOS3_1870_zz_21 CMOS3_1870 (v21, v85, v20, v84 ;;zz_21' ) ;
+	.call CMOS3_1870_zz_20 CMOS3_1870 (v19, v83, v18, v82 ;;zz_20' ) ;
+	.call CMOS3_1870_zz_16 CMOS3_1870 (v17, v81, v16, v80 ;;zz_16' ) ;
+	.call CMOS3_1870_zz_15 CMOS3_1870 (v15, v79, v14, v78 ;;zz_15' ) ;
+	.call CMOS3_1870_zz_13 CMOS3_1870 (v13, v77, v12, v76 ;;zz_13' ) ;
+	.call CMOS3_1870_zz_12 CMOS3_1870 (v11, v75, v10, v74 ;;zz_12' ) ;
+	.call CMOS3_1140_zz_2 CMOS3_1140 (zz_9, zz_8, zz_6, zz_4 ;;zz_2' ) ;
+	.call CMOS3_1810_zz_4 CMOS3_1810 (v3, v67, v2, v66, v1, v65 ;;
+	         zz_4 ) ;
+	.call CMOS3_1970_zz_9 CMOS3_1970 (v9, v73, v8, v72 ;;zz_9 ) ;
+	.call CMOS3_1970_zz_8 CMOS3_1970 (v7, v71, v6, v70 ;;zz_8 ) ;
+	.call CMOS3_1970_zz_6 CMOS3_1970 (v5, v69, v4, v68 ;;zz_6 ) ;
+
+.endmodel o64.pla ;
+

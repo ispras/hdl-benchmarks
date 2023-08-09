@@ -1,0 +1,51 @@
+.model source.pla
+.inputs a b c d e f g h i j k l m n o p q r s t u v w x y
+.outputs z a1 b1 c1 d1 e1 f1 g1 h1 i1 j1 k1 l1 m1 n1 o1 p1 q1
+.names a b c j k r s t z
+00001000 1
+.names a b c j k r s t a1
+00011000 1
+.names a b c j k r s t b1
+00010000 1
+.names a b c j k l m r s t c1
+000----010 1
+1110111--- 1
+.names a b c j k l m d1
+1110100 1
+.names a b c j k e1
+11111 1
+.names a b c j k l f1
+111011 1
+.names a b c j k l m g1
+101---- 1
+1-10110 1
+.names a b c d e f g h i r s t h1
+001010000101 1
+.names a b c l m n o p q s t u v w i1
+01-------10000 1
+001010000--100 1
+.names a b c l m n o p q s t u v w j1
+01-------10011 1
+001010011--100 1
+.names a b c l m n o p q s t u v w k1
+01-------10010 1
+001010010--100 1
+.names a b c j k r t x y l1
+1101----0 1
+11-10---0 1
+0011---10 1
+00-1--110 1
+0001-10-0 1
+.names a b c r t m1
+00010 1
+.names a b c j k r s t n1
+00000000 1
+.names a b c k t o1
+1-0-- 1
+11-0- 1
+-00-1 1
+.names a b p1
+01 1
+.names a b c q1
+001 1
+.end

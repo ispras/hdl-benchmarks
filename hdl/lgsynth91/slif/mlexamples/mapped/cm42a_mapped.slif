@@ -1,0 +1,35 @@
+
+.model CM42 ;
+
+	.date 910108214954 ;	# January 8 1991, 21:49.54
+
+	.inputs  a b c d ;
+	.outputs e f g h i j k l m n ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1770_i CMOS3_1770 (b, p0', a ;;i ) ;
+	.call CMOS3_1770_e CMOS3_1770 (b, o0', a ;;e ) ;
+	.call CMOS3_1230_l CMOS3_1230 (a, b, p0 ;;l ) ;
+	.call CMOS3_1230_k CMOS3_1230 (a', b, p0 ;;k ) ;
+	.call CMOS3_1230_j CMOS3_1230 (b', a, p0 ;;j ) ;
+	.call CMOS3_1230_h CMOS3_1230 (a, b, o0 ;;h ) ;
+	.call CMOS3_1230_g CMOS3_1230 (a', b, o0 ;;g ) ;
+	.call CMOS3_1230_f CMOS3_1230 (b', a, o0 ;;f ) ;
+	.call CMOS3_1760_p0 CMOS3_1760 (d, o0 ;;p0' ) ;
+	.call CMOS3_1760_o0 CMOS3_1760 (d, c ;;o0' ) ;
+	.call CMOS3_1760_m CMOS3_1760 (a, n0' ;;m ) ;
+	.call CMOS3_1220_n0 CMOS3_1220 (d, zz_8 ;;n0' ) ;
+	.call CMOS3_1220_n CMOS3_1220 (a, n0 ;;n ) ;
+	.call CMOS3_1310_a CMOS3_1310 (a ;;a' ) ;
+	.call CMOS3_1310_p0 CMOS3_1310 (p0' ;;p0 ) ;
+	.call CMOS3_1310_o0 CMOS3_1310 (o0' ;;o0 ) ;
+	.call CMOS3_1310_n0 CMOS3_1310 (n0' ;;n0 ) ;
+	.call CMOS3_1310_b CMOS3_1310 (b ;;b' ) ;
+	.call CMOS3_1120_zz_8 CMOS3_1120 (c, b ;;zz_8 ) ;
+
+.endmodel CM42 ;
+

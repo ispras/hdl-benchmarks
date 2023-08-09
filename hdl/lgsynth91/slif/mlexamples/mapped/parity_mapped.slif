@@ -1,0 +1,31 @@
+
+.model PARITYFDS ;
+
+	.date 910108220218 ;	# January 8 1991, 22:02.18
+
+	.inputs  a b c d e f g h i j k l m n o p ;
+	.outputs q ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_2310_f0 CMOS3_2310 (c0, d0 ;;f0 ) ;
+	.call CMOS3_2310_e0 CMOS3_2310 (a0, b0 ;;e0 ) ;
+	.call CMOS3_2310_d0 CMOS3_2310 (y, z ;;d0 ) ;
+	.call CMOS3_2310_c0 CMOS3_2310 (w, x ;;c0 ) ;
+	.call CMOS3_2310_b0 CMOS3_2310 (u, v ;;b0 ) ;
+	.call CMOS3_2310_a0 CMOS3_2310 (s, t ;;a0 ) ;
+	.call CMOS3_2310_z CMOS3_2310 (b, a ;;z ) ;
+	.call CMOS3_2310_y CMOS3_2310 (d, c ;;y ) ;
+	.call CMOS3_2310_x CMOS3_2310 (f, e ;;x ) ;
+	.call CMOS3_2310_w CMOS3_2310 (h, g ;;w ) ;
+	.call CMOS3_2310_v CMOS3_2310 (j, i ;;v ) ;
+	.call CMOS3_2310_u CMOS3_2310 (l, k ;;u ) ;
+	.call CMOS3_2310_t CMOS3_2310 (n, m ;;t ) ;
+	.call CMOS3_2310_s CMOS3_2310 (p, o ;;s ) ;
+	.call CMOS3_2310_q CMOS3_2310 (e0, f0 ;;q ) ;
+
+.endmodel PARITYFDS ;
+

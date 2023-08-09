@@ -1,0 +1,84 @@
+.model cu
+.inputs a b c d e f g i j k l m n o
+.outputs p q r s t u v w x y z
+.names p0 p
+0 1
+.names d o0 q
+00 1
+.names o f e t0 r
+0100 1
+.names o f e x0 s
+0100 1
+.names o f e y0 t
+0100 1
+.names o f e z0 u
+0100 1
+.names c a1 b1 v
+1-0 1
+-00 1
+.names o i1 w
+00 1
+.names c j1 b1 x
+1-0 1
+-00 1
+.names o g y
+11 1
+.names c f d g z
+0-01 1
+-001 1
+.names c e f o0
+01- 1
+10- 1
+1-1 1
+-11 1
+0-0 1
+-00 1
+.names d o0 p0
+00 1
+.names d c b a t0
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names d c b a x0
+1--- 1
+-1-- 1
+--1- 1
+---0 1
+.names d c b a y0
+1--- 1
+-1-- 1
+--0- 1
+---1 1
+.names d c b a z0
+1--- 1
+-1-- 1
+--0- 1
+---0 1
+.names a b k m l f1 a1
+-----0 1
+101--- 1
+11-1-- 1
+01--1- 1
+.names e o f c d b1
+0---- 1
+----1 1
+-1-1- 1
+--11- 1
+.names i g1 f1
+00 1
+.names a b j n f o g1
+---1-- 1
+----0- 1
+-----0 1
+001--- 1
+.names f e d c i1
+0--- 1
+-1-- 1
+--1- 1
+---1 1
+.names o n f j1
+0-- 1
+-1- 1
+--0 1
+.end

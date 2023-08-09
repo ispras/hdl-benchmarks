@@ -1,0 +1,183 @@
+.model ADDERFDS
+.inputs a b c d e f g h i j k l m n o p q r s t u v w x y z a0 b0 c0 d0 e0 f0 \
+g0
+.outputs h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0
+.names p1 h0
+0 1
+.names q1 i0
+0 1
+.names r1 j0
+0 1
+.names s1 k0
+0 1
+.names t1 l0
+0 1
+.names u1 m0
+0 1
+.names v1 n0
+0 1
+.names w1 o0
+0 1
+.names x1 p0
+0 1
+.names y1 q0
+0 1
+.names z1 r0
+0 1
+.names a2 s0
+0 1
+.names b2 t0
+0 1
+.names c2 u0
+0 1
+.names d2 v0
+0 1
+.names e2 w0
+0 1
+.names f2 x0
+0 1
+.names a q u2 p1
+111 1
+001 1
+010 1
+100 1
+.names b r t2 q1
+111 1
+001 1
+010 1
+100 1
+.names c s s2 r1
+111 1
+001 1
+010 1
+100 1
+.names d t r2 s1
+111 1
+001 1
+010 1
+100 1
+.names e u q2 t1
+111 1
+001 1
+010 1
+100 1
+.names f v p2 u1
+111 1
+001 1
+010 1
+100 1
+.names g w o2 v1
+111 1
+001 1
+010 1
+100 1
+.names h x n2 w1
+111 1
+001 1
+010 1
+100 1
+.names i y m2 x1
+111 1
+001 1
+010 1
+100 1
+.names j z l2 y1
+111 1
+001 1
+010 1
+100 1
+.names k a0 k2 z1
+111 1
+001 1
+010 1
+100 1
+.names l b0 j2 a2
+111 1
+001 1
+010 1
+100 1
+.names m c0 i2 b2
+111 1
+001 1
+010 1
+100 1
+.names n d0 h2 c2
+111 1
+001 1
+010 1
+100 1
+.names o e0 g2 d2
+111 1
+001 1
+010 1
+100 1
+.names p f0 g0 e2
+011 1
+101 1
+110 1
+000 1
+.names a q u2 f2
+00- 1
+0-1 1
+-01 1
+.names p f0 g0 g2
+00- 1
+0-0 1
+-00 1
+.names o e0 g2 h2
+00- 1
+0-1 1
+-01 1
+.names n d0 h2 i2
+00- 1
+0-1 1
+-01 1
+.names m c0 i2 j2
+00- 1
+0-1 1
+-01 1
+.names l b0 j2 k2
+00- 1
+0-1 1
+-01 1
+.names k a0 k2 l2
+00- 1
+0-1 1
+-01 1
+.names j z l2 m2
+00- 1
+0-1 1
+-01 1
+.names i y m2 n2
+00- 1
+0-1 1
+-01 1
+.names h x n2 o2
+00- 1
+0-1 1
+-01 1
+.names g w o2 p2
+00- 1
+0-1 1
+-01 1
+.names f v p2 q2
+00- 1
+0-1 1
+-01 1
+.names e u q2 r2
+00- 1
+0-1 1
+-01 1
+.names d t r2 s2
+00- 1
+0-1 1
+-01 1
+.names c s s2 t2
+00- 1
+0-1 1
+-01 1
+.names b r t2 u2
+00- 1
+0-1 1
+-01 1
+.end

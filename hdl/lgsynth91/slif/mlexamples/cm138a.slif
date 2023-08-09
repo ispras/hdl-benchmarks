@@ -1,0 +1,21 @@
+
+.model CM138 ;
+
+	.date 910103085112 ;	# January 3 1991, 08:51.12
+
+	.inputs  a b c d e f ;
+	.outputs g h i j k l m n ;
+
+	g = j0 + c + b + a ;
+	h = j0 + c + b + a' ;
+	i = j0 + c + b' + a ;
+	j = j0 + c + b' + a' ;
+	k = j0 + c' + b + a ;
+	l = j0 + c' + b + a' ;
+	m = j0 + c' + b' + a ;
+	n = j0 + c' + b' + a' ;
+	j0 = d' + e + f ;
+
+
+.endmodel CM138 ;
+

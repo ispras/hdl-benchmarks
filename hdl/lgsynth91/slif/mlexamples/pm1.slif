@@ -1,0 +1,40 @@
+
+.model pm1 ;
+
+	.date 910103085359 ;	# January 3 1991, 08:53.59
+
+	.inputs  a b c d e g h i j k l m n o p q ;
+	.outputs r s t u v w x y z a0 b0 c0 d0 ;
+	.net p' v ;
+	.net o' w ;
+	.net q' y ;
+
+	u = r1' + k' + m' ;
+	x = u1' v1' + t1' v1' + c' v1' ;
+	z = s0' + l + a' ;
+	a0 = m' y0' + n y0' ;
+	b0 = n m z0' ;
+	c0 = d1' m e1' + b' m e1' ;
+	d0 = n m i1' ;
+	r1 = s1' n + g' n + h' n ;
+	t1 = e d ;
+	u1 = m + n' ;
+	v1 = b' + k' ;
+	s0 = t0' m + c' m + d' m ;
+	y0 = a' + l + m' n ;
+	z0 = a1' + l ;
+	d1 = n' + k' + c d e ;
+	e1 = a' + l + b' n ;
+	i1 = a' + k + l ;
+	t0 = n k e ;
+	a1 = e' k a + d' k a + c' k a ;
+	o1 = k j i ;
+	m1 = o1' + g' + h' ;
+	s1 = j i ;
+	r = ( n' m' b' )' ;
+	s = ( n m' )' ;
+	t = ( n m m1' )' ;
+
+
+.endmodel pm1 ;
+

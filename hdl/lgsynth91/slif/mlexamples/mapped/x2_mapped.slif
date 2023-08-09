@@ -1,0 +1,57 @@
+
+.model x2 ;
+
+	.date 910108230809 ;	# January 8 1991, 23:08.09
+
+	.inputs  a b c d e f g h i j ;
+	.outputs k l m n o p q ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1230_h0 CMOS3_1230 (f, i, zz_48 ;;h0' ) ;
+	.call CMOS3_1230_zz_32 CMOS3_1230 (h0', g, zz_34' ;;zz_32 ) ;
+	.call CMOS3_1230_k CMOS3_1230 (j0', i0', zz_0' ;;k ) ;
+	.call CMOS3_1740_q CMOS3_1740 (g0, h0, m, zz_35 ;;q ) ;
+	.call CMOS3_1740_o CMOS3_1740 (i0, j0, f0, zz_16 ;;o ) ;
+	.call CMOS3_1740_l CMOS3_1740 (j0, i0, f0, zz_5 ;;l ) ;
+	.call CMOS3_1130_zz_0 CMOS3_1130 (f0, g0, zz_2 ;;zz_0' ) ;
+	.call CMOS3_1130_zz_42 CMOS3_1130 (c, b, a ;;zz_42 ) ;
+	.call CMOS3_1130_zz_29 CMOS3_1130 (zz_31', e, j ;;zz_29 ) ;
+	.call CMOS3_1130_zz_26 CMOS3_1130 (h, b, a ;;zz_26 ) ;
+	.call CMOS3_1130_m CMOS3_1130 (j, i, h ;;m ) ;
+	.call CMOS3_1220_j0 CMOS3_1220 (i, j ;;j0' ) ;
+	.call CMOS3_1220_i0 CMOS3_1220 (j, h' ;;i0' ) ;
+	.call CMOS3_1220_zz_31 CMOS3_1220 (h, d ;;zz_31' ) ;
+	.call CMOS3_1220_zz_16 CMOS3_1220 (m', g ;;zz_16 ) ;
+	.call CMOS3_1220_n CMOS3_1220 (zz_12', zz_8' ;;n ) ;
+	.call CMOS3_1770_p CMOS3_1770 (zz_32, zz_29, zz_19 ;;p ) ;
+	.call CMOS3_1610_f0 CMOS3_1610 (h, i ;;f0 ) ;
+	.call CMOS3_1610_zz_5 CMOS3_1610 (j, h ;;zz_5 ) ;
+	.call CMOS3_1610_zz_48 CMOS3_1610 (h, j ;;zz_48 ) ;
+	.call CMOS3_1610_zz_39 CMOS3_1610 (j, i ;;zz_39 ) ;
+	.call CMOS3_1610_zz_10 CMOS3_1610 (j, h ;;zz_10 ) ;
+	.call CMOS3_1140_zz_8 CMOS3_1140 (j0, g0, m, zz_10 ;;zz_8' ) ;
+	.call CMOS3_1140_zz_12 CMOS3_1140 (i0, b, a, c ;;zz_12' ) ;
+	.call CMOS3_1930_zz_36 CMOS3_1930 (h, j, zz_42, zz_40, e, zz_39 ;;
+	         zz_36 ) ;
+	.call CMOS3_1930_zz_19 CMOS3_1930 (c, i', zz_26, zz_23, h, zz_22 ;;
+	         zz_19 ) ;
+	.call CMOS3_1120_zz_2 CMOS3_1120 (j, i ;;zz_2 ) ;
+	.call CMOS3_1120_zz_22 CMOS3_1120 (b, a ;;zz_22 ) ;
+	.call CMOS3_1670_g0 CMOS3_1670 (h, i', j ;;g0 ) ;
+	.call CMOS3_1670_zz_23 CMOS3_1670 (i, j, c ;;zz_23 ) ;
+	.call CMOS3_1760_zz_34 CMOS3_1760 (j, i ;;zz_34' ) ;
+	.call CMOS3_1620_zz_35 CMOS3_1620 (zz_36, g ;;zz_35 ) ;
+	.call CMOS3_1660_zz_40 CMOS3_1660 (h, d ;;zz_40 ) ;
+	.call CMOS3_1310_j0 CMOS3_1310 (j0' ;;j0 ) ;
+	.call CMOS3_1310_i0 CMOS3_1310 (i0' ;;i0 ) ;
+	.call CMOS3_1310_h0 CMOS3_1310 (h0' ;;h0 ) ;
+	.call CMOS3_1310_m CMOS3_1310 (m ;;m' ) ;
+	.call CMOS3_1310_h CMOS3_1310 (h ;;h' ) ;
+	.call CMOS3_1310_i CMOS3_1310 (i ;;i' ) ;
+
+.endmodel x2 ;
+

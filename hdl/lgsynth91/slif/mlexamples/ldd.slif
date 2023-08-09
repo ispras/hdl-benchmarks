@@ -1,0 +1,43 @@
+
+.model ldd ;
+
+	.date 910103085352 ;	# January 3 1991, 08:53.52
+
+	.inputs  a b c d e f g h i ;
+	.outputs j k l m n o p q r s t u v w x y z a0 b0 ;
+
+	j = w1 + v1 + u + z1 + t + o1 + s + r + u1 + q1 + p1 ;
+	k = w1 + v1 + u + t + s + y1 + r + x1 + u1 + s1 + r1 ;
+	l = w1 + z1 + t + s + y1 + r + u1 + t1 + b0 + r1 + p1 ;
+	m = u + z1 + s + y1 + r + x1 ;
+	n = t + o1 ;
+	o = w1 + v1 ;
+	p = u1 + t1 ;
+	q = r1 + b0 + s1 + p1 + q1 + a' b' c' d' e' f' g' h' ;
+	r = a' b c' i ;
+	s = a' b c i ;
+	t = a b' c' i ;
+	u = a b' c i ;
+	v = u + z1 + t + s + r + s1 + r1 + q1 + p1 ;
+	w = u + t + s + r + s1 + r1 + q1 + p1 ;
+	x = u + t + s + r + s1 + r1 + q1 + p1 ;
+	y = t + r + s1 + q1 ;
+	z = u + r + s1 + p1 ;
+	a0 = u + s1 + r1 + q1 ;
+	b0 = a' b' c' d ;
+	p1 = a' b' c' d' e' f' g' h ;
+	q1 = a' b' c' d' e' f' g ;
+	u1 = a' b' c i ;
+	o1 = a b' c' i' ;
+	z1 = a b' c i' ;
+	v1 = a b c' i' ;
+	w1 = a b c' i ;
+	r1 = a' b' c' d' e' f ;
+	s1 = a' b' c' d' e ;
+	x1 = a' b c' i' ;
+	y1 = a' b c i' ;
+	t1 = a' b' c i' ;
+
+
+.endmodel ldd ;
+

@@ -1,0 +1,56 @@
+.model CM163
+.inputs a b c d e f g h i j k l m n o p
+.outputs q r s t u
+.names a g0 i0 h0 q
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names b g0 j0 h0 r
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names g g0 n0 h0 s
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names h g0 o0 h0 t
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names p0 d u
+01 1
+.names e f g0
+01 1
+.names e f h0
+11 1
+.names l0 j i0
+01 1
+10 1
+.names m0 l j0
+11 1
+00 1
+.names c d l0
+0- 1
+-0 1
+.names j l0 m0
+00 1
+.names q0 m n0
+11 1
+00 1
+.names r0 n o0
+11 1
+00 1
+.names o k i p p0
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names l0 j l q0
+000 1
+.names m l0 j l r0
+0000 1
+.end

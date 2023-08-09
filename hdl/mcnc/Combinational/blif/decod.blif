@@ -1,0 +1,40 @@
+.model decod
+.inputs a b c d e
+.outputs f g h i j k l m n o p q r s t u
+.names d c b o0 f
+1111 1
+.names d c b o0 g
+0111 1
+.names d c b o0 h
+1011 1
+.names d c b o0 i
+0011 1
+.names d c b o0 j
+1101 1
+.names d c b o0 k
+0101 1
+.names d c b o0 l
+1001 1
+.names d c b o0 m
+0001 1
+.names d c b n0 n
+1111 1
+.names d c b n0 o
+0111 1
+.names d c b n0 p
+1011 1
+.names d c b n0 q
+0011 1
+.names d c b n0 r
+1101 1
+.names d c b n0 s
+0101 1
+.names d c b n0 t
+1001 1
+.names d c b n0 u
+0001 1
+.names a e n0
+01 1
+.names a e o0
+11 1
+.end

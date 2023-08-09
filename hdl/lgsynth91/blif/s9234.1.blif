@@ -1,0 +1,12610 @@
+.model s9234.1.bench
+.inputs g89 g94 g98 g102 g107 g301 g306 g310 g314 g319 g557 g558 g559 g560 \
+g561 g562 g563 g564 g705 g639 g567 g45 g42 g39 g702 g32 g38 g46 g36 g47 g40 \
+g37 g41 g22 g44 g23
+.outputs g2584 g3222 g3600 g4307 g4321 g4422 g4809 g5137 g5468 g5469 g5692 \
+g6282 g6284 g6360 g6362 g6364 g6366 g6368 g6370 g6372 g6374 g6728 g1290 g4121 \
+g4108 g4106 g4103 g1293 g4099 g4102 g4109 g4100 g4112 g4105 g4101 g4110 g4104 \
+g4107 g4098
+.wire_load_slope 0.00
+.latch     g4130 g678  0
+.latch     g6823 g332  0
+.latch     g6940 g123  0
+.latch     g6102 g207  0
+.latch     g4147 g695  0
+.latch     g4841 g461  0
+.latch     g6725 g18  0
+.latch     g3232 g292  0
+.latch     g4119 g331  0
+.latch     g4141 g689  0
+.latch     g6726 g24  0
+.latch     g6507 g465  0
+.latch     g6590 g84  0
+.latch     g3231 g291  0
+.latch     g5330 g676  0
+.latch     g5147 g622  0
+.latch     g4839 g117  0
+.latch     g6105 g278  0
+.latch     g5138 g128  0
+.latch     g4122 g598  0
+.latch     g6827 g554  0
+.latch     g6745 g496  0
+.latch     g6405 g179  0
+.latch     g6729 g48  0
+.latch     g6595 g590  0
+.latch     g6826 g551  0
+.latch     g4134 g682  0
+.latch     g6599 g11  0
+.latch     g4857 g606  0
+.latch     g6406 g188  0
+.latch     g5148 g646  0
+.latch     g4117 g327  0
+.latch     g6582 g361  0
+.latch     g3229 g289  0
+.latch     g5700 g398  0
+.latch     g4136 g684  0
+.latch     g4858 g619  0
+.latch     g5876 g208  0
+.latch     g3239 g248  0
+.latch     g5698 g390  0
+.latch     g5328 g625  0
+.latch     g4133 g681  0
+.latch     g4847 g437  0
+.latch     g5877 g276  0
+.latch     g6597 g3  0
+.latch     g4120 g323  0
+.latch     g3235 g224  0
+.latch     g4137 g685  0
+.latch     g6407 g43  0
+.latch     g5470 g157  0
+.latch     g6841 g282  0
+.latch     g4149 g697  0
+.latch     g6101 g206  0
+.latch     g4844 g449  0
+.latch     g4113 g118  0
+.latch     g6504 g528  0
+.latch     g3224 g284  0
+.latch     g4855 g426  0
+.latch     g4424 g634  0
+.latch     g5582 g669  0
+.latch     g6502 g520  0
+.latch     g6107 g281  0
+.latch     g5472 g175  0
+.latch     g6602 g15  0
+.latch     g5581 g631  0
+.latch     g6587 g69  0
+.latch     g4145 g693  0
+.latch     g2585 g337  0
+.latch     g4842 g457  0
+.latch     g2586 g486  0
+.latch     g1291 g471  0
+.latch     g4118 g328  0
+.latch     g3225 g285  0
+.latch     g4853 g418  0
+.latch     g4849 g402  0
+.latch     g6512 g297  0
+.latch     g3233 g212  0
+.latch     g4851 g410  0
+.latch     g4856 g430  0
+.latch     g6854 g33  0
+.latch     g1831 g662  0
+.latch     g4843 g453  0
+.latch     g6510 g269  0
+.latch     g6591 g574  0
+.latch     g4846 g441  0
+.latch     g1288 g664  0
+.latch     g5478 g349  0
+.latch     g6840 g211  0
+.latch     g6594 g586  0
+.latch     g5580 g571  0
+.latch     g6853 g29  0
+.latch     g4840 g326  0
+.latch     g4150 g698  0
+.latch     g5490 g654  0
+.latch     g6511 g293  0
+.latch     g4142 g690  0
+.latch     g4845 g445  0
+.latch     g5694 g374  0
+.latch     g6722 g6  0
+.latch     g4139 g687  0
+.latch     g5480 g357  0
+.latch     g5697 g386  0
+.latch     g6498 g504  0
+.latch     g4126 g665  0
+.latch     g5471 g166  0
+.latch     g6505 g541  0
+.latch     g6588 g74  0
+.latch     g5475 g338  0
+.latch     g4148 g696  0
+.latch     g6501 g516  0
+.latch     g6506 g536  0
+.latch     g4135 g683  0
+.latch     g5479 g353  0
+.latch     g6824 g545  0
+.latch     g3240 g254  0
+.latch     g5476 g341  0
+.latch     g3230 g290  0
+.latch     g6721 g2  0
+.latch     g3227 g287  0
+.latch     g6925 g336  0
+.latch     g5477 g345  0
+.latch     g5489 g628  0
+.latch     g4131 g679  0
+.latch     g6727 g28  0
+.latch     g4140 g688  0
+.latch     g6842 g283  0
+.latch     g4423 g613  0
+.latch     g6723 g10  0
+.latch     g6724 g14  0
+.latch     g4132 g680  0
+.latch     g6401 g143  0
+.latch     g5491 g672  0
+.latch     g4127 g667  0
+.latch     g6278 g366  0
+.latch     g6106 g279  0
+.latch     g6744 g492  0
+.latch     g6404 g170  0
+.latch     g4138 g686  0
+.latch     g3228 g288  0
+.latch     g1289 g638  0
+.latch     g4123 g602  0
+.latch     g4658 g642  0
+.latch     g5878 g280  0
+.latch     g4125 g663  0
+.latch     g4124 g610  0
+.latch     g5874 g148  0
+.latch     g6103 g209  0
+.latch     g1294 g675  0
+.latch     g1292 g478  0
+.latch     g4115 g122  0
+.latch     g6584 g54  0
+.latch     g6596 g594  0
+.latch     g3226 g286  0
+.latch     g2587 g489  0
+.latch     g4657 g616  0
+.latch     g6589 g79  0
+.latch     g3234 g218  0
+.latch     g3238 g242  0
+.latch     g6592 g578  0
+.latch     g5473 g184  0
+.latch     g4114 g119  0
+.latch     g6800 g668  0
+.latch     g5141 g139  0
+.latch     g4854 g422  0
+.latch     g6839 g210  0
+.latch     g5699 g394  0
+.latch     g3236 g230  0
+.latch     g6601 g25  0
+.latch     g5875 g204  0
+.latch     g4425 g658  0
+.latch     g5329 g650  0
+.latch     g5695 g378  0
+.latch     g6499 g508  0
+.latch     g6825 g548  0
+.latch     g5693 g370  0
+.latch     g4850 g406  0
+.latch     g3237 g236  0
+.latch     g6497 g500  0
+.latch     g6100 g205  0
+.latch     g6509 g197  0
+.latch     g4128 g666  0
+.latch     g4116 g114  0
+.latch     g6503 g524  0
+.latch     g3241 g260  0
+.latch     g6277 g111  0
+.latch     g5139 g131  0
+.latch     g6598 g7  0
+.latch     g6600 g19  0
+.latch     g4129 g677  0
+.latch     g6593 g582  0
+.latch     g6801 g485  0
+.latch     g4426 g699  0
+.latch     g5474 g193  0
+.latch     g5140 g135  0
+.latch     g5696 g382  0
+.latch     g4852 g414  0
+.latch     g4848 g434  0
+.latch     g4659 g266  0
+.latch     g6583 g49  0
+.latch     g6402 g152  0
+.latch     g4144 g692  0
+.latch     g6104 g277  0
+.latch     g6941 g127  0
+.latch     g6403 g161  0
+.latch     g6500 g512  0
+.latch     g6508 g532  0
+.latch     g6586 g64  0
+.latch     g4146 g694  0
+.latch     g4143 g691  0
+.latch     g6720 g1  0
+.latch     g6585 g59  0
+.names I3705 g2584
+0 1
+.names I4465 g3222
+0 1
+.names I4791 g3600
+0 1
+.names I5774 g4307
+0 1
+.names I5790 g4321
+0 1
+.names g4111 g4422
+0 1
+.names I6485 g4809
+0 1
+.names I6789 g5137
+0 1
+.names I7150 g5468
+0 1
+.names I7153 g5469
+0 1
+.names I7451 g5692
+0 1
+.names I7996 g6282
+0 1
+.names I8002 g6284
+0 1
+.names I8144 g6360
+0 1
+.names I8150 g6362
+0 1
+.names I8156 g6364
+0 1
+.names I8162 g6366
+0 1
+.names I8168 g6368
+0 1
+.names I8174 g6370
+0 1
+.names I8180 g6372
+0 1
+.names I8186 g6374
+0 1
+.names I8878 g6728
+0 1
+.names I2275 g1290
+0 1
+.names I5445 g4121
+0 1
+.names I5406 g4108
+0 1
+.names I5400 g4106
+0 1
+.names I5391 g4103
+0 1
+.names I2284 g1293
+0 1
+.names I5379 g4099
+0 1
+.names I5388 g4102
+0 1
+.names I5409 g4109
+0 1
+.names I5382 g4100
+0 1
+.names I5418 g4112
+0 1
+.names I5397 g4105
+0 1
+.names I5385 g4101
+0 1
+.names I5412 g4110
+0 1
+.names I5394 g4104
+0 1
+.names I5403 g4107
+0 1
+.names I5376 g4098
+0 1
+.names I5472 g4130
+0 1
+.names I9002 g6823
+0 1
+.names I9233 g6940
+0 1
+.names I7802 g6102
+0 1
+.names I5523 g4147
+0 1
+.names I6531 g4841
+0 1
+.names I8869 g6725
+0 1
+.names I4495 g3232
+0 1
+.names I5439 g4119
+0 1
+.names I5505 g4141
+0 1
+.names I8872 g6726
+0 1
+.names I8441 g6507
+0 1
+.names I8638 g6590
+0 1
+.names I4492 g3231
+0 1
+.names I6992 g5330
+0 1
+.names I6809 g5147
+0 1
+.names I6525 g4839
+0 1
+.names I7811 g6105
+0 1
+.names I6792 g5138
+0 1
+.names I5448 g4122
+0 1
+.names I9014 g6827
+0 1
+.names I8913 g6745
+0 1
+.names I8229 g6405
+0 1
+.names I8881 g6729
+0 1
+.names I8653 g6595
+0 1
+.names I9011 g6826
+0 1
+.names I5484 g4134
+0 1
+.names I8665 g6599
+0 1
+.names I6579 g4857
+0 1
+.names I8232 g6406
+0 1
+.names I6812 g5148
+0 1
+.names I5433 g4117
+0 1
+.names I8614 g6582
+0 1
+.names I4486 g3229
+0 1
+.names g5663 g5488 g5700
+1- 1
+-1 1
+.names I5490 g4136
+0 1
+.names I6582 g4858
+0 1
+.names I7640 g5876
+0 1
+.names I4516 g3239
+0 1
+.names g5648 g5486 g5698
+1- 1
+-1 1
+.names I6986 g5328
+0 1
+.names I5481 g4133
+0 1
+.names I6549 g4847
+0 1
+.names I7643 g5877
+0 1
+.names I8659 g6597
+0 1
+.names I5442 g4120
+0 1
+.names I4504 g3235
+0 1
+.names I5493 g4137
+0 1
+.names I8235 g6407
+0 1
+.names g5359 g5142 g5470
+1- 1
+-1 1
+.names I9044 g6841
+0 1
+.names I5529 g4149
+0 1
+.names I7799 g6101
+0 1
+.names I6540 g4844
+0 1
+.names I5421 g4113
+0 1
+.names I8432 g6504
+0 1
+.names I4471 g3224
+0 1
+.names I6573 g4855
+0 1
+.names I5923 g4424
+0 1
+.names I7342 g5582
+0 1
+.names I8426 g6502
+0 1
+.names I7817 g6107
+0 1
+.names g5361 g5144 g5472
+1- 1
+-1 1
+.names I8674 g6602
+0 1
+.names I7339 g5581
+0 1
+.names I8629 g6587
+0 1
+.names I5517 g4145
+0 1
+.names I3708 g2585
+0 1
+.names I6534 g4842
+0 1
+.names I3711 g2586
+0 1
+.names I2278 g1291
+0 1
+.names I5436 g4118
+0 1
+.names I4474 g3225
+0 1
+.names I6567 g4853
+0 1
+.names I6555 g4849
+0 1
+.names I8456 g6512
+0 1
+.names I4498 g3233
+0 1
+.names I6561 g4851
+0 1
+.names I6576 g4856
+0 1
+.names I9085 g6854
+0 1
+.names I2907 g1831
+0 1
+.names I6537 g4843
+0 1
+.names I8450 g6510
+0 1
+.names I8641 g6591
+0 1
+.names I6546 g4846
+0 1
+.names I2269 g1288
+0 1
+.names I7170 g5478
+0 1
+.names I9041 g6840
+0 1
+.names I8650 g6594
+0 1
+.names I7336 g5580
+0 1
+.names I9082 g6853
+0 1
+.names I6528 g4840
+0 1
+.names I5532 g4150
+0 1
+.names I7190 g5490
+0 1
+.names I8453 g6511
+0 1
+.names I5508 g4142
+0 1
+.names I6543 g4845
+0 1
+.names g5633 g5482 g5694
+1- 1
+-1 1
+.names I8860 g6722
+0 1
+.names I5499 g4139
+0 1
+.names I7176 g5480
+0 1
+.names g5646 g5485 g5697
+1- 1
+-1 1
+.names I8414 g6498
+0 1
+.names I5460 g4126
+0 1
+.names g5360 g5143 g5471
+1- 1
+-1 1
+.names I8435 g6505
+0 1
+.names I8632 g6588
+0 1
+.names I7161 g5475
+0 1
+.names I5526 g4148
+0 1
+.names I8423 g6501
+0 1
+.names I8438 g6506
+0 1
+.names I5487 g4135
+0 1
+.names I7173 g5479
+0 1
+.names I9005 g6824
+0 1
+.names I4519 g3240
+0 1
+.names I7164 g5476
+0 1
+.names I4489 g3230
+0 1
+.names I8857 g6721
+0 1
+.names I4480 g3227
+0 1
+.names I9208 g6925
+0 1
+.names I7167 g5477
+0 1
+.names I7187 g5489
+0 1
+.names I5475 g4131
+0 1
+.names I8875 g6727
+0 1
+.names I5502 g4140
+0 1
+.names I9047 g6842
+0 1
+.names I5920 g4423
+0 1
+.names I8863 g6723
+0 1
+.names I8866 g6724
+0 1
+.names I5478 g4132
+0 1
+.names I8217 g6401
+0 1
+.names I7193 g5491
+0 1
+.names I5463 g4127
+0 1
+.names I7966 g6278
+0 1
+.names I7814 g6106
+0 1
+.names I8910 g6744
+0 1
+.names I8226 g6404
+0 1
+.names I5496 g4138
+0 1
+.names I4483 g3228
+0 1
+.names I2272 g1289
+0 1
+.names I5451 g4123
+0 1
+.names I6247 g4658
+0 1
+.names I7646 g5878
+0 1
+.names I5457 g4125
+0 1
+.names I5454 g4124
+0 1
+.names I7634 g5874
+0 1
+.names I7805 g6103
+0 1
+.names I2287 g1294
+0 1
+.names I2281 g1292
+0 1
+.names I5427 g4115
+0 1
+.names I8620 g6584
+0 1
+.names I8656 g6596
+0 1
+.names I4477 g3226
+0 1
+.names I3714 g2587
+0 1
+.names I6244 g4657
+0 1
+.names I8635 g6589
+0 1
+.names I4501 g3234
+0 1
+.names I4513 g3238
+0 1
+.names I8644 g6592
+0 1
+.names g5362 g5145 g5473
+1- 1
+-1 1
+.names I5424 g4114
+0 1
+.names I8966 g6800
+0 1
+.names I6801 g5141
+0 1
+.names I6570 g4854
+0 1
+.names I9038 g6839
+0 1
+.names g5660 g5487 g5699
+1- 1
+-1 1
+.names I4507 g3236
+0 1
+.names I8671 g6601
+0 1
+.names I7637 g5875
+0 1
+.names I5926 g4425
+0 1
+.names I6989 g5329
+0 1
+.names g5635 g5483 g5695
+1- 1
+-1 1
+.names I8417 g6499
+0 1
+.names I9008 g6825
+0 1
+.names g5632 g5481 g5693
+1- 1
+-1 1
+.names I6558 g4850
+0 1
+.names I4510 g3237
+0 1
+.names I8411 g6497
+0 1
+.names I7796 g6100
+0 1
+.names I8447 g6509
+0 1
+.names I5466 g4128
+0 1
+.names I5430 g4116
+0 1
+.names I8429 g6503
+0 1
+.names I4522 g3241
+0 1
+.names I7963 g6277
+0 1
+.names I6795 g5139
+0 1
+.names I8662 g6598
+0 1
+.names I8668 g6600
+0 1
+.names I5469 g4129
+0 1
+.names I8647 g6593
+0 1
+.names I8969 g6801
+0 1
+.names I5929 g4426
+0 1
+.names g5363 g5146 g5474
+1- 1
+-1 1
+.names I6798 g5140
+0 1
+.names g5637 g5484 g5696
+1- 1
+-1 1
+.names I6564 g4852
+0 1
+.names I6552 g4848
+0 1
+.names I6250 g4659
+0 1
+.names I8617 g6583
+0 1
+.names I8220 g6402
+0 1
+.names I5514 g4144
+0 1
+.names I7808 g6104
+0 1
+.names I9236 g6941
+0 1
+.names I8223 g6403
+0 1
+.names I8420 g6500
+0 1
+.names I8444 g6508
+0 1
+.names I8626 g6586
+0 1
+.names I5520 g4146
+0 1
+.names I5511 g4143
+0 1
+.names I8854 g6720
+0 1
+.names I8623 g6585
+0 1
+.names I8806 g6696
+0 1
+.names g6696 I8854
+0 1
+.names g908 I2272
+0 1
+.names g6851 g2085 g6855
+1- 1
+-1 1
+.names g6855 I9125
+0 1
+.names g4614 g4822
+0 1
+.names g4822 I6783
+0 1
+.names I3215 g2097
+0 1
+.names g2097 I4424
+0 1
+.names g6889 I9152
+0 1
+.names I9152 g6895
+0 1
+.names g1787 I2919
+0 1
+.names I2919 g1835
+0 1
+.names I2805 g1770
+0 1
+.names g1770 I3040
+0 1
+.names g6786 g6822
+0 1
+.names g6822 g6837
+0 1
+.names g5494 g3280 g5624
+1- 1
+-1 1
+.names g5624 I7466
+0 1
+.names I4173 g2974
+0 1
+.names g2974 I4809
+0 1
+.names g2861 I4757
+0 1
+.names I4757 g3537
+0 1
+.names I6956 g5304
+0 1
+.names g5304 g5457
+0 1
+.names g5631 g5824
+0 1
+.names g5824 g6062
+0 1
+.names g3599 I5343
+0 1
+.names I5343 g4040
+0 1
+.names I5562 g4162
+0 1
+.names g4162 I6001
+0 1
+.names I6995 g5331
+0 1
+.names g5331 g5549
+0 1
+.names I4288 g3063
+0 1
+.names g3063 I4477
+0 1
+.names I4809 g3612
+0 1
+.names g676 g5060 g5318
+0- 1
+-0 1
+.names g5318 I7055
+0 1
+.names I3093 g1982
+0 1
+.names g1982 g2892
+0 1
+.names g3108 g3638
+0 1
+.names g3638 I5264
+0 1
+.names g696 I2225
+0 1
+.names g3967 I5451
+0 1
+.names g3310 g2720 g4086
+1- 1
+-1 1
+.names g4086 g4323
+0 1
+.names g667 I1932
+0 1
+.names I1932 g908
+0 1
+.names g157 g3773 g4346
+11 1
+.names g4346 I5933
+0 1
+.names g6249 g6090 g6294
+1- 1
+-1 1
+.names g6294 I8252
+0 1
+.names g658 g971
+0 1
+.names g971 I2473
+0 1
+.names g5227 g669 g5386
+1- 1
+-1 1
+.names g5386 I7333
+0 1
+.names g6263 g6647 g6688
+1- 1
+-1 1
+.names g6688 I8812
+0 1
+.names g638 g985
+0 1
+.names g985 g1674
+0 1
+.names g1039 g913 g1422
+00 1
+.names g1422 I3528
+0 1
+.names g6754 g6750 g6774
+0- 1
+-0 1
+.names g6774 I8958
+0 1
+.names I4527 I4528 g3246
+0- 1
+-0 1
+.names g3246 I5050
+0 1
+.names g2705 I4501
+0 1
+.names I2215 g1209
+0 1
+.names g1209 I2324
+0 1
+.names g2040 I4133
+0 1
+.names I4133 g2945
+0 1
+.names g4790 I6775
+0 1
+.names I6775 g5121
+0 1
+.names g306 g889 g1398
+0- 1
+-0 1
+.names g1398 g1997
+0 1
+.names g2254 I4375
+0 1
+.names I4375 g3128
+0 1
+.names g5883 g5996 g6110
+1- 1
+-1 1
+.names g6110 I8005
+0 1
+.names I2122 g1094
+0 1
+.names g1094 g1541
+0 1
+.names I7267 g5527
+0 1
+.names g5527 g5670
+0 1
+.names I3481 g2327
+0 1
+.names g2327 g2738
+0 1
+.names g6838 I9047
+0 1
+.names g4397 I6096
+0 1
+.names I6096 g4528
+0 1
+.names g1647 I3379
+0 1
+.names I3379 g2244
+0 1
+.names g5729 g5946
+0 1
+.names g5946 g6192
+0 1
+.names g2044 I3864
+0 1
+.names I3864 g2709
+0 1
+.names g1160 I2349
+0 1
+.names I2349 g1332
+0 1
+.names g4399 I6102
+0 1
+.names I6102 g4530
+0 1
+.names I2050 g1011
+0 1
+.names g1011 g1680
+0 1
+.names I2382 g1345
+0 1
+.names g1345 g2078
+0 1
+.names g695 I2215
+0 1
+.names I2485 g1504
+0 1
+.names g1504 I3010
+0 1
+.names g5605 I7612
+0 1
+.names I7612 g5813
+0 1
+.names I7349 g5587
+0 1
+.names g5587 I7509
+0 1
+.names I5177 g3940
+0 1
+.names g3940 I5379
+0 1
+.names I4667 g3388
+0 1
+.names g3388 g3800
+0 1
+.names I3013 g1914
+0 1
+.names g1914 g2907
+0 1
+.names g6850 I9085
+0 1
+.names g1319 I3144
+0 1
+.names I3144 g2035
+0 1
+.names I2967 g1861
+0 1
+.names g1861 g2959
+0 1
+.names g6939 I9236
+0 1
+.names I4794 g3601
+0 1
+.names g3601 g4010
+0 1
+.names I1958 g927
+0 1
+.names g927 I2287
+0 1
+.names I3340 g2197
+0 1
+.names g2197 I4273
+0 1
+.names g6253 g6091 g6300
+1- 1
+-1 1
+.names g6300 I8270
+0 1
+.names g5596 I7501
+0 1
+.names I7501 g5740
+0 1
+.names I5006 g3807
+0 1
+.names g3807 I5777
+0 1
+.names I3050 g1943
+0 1
+.names g1943 g2876
+0 1
+.names g306 g873
+0 1
+.names g4770 I6525
+0 1
+.names g3701 g3186 g3871
+1- 1
+-1 1
+.names g3871 I5882
+0 1
+.names g2145 I3800
+0 1
+.names I3800 g2656
+0 1
+.names I8393 I8394 I8395 g6485
+1-- 1
+-1- 1
+--1 1
+.names g6485 I8473
+0 1
+.names g33 I2199
+0 1
+.names g665 I1927
+0 1
+.names I1927 g900
+0 1
+.names g6661 I8834
+0 1
+.names I8834 g6708
+0 1
+.names I1838 g729
+0 1
+.names g729 I2399
+0 1
+.names g1106 g1695
+0 1
+.names g1695 I3278
+0 1
+.names g6457 I8476
+0 1
+.names I8476 g6520
+0 1
+.names g64 g940
+0 1
+.names g4456 g4158 g4757
+1- 1
+-1 1
+.names g4757 I6677
+0 1
+.names I4777 g3575
+0 1
+.names g3575 g3902
+0 1
+.names g5418 g5567
+0 1
+.names g5567 g5687
+0 1
+.names I3034 g1931
+0 1
+.names g1931 g2915
+0 1
+.names g590 g847
+0 1
+.names I2860 g1807
+0 1
+.names g1807 I3235
+0 1
+.names I2578 g1623
+0 1
+.names g1623 I3343
+0 1
+.names g6295 I8295
+0 1
+.names I8295 g6431
+0 1
+.names g114 g709
+0 1
+.names g6794 I8984
+0 1
+.names I8984 g6812
+0 1
+.names I6292 g4700
+0 1
+.names g4700 I6576
+0 1
+.names g209 I1847
+0 1
+.names I1847 g749
+0 1
+.names g2555 I4331
+0 1
+.names I4331 g3090
+0 1
+.names g6855 I9107
+0 1
+.names g1334 I3349
+0 1
+.names I3349 g2214
+0 1
+.names I5692 g4246
+0 1
+.names g4246 g4618
+0 1
+.names g2953 g5884 g6267
+1- 1
+-1 1
+.names g6267 g6376
+0 1
+.names g3876 I5511
+0 1
+.names I6143 g4569
+0 1
+.names g4569 I6349
+0 1
+.names g3486 g4011
+0 1
+.names g4011 g4343
+0 1
+.names g3441 g4003
+0 1
+.names g4003 I5674
+0 1
+.names g6066 g6043 g6173
+1- 1
+-1 1
+.names g6173 I8177
+0 1
+.names I2417 g1381
+0 1
+.names g1381 g2110
+0 1
+.names I2361 g1336
+0 1
+.names g1336 I3134
+0 1
+.names g6330 I8229
+0 1
+.names I2343 g1330
+0 1
+.names g1330 I3334
+0 1
+.names I7098 I7099 g5431
+0- 1
+-0 1
+.names g5431 I7197
+0 1
+.names I5618 g4198
+0 1
+.names g4198 g4566
+0 1
+.names g5391 g1589 g3793 g1880 g5561
+0000 1
+.names g5561 I7397
+0 1
+.names g1815 g2577 g2858
+0- 1
+-0 1
+.names g2858 I4534
+0 1
+.names I2140 g1110
+0 1
+.names g1110 g1714
+0 1
+.names I4783 I4784 g3597
+0- 1
+-0 1
+.names g3597 I4961
+0 1
+.names I3452 g2308
+0 1
+.names g2308 g2663
+0 1
+.names I3782 g2640
+0 1
+.names g2640 g3456
+0 1
+.names g5045 I6801
+0 1
+.names g699 I1947
+0 1
+.names I1947 g922
+0 1
+.names g4613 I6283
+0 1
+.names I6283 g4693
+0 1
+.names g3875 I5484
+0 1
+.names I7058 g5392
+0 1
+.names g5392 g5570
+0 1
+.names g5563 g4767 g5634
+0- 1
+-0 1
+.names g5634 g5860
+0 1
+.names g3325 g2733 g3733
+1- 1
+-1 1
+.names g3733 g4334
+0 1
+.names I3684 g2575
+0 1
+.names g2575 I3804
+0 1
+.names g7 I2207
+0 1
+.names g1815 g1797 g3109 g3330
+0-- 1
+-0- 1
+--0 1
+.names g3330 I5153
+0 1
+.names I4347 g3100
+0 1
+.names g3100 g3355
+0 1
+.names g5385 g5537
+0 1
+.names g5537 g5645
+0 1
+.names g6706 I8891
+0 1
+.names I8891 g6733
+0 1
+.names g5423 g5568
+0 1
+.names g5568 g5691
+0 1
+.names g3575 g4253 g4473
+1- 1
+-1 1
+.names g4473 g4804
+0 1
+.names I9035 g6838
+0 1
+.names I3206 g2090
+0 1
+.names g2090 I4414
+0 1
+.names g6569 I8696
+0 1
+.names I8696 g6610
+0 1
+.names g1064 g1070 g1620 g2434
+0-- 1
+-0- 1
+--0 1
+.names g2434 g2877
+0 1
+.names I4468 g3223
+0 1
+.names g3223 I4903
+0 1
+.names I8958 g6796
+0 1
+.names g2215 I4288
+0 1
+.names I2364 g1337
+0 1
+.names g1337 I3313
+0 1
+.names g5645 g5770
+0 1
+.names g5770 g5879
+0 1
+.names I3826 g2682
+0 1
+.names g2682 g3463
+0 1
+.names I3946 g2765
+0 1
+.names g2765 I4513
+0 1
+.names g1209 I2578
+0 1
+.names g5316 I7012
+0 1
+.names I7012 g5358
+0 1
+.names I2867 g1812
+0 1
+.names g1812 I3202
+0 1
+.names g3724 I5421
+0 1
+.names g687 I2115
+0 1
+.names I2115 g1076
+0 1
+.names I7590 g5791
+0 1
+.names g5791 g6069
+0 1
+.names I7704 g5924
+0 1
+.names g5924 I7817
+0 1
+.names g2138 g2036 g6397 g6474
+111 1
+.names g6474 g6540
+0 1
+.names g4192 g4564
+0 1
+.names g4564 I6352
+0 1
+.names g279 I1865
+0 1
+.names g3914 I5622
+0 1
+.names I5622 g4202
+0 1
+.names g4723 g5082
+0 1
+.names g5082 I6867
+0 1
+.names I5109 g3876
+0 1
+.names g5532 I7349
+0 1
+.names g6047 g6034 g6182
+1- 1
+-1 1
+.names g6182 I8144
+0 1
+.names g42 g1175
+0 1
+.names g736 I2411
+0 1
+.names I2411 g1375
+0 1
+.names g2244 I4366
+0 1
+.names I4366 g3118
+0 1
+.names g2966 I4593
+0 1
+.names I4593 g3318
+0 1
+.names g1305 I3596
+0 1
+.names I3596 g2464
+0 1
+.names I4587 g3312
+0 1
+.names g3312 g3872
+0 1
+.names g4159 I6004
+0 1
+.names I6004 g4494
+0 1
+.names I2182 g1161
+0 1
+.names g1161 I2870
+0 1
+.names g4382 I6066
+0 1
+.names I6066 g4518
+0 1
+.names I3352 g2215
+0 1
+.names g5493 I7372
+0 1
+.names I7372 g5615
+0 1
+.names g4222 I6139
+0 1
+.names I6139 g4567
+0 1
+.names I3408 g2265
+0 1
+.names g2265 I4382
+0 1
+.names I3161 g2044
+0 1
+.names g2044 I3776
+0 1
+.names g2525 I4282
+0 1
+.names I4282 g3057
+0 1
+.names g2951 g3466 g3821
+1- 1
+-1 1
+.names g3821 I5600
+0 1
+.names I2290 g1295
+0 1
+.names g1295 I3593
+0 1
+.names I2172 g1143
+0 1
+.names g1143 I2825
+0 1
+.names g634 g852
+0 1
+.names g852 g1285
+0 1
+.names I3797 g2653
+0 1
+.names g2653 g3457
+0 1
+.names I6737 g5099
+0 1
+.names g5099 g5174
+0 1
+.names I5977 g4462
+0 1
+.names g4462 I6386
+0 1
+.names I3419 g2268
+0 1
+.names g2268 I3965
+0 1
+.names g6288 g6119 g6426
+1- 1
+-1 1
+.names g6426 I8488
+0 1
+.names g6844 I9074
+0 1
+.names I9074 g6849
+0 1
+.names I6507 g4823
+0 1
+.names g4823 I6599
+0 1
+.names I1835 g719
+0 1
+.names g719 I2408
+0 1
+.names g3267 I5027
+0 1
+.names I5027 g3834
+0 1
+.names I2552 g1578
+0 1
+.names g1578 g2295
+0 1
+.names g791 I2420
+0 1
+.names I2420 g1384
+0 1
+.names g1123 I2370
+0 1
+.names I2370 g1339
+0 1
+.names g5331 g5545
+0 1
+.names g4343 I6170
+0 1
+.names g6852 g2089 g6864
+1- 1
+-1 1
+.names g6864 I9128
+0 1
+.names g6880 I9161
+0 1
+.names I9161 g6898
+0 1
+.names g729 g719 g766 I2566 g1595
+1111 1
+.names g1595 g1838
+0 1
+.names g6878 I9167
+0 1
+.names I9167 g6900
+0 1
+.names g1631 I3331
+0 1
+.names I3331 g2194
+0 1
+.names g6778 I8961
+0 1
+.names I8961 g6797
+0 1
+.names g1305 I3537
+0 1
+.names I3537 g2394
+0 1
+.names I2449 g1439
+0 1
+.names g1439 I3050
+0 1
+.names I2476 g1491
+0 1
+.names g1491 I3641
+0 1
+.names I2716 g1715
+0 1
+.names g1715 I2943
+0 1
+.names I5328 g4022
+0 1
+.names g4022 I5736
+0 1
+.names g6412 I8450
+0 1
+.names g4349 g4015 g4430
+1- 1
+-1 1
+.names g4430 I6280
+0 1
+.names g4745 I6625
+0 1
+.names I6625 g4933
+0 1
+.names g5281 I7086
+0 1
+.names I7086 g5420
+0 1
+.names g4386 I6075
+0 1
+.names I6075 g4521
+0 1
+.names g1094 g1672
+0 1
+.names g5074 g5124 g5281
+1- 1
+-1 1
+.names g5281 I7058
+0 1
+.names I2165 g1123
+0 1
+.names g1123 I2887
+0 1
+.names g689 I2122
+0 1
+.names I2029 g952
+0 1
+.names g952 g1477
+0 1
+.names g3022 I4495
+0 1
+.names g15 I2228
+0 1
+.names g5605 I7593
+0 1
+.names I7593 g5794
+0 1
+.names g1143 I2608
+0 1
+.names I2608 g1643
+0 1
+.names I4229 g3022
+0 1
+.names I3232 g2108
+0 1
+.names g2108 I4437
+0 1
+.names g2197 I3858
+0 1
+.names I3858 g2705
+0 1
+.names I4537 g3258
+0 1
+.names g3258 g3813
+0 1
+.names I8503 g6529
+0 1
+.names g6529 I8650
+0 1
+.names I2620 g1647
+0 1
+.names g1320 I3373
+0 1
+.names I3373 g2242
+0 1
+.names g45 g1205
+0 1
+.names g678 I2033
+0 1
+.names g3345 g2759 g3744
+1- 1
+-1 1
+.names g3744 I5871
+0 1
+.names g277 I1859
+0 1
+.names I1859 g774
+0 1
+.names g6789 I8994
+0 1
+.names I8994 g6819
+0 1
+.names g6684 I8800
+0 1
+.names I8800 g6694
+0 1
+.names g3856 I5848
+0 1
+.names I5848 g4379
+0 1
+.names g5638 g2053 g1661 g5852
+0-- 1
+-0- 1
+--0 1
+.names g5852 g5905
+0 1
+.names I3909 g2740
+0 1
+.names g2740 g3519
+0 1
+.names g5873 g5994
+0 1
+.names g5994 I7856
+0 1
+.names g111 g921
+0 1
+.names g1011 g1551
+0 1
+.names g1175 I2756
+0 1
+.names I2756 g1742
+0 1
+.names g2112 g1649 g2859
+11 1
+.names g2859 I4752
+0 1
+.names I8165 g6367
+0 1
+.names g6367 g6488
+0 1
+.names g1646 I3391
+0 1
+.names I3391 g2254
+0 1
+.names g6385 g4334 g4092 g4314 g6446
+0000 1
+.names g6446 I8594
+0 1
+.names g2315 I4023
+0 1
+.names I4023 g2814
+0 1
+.names g4022 I5746
+0 1
+.names I5746 g4289
+0 1
+.names g4609 I6247
+0 1
+.names I6425 g4775
+0 1
+.names g4775 I6756
+0 1
+.names g6691 I8821
+0 1
+.names I8821 g6701
+0 1
+.names g4867 g6772 g6795
+1- 1
+-1 1
+.names g6795 I8972
+0 1
+.names I2763 g1748
+0 1
+.names g1748 I3271
+0 1
+.names I2204 g1193
+0 1
+.names g1193 I2845
+0 1
+.names g5124 I6952
+0 1
+.names I6952 g5300
+0 1
+.names g1295 I3502
+0 1
+.names I3502 g2350
+0 1
+.names g6259 g6645 g6686
+1- 1
+-1 1
+.names g6686 I8806
+0 1
+.names I2808 g1771
+0 1
+.names g1771 I3611
+0 1
+.names g1 I2137
+0 1
+.names g6774 I8943
+0 1
+.names g1209 I2337
+0 1
+.names I2848 g1792
+0 1
+.names g1792 I2913
+0 1
+.names g1191 I2773
+0 1
+.names I2773 g1754
+0 1
+.names I9125 g6886
+0 1
+.names g102 g1070 g1815
+0- 1
+-0 1
+.names g1815 g2409
+0 1
+.names g48 I1917
+0 1
+.names I1917 g894
+0 1
+.names g567 g839
+0 1
+.names g839 g1273
+0 1
+.names g118 g3251 g3725
+11 1
+.names g3725 I5424
+0 1
+.names I5998 g4492
+0 1
+.names g4492 I6403
+0 1
+.names g6252 I8044
+0 1
+.names I8044 g6314
+0 1
+.names I5987 g4485
+0 1
+.names g4485 g4799
+0 1
+.names I9113 g6882
+0 1
+.names g6882 I9155
+0 1
+.names I3635 g2509
+0 1
+.names g2509 g2836
+0 1
+.names I3343 g2212
+0 1
+.names I6434 g4780
+0 1
+.names g4780 I6763
+0 1
+.names g3589 I5081
+0 1
+.names I5081 g3860
+0 1
+.names g2390 I4166
+0 1
+.names I4166 g2967
+0 1
+.names g6818 I9008
+0 1
+.names I6923 g5266
+0 1
+.names g5266 g5440
+0 1
+.names I4240 g3029
+0 1
+.names g3029 g3710
+0 1
+.names I5043 g3840
+0 1
+.names g3840 I5523
+0 1
+.names g574 g843
+0 1
+.names I2047 g1006
+0 1
+.names g1006 g1543
+0 1
+.names g3859 I5478
+0 1
+.names I7999 g6283
+0 1
+.names g6283 g6408
+0 1
+.names g3814 I5545
+0 1
+.names I5545 g4153
+0 1
+.names g4566 I6359
+0 1
+.names I7856 g6136
+0 1
+.names g1846 I4031
+0 1
+.names I4031 g2822
+0 1
+.names I8828 g6706
+0 1
+.names I8907 g6743
+0 1
+.names g6743 I8913
+0 1
+.names I2067 g1037
+0 1
+.names g1037 I2692
+0 1
+.names g361 g946
+0 1
+.names g1117 I2731
+0 1
+.names I2731 g1729
+0 1
+.names g3466 g3425 g4059
+1- 1
+-1 1
+.names g4059 I5551
+0 1
+.names g4473 I6470
+0 1
+.names I6470 g4802
+0 1
+.names g3567 I5214
+0 1
+.names I5214 g3962
+0 1
+.names g14 I2154
+0 1
+.names I3284 g2159
+0 1
+.names g2159 I4189
+0 1
+.names I5056 g3847
+0 1
+.names g3847 I5499
+0 1
+.names g5019 I6819
+0 1
+.names I6819 g5151
+0 1
+.names g2086 I4398
+0 1
+.names I4398 g3158
+0 1
+.names g6792 I8978
+0 1
+.names I8978 g6806
+0 1
+.names g2877 I4706
+0 1
+.names g5751 I7637
+0 1
+.names g5352 I7270
+0 1
+.names I7270 g5530
+0 1
+.names I9101 g6878
+0 1
+.names g4153 I5926
+0 1
+.names I3059 g1950
+0 1
+.names g1950 g2921
+0 1
+.names I7583 g5784
+0 1
+.names g5784 g6065
+0 1
+.names g4383 g4043 g4446
+1- 1
+-1 1
+.names g4446 I6315
+0 1
+.names I3672 g2555
+0 1
+.names g2555 I4371
+0 1
+.names I9128 g6887
+0 1
+.names I3222 g2102
+0 1
+.names g2102 I4429
+0 1
+.names g5947 I7838
+0 1
+.names I7838 g6122
+0 1
+.names g6305 I8329
+0 1
+.names I8329 g6465
+0 1
+.names g6109 I8056
+0 1
+.names I8056 g6322
+0 1
+.names g985 g1660
+0 1
+.names g1407 I3053
+0 1
+.names I3053 g1946
+0 1
+.names g5824 g6040
+0 1
+.names g6040 g6230
+0 1
+.names g4687 I6646
+0 1
+.names I6646 g5010
+0 1
+.names g4375 I6045
+0 1
+.names I6045 g4511
+0 1
+.names I6587 g4861
+0 1
+.names g4861 I6874
+0 1
+.names I2989 g1894
+0 1
+.names g1894 g2895
+0 1
+.names g5824 g6033
+0 1
+.names I3638 g2512
+0 1
+.names g2512 g2837
+0 1
+.names g846 g1263
+0 1
+.names g1263 I2979
+0 1
+.names g5649 g1529 g1088 g2068 g5864
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g5864 g5884
+0 1
+.names g6314 I8342
+0 1
+.names g11 I2218
+0 1
+.names g639 g878
+0 1
+.names g878 g1513
+0 1
+.names g41 g897
+0 1
+.names g897 I2312
+0 1
+.names I2952 g1852
+0 1
+.names g1852 I3714
+0 1
+.names g2555 I4297
+0 1
+.names g6243 g6084 g6292
+1- 1
+-1 1
+.names g6292 I8255
+0 1
+.names g6266 g6648 g6689
+1- 1
+-1 1
+.names g6689 I8815
+0 1
+.names g4157 I5998
+0 1
+.names g280 I1868
+0 1
+.names g3575 g5500 g5605
+1- 1
+-1 1
+.names g5605 I7608
+0 1
+.names g3692 g3172 g3863
+1- 1
+-1 1
+.names g3863 I5862
+0 1
+.names g985 g1679
+0 1
+.names g784 I2414
+0 1
+.names I2414 g1378
+0 1
+.names g4450 I6324
+0 1
+.names I6324 g4714
+0 1
+.names g971 I2293
+0 1
+.names g5124 I6937
+0 1
+.names I6937 g5278
+0 1
+.names I4226 g3019
+0 1
+.names g3019 g3284
+0 1
+.names I3833 g2687
+0 1
+.names g2687 I4684
+0 1
+.names I8367 I8368 I8369 I8370 g6481
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6481 I8497
+0 1
+.names g2777 I4516
+0 1
+.names I6315 g4711
+0 1
+.names g4711 I6537
+0 1
+.names I4324 g3085
+0 1
+.names g3085 g3545
+0 1
+.names g2276 I3983
+0 1
+.names I3983 g2788
+0 1
+.names g6032 I7859
+0 1
+.names I7859 g6137
+0 1
+.names I7264 g5524
+0 1
+.names g5524 g5667
+0 1
+.names g6888 I9140
+0 1
+.names I9140 g6891
+0 1
+.names g1498 I2907
+0 1
+.names g1176 I2358
+0 1
+.names I2358 g1335
+0 1
+.names g2007 g862 g1784 g2831
+0-- 1
+-0- 1
+--0 1
+.names g2831 g3380
+0 1
+.names g2814 I4791
+0 1
+.names g6120 I8089
+0 1
+.names I8089 g6337
+0 1
+.names I3650 g2525
+0 1
+.names g2525 I4309
+0 1
+.names g1193 I2828
+0 1
+.names g3263 I5023
+0 1
+.names I5023 g3832
+0 1
+.names g899 I2269
+0 1
+.names g5452 I7318
+0 1
+.names I7318 g5566
+0 1
+.names g3571 I5068
+0 1
+.names I5068 g3853
+0 1
+.names I3590 g2460
+0 1
+.names g2460 I3736
+0 1
+.names I6253 g4660
+0 1
+.names g4660 I6612
+0 1
+.names I7143 g5465
+0 1
+.names g5465 I7161
+0 1
+.names g5566 I7361
+0 1
+.names g2059 I4050
+0 1
+.names I4050 g2842
+0 1
+.names g1236 I2854
+0 1
+.names I2854 g1805
+0 1
+.names g4242 g4617
+0 1
+.names g4617 I6417
+0 1
+.names g1491 I3623
+0 1
+.names g4022 I5713
+0 1
+.names I5713 g4262
+0 1
+.names I6885 g5219
+0 1
+.names g5219 I7051
+0 1
+.names g43 I2221
+0 1
+.names I3733 g2603
+0 1
+.names g2603 g3559
+0 1
+.names g4569 I6366
+0 1
+.names I6366 g4736
+0 1
+.names g1295 I3614
+0 1
+.names I3614 g2485
+0 1
+.names I7361 g5597
+0 1
+.names g5597 I7451
+0 1
+.names I2196 g1189
+0 1
+.names g1189 I2703
+0 1
+.names g6248 g6089 g6297
+1- 1
+-1 1
+.names g6297 I8267
+0 1
+.names g4262 g4623
+0 1
+.names g1519 I3056
+0 1
+.names I3056 g1947
+0 1
+.names g3357 g2771 g3746
+1- 1
+-1 1
+.names g3746 I5885
+0 1
+.names g6137 I7999
+0 1
+.names g5048 g672 g5231
+1- 1
+-1 1
+.names g5231 I7146
+0 1
+.names g4188 g4560
+0 1
+.names g4560 I6330
+0 1
+.names g5349 g3275 g5531
+1- 1
+-1 1
+.names g5531 I7346
+0 1
+.names I3268 g2145
+0 1
+.names g2145 I3871
+0 1
+.names I8027 g6305
+0 1
+.names g3732 I5840
+0 1
+.names I5840 g4375
+0 1
+.names I6599 g4871
+0 1
+.names I8573 g6563
+0 1
+.names g6563 I8761
+0 1
+.names g2109 I4441
+0 1
+.names I4441 g3204
+0 1
+.names g4563 I6346
+0 1
+.names I6346 g4722
+0 1
+.names g128 g710
+0 1
+.names I3830 g2686
+0 1
+.names g2686 I4498
+0 1
+.names g323 g829
+0 1
+.names g4772 I6753
+0 1
+.names I6753 g5113
+0 1
+.names I1853 g760
+0 1
+.names g760 g1632
+0 1
+.names g686 I2067
+0 1
+.names g2555 I4347
+0 1
+.names I8773 I8774 g6661
+1- 1
+-1 1
+.names g6661 I8828
+0 1
+.names g6695 I8872
+0 1
+.names g6415 I8411
+0 1
+.names g1143 I2630
+0 1
+.names I2630 g1653
+0 1
+.names g2145 I3782
+0 1
+.names I8524 g6536
+0 1
+.names g6536 I8727
+0 1
+.names g1317 I3140
+0 1
+.names I3140 g2031
+0 1
+.names g327 g3441 g3729
+11 1
+.names g3729 I5436
+0 1
+.names g1318 I3385
+0 1
+.names I3385 g2252
+0 1
+.names g1477 g5688 g5753
+00 1
+.names g5753 g5908
+0 1
+.names g1861 g2958
+0 1
+.names g5496 g3285 g5626
+1- 1
+-1 1
+.names g5626 I7472
+0 1
+.names g1636 I3319
+0 1
+.names I3319 g2176
+0 1
+.names g40 g1115
+0 1
+.names g1115 I2716
+0 1
+.names g3670 g3135 g3842
+1- 1
+-1 1
+.names g3842 I5831
+0 1
+.names I2179 g1160
+0 1
+.names g3042 g3271
+0 1
+.names g3271 I5182
+0 1
+.names g5458 I7258
+0 1
+.names I7258 g5518
+0 1
+.names g5162 g5169 g5418
+00 1
+.names I5182 g3952
+0 1
+.names g3952 I5382
+0 1
+.names g1461 I3543
+0 1
+.names I3543 g2405
+0 1
+.names g1193 I2848
+0 1
+.names g1754 I3016
+0 1
+.names I3016 g1917
+0 1
+.names I3620 g2491
+0 1
+.names g2491 g2829
+0 1
+.names g2256 I3946
+0 1
+.names I6949 g5299
+0 1
+.names g5299 I7116
+0 1
+.names I2929 g1841
+0 1
+.names g1841 I4019
+0 1
+.names g4299 I5923
+0 1
+.names I5882 g4393
+0 1
+.names g4393 I6090
+0 1
+.names g2555 I4362
+0 1
+.names I2635 g1656
+0 1
+.names g1656 I3672
+0 1
+.names g2179 I4255
+0 1
+.names I4255 g3040
+0 1
+.names g1439 I3077
+0 1
+.names g4603 I6485
+0 1
+.names g5535 I7355
+0 1
+.names I7355 g5593
+0 1
+.names g2670 I4678
+0 1
+.names I4678 g3440
+0 1
+.names g3571 I5233
+0 1
+.names I5233 g3969
+0 1
+.names g6142 I8040
+0 1
+.names I8040 g6312
+0 1
+.names I3244 g2117
+0 1
+.names g2117 I4452
+0 1
+.names g2408 I4173
+0 1
+.names g6319 I8217
+0 1
+.names g139 g895
+0 1
+.names g4284 g4633
+0 1
+.names g4633 I6456
+0 1
+.names g4388 I6081
+0 1
+.names I6081 g4523
+0 1
+.names g465 I2231
+0 1
+.names I2231 g1233
+0 1
+.names g4693 I6649
+0 1
+.names I5750 g4293
+0 1
+.names g4293 g4643
+0 1
+.names I6635 g4943
+0 1
+.names g4943 g5264
+0 1
+.names g6887 I9158
+0 1
+.names g485 g1054
+0 1
+.names g5099 g5160
+0 1
+.names g1837 I3999
+0 1
+.names I3999 g2796
+0 1
+.names g4569 I6355
+0 1
+.names g1681 I3605
+0 1
+.names I3605 g2473
+0 1
+.names I2491 g1519
+0 1
+.names g1519 I3099
+0 1
+.names g6385 g3733 g4328 g4080 g6436
+0000 1
+.names g6436 I8576
+0 1
+.names g1205 I2805
+0 1
+.names g6701 I8866
+0 1
+.names g1116 g1740
+0 1
+.names g1740 I3304
+0 1
+.names I4334 g3093
+0 1
+.names g3093 I4486
+0 1
+.names g5458 I7261
+0 1
+.names I7261 g5521
+0 1
+.names I2453 g1450
+0 1
+.names g1450 I3499
+0 1
+.names I8470 g6518
+0 1
+.names g6518 I8716
+0 1
+.names I2147 g1113
+0 1
+.names g1113 g1725
+0 1
+.names g5605 I7596
+0 1
+.names g6697 I8875
+0 1
+.names g3247 I5106
+0 1
+.names I5106 g3875
+0 1
+.names g1450 I3478
+0 1
+.names I3478 g2324
+0 1
+.names I3886 g2726
+0 1
+.names g2726 I4504
+0 1
+.names g688 I2119
+0 1
+.names I6942 g5292
+0 1
+.names g5292 g5450
+0 1
+.names g3014 g3705
+0 1
+.names g3705 I5037
+0 1
+.names g5824 g5996
+0 1
+.names g4016 I5394
+0 1
+.names g6526 I8644
+0 1
+.names g4170 I6015
+0 1
+.names I6015 g4499
+0 1
+.names g1161 I2352
+0 1
+.names I5854 g4381
+0 1
+.names g4381 I6063
+0 1
+.names g6742 I8916
+0 1
+.names I8916 g6746
+0 1
+.names g1143 I2867
+0 1
+.names I8603 g6573
+0 1
+.names g6573 I8699
+0 1
+.names g1333 I3322
+0 1
+.names I3322 g2177
+0 1
+.names g5099 g5179
+0 1
+.names g5150 I7035
+0 1
+.names I7035 g5379
+0 1
+.names I2234 g1236
+0 1
+.names g1236 I2893
+0 1
+.names g5774 I7646
+0 1
+.names g845 g1257
+0 1
+.names g1257 I3044
+0 1
+.names g3 I2196
+0 1
+.names g3271 I5040
+0 1
+.names I5040 g3839
+0 1
+.names g6931 I9217
+0 1
+.names I9217 g6932
+0 1
+.names g4022 I5728
+0 1
+.names I5728 g4273
+0 1
+.names I7254 g5512
+0 1
+.names g5512 g5658
+0 1
+.names g6535 I8730
+0 1
+.names I8730 g6624
+0 1
+.names I5913 g4406
+0 1
+.names g4406 I6118
+0 1
+.names g4384 g4044 g4447
+1- 1
+-1 1
+.names g4447 I6318
+0 1
+.names I3425 g2276
+0 1
+.names g1743 g1797 g1793 g1138 g2577
+1111 1
+.names g2577 g2849
+0 1
+.names g1295 I3572
+0 1
+.names g1209 I2835
+0 1
+.names I2835 g1787
+0 1
+.names g331 g3441 g3731
+11 1
+.names g3731 I5442
+0 1
+.names g2029 g1503 g2670
+11 1
+.names g4379 I6057
+0 1
+.names g952 g6354 g6496
+00 1
+.names g6496 I8524
+0 1
+.names I8494 g6526
+0 1
+.names I2460 g1461
+0 1
+.names I6959 g5307
+0 1
+.names g5307 I6989
+0 1
+.names g1123 I2614
+0 1
+.names I2125 g1101
+0 1
+.names g1101 g1675
+0 1
+.names g698 I2125
+0 1
+.names g3090 g3343
+0 1
+.names g3084 g3571
+0 1
+.names g46 g1221
+0 1
+.names g1221 I2821
+0 1
+.names I6318 g4712
+0 1
+.names g6365 g6487
+0 1
+.names g6487 g6576
+0 1
+.names I6289 g4699
+0 1
+.names g4699 I6549
+0 1
+.names g6244 g6085 g6293
+1- 1
+-1 1
+.names g6293 I8258
+0 1
+.names g6270 g6650 g6690
+1- 1
+-1 1
+.names g6690 I8818
+0 1
+.names g1295 I3534
+0 1
+.names g1284 I3382
+0 1
+.names I3382 g2245
+0 1
+.names I3569 g2436
+0 1
+.names g2436 I3729
+0 1
+.names g1835 I3961
+0 1
+.names I5103 g3874
+0 1
+.names g3874 I5454
+0 1
+.names g1627 I3434
+0 1
+.names I3434 g2291
+0 1
+.names g5638 g1683 g1552 g2062 g5854
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g5854 g5997
+0 1
+.names g4405 I6114
+0 1
+.names I6114 g4534
+0 1
+.names g2245 I3927
+0 1
+.names I5084 g3861
+0 1
+.names g3861 I5532
+0 1
+.names g1011 I2668
+0 1
+.names I2668 g1684
+0 1
+.names I8815 g6699
+0 1
+.names I1877 g815
+0 1
+.names g815 g1639
+0 1
+.names g1161 I2367
+0 1
+.names I2367 g1338
+0 1
+.names g1426 I3074
+0 1
+.names I3074 g1963
+0 1
+.names g6077 g6051 g6179
+1- 1
+-1 1
+.names g6179 I8186
+0 1
+.names g4187 g4559
+0 1
+.names g4559 I6321
+0 1
+.names g2525 I4226
+0 1
+.names I2137 g1109
+0 1
+.names I2845 g1791
+0 1
+.names g6768 g3307 g6791
+1- 1
+-1 1
+.names g6791 I8975
+0 1
+.names I3395 g2256
+0 1
+.names g310 g889
+0 1
+.names g22 g896
+0 1
+.names g896 I2306
+0 1
+.names g3388 g3792
+0 1
+.names g4468 g4569 g4745
+1- 1
+-1 1
+.names I3599 g2467
+0 1
+.names g2467 g2819
+0 1
+.names g3557 I5316
+0 1
+.names I5316 g4014
+0 1
+.names I8282 g6424
+0 1
+.names g6424 I8426
+0 1
+.names I5333 g4034
+0 1
+.names g4034 I5412
+0 1
+.names g4608 I6253
+0 1
+.names I6176 I6177 g4608
+0- 1
+-0 1
+.names I3202 g2088
+0 1
+.names I3080 g1969
+0 1
+.names g1969 g2923
+0 1
+.names I3546 g2408
+0 1
+.names I8527 g6537
+0 1
+.names g6537 I8614
+0 1
+.names g1450 I3513
+0 1
+.names g1305 I3617
+0 1
+.names I3617 g2488
+0 1
+.names g1177 I2782
+0 1
+.names I2782 g1759
+0 1
+.names g2550 I3855
+0 1
+.names I3855 g2701
+0 1
+.names I7104 g5432
+0 1
+.names g5432 I7190
+0 1
+.names g6275 g6603 g6691
+1- 1
+-1 1
+.names I8488 g6524
+0 1
+.names I6437 g4781
+0 1
+.names g4781 I6740
+0 1
+.names g4185 I6051
+0 1
+.names I6051 g4513
+0 1
+.names g6777 g3333 g6794
+1- 1
+-1 1
+.names I7358 g5596
+0 1
+.names g1439 I3068
+0 1
+.names I3068 g1957
+0 1
+.names g1285 I3352
+0 1
+.names g5926 I7829
+0 1
+.names I7829 g6119
+0 1
+.names g838 g1256
+0 1
+.names g1256 I2904
+0 1
+.names g6108 I8051
+0 1
+.names I8051 g6319
+0 1
+.names g266 g1049
+0 1
+.names g5753 g5901
+0 1
+.names I3077 g1966
+0 1
+.names g1966 g2886
+0 1
+.names I6296 g4702
+0 1
+.names g4702 I6552
+0 1
+.names I2973 g1878
+0 1
+.names g1878 I4059
+0 1
+.names g3564 I5337
+0 1
+.names I5337 g4036
+0 1
+.names g1934 I4337
+0 1
+.names I4337 g3094
+0 1
+.names I3258 g2134
+0 1
+.names g2134 I4459
+0 1
+.names g6343 g5945 g6453
+1- 1
+-1 1
+.names g6453 I8544
+0 1
+.names g4655 I6269
+0 1
+.names I6269 g4679
+0 1
+.names g6143 I8110
+0 1
+.names I8110 g6352
+0 1
+.names g6788 I8991
+0 1
+.names I8991 g6818
+0 1
+.names g6488 g6577
+0 1
+.names g1109 g1710
+0 1
+.names g1710 I3288
+0 1
+.names I4303 g3074
+0 1
+.names g3074 g3567
+0 1
+.names g851 g1284
+0 1
+.names g3881 I5487
+0 1
+.names I7484 g5723
+0 1
+.names g5723 I7704
+0 1
+.names g594 g848
+0 1
+.names I6377 g4753
+0 1
+.names g4753 g5092
+0 1
+.names g1049 I2479
+0 1
+.names I2479 g1498
+0 1
+.names g1236 I2763
+0 1
+.names I3441 g2296
+0 1
+.names g2296 g2870
+0 1
+.names I2445 g1426
+0 1
+.names g1426 I3022
+0 1
+.names I2961 g1857
+0 1
+.names g1857 I4261
+0 1
+.names g774 I2391
+0 1
+.names g3740 I5857
+0 1
+.names I5857 g4382
+0 1
+.names I4706 g3466
+0 1
+.names g3466 g3776
+0 1
+.names g6890 I9146
+0 1
+.names I9146 g6893
+0 1
+.names I2913 g1833
+0 1
+.names I2604 g1641
+0 1
+.names g1641 I3422
+0 1
+.names I7073 g5407
+0 1
+.names g5407 g5574
+0 1
+.names I3611 g2484
+0 1
+.names g2484 I3749
+0 1
+.names I4192 g2997
+0 1
+.names g2997 g3593
+0 1
+.names g5869 g5992
+0 1
+.names g5992 g6211
+0 1
+.names g2044 I3794
+0 1
+.names I3794 g2650
+0 1
+.names g5627 I7475
+0 1
+.names I7475 g5714
+0 1
+.names g337 g932
+0 1
+.names g5902 g5601 g6113
+1- 1
+-1 1
+.names g6113 I8061
+0 1
+.names g4473 g4805
+0 1
+.names g3502 I5328
+0 1
+.names I1844 g743
+0 1
+.names g743 g1584
+0 1
+.names I5415 g4111
+0 1
+.names g6527 I8665
+0 1
+.names g878 g1539
+0 1
+.names g3710 I5109
+0 1
+.names g1586 I3546
+0 1
+.names g465 I2159
+0 1
+.names I6337 g4719
+0 1
+.names g4719 I6570
+0 1
+.names I2428 g1395
+0 1
+.names g1395 g2136
+0 1
+.names g2095 g1573 g2924
+1- 1
+-1 1
+.names g2924 I4664
+0 1
+.names g5912 g2381 g6237
+1- 1
+-1 1
+.names g6237 I8027
+0 1
+.names g2194 I4246
+0 1
+.names g1295 I3488
+0 1
+.names I3488 g2336
+0 1
+.names g5534 I7336
+0 1
+.names g143 I1832
+0 1
+.names I1832 g716
+0 1
+.names I2653 g1673
+0 1
+.names g1673 I3560
+0 1
+.names g207 I1841
+0 1
+.names I1841 g736
+0 1
+.names I6414 g4770
+0 1
+.names I3519 g2367
+0 1
+.names g2367 g2768
+0 1
+.names g6173 I8174
+0 1
+.names g2158 I3723
+0 1
+.names I3723 g2594
+0 1
+.names g4562 I6464
+0 1
+.names I6464 g4798
+0 1
+.names I8061 g6325
+0 1
+.names I8943 g6785
+0 1
+.names g6785 g6821
+0 1
+.names I5594 g4188
+0 1
+.names I3581 g2446
+0 1
+.names g2446 g2806
+0 1
+.names g1295 I3632
+0 1
+.names g3207 I4688
+0 1
+.names I4688 g3450
+0 1
+.names I2802 g1769
+0 1
+.names g1769 I3037
+0 1
+.names g6936 I9230
+0 1
+.names I9230 g6939
+0 1
+.names g668 g1052
+0 1
+.names I2293 g1305
+0 1
+.names g1305 I3653
+0 1
+.names g1426 I3102
+0 1
+.names I2225 g1222
+0 1
+.names g1222 I2315
+0 1
+.names g1209 I2811
+0 1
+.names I7608 g5809
+0 1
+.names g5809 g6083
+0 1
+.names I2964 g1858
+0 1
+.names g1858 g2887
+0 1
+.names g682 I2047
+0 1
+.names I8544 g6544
+0 1
+.names g4745 I6607
+0 1
+.names I5736 g4281
+0 1
+.names g4281 g4632
+0 1
+.names g5686 g5742
+0 1
+.names g5742 g5889
+0 1
+.names g5433 I7164
+0 1
+.names I3115 g2004
+0 1
+.names g2004 g2934
+0 1
+.names g1608 I3355
+0 1
+.names I3355 g2230
+0 1
+.names g4360 I5948
+0 1
+.names I5948 g4437
+0 1
+.names g3969 I5388
+0 1
+.names g3293 g2685 g4068
+1- 1
+-1 1
+.names g4068 g4302
+0 1
+.names g3344 g2758 g3743
+1- 1
+-1 1
+.names g3743 I5865
+0 1
+.names g5922 I7814
+0 1
+.names I5626 g4206
+0 1
+.names g4206 g4579
+0 1
+.names g4640 g4662
+0 1
+.names g4662 g4869
+0 1
+.names g6239 I8030
+0 1
+.names I8030 g6306
+0 1
+.names g2044 I3752
+0 1
+.names g5149 I7029
+0 1
+.names I7029 g5375
+0 1
+.names g6136 I8107
+0 1
+.names g4455 I6337
+0 1
+.names I2150 g1114
+0 1
+.names g1114 g1730
+0 1
+.names I4249 g3034
+0 1
+.names g3034 g3289
+0 1
+.names g766 I2485
+0 1
+.names g3388 g3777
+0 1
+.names I6474 I6475 g4803
+0- 1
+-0 1
+.names g4803 I6587
+0 1
+.names g6056 g6039 g6167
+1- 1
+-1 1
+.names g6167 I8159
+0 1
+.names I5907 g4404
+0 1
+.names g4404 I6111
+0 1
+.names g3242 I5030
+0 1
+.names I5030 g3835
+0 1
+.names g4378 g4042 g4444
+1- 1
+-1 1
+.names g4444 I6311
+0 1
+.names g6325 I8223
+0 1
+.names g1806 I3212
+0 1
+.names I3212 g2096
+0 1
+.names g6886 I9143
+0 1
+.names g3714 I5119
+0 1
+.names I5119 g3882
+0 1
+.names g94 g1070
+0 1
+.names g1824 I3665
+0 1
+.names I3665 g2550
+0 1
+.names g4745 I6615
+0 1
+.names I4261 g3042
+0 1
+.names g2100 g1582 g2928
+1- 1
+-1 1
+.names g2928 I4671
+0 1
+.names g1143 I2880
+0 1
+.names I3675 g2565
+0 1
+.names g2565 g2845
+0 1
+.names g1741 I2992
+0 1
+.names I2992 g1897
+0 1
+.names g6533 I8724
+0 1
+.names I8724 g6622
+0 1
+.names g971 I2537
+0 1
+.names g3704 g3195 g3879
+1- 1
+-1 1
+.names g3879 I5896
+0 1
+.names I3334 g2195
+0 1
+.names g3942 I5716
+0 1
+.names I5716 g4265
+0 1
+.names I2979 g1884
+0 1
+.names g1884 g2891
+0 1
+.names I3028 g1925
+0 1
+.names g1925 g2913
+0 1
+.names g5022 I6795
+0 1
+.names I2623 g1648
+0 1
+.names g1648 I3364
+0 1
+.names g4903 g5220
+0 1
+.names g5220 g5384
+0 1
+.names g6864 I9134
+0 1
+.names g6875 I9179
+0 1
+.names I9179 g6904
+0 1
+.names g4626 I6448
+0 1
+.names I6448 g4786
+0 1
+.names g3388 g3799
+0 1
+.names g6430 I8462
+0 1
+.names I8462 g6514
+0 1
+.names g3914 I5825
+0 1
+.names I5825 g4364
+0 1
+.names I8240 g6410
+0 1
+.names g6410 I8447
+0 1
+.names g2145 I3770
+0 1
+.names g3318 I5019
+0 1
+.names g774 I2417
+0 1
+.names I7463 g5702
+0 1
+.names g5702 I7683
+0 1
+.names g6836 I9044
+0 1
+.names I3785 g2643
+0 1
+.names g2643 g3541
+0 1
+.names g1426 I2982
+0 1
+.names g1001 I2658
+0 1
+.names I2658 g1678
+0 1
+.names g4497 I6414
+0 1
+.names g697 I2234
+0 1
+.names g1193 I2346
+0 1
+.names I2346 g1331
+0 1
+.names g4022 I5753
+0 1
+.names I5753 g4296
+0 1
+.names g18 I2128
+0 1
+.names g1305 I3553
+0 1
+.names g386 g3901 g4176
+11 1
+.names g4176 I6020
+0 1
+.names I4312 g3079
+0 1
+.names g3079 g3332
+0 1
+.names g5434 I7167
+0 1
+.names g4618 I6420
+0 1
+.names g6685 I8803
+0 1
+.names I8803 g6695
+0 1
+.names I2162 g1122
+0 1
+.names g1122 I2330
+0 1
+.names I4452 g3209
+0 1
+.names I6231 g4644
+0 1
+.names g4644 I6507
+0 1
+.names g4403 I6108
+0 1
+.names I6108 g4532
+0 1
+.names g829 g1682
+0 1
+.names g6855 I9113
+0 1
+.names g204 I1856
+0 1
+.names g3388 g3802
+0 1
+.names g1461 I3608
+0 1
+.names I3608 g2481
+0 1
+.names g5497 g3286 g5627
+1- 1
+-1 1
+.names g54 g931
+0 1
+.names g2125 I3840
+0 1
+.names I3840 g2692
+0 1
+.names I3288 g2163
+0 1
+.names g2163 I4217
+0 1
+.names g1820 I3215
+0 1
+.names I3698 I3699 g2582
+0- 1
+-0 1
+.names g2582 I4066
+0 1
+.names g5439 I7295
+0 1
+.names I7295 g5551
+0 1
+.names g5546 g1017 g1551 g2916 g5686
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g2215 I3886
+0 1
+.names g4662 I6737
+0 1
+.names g1684 I3626
+0 1
+.names I3626 g2497
+0 1
+.names g3962 I5385
+0 1
+.names g5124 I6956
+0 1
+.names I3271 g2154
+0 1
+.names g1192 I2776
+0 1
+.names I2776 g1755
+0 1
+.names g3821 I5597
+0 1
+.names I5597 g4189
+0 1
+.names g6770 g3321 g6792
+1- 1
+-1 1
+.names g4443 I6308
+0 1
+.names I6308 g4706
+0 1
+.names I8258 g6416
+0 1
+.names g6238 g6079 g6286
+1- 1
+-1 1
+.names g6286 I8243
+0 1
+.names I8270 g6420
+0 1
+.names g6420 I8417
+0 1
+.names g3575 g3901
+0 1
+.names g4745 I6630
+0 1
+.names I7517 g5774
+0 1
+.names g1491 I3675
+0 1
+.names g6461 I8482
+0 1
+.names I8482 g6522
+0 1
+.names g5879 g6115
+0 1
+.names g699 g1045
+0 1
+.names I2788 g1761
+0 1
+.names g1761 I3281
+0 1
+.names g5063 g5309
+0 1
+.names g5309 I7039
+0 1
+.names g5501 g3309 g5630
+1- 1
+-1 1
+.names g5630 I7484
+0 1
+.names g29 I2185
+0 1
+.names I2185 g1173
+0 1
+.names I3247 g2118
+0 1
+.names g2118 I4455
+0 1
+.names g6544 I8629
+0 1
+.names g5017 I6930
+0 1
+.names I6930 g5273
+0 1
+.names g1738 g2040
+0 1
+.names g971 I2476
+0 1
+.names g211 I1853
+0 1
+.names g1836 I3979
+0 1
+.names I3979 g2783
+0 1
+.names g1460 I3240
+0 1
+.names I3240 g2112
+0 1
+.names g642 g853
+0 1
+.names g853 g1283
+0 1
+.names g1450 I3462
+0 1
+.names I3462 g2312
+0 1
+.names g1112 I2405
+0 1
+.names I2405 g1369
+0 1
+.names I6417 g4771
+0 1
+.names g4771 I6750
+0 1
+.names g6562 I8758
+0 1
+.names I8758 g6654
+0 1
+.names I4258 g3041
+0 1
+.names g3041 g3714
+0 1
+.names g5605 I7583
+0 1
+.names I2741 g1733
+0 1
+.names g1733 I3684
+0 1
+.names I4799 g3604
+0 1
+.names g3604 I5006
+0 1
+.names g6250 g6643 g6684
+1- 1
+-1 1
+.names g702 g1059
+0 1
+.names g971 I2552
+0 1
+.names g1439 I3112
+0 1
+.names I3112 g2001
+0 1
+.names I5252 g3976
+0 1
+.names g3976 I5406
+0 1
+.names I7065 g5399
+0 1
+.names g5399 g5572
+0 1
+.names g1504 I3109
+0 1
+.names g2044 I3791
+0 1
+.names I2537 g1567
+0 1
+.names g1567 g2293
+0 1
+.names I9107 g6880
+0 1
+.names g6531 I8653
+0 1
+.names g3839 I5496
+0 1
+.names I2119 g1088
+0 1
+.names g1088 g1535
+0 1
+.names g4289 g4639
+0 1
+.names g6440 I8527
+0 1
+.names g5331 g5543
+0 1
+.names I3255 g2125
+0 1
+.names g2125 I3808
+0 1
+.names g5375 I7276
+0 1
+.names I5116 g3881
+0 1
+.names I2193 g1177
+0 1
+.names g1177 I2355
+0 1
+.names g3980 I5409
+0 1
+.names g3301 g2699 g4074
+1- 1
+-1 1
+.names g4074 g4309
+0 1
+.names g2488 g2828
+0 1
+.names I3623 g2494
+0 1
+.names g2494 g2830
+0 1
+.names g2324 g2727
+0 1
+.names g4473 g4808
+0 1
+.names g1257 I2964
+0 1
+.names g276 I1880
+0 1
+.names I1880 g821
+0 1
+.names g6572 I8702
+0 1
+.names I8702 g6612
+0 1
+.names I7276 g5534
+0 1
+.names g5691 I7494
+0 1
+.names I7494 g5729
+0 1
+.names g4448 g4154 g4740
+1- 1
+-1 1
+.names g4740 I6666
+0 1
+.names I9092 g6875
+0 1
+.names I2237 g1246
+0 1
+.names g1246 g1415
+0 1
+.names I6311 g4707
+0 1
+.names g6298 I8261
+0 1
+.names I8261 g6417
+0 1
+.names g5388 g1880 g5541
+00 1
+.names g5541 I7404
+0 1
+.names I4309 g3076
+0 1
+.names I8309 g6441
+0 1
+.names g6441 I8512
+0 1
+.names g3575 g3889
+0 1
+.names I6495 g4815
+0 1
+.names g4815 I6528
+0 1
+.names g965 I2643
+0 1
+.names I2643 g1664
+0 1
+.names g465 I2237
+0 1
+.names g5824 g6057
+0 1
+.names g6057 g6234
+0 1
+.names g1305 I3575
+0 1
+.names g5649 g1088 g1076 g2068 g5865
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g5865 g5885
+0 1
+.names g6114 I8066
+0 1
+.names I8066 g6328
+0 1
+.names I2207 g1203
+0 1
+.names g4040 I5445
+0 1
+.names g6450 I8538
+0 1
+.names I8538 g6542
+0 1
+.names g6116 I8070
+0 1
+.names I8070 g6330
+0 1
+.names g1219 I2721
+0 1
+.names I2721 g1721
+0 1
+.names g3083 g3242
+0 1
+.names g3242 I5091
+0 1
+.names g5900 g5599 g6109
+1- 1
+-1 1
+.names I3109 g1998
+0 1
+.names g1998 g2932
+0 1
+.names g6417 I8456
+0 1
+.names g5753 g5903
+0 1
+.names I3412 I3413 g2266
+0- 1
+-0 1
+.names g2266 I3833
+0 1
+.names g1236 I2318
+0 1
+.names g4451 I6327
+0 1
+.names I6327 g4715
+0 1
+.names g663 I1924
+0 1
+.names g6796 I8966
+0 1
+.names g3593 I5169
+0 1
+.names g4473 I6410
+0 1
+.names g4014 I5376
+0 1
+.names I3791 g2647
+0 1
+.names g2647 g3500
+0 1
+.names g4167 I6012
+0 1
+.names I6012 g4498
+0 1
+.names g685 I2057
+0 1
+.names g709 g1502
+0 1
+.names g2996 g3259
+0 1
+.names g3259 I5059
+0 1
+.names I5668 g4228
+0 1
+.names g4228 I5920
+0 1
+.names I2245 I2246 g1253
+0- 1
+-0 1
+.names g1253 I2457
+0 1
+.names g1678 I3584
+0 1
+.names g3693 g3176 g3864
+1- 1
+-1 1
+.names g3864 I5868
+0 1
+.names g1519 I2989
+0 1
+.names g693 I2193
+0 1
+.names I7116 g5436
+0 1
+.names g1263 g1257 g1270 I4040 g2834
+1111 1
+.names g2834 g3384
+0 1
+.names g1426 I3047
+0 1
+.names I3047 g1940
+0 1
+.names g1814 I3687
+0 1
+.names I3687 g2576
+0 1
+.names I3004 g1905
+0 1
+.names g1905 g2866
+0 1
+.names I6783 g5135
+0 1
+.names I3871 g2716
+0 1
+.names I5037 g3838
+0 1
+.names g5853 g5912
+0 1
+.names g5912 I7906
+0 1
+.names g1656 I3268
+0 1
+.names g1755 I3019
+0 1
+.names I4671 g3424
+0 1
+.names g5310 I7042
+0 1
+.names I7042 g5382
+0 1
+.names I5002 g3803
+0 1
+.names g3803 I5793
+0 1
+.names g855 g1287
+0 1
+.names g1287 I3419
+0 1
+.names g6876 I9173
+0 1
+.names I9173 g6902
+0 1
+.names g4049 g4017 g4237
+0- 1
+-0 1
+.names g4237 I6143
+0 1
+.names g4401 g4057 g4458
+1- 1
+-1 1
+.names g4458 I6343
+0 1
+.names g586 g846
+0 1
+.names g985 g1671
+0 1
+.names g5605 I7604
+0 1
+.names I7604 g5805
+0 1
+.names I4903 g3723
+0 1
+.names g3723 I5415
+0 1
+.names g1450 I3452
+0 1
+.names g4002 I5562
+0 1
+.names I6666 g5022
+0 1
+.names I2057 g1030
+0 1
+.names g6262 g6096 g6307
+1- 1
+-1 1
+.names g6307 I8279
+0 1
+.names g3001 I4492
+0 1
+.names I8177 g6371
+0 1
+.names g6371 g6490
+0 1
+.names g47 g898
+0 1
+.names g898 I2321
+0 1
+.names g6802 I9002
+0 1
+.names g2692 g3477
+0 1
+.names g5916 I7892
+0 1
+.names I7892 g6166
+0 1
+.names g6189 I8162
+0 1
+.names g4395 g4051 g4454
+1- 1
+-1 1
+.names g4454 I6334
+0 1
+.names g1805 I3370
+0 1
+.names I3370 g2241
+0 1
+.names g1030 g1564
+0 1
+.names g5728 g3781 g5916
+1- 1
+-1 1
+.names g1439 I3086
+0 1
+.names g6434 I8503
+0 1
+.names g6132 g6620 g6658
+1- 1
+-1 1
+.names g6658 I8843
+0 1
+.names g6513 I8745
+0 1
+.names I8745 g6649
+0 1
+.names I6299 g4703
+0 1
+.names g4703 I6555
+0 1
+.names g1174 I2753
+0 1
+.names I2753 g1741
+0 1
+.names I6733 g5097
+0 1
+.names g5097 I6792
+0 1
+.names g2233 I4351
+0 1
+.names I4351 g3104
+0 1
+.names I2309 g1318
+0 1
+.names g1747 I3647
+0 1
+.names I3647 g2524
+0 1
+.names g2554 I3788
+0 1
+.names I3788 g2644
+0 1
+.names I8812 g6698
+0 1
+.names I1850 g754
+0 1
+.names g754 g1638
+0 1
+.names g4745 I6621
+0 1
+.names I2424 g1391
+0 1
+.names g1391 g2119
+0 1
+.names g3853 I5502
+0 1
+.names g705 I2134
+0 1
+.names I2134 g1108
+0 1
+.names g1439 I3025
+0 1
+.names g5303 I7119
+0 1
+.names I7119 g5437
+0 1
+.names I5862 g4385
+0 1
+.names g856 g1274
+0 1
+.names g1274 I3425
+0 1
+.names g6855 I9092
+0 1
+.names I3235 g2109
+0 1
+.names g2464 g2818
+0 1
+.names I3007 g1908
+0 1
+.names g1908 g2867
+0 1
+.names g98 g1064 g1070 g1797
+0-- 1
+-0- 1
+--0 1
+.names g1797 g1883
+0 1
+.names I7333 g5579
+0 1
+.names g5498 g3292 g5628
+1- 1
+-1 1
+.names g5628 I7478
+0 1
+.names I6816 g5150
+0 1
+.names g5593 I7517
+0 1
+.names I3096 g1985
+0 1
+.names g1985 g2893
+0 1
+.names I7509 g5752
+0 1
+.names I8074 g6332
+0 1
+.names g6332 I8232
+0 1
+.names I7683 g5917
+0 1
+.names g4715 I6567
+0 1
+.names I2692 g1690
+0 1
+.names g1690 I3678
+0 1
+.names g2268 I4176
+0 1
+.names I4176 g2975
+0 1
+.names I2588 g1631
+0 1
+.names g1682 I2967
+0 1
+.names g6189 I8165
+0 1
+.names g492 g1048
+0 1
+.names g122 g3251 g3727
+11 1
+.names g3727 I5430
+0 1
+.names I3729 g2599
+0 1
+.names g4752 I6672
+0 1
+.names I6672 g5042
+0 1
+.names g1203 I2712
+0 1
+.names I2712 g1711
+0 1
+.names g1305 I3635
+0 1
+.names g6514 I8752
+0 1
+.names I8752 g6652
+0 1
+.names I6927 g5270
+0 1
+.names g5270 g5442
+0 1
+.names g269 g1055
+0 1
+.names g1222 I2570
+0 1
+.names g1177 I2860
+0 1
+.names g3852 I5475
+0 1
+.names g2594 I4743
+0 1
+.names g1439 I3105
+0 1
+.names g1730 I3301
+0 1
+.names I3301 g2170
+0 1
+.names g1664 I3522
+0 1
+.names I3522 g2370
+0 1
+.names g3751 I5913
+0 1
+.names g5866 g5957
+0 1
+.names g5957 g6193
+0 1
+.names I2352 g1333
+0 1
+.names g1650 I3255
+0 1
+.names g6345 g5952 g6455
+1- 1
+-1 1
+.names g6455 I8552
+0 1
+.names g1222 I2817
+0 1
+.names I2817 g1774
+0 1
+.names g4473 I6406
+0 1
+.names I6406 g4766
+0 1
+.names g3932 I5397
+0 1
+.names g1653 I2940
+0 1
+.names I2940 g1846
+0 1
+.names g996 g4550 g1518 g2073 g4816
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g4816 g5054
+0 1
+.names I5991 g4487
+0 1
+.names g4487 g4801
+0 1
+.names g6821 g6834
+0 1
+.names g4226 I5991
+0 1
+.names g5043 g4764 g5291
+1- 1
+-1 1
+.names g5291 I7110
+0 1
+.names I4752 g3534
+0 1
+.names g3372 g2794 g3750
+1- 1
+-1 1
+.names g3750 I5910
+0 1
+.names g2125 I3755
+0 1
+.names g5124 I6946
+0 1
+.names I6946 g5296
+0 1
+.names I8588 g6568
+0 1
+.names g6568 I8687
+0 1
+.names I6780 g5124
+0 1
+.names g5124 I6933
+0 1
+.names g1688 I3662
+0 1
+.names I3662 g2544
+0 1
+.names g6525 I8662
+0 1
+.names g3664 g3656 g3647 g3893
+0-- 1
+-0- 1
+--0 1
+.names g3893 I5609
+0 1
+.names I4273 g3052
+0 1
+.names g3052 I4474
+0 1
+.names I2190 g1176
+0 1
+.names I4217 g3014
+0 1
+.names g5926 I7835
+0 1
+.names I7835 g6121
+0 1
+.names I6963 I6964 g5308
+0- 1
+-0 1
+.names g5308 I7002
+0 1
+.names I1856 g766
+0 1
+.names g3719 I5124
+0 1
+.names I5124 g3885
+0 1
+.names I5359 I5360 g4050
+11 1
+.names g4050 g4226
+0 1
+.names g1378 g2106
+0 1
+.names g1064 g94 g1743
+0- 1
+-0 1
+.names g1743 g2306
+0 1
+.names I2315 g1320
+0 1
+.names I3553 g2413
+0 1
+.names g2413 g2790
+0 1
+.names g5824 g6048
+0 1
+.names g6048 g6232
+0 1
+.names g3075 g3673
+0 1
+.names g3673 I5217
+0 1
+.names g6385 g3733 g4092 g4314 g6433
+0000 1
+.names g6433 I8570
+0 1
+.names g6699 I8860
+0 1
+.names I4300 g3073
+0 1
+.names g3073 I4480
+0 1
+.names I3105 g1994
+0 1
+.names g909 I2275
+0 1
+.names I1935 g909
+0 1
+.names g6937 I9227
+0 1
+.names I9227 g6938
+0 1
+.names I4986 g3787
+0 1
+.names g3787 I5466
+0 1
+.names g4022 I5577
+0 1
+.names I5577 g4173
+0 1
+.names I8467 g6517
+0 1
+.names g6517 I8710
+0 1
+.names I3593 g2461
+0 1
+.names g5605 I7590
+0 1
+.names g1491 I3602
+0 1
+.names g1439 I3007
+0 1
+.names I3505 g2353
+0 1
+.names g2353 g2756
+0 1
+.names g2044 I3764
+0 1
+.names I3764 g2622
+0 1
+.names g1519 I3059
+0 1
+.names I2473 g1484
+0 1
+.names g1484 I3578
+0 1
+.names g2125 I3868
+0 1
+.names g952 g5688 g5731
+00 1
+.names g5731 g5888
+0 1
+.names g564 g838
+0 1
+.names I8473 g6519
+0 1
+.names g4354 g4032 g4433
+1- 1
+-1 1
+.names g4433 I6289
+0 1
+.names I8975 g6803
+0 1
+.names g6803 I9024
+0 1
+.names I5204 g3960
+0 1
+.names g3960 I5448
+0 1
+.names g2125 I3767
+0 1
+.names g5552 g5685
+0 1
+.names g5685 g5787
+0 1
+.names I3102 g1991
+0 1
+.names g1991 g2904
+0 1
+.names I8552 g6552
+0 1
+.names g6567 I8684
+0 1
+.names I8684 g6606
+0 1
+.names g1491 I3581
+0 1
+.names g2608 g3491
+0 1
+.names g3491 I5333
+0 1
+.names g922 I2284
+0 1
+.names I6334 g4718
+0 1
+.names g4191 g4601
+0 1
+.names g4601 g4767
+0 1
+.names I2831 g1783
+0 1
+.names g1783 I3261
+0 1
+.names I2943 g1847
+0 1
+.names I4445 I4446 g3207
+0- 1
+-0 1
+.names g3807 I5774
+0 1
+.names I9064 I9065 I9066 g6845
+1-- 1
+-1- 1
+--1 1
+.names g6845 I9077
+0 1
+.names I8485 g6523
+0 1
+.names g6523 I8659
+0 1
+.names g4173 g4535
+0 1
+.names g3575 I4976
+0 1
+.names g1017 I2671
+0 1
+.names I2671 g1685
+0 1
+.names I8385 I8386 I8387 g6483
+1-- 1
+-1- 1
+--1 1
+.names g6483 I8506
+0 1
+.names I3659 g2541
+0 1
+.names g2541 g2841
+0 1
+.names I5630 g4210
+0 1
+.names g4210 g4582
+0 1
+.names g2284 I4229
+0 1
+.names I3534 g2391
+0 1
+.names g6543 I8626
+0 1
+.names g677 I2029
+0 1
+.names g357 g964
+0 1
+.names I1865 g791
+0 1
+.names g2145 I3843
+0 1
+.names I3843 g2695
+0 1
+.names g2125 I3779
+0 1
+.names I3779 g2637
+0 1
+.names g4059 g4227
+0 1
+.names g5261 g5439
+0 1
+.names g3388 g3798
+0 1
+.names g6864 I9104
+0 1
+.names g4799 g5063
+0 1
+.names g1702 I3284
+0 1
+.names I8594 g6570
+0 1
+.names g3942 I5692
+0 1
+.names g3911 g1655 g4219
+11 1
+.names g4219 I6132
+0 1
+.names g6480 I8491
+0 1
+.names I8491 g6525
+0 1
+.names g6657 I8840
+0 1
+.names I8840 g6710
+0 1
+.names g4036 I5418
+0 1
+.names I6321 g4713
+0 1
+.names g4713 I6680
+0 1
+.names I6343 g4721
+0 1
+.names g1193 I2588
+0 1
+.names g1484 I3556
+0 1
+.names I3556 g2416
+0 1
+.names g1935 I4340
+0 1
+.names I4340 g3095
+0 1
+.names g2555 I4252
+0 1
+.names I4252 g3037
+0 1
+.names g582 g845
+0 1
+.names g694 I2204
+0 1
+.names g3834 I5493
+0 1
+.names g6068 g6033 g6176
+1- 1
+-1 1
+.names g6176 I8180
+0 1
+.names I3291 g2164
+0 1
+.names g2164 I4220
+0 1
+.names g6166 I7966
+0 1
+.names g6376 g4323 g4309 g4302 g6448
+0000 1
+.names g6448 I8591
+0 1
+.names g1724 I3465
+0 1
+.names I3465 g2315
+0 1
+.names g5649 g1529 g2081 g5866
+0-- 1
+-0- 1
+--0 1
+.names I9104 g6879
+0 1
+.names I8687 g6607
+0 1
+.names I6305 g4705
+0 1
+.names g4705 I6558
+0 1
+.names I6020 g4502
+0 1
+.names g4716 I6685
+0 1
+.names I6685 g5049
+0 1
+.names I9031 g6836
+0 1
+.names g702 I1958
+0 1
+.names g664 I1942
+0 1
+.names I4276 g3053
+0 1
+.names g3053 g3719
+0 1
+.names g6416 I8438
+0 1
+.names I7077 g5411
+0 1
+.names g5411 g5575
+0 1
+.names I8276 g6422
+0 1
+.names g6422 I8420
+0 1
+.names I2327 g1324
+0 1
+.names g1324 I3388
+0 1
+.names I2949 g1849
+0 1
+.names g1849 g2874
+0 1
+.names g3369 I4935
+0 1
+.names I4935 g3752
+0 1
+.names I5169 g3932
+0 1
+.names g1504 I3028
+0 1
+.names g3821 I5594
+0 1
+.names I5871 g4388
+0 1
+.names g117 g3251 g3724
+11 1
+.names I2893 g1825
+0 1
+.names g1825 I3428
+0 1
+.names I2682 I2683 g1687
+0- 1
+-0 1
+.names g1687 I2973
+0 1
+.names g3466 g5311 g5458
+1- 1
+-1 1
+.names g5458 I7254
+0 1
+.names I7698 g5922
+0 1
+.names g1791 I3247
+0 1
+.names g6520 I8707
+0 1
+.names I8707 g6615
+0 1
+.names I7007 g5355
+0 1
+.names g5355 I7150
+0 1
+.names g2525 I4327
+0 1
+.names I5933 g4428
+0 1
+.names g3388 g3786
+0 1
+.names I7346 g5584
+0 1
+.names g5331 g5539
+0 1
+.names g5753 g5896
+0 1
+.names g996 I2653
+0 1
+.names g2145 I3826
+0 1
+.names I4362 g3114
+0 1
+.names g3114 g3364
+0 1
+.names g6348 g1734 g6492
+00 1
+.names g6492 I8515
+0 1
+.names I5606 g4192
+0 1
+.names g2230 I4279
+0 1
+.names I4279 g3054
+0 1
+.names I5293 I5294 g4002
+0- 1
+-0 1
+.names g1897 I4303
+0 1
+.names I3752 g2612
+0 1
+.names g5530 g6163 g6299
+11 1
+.names g6299 I8300
+0 1
+.names g6110 I8002
+0 1
+.names g1328 I3376
+0 1
+.names I3376 g2243
+0 1
+.names I4961 g3770
+0 1
+.names I8997 g6820
+0 1
+.names g6820 I9014
+0 1
+.names g1484 I3638
+0 1
+.names I2811 g1772
+0 1
+.names g3215 g3575 g3942
+1- 1
+-1 1
+.names g3942 I5723
+0 1
+.names g4569 I6371
+0 1
+.names I6371 g4741
+0 1
+.names g6524 I8641
+0 1
+.names g4720 I6692
+0 1
+.names I6692 g5052
+0 1
+.names g6812 I9021
+0 1
+.names I9021 g6832
+0 1
+.names I6612 g4910
+0 1
+.names I2037 g980
+0 1
+.names g980 I2648
+0 1
+.names g1283 I3367
+0 1
+.names I3367 g2234
+0 1
+.names g6849 I9082
+0 1
+.names g866 g306 g1359
+0- 1
+-0 1
+.names g1359 g1890
+0 1
+.names I3681 g2574
+0 1
+.names g2574 I3883
+0 1
+.names I3294 g2165
+0 1
+.names g2165 I4240
+0 1
+.names g1060 g102 g89 g1777
+0-- 1
+-0- 1
+--0 1
+.names g1777 g2330
+0 1
+.names g4249 I6182
+0 1
+.names I6182 g4609
+0 1
+.names g6419 I8441
+0 1
+.names I5777 g4308
+0 1
+.names g683 I2050
+0 1
+.names g952 g1734
+0 1
+.names I3152 g2041
+0 1
+.names g2041 I3758
+0 1
+.names I6362 g4732
+0 1
+.names g4732 g5086
+0 1
+.names g5909 g3806 g6142
+1- 1
+-1 1
+.names g84 g951
+0 1
+.names g6797 I8969
+0 1
+.names I3563 g2430
+0 1
+.names g2430 g2800
+0 1
+.names g5687 I7497
+0 1
+.names I7497 g5730
+0 1
+.names g1739 I3669
+0 1
+.names I3669 g2554
+0 1
+.names g4460 I6382
+0 1
+.names I6382 g4758
+0 1
+.names g1123 I2839
+0 1
+.names I2916 g1834
+0 1
+.names g1834 I3861
+0 1
+.names g6879 I9182
+0 1
+.names I9182 g6905
+0 1
+.names I2946 g1848
+0 1
+.names g1848 I3711
+0 1
+.names g3638 I4986
+0 1
+.names g1327 I3346
+0 1
+.names I3346 g2213
+0 1
+.names g5731 g5897
+0 1
+.names g4550 g1575 g1550 g2073 g4814
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g4814 g5025
+0 1
+.names g6408 g6515
+0 1
+.names g5281 I7091
+0 1
+.names I7091 g5425
+0 1
+.names g691 I2172
+0 1
+.names I1942 g917
+0 1
+.names g917 I2278
+0 1
+.names g5917 I7796
+0 1
+.names g1411 g2026 g2947
+0- 1
+-0 1
+.names g2947 I4681
+0 1
+.names g985 g1480
+0 1
+.names I2998 g1899
+0 1
+.names g1899 g2902
+0 1
+.names I8809 g6697
+0 1
+.names g2 I2143
+0 1
+.names g1177 I2343
+0 1
+.names I5654 g4222
+0 1
+.names g3866 I5481
+0 1
+.names I4267 g3046
+0 1
+.names g3046 g3297
+0 1
+.names g1823 I3206
+0 1
+.names g4692 I6546
+0 1
+.names g1193 I2334
+0 1
+.names I6689 g5051
+0 1
+.names g5051 I6809
+0 1
+.names g4022 I5743
+0 1
+.names g5220 I6995
+0 1
+.names g3703 g3191 g3878
+1- 1
+-1 1
+.names g3878 I5890
+0 1
+.names g1461 I3509
+0 1
+.names I5217 g3963
+0 1
+.names g3388 g3791
+0 1
+.names g6660 g492 g6704
+1- 1
+-1 1
+.names g6704 I8884
+0 1
+.names g3860 I5505
+0 1
+.names g1030 I2688
+0 1
+.names I2688 g1688
+0 1
+.names g4452 g4155 g4752
+1- 1
+-1 1
+.names g4622 I6434
+0 1
+.names g1731 I2961
+0 1
+.names g4010 g4350
+0 1
+.names g4350 I6231
+0 1
+.names g4182 I6039
+0 1
+.names I6039 g4509
+0 1
+.names g4736 g5087
+0 1
+.names g6855 I9095
+0 1
+.names g5605 I7600
+0 1
+.names I7600 g5801
+0 1
+.names g1773 I3274
+0 1
+.names I3274 g2155
+0 1
+.names I9203 g6922
+0 1
+.names g6922 I9208
+0 1
+.names g4402 g1056 g4640
+0- 1
+-0 1
+.names g1426 I3093
+0 1
+.names I2033 g965
+0 1
+.names g1461 I3493
+0 1
+.names I3691 g2580
+0 1
+.names g2580 I3816
+0 1
+.names g894 g1326
+0 1
+.names g6312 I8235
+0 1
+.names I5893 g4398
+0 1
+.names g4398 I6099
+0 1
+.names g6265 g6098 g6309
+1- 1
+-1 1
+.names g6309 I8282
+0 1
+.names g2555 I4270
+0 1
+.names I4270 g3049
+0 1
+.names g6431 I8500
+0 1
+.names I8500 g6528
+0 1
+.names g1222 I2785
+0 1
+.names I2785 g1760
+0 1
+.names I6001 g4493
+0 1
+.names I8107 g6351
+0 1
+.names g210 I1850
+0 1
+.names g341 g834
+0 1
+.names g3758 g6766 g6787
+1- 1
+-1 1
+.names g6787 I8988
+0 1
+.names I8506 g6530
+0 1
+.names g2962 I4777
+0 1
+.names I6677 g5045
+0 1
+.names g6570 I8693
+0 1
+.names I8761 g6655
+0 1
+.names I6933 g5274
+0 1
+.names g5274 g5445
+0 1
+.names g2967 I4799
+0 1
+.names g6344 g5949 g6454
+1- 1
+-1 1
+.names g6454 I8548
+0 1
+.names g5466 I7193
+0 1
+.names I3776 g2634
+0 1
+.names g2634 g3498
+0 1
+.names g3857 I5854
+0 1
+.names g2505 I3761
+0 1
+.names I3761 g2619
+0 1
+.names g6346 g5954 g6456
+1- 1
+-1 1
+.names g6456 I8555
+0 1
+.names g1305 I3519
+0 1
+.names I3025 g1922
+0 1
+.names g1922 g2872
+0 1
+.names I2570 g1608
+0 1
+.names I2221 g1220
+0 1
+.names g4434 I6292
+0 1
+.names g6287 I8240
+0 1
+.names I9122 g6885
+0 1
+.names g6885 I9164
+0 1
+.names I5890 g4397
+0 1
+.names g6938 I9233
+0 1
+.names g44 g1192
+0 1
+.names I7514 g5773
+0 1
+.names g5773 I7640
+0 1
+.names g5281 I7073
+0 1
+.names g6855 I9119
+0 1
+.names I9119 g6884
+0 1
+.names g1177 I2593
+0 1
+.names g4722 I6697
+0 1
+.names I6697 g5059
+0 1
+.names g5711 I7692
+0 1
+.names I7692 g5920
+0 1
+.names g6833 I9038
+0 1
+.names g1461 I3587
+0 1
+.names I3587 g2457
+0 1
+.names g5425 g5578
+0 1
+.names I6023 g4503
+0 1
+.names g4503 I6444
+0 1
+.names g4368 g3660 g4655
+1- 1
+-1 1
+.names g872 I2442
+0 1
+.names I2442 g1423
+0 1
+.names g332 g923
+0 1
+.names g3335 g2747 g3740
+1- 1
+-1 1
+.names g5437 I7176
+0 1
+.names I1868 g798
+0 1
+.names g798 g1588
+0 1
+.names I7871 g6147
+0 1
+.names g6147 I8113
+0 1
+.names g5579 I7342
+0 1
+.names g692 I2182
+0 1
+.names g2179 I3830
+0 1
+.names g2283 I4402
+0 1
+.names I4402 g3162
+0 1
+.names g5124 I6918
+0 1
+.names I6918 g5261
+0 1
+.names g2525 I4294
+0 1
+.names g4718 I6543
+0 1
+.names I8716 g6618
+0 1
+.names g985 g1665
+0 1
+.names g5741 g639 g5926
+0- 1
+-0 1
+.names I3281 g2158
+0 1
+.names g6095 I7865
+0 1
+.names I7865 g6143
+0 1
+.names I6132 g4562
+0 1
+.names g6062 g6235
+0 1
+.names g2030 I3726
+0 1
+.names I3726 g2598
+0 1
+.names I2334 g1327
+0 1
+.names g675 g1063
+0 1
+.names g1063 I2521
+0 1
+.names g5281 I7081
+0 1
+.names I7081 g5415
+0 1
+.names I3767 g2625
+0 1
+.names g2625 g3452
+0 1
+.names g6137 I7996
+0 1
+.names g3963 I5400
+0 1
+.names g6439 I8582
+0 1
+.names I8582 g6566
+0 1
+.names I8290 g6428
+0 1
+.names g6428 I8494
+0 1
+.names g4706 I6534
+0 1
+.names g952 g6348 g6494
+00 1
+.names g6494 I8518
+0 1
+.names I2663 g1681
+0 1
+.names I6349 g4723
+0 1
+.names g6376 g4086 g4309 g4068 g6432
+0000 1
+.names g6432 I8567
+0 1
+.names g5993 I7852
+0 1
+.names I7852 g6134
+0 1
+.names g5521 g5664
+0 1
+.names I7002 g5352
+0 1
+.names g1331 I3361
+0 1
+.names I3361 g2232
+0 1
+.names I8548 g6548
+0 1
+.names g5124 I6927
+0 1
+.names I4327 g3086
+0 1
+.names g1220 I2724
+0 1
+.names I3388 g2253
+0 1
+.names g293 I2179
+0 1
+.names g2433 g2869
+0 1
+.names g2869 g3486
+0 1
+.names g2457 g2813
+0 1
+.names g1123 I2379
+0 1
+.names g1173 I2700
+0 1
+.names I2700 g1696
+0 1
+.names g4760 g1549 g4872
+11 1
+.names g4872 I6885
+0 1
+.names g4166 g3784 g4497
+1- 1
+-1 1
+.names I3819 g2675
+0 1
+.names g2675 g3504
+0 1
+.names g1236 I2738
+0 1
+.names I2738 g1732
+0 1
+.names g3259 I5116
+0 1
+.names g2044 I3909
+0 1
+.names I2044 g1001
+0 1
+.names g1502 I3441
+0 1
+.names g5281 I7069
+0 1
+.names I4297 g3070
+0 1
+.names g6247 g6088 g6296
+1- 1
+-1 1
+.names g6296 I8264
+0 1
+.names g6534 I8721
+0 1
+.names I8721 g6621
+0 1
+.names g5495 g3281 g5625
+1- 1
+-1 1
+.names g5625 I7469
+0 1
+.names I4534 g3251
+0 1
+.names g3251 g3897
+0 1
+.names g3015 g3263
+0 1
+.names g952 g1472
+0 1
+.names g486 g1043
+0 1
+.names I5783 I5784 g4319
+0- 1
+-0 1
+.names g4319 I5977
+0 1
+.names g6354 g1775 g6495
+00 1
+.names g6495 I8521
+0 1
+.names I5831 g4370
+0 1
+.names g4370 I6036
+0 1
+.names g1209 I2611
+0 1
+.names g23 g893
+0 1
+.names I8246 g6412
+0 1
+.names I2749 g1739
+0 1
+.names I2154 g1116
+0 1
+.names g1054 g1593
+0 1
+.names g1593 I3531
+0 1
+.names I5223 g3967
+0 1
+.names I5699 g4249
+0 1
+.names g6461 I8470
+0 1
+.names g6442 I8585
+0 1
+.names I8585 g6567
+0 1
+.names I8515 g6533
+0 1
+.names g4218 g1539 g4460
+11 1
+.names g680 I2041
+0 1
+.names I2041 g996
+0 1
+.names g3076 g3331
+0 1
+.names g2145 I3890
+0 1
+.names I6420 g4772
+0 1
+.names I6607 g4900
+0 1
+.names g4900 g5247
+0 1
+.names g4400 I6105
+0 1
+.names I6105 g4531
+0 1
+.names g3448 g1528 g3768
+11 1
+.names g3768 I5633
+0 1
+.names g6710 I8878
+0 1
+.names g1006 I2663
+0 1
+.names g1305 I3505
+0 1
+.names g6528 I8647
+0 1
+.names g3673 I4955
+0 1
+.names I4955 g3766
+0 1
+.names g878 g1533
+0 1
+.names g5382 g5564
+0 1
+.names g3440 I5103
+0 1
+.names g1650 I3650
+0 1
+.names g3388 g3801
+0 1
+.names g2622 g3487
+0 1
+.names g1519 I3013
+0 1
+.names g3942 I5696
+0 1
+.names I3471 g2317
+0 1
+.names g2317 g2691
+0 1
+.names g5042 I6798
+0 1
+.names g594 g5515 g5602
+11 1
+.names g5602 g5741
+0 1
+.names g39 g1204
+0 1
+.names g1204 I2802
+0 1
+.names g1450 I3474
+0 1
+.names I7397 g5638
+0 1
+.names g5926 g6160
+0 1
+.names I5094 g3867
+0 1
+.names g3867 I5508
+0 1
+.names g6930 I9220
+0 1
+.names I9220 g6933
+0 1
+.names g175 g3779 g4356
+11 1
+.names g4356 I5944
+0 1
+.names g866 g873 g1784 g2008
+0-- 1
+-0- 1
+--0 1
+.names g2008 g2962
+0 1
+.names g6482 I8479
+0 1
+.names I8479 g6521
+0 1
+.names g6864 I9098
+0 1
+.names I5053 g3846
+0 1
+.names g3846 I5472
+0 1
+.names g6771 g3323 g6793
+1- 1
+-1 1
+.names g6793 I8981
+0 1
+.names I3632 g2506
+0 1
+.names g1519 I3080
+0 1
+.names g6521 I8674
+0 1
+.names I2880 g1820
+0 1
+.names g2973 g3247
+0 1
+.names g3247 I5043
+0 1
+.names g4232 g3899 g4607
+1- 1
+-1 1
+.names g4607 I6495
+0 1
+.names I2779 g1756
+0 1
+.names g1756 g1936
+0 1
+.names g4250 g1671 g4501
+11 1
+.names g4501 I6437
+0 1
+.names g2088 I4410
+0 1
+.names I4410 g3173
+0 1
+.names I5896 g4399
+0 1
+.names g4371 g4038 g4440
+1- 1
+-1 1
+.names g4440 I6302
+0 1
+.names g3765 g6773 g6790
+1- 1
+-1 1
+.names g6790 I8997
+0 1
+.names g32 g1117
+0 1
+.names g6342 g5942 g6452
+1- 1
+-1 1
+.names g6452 I8541
+0 1
+.names I2306 g1317
+0 1
+.names I3746 g2608
+0 1
+.names g4798 I6579
+0 1
+.names g5872 g5993
+0 1
+.names g2598 g3557
+0 1
+.names I2839 g1789
+0 1
+.names g1789 I3569
+0 1
+.names g1384 g2111
+0 1
+.names I3422 g2275
+0 1
+.names I7146 g5466
+0 1
+.names g6306 I8332
+0 1
+.names I7481 g5720
+0 1
+.names g5720 I7701
+0 1
+.names g2602 I4646
+0 1
+.names I4646 g3369
+0 1
+.names g6055 g5995 g6185
+1- 1
+-1 1
+.names g6185 I8153
+0 1
+.names g2197 g3007
+0 1
+.names I3755 g2615
+0 1
+.names g6855 I9101
+0 1
+.names g1177 I2864
+0 1
+.names I7061 g5395
+0 1
+.names g5395 g5571
+0 1
+.names g5564 g4769 g5636
+0- 1
+-0 1
+.names g5636 g5861
+0 1
+.names g3491 g3868
+0 1
+.names I3313 g2174
+0 1
+.names I3808 g2664
+0 1
+.names g2664 g3459
+0 1
+.names g283 I1877
+0 1
+.names g952 g1775
+0 1
+.names g5278 g5448
+0 1
+.names g345 g835
+0 1
+.names I7472 g5711
+0 1
+.names g6806 I9028
+0 1
+.names I9028 g6835
+0 1
+.names I1938 g910
+0 1
+.names g910 g1581
+0 1
+.names I5837 g4374
+0 1
+.names g4374 I6042
+0 1
+.names g107 g1060
+0 1
+.names g1275 I3431
+0 1
+.names I3431 g2284
+0 1
+.names g4615 g4824
+0 1
+.names g4824 I6786
+0 1
+.names I2457 g1460
+0 1
+.names g3491 g3793
+0 1
+.names I8699 g6611
+0 1
+.names g2155 I3720
+0 1
+.names I3720 g2591
+0 1
+.names I4220 g3015
+0 1
+.names g1209 I2749
+0 1
+.names I5612 g4194
+0 1
+.names g4194 I6054
+0 1
+.names g5331 g5538
+0 1
+.names g4359 g4035 g4436
+1- 1
+-1 1
+.names g4436 I6296
+0 1
+.names g2061 g2602
+0 1
+.names g1161 I2623
+0 1
+.names g3771 I5460
+0 1
+.names g5458 I7251
+0 1
+.names I7251 g5509
+0 1
+.names g3748 I5899
+0 1
+.names I5899 g4400
+0 1
+.names I3044 g1937
+0 1
+.names g6447 I8535
+0 1
+.names I8535 g6541
+0 1
+.names I9098 g6877
+0 1
+.names g6877 I9185
+0 1
+.names g6385 g4334 g4328 g4314 g6451
+0000 1
+.names g6451 I8600
+0 1
+.names I3099 g1988
+0 1
+.names g1988 g2931
+0 1
+.names I6386 g4760
+0 1
+.names g6118 I8074
+0 1
+.names g4801 g5067
+0 1
+.names I2199 g1190
+0 1
+.names g25 I2175
+0 1
+.names I8113 g6353
+0 1
+.names g5649 g1017 g1564 g2113 g5873
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g1994 g2905
+0 1
+.names g378 g3898 g4167
+11 1
+.names g6730 I8910
+0 1
+.names I8972 g6802
+0 1
+.names I3770 g2628
+0 1
+.names I2175 g1156
+0 1
+.names I3641 g2515
+0 1
+.names I7197 g5493
+0 1
+.names g5281 I7065
+0 1
+.names g1612 g4694 g5077
+1- 1
+-1 1
+.names g5077 g5256
+0 1
+.names I6359 g4731
+0 1
+.names g4731 I6706
+0 1
+.names g4059 I5644
+0 1
+.names I5644 g4220
+0 1
+.names g3267 I5177
+0 1
+.names g2170 I4276
+0 1
+.names g844 g1270
+0 1
+.names g1270 I3161
+0 1
+.names I7039 g5381
+0 1
+.names g2908 I4667
+0 1
+.names g6855 I9131
+0 1
+.names g6883 I9170
+0 1
+.names I9170 g6901
+0 1
+.names I4964 g3771
+0 1
+.names g6542 I8623
+0 1
+.names I4459 g3216
+0 1
+.names I2890 g1824
+0 1
+.names g5354 g5356 g5552
+00 1
+.names g6414 I8453
+0 1
+.names g6352 g6347 g6457
+1- 1
+-1 1
+.names g719 I2424
+0 1
+.names g208 I1844
+0 1
+.names g319 g862
+0 1
+.names g2157 I4170
+0 1
+.names I4170 g2973
+0 1
+.names g1426 I3065
+0 1
+.names I3065 g1954
+0 1
+.names g1853 I4243
+0 1
+.names I4243 g3030
+0 1
+.names g123 g1250
+0 1
+.names g3942 I5739
+0 1
+.names I2399 g1363
+0 1
+.names I2925 g1837
+0 1
+.names g3783 I5463
+0 1
+.names g5730 g5950
+0 1
+.names g197 g1053
+0 1
+.names g1108 g1738
+0 1
+.names g6530 I8668
+0 1
+.names g6361 g6484
+0 1
+.names g6484 g6574
+0 1
+.names I3575 g2440
+0 1
+.names I3758 g2618
+0 1
+.names g2618 g3564
+0 1
+.names g6557 g6634 g4410 g2948 g6670
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6670 g6714
+0 1
+.names g3835 I5520
+0 1
+.names g3304 g1351 g3828
+1- 1
+-1 1
+.names g3828 I5668
+0 1
+.names I5739 g4284
+0 1
+.names g6269 g6099 g6310
+1- 1
+-1 1
+.names g6310 I8285
+0 1
+.names g3324 g2732 g3732
+1- 1
+-1 1
+.names g3975 I5391
+0 1
+.names g6373 g6491
+0 1
+.names g6491 g6580
+0 1
+.names g5770 g6032
+0 1
+.names g5467 g5536
+0 1
+.names g5536 g5631
+0 1
+.names I4354 g3108
+0 1
+.names I9095 g6876
+0 1
+.names g4569 I6362
+0 1
+.names g1953 I4354
+0 1
+.names I4285 g3060
+0 1
+.names g3060 g3308
+0 1
+.names I6430 g4778
+0 1
+.names g4778 I6759
+0 1
+.names g1940 g2875
+0 1
+.names g4569 I6377
+0 1
+.names I6036 g4508
+0 1
+.names g6260 g6646 g6687
+1- 1
+-1 1
+.names g6687 I8809
+0 1
+.names I8727 g6623
+0 1
+.names I7596 g5797
+0 1
+.names g5797 g6076
+0 1
+.names I9134 g6889
+0 1
+.names g5584 I7506
+0 1
+.names I7506 g5751
+0 1
+.names I2379 g1344
+0 1
+.names g1344 I3316
+0 1
+.names g3094 g3589
+0 1
+.names g5499 g3298 g5629
+1- 1
+-1 1
+.names g5629 I7481
+0 1
+.names g1519 I3034
+0 1
+.names g1295 I3550
+0 1
+.names I3550 g2410
+0 1
+.names I2584 g1627
+0 1
+.names I3965 g2777
+0 1
+.names g6179 I8189
+0 1
+.names I8189 g6375
+0 1
+.names g1957 g2884
+0 1
+.names g681 I2044
+0 1
+.names I4321 g3084
+0 1
+.names I3653 g2535
+0 1
+.names g2535 g2839
+0 1
+.names g3593 I5084
+0 1
+.names I7707 g5925
+0 1
+.names g5925 I7960
+0 1
+.names I1924 g899
+0 1
+.names g6560 I8749
+0 1
+.names I8749 g6651
+0 1
+.names I4684 g3448
+0 1
+.names I5615 g4195
+0 1
+.names g4195 g4565
+0 1
+.names I2883 g1821
+0 1
+.names g1821 I3681
+0 1
+.names g3710 I5053
+0 1
+.names g2637 g3455
+0 1
+.names I8005 g6285
+0 1
+.names g1339 I3307
+0 1
+.names I3307 g2172
+0 1
+.names g4616 g6934 g6937
+1- 1
+-1 1
+.names g3897 I5568
+0 1
+.names I6111 g4533
+0 1
+.names g2145 I3811
+0 1
+.names I3811 g2667
+0 1
+.names I2053 g1017
+0 1
+.names g1017 g1683
+0 1
+.names I3493 g2343
+0 1
+.names g5099 g5168
+0 1
+.names g6122 I8093
+0 1
+.names I8093 g6339
+0 1
+.names g2103 I4433
+0 1
+.names I4433 g3196
+0 1
+.names g4816 g4914
+0 1
+.names g3612 I5002
+0 1
+.names g3914 I5630
+0 1
+.names g5458 I7267
+0 1
+.names g2933 g1660 g3454
+11 1
+.names g3454 I5157
+0 1
+.names g6812 I9035
+0 1
+.names g6908 g6816 g6921
+1- 1
+-1 1
+.names g6921 I9203
+0 1
+.names I2735 g1731
+0 1
+.names g1760 I3258
+0 1
+.names g1249 I2745
+0 1
+.names I2745 g1735
+0 1
+.names g6254 g6092 g6301
+1- 1
+-1 1
+.names g6301 I8273
+0 1
+.names I8981 g6809
+0 1
+.names g5753 g5890
+0 1
+.names I2828 g1782
+0 1
+.names I3040 g1935
+0 1
+.names g4276 g4629
+0 1
+.names g4629 I6452
+0 1
+.names I5542 g4152
+0 1
+.names g4152 I5929
+0 1
+.names g1076 g1661
+0 1
+.names g5905 g2381 g6252
+1- 1
+-1 1
+.names g5824 g6044
+0 1
+.names g6044 g6231
+0 1
+.names I6649 g5011
+0 1
+.names I8273 g6421
+0 1
+.names g6421 I8444
+0 1
+.names I4294 g3067
+0 1
+.names I1862 g784
+0 1
+.names g206 I1838
+0 1
+.names g5281 I7077
+0 1
+.names g6479 I8485
+0 1
+.names g179 g861
+0 1
+.names g1123 g1587
+0 1
+.names g1587 I2946
+0 1
+.names g2416 g2792
+0 1
+.names g839 I2584
+0 1
+.names g3728 I5433
+0 1
+.names g900 I2281
+0 1
+.names I5153 g3914
+0 1
+.names g3914 I5626
+0 1
+.names g2256 I4334
+0 1
+.names g1193 I2617
+0 1
+.names I2617 g1646
+0 1
+.names g5649 g1076 g2081 g5869
+0-- 1
+-0- 1
+--0 1
+.names I5603 g4191
+0 1
+.names g98 g1084
+0 1
+.names g5919 I7808
+0 1
+.names g646 g854
+0 1
+.names g662 g1039
+0 1
+.names g971 I2449
+0 1
+.names g6762 g6758 g6778
+0- 1
+-0 1
+.names g4619 I6425
+0 1
+.names I7069 g5403
+0 1
+.names g5403 g5573
+0 1
+.names g3567 I5056
+0 1
+.names g4248 g4619
+0 1
+.names g1209 I2831
+0 1
+.names g1685 I3644
+0 1
+.names I3644 g2518
+0 1
+.names g1001 g1583
+0 1
+.names I2131 g1107
+0 1
+.names g1107 g1702
+0 1
+.names g719 I2382
+0 1
+.names I8264 g6418
+0 1
+.names g6418 I8414
+0 1
+.names g6778 I8946
+0 1
+.names I3022 g1919
+0 1
+.names g1643 I2916
+0 1
+.names I3525 g2378
+0 1
+.names g2378 g2776
+0 1
+.names I6444 g4784
+0 1
+.names g847 g1276
+0 1
+.names I3428 g2283
+0 1
+.names g1111 g1720
+0 1
+.names g1720 I3294
+0 1
+.names I5065 g3852
+0 1
+.names I8600 g6572
+0 1
+.names I4066 g2862
+0 1
+.names g2862 I4762
+0 1
+.names g5350 g3278 g5532
+1- 1
+-1 1
+.names g4745 I6635
+0 1
+.names g1321 I3405
+0 1
+.names I3405 g2264
+0 1
+.names g6631 g6555 g6676
+1- 1
+-1 1
+.names g6676 g6712
+0 1
+.names g606 g851
+0 1
+.names I6441 g4783
+0 1
+.names g4783 I6766
+0 1
+.names I5879 g4392
+0 1
+.names g4392 I6087
+0 1
+.names I8541 g6543
+0 1
+.names g4372 g4039 g4441
+1- 1
+-1 1
+.names g4441 I6305
+0 1
+.names g94 g1084 g1793
+0- 1
+-0 1
+.names g1793 g2360
+0 1
+.names g2043 I4123
+0 1
+.names I4123 g2933
+0 1
+.names g1177 I2620
+0 1
+.names I5600 g4190
+0 1
+.names I5059 g3848
+0 1
+.names g3848 I5526
+0 1
+.names g3830 g1533 g4157
+11 1
+.names I8034 g6308
+0 1
+.names g6308 I8335
+0 1
+.names I8778 I8779 g6665
+1- 1
+-1 1
+.names g6665 I8831
+0 1
+.names g6741 g6929 g6931
+1- 1
+-1 1
+.names g1101 g1546
+0 1
+.names g1161 I2873
+0 1
+.names g679 I2037
+0 1
+.names I8518 g6534
+0 1
+.names g6711 I8881
+0 1
+.names g2877 I4802
+0 1
+.names I4802 g3605
+0 1
+.names g3893 I5603
+0 1
+.names I4189 g2996
+0 1
+.names g1833 I3942
+0 1
+.names g878 g1503
+0 1
+.names g328 g3441 g3730
+11 1
+.names g3730 I5439
+0 1
+.names g6683 g932 g6716 g6742
+0-- 1
+-0- 1
+--0 1
+.names I8564 g6560
+0 1
+.names g1273 I3328
+0 1
+.names I3328 g2179
+0 1
+.names g5824 g6014
+0 1
+.names g6864 I9122
+0 1
+.names I6302 g4704
+0 1
+.names I8252 g6414
+0 1
+.names I5050 g3845
+0 1
+.names g3845 I5702
+0 1
+.names g2169 I4258
+0 1
+.names g5167 I7045
+0 1
+.names I7045 g5383
+0 1
+.names g4717 g858 g4903
+0- 1
+-0 1
+.names g5053 g4768 g5303
+1- 1
+-1 1
+.names g6881 I9176
+0 1
+.names I9176 g6903
+0 1
+.names I4681 g3441
+0 1
+.names g2506 g2835
+0 1
+.names g301 g866 g1407
+11 1
+.names I5702 g4250
+0 1
+.names g6427 I8459
+0 1
+.names I8459 g6513
+0 1
+.names g658 g913
+0 1
+.names I6195 I6196 g4613
+0- 1
+-0 1
+.names g193 g3788 g4367
+11 1
+.names g4367 I5952
+0 1
+.names g4603 I6488
+0 1
+.names I6488 g4810
+0 1
+.names I2958 g1854
+0 1
+.names g1854 g2882
+0 1
+.names g5351 g3290 g5533
+1- 1
+-1 1
+.names g5533 I7352
+0 1
+.names I4306 g3075
+0 1
+.names g143 g872
+0 1
+.names g5824 g6036
+0 1
+.names g6548 I8632
+0 1
+.names g1143 I2364
+0 1
+.names I8509 g6531
+0 1
+.names g1161 I2808
+0 1
+.names g3466 g3772
+0 1
+.names I6403 g4765
+0 1
+.names g4765 I6582
+0 1
+.names g4758 I6689
+0 1
+.names g2179 g2981
+0 1
+.names g6376 g4323 g4074 g4068 g6438
+0000 1
+.names g6438 I8579
+0 1
+.names g6694 I8869
+0 1
+.names g2975 I4489
+0 1
+.names g2656 g3458
+0 1
+.names g188 g865
+0 1
+.names g893 I2296
+0 1
+.names g3575 g3890
+0 1
+.names g1847 I4192
+0 1
+.names g382 g3900 g4170
+11 1
+.names g1491 I3659
+0 1
+.names g3040 I4471
+0 1
+.names I7113 g5435
+0 1
+.names g5435 I7170
+0 1
+.names g6303 I8276
+0 1
+.names I6621 g4929
+0 1
+.names g2336 g2744
+0 1
+.names g666 I1935
+0 1
+.names I3572 g2437
+0 1
+.names g2437 g2802
+0 1
+.names g79 g949
+0 1
+.names g6429 I8564
+0 1
+.names g3559 I5320
+0 1
+.names I5723 g4270
+0 1
+.names g4270 g4626
+0 1
+.names g1143 I2373
+0 1
+.names I2373 g1340
+0 1
+.names g2010 g2986
+0 1
+.names g2986 g3480
+0 1
+.names g6561 I8755
+0 1
+.names I8755 g6653
+0 1
+.names g5920 I7802
+0 1
+.names g5281 I7061
+0 1
+.names I7051 g5387
+0 1
+.names g5387 I7187
+0 1
+.names g6490 g6579
+0 1
+.names g4810 g5116
+0 1
+.names g4046 g4224
+0 1
+.names g4224 I5987
+0 1
+.names g5136 I6976
+0 1
+.names I6976 g5316
+0 1
+.names g1055 I2635
+0 1
+.names I7110 g5434
+0 1
+.names I2982 g1887
+0 1
+.names g1887 g2864
+0 1
+.names g4620 I6430
+0 1
+.names g650 g855
+0 1
+.names g4550 g965 g1560 g2073 g4813
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g4813 g4894
+0 1
+.names I2240 g1249
+0 1
+.names g4251 g4620
+0 1
+.names g3546 I5252
+0 1
+.names g1236 I2791
+0 1
+.names I7352 g5590
+0 1
+.names g5590 I7514
+0 1
+.names g1236 I2309
+0 1
+.names g28 I2140
+0 1
+.names g6708 I8888
+0 1
+.names g1732 I3691
+0 1
+.names I6874 g5210
+0 1
+.names I8946 g6786
+0 1
+.names g4712 I6564
+0 1
+.names g6061 g6014 g6170
+1- 1
+-1 1
+.names g6170 I8171
+0 1
+.names I8285 g6425
+0 1
+.names g6425 I8429
+0 1
+.names g5565 I7358
+0 1
+.names g5926 g6164
+0 1
+.names g6167 I8156
+0 1
+.names g5824 g6052
+0 1
+.names g6052 g6233
+0 1
+.names g1190 I2707
+0 1
+.names g4059 g4292
+0 1
+.names g5714 I7695
+0 1
+.names g2179 g2968
+0 1
+.names g3719 I5078
+0 1
+.names g1123 I2890
+0 1
+.names I6090 g4526
+0 1
+.names I5078 g3859
+0 1
+.names g5023 g4763 g5277
+1- 1
+-1 1
+.names g5277 I7107
+0 1
+.names g3709 g3203 g3883
+1- 1
+-1 1
+.names g3883 I5907
+0 1
+.names I2791 g1762
+0 1
+.names I3086 g1975
+0 1
+.names g1975 g2889
+0 1
+.names I5904 g4403
+0 1
+.names I6170 g4603
+0 1
+.names I8512 g6532
+0 1
+.names g4377 g4041 g4443
+1- 1
+-1 1
+.names g3885 I5517
+0 1
+.names g6835 I9041
+0 1
+.names I5952 g4439
+0 1
+.names I6763 g5117
+0 1
+.names I8555 g6553
+0 1
+.names g3700 g3182 g3870
+1- 1
+-1 1
+.names g3870 I5876
+0 1
+.names I3316 g2175
+0 1
+.names g1919 g2871
+0 1
+.names g1222 I2604
+0 1
+.names g2096 I4420
+0 1
+.names I4420 g3183
+0 1
+.names I3883 g2722
+0 1
+.names I3261 g2135
+0 1
+.names g2135 I4462
+0 1
+.names g5915 g6165 g6304
+11 1
+.names g6304 I8309
+0 1
+.names g878 g1556
+0 1
+.names g3466 g3779
+0 1
+.names g6290 I8246
+0 1
+.names g2215 g3023
+0 1
+.names g1504 I3031
+0 1
+.names I3031 g1928
+0 1
+.names I7695 g5921
+0 1
+.names g5921 I7811
+0 1
+.names g5717 I7698
+0 1
+.names g102 g1064
+0 1
+.names I9131 g6888
+0 1
+.names g1257 I2998
+0 1
+.names I5843 g4376
+0 1
+.names g4376 I6048
+0 1
+.names g5540 I7339
+0 1
+.names g3942 I5731
+0 1
+.names I5731 g4276
+0 1
+.names g2525 I4249
+0 1
+.names g1426 I3004
+0 1
+.names g361 I1825
+0 1
+.names g4189 g4561
+0 1
+.names g2515 g2838
+0 1
+.names I2760 g1747
+0 1
+.names g2615 g3451
+0 1
+.names g197 I2162
+0 1
+.names g1006 g1563
+0 1
+.names g6819 I9011
+0 1
+.names I4019 g2809
+0 1
+.names g1052 g1586
+0 1
+.names g4394 I6093
+0 1
+.names I6093 g4527
+0 1
+.names g971 I2290
+0 1
+.names g4296 g4647
+0 1
+.names g2962 I4623
+0 1
+.names I4623 g3346
+0 1
+.names g3545 I5236
+0 1
+.names I3816 g2672
+0 1
+.names g1323 I3358
+0 1
+.names I3358 g2231
+0 1
+.names g4473 I6400
+0 1
+.names I6400 g4764
+0 1
+.names g5824 g5995
+0 1
+.names I9057 I9058 I9059 g6844
+1-- 1
+-1- 1
+--1 1
+.names g5436 I7173
+0 1
+.names g2346 I3785
+0 1
+.names g4472 g4465 g4825
+0- 1
+-0 1
+.names g4825 I6780
+0 1
+.names I2212 g1206
+0 1
+.names g1206 g1394
+0 1
+.names g4151 I6023
+0 1
+.names g1118 I2735
+0 1
+.names I2228 g1232
+0 1
+.names g1232 I2728
+0 1
+.names g1017 g1557
+0 1
+.names I5351 I5352 g4046
+11 1
+.names g4059 I5556
+0 1
+.names I2408 g1372
+0 1
+.names g1372 g2104
+0 1
+.names I2402 g1366
+0 1
+.names g1366 g2099
+0 1
+.names g2788 I4519
+0 1
+.names g784 I2385
+0 1
+.names I8831 g6707
+0 1
+.names g850 I2464
+0 1
+.names I2464 g1471
+0 1
+.names g4011 g4320
+0 1
+.names g2234 I3906
+0 1
+.names I5885 g4394
+0 1
+.names g6060 g6035 g6189
+1- 1
+-1 1
+.names g2212 I4264
+0 1
+.names I4264 g3043
+0 1
+.names g3366 g2782 g3748
+1- 1
+-1 1
+.names I6744 I6745 g5111
+0- 1
+-0 1
+.names g5111 I6816
+0 1
+.names g1295 I3516
+0 1
+.names I3499 g2347
+0 1
+.names g2347 g2754
+0 1
+.names I5686 g4242
+0 1
+.names g152 g1254
+0 1
+.names I2873 g1814
+0 1
+.names g6363 g6486
+0 1
+.names g6486 g6575
+0 1
+.names g4380 I6060
+0 1
+.names I6060 g4516
+0 1
+.names g6559 g6640 g4416 g2950 g6673
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6673 g6715
+0 1
+.names I6330 g4716
+0 1
+.names g4929 g5250
+0 1
+.names g6565 I8678
+0 1
+.names I8678 g6604
+0 1
+.names g127 g1038
+0 1
+.names g4473 I6397
+0 1
+.names g1222 I2814
+0 1
+.names I2814 g1773
+0 1
+.names g24 I2131
+0 1
+.names g5273 I7104
+0 1
+.names g3922 I5756
+0 1
+.names I5756 g4299
+0 1
+.names I9024 g6833
+0 1
+.names I8521 g6535
+0 1
+.names g5296 g5453
+0 1
+.names I3474 g2320
+0 1
+.names g2320 g2712
+0 1
+.names I8843 g6711
+0 1
+.names I5320 g4016
+0 1
+.names g6541 I8620
+0 1
+.names g6444 I8531
+0 1
+.names I8531 g6539
+0 1
+.names I9155 g6896
+0 1
+.names g1774 I2922
+0 1
+.names I2922 g1836
+0 1
+.names g5170 g5175 g5423
+00 1
+.names g5910 g5617 g6116
+1- 1
+-1 1
+.names g6353 g6351 g6461
+1- 1
+-1 1
+.names g6707 I8897
+0 1
+.names I3019 g1918
+0 1
+.names g1772 I3244
+0 1
+.names g5569 g4020 g5583
+1- 1
+-1 1
+.names g5583 I7490
+0 1
+.names g3095 g3546
+0 1
+.names g3546 I4980
+0 1
+.names g5638 g2053 g1076 g5853
+0-- 1
+-0- 1
+--0 1
+.names g1918 I4324
+0 1
+.names g1861 g2961
+0 1
+.names g3263 I5071
+0 1
+.names g849 g1282
+0 1
+.names g1282 I3340
+0 1
+.names g3942 I5705
+0 1
+.names g5926 g6162
+0 1
+.names g6185 I8150
+0 1
+.names I8267 g6419
+0 1
+.names g4567 g1674 g4761
+11 1
+.names g4761 I6723
+0 1
+.names I3090 g1979
+0 1
+.names g1979 g2927
+0 1
+.names g184 g3785 g4360
+11 1
+.names g6740 g6928 g6930
+1- 1
+-1 1
+.names g1963 g2885
+0 1
+.names g5353 g3300 g5535
+1- 1
+-1 1
+.names I8579 g6565
+0 1
+.names g971 I2445
+0 1
+.names I3804 g2660
+0 1
+.names g2296 g2946
+0 1
+.names g59 g938
+0 1
+.names I5944 g4435
+0 1
+.names I6063 g4517
+0 1
+.names I7478 g5717
+0 1
+.names g1484 I3656
+0 1
+.names g2814 I4794
+0 1
+.names g821 I2491
+0 1
+.names I3001 g1902
+0 1
+.names g1902 g2903
+0 1
+.names g6552 I8635
+0 1
+.names I8153 g6363
+0 1
+.names g269 I2169
+0 1
+.names g69 g942
+0 1
+.names I8884 g6730
+0 1
+.names g3388 g3775
+0 1
+.names g6411 I8432
+0 1
+.names I5157 g3922
+0 1
+.names g5492 g3277 g5622
+1- 1
+-1 1
+.names g5622 I7463
+0 1
+.names g2955 g5885 g6271
+1- 1
+-1 1
+.names g6271 g6385
+0 1
+.names g6864 I9110
+0 1
+.names I9110 g6881
+0 1
+.names I5264 g3980
+0 1
+.names I2796 I2797 g1764
+0- 1
+-0 1
+.names g1764 g2036
+0 1
+.names I1825 g706
+0 1
+.names g4265 g4624
+0 1
+.names g4624 I6441
+0 1
+.names g4550 g1017 g1680 g2897 g4669
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g4669 g4915
+0 1
+.names g1340 I3325
+0 1
+.names I3325 g2178
+0 1
+.names g2125 I3823
+0 1
+.names I3823 g2679
+0 1
+.names g5824 g6070
+0 1
+.names g1461 I3525
+0 1
+.names g2555 I4285
+0 1
+.names I2601 g1640
+0 1
+.names g1640 I3310
+0 1
+.names I9158 g6897
+0 1
+.names g1762 I2925
+0 1
+.names I8567 g6561
+0 1
+.names g2667 g3460
+0 1
+.names g6328 I8226
+0 1
+.names I3927 g2753
+0 1
+.names g2753 I4510
+0 1
+.names I9137 g6890
+0 1
+.names g5315 g4612 g5452
+11 1
+.names g2241 I4291
+0 1
+.names g5731 g5894
+0 1
+.names I3578 g2443
+0 1
+.names g2443 g2805
+0 1
+.names g332 I1938
+0 1
+.names g985 g1788
+0 1
+.names I3560 g2422
+0 1
+.names I6452 g4788
+0 1
+.names g4788 I6772
+0 1
+.names I8360 g6359 g6480
+1- 1
+-1 1
+.names g2555 I4312
+0 1
+.names g4704 I6531
+0 1
+.names g107 g3425 g4017
+0- 1
+-0 1
+.names g4017 g4402
+0 1
+.names g278 I1862
+0 1
+.names g19 I2240
+0 1
+.names g4322 g4615
+0 1
+.names g353 g837
+0 1
+.names g5518 g5661
+0 1
+.names g205 I1835
+0 1
+.names I2825 g1781
+0 1
+.names g1781 I3590
+0 1
+.names I7466 g5705
+0 1
+.names g5705 I7686
+0 1
+.names g784 g774 g821 I2574 g1612
+1111 1
+.names g1612 g1842
+0 1
+.names I2218 g1219
+0 1
+.names g6376 g4086 g4074 g4068 g6427
+0000 1
+.names g5813 g6087
+0 1
+.names g5124 I6942
+0 1
+.names g6515 g6115 g6619
+11 1
+.names g6619 I8767
+0 1
+.names I8159 g6365
+0 1
+.names g2650 g3501
+0 1
+.names I2842 g1790
+0 1
+.names g1790 I3222
+0 1
+.names g6340 g5938 g6447
+1- 1
+-1 1
+.names g4519 I6244
+0 1
+.names g6385 g3733 g4328 g4314 g6439
+0000 1
+.names g1257 I2958
+0 1
+.names g6864 I9116
+0 1
+.names g6255 g6093 g6298
+1- 1
+-1 1
+.names I6355 g4727
+0 1
+.names g4727 g5084
+0 1
+.names g3742 I5654
+0 1
+.names g2125 I3797
+0 1
+.names g5151 I6992
+0 1
+.names I3496 g2346
+0 1
+.names g3680 g3145 g3850
+1- 1
+-1 1
+.names g3850 I5837
+0 1
+.names g1418 g1449 g2433
+00 1
+.names g878 I2388
+0 1
+.names g4721 I6573
+0 1
+.names g1461 I3563
+0 1
+.names g6245 g6086 g6290
+1- 1
+-1 1
+.names g1161 I2601
+0 1
+.names g2343 g2752
+0 1
+.names g6176 I8183
+0 1
+.names I8183 g6373
+0 1
+.names I4358 g3110
+0 1
+.names g3110 g3363
+0 1
+.names g5708 I7689
+0 1
+.names I7689 g5919
+0 1
+.names g774 I2428
+0 1
+.names g4190 g4563
+0 1
+.names g297 I2190
+0 1
+.names g1644 I3408
+0 1
+.names g2628 g3453
+0 1
+.names I8171 g6369
+0 1
+.names g1612 I3155
+0 1
+.names I3155 g2042
+0 1
+.names g3589 I5249
+0 1
+.names g6369 g6489
+0 1
+.names g6489 g6578
+0 1
+.names g4714 I6540
+0 1
+.names g1714 I3291
+0 1
+.names g854 g1286
+0 1
+.names I3516 g2364
+0 1
+.names I3364 g2233
+0 1
+.names g3910 I5612
+0 1
+.names I3010 g1911
+0 1
+.names I6786 g5136
+0 1
+.names g2924 g1749 g3505
+11 1
+.names g3505 g3912
+0 1
+.names g1222 I2741
+0 1
+.names g6747 g5068 g5066 g6783
+0-- 1
+-0- 1
+--0 1
+.names g6783 I8940
+0 1
+.names I2614 g1645
+0 1
+.names g1645 I2910
+0 1
+.names g1504 I3071
+0 1
+.names g5509 g5647
+0 1
+.names I3468 g2316
+0 1
+.names g2316 I3705
+0 1
+.names g1450 I3471
+0 1
+.names g1123 I2638
+0 1
+.names g578 g844
+0 1
+.names g5318 g1589 g3491 g5388
+1-- 1
+-1- 1
+--1 1
+.names g5388 g5546
+0 1
+.names g3687 g3161 g3857
+1- 1
+-1 1
+.names g2945 I4465
+0 1
+.names g5638 g1552 g1017 g2062 g5857
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g5857 g6015
+0 1
+.names I8255 g6415
+0 1
+.names g1589 g1879 g3793 g4240
+000 1
+.names g4240 I6126
+0 1
+.names g3942 I5686
+0 1
+.names g1143 I2883
+0 1
+.names g6519 I8671
+0 1
+.names g5701 I7707
+0 1
+.names g2339 g6073 g6239
+1- 1
+-1 1
+.names I3225 g2103
+0 1
+.names g1222 I2327
+0 1
+.names g3942 I5708
+0 1
+.names g6698 I8857
+0 1
+.names g3770 I5640
+0 1
+.names I6772 g5120
+0 1
+.names g6376 g4086 g4074 g4302 g6429
+0000 1
+.names I3861 g2706
+0 1
+.names g2524 I3773
+0 1
+.names g690 I2165
+0 1
+.names g123 I2212
+0 1
+.names I3083 g1972
+0 1
+.names g1972 g2888
+0 1
+.names I7312 I7313 g5565
+0- 1
+-0 1
+.names I3310 g2173
+0 1
+.names g2173 I4195
+0 1
+.names I3134 g2029
+0 1
+.names I3304 g2171
+0 1
+.names I3037 g1934
+0 1
+.names g2405 g2787
+0 1
+.names g1861 g2956
+0 1
+.names I5536 I5537 g4151
+0- 1
+-0 1
+.names g6553 I8638
+0 1
+.names g2044 I3819
+0 1
+.names I2910 g1832
+0 1
+.names g1832 I3836
+0 1
+.names I2857 g1806
+0 1
+.names g5605 I7587
+0 1
+.names g4193 g4606
+0 1
+.names g4606 g4769
+0 1
+.names g1263 I2949
+0 1
+.names g3388 g3778
+0 1
+.names g5950 g6188
+0 1
+.names g5050 I6949
+0 1
+.names g398 g3906 g4185
+11 1
+.names g1742 I2995
+0 1
+.names I2995 g1898
+0 1
+.names g3388 g3782
+0 1
+.names I8570 g6562
+0 1
+.names g5904 g5604 g6114
+1- 1
+-1 1
+.names g5742 g5892
+0 1
+.names g4390 g4048 g4451
+1- 1
+-1 1
+.names g6291 I8290
+0 1
+.names g1898 I4306
+0 1
+.names g4059 g4229
+0 1
+.names g5383 I7284
+0 1
+.names g4308 g4614
+0 1
+.names I8576 g6564
+0 1
+.names g3466 I5324
+0 1
+.names g5818 g2940 g5943
+0- 1
+-0 1
+.names g5943 I7832
+0 1
+.names g3838 I5469
+0 1
+.names I3062 g1953
+0 1
+.names g3030 g3267
+0 1
+.names g1917 I4321
+0 1
+.names g1123 I2877
+0 1
+.names I2877 g1819
+0 1
+.names g1861 g2957
+0 1
+.names g6256 g6644 g6685
+1- 1
+-1 1
+.names g1594 I2952
+0 1
+.names g4385 I6072
+0 1
+.names I8693 g6609
+0 1
+.names g5295 I7113
+0 1
+.names g6242 I8034
+0 1
+.names I2821 g1776
+0 1
+.names g1776 I3062
+0 1
+.names I3584 g2449
+0 1
+.names g1484 I3620
+0 1
+.names g6341 g5940 g6450
+1- 1
+-1 1
+.names g2296 g2865
+0 1
+.names I9116 g6883
+0 1
+.names g4473 g4837
+0 1
+.names g6302 g6121 g6437
+1- 1
+-1 1
+.names g6437 I8509
+0 1
+.names I3736 g2604
+0 1
+.names g2525 I4267
+0 1
+.names g1363 g2098
+0 1
+.names I5705 g4251
+0 1
+.names g536 g945
+0 1
+.names I8332 g6466
+0 1
+.names g5726 I7679
+0 1
+.names I7679 g5915
+0 1
+.names g4252 g4622
+0 1
+.names g6457 I8467
+0 1
+.names g3764 g6769 g6789
+1- 1
+-1 1
+.names g5210 g6161 g6291
+11 1
+.names g10 I2150
+0 1
+.names g5926 g6165
+0 1
+.names g6445 I8597
+0 1
+.names I8597 g6571
+0 1
+.names I6740 g5110
+0 1
+.names g3844 I5699
+0 1
+.names g5067 g5310
+0 1
+.names g1725 I3298
+0 1
+.names g1053 I2627
+0 1
+.names I2627 g1650
+0 1
+.names g1450 I3485
+0 1
+.names I4743 g3527
+0 1
+.names g282 I1874
+0 1
+.names I1874 g809
+0 1
+.names g598 g849
+0 1
+.names g3821 I5606
+0 1
+.names g3745 I5879
+0 1
+.names g1075 I2361
+0 1
+.names I5236 g3970
+0 1
+.names g1143 g1594
+0 1
+.names g2121 g2032 g6394 g6469
+111 1
+.names g6469 g6538
+0 1
+.names g1426 I3083
+0 1
+.names g1161 I2857
+0 1
+.names g5752 I7643
+0 1
+.names g1946 I3708
+0 1
+.names g1819 I3198
+0 1
+.names I3198 g2086
+0 1
+.names I3890 g2728
+0 1
+.names g1830 g2583
+0 1
+.names g2583 I4468
+0 1
+.names g3067 g3320
+0 1
+.names I7587 g5788
+0 1
+.names g5788 g6067
+0 1
+.names g842 g1275
+0 1
+.names I8335 g6467
+0 1
+.names I2321 g1322
+0 1
+.names I6072 g4520
+0 1
+.names I2337 g1328
+0 1
+.names g4351 I5938
+0 1
+.names I5938 g4431
+0 1
+.names I5708 g4252
+0 1
+.names I2318 g1321
+0 1
+.names g3575 g3906
+0 1
+.names I3602 g2470
+0 1
+.names g3388 g3789
+0 1
+.names I6706 g5064
+0 1
+.names g1276 g2025
+0 1
+.names g6375 g6493
+0 1
+.names g5753 g5899
+0 1
+.names I6456 g4790
+0 1
+.names g3851 I5843
+0 1
+.names I5910 g4405
+0 1
+.names g3673 I4964
+0 1
+.names g996 g1550
+0 1
+.names I5851 g4380
+0 1
+.names I5743 g4286
+0 1
+.names g2276 I4198
+0 1
+.names g3049 g3299
+0 1
+.names g5381 g5563
+0 1
+.names I6615 g4911
+0 1
+.names g2031 I3733
+0 1
+.names I8818 g6700
+0 1
+.names g1504 I2986
+0 1
+.names I2986 g1891
+0 1
+.names g4688 g4271 g5083
+1- 1
+-1 1
+.names g5083 g5237
+0 1
+.names g3575 g3892
+0 1
+.names g2312 g2678
+0 1
+.names I2870 g1813
+0 1
+.names g1813 I3225
+0 1
+.names g6376 g4323 g4074 g4302 g6442
+0000 1
+.names g4059 g4225
+0 1
+.names I3513 g2361
+0 1
+.names g2361 g2766
+0 1
+.names I2391 g1352
+0 1
+.names g1352 g2087
+0 1
+.names g1375 g2105
+0 1
+.names g5098 g4802 g5323
+1- 1
+-1 1
+.names g5323 I7143
+0 1
+.names g2284 I4003
+0 1
+.names I4003 g2801
+0 1
+.names I6723 g5089
+0 1
+.names g3714 I5065
+0 1
+.names g131 g714
+0 1
+.names I2648 g1670
+0 1
+.names g1670 I3540
+0 1
+.names g2897 g2101 g1514 g4550 g4678
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g4678 g4980
+0 1
+.names g2581 I3923
+0 1
+.names I3923 g2748
+0 1
+.names I2887 g1823
+0 1
+.names g2695 g3478
+0 1
+.names I2169 g1142
+0 1
+.names g2350 g2755
+0 1
+.names I3298 g2169
+0 1
+.names g4694 g4280 g5085
+1- 1
+-1 1
+.names g5085 g5242
+0 1
+.names g6170 I8168
+0 1
+.names g6700 I8863
+0 1
+.names g161 g1255
+0 1
+.names g3527 I5033
+0 1
+.names g5918 I7799
+0 1
+.names I8988 g6817
+0 1
+.names g326 g3441 g3728
+11 1
+.names g2245 I4315
+0 1
+.names I4315 g3082
+0 1
+.names I3868 g2713
+0 1
+.names g2713 g3482
+0 1
+.names g6338 g5936 g6444
+1- 1
+-1 1
+.names g1156 I2696
+0 1
+.names I2696 g1692
+0 1
+.names g6566 I8681
+0 1
+.names I8681 g6605
+0 1
+.names I2728 g1726
+0 1
+.names I2394 g1355
+0 1
+.names g1355 g2091
+0 1
+.names I3071 g1960
+0 1
+.names g5047 g4766 g5295
+1- 1
+-1 1
+.names g3375 g2807 g3751
+1- 1
+-1 1
+.names I3169 I3170 g2061
+0- 1
+-0 1
+.names g314 g873 g1411
+0- 1
+-0 1
+.names g1411 g2007
+0 1
+.names I6054 g4514
+0 1
+.names g4514 I6250
+0 1
+.names g310 g866 g873 g1402
+0-- 1
+-0- 1
+--0 1
+.names g1402 g2059
+0 1
+.names g1947 g2920
+0 1
+.names I3278 g2157
+0 1
+.names g5911 g5619 g6118
+1- 1
+-1 1
+.names g2364 g2767
+0 1
+.names g2525 I4358
+0 1
+.names g2877 I4821
+0 1
+.names g1504 I3090
+0 1
+.names g336 g1112
+0 1
+.names g843 g1267
+0 1
+.names I6042 g4510
+0 1
+.names I2312 g1319
+0 1
+.names I7686 g5918
+0 1
+.names g2215 g3002
+0 1
+.names g6376 g4086 g4309 g4302 g6435
+0000 1
+.names g6435 I8573
+0 1
+.names g3082 I4483
+0 1
+.names g3882 I5514
+0 1
+.names g6522 I8713
+0 1
+.names g2739 I4507
+0 1
+.names g1142 I2340
+0 1
+.names I2340 g1329
+0 1
+.names I2864 g1811
+0 1
+.names g1811 I3694
+0 1
+.names g1236 I2788
+0 1
+.names g170 g857
+0 1
+.names g5649 g1557 g1564 g2113 g5872
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names I3694 g2581
+0 1
+.names g1193 I2760
+0 1
+.names I5091 g3866
+0 1
+.names g6702 I8907
+0 1
+.names g6864 I9137
+0 1
+.names I2904 g1830
+0 1
+.names g5458 I7264
+0 1
+.names g6413 I8435
+0 1
+.names I8243 g6411
+0 1
+.names g6709 I8894
+0 1
+.names I8894 g6734
+0 1
+.names I2707 g1703
+0 1
+.names g3914 I5637
+0 1
+.names I5637 g4215
+0 1
+.names g1038 I2779
+0 1
+.names g5794 g6074
+0 1
+.names I4291 g3064
+0 1
+.names g3466 g3785
+0 1
+.names g946 I2581
+0 1
+.names I2581 g1624
+0 1
+.names g5742 g5895
+0 1
+.names g3302 g2700 g4080
+1- 1
+-1 1
+.names g4080 g4314
+0 1
+.names g5805 g6080
+0 1
+.names I2109 I2110 g1075
+0- 1
+-0 1
+.names g6449 I8603
+0 1
+.names g2275 I4391
+0 1
+.names g6637 g6558 g6679
+1- 1
+-1 1
+.names g6679 g6713
+0 1
+.names I2611 g1644
+0 1
+.names I8591 g6569
+0 1
+.names g1315 I3137
+0 1
+.names I3137 g2030
+0 1
+.names g3832 I5490
+0 1
+.names g2176 I4223
+0 1
+.names g6322 I8220
+0 1
+.names I6410 g4768
+0 1
+.names g2481 g2826
+0 1
+.names I2703 g1699
+0 1
+.names I5865 g4386
+0 1
+.names g2120 g1654 g2861
+11 1
+.names g4473 g4806
+0 1
+.names I8279 g6423
+0 1
+.names g6423 I8423
+0 1
+.names g4285 g4807 g5050
+11 1
+.names I2724 g1724
+0 1
+.names g6385 g4334 g4092 g4080 g6443
+0000 1
+.names g6443 I8588
+0 1
+.names g2801 I4522
+0 1
+.names g37 g1174
+0 1
+.names g571 g842
+0 1
+.names g4355 g4033 g4434
+1- 1
+-1 1
+.names I4318 g3083
+0 1
+.names I5793 g4322
+0 1
+.names g1782 I3232
+0 1
+.names I3749 g2609
+0 1
+.names g4493 g1542 g4687
+11 1
+.names I8497 g6527
+0 1
+.names g5898 g5598 g6108
+1- 1
+-1 1
+.names g5358 I7153
+0 1
+.names g1954 g2883
+0 1
+.names I5876 g4391
+0 1
+.names g4391 I6084
+0 1
+.names g394 g3904 g4182
+11 1
+.names g1439 I3096
+0 1
+.names g1326 I3496
+0 1
+.names g135 g715
+0 1
+.names I7469 g5708
+0 1
+.names I2159 g1119
+0 1
+.names I2376 g1341
+0 1
+.names g1341 g2066
+0 1
+.names I4391 g3150
+0 1
+.names I2296 g1315
+0 1
+.names g6134 I8103
+0 1
+.names g1286 I3395
+0 1
+.names g1338 I3337
+0 1
+.names g4163 I6008
+0 1
+.names I6008 g4496
+0 1
+.names g1001 g1577
+0 1
+.names I6126 g4550
+0 1
+.names g3466 g3773
+0 1
+.names g2877 I4537
+0 1
+.names g5638 g2056 g1666 g1661 g5818
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g5818 g5958
+0 1
+.names g6 I2147
+0 1
+.names g6571 I8690
+0 1
+.names I8690 g6608
+0 1
+.names g3914 I5615
+0 1
+.names g338 g830
+0 1
+.names I4821 g3622
+0 1
+.names g3622 g3769
+0 1
+.names g2485 g2827
+0 1
+.names g3686 g3157 g3856
+1- 1
+-1 1
+.names I5033 g3836
+0 1
+.names I4455 g3212
+0 1
+.names I2955 g1853
+0 1
+.names I3485 g2333
+0 1
+.names g6241 g6082 g6287
+1- 1
+-1 1
+.names g3540 g1665 g3844
+11 1
+.names g4473 g4807
+0 1
+.names g3537 I5223
+0 1
+.names g4707 I6561
+0 1
+.names g985 I2596
+0 1
+.names g5926 g6161
+0 1
+.names g654 g856
+0 1
+.names g6182 I8147
+0 1
+.names I8147 g6361
+0 1
+.names I3337 g2196
+0 1
+.names g2440 g2803
+0 1
+.names g370 g3890 g4159
+11 1
+.names I6895 g5230
+0 1
+.names g5230 I6986
+0 1
+.names g5824 g6051
+0 1
+.names g281 I1871
+0 1
+.names I1871 g804
+0 1
+.names I3656 g2538
+0 1
+.names I2330 g1325
+0 1
+.names g1461 I3481
+0 1
+.names g2356 g6075 g6242
+1- 1
+-1 1
+.names I5696 g4248
+0 1
+.names I6280 g4692
+0 1
+.names g5923 I7805
+0 1
+.names g1484 I3599
+0 1
+.names I6352 g4726
+0 1
+.names g4059 I5548
+0 1
+.names I5548 g4154
+0 1
+.names I2593 g1636
+0 1
+.names g2928 g1764 g3512
+11 1
+.names g3512 g3921
+0 1
+.names I7284 g5540
+0 1
+.names I2128 g1106
+0 1
+.names I8888 g6732
+0 1
+.names g1177 I2842
+0 1
+.names g3365 g2781 g3747
+1- 1
+-1 1
+.names g3747 I5893
+0 1
+.names g952 I2460
+0 1
+.names g2679 g3462
+0 1
+.names I3528 g2381
+0 1
+.names g4871 I6789
+0 1
+.names g5824 g6043
+0 1
+.names g2954 g5857 g6097
+0- 1
+-0 1
+.names g6097 I7871
+0 1
+.names g1267 I3001
+0 1
+.names I5640 g4218
+0 1
+.names g4022 I5720
+0 1
+.names I5720 g4267
+0 1
+.names I3531 g2390
+0 1
+.names I3540 g2397
+0 1
+.names I6867 g5199
+0 1
+.names g489 g1046
+0 1
+.names I3629 g2505
+0 1
+.names g3466 g3788
+0 1
+.names g5824 g6034
+0 1
+.names I8300 g6434
+0 1
+.names g4363 g4037 g4438
+1- 1
+-1 1
+.names g4438 I6299
+0 1
+.names g4022 I5750
+0 1
+.names g1659 I2929
+0 1
+.names I8103 g6347
+0 1
+.names g38 g1191
+0 1
+.names I4429 g3192
+0 1
+.names g2035 I3746
+0 1
+.names g5821 g2944 g5947
+0- 1
+-0 1
+.names g2986 g3485
+0 1
+.names I2596 g1637
+0 1
+.names I3773 g2631
+0 1
+.names g6532 I8656
+0 1
+.names I5071 g3854
+0 1
+.names g6376 g4323 g4309 g4068 g6445
+0000 1
+.names g2461 g2817
+0 1
+.names I6069 g4519
+0 1
+.names g6289 I8249
+0 1
+.names I8249 g6413
+0 1
+.names g3803 I5790
+0 1
+.names I5868 g4387
+0 1
+.names g4387 I6078
+0 1
+.names g4561 I6340
+0 1
+.names I7701 g5923
+0 1
+.names g89 g1064 g1802
+11 1
+.names g1802 I3468
+0 1
+.names g5089 I6959
+0 1
+.names I4462 g3219
+0 1
+.names g2171 I4318
+0 1
+.names I7490 g5727
+0 1
+.names g5727 I7634
+0 1
+.names g119 g3251 g3726
+11 1
+.names g3726 I5427
+0 1
+.names I4246 g3031
+0 1
+.names g5824 g5880
+0 1
+.names g5880 g6117
+0 1
+.names g809 g1642
+0 1
+.names I8376 I8377 I8378 I8379 g6482
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g3371 g2793 g3749
+1- 1
+-1 1
+.names g3749 I5904
+0 1
+.names g5753 g5886
+0 1
+.names I8767 g6657
+0 1
+.names g1322 I3152
+0 1
+.names I2355 g1334
+0 1
+.names g684 I2053
+0 1
+.names I6756 g5114
+0 1
+.names g3970 I5403
+0 1
+.names g5135 I6972
+0 1
+.names I6972 g5314
+0 1
+.names g952 I2453
+0 1
+.names g878 g1654
+0 1
+.names g3854 I5529
+0 1
+.names I5249 g3975
+0 1
+.names g3450 I5148
+0 1
+.names I5148 g3911
+0 1
+.names g6493 g6581
+0 1
+.names g1039 g658 g1603
+00 1
+.names g1603 g1880
+0 1
+.names g3821 I5618
+0 1
+.names I3961 g2772
+0 1
+.names g2333 g2743
+0 1
+.names I8940 g6784
+0 1
+.names I2970 g1875
+0 1
+.names g1875 g2890
+0 1
+.names g2234 I4300
+0 1
+.names g862 g314 g301 g1387
+0-- 1
+-0- 1
+--0 1
+.names g1387 g1978
+0 1
+.names g3388 g3796
+0 1
+.names I2638 g1659
+0 1
+.names g1759 I3629
+0 1
+.names I4371 g3124
+0 1
+.names g1473 g1470 g1459 g2010
+0-- 1
+-0- 1
+--0 1
+.names g2010 g2856
+0 1
+.names g2576 I3902
+0 1
+.names I3902 g2734
+0 1
+.names I6084 g4524
+0 1
+.names g349 g836
+0 1
+.names I4762 g3540
+0 1
+.names g5742 g5887
+0 1
+.names g878 g1542
+0 1
+.names I4414 g3177
+0 1
+.names g2154 I3717
+0 1
+.names g5010 I6895
+0 1
+.names g3984 I5542
+0 1
+.names g4202 g4577
+0 1
+.names g319 g4253 g4465
+0- 1
+-0 1
+.names g4465 g4717
+0 1
+.names I7107 g5433
+0 1
+.names I4920 I4921 g3742
+0- 1
+-0 1
+.names g4784 g1679 g5017
+11 1
+.names g2296 g2863
+0 1
+.names g1861 g3199
+0 1
+.names g5331 g5550
+0 1
+.names I4976 g3781
+0 1
+.names g5731 g5891
+0 1
+.names g3575 g3898
+0 1
+.names g3575 g3900
+0 1
+.names g36 g1118
+0 1
+.names g3388 g3797
+0 1
+.names I9077 g6850
+0 1
+.names g5926 g6163
+0 1
+.names I7487 g5726
+0 1
+.names g2709 g3510
+0 1
+.names g3546 g1049 g3910
+11 1
+.names g3766 I5457
+0 1
+.names I3836 g2688
+0 1
+.names I4059 g2857
+0 1
+.names g3037 g3291
+0 1
+.names g2197 g2976
+0 1
+.names g774 I2402
+0 1
+.names g5124 I6923
+0 1
+.names g89 g1056
+0 1
+.names g1411 g1402 g2795 g3502
+0-- 1
+-0- 1
+--0 1
+.names g1076 g1529
+0 1
+.names g3564 g3984
+0 1
+.names g985 g1649
+0 1
+.names I2385 g1348
+0 1
+.names g4911 g5248
+0 1
+.names g4286 g4636
+0 1
+.names g719 I2394
+0 1
+.names g4933 g5255
+0 1
+.names g6809 I9031
+0 1
+.names I3942 g2760
+0 1
+.names g2728 g3488
+0 1
+.names I8837 g6709
+0 1
+.names g2962 I4587
+0 1
+.names g4773 I6733
+0 1
+.names g5684 I7487
+0 1
+.names g3821 I5591
+0 1
+.names I5591 g4187
+0 1
+.names g6817 I9005
+0 1
+.names g3346 g3886
+0 1
+.names g2394 g2779
+0 1
+.names g4550 g1560 g1559 g2073 g4812
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g4812 g4904
+0 1
+.names g848 g1279
+0 1
+.names I2143 g1111
+0 1
+.names I6750 g5112
+0 1
+.names I3717 g2588
+0 1
+.names g6385 g4334 g4328 g4080 g6449
+0000 1
+.names g4786 I6769
+0 1
+.names I6397 g4763
+0 1
+.names I4382 g3136
+0 1
+.names I3906 g2739
+0 1
+.names g878 g1549
+0 1
+.names g74 g947
+0 1
+.names g6884 I9149
+0 1
+.names I9149 g6894
+0 1
+.names g3334 g2746 g3739
+1- 1
+-1 1
+.names g3739 I5851
+0 1
+.names I6118 g4536
+0 1
+.names I8897 g6735
+0 1
+.names g1504 I2970
+0 1
+.names g301 g858
+0 1
+.names g1519 I3115
+0 1
+.names g1471 I3251
+0 1
+.names g6258 g6094 g6303
+1- 1
+-1 1
+.names g2986 g3465
+0 1
+.names g3070 g3322
+0 1
+.names I4980 g3783
+0 1
+.names I6078 g4522
+0 1
+.names g6336 g5935 g6440
+1- 1
+-1 1
+.names g1829 I3158
+0 1
+.names I3158 g2043
+0 1
+.names g5824 g6039
+0 1
+.names g6564 I8764
+0 1
+.names g2525 I4343
+0 1
+.names I4343 g3096
+0 1
+.names g3681 g3146 g3851
+1- 1
+-1 1
+.names g1030 g1552
+0 1
+.names g6539 I8617
+0 1
+.names g602 g850
+0 1
+.names g5415 g5576
+0 1
+.names g3903 g1474 g4410
+11 1
+.names g4410 g4537
+0 1
+.names g4910 g1480 g5149
+11 1
+.names I7960 g6276
+0 1
+.names g4320 g4612
+0 1
+.names g1928 g2914
+0 1
+.names I8710 g6616
+0 1
+.names g729 I2376
+0 1
+.names g3086 g3342
+0 1
+.names g3311 g2721 g4092
+1- 1
+-1 1
+.names g4092 g4328
+0 1
+.names g166 g3776 g4351
+11 1
+.names g6276 I7963
+0 1
+.names g2612 g3481
+0 1
+.names g2470 g2820
+0 1
+.names g1359 g1402 g1398 g901 g2026
+1111 1
+.names g2026 g2936
+0 1
+.names g3096 g3354
+0 1
+.names g3534 I5204
+0 1
+.names I6769 g5119
+0 1
+.names g5683 g3813 g5701
+11 1
+.names g1119 g1358
+0 1
+.names g5420 g5577
+0 1
+.names I5633 g4213
+0 1
+.names I7832 g6120
+0 1
+.names g1960 g2922
+0 1
+.names g5110 I6812
+0 1
+.names g3760 g6767 g6788
+1- 1
+-1 1
+.names g5753 g5893
+0 1
+.names g536 g2010 g541 g2908
+000 1
+.names g2952 g5854 g6095
+0- 1
+-0 1
+.names g1369 g2060
+0 1
+.names I8713 g6617
+0 1
+.names I9185 g6906
+0 1
+.names g5638 g2056 g1076 g1666 g5821
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g5821 g5975
+0 1
+.names I6048 g4512
+0 1
+.names g6659 g496 g6702
+1- 1
+-1 1
+.names I4198 g3001
+0 1
+.names I5568 g4166
+0 1
+.names g6285 g6409
+0 1
+.names g6409 g6516
+0 1
+.names g1595 I3148
+0 1
+.names g3605 g3761
+0 1
+.names I6099 g4529
+0 1
+.names g4495 g4220 g4773
+1- 1
+-1 1
+.names I5019 g3830
+0 1
+.names g1348 g2079
+0 1
+.names I5551 g4155
+0 1
+.names I9143 g6892
+0 1
+.names g5438 g6935 g6936
+1- 1
+-1 1
+.names g1729 I2955
+0 1
+.names g2538 g2840
+0 1
+.names g3356 g2770 g3745
+1- 1
+-1 1
+.names g5331 g5544
+0 1
+.names g4389 g4047 g4450
+1- 1
+-1 1
+.names g965 g1559
+0 1
+.names g4213 I6069
+0 1
+.names g4364 g4463
+0 1
+.names g496 g943
+0 1
+.names g6665 I8837
+0 1
+.names g5801 g6078
+0 1
+.names g4726 I6701
+0 1
+.names I6701 g5061
+0 1
+.names I8342 g6478
+0 1
+.names g314 g866
+0 1
+.names g5824 g6035
+0 1
+.names I6340 g4720
+0 1
+.names g2409 g1060 g1620 g3140
+0-- 1
+-0- 1
+--0 1
+.names g3140 g3677
+0 1
+.names g2381 g2954
+0 1
+.names I4160 I4161 g2966
+0- 1
+-0 1
+.names I6680 g5046
+0 1
+.names I8764 g6656
+0 1
+.names I5609 g4193
+0 1
+.names I2767 I2768 g1749
+0- 1
+-0 1
+.names g1749 g2032
+0 1
+.names g913 g3546 g3814
+11 1
+.names I7055 g5391
+0 1
+.names I3678 g2568
+0 1
+.names g2001 g2912
+0 1
+.names g3868 g5318 g3992 g5467
+1-- 1
+-1- 1
+--1 1
+.names I3509 g2357
+0 1
+.names I2324 g1323
+0 1
+.names g4267 g4625
+0 1
+.names I5674 g4232
+0 1
+.names g1088 g1666
+0 1
+.names I6630 g4938
+0 1
+.names I6660 I6661 g5019
+0- 1
+-0 1
+.names g6070 g6236
+0 1
+.names g5379 g6162 g6295
+11 1
+.names I7440 I7441 g5684
+0- 1
+-0 1
+.names g878 g1528
+0 1
+.names I2388 g1351
+0 1
+.names I6759 g5115
+0 1
+.names g1595 g4688 g5069
+1- 1
+-1 1
+.names g5069 g5251
+0 1
+.names g5116 g5315
+0 1
+.names g3705 I5094
+0 1
+.names g985 g1655
+0 1
+.names g1233 g1410
+0 1
+.names g5011 g1556 g5167
+11 1
+.names I9164 g6899
+0 1
+.names g49 g929
+0 1
+.names g3992 g5318 g5385
+1- 1
+-1 1
+.names g2391 g2778
+0 1
+.names g3124 g3370
+0 1
+.names g1891 g2894
+0 1
+.names g5314 I7007
+0 1
+.names g374 g3892 g4163
+11 1
+.names I6087 g4525
+0 1
+.names g2716 g3483
+0 1
+.names I7906 g6194
+0 1
+.names I2898 I2899 g1829
+0- 1
+-0 1
+.names g5331 g5542
+0 1
+.names g3057 g3306
+0 1
+.names I4195 g2998
+0 1
+.names I5556 g4158
+0 1
+.names I2521 g1555
+0 1
+.names g3388 g3790
+0 1
+.names I3148 g2039
+0 1
+.names I4424 g3187
+0 1
+.names I4664 g3387
+0 1
+.names g2986 g3461
+0 1
+.names g4215 g4587
+0 1
+.names g390 g3902 g4179
+11 1
+.names g4179 I6033
+0 1
+.names g2330 g5311 g5455
+0- 1
+-0 1
+.names g5455 g5554
+0 1
+.names g3575 g3904
+0 1
+.names I4437 g3200
+0 1
+.names g1937 g2919
+0 1
+.names g2381 g2952
+0 1
+.names g4396 g4052 g4455
+1- 1
+-1 1
+.names g2935 g1637 g3599
+1- 1
+-1 1
+.names g3905 g1481 g4416
+11 1
+.names g4416 g4545
+0 1
+.names g4741 g5090
+0 1
+.names I5324 g4020
+0 1
+.names g5905 I7910
+0 1
+.names I7910 g6212
+0 1
+.names g5300 g5456
+0 1
+.names I7404 g5649
+0 1
+.names I6033 g4507
+0 1
+.names g2357 g2764
+0 1
+.names g6385 g3733 g4092 g4080 g6430
+0000 1
+.names g5099 g5155
+0 1
+.names I4223 g3016
+0 1
+.names g6036 g6229
+0 1
+.names g4938 g5260
+0 1
+.names g6240 g6081 g6289
+1- 1
+-1 1
+.names g4273 g4628
+0 1
+.names I6057 g4515
+0 1
+.names I3251 g2120
+0 1
+.names I8349 g6335 g6479
+1- 1
+-1 1
+.names g1911 g2906
+0 1
+.names g2410 g2789
+0 1
+.names I6766 g5118
+0 1
+.names g2497 g1975 g2771
+11 1
+.names g6516 g6117 g6620
+11 1
+.names g4674 g952 g4967
+00 1
+.names g532 g4967 g5193
+11 1
+.names g3212 g2215 g3007 g2981 g3532
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3219 g2215 g3007 g2179 g3536
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g2591 g2215 g2197 g2981 g3539
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g2594 g2215 g2197 g2179 g3544
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3532 g3536 g3539 g3544 I5360
+1111 1
+.names g5046 g5509 g5598
+11 1
+.names g1332 g5892 g6249
+11 1
+.names g4339 g3610 g4630
+1- 1
+-1 1
+.names g4333 g3603 g4627
+1- 1
+-1 1
+.names g4630 g4627 g4666
+11 1
+.names g2809 g2738 g3629
+11 1
+.names g2701 g1894 g3328
+11 1
+.names g1161 g5731 g6085
+11 1
+.names g4054 g74 g4407
+11 1
+.names g4407 g79 g4648
+11 1
+.names g548 g4980 g5232
+11 1
+.names g1398 g1387 g2340
+11 1
+.names g5114 g5791 g5938
+11 1
+.names g5787 g3384 g5909
+11 1
+.names g2166 g170 g2941
+11 1
+.names g2941 g179 g3554
+11 1
+.names g3505 g471 g3903
+00 1
+.names g760 g754 g1474
+00 1
+.names g6473 g4247 g6549
+1- 1
+-1 1
+.names g1612 g6549 g6640
+11 1
+.names g3317 g3328 g3930
+00 1
+.names g3930 g1366 g4172
+11 1
+.names g406 g3790 g4372
+11 1
+.names g353 g2959 g3490
+11 1
+.names g4361 g3652 g4653
+1- 1
+-1 1
+.names g4357 g3643 g4651
+1- 1
+-1 1
+.names g4653 g4651 g4667
+11 1
+.names g2042 g1233 g3166
+11 1
+.names g248 g2893 g3366
+11 1
+.names g6806 g5958 g6829
+11 1
+.names g3104 g2764 g3649
+11 1
+.names g6904 g6902 g6911
+11 1
+.names g248 g2461 g3155
+11 1
+.names g2284 g2835 g3698
+11 1
+.names g1726 g6062 g6270
+11 1
+.names g873 g889 g1417
+0- 1
+-0 1
+.names g4253 g332 g4471
+11 1
+.names g1417 g4471 g4792
+11 1
+.names I8202 I8203 g6397
+0- 1
+-0 1
+.names g815 g809 g1628
+11 1
+.names g2036 g6397 g1628 g6473
+111 1
+.names g3554 g188 g3953
+11 1
+.names g3953 g4364 g4621
+11 1
+.names g4674 g1477 g4993
+00 1
+.names g504 g4993 g5158
+11 1
+.names g5705 g5958 g6124
+11 1
+.names g3658 g3665 g3880
+1- 1
+-1 1
+.names g3880 g6212 g6324
+11 1
+.names g1632 g754 g2121
+11 1
+.names I8195 I8196 g6394
+0- 1
+-0 1
+.names g2599 g2612 g3279
+11 1
+.names g2449 g3057 g3619
+11 1
+.names g1883 g921 g3167
+11 1
+.names g4826 g4621 g5013
+1- 1
+-1 1
+.names g4214 g3831 g4468
+1- 1
+-1 1
+.names g5013 g4468 g5311
+11 1
+.names g2809 g1960 g3367
+11 1
+.names g2544 g3096 g3652
+11 1
+.names g3154 g3166 g3533
+1- 1
+-1 1
+.names g2856 g945 g3533 g3843
+111 1
+.names g3936 g942 g4277
+11 1
+.names g4277 g947 g4593
+11 1
+.names g2256 g2819 g3686
+11 1
+.names g1472 g4680 g4950
+00 1
+.names g414 g4950 g5180
+11 1
+.names g188 g5264 g5380
+11 1
+.names g3378 g3381 g3923
+00 1
+.names g3923 g1345 g4160
+11 1
+.names g2252 g2713 g3321
+11 1
+.names g1123 g1578 g2089
+11 1
+.names g1329 g5889 g6245
+11 1
+.names g2234 g2792 g3670
+11 1
+.names g2619 g2320 g3625
+11 1
+.names g3518 g3521 g3526 g3530 I5359
+1111 1
+.names g4793 g4600 g5024
+1- 1
+-1 1
+.names g5024 g5453 g5559
+11 1
+.names g3183 g5997 g6144
+11 1
+.names g5679 g5953 g6272
+1- 1
+-1 1
+.names g6272 g6080 g6344
+11 1
+.names g760 g1638 g2137
+11 1
+.names g2137 g1595 g2948
+11 1
+.names g1699 g6044 g6259
+11 1
+.names g2381 g297 g2955
+11 1
+.names g1143 g5753 g6088
+11 1
+.names g5861 g6837 g6847
+1- 1
+-1 1
+.names g6847 g2295 g6852
+11 1
+.names g6911 g6913 g6918
+1- 1
+-1 1
+.names g6909 g6910 g6917
+1- 1
+-1 1
+.names g6918 g6917 g6923
+11 1
+.names g574 g5194 g5364
+11 1
+.names g590 g5364 g5515
+11 1
+.names g1101 g1094 g1499
+11 1
+.names g4533 g4530 g4835
+11 1
+.names g2245 g2820 g3687
+11 1
+.names I5301 I5302 g4004
+0- 1
+-0 1
+.names g2121 g1749 g4004 g4271
+111 1
+.names g1138 g3718 g2142 g3985
+0-- 1
+-0- 1
+--0 1
+.names I5760 I5761 g4300
+0- 1
+-0 1
+.names g3985 g119 g4300 g4611
+111 1
+.names g2998 g2709 g3341
+11 1
+.names g6580 g6235 g6650
+11 1
+.names g628 g3810 g4199
+11 1
+.names g631 g4199 g4541
+11 1
+.names g2497 g3090 g3645
+11 1
+.names g4611 g3528 g4670
+0- 1
+-0 1
+.names g4670 g1936 g5123
+11 1
+.names g2268 g2828 g3691
+11 1
+.names g3434 g861 g3816
+11 1
+.names g3816 g865 g4209
+11 1
+.names g3679 g3144 g3989
+1- 1
+-1 1
+.names g3989 g3332 g4353
+11 1
+.names g5665 g5937 g6246
+1- 1
+-1 1
+.names g6246 g6065 g6336
+11 1
+.names g6670 g6625 g6736 g6750
+1-- 1
+-1- 1
+--1 1
+.names g6750 g3477 g6768
+11 1
+.names g2850 g857 g3434
+11 1
+.names g3434 g4582 g4744
+11 1
+.names g2672 g2361 g3659
+11 1
+.names g5069 g4410 g3012 g5326
+1-- 1
+-1- 1
+--1 1
+.names g5326 g3459 g5351
+11 1
+.names g2842 g1369 g3358
+11 1
+.names g4507 g5545 g5648
+11 1
+.names g6932 g3605 g6934
+11 1
+.names g2172 g2615 g3275
+11 1
+.names g218 g2872 g3311
+11 1
+.names g378 g5274 g5410
+11 1
+.names g2422 g3046 g3615
+11 1
+.names g1499 g1666 g2062
+11 1
+.names g2809 g1969 g3374
+11 1
+.names g3694 g69 g4054
+11 1
+.names g4054 g4289 g4600
+11 1
+.names g1193 g5753 g6096
+11 1
+.names g834 g830 g1436
+11 1
+.names g952 g4680 g4877
+00 1
+.names g441 g4877 g5172
+11 1
+.names g260 g2506 g3180
+11 1
+.names I7231 I7232 g5506
+0- 1
+-0 1
+.names g5506 g4933 g5618
+11 1
+.names g157 g5099 g5143
+11 1
+.names g6900 g6898 g6913
+11 1
+.names g554 g4980 g5235
+11 1
+.names g706 g4262 g4580
+11 1
+.names g1123 g1567 g2085
+11 1
+.names g1721 g6057 g6266
+11 1
+.names g4785 g4583 g5014
+1- 1
+-1 1
+.names g5014 g5442 g5555
+11 1
+.names g1633 g161 g2166
+11 1
+.names g465 g5894 g6248
+11 1
+.names g5675 g5948 g6264
+1- 1
+-1 1
+.names g6264 g6076 g6342
+11 1
+.names I7245 I7246 g5508
+0- 1
+-0 1
+.names g5508 g4943 g5621
+11 1
+.names g2449 g3070 g3628
+11 1
+.names g1335 g5895 g6255
+11 1
+.names g1177 g5731 g6081
+11 1
+.names g3167 g1756 g3630
+11 1
+.names g6616 g6615 g6692
+11 1
+.names g2232 g2682 g3300
+11 1
+.names g3219 g6015 g6154
+11 1
+.names g5866 g6193 g6354
+11 1
+.names g3377 g3379 g3934
+00 1
+.names g3934 g2136 g4184
+11 1
+.names g4537 g5251 g2307 g5443
+111 1
+.names g5443 g3455 g5494
+11 1
+.names g414 g3797 g4384
+11 1
+.names g3644 g3099 g3971
+1- 1
+-1 1
+.names g3971 g3289 g4339
+11 1
+.names g4648 g84 g4838
+11 1
+.names g230 g2391 g3123
+11 1
+.names g2253 g2716 g3323
+11 1
+.names g4342 g3616 g4635
+1- 1
+-1 1
+.names g4340 g3611 g4631
+1- 1
+-1 1
+.names g4635 g4631 g4672
+11 1
+.names g2422 g1943 g2733
+11 1
+.names g3128 g2787 g3666
+11 1
+.names g5717 g5975 g6129
+11 1
+.names g3672 g3682 g3888
+1- 1
+-1 1
+.names g3888 g6212 g6329
+11 1
+.names g1088 g1499 g2073
+11 1
+.names g4431 g5160 g5360
+11 1
+.names g6803 g5958 g6828
+11 1
+.names g3490 g3887 g4285
+1- 1
+-1 1
+.names g2760 g1931 g3351
+11 1
+.names g6809 g5975 g6830
+11 1
+.names g2722 g2343 g3648
+11 1
+.names g2197 g2768 g3655
+11 1
+.names g766 g719 g729 g1706
+111 1
+.names g5824 g1726 g6068
+11 1
+.names g410 g3388 g4044
+11 1
+.names g760 g754 g1609
+11 1
+.names g2032 g6394 g1609 g6468
+111 1
+.names g2449 g2491 g3172
+11 1
+.names g2175 g2628 g3278
+11 1
+.names g254 g2905 g3372
+11 1
+.names g2544 g1982 g2781
+11 1
+.names g3016 g2712 g3618
+11 1
+.names g2245 g2789 g3667
+11 1
+.names g242 g2437 g3143
+11 1
+.names g131 g2863 g3282
+11 1
+.names g6478 g6624 g6623 g6682
+1-- 1
+-1- 1
+--1 1
+.names g6682 g932 g6716
+11 1
+.names g3200 g5997 g6149
+11 1
+.names g2256 g2830 g3693
+11 1
+.names g230 g2413 g3134
+11 1
+.names g236 g2883 g3334
+11 1
+.names g901 g3433 g2340 g3741
+0-- 1
+-0- 1
+--0 1
+.names I9051 I9052 g6843
+0- 1
+-0 1
+.names g3741 g328 g6843 g6848
+111 1
+.names g492 g4904 g5153
+11 1
+.names g560 g5025 g5209
+11 1
+.names g5077 g4416 g3028 g5327
+1-- 1
+-1- 1
+--1 1
+.names g5327 g3463 g5353
+11 1
+.names g1325 g5887 g6241
+11 1
+.names g706 g49 g1808
+11 1
+.names g224 g2364 g3113
+11 1
+.names g4791 g4597 g5018
+1- 1
+-1 1
+.names g5018 g5450 g5558
+11 1
+.names g6575 g6230 g6644
+11 1
+.names g3212 g6015 g6152
+11 1
+.names g512 g5899 g6258
+11 1
+.names g3352 g3360 g3959
+00 1
+.names g3959 g2110 g4178
+11 1
+.names g980 g965 g1575
+11 1
+.names g410 g3792 g4378
+11 1
+.names g4528 g4524 g4831
+11 1
+.names g4537 g5251 g1558 g5441
+111 1
+.names g5441 g3452 g5492
+11 1
+.names I7209 I7210 g5502
+0- 1
+-0 1
+.names g5502 g4900 g5600
+11 1
+.names g6339 g6467 g6556
+1- 1
+-1 1
+.names g932 g6556 g6614
+11 1
+.names g184 g4741 g4947
+11 1
+.names g2783 g1947 g3360
+11 1
+.names g5708 g5975 g6125
+11 1
+.names g610 g602 g918
+11 1
+.names g613 g918 g1419
+11 1
+.names g2644 g2333 g3641
+11 1
+.names g4838 g4173 g4873
+11 1
+.names g2323 g1763 g2896
+1- 1
+-1 1
+.names g2896 g3388 g4037
+11 1
+.names g3449 g2860 g3913
+1- 1
+-1 1
+.names g3913 g4292 g4495
+11 1
+.names g3104 g1988 g3379
+11 1
+.names g4685 g4686 g5094
+00 1
+.names g5094 g1384 g5175
+11 1
+.names g3118 g2776 g3658
+11 1
+.names g5824 g1711 g6061
+11 1
+.names g5161 g4873 g5430
+1- 1
+-1 1
+.names g4792 g4598 g5074
+1- 1
+-1 1
+.names g5430 g5074 g5500
+11 1
+.names g2370 g3037 g3611
+11 1
+.names g406 g3388 g4042
+11 1
+.names g453 g4877 g5184
+11 1
+.names g3763 g3296 g4239
+00 1
+.names g4239 g2882 g4442
+11 1
+.names g3316 g3326 g3958
+00 1
+.names g3958 g2091 g4164
+11 1
+.names g2568 g2001 g2807
+11 1
+.names g390 g5296 g5424
+11 1
+.names g3187 g6015 g6145
+11 1
+.names g2296 g3208 g3425
+11 1
+.names g1250 g3425 g2849 g3997
+111 1
+.names g3147 g64 g3694
+11 1
+.names g5681 g5955 g6273
+1- 1
+-1 1
+.names g6273 g6083 g6345
+11 1
+.names g2306 g1206 g3132
+11 1
+.names g2245 g2805 g3680
+11 1
+.names g1842 g6549 g6637
+11 1
+.names g3162 g2921 g3353
+11 1
+.names g1793 g1777 g2142
+11 1
+.names g1706 g736 g2255
+11 1
+.names g3177 g6015 g6159
+11 1
+.names g1094 g1546 g2081
+11 1
+.names g338 g3199 g3558
+11 1
+.names g5251 g4544 g5451
+11 1
+.names g5451 g3462 g5499
+11 1
+.names g449 g3798 g4389
+11 1
+.names g3337 g3349 g3956
+00 1
+.names g3956 g2104 g4171
+11 1
+.names g3618 g3625 g3849
+1- 1
+-1 1
+.names g3849 g6194 g6315
+11 1
+.names g461 g3789 g4371
+11 1
+.names g1861 g3819 g4253
+11 1
+.names g923 g4253 g2936 g4429
+111 1
+.names g2160 g931 g2937
+11 1
+.names g2937 g4628 g4787
+11 1
+.names g5824 g1692 g6047
+11 1
+.names g6848 g3621 g6873
+0- 1
+-0 1
+.names g6873 g2060 g6874
+11 1
+.names g821 g774 g784 g1716
+111 1
+.names g1716 g791 g2267
+11 1
+.names I2543 I2544 g1574
+0- 1
+-0 1
+.names g4545 g5256 g1574 g5444
+111 1
+.names g557 g5025 g5269
+11 1
+.names g4164 g4168 g4584
+00 1
+.names g4584 g1341 g4684
+11 1
+.names g3551 g940 g3936
+11 1
+.names g3936 g4636 g4791
+11 1
+.names g500 g5890 g6243
+11 1
+.names g6933 g3622 g6935
+11 1
+.names g2473 g1954 g2746
+11 1
+.names g4243 g2010 g4500
+1- 1
+-1 1
+.names g536 g4500 g4759
+11 1
+.names g5590 g5958 g6128
+11 1
+.names g382 g5278 g5414
+11 1
+.names g5720 g5958 g6130
+11 1
+.names g4509 g5549 g5660
+11 1
+.names g260 g2912 g3375
+11 1
+.names g3757 g3283 g4266
+00 1
+.names g4266 g2887 g4449
+11 1
+.names g3064 g2766 g3651
+11 1
+.names g4449 g4453 g4776
+00 1
+.names g4776 g1849 g4865
+11 1
+.names g2381 g293 g2953
+11 1
+.names g1541 g1546 g2068
+11 1
+.names g2195 g2653 g3285
+11 1
+.names g4521 g4516 g4833
+11 1
+.names g516 g4993 g5178
+11 1
+.names g74 g5576 g5679
+11 1
+.names g179 g5260 g5378
+11 1
+.names g2734 g1914 g3339
+11 1
+.names g766 g719 g1689
+11 1
+.names g520 g4993 g5182
+11 1
+.names g2397 g1905 g2699
+11 1
+.names g2449 g1957 g2747
+11 1
+.names g1161 g5742 g6090
+11 1
+.names g3691 g3171 g3996
+1- 1
+-1 1
+.names g3996 g3355 g4362
+11 1
+.names g3136 g2800 g3672
+11 1
+.names g418 g3388 g4052
+11 1
+.names g2518 g3086 g3643
+11 1
+.names g3287 g2671 g3820
+1- 1
+-1 1
+.names g3820 g4227 g4452
+11 1
+.names g5824 g1699 g6056
+11 1
+.names g714 g710 g1826
+11 1
+.names g3196 g6015 g6148
+11 1
+.names g5869 g6211 g6348
+11 1
+.names g4797 g4602 g5044
+1- 1
+-1 1
+.names g5044 g5456 g5560
+11 1
+.names g2179 g2744 g3634
+11 1
+.names g2588 g5997 g6155
+11 1
+.names g5860 g6834 g6846
+1- 1
+-1 1
+.names g6846 g2293 g6851
+11 1
+.names g2937 g938 g3551
+11 1
+.names g218 g2350 g3099
+11 1
+.names g2857 g1513 g3304
+11 1
+.names g716 g4195 g4486
+11 1
+.names g357 g2961 g3499
+11 1
+.names g1423 g4565 g4730
+11 1
+.names g4494 g5538 g5632
+11 1
+.names g4593 g949 g4794
+11 1
+.names g4794 g951 g5095
+11 1
+.names g1703 g6048 g6260
+11 1
+.names g5444 g3456 g5495
+11 1
+.names g102 g98 g1138
+0- 1
+-0 1
+.names g2604 g2312 g3613
+11 1
+.names g3637 g3648 g3865
+1- 1
+-1 1
+.names g3865 g6212 g6318
+11 1
+.names g314 g310 g901
+0- 1
+-0 1
+.names g437 g4877 g5164
+11 1
+.names g586 g4874 g5194
+11 1
+.names g551 g4980 g5233
+11 1
+.names g1890 g910 g2821
+11 1
+.names g4416 g3013 g4549
+1- 1
+-1 1
+.names g5256 g4549 g5454
+11 1
+.names g4782 g4580 g5012
+1- 1
+-1 1
+.names g5012 g5440 g5553
+11 1
+.names g3649 g3657 g3873
+1- 1
+-1 1
+.names g3873 g6212 g6321
+11 1
+.names g2568 g3110 g3660
+11 1
+.names g2121 g1595 g6538 g6625
+111 1
+.names g3425 g123 g4045
+11 1
+.names g3780 g3362 g4235
+00 1
+.names g4235 g1854 g4445
+11 1
+.names g508 g5896 g6253
+11 1
+.names g3702 g3190 g4001
+1- 1
+-1 1
+.names g4001 g3370 g4373
+11 1
+.names g528 g4993 g5189
+11 1
+.names g3554 g4215 g4491
+11 1
+.names g6896 g6894 g6909
+11 1
+.names g3329 g3339 g3966
+00 1
+.names g3966 g2099 g4169
+11 1
+.names g406 g4950 g5171
+11 1
+.names g3699 g3181 g3999
+1- 1
+-1 1
+.names g3999 g3364 g4369
+11 1
+.names g2245 g2803 g3679
+11 1
+.names g4407 g4293 g4602
+11 1
+.names g152 g5248 g5371
+11 1
+.names g3136 g2932 g3378
+11 1
+.names g398 g5304 g5429
+11 1
+.names I7577 I7578 g5783
+0- 1
+-0 1
+.names g5783 g5425 g5956
+11 1
+.names g4442 g4445 g4774
+00 1
+.names g4774 g2891 g4868
+11 1
+.names g64 g5574 g5675
+11 1
+.names g2370 g2416 g3135
+11 1
+.names g3759 g3288 g4245
+00 1
+.names g4245 g1899 g4459
+11 1
+.names g230 g2884 g3335
+11 1
+.names g2330 g3425 g3831
+11 1
+.names g2473 g2512 g3182
+11 1
+.names g2631 g2634 g3288
+11 1
+.names g3136 g2934 g3382
+11 1
+.names g4277 g4639 g4793
+11 1
+.names g445 g3388 g4015
+11 1
+.names g1583 g1543 g2107
+11 1
+.names g3173 g5997 g6141
+11 1
+.names g5673 g5944 g6261
+1- 1
+-1 1
+.names g6261 g6074 g6341
+11 1
+.names g6576 g6231 g6645
+11 1
+.names g3043 g2743 g3632
+11 1
+.names g836 g2021 g2853
+11 1
+.names g837 g2853 g3437
+11 1
+.names g2215 g2767 g3653
+11 1
+.names g4730 g4486 g4859
+1- 1
+-1 1
+.names g4859 g5084 g5201
+11 1
+.names g715 g1826 g2551
+11 1
+.names g895 g2551 g3208
+11 1
+.names g212 g2867 g3302
+11 1
+.names g2594 g6015 g6158
+11 1
+.names g5077 g2080 g5246
+1- 1
+-1 1
+.names g4545 g5246 g5449
+11 1
+.names g5059 g5521 g5604
+11 1
+.names g3558 g2949 g4021
+1- 1
+-1 1
+.names g4021 g4837 g5098
+11 1
+.names g5449 g3460 g5498
+11 1
+.names g1017 g1011 g1585
+11 1
+.names g1735 g6070 g6275
+11 1
+.names g3609 g3613 g3837
+1- 1
+-1 1
+.names g3837 g6194 g6311
+11 1
+.names g4352 g3633 g4645
+1- 1
+-1 1
+.names g4347 g3627 g4641
+1- 1
+-1 1
+.names g4645 g4641 g4671
+11 1
+.names I5308 I5309 g4007
+0- 1
+-0 1
+.names g1764 g4007 g1628 g4247
+111 1
+.names g4209 g4463 g4826
+11 1
+.names g4691 g4697 g5088
+00 1
+.names g5088 g2105 g5162
+11 1
+.names g4437 g5174 g5362
+11 1
+.names g3054 g2650 g3296
+11 1
+.names g386 g5292 g5419
+11 1
+.names g2291 g1788 g2935
+11 1
+.names g1612 g6474 g6559
+11 1
+.names g5503 g5357 g5623
+1- 1
+-1 1
+.names g5623 g3889 g5728
+11 1
+.names g386 g5331 g5486
+11 1
+.names g524 g4993 g5185
+11 1
+.names g248 g2488 g3171
+11 1
+.names g260 g2904 g3371
+11 1
+.names g1639 g809 g2138
+11 1
+.names g2138 g1612 g6540 g6628
+111 1
+.names g3382 g3383 g3927
+00 1
+.names g3927 g1352 g4165
+11 1
+.names g414 g3388 g4048
+11 1
+.names g3282 g2659 g3815
+1- 1
+-1 1
+.names g3815 g4225 g4448
+11 1
+.names g2178 g2640 g3281
+11 1
+.names g4520 g4515 g4827
+11 1
+.names g3634 g3089 g3964
+1- 1
+-1 1
+.names g3964 g3284 g4333
+11 1
+.names g749 g743 g736 I2566
+111 1
+.names g716 g152 g1633
+11 1
+.names g2268 g2817 g3684
+11 1
+.names g422 g3801 g4396
+11 1
+.names g3162 g2914 g3338
+11 1
+.names g1672 g1675 g2056
+11 1
+.names g374 g5270 g5406
+11 1
+.names g2243 g2695 g3309
+11 1
+.names g4498 g5542 g5635
+11 1
+.names g84 g5578 g5682
+11 1
+.names g390 g5331 g5487
+11 1
+.names g5702 g5958 g6123
+11 1
+.names g3651 g3659 g3877
+1- 1
+-1 1
+.names g3877 g6194 g6323
+11 1
+.names g2644 g3498 g3759
+11 1
+.names g672 g5054 g5226
+11 1
+.names g3209 g5997 g6151
+11 1
+.names g128 g2946 g3449
+11 1
+.names g6579 g6234 g6648
+11 1
+.names g512 g4993 g5173
+11 1
+.names g161 g5250 g5373
+11 1
+.names g3340 g3351 g3939
+00 1
+.names g3939 g1381 g4181
+11 1
+.names g2422 g1919 g2720
+11 1
+.names g4178 g4181 g4591
+00 1
+.names g4591 g2079 g4685
+11 1
+.names g4683 g4684 g5093
+00 1
+.names g5093 g1375 g5169
+11 1
+.names g143 g5247 g5369
+11 1
+.names g1279 g2025 g1267 I4040
+111 1
+.names g3031 g2740 g3362
+11 1
+.names g5677 g5951 g6268
+1- 1
+-1 1
+.names g6268 g6078 g6343
+11 1
+.names g6618 g6617 g6693
+11 1
+.names g3629 g3636 g3858
+1- 1
+-1 1
+.names g3858 g6212 g6334
+11 1
+.names g1838 g6469 g6555
+11 1
+.names g642 g1570 g2092
+11 1
+.names g606 g2092 g2909
+11 1
+.names g461 g3388 g4041
+11 1
+.names g3614 g3617 g3841
+1- 1
+-1 1
+.names g3841 g6194 g6313
+11 1
+.names g5115 g5794 g5940
+11 1
+.names g4369 g3662 g4656
+1- 1
+-1 1
+.names g4362 g3654 g4654
+1- 1
+-1 1
+.names g4656 g4654 g4673
+11 1
+.names g1043 g4894 g5188
+11 1
+.names g6874 g3358 g6907
+1- 1
+-1 1
+.names g6907 g3886 g6908
+11 1
+.names g563 g5025 g5216
+11 1
+.names g1177 g5753 g6094
+11 1
+.names g3303 g3315 g3925
+00 1
+.names g3925 g1355 g4168
+11 1
+.names g3698 g3180 g3998
+1- 1
+-1 1
+.names g3998 g3363 g4368
+11 1
+.names g54 g5572 g5671
+11 1
+.names g2256 g2802 g3678
+11 1
+.names g394 g5300 g5428
+11 1
+.names g3424 g1246 g4058
+11 1
+.names g2473 g3079 g3635
+11 1
+.names g710 g2296 g2860
+11 1
+.names g2772 g2430 g3682
+11 1
+.names I4151 I4152 g2960
+0- 1
+-0 1
+.names g2960 g2296 g3305
+11 1
+.names g5378 g5620 g5816
+1- 1
+-1 1
+.names g5816 g5667 g5910
+11 1
+.names g2604 g3481 g3755
+11 1
+.names I2675 I2676 g1686
+0- 1
+-0 1
+.names g1686 g2296 g2659
+11 1
+.names g5824 g3752 g5883
+11 1
+.names g3118 g2927 g3373
+11 1
+.names g4756 g4491 g4866
+1- 1
+-1 1
+.names g4866 g5092 g5217
+11 1
+.names g4457 g4459 g4777
+00 1
+.names g4777 g2874 g4863
+11 1
+.names g2609 g2622 g3283
+11 1
+.names g2688 g2663 g3602
+11 1
+.names g804 g798 g791 I2574
+111 1
+.names g508 g4993 g5165
+11 1
+.names g6679 g6628 g6739 g6762
+1-- 1
+-1- 1
+--1 1
+.names g6762 g3488 g6777
+11 1
+.names g89 g107 g1157
+0- 1
+-0 1
+.names g1743 g3140 g1157 g3718
+111 1
+.names g2706 g3504 g3767
+11 1
+.names g4233 g3924 g4568
+00 1
+.names g1474 g4568 g4688
+11 1
+.names g858 g889 g1784
+11 1
+.names g835 g1436 g2021
+11 1
+.names g4834 g4836 g4948
+1- 1
+-1 1
+.names g6719 g6749 g6782
+1- 1
+-1 1
+.names g4948 g6782 g6799
+11 1
+.names g2544 g1994 g2794
+11 1
+.names g2497 g2565 g3203
+11 1
+.names g3752 g5880 g6132
+11 1
+.names g528 g5886 g6238
+11 1
+.names g3216 g5997 g6153
+11 1
+.names g3359 g3367 g3965
+00 1
+.names g3965 g1391 g4183
+11 1
+.names g453 g3796 g4383
+11 1
+.names g1842 g6474 g6558
+11 1
+.names g449 g4877 g5181
+11 1
+.names g3162 g2826 g3689
+11 1
+.names g1808 g54 g2419
+11 1
+.names g2419 g4273 g4588
+11 1
+.names g465 g4967 g5197
+11 1
+.names g3353 g3361 g3931
+00 1
+.names g3931 g2087 g4161
+11 1
+.names g3690 g3170 g3995
+1- 1
+-1 1
+.names g3995 g3354 g4361
+11 1
+.names g2760 g2405 g3671
+11 1
+.names g449 g3388 g4051
+11 1
+.names g1123 g5731 g6092
+11 1
+.names g471 g1358 g2323
+11 1
+.names g5096 g4800 g5228
+1- 1
+-1 1
+.names g5228 g5457 g5562
+11 1
+.names g2706 g2678 g3609
+11 1
+.names g516 g5901 g6262
+11 1
+.names g6712 g754 g5237 g6736
+111 1
+.names g545 g3461 g3758
+11 1
+.names g457 g3388 g4043
+11 1
+.names g254 g2892 g3365
+11 1
+.names I2527 I2528 g1558
+0- 1
+-0 1
+.names g59 g5573 g5673
+11 1
+.names g3667 g3133 g3986
+1- 1
+-1 1
+.names g3986 g3320 g4347
+11 1
+.names g236 g2410 g3133
+11 1
+.names g2264 g2728 g3333
+11 1
+.names g3016 g3510 g3774
+11 1
+.names g4180 g4183 g4589
+00 1
+.names g4589 g1363 g4697
+11 1
+.names g3043 g3519 g3780
+11 1
+.names g6714 g760 g5237 g6737
+111 1
+.names g5824 g1735 g6077
+11 1
+.names g2544 g3114 g3662
+11 1
+.names g6574 g6229 g6643
+11 1
+.names g2213 g2664 g3290
+11 1
+.names g6468 g4244 g6545
+1- 1
+-1 1
+.names g1595 g6545 g6634
+11 1
+.names g1101 g1094 g1576
+11 1
+.names g1576 g1535 g2113
+11 1
+.names g1222 g5753 g6099
+11 1
+.names g254 g2509 g3181
+11 1
+.names g3128 g1998 g3381
+11 1
+.names g2256 g2818 g3685
+11 1
+.names g2276 g2837 g3700
+11 1
+.names g619 g2015 g2846
+11 1
+.names g622 g2846 g3421
+11 1
+.names g5317 g5122 g5348
+1- 1
+-1 1
+.names g5348 g3772 g5569
+11 1
+.names g3694 g4286 g4597
+11 1
+.names g6337 g6466 g6554
+1- 1
+-1 1
+.names g932 g6554 g6613
+11 1
+.names g2018 g1255 g2850
+11 1
+.names g2850 g4579 g4739
+11 1
+.names g524 g5908 g6269
+11 1
+.names g166 g4732 g4937
+11 1
+.names g4348 g3628 g4642
+1- 1
+-1 1
+.names g4345 g3620 g4638
+1- 1
+-1 1
+.names g4642 g4638 g4668
+11 1
+.names g2631 g2324 g3631
+11 1
+.names g1624 g929 g2160
+11 1
+.names g418 g3799 g4390
+11 1
+.names g218 g2866 g3301
+11 1
+.names g3338 g3350 g3926
+00 1
+.names g3926 g2078 g4156
+11 1
+.names g175 g4736 g4942
+11 1
+.names g418 g4950 g5183
+11 1
+.names g3464 g2868 g3935
+1- 1
+-1 1
+.names g3935 g4804 g5023
+11 1
+.names g402 g3786 g4363
+11 1
+.names g441 g3388 g4032
+11 1
+.names g3387 g1415 g4053
+11 1
+.names g3755 g3279 g4238
+00 1
+.names g4238 g1858 g4453
+11 1
+.names g5095 g4535 g5161
+11 1
+.names g2234 g2790 g3669
+11 1
+.names g4435 g5168 g5361
+11 1
+.names g2822 g2923 g3368
+11 1
+.names g5584 g5958 g6135
+11 1
+.names g361 g5570 g5665
+11 1
+.names g6812 g5975 g6831
+11 1
+.names g4410 g2995 g4544
+1- 1
+-1 1
+.names g5615 g6160 g6288
+11 1
+.names g3684 g3155 g3990
+1- 1
+-1 1
+.names g3990 g3342 g4357
+11 1
+.names g184 g5099 g5146
+11 1
+.names g6903 g6901 g6916
+11 1
+.names g4496 g5539 g5633
+11 1
+.names g6735 g6734 g6749
+11 1
+.names g4830 g4833 g4946
+1- 1
+-1 1
+.names g6718 g6748 g6781
+1- 1
+-1 1
+.names g4946 g6781 g6798
+11 1
+.names I7542 I7543 g5778
+0- 1
+-0 1
+.names g5778 g5403 g5944
+11 1
+.names g293 g4915 g5240
+11 1
+.names g3479 g2873 g3941
+1- 1
+-1 1
+.names g3941 g4805 g5043
+11 1
+.names I3446 I3447 g2307
+0- 1
+-0 1
+.names g5740 g6164 g6302
+11 1
+.names g4518 g6665 g6719
+11 1
+.names g634 g1027 g1570
+11 1
+.names g4171 g4177 g4585
+00 1
+.names g4585 g2066 g4683
+11 1
+.names g79 g5577 g5681
+11 1
+.names g2783 g2457 g3688
+11 1
+.names g1423 g1254 g2018
+11 1
+.names g2018 g4577 g4735
+11 1
+.names g520 g5903 g6265
+11 1
+.names g1624 g4623 g4782
+11 1
+.names g4344 g3619 g4637
+1- 1
+-1 1
+.names g4341 g3615 g4634
+1- 1
+-1 1
+.names g4637 g4634 g4661
+11 1
+.names g193 g4753 g4949
+11 1
+.names g2734 g1891 g3326
+11 1
+.names g6676 g6625 g6737 g6754
+1-- 1
+-1- 1
+--1 1
+.names g6754 g3482 g6770
+11 1
+.names g548 g3465 g3760
+11 1
+.names g5113 g5788 g5936
+11 1
+.names g402 g3388 g4039
+11 1
+.names g148 g4869 g5317
+11 1
+.names g3128 g2004 g3383
+11 1
+.names g5052 g5518 g5601
+11 1
+.names g2599 g2308 g3608
+11 1
+.names g3505 g471 g3924
+11 1
+.names g1808 g4267 g4583
+11 1
+.names g2397 g2470 g3161
+11 1
+.names g1603 g197 g2339
+11 1
+.names g3150 g1950 g3361
+11 1
+.names g3997 g4000 g4231
+1- 1
+-1 1
+.names g4231 g3761 g4616
+11 1
+.names g2748 g2378 g3665
+11 1
+.names g224 g2394 g3127
+11 1
+.names g2772 g2906 g3327
+11 1
+.names g2370 g2446 g3146
+11 1
+.names g2497 g3076 g3633
+11 1
+.names I7521 I7522 g5775
+0- 1
+-0 1
+.names g5775 g5392 g5937
+11 1
+.names g212 g2353 g3103
+11 1
+.names g2722 g2890 g3303
+11 1
+.names g49 g5571 g5668
+11 1
+.names g5668 g5939 g6251
+1- 1
+-1 1
+.names g6251 g6067 g6338
+11 1
+.names g426 g4950 g5190
+11 1
+.names g5454 g3478 g5501
+11 1
+.names g434 g4877 g5156
+11 1
+.names g4863 g4865 g5265
+00 1
+.names g5265 g1902 g5356
+11 1
+.names g5117 g5797 g5942
+11 1
+.names g3551 g4632 g4789
+11 1
+.names g2748 g2894 g3316
+11 1
+.names g5121 g5813 g5954
+11 1
+.names g402 g4950 g5163
+11 1
+.names g1209 g5753 g6098
+11 1
+.names g2419 g59 g3147
+11 1
+.names g4439 g5179 g5363
+11 1
+.names g2234 g2806 g3681
+11 1
+.names g3499 g4230 g4599
+1- 1
+-1 1
+.names g4599 g4808 g5053
+11 1
+.names g2796 g2481 g3697
+11 1
+.names g496 g4904 g5157
+11 1
+.names g398 g5220 g5357
+11 1
+.names g1749 g4004 g1609 g4244
+111 1
+.names g3646 g3103 g3972
+1- 1
+-1 1
+.names g3972 g3291 g4340
+11 1
+.names g218 g2367 g3117
+11 1
+.names g2722 g2895 g3317
+11 1
+.names g437 g3388 g4035
+11 1
+.names g1143 g5742 g6086
+11 1
+.names g1070 g1084 g1822
+0- 1
+-0 1
+.names g1822 g4045 g4214
+11 1
+.names g1056 g1084 g1620
+11 1
+.names g114 g3251 g3784
+11 1
+.names g1030 g2113 g2916
+11 1
+.names g345 g2957 g3479
+11 1
+.names g5593 g5975 g6131
+11 1
+.names g2568 g3124 g3668
+11 1
+.names g3683 g3688 g3891
+1- 1
+-1 1
+.names g3891 g6212 g6331
+11 1
+.names g650 g3522 g3907
+11 1
+.names g654 g3907 g4236
+11 1
+.names g139 g2870 g3294
+11 1
+.names g5119 g5805 g5949
+11 1
+.names g260 g2535 g3190
+11 1
+.names g6750 g2986 g6766
+11 1
+.names g242 g2464 g3156
+11 1
+.names g248 g2888 g3356
+11 1
+.names g4502 g5544 g5646
+11 1
+.names I2934 I2935 g1845
+0- 1
+-0 1
+.names g1845 g1861 g2873
+11 1
+.names g6733 g6732 g6748
+11 1
+.names I7217 I7218 g5504
+0- 1
+-0 1
+.names g5504 g4911 g5603
+11 1
+.names g378 g5331 g5484
+11 1
+.names g148 g4723 g4928
+11 1
+.names g2276 g2841 g3704
+11 1
+.names g3767 g3319 g4272
+00 1
+.names g4272 g1937 g4464
+11 1
+.names g2160 g4625 g4785
+11 1
+.names g1161 g5753 g6091
+11 1
+.names g625 g3421 g3810
+11 1
+.names g5120 g5809 g5952
+11 1
+.names I7224 I7225 g5505
+0- 1
+-0 1
+.names g5505 g4929 g5616
+11 1
+.names g4511 g6661 g6718
+11 1
+.names g6754 g2986 g6767
+11 1
+.names g2422 g2467 g3157
+11 1
+.names g242 g2889 g3357
+11 1
+.names g2166 g4206 g4489
+11 1
+.names g2518 g1972 g2770
+11 1
+.names g366 g5384 g5503
+11 1
+.names g3031 g2727 g3626
+11 1
+.names g430 g3388 g4038
+11 1
+.names g5061 g5524 g5617
+11 1
+.names g3150 g2813 g3683
+11 1
+.names g4527 g4523 g4836
+11 1
+.names g2234 g2778 g3661
+11 1
+.names g504 g5893 g6247
+11 1
+.names g2473 g3067 g3627
+11 1
+.names g5118 g5801 g5945
+11 1
+.names g901 g1387 g905 g2009
+0-- 1
+-0- 1
+--0 1
+.names g2009 g1581 g2808
+11 1
+.names g2214 g2667 g3292
+11 1
+.names g2179 g2756 g3646
+11 1
+.names g2473 g1966 g2759
+11 1
+.names g6892 g6891 g6910
+11 1
+.names g2370 g3019 g3603
+11 1
+.names g349 g2958 g3484
+11 1
+.names g370 g5331 g5482
+11 1
+.names g2284 g2839 g3702
+11 1
+.names g5824 g1721 g6066
+11 1
+.names g562 g5025 g5214
+11 1
+.names g2397 g3049 g3616
+11 1
+.names g5824 g1696 g6055
+11 1
+.names g5723 g5975 g6133
+11 1
+.names g4513 g5550 g5663
+11 1
+.names g3689 g3697 g3896
+1- 1
+-1 1
+.names g3896 g6212 g6333
+11 1
+.names g551 g3480 g3764
+11 1
+.names g370 g5266 g5402
+11 1
+.names g269 g4915 g5236
+11 1
+.names g578 g4541 g4708
+11 1
+.names g4787 g4588 g5015
+1- 1
+-1 1
+.names g5015 g5445 g5556
+11 1
+.names g2174 g2625 g3277
+11 1
+.names g2609 g2317 g3617
+11 1
+.names g1177 g5742 g6093
+11 1
+.names g1030 g2062 g2897
+11 1
+.names g1696 g6040 g6256
+11 1
+.names g6784 g3346 g6816
+11 1
+.names g4526 g4522 g4829
+11 1
+.names g1711 g6052 g6263
+11 1
+.names g582 g4708 g4874
+11 1
+.names g2284 g2845 g3709
+11 1
+.names g4789 g4592 g5016
+1- 1
+-1 1
+.names g5016 g5448 g5557
+11 1
+.names g2772 g2915 g3340
+11 1
+.names g1838 g6545 g6631
+11 1
+.names g646 g2909 g3522
+11 1
+.names g3327 g3336 g3933
+00 1
+.names g3933 g1372 g4177
+11 1
+.names I7549 I7550 g5779
+0- 1
+-0 1
+.names g5779 g5407 g5948
+11 1
+.names g457 g3791 g4377
+11 1
+.names g2276 g2827 g3690
+11 1
+.names I7570 I7571 g5782
+0- 1
+-0 1
+.names g5782 g5420 g5955
+11 1
+.names g5077 g4416 g821 g5325
+000 1
+.names g5325 g3453 g5350
+11 1
+.names g5123 g3630 g5224
+1- 1
+-1 1
+.names g5224 g3769 g5438
+11 1
+.names I2300 I2301 g1316
+0- 1
+-0 1
+.names g1316 g1861 g2868
+11 1
+.names g224 g2871 g3310
+11 1
+.names g4593 g4643 g4797
+11 1
+.names g561 g5025 g5212
+11 1
+.names g2215 g2779 g3663
+11 1
+.names g2568 g1991 g2793
+11 1
+.names g616 g1419 g2015
+11 1
+.names g3661 g3123 g3981
+1- 1
+-1 1
+.names g3981 g3306 g4344
+11 1
+.names g545 g4980 g5229
+11 1
+.names g6746 g3312 g6772
+11 1
+.names g2672 g3500 g3762
+11 1
+.names g815 g809 g1481
+00 1
+.names g4234 g3928 g4578
+00 1
+.names g1481 g4578 g4694
+11 1
+.names g2734 g2357 g3657
+11 1
+.names g2397 g1922 g2721
+11 1
+.names g1633 g4202 g4488
+11 1
+.names g4184 g4186 g4596
+00 1
+.names g4596 g1378 g4701
+11 1
+.names g3512 g478 g3928
+11 1
+.names g323 g3441 g3899
+11 1
+.names g341 g2956 g3464
+11 1
+.names I7238 I7239 g5507
+0- 1
+-0 1
+.names g5507 g4938 g5620
+11 1
+.names g4461 g4464 g4779
+00 1
+.names g4779 g1884 g4870
+11 1
+.names g2660 g2647 g3295
+11 1
+.names I3399 I3400 g2263
+0- 1
+-0 1
+.names g2263 g2296 g2671
+11 1
+.names g212 g2336 g3089
+11 1
+.names I3740 I3741 g2607
+0- 1
+-0 1
+.names g2607 g1861 g3489
+11 1
+.names g1046 g4894 g5192
+11 1
+.names g382 g5331 g5485
+11 1
+.names I7535 I7536 g5777
+0- 1
+-0 1
+.names g5777 g5399 g5941
+11 1
+.names I4940 I4941 g3756
+0- 1
+-0 1
+.names g3756 g1861 g4230
+11 1
+.names g5711 g5958 g6126
+11 1
+.names g3602 g3608 g3833
+1- 1
+-1 1
+.names g3833 g6194 g6326
+11 1
+.names g426 g3388 g4033
+11 1
+.names g2497 g1963 g2758
+11 1
+.names g3150 g1928 g3350
+11 1
+.names g6915 g6916 g6920
+1- 1
+-1 1
+.names g6912 g6914 g6919
+1- 1
+-1 1
+.names g6920 g6919 g6924
+11 1
+.names g410 g4950 g5176
+11 1
+.names g445 g3800 g4395
+11 1
+.names g170 g5255 g5376
+11 1
+.names g5380 g5621 g5817
+1- 1
+-1 1
+.names g5817 g5670 g5911
+11 1
+.names g5714 g5975 g6127
+11 1
+.names g3666 g3671 g3884
+1- 1
+-1 1
+.names g3884 g6212 g6327
+11 1
+.names g669 g5054 g5225
+11 1
+.names g3655 g3117 g3978
+1- 1
+-1 1
+.names g3978 g3299 g4342
+11 1
+.names g3192 g5997 g6146
+11 1
+.names g5682 g5956 g6274
+1- 1
+-1 1
+.names g6274 g6087 g6346
+11 1
+.names g437 g3777 g4354
+11 1
+.names g3200 g2215 g2976 g2968 g3529
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3209 g2215 g2976 g2179 g3531
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3216 g2215 g2197 g2968 g3535
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g2588 g2215 g2197 g2179 g3538
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3529 g3531 g3535 g3538 I5352
+1111 1
+.names g445 g4877 g5177
+11 1
+.names g3843 g541 g4205
+1- 1
+-1 1
+.names g4205 g5888 g6240
+11 1
+.names g2422 g3060 g3620
+11 1
+.names g598 g567 g1027
+11 1
+.names g2370 g1887 g2685
+11 1
+.names g2370 g1908 g2700
+11 1
+.names g3626 g3631 g3855
+1- 1
+-1 1
+.names g3855 g6194 g6316
+11 1
+.names g5369 g5600 g5800
+1- 1
+-1 1
+.names g5800 g5647 g5898
+11 1
+.names g426 g3802 g4401
+11 1
+.names g1017 g1011 g1514
+11 1
+.names g5371 g5603 g5804
+1- 1
+-1 1
+.names g5804 g5658 g5900
+11 1
+.names g815 g1642 g2156
+11 1
+.names g2156 g1612 g2950
+11 1
+.names g297 g4915 g5245
+11 1
+.names g478 g1119 g1763
+11 1
+.names g4510 g4508 g4828
+11 1
+.names g2231 g2679 g3298
+11 1
+.names g4529 g4525 g4830
+11 1
+.names g166 g5099 g5144
+11 1
+.names g3147 g4281 g4592
+11 1
+.names g6895 g6893 g6914
+11 1
+.names g1001 g1543 g2101
+11 1
+.names g394 g5331 g5488
+11 1
+.names g157 g4727 g4932
+11 1
+.names g913 g266 g1416
+11 1
+.names I7433 I7434 g5683
+0- 1
+-0 1
+.names g3632 g3641 g3862
+1- 1
+-1 1
+.names g3862 g6194 g6317
+11 1
+.names g4744 g4490 g4864
+1- 1
+-1 1
+.names g4864 g5090 g5215
+11 1
+.names I7556 I7557 g5780
+0- 1
+-0 1
+.names g5780 g5411 g5951
+11 1
+.names g4358 g3645 g4652
+1- 1
+-1 1
+.names g4353 g3635 g4646
+1- 1
+-1 1
+.names g4652 g4646 g4677
+11 1
+.names g2422 g2494 g3176
+11 1
+.names g3104 g1979 g3376
+11 1
+.names g2196 g2656 g3286
+11 1
+.names g554 g3485 g3765
+11 1
+.names g441 g3775 g4349
+11 1
+.names g5824 g1703 g6060
+11 1
+.names g3177 g3023 g3007 g2981 g3518
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3187 g3023 g3007 g2179 g3521
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3196 g3023 g2197 g2981 g3526
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3204 g3023 g2197 g2179 g3530
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g2397 g3034 g3610
+11 1
+.names g6715 g815 g5242 g6739
+111 1
+.names g230 g2875 g3324
+11 1
+.names g1236 g5753 g6079
+11 1
+.names g193 g4662 g5122
+11 1
+.names g3118 g2931 g3377
+11 1
+.names g3678 g3143 g3988
+1- 1
+-1 1
+.names g3988 g3331 g4352
+11 1
+.names g4429 g4432 g4811
+1- 1
+-1 1
+.names g4811 g3872 g4867
+11 1
+.names g2591 g6015 g6156
+11 1
+.names g135 g2865 g3287
+11 1
+.names g4794 g4647 g5096
+11 1
+.names g3368 g3374 g3973
+00 1
+.names g3973 g1395 g4186
+11 1
+.names g4537 g5241 g5446
+11 1
+.names g5446 g3457 g5496
+11 1
+.names g1692 g6036 g6250
+11 1
+.names g2138 g1764 g4007 g4280
+111 1
+.names g236 g2440 g3144
+11 1
+.names g242 g2885 g3344
+11 1
+.names g148 g5099 g5142
+11 1
+.names g964 g3437 g3819
+11 1
+.names g6899 g6897 g6912
+11 1
+.names g3158 g5997 g6157
+11 1
+.names g366 g5331 g5481
+11 1
+.names g2268 g2838 g3701
+11 1
+.names g4545 g5256 g2311 g5447
+111 1
+.names g5447 g3458 g5497
+11 1
+.names g500 g4993 g5154
+11 1
+.names g4868 g4870 g5249
+00 1
+.names g5249 g2903 g5354
+11 1
+.names g3774 g3341 g4241
+00 1
+.names g4241 g2919 g4461
+11 1
+.names g3816 g4587 g4756
+11 1
+.names g3511 g3517 g3520 g3525 I5351
+1111 1
+.names g564 g5025 g5218
+11 1
+.names g2660 g2347 g3650
+11 1
+.names g3663 g3127 g3982
+1- 1
+-1 1
+.names g3982 g3308 g4345
+11 1
+.names g2760 g1911 g3336
+11 1
+.names g434 g3782 g4359
+11 1
+.names I3126 I3127 g2024
+0- 1
+-0 1
+.names g3384 g2024 g3806
+11 1
+.names g3512 g478 g3905
+00 1
+.names I4546 I4547 g3276
+0- 1
+-0 1
+.names g3276 g1861 g3887
+11 1
+.names g1138 g1777 g1157 g2435
+0-- 1
+-0- 1
+--0 1
+.names g2435 g1394 g3122
+11 1
+.names g2449 g1940 g2732
+11 1
+.names g453 g3388 g4047
+11 1
+.names g6577 g6232 g6646
+11 1
+.names g301 g319 g905
+0- 1
+-0 1
+.names g1359 g2831 g905 g3433
+111 1
+.names I7563 I7564 g5781
+0- 1
+-0 1
+.names g5781 g5415 g5953
+11 1
+.names g1123 g5753 g6084
+11 1
+.names g6581 g6236 g6603
+11 1
+.names g69 g5575 g5677
+11 1
+.names g2473 g2541 g3195
+11 1
+.names g2796 g2913 g3337
+11 1
+.names g5069 g4410 g766 g5324
+000 1
+.names g5324 g3451 g5349
+11 1
+.names g558 g5025 g5198
+11 1
+.names g366 g5261 g5398
+11 1
+.names g6578 g6233 g6647
+11 1
+.names g821 g774 g1691
+11 1
+.names g2268 g2829 g3692
+11 1
+.names g2039 g1410 g3154
+11 1
+.names g4648 g4296 g4800
+11 1
+.names g430 g4950 g5152
+11 1
+.names g3642 g3650 g3869
+1- 1
+-1 1
+.names g3869 g6194 g6320
+11 1
+.names g4735 g4488 g4860
+1- 1
+-1 1
+.names g4860 g5086 g5211
+11 1
+.names g422 g4950 g5186
+11 1
+.names g5049 g5512 g5599
+11 1
+.names g2941 g4210 g4490
+11 1
+.names g212 g2864 g3293
+11 1
+.names g6673 g6628 g6738 g6758
+1-- 1
+-1- 1
+--1 1
+.names g6758 g3483 g6771
+11 1
+.names g2748 g2907 g3329
+11 1
+.names g4698 g4701 g5091
+00 1
+.names g5091 g2111 g5170
+11 1
+.names g3294 g3305 g3829
+1- 1
+-1 1
+.names g3829 g4229 g4456
+11 1
+.names g3669 g3134 g3987
+1- 1
+-1 1
+.names g3987 g3322 g4348
+11 1
+.names g430 g3778 g4355
+11 1
+.names I7528 I7529 g5776
+0- 1
+-0 1
+.names g5776 g5395 g5939
+11 1
+.names g1716 g791 g798 g2294
+111 1
+.names g4161 g4165 g4586
+00 1
+.names g4586 g2106 g4698
+11 1
+.names g374 g5331 g5483
+11 1
+.names g2284 g2840 g3703
+11 1
+.names g6713 g809 g5242 g6738
+111 1
+.names g4759 g5891 g6244
+11 1
+.names g1603 g269 g2356
+11 1
+.names g5587 g5975 g6140
+11 1
+.names g5671 g5941 g6257
+1- 1
+-1 1
+.names g6257 g6069 g6340
+11 1
+.names g457 g4877 g5187
+11 1
+.names g1123 g5742 g6082
+11 1
+.names g422 g3388 g4057
+11 1
+.names g5376 g5618 g5812
+1- 1
+-1 1
+.names g5812 g5664 g5904
+11 1
+.names g559 g5025 g5200
+11 1
+.names g3762 g3295 g4261
+00 1
+.names g4261 g2902 g4457
+11 1
+.names g5069 g2067 g5241
+1- 1
+-1 1
+.names g2783 g1925 g3349
+11 1
+.names g1094 g1675 g2053
+11 1
+.names g175 g5099 g5145
+11 1
+.names g6906 g6905 g6915
+11 1
+.names g4534 g4531 g4834
+11 1
+.names g4169 g4172 g4590
+00 1
+.names g4590 g1348 g4686
+11 1
+.names g461 g4877 g5191
+11 1
+.names g2276 g2836 g3699
+11 1
+.names g1978 g4253 g4598
+11 1
+.names g4499 g5543 g5637
+11 1
+.names g536 g4967 g5159
+11 1
+.names g4428 g5155 g5359
+11 1
+.names g2197 g2755 g3644
+11 1
+.names g2688 g2675 g3319
+11 1
+.names g2796 g2920 g3352
+11 1
+.names g3484 g3489 g3954
+1- 1
+-1 1
+.names g3954 g4806 g5047
+11 1
+.names I3456 I3457 g2311
+0- 1
+-0 1
+.names g2449 g2515 g3186
+11 1
+.names g254 g2485 g3170
+11 1
+.names g2998 g2691 g3614
+11 1
+.names g224 g2876 g3325
+11 1
+.names g3653 g3113 g3977
+1- 1
+-1 1
+.names g3977 g3297 g4341
+11 1
+.names g2518 g1985 g2782
+11 1
+.names g2177 g2637 g3280
+11 1
+.names g4156 g4160 g4581
+00 1
+.names g4581 g2098 g4691
+11 1
+.names g5112 g5784 g5935
+11 1
+.names g830 g1861 g2949
+11 1
+.names g3158 g3002 g2976 g2968 g3511
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3173 g3002 g2976 g2179 g3517
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3183 g3002 g2197 g2968 g3520
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g3192 g3002 g2197 g2179 g3525
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g197 g4915 g5234
+11 1
+.names g2701 g2327 g3636
+11 1
+.names g1706 g736 g743 g2292
+111 1
+.names g1143 g5731 g6089
+11 1
+.names g6669 g5065 g5062 g6717
+0-- 1
+-0- 1
+--0 1
+.names g4373 g3668 g4427
+1- 1
+-1 1
+.names g6717 g4427 g6731
+11 1
+.names g1595 g6469 g6557
+11 1
+.names g3685 g3156 g3991
+1- 1
+-1 1
+.names g3991 g3343 g4358
+11 1
+.names g1577 g1563 g2084
+11 1
+.names g4739 g4489 g4862
+1- 1
+-1 1
+.names g4862 g5087 g5213
+11 1
+.names g532 g5897 g6254
+11 1
+.names g3204 g6015 g6150
+11 1
+.names g5373 g5616 g5808
+1- 1
+-1 1
+.names g5808 g5661 g5902
+11 1
+.names g2397 g2443 g3145
+11 1
+.names g236 g2886 g3345
+11 1
+.names g6762 g2986 g6773
+11 1
+.names g3064 g3501 g3763
+11 1
+.names g2497 g2538 g3191
+11 1
+.names g3373 g3376 g3929
+00 1
+.names g3929 g2119 g4180
+11 1
+.names g541 g4967 g5166
+11 1
+.names g2822 g2752 g3637
+11 1
+.names g4517 g4512 g4832
+11 1
+.names g6758 g2986 g6769
+11 1
+.names g2242 g2692 g3307
+11 1
+.names g2822 g2922 g3359
+11 1
+.names g2619 g3487 g3757
+11 1
+.names g2701 g1875 g3315
+11 1
+.names g3054 g2754 g3642
+11 1
+.names g2518 g3100 g3654
+11 1
+.names g5064 g5527 g5619
+11 1
+.names g6315 g6126 g6129 g6146 I8376
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6317 g6130 g6133 g6151 I8393
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6154 g6329 g5186 g5172 I8394
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5182 g5200 g6280 I8395
+1-- 1
+-1- 1
+--1 1
+.names g6150 g6324 g5180 g5181 I8377
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5551 g5398 g5659
+1- 1
+-1 1
+.names g1588 g804 g791 g2100
+0-- 1
+-0- 1
+--0 1
+.names g784 g774 g821 g1582
+0-- 1
+-0- 1
+--0 1
+.names g5215 g4947 g5374
+1- 1
+-1 1
+.names g2808 g2821 g3598
+1- 1
+-1 1
+.names g6015 g6212 g4950 g4877 I8136
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5555 g5406 g5666
+1- 1
+-1 1
+.names g4894 g4904 g4993 g4967 I8137
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I7978 I7979 I7980 I7981 g6280
+0000 1
+.names g6320 g6828 g6830 g6153 I9057
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g4894 g4904 g4993 g4967 I8081
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6323 g6829 g6831 g6155 I9064
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6158 g6333 g5152 g5156 I9065
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5189 g5269 g6400 I9066
+1-- 1
+-1- 1
+--1 1
+.names g5213 g4942 g5372
+1- 1
+-1 1
+.names g4915 g5025 I8129
+1- 1
+-1 1
+.names g6313 g6124 g6127 g6144 I8367
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6148 g6321 g5176 g5184 I8368
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5165 g5159 g5233 g5240 I8369
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5214 g6358 I8370
+1- 1
+-1 1
+.names g4053 g4058 g4243
+1- 1
+-1 1
+.names g4904 g4914 g4894 g5202
+1-- 1
+-1- 1
+--1 1
+.names g1250 g3425 g4000
+00 1
+.names g6326 g6135 g6140 g6157 I8345
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6159 g6334 g5163 g5191 I8346
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5188 g5157 g5154 g5193 I8347
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5229 g5234 g5218 g5225 I8348
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I8345 I8346 I8347 I8348 I8349
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6692 g4831 g6703
+1- 1
+-1 1
+.names g5202 g4993 g4967 g4980 I8119
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5558 g5419 g5674
+1- 1
+-1 1
+.names g6614 g6731 g6747
+1- 1
+-1 1
+.names g4915 g5025 I8211
+1- 1
+-1 1
+.names g6152 g6327 g5183 g5177 I8386
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5562 g5429 g5680
+1- 1
+-1 1
+.names I8126 I8127 I8128 I8129 g6358
+0000 1
+.names I7987 I7988 I7989 I7990 g6281
+0000 1
+.names g5178 g5209 g6281 I8387
+1-- 1
+-1- 1
+--1 1
+.names g6316 g6128 g6131 g6149 I8385
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5232 g5236 g5216 g5226 I8359
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g3912 g471 g4233
+1- 1
+-1 1
+.names g5557 g5414 g5672
+1- 1
+-1 1
+.names g4819 g3491 g3559 g5048
+000 1
+.names g5202 g4993 g4967 g4980 I8128
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6015 g6212 g4950 g4877 I7970
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6194 g5958 g5975 g5997 I7987
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6015 g6212 g4950 g4877 I8118
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g1059 g1045 g1589
+1- 1
+-1 1
+.names g5192 g5153 g5158 g5197 I8358
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6634 g6631 g6659
+1- 1
+-1 1
+.names g197 g5862 g6073
+00 1
+.names g6705 g6461 g4941 g6741
+0-- 1
+-0- 1
+--0 1
+.names g4536 g6927 g6929
+0- 1
+-0 1
+.names g1555 g3559 g3992
+1- 1
+-1 1
+.names g5560 g5428 g5678
+1- 1
+-1 1
+.names I3189 I3190 g2080
+0- 1
+-0 1
+.names g5202 g4993 g4967 g4980 I7980
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6311 g6123 g6125 g6141 I8356
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6145 g6318 g5171 g5187 I8357
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I8356 I8357 I8358 I8359 I8360
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I8117 I8118 I8119 I8120 g6357
+0000 1
+.names g5212 g6357 I8379
+1- 1
+-1 1
+.names g4668 g4672 g5066
+1- 1
+-1 1
+.names g6015 g6212 g4950 g4877 I8209
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5553 g5402 g5662
+1- 1
+-1 1
+.names g4915 g5025 I7972
+1- 1
+-1 1
+.names I7969 I7970 I7971 I7972 g6279
+0000 1
+.names g5185 g5198 g6279 I9059
+1-- 1
+-1- 1
+--1 1
+.names g5556 g5410 g5669
+1- 1
+-1 1
+.names g5201 g4932 g5368
+1- 1
+-1 1
+.names g6015 g6212 g4950 g4877 I7979
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g4827 g4828 g4936
+1- 1
+-1 1
+.names g6798 g6923 g6926
+1- 1
+-1 1
+.names g5173 g5166 g5235 g5245 I8378
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6194 g5958 g5975 g5997 I8135
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I4204 I4205 g3012
+0- 1
+-0 1
+.names I8208 I8209 I8210 I8211 g6400
+0000 1
+.names g6799 g6924 g6927
+1- 1
+-1 1
+.names g6640 g6637 g6660
+1- 1
+-1 1
+.names g6194 g5958 g5975 g5997 I8208
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I4234 I4235 g3028
+0- 1
+-0 1
+.names g4980 g4915 g5025 g5054 I8138
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6156 g6331 g5190 g5164 I9058
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I6500 I6501 g4819
+0- 1
+-0 1
+.names g3491 g4819 g5060
+1- 1
+-1 1
+.names g6194 g5958 g5975 g5997 I7978
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5202 g4993 g4967 g4980 I7989
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5202 g4993 g4967 g4980 I7971
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g2340 g1402 g3215
+0- 1
+-0 1
+.names g6655 g6653 g6651 g6649 I8774
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g3122 g3132 g3503
+1- 1
+-1 1
+.names g6194 g5958 g5975 g5997 I7969
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g4829 g4832 g4941
+1- 1
+-1 1
+.names g6015 g6212 g4950 g4877 I7988
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6015 g6212 g4950 g4877 I8080
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6613 g4679 g6669
+1- 1
+-1 1
+.names g6194 g5958 g5975 g5997 I8126
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g4661 g4666 g5062
+1- 1
+-1 1
+.names I8135 I8136 I8137 I8138 g6359
+0000 1
+.names g6605 g6656 g6654 g6652 I8779
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g4915 g5025 I7981
+1- 1
+-1 1
+.names g6015 g6212 g4950 g4877 I8127
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6612 g6611 g6609 g6607 I8778
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5202 g4993 g4967 g4980 I8210
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5217 g4949 g5377
+1- 1
+-1 1
+.names g6194 g5958 g5975 g5997 I8117
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g6194 g5958 g5975 g5997 I8079
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names I8079 I8080 I8081 I8082 g6335
+0000 1
+.names g4667 g4671 g5065
+1- 1
+-1 1
+.names I4183 I4184 g2995
+0- 1
+-0 1
+.names g1584 g749 g736 g2095
+0-- 1
+-0- 1
+--0 1
+.names g729 g719 g766 g1573
+0-- 1
+-0- 1
+--0 1
+.names g6465 g6622 g6621 g6683
+1-- 1
+-1- 1
+--1 1
+.names g5559 g5424 g5676
+1- 1
+-1 1
+.names g6610 g6608 g6606 g6604 I8773
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g923 g4253 g4432
+00 1
+.names g4673 g4677 g5068
+1- 1
+-1 1
+.names g4915 g5025 I7990
+1- 1
+-1 1
+.names g4915 g5025 I8120
+1- 1
+-1 1
+.names I3178 I3179 g2067
+0- 1
+-0 1
+.names g3921 g478 g4234
+1- 1
+-1 1
+.names g5019 g3559 g5227
+00 1
+.names g4980 g4915 g5025 g5054 I8082
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names g5211 g4937 g5370
+1- 1
+-1 1
+.names I4211 I4212 g3013
+0- 1
+-0 1
+.names g6703 g6457 g4936 g6740
+0-- 1
+-0- 1
+--0 1
+.names g4532 g6926 g6928
+0- 1
+-0 1
+.names g2142 g1797 g2951
+0- 1
+-0 1
+.names g6693 g4835 g6705
+1- 1
+-1 1
+.names g269 g5863 g6075
+00 1
+.names g5199 g4928 g5367
+1- 1
+-1 1
+.names g152 g5368 I7216
+0- 1
+-0 1
+.names g152 I7216 I7217
+0- 1
+-0 1
+.names g79 g5678 I7569
+0- 1
+-0 1
+.names g5678 I7569 I7571
+0- 1
+-0 1
+.names g15 g11 I2072
+0- 1
+-0 1
+.names g15 I2072 I2073
+0- 1
+-0 1
+.names g804 g798 I2795
+0- 1
+-0 1
+.names g804 I2795 I2796
+0- 1
+-0 1
+.names g532 I2013 I2014
+0- 1
+-0 1
+.names g260 I2013 I2015
+0- 1
+-0 1
+.names I2014 I2015 g948
+0- 1
+-0 1
+.names g2255 g743 I4203
+0- 1
+-0 1
+.names g743 I4203 I4205
+0- 1
+-0 1
+.names g285 g2397 I3874
+0- 1
+-0 1
+.names g285 I3874 I3875
+0- 1
+-0 1
+.names g2360 g1064 g3109
+0- 1
+-0 1
+.names g3907 I5535 I5536
+0- 1
+-0 1
+.names g654 I5535 I5537
+0- 1
+-0 1
+.names I5270 I5271 g3983
+0- 1
+-0 1
+.names g3983 g3979 I5657
+0- 1
+-0 1
+.names g3983 I5657 I5658
+0- 1
+-0 1
+.names g766 I2526 I2527
+0- 1
+-0 1
+.names g719 I2526 I2528
+0- 1
+-0 1
+.names g2092 g606 I4444
+0- 1
+-0 1
+.names g3705 g3710 I5269
+0- 1
+-0 1
+.names g3710 I5269 I5271
+0- 1
+-0 1
+.names g1027 g634 I2897
+0- 1
+-0 1
+.names g1027 I2897 I2898
+0- 1
+-0 1
+.names g798 I2795 I2797
+0- 1
+-0 1
+.names g567 g598 I2244
+0- 1
+-0 1
+.names g567 I2244 I2245
+0- 1
+-0 1
+.names g291 g2544 I3988
+0- 1
+-0 1
+.names g821 I2542 I2543
+0- 1
+-0 1
+.names g774 I2542 I2544
+0- 1
+-0 1
+.names g520 g242 I1961
+0- 1
+-0 1
+.names g242 I1961 I1963
+0- 1
+-0 1
+.names g3267 g3271 I5207
+0- 1
+-0 1
+.names g3271 I5207 I5209
+0- 1
+-0 1
+.names g74 g5676 I7562
+0- 1
+-0 1
+.names g170 I7230 I7231
+0- 1
+-0 1
+.names g5372 I7230 I7232
+0- 1
+-0 1
+.names g4708 I6743 I6744
+0- 1
+-0 1
+.names g582 I6743 I6745
+0- 1
+-0 1
+.names g2292 g749 I4182
+0- 1
+-0 1
+.names I5767 I5768 g4301
+0- 1
+-0 1
+.names g4301 g3955 I6185
+0- 1
+-0 1
+.names g4301 I6185 I6186
+0- 1
+-0 1
+.names g5515 g594 I7439
+0- 1
+-0 1
+.names g594 I7439 I7441
+0- 1
+-0 1
+.names I5658 I5659 g4223
+0- 1
+-0 1
+.names I5648 I5649 g4221
+0- 1
+-0 1
+.names g4223 g4221 I6026
+0- 1
+-0 1
+.names g749 g743 I2766
+0- 1
+-0 1
+.names g743 I2766 I2768
+0- 1
+-0 1
+.names g288 g2473 I3933
+0- 1
+-0 1
+.names g286 I3893 I3894
+0- 1
+-0 1
+.names g2422 I3893 I3895
+0- 1
+-0 1
+.names I3894 I3895 g2731
+0- 1
+-0 1
+.names g179 I7237 I7238
+0- 1
+-0 1
+.names g5374 I7237 I7239
+0- 1
+-0 1
+.names g2015 I4159 I4160
+0- 1
+-0 1
+.names g619 I4159 I4161
+0- 1
+-0 1
+.names g1436 g345 I2933
+0- 1
+-0 1
+.names g1436 I2933 I2934
+0- 1
+-0 1
+.names g1706 g736 I3177
+0- 1
+-0 1
+.names g736 I3177 I3179
+0- 1
+-0 1
+.names I5188 I5189 g3955
+0- 1
+-0 1
+.names g3955 I6185 I6187
+0- 1
+-0 1
+.names g4223 I6026 I6027
+0- 1
+-0 1
+.names g2267 g798 I4233
+0- 1
+-0 1
+.names g289 I3952 I3953
+0- 1
+-0 1
+.names g2497 I3952 I3954
+0- 1
+-0 1
+.names I3953 I3954 g2769
+0- 1
+-0 1
+.names g25 I2080 I2081
+0- 1
+-0 1
+.names g19 I2080 I2082
+0- 1
+-0 1
+.names I2081 I2082 g1044
+0- 1
+-0 1
+.names g4550 g1514 g2107 g2897 g4674
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names I6027 I6028 g4504
+0- 1
+-0 1
+.names g4504 g4610 I6390
+0- 1
+-0 1
+.names g4504 I6390 I6391
+0- 1
+-0 1
+.names g4550 g1514 g1006 g2897 g4680
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g25 g19 I2080
+0- 1
+-0 1
+.names g471 g6188 I8194
+0- 1
+-0 1
+.names g471 I8194 I8195
+0- 1
+-0 1
+.names g1042 I2497 I2498
+0- 1
+-0 1
+.names g1036 I2497 I2499
+0- 1
+-0 1
+.names I2498 I2499 g1534
+0- 1
+-0 1
+.names I2073 I2074 g1042
+0- 1
+-0 1
+.names I2061 I2062 g1036
+0- 1
+-0 1
+.names g1042 g1036 I2497
+0- 1
+-0 1
+.names g508 I1986 I1987
+0- 1
+-0 1
+.names g224 I1986 I1988
+0- 1
+-0 1
+.names I1987 I1988 g939
+0- 1
+-0 1
+.names g7 I2060 I2061
+0- 1
+-0 1
+.names g3 I2060 I2062
+0- 1
+-0 1
+.names g710 g131 I2674
+0- 1
+-0 1
+.names g131 I2674 I2676
+0- 1
+-0 1
+.names g749 I2766 I2767
+0- 1
+-0 1
+.names g49 I7527 I7528
+0- 1
+-0 1
+.names g5662 I7527 I7529
+0- 1
+-0 1
+.names g111 g5554 I7432
+0- 1
+-0 1
+.names g5554 I7432 I7434
+0- 1
+-0 1
+.names g11 I2072 I2074
+0- 1
+-0 1
+.names g143 g5367 I7208
+0- 1
+-0 1
+.names g5367 I7208 I7210
+0- 1
+-0 1
+.names g4874 g586 I6962
+0- 1
+-0 1
+.names g586 I6962 I6964
+0- 1
+-0 1
+.names g3267 I5207 I5208
+0- 1
+-0 1
+.names g471 g3505 I5300
+0- 1
+-0 1
+.names g3505 I5300 I5302
+0- 1
+-0 1
+.names g54 I7534 I7535
+0- 1
+-0 1
+.names g5666 I7534 I7536
+0- 1
+-0 1
+.names g4199 I6194 I6195
+0- 1
+-0 1
+.names g631 I6194 I6196
+0- 1
+-0 1
+.names g821 g774 I2542
+0- 1
+-0 1
+.names g504 g218 I1994
+0- 1
+-0 1
+.names g2092 I4444 I4445
+0- 1
+-0 1
+.names g7 g3 I2060
+0- 1
+-0 1
+.names g3589 g3593 I5187
+0- 1
+-0 1
+.names g3593 I5187 I5189
+0- 1
+-0 1
+.names g1706 I3177 I3178
+0- 1
+-0 1
+.names g3522 g650 I4919
+0- 1
+-0 1
+.names g3522 I4919 I4920
+0- 1
+-0 1
+.names g500 g212 I2003
+0- 1
+-0 1
+.names g287 g2449 I3914
+0- 1
+-0 1
+.names g2449 I3914 I3916
+0- 1
+-0 1
+.names g478 g3512 I5307
+0- 1
+-0 1
+.names g3512 I5307 I5309
+0- 1
+-0 1
+.names g3836 g3503 I5759
+0- 1
+-0 1
+.names I6391 I6392 g4762
+0- 1
+-0 1
+.names g4762 g3541 I6659
+0- 1
+-0 1
+.names g3437 g357 I4939
+0- 1
+-0 1
+.names g3437 I4939 I4940
+0- 1
+-0 1
+.names g345 I2933 I2935
+0- 1
+-0 1
+.names g1419 I3411 I3412
+0- 1
+-0 1
+.names g616 I3411 I3413
+0- 1
+-0 1
+.names g1419 g616 I3411
+0- 1
+-0 1
+.names g1716 g791 I3188
+0- 1
+-0 1
+.names g1716 I3188 I3189
+0- 1
+-0 1
+.names g2544 I3988 I3990
+0- 1
+-0 1
+.names g2551 I4150 I4151
+0- 1
+-0 1
+.names g139 I4150 I4152
+0- 1
+-0 1
+.names g33 g29 I2089
+0- 1
+-0 1
+.names g33 I2089 I2090
+0- 1
+-0 1
+.names g5649 g1529 g1535 g2068 g5862
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g6832 g3598 I9050
+0- 1
+-0 1
+.names I5208 I5209 g3961
+0- 1
+-0 1
+.names I5196 I5197 g3957
+0- 1
+-0 1
+.names g3961 g3957 I5766
+0- 1
+-0 1
+.names g3259 I5226 I5227
+0- 1
+-0 1
+.names g3263 I5226 I5228
+0- 1
+-0 1
+.names I5227 I5228 g3968
+0- 1
+-0 1
+.names g49 g5662 I7527
+0- 1
+-0 1
+.names g3259 g3263 I5226
+0- 1
+-0 1
+.names g3677 g3425 g4049
+0- 1
+-0 1
+.names g161 g5370 I7223
+0- 1
+-0 1
+.names g161 I7223 I7224
+0- 1
+-0 1
+.names g3961 I5766 I5767
+0- 1
+-0 1
+.names g3907 g654 I5535
+0- 1
+-0 1
+.names g269 g2381 g2944
+0- 1
+-0 1
+.names g650 I4919 I4921
+0- 1
+-0 1
+.names g4221 I6026 I6028
+0- 1
+-0 1
+.names g188 g5377 I7244
+0- 1
+-0 1
+.names g3589 I5187 I5188
+0- 1
+-0 1
+.names g3705 I5269 I5270
+0- 1
+-0 1
+.names g6832 I9050 I9051
+0- 1
+-0 1
+.names g3598 I9050 I9052
+0- 1
+-0 1
+.names g478 I5307 I5308
+0- 1
+-0 1
+.names I2090 I2091 g1047
+0- 1
+-0 1
+.names g1047 g1044 I2506
+0- 1
+-0 1
+.names g1689 g729 I3445
+0- 1
+-0 1
+.names g1540 I3168 I3169
+0- 1
+-0 1
+.names g1534 I3168 I3170
+0- 1
+-0 1
+.names I2507 I2508 g1540
+0- 1
+-0 1
+.names g1540 g1534 I3168
+0- 1
+-0 1
+.names g69 g5674 I7555
+0- 1
+-0 1
+.names g69 I7555 I7556
+0- 1
+-0 1
+.names g3567 g3571 I5195
+0- 1
+-0 1
+.names g3567 I5195 I5196
+0- 1
+-0 1
+.names g74 I7562 I7563
+0- 1
+-0 1
+.names g5515 I7439 I7440
+0- 1
+-0 1
+.names g1047 I2506 I2507
+0- 1
+-0 1
+.names g504 I1994 I1995
+0- 1
+-0 1
+.names g1689 I3445 I3446
+0- 1
+-0 1
+.names g729 I3445 I3447
+0- 1
+-0 1
+.names g179 g5374 I7237
+0- 1
+-0 1
+.names g288 I3933 I3934
+0- 1
+-0 1
+.names g2473 I3933 I3935
+0- 1
+-0 1
+.names I3934 I3935 g2757
+0- 1
+-0 1
+.names g4708 g582 I6743
+0- 1
+-0 1
+.names g2292 I4182 I4183
+0- 1
+-0 1
+.names g5674 I7555 I7557
+0- 1
+-0 1
+.names g830 g341 I2299
+0- 1
+-0 1
+.names g830 I2299 I2300
+0- 1
+-0 1
+.names g3571 I5195 I5197
+0- 1
+-0 1
+.names g2015 g619 I4159
+0- 1
+-0 1
+.names g2021 g349 I3739
+0- 1
+-0 1
+.names g349 I3739 I3741
+0- 1
+-0 1
+.names g4762 I6659 I6660
+0- 1
+-0 1
+.names g3541 I6659 I6661
+0- 1
+-0 1
+.names g3714 g3719 I5257
+0- 1
+-0 1
+.names g766 g719 I2526
+0- 1
+-0 1
+.names g471 I5300 I5301
+0- 1
+-0 1
+.names g2255 I4203 I4204
+0- 1
+-0 1
+.names g5368 I7216 I7218
+0- 1
+-0 1
+.names g4236 g571 I6175
+0- 1
+-0 1
+.names g1691 g784 I3455
+0- 1
+-0 1
+.names g4504 g3541 I6499
+0- 1
+-0 1
+.names g4504 I6499 I6500
+0- 1
+-0 1
+.names g284 g2370 I3846
+0- 1
+-0 1
+.names g2294 g804 I4210
+0- 1
+-0 1
+.names g4541 I6473 I6474
+0- 1
+-0 1
+.names g578 I6473 I6475
+0- 1
+-0 1
+.names g284 I3846 I3847
+0- 1
+-0 1
+.names g2370 I3846 I3848
+0- 1
+-0 1
+.names I3847 I3848 g2698
+0- 1
+-0 1
+.names g980 g965 g1518
+00 1
+.names g361 g5659 I7520
+0- 1
+-0 1
+.names g2846 g622 I4782
+0- 1
+-0 1
+.names g622 I4782 I4784
+0- 1
+-0 1
+.names g524 g248 I1951
+0- 1
+-0 1
+.names g524 I1951 I1952
+0- 1
+-0 1
+.names g478 g6192 I8201
+0- 1
+-0 1
+.names g478 I8201 I8202
+0- 1
+-0 1
+.names g508 g224 I1986
+0- 1
+-0 1
+.names g3836 I5759 I5760
+0- 1
+-0 1
+.names g3957 I5766 I5768
+0- 1
+-0 1
+.names g516 g236 I1969
+0- 1
+-0 1
+.names g516 I1969 I1970
+0- 1
+-0 1
+.names g5370 I7223 I7225
+0- 1
+-0 1
+.names g143 I7208 I7209
+0- 1
+-0 1
+.names g341 I2299 I2301
+0- 1
+-0 1
+.names g188 I7244 I7245
+0- 1
+-0 1
+.names g2021 I3739 I3740
+0- 1
+-0 1
+.names g4874 I6962 I6963
+0- 1
+-0 1
+.names g1691 I3455 I3456
+0- 1
+-0 1
+.names g784 I3455 I3457
+0- 1
+-0 1
+.names g1279 g1276 I3125
+0- 1
+-0 1
+.names g1279 I3125 I3126
+0- 1
+-0 1
+.names g1826 g135 I3398
+0- 1
+-0 1
+.names g135 I3398 I3400
+0- 1
+-0 1
+.names g2909 g646 I4526
+0- 1
+-0 1
+.names g2909 I4526 I4527
+0- 1
+-0 1
+.names g646 I4526 I4528
+0- 1
+-0 1
+.names g1997 g866 g2795
+0- 1
+-0 1
+.names g4236 I6175 I6176
+0- 1
+-0 1
+.names g571 I6175 I6177
+0- 1
+-0 1
+.names g170 g5372 I7230
+0- 1
+-0 1
+.names g111 I7432 I7433
+0- 1
+-0 1
+.names g1276 I3125 I3127
+0- 1
+-0 1
+.names g2267 I4233 I4234
+0- 1
+-0 1
+.names g798 I4233 I4235
+0- 1
+-0 1
+.names g3810 g628 I5782
+0- 1
+-0 1
+.names g628 I5782 I5784
+0- 1
+-0 1
+.names g64 g5672 I7548
+0- 1
+-0 1
+.names g5672 I7548 I7550
+0- 1
+-0 1
+.names g2853 g353 I4545
+0- 1
+-0 1
+.names g2853 I4545 I4546
+0- 1
+-0 1
+.names g3421 g625 I5292
+0- 1
+-0 1
+.names g625 I5292 I5294
+0- 1
+-0 1
+.names g512 I1978 I1979
+0- 1
+-0 1
+.names g230 I1978 I1980
+0- 1
+-0 1
+.names I1979 I1980 g937
+0- 1
+-0 1
+.names g3380 g4253 g4472
+0- 1
+-0 1
+.names g944 g941 g939 g1473
+000 1
+.names g937 g930 g928 g1470
+000 1
+.names g926 g950 g948 g1459
+000 1
+.names g520 I1961 I1962
+0- 1
+-0 1
+.names I1962 I1963 g928
+0- 1
+-0 1
+.names g5194 g574 I7097
+0- 1
+-0 1
+.names g353 I4545 I4547
+0- 1
+-0 1
+.names g1570 g642 I3697
+0- 1
+-0 1
+.names g5364 g590 I7311
+0- 1
+-0 1
+.names g5364 I7311 I7312
+0- 1
+-0 1
+.names g602 I2108 I2109
+0- 1
+-0 1
+.names g610 I2108 I2110
+0- 1
+-0 1
+.names g532 g260 I2013
+0- 1
+-0 1
+.names g292 I4008 I4009
+0- 1
+-0 1
+.names g2568 I4008 I4010
+0- 1
+-0 1
+.names I4009 I4010 g2804
+0- 1
+-0 1
+.names g5649 g1076 g1535 g2068 g5863
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g528 g254 I2021
+0- 1
+-0 1
+.names g528 I2021 I2022
+0- 1
+-0 1
+.names g84 g5680 I7576
+0- 1
+-0 1
+.names g5546 g1585 g2084 g2916 g5688
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names g791 I3188 I3190
+0- 1
+-0 1
+.names g289 g2497 I3952
+0- 1
+-0 1
+.names g64 I7548 I7549
+0- 1
+-0 1
+.names g84 I7576 I7577
+0- 1
+-0 1
+.names I5243 I5244 g3974
+0- 1
+-0 1
+.names g3974 g3968 I5647
+0- 1
+-0 1
+.names g512 g230 I1978
+0- 1
+-0 1
+.names g5377 I7244 I7246
+0- 1
+-0 1
+.names g2551 g139 I4150
+0- 1
+-0 1
+.names g1407 g2842 g3621
+00 1
+.names g292 g2568 I4008
+0- 1
+-0 1
+.names g710 I2674 I2675
+0- 1
+-0 1
+.names g248 I1951 I1953
+0- 1
+-0 1
+.names I1952 I1953 g926
+0- 1
+-0 1
+.names g286 g2422 I3893
+0- 1
+-0 1
+.names g804 I4210 I4212
+0- 1
+-0 1
+.names g590 I7311 I7313
+0- 1
+-0 1
+.names g602 g610 I2108
+0- 1
+-0 1
+.names g3242 g3247 I5242
+0- 1
+-0 1
+.names g3247 I5242 I5244
+0- 1
+-0 1
+.names g54 g5666 I7534
+0- 1
+-0 1
+.names g5659 I7520 I7522
+0- 1
+-0 1
+.names g361 I7520 I7521
+0- 1
+-0 1
+.names g4199 g631 I6194
+0- 1
+-0 1
+.names g290 g2518 I3970
+0- 1
+-0 1
+.names g357 I4939 I4941
+0- 1
+-0 1
+.names I5258 I5259 g3979
+0- 1
+-0 1
+.names g59 g5669 I7541
+0- 1
+-0 1
+.names g59 I7541 I7542
+0- 1
+-0 1
+.names g918 g613 I2681
+0- 1
+-0 1
+.names g918 I2681 I2682
+0- 1
+-0 1
+.names g2294 I4210 I4211
+0- 1
+-0 1
+.names g2397 I3874 I3876
+0- 1
+-0 1
+.names g29 I2089 I2091
+0- 1
+-0 1
+.names g287 I3914 I3915
+0- 1
+-0 1
+.names g2846 I4782 I4783
+0- 1
+-0 1
+.names g5669 I7541 I7543
+0- 1
+-0 1
+.names g236 I1969 I1971
+0- 1
+-0 1
+.names I1970 I1971 g930
+0- 1
+-0 1
+.names g79 I7569 I7570
+0- 1
+-0 1
+.names g3421 I5292 I5293
+0- 1
+-0 1
+.names g598 I2244 I2246
+0- 1
+-0 1
+.names g4610 I6390 I6392
+0- 1
+-0 1
+.names g500 I2003 I2004
+0- 1
+-0 1
+.names g212 I2003 I2005
+0- 1
+-0 1
+.names I2004 I2005 g944
+0- 1
+-0 1
+.names g4541 g578 I6473
+0- 1
+-0 1
+.names I3875 I3876 g2719
+0- 1
+-0 1
+.names g6192 I8201 I8203
+0- 1
+-0 1
+.names g634 I2897 I2899
+0- 1
+-0 1
+.names g218 I1994 I1996
+0- 1
+-0 1
+.names I1995 I1996 g941
+0- 1
+-0 1
+.names g1044 I2506 I2508
+0- 1
+-0 1
+.names I3915 I3916 g2745
+0- 1
+-0 1
+.names g291 I3988 I3989
+0- 1
+-0 1
+.names I3989 I3990 g2791
+0- 1
+-0 1
+.names g6188 I8194 I8196
+0- 1
+-0 1
+.names g3719 I5257 I5259
+0- 1
+-0 1
+.names g996 g980 g1560
+00 1
+.names I6186 I6187 g4610
+0- 1
+-0 1
+.names g3541 I6499 I6501
+0- 1
+-0 1
+.names g1826 I3398 I3399
+0- 1
+-0 1
+.names g1570 I3697 I3698
+0- 1
+-0 1
+.names g642 I3697 I3699
+0- 1
+-0 1
+.names g254 I2021 I2023
+0- 1
+-0 1
+.names I2022 I2023 g950
+0- 1
+-0 1
+.names g606 I4444 I4446
+0- 1
+-0 1
+.names g3810 I5782 I5783
+0- 1
+-0 1
+.names g197 g2381 g2940
+0- 1
+-0 1
+.names g3503 I5759 I5761
+0- 1
+-0 1
+.names g2518 I3970 I3972
+0- 1
+-0 1
+.names g5194 I7097 I7098
+0- 1
+-0 1
+.names g574 I7097 I7099
+0- 1
+-0 1
+.names g290 I3970 I3971
+0- 1
+-0 1
+.names I3971 I3972 g2780
+0- 1
+-0 1
+.names g3714 I5257 I5258
+0- 1
+-0 1
+.names g5676 I7562 I7564
+0- 1
+-0 1
+.names g3974 I5647 I5648
+0- 1
+-0 1
+.names g3968 I5647 I5649
+0- 1
+-0 1
+.names g3242 I5242 I5243
+0- 1
+-0 1
+.names g613 I2681 I2683
+0- 1
+-0 1
+.names g5680 I7576 I7578
+0- 1
+-0 1
+.names g3979 I5657 I5659
+0- 1
+-0 1
+.names g749 I4182 I4184
+0- 1
+-0 1
+.names g1802 g3167 g3528
+00 1
+.names g2804 g2791 g2780 g3664
+000 1
+.names g2769 g2757 g2745 g3656
+000 1
+.names g2731 g2719 g2698 g3647
+000 1
+.names g489 g1048 g1449
+00 1
+.names g486 g943 g1418
+00 1
+.names g1603 g1416 g1879
+00 1
+.end

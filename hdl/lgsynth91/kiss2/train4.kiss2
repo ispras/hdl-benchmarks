@@ -1,0 +1,19 @@
+
+.i 2 
+.o 1 
+.p 14 
+.s 4
+00 st0 st0 0
+10 st0 st1 -
+01 st0 st1 -
+10 st1 st1 1
+01 st1 st1 1
+00 st1 st2 1
+11 st1 st2 1
+00 st2 st2 1
+11 st2 st2 1
+01 st2 st3 1
+10 st2 st3 1
+10 st3 st3 1
+01 st3 st3 1
+00 st3 st0 -

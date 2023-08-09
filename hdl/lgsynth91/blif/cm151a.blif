@@ -1,0 +1,36 @@
+.model CM151
+.inputs a b c d e f g h i j k l
+.outputs m n
+.names m n
+0 1
+.names b0 l m
+00 1
+.names a b i t
+00- 1
+-01 1
+0-0 1
+.names c d i u
+00- 1
+-01 1
+0-0 1
+.names e f i v
+00- 1
+-01 1
+0-0 1
+.names g h i w
+00- 1
+-01 1
+0-0 1
+.names j t u y
+00- 1
+1-0 1
+-00 1
+.names j v w z
+00- 1
+1-0 1
+-00 1
+.names k y z b0
+00- 1
+1-0 1
+-00 1
+.end

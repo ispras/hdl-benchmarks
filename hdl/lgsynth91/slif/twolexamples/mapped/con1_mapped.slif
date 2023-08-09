@@ -1,0 +1,29 @@
+
+.model con1.pla ;
+
+	.date 910108183225 ;	# January 8 1991, 18:32.25
+
+	.inputs  f b c d a h g ;
+	.outputs f0 f1 ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_[2557] CMOS3_1220 (b, a ;;[2557]' ) ;
+	.call CMOS3_1230_f0 CMOS3_1230 ([2557]', [2558]', zz_5' ;;f0 ) ;
+	.call CMOS3_1230_[2558] CMOS3_1230 (f, c, d ;;[2558]' ) ;
+	.call CMOS3_1120_zz_4 CMOS3_1120 (d, b ;;zz_4 ) ;
+	.call CMOS3_1120_zz_2 CMOS3_1120 (c, b ;;zz_2 ) ;
+	.call CMOS3_1120_[2563] CMOS3_1120 (g, f ;;[2563] ) ;
+	.call CMOS3_1120_[2561] CMOS3_1120 (a, b ;;[2561] ) ;
+	.call CMOS3_1610_zz_3 CMOS3_1610 (f, a ;;zz_3 ) ;
+	.call CMOS3_1610_zz_1 CMOS3_1610 (f, h ;;zz_1 ) ;
+	.call CMOS3_1610_[2562] CMOS3_1610 (a, f ;;[2562] ) ;
+	.call CMOS3_1870_zz_5 CMOS3_1870 (d, zz_2, b, zz_1 ;;zz_5' ) ;
+	.call CMOS3_1970_zz_8 CMOS3_1970 (b, zz_3, f, zz_4 ;;zz_8 ) ;
+	.call CMOS3_1740_f1 CMOS3_1740 ([2561], [2562], [2563], zz_8 ;;f1 ) ;
+
+.endmodel con1.pla ;
+

@@ -1,0 +1,101 @@
+
+.model mux ;
+
+	.date 910108220014 ;	# January 8 1991, 22:00.14
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u ;
+	.outputs v ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1130_zz_102 CMOS3_1130 (t', s, c ;;zz_102 ) ;
+	.call CMOS3_1130_zz_100 CMOS3_1130 (t, s, d ;;zz_100 ) ;
+	.call CMOS3_1130_zz_97 CMOS3_1130 (s', t, b ;;zz_97 ) ;
+	.call CMOS3_1130_zz_95 CMOS3_1130 (t, d, b ;;zz_95 ) ;
+	.call CMOS3_1130_zz_89 CMOS3_1130 (s, d, c ;;zz_89 ) ;
+	.call CMOS3_1130_zz_76 CMOS3_1130 (t', s, g ;;zz_76 ) ;
+	.call CMOS3_1130_zz_74 CMOS3_1130 (t, s, h ;;zz_74 ) ;
+	.call CMOS3_1130_zz_69 CMOS3_1130 (t, h, f ;;zz_69 ) ;
+	.call CMOS3_1130_zz_71 CMOS3_1130 (s', t, f ;;zz_71 ) ;
+	.call CMOS3_1130_zz_63 CMOS3_1130 (s, h, g ;;zz_63 ) ;
+	.call CMOS3_1130_zz_48 CMOS3_1130 (t, s, l ;;zz_48 ) ;
+	.call CMOS3_1130_zz_50 CMOS3_1130 (t', s, k ;;zz_50 ) ;
+	.call CMOS3_1130_zz_45 CMOS3_1130 (s', t, j ;;zz_45 ) ;
+	.call CMOS3_1130_zz_43 CMOS3_1130 (t, l, j ;;zz_43 ) ;
+	.call CMOS3_1130_zz_37 CMOS3_1130 (s, l, k ;;zz_37 ) ;
+	.call CMOS3_1130_zz_24 CMOS3_1130 (t', s, o ;;zz_24 ) ;
+	.call CMOS3_1130_zz_22 CMOS3_1130 (t, s, p ;;zz_22 ) ;
+	.call CMOS3_1130_zz_19 CMOS3_1130 (s', t, n ;;zz_19 ) ;
+	.call CMOS3_1130_zz_17 CMOS3_1130 (t, p, n ;;zz_17 ) ;
+	.call CMOS3_1130_zz_11 CMOS3_1130 (s, p, o ;;zz_11 ) ;
+	.call CMOS3_1130_zz_110 CMOS3_1130 (b0, r, q ;;zz_110 ) ;
+	.call CMOS3_1130_zz_105 CMOS3_1130 (zz_112, zz_110, zz_107 ;;
+	         zz_105' ) ;
+	.call CMOS3_1680_zz_119 CMOS3_1680 (zz_128', zz_126', zz_123', 
+	         zz_121' ;;zz_119' ) ;
+	.call CMOS3_1680_zz_107 CMOS3_1680 (g0', f0', e0', b0' ;;zz_107 ) ;
+	.call CMOS3_1120_zz_9 CMOS3_1120 (o, m ;;zz_9 ) ;
+	.call CMOS3_1120_zz_7 CMOS3_1120 (n, m ;;zz_7 ) ;
+	.call CMOS3_1120_zz_5 CMOS3_1120 (n, m ;;zz_5 ) ;
+	.call CMOS3_1120_zz_4 CMOS3_1120 (p, o ;;zz_4 ) ;
+	.call CMOS3_1120_zz_87 CMOS3_1120 (c, a ;;zz_87 ) ;
+	.call CMOS3_1120_zz_85 CMOS3_1120 (b, a ;;zz_85 ) ;
+	.call CMOS3_1120_zz_83 CMOS3_1120 (b, a ;;zz_83 ) ;
+	.call CMOS3_1120_zz_82 CMOS3_1120 (d, c ;;zz_82 ) ;
+	.call CMOS3_1120_zz_59 CMOS3_1120 (f, e ;;zz_59 ) ;
+	.call CMOS3_1120_zz_61 CMOS3_1120 (g, e ;;zz_61 ) ;
+	.call CMOS3_1120_zz_57 CMOS3_1120 (f, e ;;zz_57 ) ;
+	.call CMOS3_1120_zz_56 CMOS3_1120 (h, g ;;zz_56 ) ;
+	.call CMOS3_1120_zz_35 CMOS3_1120 (k, i ;;zz_35 ) ;
+	.call CMOS3_1120_zz_33 CMOS3_1120 (j, i ;;zz_33 ) ;
+	.call CMOS3_1120_zz_31 CMOS3_1120 (j, i ;;zz_31 ) ;
+	.call CMOS3_1120_zz_30 CMOS3_1120 (l, k ;;zz_30 ) ;
+	.call CMOS3_1120_zz_112 CMOS3_1120 (zz_113', q ;;zz_112 ) ;
+	.call CMOS3_1220_zz_129 CMOS3_1220 (f0', b0' ;;zz_129' ) ;
+	.call CMOS3_1220_zz_113 CMOS3_1220 (e0', b0' ;;zz_113' ) ;
+	.call CMOS3_1870_zz_114 CMOS3_1870 (q, zz_118, r, zz_116 ;;zz_114' ) ;
+	.call CMOS3_1610_zz_118 CMOS3_1610 (r, f0' ;;zz_118 ) ;
+	.call CMOS3_1610_zz_116 CMOS3_1610 (q, e0' ;;zz_116 ) ;
+	.call CMOS3_1230_j0 CMOS3_1230 (zz_119', zz_114', zz_105' ;;j0 ) ;
+	.call CMOS3_1230_zz_126 CMOS3_1230 (q, g0', f0' ;;zz_126' ) ;
+	.call CMOS3_1230_zz_123 CMOS3_1230 (r, g0', e0' ;;zz_123' ) ;
+	.call CMOS3_1230_zz_121 CMOS3_1230 (q, g0', r ;;zz_121' ) ;
+	.call CMOS3_1760_zz_128 CMOS3_1760 (zz_129', r ;;zz_128' ) ;
+	.call CMOS3_1310_b0 CMOS3_1310 (b0 ;;b0' ) ;
+	.call CMOS3_1310_t CMOS3_1310 (t ;;t' ) ;
+	.call CMOS3_1310_s CMOS3_1310 (s ;;s' ) ;
+	.call CMOS3_1310_m CMOS3_1310 (m ;;m' ) ;
+	.call CMOS3_1310_i CMOS3_1310 (i ;;i' ) ;
+	.call CMOS3_1310_e CMOS3_1310 (e ;;e' ) ;
+	.call CMOS3_1310_a CMOS3_1310 (a ;;a' ) ;
+	.call CMOS3_1660_v CMOS3_1660 (u, j0 ;;v ) ;
+	.call CMOS3_1670_zz_91 CMOS3_1670 (s, a', t ;;zz_91 ) ;
+	.call CMOS3_1670_zz_65 CMOS3_1670 (s, e', t ;;zz_65 ) ;
+	.call CMOS3_1670_zz_39 CMOS3_1670 (s, i', t ;;zz_39 ) ;
+	.call CMOS3_1670_zz_13 CMOS3_1670 (s, m', t ;;zz_13 ) ;
+	.call CMOS3_1740_b0 CMOS3_1740 (zz_15, zz_13, zz_11, zz_1 ;;b0 ) ;
+	.call CMOS3_1740_zz_93 CMOS3_1740 (zz_102, zz_100, zz_97, zz_95 ;;
+	         zz_93 ) ;
+	.call CMOS3_1740_zz_67 CMOS3_1740 (zz_76, zz_74, zz_71, zz_69 ;;
+	         zz_67 ) ;
+	.call CMOS3_1740_zz_41 CMOS3_1740 (zz_50, zz_48, zz_45, zz_43 ;;
+	         zz_41 ) ;
+	.call CMOS3_1740_zz_15 CMOS3_1740 (zz_24, zz_22, zz_19, zz_17 ;;
+	         zz_15 ) ;
+	.call CMOS3_1810_zz_1 CMOS3_1810 (t, zz_9, s, zz_7, zz_5, zz_4 ;;
+	         zz_1 ) ;
+	.call CMOS3_1810_zz_79 CMOS3_1810 (t, zz_87, s, zz_85, zz_83, 
+	         zz_82 ;;zz_79 ) ;
+	.call CMOS3_1810_zz_53 CMOS3_1810 (t, zz_61, s, zz_59, zz_57, 
+	         zz_56 ;;zz_53 ) ;
+	.call CMOS3_1810_zz_27 CMOS3_1810 (t, zz_35, s, zz_33, zz_31, 
+	         zz_30 ;;zz_27 ) ;
+	.call CMOS3_1140_g0 CMOS3_1140 (zz_93, zz_91, zz_89, zz_79 ;;g0' ) ;
+	.call CMOS3_1140_f0 CMOS3_1140 (zz_67, zz_65, zz_63, zz_53 ;;f0' ) ;
+	.call CMOS3_1140_e0 CMOS3_1140 (zz_41, zz_39, zz_37, zz_27 ;;e0' ) ;
+
+.endmodel mux ;
+

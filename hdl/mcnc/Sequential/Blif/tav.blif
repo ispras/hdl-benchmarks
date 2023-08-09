@@ -1,0 +1,52 @@
+.model tav.kiss2
+.inputs v0 v1 v2 v3
+.outputs v6.2 v6.3 v6.4 v6.5
+.latch    v6.0 v4   0
+.latch    v6.1 v5   0
+.names [15] v6.2
+0 1
+.names [17] v6.3
+0 1
+.names [19] v6.4
+0 1
+.names [21] v6.5
+0 1
+.names [11] v6.0
+0 1
+.names [13] v6.1
+0 1
+.names v0 v1 v2 v3 [0]
+0100 1
+.names v0 v1 v2 v3 [1]
+0010 1
+.names v0 v1 v2 v3 [2]
+1000 1
+.names v0 v1 v2 v3 [3]
+0001 1
+.names v1 v2 v4 v5 [4]
+1011 1
+.names v1 v2 v4 v5 [5]
+0111 1
+.names v0 v4 v5 [6]
+111 1
+.names v3 v4 v5 [7]
+111 1
+.names v4 v5 [8]
+00 1
+.names v4 v5 [9]
+11 1
+.names v4 [10]
+0 1
+.names [10] [11]
+0 1
+.names [8] [9] [13]
+00 1
+.names [2] [6] [15]
+00 1
+.names [0] [4] [17]
+00 1
+.names [1] [5] [19]
+00 1
+.names [3] [7] [21]
+00 1
+.end

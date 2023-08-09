@@ -1,0 +1,24 @@
+
+.model x2 ;
+
+	.date 910103085411 ;	# January 3 1991, 08:54.11
+
+	.inputs  a b c d e f g h i j ;
+	.outputs k l m n o p q ;
+
+	k = j0 + i0 + f0 + g0 + i' j' ;
+	l = j0 + i0 + f0 + h j' ;
+	m = h' i' j' ;
+	n = i0 + b + a + c + j0 + g0 + m + h j' ;
+	o = g' + i0 + j0 + f0 + m ;
+	p = h0 + g' + i' j' + j' h d e' + i' a' b' c h' + i j a' b' c h ;
+	q = g0 + h0 + g' + m + a' b' c' h j + h j' d e i ;
+	g0 = h i' j ;
+	f0 = h' i ;
+	j0 = i j ;
+	i0 = h' j ;
+	h0 = f h' i j ;
+
+
+.endmodel x2 ;
+

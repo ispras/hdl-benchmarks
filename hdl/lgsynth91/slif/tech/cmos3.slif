@@ -1,0 +1,260 @@
+#		CMOS3 Library
+#
+#	ported to SLIF format
+#	modified by Jerry Yang
+#	28 February, 1990
+#	modified by Frederic Mailhot 8 January 1991
+#
+#	Cost is the area is sq. microns/225
+#	Delay Parameters are for Worst Case Delays:
+#		Rs=1.5K  Cl=1.5pF  V=5V  T=125 C
+#       Load is the input capacitance to the gate
+#	FLIP-FLOP added  6 April 1990
+#	Tristate buffer added 8 January 1991
+#
+.type COST %f ;
+.type LOAD %f ;
+.type DRIVE %d ;
+.type DELAY (%f %f) ;
+
+
+.model CMOS3_1120;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 24;
+.global_attribute LOAD 0.23;
+.global_attribute DELAY (1.0 8.0 2.0 12.0 3.0 16.5);
+O = (A + B)' ;
+.endmodel CMOS3_1120;
+
+.model CMOS3_1130;
+.inputs A B C;
+.outputs O;
+.library;
+.global_attribute COST 32;
+.global_attribute LOAD 0.26; 
+.global_attribute DELAY (1.0 10.0 2.0 14.0 3.0 18.0);  
+O = (A + B + C)' ;
+.endmodel CMOS3_1130;
+
+.model CMOS3_1140;
+.inputs A B C D;
+.outputs O;
+.library;
+.global_attribute COST 40;
+.global_attribute LOAD 0.27;
+.global_attribute DELAY (1.0 14.0 2.0 20.0 3.0 26.0); 
+O = (A + B + C + D)' ;
+.endmodel CMOS3_1140;
+
+.model CMOS3_1220;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST  24;
+.global_attribute LOAD  0.24; 
+.global_attribute DELAY (1.0 8.0 2.0 12.0 3.0 16.0); 
+O = (A B)' ;
+.endmodel CMOS3_1220;
+
+.model CMOS3_1230;
+.inputs A B C;
+.outputs O;
+.library;
+.global_attribute COST  32;
+.global_attribute LOAD 0.23;
+.global_attribute DELAY (1.0 8.5 2.0 13.0 3.0 17.5);  
+O = (A B C)' ;
+.endmodel CMOS3_1230;
+
+.model CMOS3_1310;
+.inputs A;
+.outputs O;
+.library;
+.global_attribute COST 24;
+.global_attribute LOAD  0.25;
+.global_attribute DELAY (1.0 10.0 2.0 15.0 3.0 20.0); 
+O = A';
+.endmodel CMOS3_1310;
+
+.model CMOS_1340;
+.inputs DATA ENABLE;
+.outputs OUT;
+.library;
+.global_attribute COST 56;
+.global_attribute LOAD 0.50; #load on DATA is less, 0.27
+.global_attribute DELAY (1.0 11.3 2.0 22.6 3.0 34.0);
+OUT = @T(DATA,ENABLE);
+.endmodel CMOS_1340;
+
+
+.model CMOS3_1350;
+.inputs D1 D2 SEL;
+.outputs O;
+.library;
+.global_attribute COST 56;
+.global_attribute LOAD 0.84; 
+.global_attribute DELAY (1.0 8.0 2.0 11.0 3.0 14.0); 
+O = D1 SEL + D2 SEL' ;
+.endmodel CMOS3_1350;
+
+.model CMOS3_1610;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 32;
+.global_attribute LOAD 0.23;
+.global_attribute DELAY (1.0 10.0 2.0 14.5 3.0 19.0); 
+O = A' B;
+.endmodel CMOS3_1610;
+
+.model CMOS3_1620;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 32;
+.global_attribute LOAD 0.23;
+.global_attribute DELAY (1.0 7.5 2.0 10.5 3.0 14.0); 
+O = A + B';
+.endmodel CMOS3_1620;
+
+.model CMOS3_1660;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 32;
+.global_attribute LOAD 0.25; 
+.global_attribute DELAY (1.0 8.0 2.0 12.0 3.0 16.0); 
+O = A B;
+.endmodel CMOS3_1660;
+
+.model CMOS3_1670;
+.inputs A B C;
+.outputs O;
+.library;
+.global_attribute COST 40;
+.global_attribute LOAD 0.26; 
+.global_attribute DELAY (1.0 9.0 2.0 13.5 3.0 18.0); 
+O = A B C;
+.endmodel CMOS3_1670;
+
+.model CMOS3_1680;
+.inputs A B C D;
+.outputs O;
+.library;
+.global_attribute COST 48;
+.global_attribute LOAD 0.26; 
+.global_attribute DELAY (1.0 11.0 2.0 16.0 3.0 20.0); 
+O = A B C D;
+.endmodel CMOS3_1680;
+
+.model CMOS3_1740;
+.inputs A B C D;
+.outputs O;
+.library;
+.global_attribute COST 48;
+.global_attribute LOAD 0.27;
+.global_attribute DELAY (1.0 15.0 2.0 17.5 3.0 20.0); 
+O = A + B + C + D;
+.endmodel CMOS3_1740;
+
+.model CMOS3_1760;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 32;
+.global_attribute LOAD 0.23; 
+.global_attribute DELAY (1.0 9.0 2.0 13.0 3.0 17.0); 
+O = A + B;
+.endmodel CMOS3_1760;
+
+.model CMOS3_1770;
+.inputs A B C;
+.outputs O;
+.library;
+.global_attribute COST 40;
+.global_attribute LOAD 0.24; 
+.global_attribute DELAY (1.0 12.0 2.0 18.0 3.0 24.0); 
+O = A + B + C;
+.endmodel CMOS3_1770;
+
+.model CMOS3_1810;
+.inputs A B C D E F;
+.outputs O;
+.library;
+.global_attribute COST 72;
+.global_attribute LOAD 0.27;
+.global_attribute DELAY (1.0 11.0 2.0 16.5 3.0 16.0); 
+O = A B + C D + E F ;
+.endmodel CMOS3_1810;
+
+.model CMOS3_1830;
+.inputs DATA, CLK;
+.outputs Q, Q';
+.library ;
+.global_attribute COST 88;
+.global_attribute LOAD 0.21;
+.global_attribute DELAY (1.0 10.0 2.0 18.0 3.0 26.0);
+Q= @D(DATA,CLK);
+.endmodel CMOS3_1830;
+
+.model CMOS3_1870;
+.inputs A B C D;
+.outputs O;
+.library;
+.global_attribute COST 48;
+.global_attribute LOAD 0.27;
+.global_attribute DELAY (1.0 8.0 2.0 11.5 3.0 15.0); 
+O = (A B + C D)' ;
+.endmodel CMOS3_1870;
+
+.model CMOS3_1910;
+.inputs A B C D E F G H;
+.outputs O;
+.library;
+.global_attribute COST 96;
+.global_attribute LOAD 0.27;
+.global_attribute DELAY (1.0 14.0 2.0 16.0 3.0 18.0); 
+O = A B + C D + E F + G H ;
+.endmodel CMOS3_1910;
+
+.model CMOS3_1930;
+.inputs A B C D E F;
+.outputs O;
+.library;
+.global_attribute COST 56;
+.global_attribute LOAD 0.3;
+.global_attribute DELAY (1.0 13.0 2.0 15.0 3.0 18.0); 
+O = A B C + D E F;
+.endmodel CMOS3_1930;
+
+.model CMOS3_1970;
+.inputs A B C D;
+.outputs O;
+.library;
+.global_attribute COST 56;
+.global_attribute LOAD 0.26;
+.global_attribute DELAY (1.0 9.0 2.0 11.0 3.0 13.0);
+O = A B + C D;
+.endmodel CMOS3_1970;
+
+.model CMOS3_2310;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 48;
+.global_attribute LOAD 0.38; 
+.global_attribute DELAY (1.0 11.0 2.0 15.0 3.0 19.0); 
+O = A B' + A' B ;
+.endmodel CMOS3_2310;
+
+.model CMOS3_2350;
+.inputs A B;
+.outputs O;
+.library;
+.global_attribute COST 48;
+.global_attribute LOAD 0.42; 
+.global_attribute DELAY (1.0 10.0 2.0 14.5 3.0 19.0); 
+O = A B + A' B' ;
+.endmodel CMOS3_2350;

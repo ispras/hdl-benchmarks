@@ -1,0 +1,31 @@
+
+.model CM162 ;
+
+	.date 910103085118 ;	# January 3 1991, 08:51.18
+
+	.inputs  a b c d e f g h i j k l m n ;
+	.outputs o p q r s ;
+
+	o = d0' f0' + a' f0' + d0' e0' + a' e0' ;
+	p = d0' f0' + b' f0' + d0' g0' + b' g0' ;
+	q = d0' f0' + g' f0' + d0' p0' + g' p0' ;
+	r = d0' f0' + h' f0' + d0' q0' + h' q0' ;
+	s = n0' e ;
+	d0 = j0' o0' ;
+	e0 = l0 i' + l0' i ;
+	f0 = k0' o0' ;
+	g0 = m0' k' + m0 k ;
+	p0 = r0' l' + r0 l ;
+	q0 = s0' m' + s0 m ;
+	n0 = n' + j' ;
+	j0 = f' + d ;
+	o0 = n0' l0' ;
+	l0 = e' + d' + c' ;
+	k0 = f' + d' ;
+	m0 = i' l0' ;
+	r0 = l0' i' k' ;
+	s0 = l' l0' i' k' ;
+
+
+.endmodel CM162 ;
+

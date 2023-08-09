@@ -1,0 +1,1319 @@
+
+.model parker1986 ;
+
+	.date 910109114925 ;	# January 9 1991, 11:49.25
+
+	.inputs  CLK RESET in1[0:0] in1[1:1] in1[2:2] in1[3:3] in1[4:4] 
+	         in1[5:5] in1[6:6] in1[7:7] in2[0:0] in2[1:1] in2[2:2] in2[3:3] 
+	         in2[4:4] in2[5:5] in2[6:6] in2[7:7] in3[0:0] in3[1:1] in3[2:2] 
+	         in3[3:3] in3[4:4] in3[5:5] in3[6:6] in3[7:7] in4[0:0] in4[1:1] 
+	         in4[2:2] in4[3:3] in4[4:4] in4[5:5] in4[6:6] in4[7:7] in5[0:0] 
+	         in5[1:1] in5[2:2] in5[3:3] in5[4:4] in5[5:5] in5[6:6] in5[7:7] 
+	         in6[0:0] in6[1:1] in6[2:2] in6[3:3] in6[4:4] in6[5:5] in6[6:6] 
+	         in6[7:7] ;
+	.outputs DN out1[0:0] out1[1:1] out1[2:2] out1[3:3] out1[4:4] out1[5:5] 
+	         out1[6:6] out1[7:7] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call parker1986_1 parker1986_1 (in5[0:0], in5[1:1], in5[2:2], 
+	         in5[3:3], in5[4:4], in5[5:5], in5[6:6], in5[7:7] ;;
+	         T3[0:0] ) ;
+	.call parker1986_2 parker1986_2 (T2[0:0], T2[1:1], T2[2:2], 
+	         T2[3:3], T2[4:4], T2[5:5], T2[6:6], T2[7:7] ;;T5[0:0] ) ;
+	.call parker1986_3 parker1986_3 (T7[0:0], T7[1:1], T7[2:2], 
+	         T7[3:3], T7[4:4], T7[5:5], T7[6:6], T7[7:7] ;;T8[0:0] ) ;
+	.call parker1986_4 parker1986_4 (T13[0:0], T13[1:1], T13[2:2], 
+	         T13[3:3], T13[4:4], T13[5:5], T13[6:6], T13[7:7] ;;
+	         T14[0:0] ) ;
+	.call parker1986_5 parker1986_5 (T15[0:0], T16[7:7], T18[7:7], 
+	         T16[6:6], T18[6:6], T16[5:5], T18[5:5], T16[4:4], 
+	         T18[4:4], T16[3:3], T18[3:3], T16[2:2], T18[2:2], 
+	         T16[1:1], T18[1:1], T16[0:0], T18[0:0] ;;M1[0:0], 
+	         M1[1:1], M1[2:2], M1[3:3], M1[4:4], M1[5:5], M1[6:6], 
+	         M1[7:7] ) ;
+	.call parker1986_6 parker1986_6 (T6[0:0], T19[7:7], T19[6:6], 
+	         T19[5:5], T19[4:4], T19[3:3], T19[2:2], T19[1:1], 
+	         T19[0:0], T9[0:0], T10[7:7], T11[7:7], T10[6:6], 
+	         T11[6:6], T10[5:5], T11[5:5], T10[4:4], T11[4:4], 
+	         T10[3:3], T11[3:3], T10[2:2], T11[2:2], T10[1:1], 
+	         T11[1:1], T10[0:0], T11[0:0] ;;M2[0:0], M2[1:1], M2[2:2], 
+	         M2[3:3], M2[4:4], M2[5:5], M2[6:6], M2[7:7] ) ;
+	.call parker1986_7 parker1986_7 (T1[0:0], T1[1:1], T1[2:2], 
+	         T1[3:3], T1[4:4], T1[5:5], T1[6:6], T1[7:7] ;;T21[0:0] ) ;
+	.call parker1986_8 parker1986_8 (T4[0:0], T20[7:7], T20[6:6], 
+	         T20[5:5], T20[4:4], T20[3:3], T20[2:2], T20[1:1], 
+	         T20[0:0], T22[0:0], T23[7:7], T24[7:7], T23[6:6], 
+	         T24[6:6], T23[5:5], T24[5:5], T23[4:4], T24[4:4], 
+	         T23[3:3], T24[3:3], T23[2:2], T24[2:2], T23[1:1], 
+	         T24[1:1], T23[0:0], T24[0:0] ;;T25[0:0] ) ;
+	.call parker1986_9 parker1986_9 (T26[0:0], T27[7:7], T28[7:7], 
+	         T27[6:6], T28[6:6], T27[5:5], T28[5:5], T27[4:4], 
+	         T28[4:4], T27[3:3], T28[3:3], T27[2:2], T28[2:2], 
+	         T27[1:1], T28[1:1], T27[0:0], T28[0:0] ;;out1[7:7], 
+	         out1[6:6], out1[5:5], out1[4:4], out1[3:3], out1[2:2], 
+	         out1[1:1], out1[0:0] ) ;
+	.call FF_SR_EN1 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[1:1] ) ;
+	.call FF_SR_EN3 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[2:2] ) ;
+	.call FF_SR_EN4 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[3:3] ) ;
+	.call FF_SR_EN5 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[4:4] ) ;
+	.call FF_SR_EN6 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[5:5] ) ;
+	.call FF_SR_EN7 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[6:6] ) ;
+	.call FF_SR_EN8 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[7:7] ) ;
+	.call FF_SR_EN9 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch1_3, CLK, 
+	         0, RESET ;;T2[8:8] ) ;
+	.call FF_SR_EN10 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[0:0] ) ;
+	.call FF_SR_EN11 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[1:1] ) ;
+	.call FF_SR_EN12 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[2:2] ) ;
+	.call FF_SR_EN13 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[3:3] ) ;
+	.call FF_SR_EN14 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[4:4] ) ;
+	.call FF_SR_EN15 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[5:5] ) ;
+	.call FF_SR_EN16 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[6:6] ) ;
+	.call FF_SR_EN17 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[7:7] ) ;
+	.call FF_SR_EN18 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch4_2, CLK, 
+	         0, RESET ;;T10[8:8] ) ;
+	.call FF_SR_EN19 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[0:0] ) ;
+	.call FF_SR_EN20 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[1:1] ) ;
+	.call FF_SR_EN21 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[2:2] ) ;
+	.call FF_SR_EN22 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[3:3] ) ;
+	.call FF_SR_EN23 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[4:4] ) ;
+	.call FF_SR_EN24 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[5:5] ) ;
+	.call FF_SR_EN25 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[6:6] ) ;
+	.call FF_SR_EN26 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[7:7] ) ;
+	.call FF_SR_EN27 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch6_3, CLK, 
+	         0, RESET ;;T13[8:8] ) ;
+	.call FF_SR_EN28 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[0:0] ) ;
+	.call FF_SR_EN29 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[1:1] ) ;
+	.call FF_SR_EN30 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[2:2] ) ;
+	.call FF_SR_EN31 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[3:3] ) ;
+	.call FF_SR_EN32 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[4:4] ) ;
+	.call FF_SR_EN33 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[5:5] ) ;
+	.call FF_SR_EN34 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[6:6] ) ;
+	.call FF_SR_EN35 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[7:7] ) ;
+	.call FF_SR_EN36 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch7_2, CLK, 
+	         0, RESET ;;T16[8:8] ) ;
+	.call FF_SR_EN37 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[0:0] ) ;
+	.call FF_SR_EN38 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[1:1] ) ;
+	.call FF_SR_EN39 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[2:2] ) ;
+	.call FF_SR_EN40 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[3:3] ) ;
+	.call FF_SR_EN41 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[4:4] ) ;
+	.call FF_SR_EN42 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[5:5] ) ;
+	.call FF_SR_EN43 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[6:6] ) ;
+	.call FF_SR_EN44 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[7:7] ) ;
+	.call FF_SR_EN45 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch2_5, CLK, 
+	         0, RESET ;;T20[8:8] ) ;
+	.call FF_SR_EN46 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[0:0] ) ;
+	.call FF_SR_EN47 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[1:1] ) ;
+	.call FF_SR_EN48 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[2:2] ) ;
+	.call FF_SR_EN49 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[3:3] ) ;
+	.call FF_SR_EN50 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[4:4] ) ;
+	.call FF_SR_EN51 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[5:5] ) ;
+	.call FF_SR_EN52 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[6:6] ) ;
+	.call FF_SR_EN53 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[7:7] ) ;
+	.call FF_SR_EN54 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch10_2, 
+	         CLK, 0, RESET ;;T23[8:8] ) ;
+	.call FF_SR_EN55 FF_SR_EN (auto_add_8[0].ob0[0:0], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[0:0] ) ;
+	.call FF_SR_EN56 FF_SR_EN (auto_add_8[0].ob0[1:1], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[1:1] ) ;
+	.call FF_SR_EN57 FF_SR_EN (auto_add_8[0].ob0[2:2], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[2:2] ) ;
+	.call FF_SR_EN58 FF_SR_EN (auto_add_8[0].ob0[3:3], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[3:3] ) ;
+	.call FF_SR_EN59 FF_SR_EN (auto_add_8[0].ob0[4:4], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[4:4] ) ;
+	.call FF_SR_EN60 FF_SR_EN (auto_add_8[0].ob0[5:5], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[5:5] ) ;
+	.call FF_SR_EN61 FF_SR_EN (auto_add_8[0].ob0[6:6], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[6:6] ) ;
+	.call FF_SR_EN62 FF_SR_EN (auto_add_8[0].ob0[7:7], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[7:7] ) ;
+	.call FF_SR_EN63 FF_SR_EN (auto_add_8[0].ob0[8:8], DN_Latch13_2, 
+	         CLK, 0, RESET ;;T28[8:8] ) ;
+	.call FF_SR_EN64 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[0:0] ) ;
+	.call FF_SR_EN65 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[1:1] ) ;
+	.call FF_SR_EN66 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[2:2] ) ;
+	.call FF_SR_EN67 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[3:3] ) ;
+	.call FF_SR_EN68 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[4:4] ) ;
+	.call FF_SR_EN69 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[5:5] ) ;
+	.call FF_SR_EN70 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[6:6] ) ;
+	.call FF_SR_EN71 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[7:7] ) ;
+	.call FF_SR_EN72 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch1_2, 
+	         CLK, 0, RESET ;;T1[8:8] ) ;
+	.call FF_SR_EN73 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[0:0] ) ;
+	.call FF_SR_EN74 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[1:1] ) ;
+	.call FF_SR_EN75 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[2:2] ) ;
+	.call FF_SR_EN76 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[3:3] ) ;
+	.call FF_SR_EN77 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[4:4] ) ;
+	.call FF_SR_EN78 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[5:5] ) ;
+	.call FF_SR_EN79 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[6:6] ) ;
+	.call FF_SR_EN80 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[7:7] ) ;
+	.call FF_SR_EN81 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch3_2, 
+	         CLK, 0, RESET ;;T7[8:8] ) ;
+	.call FF_SR_EN82 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[0:0] ) ;
+	.call FF_SR_EN83 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[1:1] ) ;
+	.call FF_SR_EN84 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[2:2] ) ;
+	.call FF_SR_EN85 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[3:3] ) ;
+	.call FF_SR_EN86 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[4:4] ) ;
+	.call FF_SR_EN87 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[5:5] ) ;
+	.call FF_SR_EN88 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[6:6] ) ;
+	.call FF_SR_EN89 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[7:7] ) ;
+	.call FF_SR_EN90 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch5_2, 
+	         CLK, 0, RESET ;;T11[8:8] ) ;
+	.call FF_SR_EN91 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[0:0] ) ;
+	.call FF_SR_EN92 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[1:1] ) ;
+	.call FF_SR_EN93 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[2:2] ) ;
+	.call FF_SR_EN94 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[3:3] ) ;
+	.call FF_SR_EN95 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[4:4] ) ;
+	.call FF_SR_EN96 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[5:5] ) ;
+	.call FF_SR_EN97 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[6:6] ) ;
+	.call FF_SR_EN98 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[7:7] ) ;
+	.call FF_SR_EN99 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch6_2, 
+	         CLK, 0, RESET ;;T12[8:8] ) ;
+	.call FF_SR_EN100 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[0:0] ) ;
+	.call FF_SR_EN101 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[1:1] ) ;
+	.call FF_SR_EN102 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[2:2] ) ;
+	.call FF_SR_EN103 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[3:3] ) ;
+	.call FF_SR_EN104 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[4:4] ) ;
+	.call FF_SR_EN105 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[5:5] ) ;
+	.call FF_SR_EN106 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[6:6] ) ;
+	.call FF_SR_EN107 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[7:7] ) ;
+	.call FF_SR_EN108 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch8_2, 
+	         CLK, 0, RESET ;;T17[8:8] ) ;
+	.call FF_SR_EN109 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[0:0] ) ;
+	.call FF_SR_EN110 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[1:1] ) ;
+	.call FF_SR_EN111 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[2:2] ) ;
+	.call FF_SR_EN112 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[3:3] ) ;
+	.call FF_SR_EN113 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[4:4] ) ;
+	.call FF_SR_EN114 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[5:5] ) ;
+	.call FF_SR_EN115 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[6:6] ) ;
+	.call FF_SR_EN116 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[7:7] ) ;
+	.call FF_SR_EN117 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch8_3, 
+	         CLK, 0, RESET ;;T18[8:8] ) ;
+	.call FF_SR_EN118 FF_SR_EN (auto_subtract_8[0].ob0[0:0], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[0:0] ) ;
+	.call FF_SR_EN119 FF_SR_EN (auto_subtract_8[0].ob0[1:1], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[1:1] ) ;
+	.call FF_SR_EN120 FF_SR_EN (auto_subtract_8[0].ob0[2:2], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[2:2] ) ;
+	.call FF_SR_EN121 FF_SR_EN (auto_subtract_8[0].ob0[3:3], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[3:3] ) ;
+	.call FF_SR_EN122 FF_SR_EN (auto_subtract_8[0].ob0[4:4], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[4:4] ) ;
+	.call FF_SR_EN123 FF_SR_EN (auto_subtract_8[0].ob0[5:5], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[5:5] ) ;
+	.call FF_SR_EN124 FF_SR_EN (auto_subtract_8[0].ob0[6:6], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[6:6] ) ;
+	.call FF_SR_EN125 FF_SR_EN (auto_subtract_8[0].ob0[7:7], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[7:7] ) ;
+	.call FF_SR_EN126 FF_SR_EN (auto_subtract_8[0].ob0[8:8], DN_Latch6_7, 
+	         CLK, 0, RESET ;;T19[8:8] ) ;
+	.call FF_SR_EN127 FF_SR_EN (auto_subtract_8[0].ob0[0:0], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[0:0] ) ;
+	.call FF_SR_EN128 FF_SR_EN (auto_subtract_8[0].ob0[1:1], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[1:1] ) ;
+	.call FF_SR_EN129 FF_SR_EN (auto_subtract_8[0].ob0[2:2], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[2:2] ) ;
+	.call FF_SR_EN130 FF_SR_EN (auto_subtract_8[0].ob0[3:3], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[3:3] ) ;
+	.call FF_SR_EN131 FF_SR_EN (auto_subtract_8[0].ob0[4:4], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[4:4] ) ;
+	.call FF_SR_EN132 FF_SR_EN (auto_subtract_8[0].ob0[5:5], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[5:5] ) ;
+	.call FF_SR_EN133 FF_SR_EN (auto_subtract_8[0].ob0[6:6], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[6:6] ) ;
+	.call FF_SR_EN134 FF_SR_EN (auto_subtract_8[0].ob0[7:7], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[7:7] ) ;
+	.call FF_SR_EN135 FF_SR_EN (auto_subtract_8[0].ob0[8:8], 
+	         DN_Latch11_2, CLK, 0, RESET ;;T24[8:8] ) ;
+	.call FF_SR_EN136 FF_SR_EN (auto_subtract_8[0].ob0[0:0], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[0:0] ) ;
+	.call FF_SR_EN137 FF_SR_EN (auto_subtract_8[0].ob0[1:1], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[1:1] ) ;
+	.call FF_SR_EN138 FF_SR_EN (auto_subtract_8[0].ob0[2:2], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[2:2] ) ;
+	.call FF_SR_EN139 FF_SR_EN (auto_subtract_8[0].ob0[3:3], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[3:3] ) ;
+	.call FF_SR_EN140 FF_SR_EN (auto_subtract_8[0].ob0[4:4], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[4:4] ) ;
+	.call FF_SR_EN141 FF_SR_EN (auto_subtract_8[0].ob0[5:5], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[5:5] ) ;
+	.call FF_SR_EN142 FF_SR_EN (auto_subtract_8[0].ob0[6:6], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[6:6] ) ;
+	.call FF_SR_EN143 FF_SR_EN (auto_subtract_8[0].ob0[7:7], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[7:7] ) ;
+	.call FF_SR_EN144 FF_SR_EN (auto_subtract_8[0].ob0[8:8], 
+	         DN_Latch12_2, CLK, 0, RESET ;;T27[8:8] ) ;
+	.call auto_add_8[0] add_8 (auto_add_8[0].ib0[0:0], 
+	         auto_add_8[0].ib0[1:1], auto_add_8[0].ib0[2:2], 
+	         auto_add_8[0].ib0[3:3], auto_add_8[0].ib0[4:4], 
+	         auto_add_8[0].ib0[5:5], auto_add_8[0].ib0[6:6], 
+	         auto_add_8[0].ib0[7:7], auto_add_8[0].ib1[0:0], 
+	         auto_add_8[0].ib1[1:1], auto_add_8[0].ib1[2:2], 
+	         auto_add_8[0].ib1[3:3], auto_add_8[0].ib1[4:4], 
+	         auto_add_8[0].ib1[5:5], auto_add_8[0].ib1[6:6], 
+	         auto_add_8[0].ib1[7:7] ;;auto_add_8[0].ob0[0:0], 
+	         auto_add_8[0].ob0[1:1], auto_add_8[0].ob0[2:2], 
+	         auto_add_8[0].ob0[3:3], auto_add_8[0].ob0[4:4], 
+	         auto_add_8[0].ob0[5:5], auto_add_8[0].ob0[6:6], 
+	         auto_add_8[0].ob0[7:7], auto_add_8[0].ob0[8:8] ) ;
+	.call auto_subtract_8[0] subtract_8 (auto_subtract_8[0].ib0[0:0], 
+	         auto_subtract_8[0].ib0[1:1], auto_subtract_8[0].ib0[2:2], 
+	         auto_subtract_8[0].ib0[3:3], auto_subtract_8[0].ib0[4:4], 
+	         auto_subtract_8[0].ib0[5:5], auto_subtract_8[0].ib0[6:6], 
+	         auto_subtract_8[0].ib0[7:7], auto_subtract_8[0].ib1[0:0], 
+	         auto_subtract_8[0].ib1[1:1], auto_subtract_8[0].ib1[2:2], 
+	         auto_subtract_8[0].ib1[3:3], auto_subtract_8[0].ib1[4:4], 
+	         auto_subtract_8[0].ib1[5:5], auto_subtract_8[0].ib1[6:6], 
+	         auto_subtract_8[0].ib1[7:7] ;;auto_subtract_8[0].ob0[0:0], 
+	         auto_subtract_8[0].ob0[1:1], auto_subtract_8[0].ob0[2:2], 
+	         auto_subtract_8[0].ob0[3:3], auto_subtract_8[0].ob0[4:4], 
+	         auto_subtract_8[0].ob0[5:5], auto_subtract_8[0].ob0[6:6], 
+	         auto_subtract_8[0].ob0[7:7], auto_subtract_8[0].ob0[8:8] ) ;
+	.call TcL1_1[1] FF_EN (TcL1_1_i[1], 1, CLK, RESET ;;EN1_3 ) ;
+	.call TcL1_1[2] FF_EN (TcL1_1_i[2], 1, CLK, RESET ;;EN1_5 ) ;
+	.call Sw1_5 FF_EN (Sw1_5_i, 1, CLK, RESET ;;Sr1_5' ) ;
+	.call FF_EN.1_5_LC FF_EN (LC1_5_i, 1, CLK, RESET ;;LC1_5 ) ;
+	.call T4[0:0]_L FF_EN (T3[0:0], LBr1_5_e, CLK, RESET ;;LBr1_5[1] ) ;
+	.call Sw1_7 FF_EN (Sw1_7_i, 1, CLK, RESET ;;Sr1_7' ) ;
+	.call FF_EN.1_7_LC FF_EN (LC1_7_i, 1, CLK, RESET ;;LC1_7 ) ;
+	.call T26[0:0]_L FF_EN (T25[0:0], LBr1_7_e, CLK, RESET ;;
+	         T26[0:0]_L ) ;
+	.call Sw2_3 FF_EN (Sw2_3_i, 1, CLK, RESET ;;Sr2_3' ) ;
+	.call TcL2_3[1] FF_EN (TcL2_3_i[1], 1, CLK, RESET ;;RQ2_6 ) ;
+	.call FF_EN.2_3_LC FF_EN (LC2_3_i, 1, CLK, RESET ;;LC2_3 ) ;
+	.call T6[0:0]_L FF_EN (T5[0:0], LBr2_3_e, CLK, RESET ;;LBr2_3[1] ) ;
+	.call TcL3_1[1] FF_EN (TcL3_1_i[1], 1, CLK, RESET ;;EN3_4 ) ;
+	.call Sw3_4 FF_EN (Sw3_4_i, 1, CLK, RESET ;;Sr3_4' ) ;
+	.call FF_EN.3_4_LC FF_EN (LC3_4_i, 1, CLK, RESET ;;LC3_4 ) ;
+	.call T9[0:0]_L FF_EN (T8[0:0], LBr3_4_e, CLK, RESET ;;T9[0:0]_L ) ;
+	.call TcL4_1[1] FF_EN (TcL4_1_i[1], 1, CLK, RESET ;;RQ4_3 ) ;
+	.call TcL5_1[1] FF_EN (TcL5_1_i[1], 1, CLK, RESET ;;RQ5_3 ) ;
+	.call TcL6_1[1] FF_EN (TcL6_1_i[1], 1, CLK, RESET ;;EN6_3 ) ;
+	.call TcL6_1[2] FF_EN (TcL6_1_i[2], 1, CLK, RESET ;;EN6_5 ) ;
+	.call Sw6_5 FF_EN (Sw6_5_i, 1, CLK, RESET ;;Sr6_5' ) ;
+	.call TcL6_5[1] FF_EN (TcL6_5_i[1], 1, CLK, RESET ;;RQ6_8 ) ;
+	.call FF_EN.6_5_LC FF_EN (LC6_5_i, 1, CLK, RESET ;;LC6_5 ) ;
+	.call T15[0:0]_L FF_EN (T14[0:0], LBr6_5_e, CLK, RESET ;;
+	         LBr6_5[0]' ) ;
+	.call TcL7_1[1] FF_EN (TcL7_1_i[1], 1, CLK, RESET ;;RQ7_3 ) ;
+	.call TcL8_1[1] FF_EN (TcL8_1_i[1], 1, CLK, RESET ;;EN8_3 ) ;
+	.call TcL8_1[2] FF_EN (TcL8_1_i[2], 1, CLK, RESET ;;RQ8_4 ) ;
+	.call Sw9_3 FF_EN (Sw9_3_i, 1, CLK, RESET ;;Sr9_3' ) ;
+	.call FF_EN.9_3_LC FF_EN (LC9_3_i, 1, CLK, RESET ;;LC9_3 ) ;
+	.call T22[0:0]_L FF_EN (T21[0:0], LBr9_3_e, CLK, RESET ;;
+	         T22[0:0]_L ) ;
+	.call TcL10_1[1] FF_EN (TcL10_1_i[1], 1, CLK, RESET ;;RQ10_3 ) ;
+	.call TcL11_1[1] FF_EN (TcL11_1_i[1], 1, CLK, RESET ;;RQ11_3 ) ;
+	.call TcL12_1[1] FF_EN (TcL12_1_i[1], 1, CLK, RESET ;;RQ12_3 ) ;
+	.call TcL13_1[1] FF_EN (TcL13_1_i[1], 1, CLK, RESET ;;RQ13_3 ) ;
+	.call CMOS3_1610_RQ8_3 CMOS3_1610 (RQ8_4, EN8_3 ;;RQ8_3 ) ;
+	.call CMOS3_1610_RQ8_2 CMOS3_1610 (EN8_3, EN8_2 ;;RQ8_2 ) ;
+	.call CMOS3_1610_DN_Latch1_3 CMOS3_1610 (EN1_5, EN1_3 ;;DN_Latch1_3 ) ;
+	.call CMOS3_1610_RQ6_3 CMOS3_1610 (EN6_5, EN6_3 ;;RQ6_3 ) ;
+	.call CMOS3_1610_RQ6_2 CMOS3_1610 (EN6_3, EN6_2 ;;RQ6_2 ) ;
+	.call CMOS3_1610_RQ13_2 CMOS3_1610 (RQ13_3, EN13_2 ;;RQ13_2 ) ;
+	.call CMOS3_1610_RQ5_2 CMOS3_1610 (RQ5_3, EN5_2 ;;RQ5_2 ) ;
+	.call CMOS3_1610_zz_7 CMOS3_1610 (T22[0:0]_L, LC9_3 ;;zz_7 ) ;
+	.call CMOS3_1610_zz_5 CMOS3_1610 (LBr2_3[1], LC2_3 ;;zz_5 ) ;
+	.call CMOS3_1610_zz_0 CMOS3_1610 (T9[0:0]_L, LC3_4 ;;zz_0 ) ;
+	.call CMOS3_1610_TcL5_1_i[1] CMOS3_1610 (EN5_2, RQ5_3 ;;TcL5_1_i[1] ) ;
+	.call CMOS3_1610_DN_Latch5_2 CMOS3_1610 (RQ5_3, EN5_2 ;;DN_Latch5_2 ) ;
+	.call CMOS3_1610_zz_89 CMOS3_1610 (T26[0:0]_L, LC1_7 ;;zz_89 ) ;
+	.call CMOS3_1610_TcL11_1_i[1] CMOS3_1610 (EN11_2, RQ11_3 ;;
+	         TcL11_1_i[1] ) ;
+	.call CMOS3_1610_TcL7_1_i[1] CMOS3_1610 (EN7_2, RQ7_3 ;;TcL7_1_i[1] ) ;
+	.call CMOS3_1610_TcL8_1_i[1] CMOS3_1610 (EN8_3, EN8_2 ;;TcL8_1_i[1] ) ;
+	.call CMOS3_1610_TcL8_1_i[2] CMOS3_1610 (EN8_3, RQ8_4 ;;TcL8_1_i[2] ) ;
+	.call CMOS3_1610_DN_Latch6_2 CMOS3_1610 (EN6_3, EN6_2 ;;DN_Latch6_2 ) ;
+	.call CMOS3_1610_DN_Latch6_3 CMOS3_1610 (EN6_5, EN6_3 ;;DN_Latch6_3 ) ;
+	.call CMOS3_1610_TcL13_1_i[1] CMOS3_1610 (EN13_2, RQ13_3 ;;
+	         TcL13_1_i[1] ) ;
+	.call CMOS3_1610_RQ1_3 CMOS3_1610 (EN1_5, EN1_3 ;;RQ1_3 ) ;
+	.call CMOS3_1610_DN_Latch8_2 CMOS3_1610 (EN8_3, EN8_2 ;;DN_Latch8_2 ) ;
+	.call CMOS3_1610_DN_Latch8_3 CMOS3_1610 (RQ8_4, EN8_3 ;;DN_Latch8_3 ) ;
+	.call CMOS3_1610_zz_367 CMOS3_1610 (EN1_3, in6[0:0] ;;zz_367 ) ;
+	.call CMOS3_1610_DN_Latch11_2 CMOS3_1610 (RQ11_3, EN11_2 ;;
+	         DN_Latch11_2 ) ;
+	.call CMOS3_1610_zz_357 CMOS3_1610 (RQ12_2, zz_358' ;;zz_357' ) ;
+	.call CMOS3_1610_zz_355 CMOS3_1610 (EN1_3, in6[2:2] ;;zz_355 ) ;
+	.call CMOS3_1610_zz_339 CMOS3_1610 (EN1_3, in6[4:4] ;;zz_339 ) ;
+	.call CMOS3_1610_zz_328 CMOS3_1610 (EN1_3, in6[6:6] ;;zz_328 ) ;
+	.call CMOS3_1610_zz_299 CMOS3_1610 (LC6_5, T14[0:0] ;;zz_299 ) ;
+	.call CMOS3_1610_zz_318 CMOS3_1610 (LC2_3, T5[0:0] ;;zz_318 ) ;
+	.call CMOS3_1610_zz_199 CMOS3_1610 (LC6_5, T14[0:0] ;;zz_199 ) ;
+	.call CMOS3_1610_DN_Latch13_2 CMOS3_1610 (RQ13_3, EN13_2 ;;
+	         DN_Latch13_2 ) ;
+	.call CMOS3_1610_zz_144 CMOS3_1610 (EN1_3, in6[1:1] ;;zz_144 ) ;
+	.call CMOS3_1610_zz_133 CMOS3_1610 (EN1_3, in6[3:3] ;;zz_133 ) ;
+	.call CMOS3_1610_zz_121 CMOS3_1610 (EN1_3, in6[5:5] ;;zz_121 ) ;
+	.call CMOS3_1610_zz_106 CMOS3_1610 (EN1_3, in6[7:7] ;;zz_106 ) ;
+	.call CMOS3_1120_LBr9_3_e CMOS3_1120 (RQ9_3', LC9_3 ;;LBr9_3_e ) ;
+	.call CMOS3_1120_LBr1_5_e CMOS3_1120 (RQ1_5', LC1_5 ;;LBr1_5_e ) ;
+	.call CMOS3_1120_EN5_2 CMOS3_1120 (RQ3_4', Br3_4[0]' ;;EN5_2 ) ;
+	.call CMOS3_1120_LBr3_4_e CMOS3_1120 (RQ3_4', LC3_4 ;;LBr3_4_e ) ;
+	.call CMOS3_1120_EN13_2 CMOS3_1120 (RQ1_7', Br1_7[0]' ;;EN13_2 ) ;
+	.call CMOS3_1120_LC1_7_i CMOS3_1120 (zz_342', DN ;;LC1_7_i ) ;
+	.call CMOS3_1120_LBr2_3_e CMOS3_1120 (RQ2_3', LC2_3 ;;LBr2_3_e ) ;
+	.call CMOS3_1120_LC6_5_i CMOS3_1120 (zz_329', DN ;;LC6_5_i ) ;
+	.call CMOS3_1120_LC3_4_i CMOS3_1120 (zz_315', DN ;;LC3_4_i ) ;
+	.call CMOS3_1120_EN11_2 CMOS3_1120 (RQ9_3', Br9_3[0]' ;;EN11_2 ) ;
+	.call CMOS3_1120_LC9_3_i CMOS3_1120 (zz_311', DN ;;LC9_3_i ) ;
+	.call CMOS3_1120_LC1_5_i CMOS3_1120 (zz_310', DN ;;LC1_5_i ) ;
+	.call CMOS3_1120_RQ7_2 CMOS3_1120 (EN7_2', RQ7_3 ;;RQ7_2 ) ;
+	.call CMOS3_1120_Br6_5[1] CMOS3_1120 (zz_299, zz_298 ;;Br6_5[1]' ) ;
+	.call CMOS3_1120_Br6_5[0] CMOS3_1120 (zz_295, zz_294 ;;Br6_5[0]' ) ;
+	.call CMOS3_1120_LC2_3_i CMOS3_1120 (zz_272', DN ;;LC2_3_i ) ;
+	.call CMOS3_1120_TcL1_1_i[2] CMOS3_1120 (zz_255', DN ;;TcL1_1_i[2] ) ;
+	.call CMOS3_1120_DN_Latch3_2 CMOS3_1120 (EN3_2', EN3_4 ;;DN_Latch3_2 ) ;
+	.call CMOS3_1120_Sw1_7_i CMOS3_1120 (zz_233', DN ;;Sw1_7_i ) ;
+	.call CMOS3_1120_zz_8 CMOS3_1120 (LC9_3, T21[0:0] ;;zz_8 ) ;
+	.call CMOS3_1120_zz_6 CMOS3_1120 (LC2_3, T5[0:0] ;;zz_6 ) ;
+	.call CMOS3_1120_RQ12_2 CMOS3_1120 (EN12_2', RQ12_3 ;;RQ12_2 ) ;
+	.call CMOS3_1120_zz_4 CMOS3_1120 (zz_6, zz_5 ;;zz_4' ) ;
+	.call CMOS3_1120_zz_1 CMOS3_1120 (LC3_4, T8[0:0] ;;zz_1 ) ;
+	.call CMOS3_1120_DN_Latch4_2 CMOS3_1120 (EN4_2', RQ4_3 ;;DN_Latch4_2 ) ;
+	.call CMOS3_1120_RQ4_2 CMOS3_1120 (EN4_2', RQ4_3 ;;RQ4_2 ) ;
+	.call CMOS3_1120_TcL3_1_i[1] CMOS3_1120 (zz_230', RQ3_5 ;;
+	         TcL3_1_i[1] ) ;
+	.call CMOS3_1120_Sw6_5_i CMOS3_1120 (zz_227', DN ;;Sw6_5_i ) ;
+	.call CMOS3_1120_RQ3_2 CMOS3_1120 (EN3_2', EN3_4 ;;RQ3_2 ) ;
+	.call CMOS3_1120_zz_90 CMOS3_1120 (LC1_7, T25[0:0] ;;zz_90 ) ;
+	.call CMOS3_1120_Sw1_5_i CMOS3_1120 (zz_216', DN ;;Sw1_5_i ) ;
+	.call CMOS3_1120_RQ10_2 CMOS3_1120 (EN10_2', RQ10_3 ;;RQ10_2 ) ;
+	.call CMOS3_1120_zz_14 CMOS3_1120 (Br6_5[0]', LC6_5 ;;zz_14 ) ;
+	.call CMOS3_1120_zz_12 CMOS3_1120 (zz_14, zz_13 ;;zz_12' ) ;
+	.call CMOS3_1120_Sw3_4_i CMOS3_1120 (zz_178', DN ;;Sw3_4_i ) ;
+	.call CMOS3_1120_Sw9_3_i CMOS3_1120 (zz_159', DN ;;Sw9_3_i ) ;
+	.call CMOS3_1120_DN_Latch7_2 CMOS3_1120 (EN7_2', RQ7_3 ;;DN_Latch7_2 ) ;
+	.call CMOS3_1120_Sw2_3_i CMOS3_1120 (zz_107', DN ;;Sw2_3_i ) ;
+	.call CMOS3_1120_Br1_7[0] CMOS3_1120 (zz_90, zz_89 ;;Br1_7[0]' ) ;
+	.call CMOS3_1120_DN_Latch10_2 CMOS3_1120 (EN10_2', RQ10_3 ;;
+	         DN_Latch10_2 ) ;
+	.call CMOS3_1120_EN8_2 CMOS3_1120 (RQ6_5', zz_12' ;;EN8_2 ) ;
+	.call CMOS3_1120_zz_342 CMOS3_1120 (RQ1_7, LC1_7 ;;zz_342' ) ;
+	.call CMOS3_1120_zz_329 CMOS3_1120 (RQ6_5, LC6_5 ;;zz_329' ) ;
+	.call CMOS3_1120_zz_295 CMOS3_1120 (LC6_5, T14[0:0] ;;zz_295 ) ;
+	.call CMOS3_1120_zz_315 CMOS3_1120 (RQ3_4, LC3_4 ;;zz_315' ) ;
+	.call CMOS3_1120_zz_311 CMOS3_1120 (RQ9_3, LC9_3 ;;zz_311' ) ;
+	.call CMOS3_1120_zz_310 CMOS3_1120 (RQ1_5, LC1_5 ;;zz_310' ) ;
+	.call CMOS3_1120_LBr1_7_e CMOS3_1120 (RQ1_7', LC1_7 ;;LBr1_7_e ) ;
+	.call CMOS3_1120_zz_272 CMOS3_1120 (RQ2_3, LC2_3 ;;zz_272' ) ;
+	.call CMOS3_1120_DN_Latch12_2 CMOS3_1120 (EN12_2', RQ12_3 ;;
+	         DN_Latch12_2 ) ;
+	.call CMOS3_1120_LBr6_5_e CMOS3_1120 (RQ6_5', LC6_5 ;;LBr6_5_e ) ;
+	.call CMOS3_1120_zz_255 CMOS3_1120 (EN1_3, EN1_5 ;;zz_255' ) ;
+	.call CMOS3_1120_zz_230 CMOS3_1120 (EN3_2, EN3_4 ;;zz_230' ) ;
+	.call CMOS3_1120_Br9_3[0] CMOS3_1120 (zz_8, zz_7 ;;Br9_3[0]' ) ;
+	.call CMOS3_1120_EN6_2 CMOS3_1120 (RQ2_3', zz_4' ;;EN6_2 ) ;
+	.call CMOS3_1120_Br3_4[0] CMOS3_1120 (zz_1, zz_0 ;;Br3_4[0]' ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[0:0] CMOS3_1230 (zz_423', 
+	         zz_420', zz_412' ;;auto_subtract_8[0].ib0[0:0] ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[2:2] CMOS3_1230 (zz_407', 
+	         zz_404', zz_396' ;;auto_subtract_8[0].ib0[2:2] ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[4:4] CMOS3_1230 (zz_393', 
+	         zz_390', zz_382' ;;auto_subtract_8[0].ib0[4:4] ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[6:6] CMOS3_1230 (zz_379', 
+	         zz_376', zz_368' ;;auto_subtract_8[0].ib0[6:6] ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib1[0:0] CMOS3_1230 (zz_362', 
+	         zz_359', zz_357' ;;auto_subtract_8[0].ib1[0:0] ) ;
+	.call CMOS3_1230_auto_add_8[0].ib0[3:3] CMOS3_1230 (zz_293', zz_290', 
+	         zz_283' ;;auto_add_8[0].ib0[3:3] ) ;
+	.call CMOS3_1230_zz_97 CMOS3_1230 (zz_101', zz_100', zz_99' ;;zz_97 ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[1:1] CMOS3_1230 (zz_211', 
+	         zz_208', zz_200' ;;auto_subtract_8[0].ib0[1:1] ) ;
+	.call CMOS3_1230_zz_36 CMOS3_1230 (zz_39', RQ10_2', zz_38' ;;zz_36 ) ;
+	.call CMOS3_1230_zz_27 CMOS3_1230 (zz_30', RQ10_2', zz_29' ;;zz_27 ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[3:3] CMOS3_1230 (zz_193', 
+	         zz_190', zz_181' ;;auto_subtract_8[0].ib0[3:3] ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[5:5] CMOS3_1230 (zz_175', 
+	         zz_172', zz_164' ;;auto_subtract_8[0].ib0[5:5] ) ;
+	.call CMOS3_1230_auto_subtract_8[0].ib0[7:7] CMOS3_1230 (zz_156', 
+	         zz_153', zz_145' ;;auto_subtract_8[0].ib0[7:7] ) ;
+	.call CMOS3_1230_zz_330 CMOS3_1230 (zz_334', zz_333', zz_332' ;;
+	         zz_330 ) ;
+	.call CMOS3_1230_zz_319 CMOS3_1230 (zz_323', zz_322', zz_321' ;;
+	         zz_319 ) ;
+	.call CMOS3_1230_zz_135 CMOS3_1230 (zz_139', zz_138', zz_137' ;;
+	         zz_135 ) ;
+	.call CMOS3_1230_zz_124 CMOS3_1230 (zz_128', zz_127', zz_126' ;;
+	         zz_124 ) ;
+	.call CMOS3_1230_zz_112 CMOS3_1230 (zz_116', zz_115', zz_114' ;;
+	         zz_112 ) ;
+	.call CMOS3_1220_zz_101 CMOS3_1220 (in1[7:7], RQ8_3 ;;zz_101' ) ;
+	.call CMOS3_1220_zz_100 CMOS3_1220 (in4[7:7], RQ6_7 ;;zz_100' ) ;
+	.call CMOS3_1220_EN4_2 CMOS3_1220 (RQ3_4, Br3_4[1] ;;EN4_2' ) ;
+	.call CMOS3_1220_auto_subtract_8[0].ib1[2:2] CMOS3_1220 (zz_351', 
+	         zz_343' ;;auto_subtract_8[0].ib1[2:2] ) ;
+	.call CMOS3_1220_EN3_2 CMOS3_1220 (RQ2_3, zz_316 ;;EN3_2' ) ;
+	.call CMOS3_1220_EN12_2 CMOS3_1220 (RQ1_7, Br1_7[1] ;;EN12_2' ) ;
+	.call CMOS3_1220_EN10_2 CMOS3_1220 (RQ9_3, Br9_3[1] ;;EN10_2' ) ;
+	.call CMOS3_1220_auto_add_8[0].ib1[1:1] CMOS3_1220 (zz_259', zz_256' ;;
+	         auto_add_8[0].ib1[1:1] ) ;
+	.call CMOS3_1220_auto_add_8[0].ib1[3:3] CMOS3_1220 (zz_252', zz_249' ;;
+	         auto_add_8[0].ib1[3:3] ) ;
+	.call CMOS3_1220_auto_add_8[0].ib1[5:5] CMOS3_1220 (zz_246', zz_243' ;;
+	         auto_add_8[0].ib1[5:5] ) ;
+	.call CMOS3_1220_auto_add_8[0].ib1[7:7] CMOS3_1220 (zz_240', zz_237' ;;
+	         auto_add_8[0].ib1[7:7] ) ;
+	.call CMOS3_1220_zz_99 CMOS3_1220 (in4[7:7], RQ11_2 ;;zz_99' ) ;
+	.call CMOS3_1220_zz_39 CMOS3_1220 (in4[0:0], RQ2_5 ;;zz_39' ) ;
+	.call CMOS3_1220_zz_38 CMOS3_1220 (in5[0:0], RQ13_2 ;;zz_38' ) ;
+	.call CMOS3_1220_zz_29 CMOS3_1220 (in5[2:2], RQ13_2 ;;zz_29' ) ;
+	.call CMOS3_1220_auto_add_8[0].ib1[4:4] CMOS3_1220 (zz_24', zz_21' ;;
+	         auto_add_8[0].ib1[4:4] ) ;
+	.call CMOS3_1220_zz_358 CMOS3_1220 (in4[0:0], RQ11_2 ;;zz_358' ) ;
+	.call CMOS3_1220_auto_add_8[0].ib1[6:6] CMOS3_1220 (zz_18', zz_15' ;;
+	         auto_add_8[0].ib1[6:6] ) ;
+	.call CMOS3_1220_zz_347 CMOS3_1220 (in4[2:2], RQ6_7 ;;zz_347' ) ;
+	.call CMOS3_1220_zz_346 CMOS3_1220 (in4[2:2], RQ11_2 ;;zz_346' ) ;
+	.call CMOS3_1220_zz_334 CMOS3_1220 (in1[4:4], RQ8_3 ;;zz_334' ) ;
+	.call CMOS3_1220_zz_333 CMOS3_1220 (in4[4:4], RQ6_7 ;;zz_333' ) ;
+	.call CMOS3_1220_zz_332 CMOS3_1220 (in4[4:4], RQ11_2 ;;zz_332' ) ;
+	.call CMOS3_1220_zz_323 CMOS3_1220 (in1[6:6], RQ8_3 ;;zz_323' ) ;
+	.call CMOS3_1220_zz_322 CMOS3_1220 (in4[6:6], RQ6_7 ;;zz_322' ) ;
+	.call CMOS3_1220_zz_321 CMOS3_1220 (in4[6:6], RQ11_2 ;;zz_321' ) ;
+	.call CMOS3_1220_zz_317 CMOS3_1220 (LC2_3, LBr2_3[1] ;;zz_317' ) ;
+	.call CMOS3_1220_zz_293 CMOS3_1220 (in2[3:3], RQ1_3 ;;zz_293' ) ;
+	.call CMOS3_1220_zz_185 CMOS3_1220 (M1[3:3], RQ6_7 ;;zz_185' ) ;
+	.call CMOS3_1220_zz_184 CMOS3_1220 (in1[3:3], RQ12_2 ;;zz_184' ) ;
+	.call CMOS3_1220_zz_139 CMOS3_1220 (in1[1:1], RQ8_3 ;;zz_139' ) ;
+	.call CMOS3_1220_zz_138 CMOS3_1220 (in4[1:1], RQ6_7 ;;zz_138' ) ;
+	.call CMOS3_1220_zz_137 CMOS3_1220 (in4[1:1], RQ11_2 ;;zz_137' ) ;
+	.call CMOS3_1220_zz_128 CMOS3_1220 (in1[3:3], RQ8_3 ;;zz_128' ) ;
+	.call CMOS3_1220_zz_127 CMOS3_1220 (in4[3:3], RQ6_7 ;;zz_127' ) ;
+	.call CMOS3_1220_zz_126 CMOS3_1220 (in4[3:3], RQ11_2 ;;zz_126' ) ;
+	.call CMOS3_1220_zz_116 CMOS3_1220 (in1[5:5], RQ8_3 ;;zz_116' ) ;
+	.call CMOS3_1220_zz_115 CMOS3_1220 (in4[5:5], RQ6_7 ;;zz_115' ) ;
+	.call CMOS3_1220_zz_114 CMOS3_1220 (in4[5:5], RQ11_2 ;;zz_114' ) ;
+	.call CMOS3_1350_T22[0:0] CMOS3_1350 (T21[0:0], T22[0:0]_L, LC9_3' ;;
+	         T22[0:0] ) ;
+	.call CMOS3_1350_T9[0:0] CMOS3_1350 (T8[0:0], T9[0:0]_L, LC3_4' ;;
+	         T9[0:0] ) ;
+	.call CMOS3_1350_T6[0:0] CMOS3_1350 (T5[0:0], LBr2_3[1], LC2_3' ;;
+	         T6[0:0] ) ;
+	.call CMOS3_1350_T26[0:0] CMOS3_1350 (T25[0:0], T26[0:0]_L, LC1_7' ;;
+	         T26[0:0] ) ;
+	.call CMOS3_1350_Br1_7[1] CMOS3_1350 (T25[0:0], T26[0:0]_L, LC1_7' ;;
+	         Br1_7[1] ) ;
+	.call CMOS3_1350_T4[0:0] CMOS3_1350 (T3[0:0], LBr1_5[1], LC1_5' ;;
+	         T4[0:0] ) ;
+	.call CMOS3_1350_Br9_3[1] CMOS3_1350 (T21[0:0], T22[0:0]_L, LC9_3' ;;
+	         Br9_3[1] ) ;
+	.call CMOS3_1350_Br3_4[1] CMOS3_1350 (T8[0:0], T9[0:0]_L, LC3_4' ;;
+	         Br3_4[1] ) ;
+	.call CMOS3_1970_zz_103 CMOS3_1970 (in5[7:7], RQ5_2, in2[7:7], 
+	         RQ8_2 ;;zz_103 ) ;
+	.call CMOS3_1970_zz_83 CMOS3_1970 (in2[0:0], RQ4_2, T12[0:0], RQ6_3 ;;
+	         zz_83 ) ;
+	.call CMOS3_1970_zz_73 CMOS3_1970 (in2[2:2], RQ4_2, T12[2:2], RQ6_3 ;;
+	         zz_73 ) ;
+	.call CMOS3_1970_zz_61 CMOS3_1970 (in2[4:4], RQ4_2, T12[4:4], RQ6_3 ;;
+	         zz_61 ) ;
+	.call CMOS3_1970_zz_51 CMOS3_1970 (in2[6:6], RQ4_2, T12[6:6], RQ6_3 ;;
+	         zz_51 ) ;
+	.call CMOS3_1970_zz_336 CMOS3_1970 (in5[4:4], RQ5_2, in2[4:4], 
+	         RQ8_2 ;;zz_336 ) ;
+	.call CMOS3_1970_zz_325 CMOS3_1970 (in5[6:6], RQ5_2, in2[6:6], 
+	         RQ8_2 ;;zz_325 ) ;
+	.call CMOS3_1970_zz_286 CMOS3_1970 (in1[3:3], RQ7_2, M2[3:3], RQ2_5 ;;
+	         zz_286 ) ;
+	.call CMOS3_1970_zz_306 CMOS3_1970 (in2[1:1], RQ4_2, T12[1:1], 
+	         RQ6_3 ;;zz_306 ) ;
+	.call CMOS3_1970_zz_279 CMOS3_1970 (in2[5:5], RQ4_2, T12[5:5], 
+	         RQ6_3 ;;zz_279 ) ;
+	.call CMOS3_1970_zz_268 CMOS3_1970 (in2[7:7], RQ4_2, T12[7:7], 
+	         RQ6_3 ;;zz_268 ) ;
+	.call CMOS3_1970_zz_141 CMOS3_1970 (in5[1:1], RQ5_2, in2[1:1], 
+	         RQ8_2 ;;zz_141 ) ;
+	.call CMOS3_1970_zz_130 CMOS3_1970 (in5[3:3], RQ5_2, in2[3:3], 
+	         RQ8_2 ;;zz_130 ) ;
+	.call CMOS3_1970_zz_118 CMOS3_1970 (in5[5:5], RQ5_2, in2[5:5], 
+	         RQ8_2 ;;zz_118 ) ;
+	.call CMOS3_1660_TcL4_1_i[1] CMOS3_1660 (RQ4_3, EN4_2' ;;TcL4_1_i[1] ) ;
+	.call CMOS3_1660_TcL10_1_i[1] CMOS3_1660 (RQ10_3, EN10_2' ;;
+	         TcL10_1_i[1] ) ;
+	.call CMOS3_1660_zz_86 CMOS3_1660 (in2[0:0], RQ1_3 ;;zz_86 ) ;
+	.call CMOS3_1660_zz_76 CMOS3_1660 (in2[2:2], RQ1_3 ;;zz_76 ) ;
+	.call CMOS3_1660_TcL12_1_i[1] CMOS3_1660 (RQ12_3, EN12_2' ;;
+	         TcL12_1_i[1] ) ;
+	.call CMOS3_1660_zz_64 CMOS3_1660 (in2[4:4], RQ1_3 ;;zz_64 ) ;
+	.call CMOS3_1660_zz_54 CMOS3_1660 (in2[6:6], RQ1_3 ;;zz_54 ) ;
+	.call CMOS3_1660_zz_43 CMOS3_1660 (in3[0:0], RQ1_3 ;;zz_43 ) ;
+	.call CMOS3_1660_zz_42 CMOS3_1660 (in2[0:0], RQ7_2 ;;zz_42 ) ;
+	.call CMOS3_1660_zz_35 CMOS3_1660 (in3[2:2], RQ1_3 ;;zz_35 ) ;
+	.call CMOS3_1660_zz_396 CMOS3_1660 (zz_400', zz_397' ;;zz_396' ) ;
+	.call CMOS3_1660_zz_412 CMOS3_1660 (zz_416', zz_413' ;;zz_412' ) ;
+	.call CMOS3_1660_zz_382 CMOS3_1660 (zz_386', zz_383' ;;zz_382' ) ;
+	.call CMOS3_1660_zz_368 CMOS3_1660 (zz_372', zz_369' ;;zz_368' ) ;
+	.call CMOS3_1660_zz_366 CMOS3_1660 (in5[0:0], RQ5_2 ;;zz_366 ) ;
+	.call CMOS3_1660_zz_364 CMOS3_1660 (in2[0:0], RQ8_2 ;;zz_364 ) ;
+	.call CMOS3_1660_zz_353 CMOS3_1660 (in5[2:2], RQ5_2 ;;zz_353 ) ;
+	.call CMOS3_1660_zz_309 CMOS3_1660 (in2[1:1], RQ1_3 ;;zz_309 ) ;
+	.call CMOS3_1660_zz_285 CMOS3_1660 (in2[3:3], RQ10_2 ;;zz_285 ) ;
+	.call CMOS3_1660_zz_282 CMOS3_1660 (in2[5:5], RQ1_3 ;;zz_282 ) ;
+	.call CMOS3_1660_zz_271 CMOS3_1660 (in2[7:7], RQ1_3 ;;zz_271 ) ;
+	.call CMOS3_1660_zz_200 CMOS3_1660 (zz_204', zz_201' ;;zz_200' ) ;
+	.call CMOS3_1660_zz_164 CMOS3_1660 (zz_168', zz_165' ;;zz_164' ) ;
+	.call CMOS3_1660_zz_145 CMOS3_1660 (zz_149', zz_146' ;;zz_145' ) ;
+	.call CMOS3_1870_zz_30 CMOS3_1870 (in2[2:2], RQ7_2, in4[2:2], RQ2_5 ;;
+	         zz_30' ) ;
+	.call CMOS3_1870_zz_24 CMOS3_1870 (in3[4:4], RQ1_3, in2[4:4], RQ7_2 ;;
+	         zz_24' ) ;
+	.call CMOS3_1870_zz_21 CMOS3_1870 (in4[4:4], RQ2_5, in5[4:4], 
+	         RQ13_2 ;;zz_21' ) ;
+	.call CMOS3_1870_zz_18 CMOS3_1870 (in3[6:6], RQ1_3, in2[6:6], RQ7_2 ;;
+	         zz_18' ) ;
+	.call CMOS3_1870_zz_15 CMOS3_1870 (in4[6:6], RQ2_5, in5[6:6], 
+	         RQ13_2 ;;zz_15' ) ;
+	.call CMOS3_1870_zz_423 CMOS3_1870 (in5[0:0], EN1_3', in1[0:0], 
+	         RQ3_2 ;;zz_423' ) ;
+	.call CMOS3_1870_zz_420 CMOS3_1870 (in3[0:0], RQ5_2, in4[0:0], 
+	         RQ6_2 ;;zz_420' ) ;
+	.call CMOS3_1870_zz_397 CMOS3_1870 (M1[2:2], RQ6_7, in1[2:2], 
+	         RQ12_2 ;;zz_397' ) ;
+	.call CMOS3_1870_zz_416 CMOS3_1870 (in1[0:0], RQ8_2, T17[0:0], 
+	         RQ8_3 ;;zz_416' ) ;
+	.call CMOS3_1870_zz_393 CMOS3_1870 (in5[4:4], EN1_3', in1[4:4], 
+	         RQ3_2 ;;zz_393' ) ;
+	.call CMOS3_1870_zz_413 CMOS3_1870 (M1[0:0], RQ6_7, in1[0:0], 
+	         RQ12_2 ;;zz_413' ) ;
+	.call CMOS3_1870_zz_390 CMOS3_1870 (in3[4:4], RQ5_2, in4[4:4], 
+	         RQ6_2 ;;zz_390' ) ;
+	.call CMOS3_1870_zz_407 CMOS3_1870 (in5[2:2], EN1_3', in1[2:2], 
+	         RQ3_2 ;;zz_407' ) ;
+	.call CMOS3_1870_zz_386 CMOS3_1870 (in1[4:4], RQ8_2, T17[4:4], 
+	         RQ8_3 ;;zz_386' ) ;
+	.call CMOS3_1870_zz_404 CMOS3_1870 (in3[2:2], RQ5_2, in4[2:2], 
+	         RQ6_2 ;;zz_404' ) ;
+	.call CMOS3_1870_zz_383 CMOS3_1870 (M1[4:4], RQ6_7, in1[4:4], 
+	         RQ12_2 ;;zz_383' ) ;
+	.call CMOS3_1870_zz_379 CMOS3_1870 (in5[6:6], EN1_3', in1[6:6], 
+	         RQ3_2 ;;zz_379' ) ;
+	.call CMOS3_1870_zz_400 CMOS3_1870 (in1[2:2], RQ8_2, T17[2:2], 
+	         RQ8_3 ;;zz_400' ) ;
+	.call CMOS3_1870_zz_376 CMOS3_1870 (in3[6:6], RQ5_2, in4[6:6], 
+	         RQ6_2 ;;zz_376' ) ;
+	.call CMOS3_1870_zz_372 CMOS3_1870 (in1[6:6], RQ8_2, T17[6:6], 
+	         RQ8_3 ;;zz_372' ) ;
+	.call CMOS3_1870_zz_369 CMOS3_1870 (M1[6:6], RQ6_7, in1[6:6], 
+	         RQ12_2 ;;zz_369' ) ;
+	.call CMOS3_1870_zz_359 CMOS3_1870 (in1[0:0], RQ8_3, in4[0:0], 
+	         RQ6_7 ;;zz_359' ) ;
+	.call CMOS3_1870_zz_348 CMOS3_1870 (in2[2:2], RQ8_2, in1[2:2], 
+	         RQ8_3 ;;zz_348' ) ;
+	.call CMOS3_1870_zz_290 CMOS3_1870 (in2[3:3], RQ4_2, T12[3:3], 
+	         RQ6_3 ;;zz_290' ) ;
+	.call CMOS3_1870_zz_259 CMOS3_1870 (in3[1:1], RQ1_3, in2[1:1], 
+	         RQ7_2 ;;zz_259' ) ;
+	.call CMOS3_1870_zz_256 CMOS3_1870 (in4[1:1], RQ2_5, in5[1:1], 
+	         RQ13_2 ;;zz_256' ) ;
+	.call CMOS3_1870_zz_252 CMOS3_1870 (in3[3:3], RQ1_3, in2[3:3], 
+	         RQ7_2 ;;zz_252' ) ;
+	.call CMOS3_1870_zz_249 CMOS3_1870 (in4[3:3], RQ2_5, in5[3:3], 
+	         RQ13_2 ;;zz_249' ) ;
+	.call CMOS3_1870_zz_246 CMOS3_1870 (in3[5:5], RQ1_3, in2[5:5], 
+	         RQ7_2 ;;zz_246' ) ;
+	.call CMOS3_1870_zz_243 CMOS3_1870 (in4[5:5], RQ2_5, in5[5:5], 
+	         RQ13_2 ;;zz_243' ) ;
+	.call CMOS3_1870_zz_240 CMOS3_1870 (in3[7:7], RQ1_3, in2[7:7], 
+	         RQ7_2 ;;zz_240' ) ;
+	.call CMOS3_1870_zz_237 CMOS3_1870 (in4[7:7], RQ2_5, in5[7:7], 
+	         RQ13_2 ;;zz_237' ) ;
+	.call CMOS3_1870_zz_193 CMOS3_1870 (in5[3:3], EN1_3', in1[3:3], 
+	         RQ3_2 ;;zz_193' ) ;
+	.call CMOS3_1870_zz_211 CMOS3_1870 (in5[1:1], EN1_3', in1[1:1], 
+	         RQ3_2 ;;zz_211' ) ;
+	.call CMOS3_1870_zz_190 CMOS3_1870 (in3[3:3], RQ5_2, in4[3:3], 
+	         RQ6_2 ;;zz_190' ) ;
+	.call CMOS3_1870_zz_208 CMOS3_1870 (in3[1:1], RQ5_2, in4[1:1], 
+	         RQ6_2 ;;zz_208' ) ;
+	.call CMOS3_1870_zz_186 CMOS3_1870 (in1[3:3], RQ8_2, T17[3:3], 
+	         RQ8_3 ;;zz_186' ) ;
+	.call CMOS3_1870_zz_204 CMOS3_1870 (in1[1:1], RQ8_2, T17[1:1], 
+	         RQ8_3 ;;zz_204' ) ;
+	.call CMOS3_1870_zz_201 CMOS3_1870 (M1[1:1], RQ6_7, in1[1:1], 
+	         RQ12_2 ;;zz_201' ) ;
+	.call CMOS3_1870_zz_175 CMOS3_1870 (in5[5:5], EN1_3', in1[5:5], 
+	         RQ3_2 ;;zz_175' ) ;
+	.call CMOS3_1870_zz_172 CMOS3_1870 (in3[5:5], RQ5_2, in4[5:5], 
+	         RQ6_2 ;;zz_172' ) ;
+	.call CMOS3_1870_zz_168 CMOS3_1870 (in1[5:5], RQ8_2, T17[5:5], 
+	         RQ8_3 ;;zz_168' ) ;
+	.call CMOS3_1870_zz_165 CMOS3_1870 (M1[5:5], RQ6_7, in1[5:5], 
+	         RQ12_2 ;;zz_165' ) ;
+	.call CMOS3_1870_zz_156 CMOS3_1870 (in5[7:7], EN1_3', in1[7:7], 
+	         RQ3_2 ;;zz_156' ) ;
+	.call CMOS3_1870_zz_153 CMOS3_1870 (in3[7:7], RQ5_2, in4[7:7], 
+	         RQ6_2 ;;zz_153' ) ;
+	.call CMOS3_1870_zz_149 CMOS3_1870 (in1[7:7], RQ8_2, T17[7:7], 
+	         RQ8_3 ;;zz_149' ) ;
+	.call CMOS3_1870_zz_146 CMOS3_1870 (M1[7:7], RQ6_7, in1[7:7], 
+	         RQ12_2 ;;zz_146' ) ;
+	.call CMOS3_1680_zz_343 CMOS3_1680 (zz_348', zz_347', zz_346', 
+	         RQ12_2' ;;zz_343' ) ;
+	.call CMOS3_1680_zz_181 CMOS3_1680 (zz_186', zz_185', RQ11_2', 
+	         zz_184' ;;zz_181' ) ;
+	.call CMOS3_1770_auto_subtract_8[0].ib1[4:4] CMOS3_1770 (zz_339, 
+	         zz_336, zz_330 ;;auto_subtract_8[0].ib1[4:4] ) ;
+	.call CMOS3_1770_auto_subtract_8[0].ib1[6:6] CMOS3_1770 (zz_328, 
+	         zz_325, zz_319 ;;auto_subtract_8[0].ib1[6:6] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[1:1] CMOS3_1770 (zz_309, zz_306, 
+	         zz_300 ;;auto_add_8[0].ib0[1:1] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[5:5] CMOS3_1770 (zz_282, zz_279, 
+	         zz_273 ;;auto_add_8[0].ib0[5:5] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[7:7] CMOS3_1770 (zz_271, zz_268, 
+	         zz_262 ;;auto_add_8[0].ib0[7:7] ) ;
+	.call CMOS3_1770_auto_subtract_8[0].ib1[1:1] CMOS3_1770 (zz_144, 
+	         zz_141, zz_135 ;;auto_subtract_8[0].ib1[1:1] ) ;
+	.call CMOS3_1770_auto_subtract_8[0].ib1[3:3] CMOS3_1770 (zz_133, 
+	         zz_130, zz_124 ;;auto_subtract_8[0].ib1[3:3] ) ;
+	.call CMOS3_1770_auto_subtract_8[0].ib1[5:5] CMOS3_1770 (zz_121, 
+	         zz_118, zz_112 ;;auto_subtract_8[0].ib1[5:5] ) ;
+	.call CMOS3_1770_auto_subtract_8[0].ib1[7:7] CMOS3_1770 (zz_106, 
+	         zz_103, zz_97 ;;auto_subtract_8[0].ib1[7:7] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[0:0] CMOS3_1770 (zz_86, zz_83, 
+	         zz_77 ;;auto_add_8[0].ib0[0:0] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[2:2] CMOS3_1770 (zz_76, zz_73, 
+	         zz_67 ;;auto_add_8[0].ib0[2:2] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[4:4] CMOS3_1770 (zz_64, zz_61, 
+	         zz_55 ;;auto_add_8[0].ib0[4:4] ) ;
+	.call CMOS3_1770_auto_add_8[0].ib0[6:6] CMOS3_1770 (zz_54, zz_51, 
+	         zz_45 ;;auto_add_8[0].ib0[6:6] ) ;
+	.call CMOS3_1770_EN7_2 CMOS3_1770 (RQ6_5', LC6_5, Br6_5[1]' ;;
+	         EN7_2' ) ;
+	.call CMOS3_1810_zz_77 CMOS3_1810 (in1[0:0], RQ7_2, M2[0:0], RQ2_5, 
+	         in2[0:0], RQ10_2 ;;zz_77 ) ;
+	.call CMOS3_1810_zz_67 CMOS3_1810 (in1[2:2], RQ7_2, M2[2:2], RQ2_5, 
+	         in2[2:2], RQ10_2 ;;zz_67 ) ;
+	.call CMOS3_1810_zz_55 CMOS3_1810 (in1[4:4], RQ7_2, M2[4:4], RQ2_5, 
+	         in2[4:4], RQ10_2 ;;zz_55 ) ;
+	.call CMOS3_1810_zz_45 CMOS3_1810 (in1[6:6], RQ7_2, M2[6:6], RQ2_5, 
+	         in2[6:6], RQ10_2 ;;zz_45 ) ;
+	.call CMOS3_1810_zz_300 CMOS3_1810 (in1[1:1], RQ7_2, M2[1:1], 
+	         RQ2_5, in2[1:1], RQ10_2 ;;zz_300 ) ;
+	.call CMOS3_1810_zz_273 CMOS3_1810 (in1[5:5], RQ7_2, M2[5:5], 
+	         RQ2_5, in2[5:5], RQ10_2 ;;zz_273 ) ;
+	.call CMOS3_1810_zz_262 CMOS3_1810 (in1[7:7], RQ7_2, M2[7:7], 
+	         RQ2_5, in2[7:7], RQ10_2 ;;zz_262 ) ;
+	.call CMOS3_1130_zz_283 CMOS3_1130 (zz_286, zz_285, RQ13_2 ;;
+	         zz_283' ) ;
+	.call CMOS3_1620_zz_316 CMOS3_1620 (zz_318, zz_317' ;;zz_316 ) ;
+	.call CMOS3_1140_zz_362 CMOS3_1140 (zz_367, zz_366, RQ6_2, zz_364 ;;
+	         zz_362' ) ;
+	.call CMOS3_1140_zz_351 CMOS3_1140 (zz_355, RQ3_2, zz_353, RQ6_2 ;;
+	         zz_351' ) ;
+	.call CMOS3_1740_auto_add_8[0].ib1[0:0] CMOS3_1740 (zz_43, RQ6_3, 
+	         zz_42, zz_36 ;;auto_add_8[0].ib1[0:0] ) ;
+	.call CMOS3_1740_auto_add_8[0].ib1[2:2] CMOS3_1740 (zz_35, RQ4_2, 
+	         RQ6_3, zz_27 ;;auto_add_8[0].ib1[2:2] ) ;
+	.call CMOS3_1310_DN_Latch1_2 CMOS3_1310 (EN1_3 ;;DN_Latch1_2 ) ;
+	.call CMOS3_1310_TcL1_1_i[1] CMOS3_1310 (DN ;;TcL1_1_i[1] ) ;
+	.call CMOS3_1310_RQ9_3 CMOS3_1310 (RQ9_3 ;;RQ9_3' ) ;
+	.call CMOS3_1310_LC9_3 CMOS3_1310 (LC9_3 ;;LC9_3' ) ;
+	.call CMOS3_1310_EN3_2 CMOS3_1310 (EN3_2' ;;EN3_2 ) ;
+	.call CMOS3_1310_EN11_2 CMOS3_1310 (EN11_2 ;;EN11_2' ) ;
+	.call CMOS3_1310_EN1_3 CMOS3_1310 (EN1_3 ;;EN1_3' ) ;
+	.call CMOS3_1310_RQ6_5 CMOS3_1310 (RQ6_5' ;;RQ6_5 ) ;
+	.call CMOS3_1310_RQ12_2 CMOS3_1310 (RQ12_2 ;;RQ12_2' ) ;
+	.call CMOS3_1310_RQ11_2 CMOS3_1310 (RQ11_2' ;;RQ11_2 ) ;
+	.call CMOS3_1310_RQ3_4 CMOS3_1310 (RQ3_4 ;;RQ3_4' ) ;
+	.call CMOS3_1310_RQ10_2 CMOS3_1310 (RQ10_2 ;;RQ10_2' ) ;
+	.call CMOS3_1310_LC3_4 CMOS3_1310 (LC3_4 ;;LC3_4' ) ;
+	.call CMOS3_1310_RQ1_7 CMOS3_1310 (RQ1_7' ;;RQ1_7 ) ;
+	.call CMOS3_1310_RQ2_3 CMOS3_1310 (RQ2_3 ;;RQ2_3' ) ;
+	.call CMOS3_1310_RQ1_5 CMOS3_1310 (RQ1_5 ;;RQ1_5' ) ;
+	.call CMOS3_1310_LC2_3 CMOS3_1310 (LC2_3 ;;LC2_3' ) ;
+	.call CMOS3_1310_LC1_7 CMOS3_1310 (LC1_7 ;;LC1_7' ) ;
+	.call CMOS3_1310_LC1_5 CMOS3_1310 (LC1_5 ;;LC1_5' ) ;
+	.call CMOS3_1310_EN7_2 CMOS3_1310 (EN7_2' ;;EN7_2 ) ;
+	.call CMOS3_1760_RQ11_2 CMOS3_1760 (EN11_2', RQ11_3 ;;RQ11_2' ) ;
+	.call CMOS3_1760_T15[0:0] CMOS3_1760 (zz_199, zz_198 ;;T15[0:0] ) ;
+
+.endmodel parker1986 ;
+
+
+.model parker1986_1 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  in5[0:0] in5[1:1] in5[2:2] in5[3:3] in5[4:4] in5[5:5] in5[6:6] 
+	         in5[7:7] ;
+	.outputs T3[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1140_zz_3 CMOS3_1140 (in5[0:0], in5[1:1], in5[2:2], 
+	         in5[3:3] ;;zz_3' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 (in5[4:4], in5[5:5], in5[6:6], 
+	         in5[7:7] ;;zz_0' ) ;
+	.call CMOS3_1220_T3[0:0] CMOS3_1220 (zz_3', zz_0' ;;T3[0:0] ) ;
+
+.endmodel parker1986_1 ;
+
+
+.model parker1986_2 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T2[0:0] T2[1:1] T2[2:2] T2[3:3] T2[4:4] T2[5:5] T2[6:6] 
+	         T2[7:7] ;
+	.outputs T5[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_T5[0:0] CMOS3_1220 (zz_3', zz_0' ;;T5[0:0] ) ;
+	.call CMOS3_1140_zz_3 CMOS3_1140 (T2[0:0], T2[1:1], T2[2:2], 
+	         T2[3:3] ;;zz_3' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 (T2[4:4], T2[5:5], T2[6:6], 
+	         T2[7:7] ;;zz_0' ) ;
+
+.endmodel parker1986_2 ;
+
+
+.model parker1986_3 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T7[0:0] T7[1:1] T7[2:2] T7[3:3] T7[4:4] T7[5:5] T7[6:6] 
+	         T7[7:7] ;
+	.outputs T8[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1140_zz_3 CMOS3_1140 (T7[0:0], T7[1:1], T7[2:2], 
+	         T7[3:3] ;;zz_3' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 (T7[4:4], T7[5:5], T7[6:6], 
+	         T7[7:7] ;;zz_0' ) ;
+	.call CMOS3_1220_T8[0:0] CMOS3_1220 (zz_3', zz_0' ;;T8[0:0] ) ;
+
+.endmodel parker1986_3 ;
+
+
+.model parker1986_4 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T13[0:0] T13[1:1] T13[2:2] T13[3:3] T13[4:4] T13[5:5] T13[6:6] 
+	         T13[7:7] ;
+	.outputs T14[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_T14[0:0] CMOS3_1220 (zz_3', zz_0' ;;T14[0:0] ) ;
+	.call CMOS3_1140_zz_3 CMOS3_1140 (T13[0:0], T13[1:1], T13[2:2], 
+	         T13[3:3] ;;zz_3' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 (T13[4:4], T13[5:5], T13[6:6], 
+	         T13[7:7] ;;zz_0' ) ;
+
+.endmodel parker1986_4 ;
+
+
+.model parker1986_5 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T15[0:0] T16[7:7] T18[7:7] T16[6:6] T18[6:6] T16[5:5] T18[5:5] 
+	         T16[4:4] T18[4:4] T16[3:3] T18[3:3] T16[2:2] T18[2:2] T16[1:1] 
+	         T18[1:1] T16[0:0] T18[0:0] ;
+	.outputs M1[0:0] M1[1:1] M1[2:2] M1[3:3] M1[4:4] M1[5:5] M1[6:6] 
+	         M1[7:7] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1350_M1[6:6] CMOS3_1350 (T16[6:6], T18[6:6], T15[0:0] ;;
+	         M1[6:6] ) ;
+	.call CMOS3_1350_M1[4:4] CMOS3_1350 (T16[4:4], T18[4:4], T15[0:0] ;;
+	         M1[4:4] ) ;
+	.call CMOS3_1350_M1[2:2] CMOS3_1350 (T16[2:2], T18[2:2], T15[0:0] ;;
+	         M1[2:2] ) ;
+	.call CMOS3_1350_M1[0:0] CMOS3_1350 (T16[0:0], T18[0:0], T15[0:0] ;;
+	         M1[0:0] ) ;
+	.call CMOS3_1350_M1[7:7] CMOS3_1350 (T16[7:7], T18[7:7], T15[0:0] ;;
+	         M1[7:7] ) ;
+	.call CMOS3_1350_M1[5:5] CMOS3_1350 (T16[5:5], T18[5:5], T15[0:0] ;;
+	         M1[5:5] ) ;
+	.call CMOS3_1350_M1[3:3] CMOS3_1350 (T16[3:3], T18[3:3], T15[0:0] ;;
+	         M1[3:3] ) ;
+	.call CMOS3_1350_M1[1:1] CMOS3_1350 (T16[1:1], T18[1:1], T15[0:0] ;;
+	         M1[1:1] ) ;
+
+.endmodel parker1986_5 ;
+
+
+.model parker1986_6 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T6[0:0] T19[7:7] T19[6:6] T19[5:5] T19[4:4] T19[3:3] T19[2:2] 
+	         T19[1:1] T19[0:0] T9[0:0] T10[7:7] T11[7:7] T10[6:6] T11[6:6] 
+	         T10[5:5] T11[5:5] T10[4:4] T11[4:4] T10[3:3] T11[3:3] T10[2:2] 
+	         T11[2:2] T10[1:1] T11[1:1] T10[0:0] T11[0:0] ;
+	.outputs M2[0:0] M2[1:1] M2[2:2] M2[3:3] M2[4:4] M2[5:5] M2[6:6] 
+	         M2[7:7] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1350_X21[0:0] CMOS3_1350 (T10[3:3], T11[3:3], T9[0:0] ;;
+	         X21[0:0] ) ;
+	.call CMOS3_1350_X19[0:0] CMOS3_1350 (T10[5:5], T11[5:5], T9[0:0] ;;
+	         X19[0:0] ) ;
+	.call CMOS3_1350_M2[6:6] CMOS3_1350 (X18[0:0], T19[6:6], T6[0:0] ;;
+	         M2[6:6] ) ;
+	.call CMOS3_1350_M2[4:4] CMOS3_1350 (X20[0:0], T19[4:4], T6[0:0] ;;
+	         M2[4:4] ) ;
+	.call CMOS3_1350_X20[0:0] CMOS3_1350 (T10[4:4], T11[4:4], T9[0:0] ;;
+	         X20[0:0] ) ;
+	.call CMOS3_1350_X18[0:0] CMOS3_1350 (T10[6:6], T11[6:6], T9[0:0] ;;
+	         X18[0:0] ) ;
+	.call CMOS3_1350_M2[2:2] CMOS3_1350 (X22[0:0], T19[2:2], T6[0:0] ;;
+	         M2[2:2] ) ;
+	.call CMOS3_1350_M2[0:0] CMOS3_1350 (X24[0:0], T19[0:0], T6[0:0] ;;
+	         M2[0:0] ) ;
+	.call CMOS3_1350_X17[0:0] CMOS3_1350 (T10[7:7], T11[7:7], T9[0:0] ;;
+	         X17[0:0] ) ;
+	.call CMOS3_1350_M2[7:7] CMOS3_1350 (X17[0:0], T19[7:7], T6[0:0] ;;
+	         M2[7:7] ) ;
+	.call CMOS3_1350_M2[5:5] CMOS3_1350 (X19[0:0], T19[5:5], T6[0:0] ;;
+	         M2[5:5] ) ;
+	.call CMOS3_1350_M2[3:3] CMOS3_1350 (X21[0:0], T19[3:3], T6[0:0] ;;
+	         M2[3:3] ) ;
+	.call CMOS3_1350_M2[1:1] CMOS3_1350 (X23[0:0], T19[1:1], T6[0:0] ;;
+	         M2[1:1] ) ;
+	.call CMOS3_1350_X24[0:0] CMOS3_1350 (T10[0:0], T11[0:0], T9[0:0] ;;
+	         X24[0:0] ) ;
+	.call CMOS3_1350_X23[0:0] CMOS3_1350 (T10[1:1], T11[1:1], T9[0:0] ;;
+	         X23[0:0] ) ;
+	.call CMOS3_1350_X22[0:0] CMOS3_1350 (T10[2:2], T11[2:2], T9[0:0] ;;
+	         X22[0:0] ) ;
+
+.endmodel parker1986_6 ;
+
+
+.model parker1986_7 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T1[0:0] T1[1:1] T1[2:2] T1[3:3] T1[4:4] T1[5:5] T1[6:6] 
+	         T1[7:7] ;
+	.outputs T21[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1140_zz_3 CMOS3_1140 (T1[0:0], T1[1:1], T1[2:2], 
+	         T1[3:3] ;;zz_3' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 (T1[4:4], T1[5:5], T1[6:6], 
+	         T1[7:7] ;;zz_0' ) ;
+	.call CMOS3_1220_T21[0:0] CMOS3_1220 (zz_3', zz_0' ;;T21[0:0] ) ;
+
+.endmodel parker1986_7 ;
+
+
+.model parker1986_8 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T4[0:0] T20[7:7] T20[6:6] T20[5:5] T20[4:4] T20[3:3] T20[2:2] 
+	         T20[1:1] T20[0:0] T22[0:0] T23[7:7] T24[7:7] T23[6:6] T24[6:6] 
+	         T23[5:5] T24[5:5] T23[4:4] T24[4:4] T23[3:3] T24[3:3] T23[2:2] 
+	         T24[2:2] T23[1:1] T24[1:1] T23[0:0] T24[0:0] ;
+	.outputs T25[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_T25[0:0] CMOS3_1220 (zz_3', zz_0' ;;T25[0:0] ) ;
+	.call CMOS3_1350_M3[6:6] CMOS3_1350 (T20[6:6], X34[0:0], T4[0:0] ;;
+	         M3[6:6] ) ;
+	.call CMOS3_1350_M3[4:4] CMOS3_1350 (T20[4:4], X36[0:0], T4[0:0] ;;
+	         M3[4:4] ) ;
+	.call CMOS3_1350_X39[0:0] CMOS3_1350 (T23[1:1], T24[1:1], T22[0:0] ;;
+	         X39[0:0] ) ;
+	.call CMOS3_1350_M3[2:2] CMOS3_1350 (T20[2:2], X38[0:0], T4[0:0] ;;
+	         M3[2:2] ) ;
+	.call CMOS3_1350_M3[0:0] CMOS3_1350 (T20[0:0], X40[0:0], T4[0:0] ;;
+	         M3[0:0] ) ;
+	.call CMOS3_1350_X40[0:0] CMOS3_1350 (T23[0:0], T24[0:0], T22[0:0] ;;
+	         X40[0:0] ) ;
+	.call CMOS3_1350_X38[0:0] CMOS3_1350 (T23[2:2], T24[2:2], T22[0:0] ;;
+	         X38[0:0] ) ;
+	.call CMOS3_1350_X37[0:0] CMOS3_1350 (T23[3:3], T24[3:3], T22[0:0] ;;
+	         X37[0:0] ) ;
+	.call CMOS3_1350_X36[0:0] CMOS3_1350 (T23[4:4], T24[4:4], T22[0:0] ;;
+	         X36[0:0] ) ;
+	.call CMOS3_1350_X35[0:0] CMOS3_1350 (T23[5:5], T24[5:5], T22[0:0] ;;
+	         X35[0:0] ) ;
+	.call CMOS3_1350_M3[7:7] CMOS3_1350 (T20[7:7], X33[0:0], T4[0:0] ;;
+	         M3[7:7] ) ;
+	.call CMOS3_1350_M3[5:5] CMOS3_1350 (T20[5:5], X35[0:0], T4[0:0] ;;
+	         M3[5:5] ) ;
+	.call CMOS3_1350_X34[0:0] CMOS3_1350 (T23[6:6], T24[6:6], T22[0:0] ;;
+	         X34[0:0] ) ;
+	.call CMOS3_1350_M3[3:3] CMOS3_1350 (T20[3:3], X37[0:0], T4[0:0] ;;
+	         M3[3:3] ) ;
+	.call CMOS3_1350_M3[1:1] CMOS3_1350 (T20[1:1], X39[0:0], T4[0:0] ;;
+	         M3[1:1] ) ;
+	.call CMOS3_1350_X33[0:0] CMOS3_1350 (T23[7:7], T24[7:7], T22[0:0] ;;
+	         X33[0:0] ) ;
+	.call CMOS3_1140_zz_3 CMOS3_1140 (M3[0:0], M3[1:1], M3[2:2], 
+	         M3[3:3] ;;zz_3' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 (M3[4:4], M3[5:5], M3[6:6], 
+	         M3[7:7] ;;zz_0' ) ;
+
+.endmodel parker1986_8 ;
+
+
+.model parker1986_9 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  T26[0:0] T27[7:7] T28[7:7] T27[6:6] T28[6:6] T27[5:5] T28[5:5] 
+	         T27[4:4] T28[4:4] T27[3:3] T28[3:3] T27[2:2] T28[2:2] T27[1:1] 
+	         T28[1:1] T27[0:0] T28[0:0] ;
+	.outputs X41[0:0] X42[0:0] X43[0:0] X44[0:0] X45[0:0] X46[0:0] X47[0:0] 
+	         X48[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1350_X41[0:0] CMOS3_1350 (T27[7:7], T28[7:7], T26[0:0] ;;
+	         X41[0:0] ) ;
+	.call CMOS3_1350_X48[0:0] CMOS3_1350 (T27[0:0], T28[0:0], T26[0:0] ;;
+	         X48[0:0] ) ;
+	.call CMOS3_1350_X47[0:0] CMOS3_1350 (T27[1:1], T28[1:1], T26[0:0] ;;
+	         X47[0:0] ) ;
+	.call CMOS3_1350_X46[0:0] CMOS3_1350 (T27[2:2], T28[2:2], T26[0:0] ;;
+	         X46[0:0] ) ;
+	.call CMOS3_1350_X45[0:0] CMOS3_1350 (T27[3:3], T28[3:3], T26[0:0] ;;
+	         X45[0:0] ) ;
+	.call CMOS3_1350_X44[0:0] CMOS3_1350 (T27[4:4], T28[4:4], T26[0:0] ;;
+	         X44[0:0] ) ;
+	.call CMOS3_1350_X43[0:0] CMOS3_1350 (T27[5:5], T28[5:5], T26[0:0] ;;
+	         X43[0:0] ) ;
+	.call CMOS3_1350_X42[0:0] CMOS3_1350 (T27[6:6], T28[6:6], T26[0:0] ;;
+	         X42[0:0] ) ;
+
+.endmodel parker1986_9 ;
+
+
+.model FF_SR_EN ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1830_dout CMOS3_1830 (latchin, clk ;;dout, dout' ) ;
+	.call CMOS3_1760_latchin CMOS3_1760 (set, zz_0 ;;latchin ) ;
+	.call CMOS3_1610_zz_0 CMOS3_1610 (res, zz_1 ;;zz_0 ) ;
+	.call CMOS3_1350_zz_1 CMOS3_1350 (din, dout, den ;;zz_1 ) ;
+
+.endmodel FF_SR_EN ;
+
+
+.model add_8 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  op1[0:0] op1[1:1] op1[2:2] op1[3:3] op1[4:4] op1[5:5] op1[6:6] 
+	         op1[7:7] op2[0:0] op2[1:1] op2[2:2] op2[3:3] op2[4:4] op2[5:5] 
+	         op2[6:6] op2[7:7] ;
+	.outputs return_value[0:0] return_value[1:1] return_value[2:2] 
+	         return_value[3:3] return_value[4:4] return_value[5:5] 
+	         return_value[6:6] return_value[7:7] return_value[8:8] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call add_8_1 add_8_1 (op1[0:0], op2[0:0], op1[1:1], op2[1:1], 
+	         op1[2:2], op2[2:2], op1[3:3], op2[3:3], op1[4:4], 
+	         op2[4:4], op1[5:5], op2[5:5], op1[6:6], op2[6:6], 
+	         op1[7:7], op2[7:7] ;;return_value[0:0], return_value[1:1], 
+	         return_value[2:2], return_value[3:3], return_value[4:4], 
+	         return_value[5:5], return_value[6:6], return_value[7:7], 
+	         return_value[8:8] ) ;
+
+.endmodel add_8 ;
+
+
+.model add_8_1 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  op1[0:0] op2[0:0] op1[1:1] op2[1:1] op1[2:2] op2[2:2] op1[3:3] 
+	         op2[3:3] op1[4:4] op2[4:4] op1[5:5] op2[5:5] op1[6:6] op2[6:6] 
+	         op1[7:7] op2[7:7] ;
+	.outputs T1[0:0] T4[0:0] T10[0:0] T16[0:0] T22[0:0] T28[0:0] T34[0:0] 
+	         T40[0:0] T44[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1760_T42[0:0] CMOS3_1760 (op1[7:7], op2[7:7] ;;T42[0:0] ) ;
+	.call CMOS3_1760_T18[0:0] CMOS3_1760 (op1[3:3], op2[3:3] ;;T18[0:0] ) ;
+	.call CMOS3_1760_T36[0:0] CMOS3_1760 (op1[6:6], op2[6:6] ;;T36[0:0] ) ;
+	.call CMOS3_1760_T30[0:0] CMOS3_1760 (op1[5:5], op2[5:5] ;;T30[0:0] ) ;
+	.call CMOS3_1760_T6[0:0] CMOS3_1760 (op1[1:1], op2[1:1] ;;T6[0:0] ) ;
+	.call CMOS3_1760_T12[0:0] CMOS3_1760 (op1[2:2], op2[2:2] ;;T12[0:0] ) ;
+	.call CMOS3_1760_T24[0:0] CMOS3_1760 (op1[4:4], op2[4:4] ;;T24[0:0] ) ;
+	.call CMOS3_1970_T44[0:0] CMOS3_1970 (op1[7:7], op2[7:7], T38[0:0], 
+	         T42[0:0] ;;T44[0:0] ) ;
+	.call CMOS3_1870_T38[0:0] CMOS3_1870 (op1[6:6], op2[6:6], T32[0:0], 
+	         T36[0:0] ;;T38[0:0]' ) ;
+	.call CMOS3_1870_T20[0:0] CMOS3_1870 (op1[3:3], op2[3:3], T14[0:0], 
+	         T18[0:0] ;;T20[0:0]' ) ;
+	.call CMOS3_1870_T8[0:0] CMOS3_1870 (op1[1:1], op2[1:1], T2[0:0], 
+	         T6[0:0] ;;T8[0:0]' ) ;
+	.call CMOS3_1870_T14[0:0] CMOS3_1870 (op1[2:2], op2[2:2], T8[0:0], 
+	         T12[0:0] ;;T14[0:0]' ) ;
+	.call CMOS3_1870_T26[0:0] CMOS3_1870 (op1[4:4], op2[4:4], T20[0:0], 
+	         T24[0:0] ;;T26[0:0]' ) ;
+	.call CMOS3_1870_T32[0:0] CMOS3_1870 (op1[5:5], op2[5:5], T26[0:0], 
+	         T30[0:0] ;;T32[0:0]' ) ;
+	.call CMOS3_2350_T22[0:0] CMOS3_2350 (T21[0:0], T20[0:0]' ;;T22[0:0] ) ;
+	.call CMOS3_2350_T40[0:0] CMOS3_2350 (T39[0:0], T38[0:0]' ;;T40[0:0] ) ;
+	.call CMOS3_2350_T16[0:0] CMOS3_2350 (T15[0:0], T14[0:0]' ;;T16[0:0] ) ;
+	.call CMOS3_2350_T28[0:0] CMOS3_2350 (T27[0:0], T26[0:0]' ;;T28[0:0] ) ;
+	.call CMOS3_2350_T10[0:0] CMOS3_2350 (T9[0:0], T8[0:0]' ;;T10[0:0] ) ;
+	.call CMOS3_2350_T34[0:0] CMOS3_2350 (T33[0:0], T32[0:0]' ;;T34[0:0] ) ;
+	.call CMOS3_2350_T4[0:0] CMOS3_2350 (T3[0:0], T2[0:0]' ;;T4[0:0] ) ;
+	.call CMOS3_2310_T39[0:0] CMOS3_2310 (op1[7:7], op2[7:7] ;;T39[0:0] ) ;
+	.call CMOS3_2310_T21[0:0] CMOS3_2310 (op1[4:4], op2[4:4] ;;T21[0:0] ) ;
+	.call CMOS3_2310_T9[0:0] CMOS3_2310 (op1[2:2], op2[2:2] ;;T9[0:0] ) ;
+	.call CMOS3_2310_T3[0:0] CMOS3_2310 (op1[1:1], op2[1:1] ;;T3[0:0] ) ;
+	.call CMOS3_2310_T1[0:0] CMOS3_2310 (op1[0:0], op2[0:0] ;;T1[0:0] ) ;
+	.call CMOS3_2310_T15[0:0] CMOS3_2310 (op1[3:3], op2[3:3] ;;T15[0:0] ) ;
+	.call CMOS3_2310_T27[0:0] CMOS3_2310 (op1[5:5], op2[5:5] ;;T27[0:0] ) ;
+	.call CMOS3_2310_T33[0:0] CMOS3_2310 (op1[6:6], op2[6:6] ;;T33[0:0] ) ;
+	.call CMOS3_1220_T2[0:0] CMOS3_1220 (op1[0:0], op2[0:0] ;;T2[0:0]' ) ;
+	.call CMOS3_1310_T38[0:0] CMOS3_1310 (T38[0:0]' ;;T38[0:0] ) ;
+	.call CMOS3_1310_T20[0:0] CMOS3_1310 (T20[0:0]' ;;T20[0:0] ) ;
+	.call CMOS3_1310_T8[0:0] CMOS3_1310 (T8[0:0]' ;;T8[0:0] ) ;
+	.call CMOS3_1310_T2[0:0] CMOS3_1310 (T2[0:0]' ;;T2[0:0] ) ;
+	.call CMOS3_1310_T14[0:0] CMOS3_1310 (T14[0:0]' ;;T14[0:0] ) ;
+	.call CMOS3_1310_T26[0:0] CMOS3_1310 (T26[0:0]' ;;T26[0:0] ) ;
+	.call CMOS3_1310_T32[0:0] CMOS3_1310 (T32[0:0]' ;;T32[0:0] ) ;
+
+.endmodel add_8_1 ;
+
+
+.model subtract_8 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  op1[0:0] op1[1:1] op1[2:2] op1[3:3] op1[4:4] op1[5:5] op1[6:6] 
+	         op1[7:7] op2[0:0] op2[1:1] op2[2:2] op2[3:3] op2[4:4] op2[5:5] 
+	         op2[6:6] op2[7:7] ;
+	.outputs return_value[0:0] return_value[1:1] return_value[2:2] 
+	         return_value[3:3] return_value[4:4] return_value[5:5] 
+	         return_value[6:6] return_value[7:7] return_value[8:8] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call subtract_8_1 subtract_8_1 (op2[0:0], op2[1:1], op2[2:2], 
+	         op2[3:3], op2[4:4], op2[5:5], op2[6:6], op2[7:7] ;;
+	         T1[0:0], T1[1:1], T1[2:2], T1[3:3], T1[4:4], T1[5:5], 
+	         T1[6:6], T1[7:7] ) ;
+	.call auto_add_8[0] add_8 (op1[0:0], op1[1:1], op1[2:2], op1[3:3], 
+	         op1[4:4], op1[5:5], op1[6:6], op1[7:7], T1[0:0], T1[1:1], 
+	         T1[2:2], T1[3:3], T1[4:4], T1[5:5], T1[6:6], T1[7:7] ;;
+	         return_value[0:0], return_value[1:1], return_value[2:2], 
+	         return_value[3:3], return_value[4:4], return_value[5:5], 
+	         return_value[6:6], return_value[7:7], return_value[8:8] ) ;
+
+.endmodel subtract_8 ;
+
+
+.model subtract_8_1 ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  op2[0:0] op2[1:1] op2[2:2] op2[3:3] op2[4:4] op2[5:5] op2[6:6] 
+	         op2[7:7] ;
+	.outputs T1[0:0] T1[1:1] T1[2:2] T1[3:3] T1[4:4] T1[5:5] T1[6:6] 
+	         T1[7:7] ;
+	.net T1[0:0] op2[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_2310_T1[1:1] CMOS3_2310 (op2[0:0], op2[1:1] ;;T1[1:1] ) ;
+	.call CMOS3_2350_T1[6:6] CMOS3_2350 (c_T1[6:6], op2[6:6] ;;T1[6:6] ) ;
+	.call CMOS3_2350_T1[4:4] CMOS3_2350 (c_T1[4:4], op2[4:4] ;;T1[4:4] ) ;
+	.call CMOS3_2350_T1[2:2] CMOS3_2350 (c_T1[2:2], op2[2:2] ;;T1[2:2] ) ;
+	.call CMOS3_2350_T1[7:7] CMOS3_2350 (T1[8:8], op2[7:7] ;;T1[7:7] ) ;
+	.call CMOS3_2350_T1[5:5] CMOS3_2350 (c_T1[5:5], op2[5:5] ;;T1[5:5] ) ;
+	.call CMOS3_2350_T1[3:3] CMOS3_2350 (c_T1[3:3], op2[3:3] ;;T1[3:3] ) ;
+	.call CMOS3_1120_c_T1[2:2] CMOS3_1120 (op2[1:1], op2[0:0] ;;
+	         c_T1[2:2] ) ;
+	.call CMOS3_1610_c_T1[5:5] CMOS3_1610 (op2[4:4], c_T1[4:4] ;;
+	         c_T1[5:5] ) ;
+	.call CMOS3_1610_c_T1[3:3] CMOS3_1610 (op2[2:2], c_T1[2:2] ;;
+	         c_T1[3:3] ) ;
+	.call CMOS3_1610_T1[8:8] CMOS3_1610 (op2[6:6], c_T1[6:6] ;;T1[8:8] ) ;
+	.call CMOS3_1610_c_T1[6:6] CMOS3_1610 (op2[5:5], c_T1[5:5] ;;
+	         c_T1[6:6] ) ;
+	.call CMOS3_1610_c_T1[4:4] CMOS3_1610 (op2[3:3], c_T1[3:3] ;;
+	         c_T1[4:4] ) ;
+
+.endmodel subtract_8_1 ;
+
+
+.model FF_EN ;
+
+	.date 910109114926 ;	# January 9 1991, 11:49.26
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1830_dout CMOS3_1830 (latchin, clk ;;dout, dout' ) ;
+	.call CMOS3_1970_latchin CMOS3_1970 (dout, zz_3, din, zz_1 ;;
+	         latchin ) ;
+	.call CMOS3_1610_zz_1 CMOS3_1610 (res, den ;;zz_1 ) ;
+	.call CMOS3_1120_zz_3 CMOS3_1120 (den, res ;;zz_3 ) ;
+
+.endmodel FF_EN ;

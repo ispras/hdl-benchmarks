@@ -1,0 +1,213 @@
+.model lal
+.inputs a b c d e f g h j k l m n o p q r s t u v w x y z a0
+.outputs b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 s0 t0
+.names r j b0
+01 1
+.names a0 y r3 s3 c0
+---0 1
+000- 1
+.names w3 e0
+0 1
+.names j x3 f0
+00 1
+.names o j g0
+00 1
+.names p j h0
+10 1
+.names k4 i0
+0 1
+.names w u3 t3 v3 j0
+---0 1
+100- 1
+.names q n1 k0
+00 1
+.names s q1 l0
+00 1
+.names s t q1 m0
+010 1
+100 1
+.names s t u x1 n0
+--10 1
+11-0 1
+.names v a2 h b2 o0
+--1- 1
+---0 1
+10-- 1
+.names w f2 h g2 p0
+--1- 1
+---0 1
+10-- 1
+.names x k2 h l2 q0
+--1- 1
+---0 1
+10-- 1
+.names y r2 h s2 r0
+--1- 1
+---0 1
+10-- 1
+.names z z2 h a3 s0
+--1- 1
+---0 1
+10-- 1
+.names a0 i3 h j3 t0
+--1- 1
+---0 1
+10-- 1
+.names h f e n1
+1-- 1
+-0- 1
+--0 1
+.names e f h q q1
+--1- 1
+---1 1
+11-- 1
+.names u t s y1 x1
+---0 1
+111- 1
+.names e f h q y1
+0-00 1
+-000 1
+.names u t s a2
+111 1
+.names f e q c2 b2
+0-00 1
+-000 1
+.names v d2 c2
+00 1
+.names u t s d2
+0-- 1
+-0- 1
+--0 1
+.names t s i2 f2
+110 1
+.names f e q h2 g2
+0-00 1
+-000 1
+.names w v d2 h2
+000 1
+.names v u i2
+1- 1
+-0 1
+.names t s p2 k2
+110 1
+.names f e q m2 l2
+0-00 1
+-000 1
+.names x w n2 m2
+000 1
+.names t s o2 n2
+0-- 1
+-0- 1
+--0 1
+.names v u o2
+01 1
+.names w v u p2
+1-- 1
+-1- 1
+--0 1
+.names s w2 x2 r2
+100 1
+.names f e q t2 s2
+0-00 1
+-000 1
+.names y x u2 t2
+000 1
+.names t s v2 u2
+0-- 1
+-0- 1
+--0 1
+.names w v u v2
+001 1
+.names u t w2
+0- 1
+-0 1
+.names x w v x2
+1-- 1
+-1- 1
+--1 1
+.names s f3 g3 z2
+100 1
+.names f e q b3 a3
+0-00 1
+-000 1
+.names z y c3 b3
+000 1
+.names s d3 e3 c3
+0-- 1
+-0- 1
+--0 1
+.names u t d3
+11 1
+.names x w v e3
+000 1
+.names v u t f3
+1-- 1
+-0- 1
+--0 1
+.names y x w g3
+1-- 1
+-1- 1
+--1 1
+.names o3 p2 p3 i3
+000 1
+.names f e q k3 j3
+0-00 1
+-000 1
+.names a0 z l3 k3
+000 1
+.names s m3 n3 l3
+0-- 1
+-0- 1
+--0 1
+.names v u t m3
+011 1
+.names y x w n3
+000 1
+.names t s o3
+0- 1
+-0 1
+.names z y x p3
+1-- 1
+-1- 1
+--1 1
+.names x w t3 r3
+110 1
+.names z a0 e f h s3
+1-0-0 1
+-10-0 1
+1--00 1
+-1-00 1
+.names s t u v t3
+1--0 1
+-1-0 1
+--10 1
+.names z x u3
+0- 1
+-0 1
+.names y z a0 v3
+0-0 1
+-00 1
+.names w u3 t3 v3 w3
+---0 1
+100- 1
+.names k a l b a4 x3
+1-1-0 1
+-01-0 1
+1--00 1
+-0-00 1
+.names m c n d d4 a4
+----0 1
+01--- 1
+--01- 1
+.names k a f4 d4
+0-0 1
+-10 1
+.names b l c m d n f4
+01---- 1
+--01-- 1
+----01 1
+.names j g k4
+01 1
+.names r d0
+1 1
+.end

@@ -1,0 +1,32 @@
+.model source.pla
+.inputs SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+SRC2equal16 SRC2equalDST2 opc2load DSTvalid SRC1equalDST2
+.outputs pbusStobusA pSHAtobusA pSHBtobusA preadPSWtoA preadCWPtoA \
+LoadforwtoINB1 LoadforwtoINA1
+.names SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+pbusStobusA
+1110110 1
+0110110 1
+.names SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+pSHAtobusA
+1100110 1
+.names SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+pSHBtobusA
+0100110 1
+.names SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+preadPSWtoA
+1110110 1
+.names SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+preadCWPtoA
+0110110 1
+.names CPIPE1s<7> pbusDtoINA SRC2equal16 SRC2equalDST2 opc2load DSTvalid \
+LoadforwtoINB1
+100111 1
+.names SRC1s<0> SRC1s<1> SRC1s<2> SRC1s<3> SRC1s<4> CPIPE1s<7> pbusDtoINA \
+opc2load DSTvalid SRC1equalDST2 LoadforwtoINA1
+1----10111 1
+-1---10111 1
+--1--10111 1
+---1-10111 1
+----010111 1
+.end

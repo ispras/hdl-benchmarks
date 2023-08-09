@@ -1,0 +1,23 @@
+
+.model C17.iscas ;
+
+	.date 910108213504 ;	# January 8 1991, 21:35.04
+
+	.inputs  1GAT[0] 2GAT[1] 3GAT[2] 6GAT[3] 7GAT[4] ;
+	.outputs 22GAT[10] 23GAT[9] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_22GAT[10] CMOS3_1220 (10GAT[6], 16GAT[8] ;;
+	         22GAT[10] ) ;
+	.call CMOS3_1220_16GAT[8] CMOS3_1220 (2GAT[1], 11GAT[5] ;;16GAT[8] ) ;
+	.call CMOS3_1220_10GAT[6] CMOS3_1220 (1GAT[0], 3GAT[2] ;;10GAT[6] ) ;
+	.call CMOS3_1220_23GAT[9] CMOS3_1220 (16GAT[8], 19GAT[7] ;;23GAT[9] ) ;
+	.call CMOS3_1220_19GAT[7] CMOS3_1220 (11GAT[5], 7GAT[4] ;;19GAT[7] ) ;
+	.call CMOS3_1220_11GAT[5] CMOS3_1220 (3GAT[2], 6GAT[3] ;;11GAT[5] ) ;
+
+.endmodel C17.iscas ;
+

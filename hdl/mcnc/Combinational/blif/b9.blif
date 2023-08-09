@@ -1,0 +1,316 @@
+.model b9
+.inputs a b c d e f g h i j k l m n o p q r s t u v w x y z a0 b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0
+.outputs p0 q0 r0 s0 t0 u0 v0 w0 x0 y0 z0 a1 b1 c1 d1 e1 f1 g1 h1 i1 j1
+.names o2 p q p0
+--0 1
+00- 1
+.names z3 q0
+0 1
+.names l3 n0 o0 r0
+0-- 1
+-0- 1
+--0 1
+.names f3 s0
+0 1
+.names g3 t0
+0 1
+.names v0 u0
+0 1
+.names j4 v0
+0 1
+.names u2 v2 m0 w0
+00- 1
+0-0 1
+.names a5 x0
+0 1
+.names x2 y0
+0 1
+.names i5 j5 k5 z0
+0-- 1
+-0- 1
+--0 1
+.names g2 n0 h2 a1
+00- 1
+0-0 1
+.names u5 t4 n0 b1
+00- 1
+0-0 1
+.names w2 c1
+0 1
+.names c1 d1
+0 1
+.names i3 e1
+0 1
+.names d4 f1
+0 1
+.names e4 g1
+0 1
+.names a1 h1
+0 1
+.names h1 i1
+0 1
+.names s2 n0 t2 j1
+00- 1
+0-0 1
+.names o f2
+0 1
+.names k2 l2 m2 g2
+0-- 1
+-0- 1
+--0 1
+.names i2 j2 h2
+00 1
+.names i d0 i2
+0- 1
+-0 1
+.names o0 j2
+0 1
+.names j e0 k2
+00 1
+.names j0 r3 b0 c4 l2
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names h3 n3 m2
+0- 1
+-0 1
+.names b1 n2
+0 1
+.names n2 o2
+0 1
+.names j0 p2
+0 1
+.names r3 p2 q2
+00 1
+.names l0 q2 r2
+00 1
+.names t3 s3 u3 v3 s2
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names y2 y4 z4 t2
+000 1
+.names m4 f2 d u2
+--0 1
+00- 1
+.names z f2 z2 a v2
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names s5 n0 e5 w2
+00- 1
+0-0 1
+.names l b0 f5 x2
+0-- 1
+-0- 1
+--0 1
+.names o0 y2
+0 1
+.names z z2
+0 1
+.names o0 a3
+0 1
+.names x b3
+0 1
+.names y c3
+0 1
+.names v d3
+0 1
+.names o0 e3
+0 1
+.names k3 d3 f3
+00 1
+.names v k3 g3
+00 1
+.names b0 h3
+0 1
+.names m b0 f5 i3
+0-- 1
+-0- 1
+--0 1
+.names r3 a4 j3
+00 1
+.names h3 l0 b0 j3 k3
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names m3 l3
+0 1
+.names c4 v5 q3 m3
+--0 1
+00- 1
+.names a4 y4 c0 n3
+000 1
+.names i d0 o3
+0- 1
+-0 1
+.names c p3
+0 1
+.names o3 p3 q3
+0- 1
+-0 1
+.names c0 r3
+0 1
+.names r3 i j0 s3
+0-- 1
+-0- 1
+--0 1
+.names j0 b0 t3
+0- 1
+-0 1
+.names e0 u3
+0 1
+.names j v3
+0 1
+.names e b0 k0 w3
+0-- 1
+-0- 1
+--0 1
+.names j0 b0 e r3 x3
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names e e0 g0 y3
+0-- 1
+-00 1
+.names w3 x3 y3 z3
+0-- 1
+-0- 1
+--0 1
+.names j0 a4
+0 1
+.names g0 b4
+0 1
+.names e c4
+0 1
+.names b3 w b d4
+0-- 1
+-0- 1
+--0 1
+.names c3 x w b e4
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names k0 r3 j0 f4
+00- 1
+0-0 1
+.names f4 g4
+0 1
+.names h c4 b0 g4 h4
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names f4 a3 i4
+00 1
+.names r3 h3 k4 j4
+--0 1
+00- 1
+.names l0 k4
+0 1
+.names p h5 l4
+00 1
+.names l4 f0 h0 m4
+000 1
+.names g0 n4
+0 1
+.names k0 o4
+0 1
+.names t p4
+0 1
+.names s q4
+0 1
+.names p4 u q4 r4
+0-- 1
+-0- 1
+--0 1
+.names x4 b0 v4 s4
+00- 1
+0-0 1
+.names s4 e3 t4
+00 1
+.names k0 j0 r3 u4
+00- 1
+0-0 1
+.names u4 e v4
+00 1
+.names k w4
+0 1
+.names w4 e x4
+00 1
+.names i y4
+0 1
+.names d0 z4
+0 1
+.names o0 n0 a5
+0- 1
+-0 1
+.names u3 n4 b5
+0- 1
+-0 1
+.names c4 o0 c5
+0- 1
+-0 1
+.names b5 b0 t5 d5
+00- 1
+0-0 1
+.names n c5 d5 e5
+000 1
+.names w5 f5
+0 1
+.names j0 r3 g5
+0- 1
+-0 1
+.names r h5
+0 1
+.names b0 g l0 i5
+0-- 1
+-0- 1
+--0 1
+.names n0 c4 m5 f j5
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names n5 k5
+0 1
+.names e0 l5
+0 1
+.names o5 p5 m5
+0- 1
+-0 1
+.names h4 o0 n0 n5
+00- 1
+0-0 1
+.names i4 b0 o5
+0- 1
+-0 1
+.names q5 o0 p5
+0- 1
+-0 1
+.names l5 b4 q5
+0- 1
+-0 1
+.names l0 c0 j0 r5
+00- 1
+0-0 1
+.names h3 r5 r4 s5
+000 1
+.names o4 a4 c0 t5
+--0 1
+00- 1
+.names r2 h3 u5
+00 1
+.names g5 y4 h3 v5
+00- 1
+0-0 1
+.names i0 a0 w5
+0- 1
+-0 1
+.end

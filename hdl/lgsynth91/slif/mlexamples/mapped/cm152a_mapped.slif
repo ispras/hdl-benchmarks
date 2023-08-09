@@ -1,0 +1,34 @@
+
+.model mux_cl ;
+
+	.date 910108214932 ;	# January 8 1991, 21:49.32
+
+	.inputs  a b c d e f g h i j k ;
+	.outputs l ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1740_l CMOS3_1740 (zz_23, zz_16, zz_8, zz_1 ;;l ) ;
+	.call CMOS3_1120_zz_6 CMOS3_1120 (i, j ;;zz_6 ) ;
+	.call CMOS3_1120_zz_3 CMOS3_1120 (j, k ;;zz_3 ) ;
+	.call CMOS3_1120_zz_18 CMOS3_1120 (i, j ;;zz_18 ) ;
+	.call CMOS3_1120_zz_10 CMOS3_1120 (i, k ;;zz_10 ) ;
+	.call CMOS3_1660_zz_29 CMOS3_1660 (k, j ;;zz_29 ) ;
+	.call CMOS3_1660_zz_22 CMOS3_1660 (k, i ;;zz_22 ) ;
+	.call CMOS3_1660_zz_14 CMOS3_1660 (j, i ;;zz_14 ) ;
+	.call CMOS3_1930_zz_8 CMOS3_1930 (zz_14, k', d, j, c, zz_10 ;;
+	         zz_8 ) ;
+	.call CMOS3_1930_zz_1 CMOS3_1930 (a, k', zz_6, b, i, zz_3 ;;zz_1 ) ;
+	.call CMOS3_1930_zz_23 CMOS3_1930 (zz_29, i, h, k, j, zz_25 ;;
+	         zz_23 ) ;
+	.call CMOS3_1930_zz_16 CMOS3_1930 (zz_22, j', f, k, e, zz_18 ;;
+	         zz_16 ) ;
+	.call CMOS3_1610_zz_25 CMOS3_1610 (i, g ;;zz_25 ) ;
+	.call CMOS3_1310_k CMOS3_1310 (k ;;k' ) ;
+	.call CMOS3_1310_j CMOS3_1310 (j ;;j' ) ;
+
+.endmodel mux_cl ;
+

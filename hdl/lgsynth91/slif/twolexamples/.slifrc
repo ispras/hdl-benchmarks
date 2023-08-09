@@ -1,0 +1,4 @@
+r xor5
+cd sim
+s2 >xor5.sim
+q

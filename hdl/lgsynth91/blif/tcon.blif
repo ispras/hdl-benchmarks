@@ -1,0 +1,52 @@
+.model tcon
+.inputs a b c d e f g h i k l m n o p q r
+.outputs s t u v w x y z a0 b0 c0 d0 e0 f0 g0 h0
+.names i k a a0
+01- 1
+1-1 1
+-11 1
+.names i l b b0
+01- 1
+1-1 1
+-11 1
+.names i m c c0
+01- 1
+1-1 1
+-11 1
+.names i n d d0
+01- 1
+1-1 1
+-11 1
+.names i o e e0
+01- 1
+1-1 1
+-11 1
+.names i p f f0
+01- 1
+1-1 1
+-11 1
+.names i q g g0
+01- 1
+1-1 1
+-11 1
+.names i r h h0
+01- 1
+1-1 1
+-11 1
+.names k s
+1 1
+.names l t
+1 1
+.names m u
+1 1
+.names n v
+1 1
+.names o w
+1 1
+.names p x
+1 1
+.names q y
+1 1
+.names r z
+1 1
+.end

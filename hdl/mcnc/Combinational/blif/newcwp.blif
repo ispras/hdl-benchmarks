@@ -1,0 +1,28 @@
+.model source.pla
+.inputs CWP<6> CWP<5> CWP<4> changeCWP2
+.outputs CWP+1<2> CWP+1<1> CWP+1<0> CWPm1<1> CWPm1<2>
+.names CWP<6> CWP<5> CWP<4> changeCWP2 CWP+1<2>
+011- 1
+101- 1
+110- 1
+000- 1
+-001 1
+-110 1
+.names CWP<5> CWP<4> changeCWP2 CWP+1<1>
+011 1
+101 1
+110 1
+000 1
+.names CWP<4> CWP+1<0>
+0 1
+.names CWP<6> CWP<5> CWP<4> changeCWP2 CWPm1<1>
+111- 1
+011- 1
+-001 1
+-000 1
+.names CWP<6> CWP<5> CWP<4> CWPm1<2>
+111 1
+101 1
+110 1
+000 1
+.end

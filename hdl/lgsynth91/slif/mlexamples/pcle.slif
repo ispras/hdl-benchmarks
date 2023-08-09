@@ -1,0 +1,28 @@
+
+.model pcle ;
+
+	.date 910103085357 ;	# January 3 1991, 08:53.57
+
+	.inputs  a b c d e f g h i j k l m n o p q r s ;
+	.outputs t u v w x y z a0 b0 ;
+
+	t = s v0 u0 ;
+	u = l' u0 + a i ;
+	v = b i + u0 l' m + u0 l m' ;
+	w = c i + u0 n' a1 + u0 n a1' ;
+	x = d i + u0 o' z0 + u0 o z0' ;
+	y = e i + u0 p' y0 + u0 p y0' ;
+	z = f i + u0 q' x0 + u0 q x0' ;
+	a0 = g i + u0 r' w0 + u0 r w0' ;
+	b0 = h i + u0 s' v0 + u0 s v0' ;
+	v0 = r w0 ;
+	u0 = i' j k' ;
+	a1 = l m ;
+	z0 = n a1 ;
+	y0 = o z0 ;
+	x0 = p y0 ;
+	w0 = q x0 ;
+
+
+.endmodel pcle ;
+

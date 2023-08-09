@@ -1,0 +1,32 @@
+
+.model tcon ;
+
+	.date 910108220509 ;	# January 8 1991, 22:05.09
+
+	.inputs  a b c d e f g h i k l m n o p q r ;
+	.outputs s t u v w x y z a0 b0 c0 d0 e0 f0 g0 h0 ;
+	.net s k ;
+	.net t l ;
+	.net u m ;
+	.net v n ;
+	.net w o ;
+	.net x p ;
+	.net y q ;
+	.net z r ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1350_h0 CMOS3_1350 (h, r, i ;;h0 ) ;
+	.call CMOS3_1350_g0 CMOS3_1350 (g, q, i ;;g0 ) ;
+	.call CMOS3_1350_f0 CMOS3_1350 (f, p, i ;;f0 ) ;
+	.call CMOS3_1350_e0 CMOS3_1350 (e, o, i ;;e0 ) ;
+	.call CMOS3_1350_d0 CMOS3_1350 (d, n, i ;;d0 ) ;
+	.call CMOS3_1350_c0 CMOS3_1350 (c, m, i ;;c0 ) ;
+	.call CMOS3_1350_b0 CMOS3_1350 (b, l, i ;;b0 ) ;
+	.call CMOS3_1350_a0 CMOS3_1350 (a, k, i ;;a0 ) ;
+
+.endmodel tcon ;
+

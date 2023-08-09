@@ -1,0 +1,1325 @@
+
+.model daio_receiver ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  CLK RESET xtal[0:0] xtal[1:1] xtal[2:2] xtal[3:3] 
+	         rx_control[0:0] rx_control[1:1] rx_control[2:2] rx_control[3:3] 
+	         reset[0:0] bit_in[0:0] preamble_1[0:0] preamble_2[0:0] 
+	         preamble_3[0:0] carrier_loss[0:0] biphase_violation[0:0] ;
+	.outputs DN clock_out[0:0] rx_status[0:0] rx_status[1:1] rx_status[2:2] 
+	         rx_status[3:3] parity[0:0] load_A[0:0] load_B[0:0] 
+	         load_buff[0:0] shift_reg[0:0] shift_reg[1:1] shift_reg[2:2] 
+	         shift_reg[3:3] shift_reg[4:4] shift_reg[5:5] shift_reg[6:6] 
+	         shift_reg[7:7] shift_reg[8:8] shift_reg[9:9] shift_reg[10:10] 
+	         shift_reg[11:11] shift_reg[12:12] shift_reg[13:13] 
+	         shift_reg[14:14] shift_reg[15:15] shift_reg[16:16] 
+	         shift_reg[17:17] shift_reg[18:18] shift_reg[19:19] 
+	         frame_ofs[0:0] frame_ofs[1:1] peek_A[0:0] peek_A[1:1] 
+	         peek_A[2:2] peek_A[3:3] peek_A[4:4] peek_A[5:5] peek_A[6:6] 
+	         peek_B[0:0] peek_B[1:1] peek_B[2:2] peek_B[3:3] peek_B[4:4] 
+	         peek_B[5:5] peek_B[6:6] ;
+
+	.call daio_receiver_1 daio_receiver_1 (rx_control[2:2], reset[0:0] ;;
+	         SL3_3', DS3_3' ) ;
+	.call daio_receiver_2 daio_receiver_2 (rx_control[2:2] ;;T5[0:0] ) ;
+	.call daio_receiver_3 daio_receiver_3 (rx_control[0:0], 
+	         rx_control[1:1], reset[0:0] ;;T6[0:0], T6[1:1], T8[0:0] ) ;
+	.call daio_receiver_4 daio_receiver_4 (bit_in[0:0] ;;T10[0:0], T11[0:0] ) ;
+	.call daio_receiver_5 daio_receiver_5 (shift_reg[0:0], shift_reg[1:1], 
+	         shift_reg[2:2], shift_reg[3:3], shift_reg[4:4], 
+	         shift_reg[5:5], shift_reg[6:6], shift_reg[7:7], 
+	         shift_reg[8:8], shift_reg[9:9], shift_reg[10:10], 
+	         shift_reg[11:11], shift_reg[12:12], shift_reg[13:13], 
+	         shift_reg[14:14], shift_reg[15:15], shift_reg[16:16], 
+	         shift_reg[17:17], shift_reg[18:18], T6[0:0], T6[1:1], 
+	         xtal[0:0], xtal[1:1], xtal[2:2], xtal[3:3], T10[0:0] ;;
+	         M1[1:1], M1[2:2], M1[3:3], M1[4:4], M1[5:5], M1[6:6], M1[7:7], 
+	         M1[8:8], M1[9:9], M1[10:10], M1[11:11], M1[12:12], M1[13:13], 
+	         M1[14:14], M1[15:15], M1[16:16], M1[17:17], M1[18:18], 
+	         M1[19:19], X1[0:0], X2[0:0] ) ;
+	.call daio_receiver_6 daio_receiver_6 (bit_in[0:0], parity[0:0], 
+	         carrier_loss[0:0], biphase_violation[0:0], peek_A[0:0], 
+	         peek_A[1:1], peek_A[2:2], peek_A[3:3], peek_A[4:4], 
+	         peek_A[5:5], peek_A[6:6], shift_reg[0:0], shift_reg[1:1], 
+	         shift_reg[2:2], shift_reg[3:3], shift_reg[4:4], 
+	         shift_reg[5:5], shift_reg[6:6], shift_reg[7:7], 
+	         shift_reg[8:8], shift_reg[9:9], shift_reg[10:10], 
+	         shift_reg[11:11], shift_reg[12:12], shift_reg[13:13], 
+	         shift_reg[14:14], shift_reg[15:15], shift_reg[16:16], 
+	         shift_reg[17:17], shift_reg[18:18], rx_status[0:0], 
+	         rx_status[1:1], load_A[0:0], load_B[0:0], load_buff[0:0] ;;
+	         T26[0:0], T26[1:1], T26[2:2], T26[3:3], T26[4:4], T26[5:5], 
+	         T26[6:6], M2[1:1], M2[2:2], M2[3:3], M2[4:4], M2[5:5], 
+	         M2[6:6], M2[7:7], M2[8:8], M2[9:9], M2[10:10], M2[11:11], 
+	         M2[12:12], M2[13:13], M2[14:14], M2[15:15], M2[16:16], 
+	         M2[17:17], M2[18:18], M2[19:19], X3[0:0], X4[0:0], X5[0:0], 
+	         X6[0:0], X7[0:0], X9[0:0], T28[0:0] ) ;
+	.call daio_receiver_7 daio_receiver_7 (shift_reg[0:0], shift_reg[1:1], 
+	         shift_reg[2:2], shift_reg[3:3], shift_reg[4:4], 
+	         shift_reg[5:5], shift_reg[6:6], shift_reg[7:7], 
+	         shift_reg[8:8], shift_reg[9:9], shift_reg[10:10], 
+	         shift_reg[11:11], shift_reg[12:12], shift_reg[13:13], 
+	         shift_reg[14:14], shift_reg[15:15], shift_reg[16:16], 
+	         shift_reg[17:17], shift_reg[18:18], T11[0:0] ;;M3[1:1], 
+	         M3[2:2], M3[3:3], M3[4:4], M3[5:5], M3[6:6], M3[7:7], M3[8:8], 
+	         M3[9:9], M3[10:10], M3[11:11], M3[12:12], M3[13:13], 
+	         M3[14:14], M3[15:15], M3[16:16], M3[17:17], M3[18:18], 
+	         M3[19:19], X10[0:0] ) ;
+	.call daio_receiver_8 daio_receiver_8 (bit_in[0:0], parity[0:0], 
+	         carrier_loss[0:0], biphase_violation[0:0], peek_B[0:0], 
+	         peek_B[1:1], peek_B[2:2], peek_B[3:3], peek_B[4:4], 
+	         peek_B[5:5], peek_B[6:6], preamble_3[0:0], shift_reg[0:0], 
+	         shift_reg[1:1], shift_reg[2:2], shift_reg[3:3], 
+	         shift_reg[4:4], shift_reg[5:5], shift_reg[6:6], 
+	         shift_reg[7:7], shift_reg[8:8], shift_reg[9:9], 
+	         shift_reg[10:10], shift_reg[11:11], shift_reg[12:12], 
+	         shift_reg[13:13], shift_reg[14:14], shift_reg[15:15], 
+	         shift_reg[16:16], shift_reg[17:17], shift_reg[18:18], 
+	         rx_status[0:0], rx_status[1:1], rx_status[2:2], load_B[0:0], 
+	         load_A[0:0] ;;T42[0:0], T42[1:1], T42[2:2], T42[3:3], 
+	         T42[4:4], T42[5:5], T42[6:6], M4[1:1], M4[2:2], M4[3:3], 
+	         M4[4:4], M4[5:5], M4[6:6], M4[7:7], M4[8:8], M4[9:9], 
+	         M4[10:10], M4[11:11], M4[12:12], M4[13:13], M4[14:14], 
+	         M4[15:15], M4[16:16], M4[17:17], M4[18:18], M4[19:19], 
+	         X11[0:0], X12[0:0], X13[0:0], X14[0:0], X15[0:0], X16[0:0], 
+	         T44[0:0] ) ;
+	.call daio_receiver_9 daio_receiver_9 (bit_in[0:0], frame_ofs[0:0], 
+	         frame_ofs[1:1], frame_counter[2:2], frame_counter[3:3], 
+	         frame_counter[4:4], frame_counter[5:5], frame_counter[6:6], 
+	         frame_counter[7:7], frame_counter[8:8] ;;T45[0:0], T46[0:0], 
+	         T48[0:0], T48[1:1], T48[2:2], T48[3:3], T48[4:4], T48[5:5], 
+	         T48[6:6], T48[7:7], T48[8:8] ) ;
+	.call daio_receiver_10 daio_receiver_10 (shift_reg[0:0], 
+	         shift_reg[1:1], shift_reg[2:2], shift_reg[3:3], 
+	         shift_reg[4:4], shift_reg[5:5], shift_reg[6:6], 
+	         shift_reg[7:7], shift_reg[8:8], shift_reg[9:9], 
+	         shift_reg[10:10], shift_reg[11:11], shift_reg[12:12], 
+	         shift_reg[13:13], shift_reg[14:14], shift_reg[15:15], 
+	         shift_reg[16:16], shift_reg[17:17], shift_reg[18:18], T45[0:0] ;;
+	         M5[1:1], M5[2:2], M5[3:3], M5[4:4], M5[5:5], M5[6:6], M5[7:7], 
+	         M5[8:8], M5[9:9], M5[10:10], M5[11:11], M5[12:12], M5[13:13], 
+	         M5[14:14], M5[15:15], M5[16:16], M5[17:17], M5[18:18], 
+	         M5[19:19], X17[0:0] ) ;
+	.call daio_receiver_11 daio_receiver_11 (bit_in[0:0], parity[0:0], 
+	         carrier_loss[0:0], biphase_violation[0:0], peek_A[0:0], 
+	         peek_A[1:1], peek_A[2:2], peek_A[3:3], peek_A[4:4], 
+	         peek_A[5:5], peek_A[6:6], preamble_2[0:0], frame_ofs[0:0], 
+	         frame_ofs[1:1], shift_reg[0:0], shift_reg[1:1], 
+	         shift_reg[2:2], shift_reg[3:3], shift_reg[4:4], 
+	         shift_reg[5:5], shift_reg[6:6], shift_reg[7:7], 
+	         shift_reg[8:8], shift_reg[9:9], shift_reg[10:10], 
+	         shift_reg[11:11], shift_reg[12:12], shift_reg[13:13], 
+	         shift_reg[14:14], shift_reg[15:15], shift_reg[16:16], 
+	         shift_reg[17:17], shift_reg[18:18], rx_status[0:0], 
+	         rx_status[1:1], rx_status[2:2], load_A[0:0], load_B[0:0], 
+	         load_buff[0:0] ;;T68[0:0], T68[1:1], T68[2:2], T68[3:3], 
+	         T68[4:4], T68[5:5], T68[6:6], M6[1:1], M6[2:2], M6[3:3], 
+	         M6[4:4], M6[5:5], M6[6:6], M6[7:7], M6[8:8], M6[9:9], 
+	         M6[10:10], M6[11:11], M6[12:12], M6[13:13], M6[14:14], 
+	         M6[15:15], M6[16:16], M6[17:17], M6[18:18], M6[19:19], 
+	         X18[0:0], X19[0:0], X20[0:0], X21[0:0], X22[0:0], X23[0:0], 
+	         X26[0:0], T70[0:0] ) ;
+	.call daio_receiver_12 daio_receiver_12 (shift_reg[0:0], 
+	         shift_reg[1:1], shift_reg[2:2], shift_reg[3:3], 
+	         shift_reg[4:4], shift_reg[5:5], shift_reg[6:6], 
+	         shift_reg[7:7], shift_reg[8:8], shift_reg[9:9], 
+	         shift_reg[10:10], shift_reg[11:11], shift_reg[12:12], 
+	         shift_reg[13:13], shift_reg[14:14], shift_reg[15:15], 
+	         shift_reg[16:16], shift_reg[17:17], shift_reg[18:18], T46[0:0] ;;
+	         M7[1:1], M7[2:2], M7[3:3], M7[4:4], M7[5:5], M7[6:6], M7[7:7], 
+	         M7[8:8], M7[9:9], M7[10:10], M7[11:11], M7[12:12], M7[13:13], 
+	         M7[14:14], M7[15:15], M7[16:16], M7[17:17], M7[18:18], 
+	         M7[19:19], X27[0:0] ) ;
+	.call daio_receiver_13 daio_receiver_13 (bit_in[0:0], parity[0:0], 
+	         carrier_loss[0:0], biphase_violation[0:0], peek_B[0:0], 
+	         peek_B[1:1], peek_B[2:2], peek_B[3:3], peek_B[4:4], 
+	         peek_B[5:5], peek_B[6:6], preamble_3[0:0], shift_reg[0:0], 
+	         shift_reg[1:1], shift_reg[2:2], shift_reg[3:3], 
+	         shift_reg[4:4], shift_reg[5:5], shift_reg[6:6], 
+	         shift_reg[7:7], shift_reg[8:8], shift_reg[9:9], 
+	         shift_reg[10:10], shift_reg[11:11], shift_reg[12:12], 
+	         shift_reg[13:13], shift_reg[14:14], shift_reg[15:15], 
+	         shift_reg[16:16], shift_reg[17:17], shift_reg[18:18], 
+	         rx_status[0:0], rx_status[1:1], rx_status[2:2], load_B[0:0], 
+	         load_A[0:0] ;;T84[0:0], T84[1:1], T84[2:2], T84[3:3], 
+	         T84[4:4], T84[5:5], T84[6:6], M8[1:1], M8[2:2], M8[3:3], 
+	         M8[4:4], M8[5:5], M8[6:6], M8[7:7], M8[8:8], M8[9:9], 
+	         M8[10:10], M8[11:11], M8[12:12], M8[13:13], M8[14:14], 
+	         M8[15:15], M8[16:16], M8[17:17], M8[18:18], M8[19:19], 
+	         X28[0:0], X29[0:0], X30[0:0], X31[0:0], X32[0:0], X33[0:0], 
+	         T86[0:0] ) ;
+	.call daio_receiver_14 daio_receiver_14 (T48[0:0], T48[1:1], T48[2:2], 
+	         T48[3:3], T48[4:4], T48[5:5], T48[6:6], T48[7:7], T48[8:8] ;;
+	         T88[0:0] ) ;
+	.call daio_receiver_15 daio_receiver_15 (T9[0:0], clock_out[0:0], 
+	         X1[0:0] ;;X34[0:0] ) ;
+	.call daio_receiver_16 daio_receiver_16 (T1[0:0], shift_reg[19:19], 
+	         shift_reg[18:18], shift_reg[17:17], shift_reg[16:16], 
+	         shift_reg[15:15], shift_reg[14:14], shift_reg[13:13], 
+	         shift_reg[12:12], shift_reg[11:11], shift_reg[10:10], 
+	         shift_reg[9:9], shift_reg[8:8], shift_reg[7:7], 
+	         shift_reg[6:6], shift_reg[5:5], shift_reg[4:4], 
+	         shift_reg[3:3], shift_reg[2:2], shift_reg[1:1], 
+	         shift_reg[0:0], load_buff[0:0], load_B[0:0], load_A[0:0], 
+	         parity[0:0], rx_status[3:3], rx_status[2:2], rx_status[1:1], 
+	         rx_status[0:0], frame_counter[8:8], frame_counter[7:7], 
+	         frame_counter[6:6], frame_counter[5:5], frame_counter[4:4], 
+	         frame_counter[3:3], frame_counter[2:2], frame_ofs[1:1], 
+	         frame_ofs[0:0], peek_B[6:6], peek_B[5:5], peek_B[4:4], 
+	         peek_B[3:3], peek_B[2:2], peek_B[1:1], peek_B[0:0], 
+	         peek_A[6:6], peek_A[5:5], peek_A[4:4], peek_A[3:3], 
+	         peek_A[2:2], peek_A[1:1], peek_A[0:0] ;;M9[0:0], M9[1:1], 
+	         M9[2:2], M9[3:3], M9[4:4], M9[5:5], M9[6:6], M10[0:0], 
+	         M10[1:1], M10[2:2], M10[3:3], M10[4:4], M10[5:5], M10[6:6], 
+	         M11[0:0], M11[1:1], M11[2:2], M11[3:3], M11[4:4], M11[5:5], 
+	         M11[6:6], M11[7:7], M11[8:8], M12[0:0], M12[1:1], M12[2:2], 
+	         M12[3:3], M13[0:0], M13[1:1], M13[2:2], M13[3:3], M13[4:4], 
+	         M13[5:5], M13[6:6], M13[7:7], M13[8:8], M13[9:9], M13[10:10], 
+	         M13[11:11], M13[12:12], M13[13:13], M13[14:14], M13[15:15], 
+	         M13[16:16], M13[17:17], M13[18:18], M13[19:19], X55[0:0], 
+	         X56[0:0], X57[0:0], X58[0:0] ) ;
+	.call FF_SR_EN1 FF_SR_EN (int_shift_reg[19:19]_in, 
+	         int_shift_reg[19:19]_en, CLK, 0, RESET ;;shift_reg[19:19] ) ;
+	.call FF_SR_EN2 FF_SR_EN (int_shift_reg[18:18]_in, 
+	         int_shift_reg[18:18]_en, CLK, 0, RESET ;;shift_reg[18:18] ) ;
+	.call FF_SR_EN3 FF_SR_EN (int_shift_reg[17:17]_in, 
+	         int_shift_reg[17:17]_en, CLK, 0, RESET ;;shift_reg[17:17] ) ;
+	.call FF_SR_EN4 FF_SR_EN (int_shift_reg[16:16]_in, 
+	         int_shift_reg[16:16]_en, CLK, 0, RESET ;;shift_reg[16:16] ) ;
+	.call FF_SR_EN5 FF_SR_EN (int_shift_reg[15:15]_in, 
+	         int_shift_reg[15:15]_en, CLK, 0, RESET ;;shift_reg[15:15] ) ;
+	.call FF_SR_EN6 FF_SR_EN (int_shift_reg[14:14]_in, 
+	         int_shift_reg[14:14]_en, CLK, 0, RESET ;;shift_reg[14:14] ) ;
+	.call FF_SR_EN7 FF_SR_EN (int_shift_reg[13:13]_in, 
+	         int_shift_reg[13:13]_en, CLK, 0, RESET ;;shift_reg[13:13] ) ;
+	.call FF_SR_EN8 FF_SR_EN (int_shift_reg[12:12]_in, 
+	         int_shift_reg[12:12]_en, CLK, 0, RESET ;;shift_reg[12:12] ) ;
+	.call FF_SR_EN9 FF_SR_EN (int_shift_reg[11:11]_in, 
+	         int_shift_reg[11:11]_en, CLK, 0, RESET ;;shift_reg[11:11] ) ;
+	.call FF_SR_EN10 FF_SR_EN (int_shift_reg[10:10]_in, 
+	         int_shift_reg[10:10]_en, CLK, 0, RESET ;;shift_reg[10:10] ) ;
+	.call FF_SR_EN11 FF_SR_EN (int_shift_reg[9:9]_in, 
+	         int_shift_reg[9:9]_en, CLK, 0, RESET ;;shift_reg[9:9] ) ;
+	.call FF_SR_EN12 FF_SR_EN (int_shift_reg[8:8]_in, 
+	         int_shift_reg[8:8]_en, CLK, 0, RESET ;;shift_reg[8:8] ) ;
+	.call FF_SR_EN13 FF_SR_EN (int_shift_reg[7:7]_in, 
+	         int_shift_reg[7:7]_en, CLK, 0, RESET ;;shift_reg[7:7] ) ;
+	.call FF_SR_EN14 FF_SR_EN (int_shift_reg[6:6]_in, 
+	         int_shift_reg[6:6]_en, CLK, 0, RESET ;;shift_reg[6:6] ) ;
+	.call FF_SR_EN15 FF_SR_EN (int_shift_reg[5:5]_in, 
+	         int_shift_reg[5:5]_en, CLK, 0, RESET ;;shift_reg[5:5] ) ;
+	.call FF_SR_EN16 FF_SR_EN (int_shift_reg[4:4]_in, 
+	         int_shift_reg[4:4]_en, CLK, 0, RESET ;;shift_reg[4:4] ) ;
+	.call FF_SR_EN17 FF_SR_EN (int_shift_reg[3:3]_in, 
+	         int_shift_reg[3:3]_en, CLK, 0, RESET ;;shift_reg[3:3] ) ;
+	.call FF_SR_EN18 FF_SR_EN (int_shift_reg[2:2]_in, 
+	         int_shift_reg[2:2]_en, CLK, 0, RESET ;;shift_reg[2:2] ) ;
+	.call FF_SR_EN19 FF_SR_EN (int_shift_reg[1:1]_in, 
+	         int_shift_reg[1:1]_en, CLK, 0, RESET ;;shift_reg[1:1] ) ;
+	.call FF_SR_EN20 FF_SR_EN (int_shift_reg[0:0]_in, 
+	         int_shift_reg[0:0]_en, CLK, 0, RESET ;;shift_reg[0:0] ) ;
+	.call FF_SR_EN21 FF_SR_EN (int_parity[0:0]_in, int_parity[0:0]_en, CLK, 
+	         0, RESET ;;parity[0:0] ) ;
+	.call FF_SR_EN22 FF_SR_EN (int_clock_out[0:0]_in, 
+	         int_clock_out[0:0]_en, CLK, 0, RESET ;;clock_out[0:0] ) ;
+	.call FF_SR_EN23 FF_SR_EN (bit_count_A[6:6]_in, bit_count_A[6:6]_en, 
+	         CLK, 0, RESET ;;peek_A[6:6] ) ;
+	.call FF_SR_EN24 FF_SR_EN (bit_count_A[5:5]_in, bit_count_A[5:5]_en, 
+	         CLK, 0, RESET ;;peek_A[5:5] ) ;
+	.call FF_SR_EN25 FF_SR_EN (bit_count_A[4:4]_in, bit_count_A[4:4]_en, 
+	         CLK, 0, RESET ;;peek_A[4:4] ) ;
+	.call FF_SR_EN26 FF_SR_EN (bit_count_A[3:3]_in, bit_count_A[3:3]_en, 
+	         CLK, 0, RESET ;;peek_A[3:3] ) ;
+	.call FF_SR_EN27 FF_SR_EN (bit_count_A[2:2]_in, bit_count_A[2:2]_en, 
+	         CLK, 0, RESET ;;peek_A[2:2] ) ;
+	.call FF_SR_EN28 FF_SR_EN (bit_count_A[1:1]_in, bit_count_A[1:1]_en, 
+	         CLK, 0, RESET ;;peek_A[1:1] ) ;
+	.call FF_SR_EN29 FF_SR_EN (bit_count_A[0:0]_in, bit_count_A[0:0]_en, 
+	         CLK, 0, RESET ;;peek_A[0:0] ) ;
+	.call FF_SR_EN30 FF_SR_EN (int_load_buff[0:0]_in, 
+	         int_load_buff[0:0]_en, CLK, 0, RESET ;;load_buff[0:0] ) ;
+	.call FF_SR_EN31 FF_SR_EN (int_load_B[0:0]_in, int_load_B[0:0]_en, CLK, 
+	         0, RESET ;;load_B[0:0] ) ;
+	.call FF_SR_EN32 FF_SR_EN (int_load_A[0:0]_in, int_load_A[0:0]_en, CLK, 
+	         0, RESET ;;load_A[0:0] ) ;
+	.call FF_SR_EN33 FF_SR_EN (int_rx_status[1:1]_in, 
+	         int_rx_status[1:1]_en, CLK, 0, RESET ;;rx_status[1:1] ) ;
+	.call FF_SR_EN34 FF_SR_EN (int_rx_status[0:0]_in, 
+	         int_rx_status[0:0]_en, CLK, 0, RESET ;;rx_status[0:0] ) ;
+	.call FF_SR_EN35 FF_SR_EN (frame_counter[8:8]_in, 
+	         frame_counter[8:8]_en, CLK, 0, RESET ;;frame_counter[8:8] ) ;
+	.call FF_SR_EN36 FF_SR_EN (frame_counter[7:7]_in, 
+	         frame_counter[7:7]_en, CLK, 0, RESET ;;frame_counter[7:7] ) ;
+	.call FF_SR_EN37 FF_SR_EN (frame_counter[6:6]_in, 
+	         frame_counter[6:6]_en, CLK, 0, RESET ;;frame_counter[6:6] ) ;
+	.call FF_SR_EN38 FF_SR_EN (frame_counter[5:5]_in, 
+	         frame_counter[5:5]_en, CLK, 0, RESET ;;frame_counter[5:5] ) ;
+	.call FF_SR_EN39 FF_SR_EN (frame_counter[4:4]_in, 
+	         frame_counter[4:4]_en, CLK, 0, RESET ;;frame_counter[4:4] ) ;
+	.call FF_SR_EN40 FF_SR_EN (frame_counter[3:3]_in, 
+	         frame_counter[3:3]_en, CLK, 0, RESET ;;frame_counter[3:3] ) ;
+	.call FF_SR_EN41 FF_SR_EN (frame_counter[2:2]_in, 
+	         frame_counter[2:2]_en, CLK, 0, RESET ;;frame_counter[2:2] ) ;
+	.call FF_SR_EN42 FF_SR_EN (frame_counter[1:1]_in, 
+	         frame_counter[1:1]_en, CLK, 0, RESET ;;frame_ofs[1:1] ) ;
+	.call FF_SR_EN43 FF_SR_EN (frame_counter[0:0]_in, 
+	         frame_counter[0:0]_en, CLK, 0, RESET ;;frame_ofs[0:0] ) ;
+	.call FF_SR_EN44 FF_SR_EN (bit_count_B[6:6]_in, bit_count_B[6:6]_en, 
+	         CLK, 0, RESET ;;peek_B[6:6] ) ;
+	.call FF_SR_EN45 FF_SR_EN (bit_count_B[5:5]_in, bit_count_B[5:5]_en, 
+	         CLK, 0, RESET ;;peek_B[5:5] ) ;
+	.call FF_SR_EN46 FF_SR_EN (bit_count_B[4:4]_in, bit_count_B[4:4]_en, 
+	         CLK, 0, RESET ;;peek_B[4:4] ) ;
+	.call FF_SR_EN47 FF_SR_EN (bit_count_B[3:3]_in, bit_count_B[3:3]_en, 
+	         CLK, 0, RESET ;;peek_B[3:3] ) ;
+	.call FF_SR_EN48 FF_SR_EN (bit_count_B[2:2]_in, bit_count_B[2:2]_en, 
+	         CLK, 0, RESET ;;peek_B[2:2] ) ;
+	.call FF_SR_EN49 FF_SR_EN (bit_count_B[1:1]_in, bit_count_B[1:1]_en, 
+	         CLK, 0, RESET ;;peek_B[1:1] ) ;
+	.call FF_SR_EN50 FF_SR_EN (bit_count_B[0:0]_in, bit_count_B[0:0]_en, 
+	         CLK, 0, RESET ;;peek_B[0:0] ) ;
+	.call FF_SR_EN51 FF_SR_EN (int_rx_status[2:2]_in, 
+	         int_rx_status[2:2]_en, CLK, 0, RESET ;;rx_status[2:2] ) ;
+	.call FF_SR_EN52 FF_SR_EN (M12[3:3], RQ1_4, CLK, 0, RESET ;;
+	         rx_status[3:3] ) ;
+	.call Sw1_2 FF_EN (Sw1_2_i, 1, CLK, RESET ;;Sr1_2' ) ;
+	.call TcL1_2[1] FF_EN (TcL1_2_i[1], 1, CLK, RESET ;;RQ1_5 ) ;
+	.call FF_EN.1_2_LC FF_EN (LC1_2_i, 1, CLK, RESET ;;LC1_2 ) ;
+	.call T1[0:0]_L FF_EN (reset[0:0], LBr1_2_e, CLK, RESET ;;LBr1_2[0]' ) ;
+	.call Sw3_3 FF_EN (Sw3_3_i, 1, CLK, RESET ;;Sr3_3' ) ;
+	.call FF_EN.3_3_LC FF_EN (LC3_3_i, 1, CLK, RESET ;;LC3_3 ) ;
+	.call LBr3_3_1 FF_EN (SL3_3', LBr3_3_e, CLK, RESET ;;LBr3_3[1] ) ;
+	.call Sw3_4 FF_EN (Sw3_4_i, 1, CLK, RESET ;;Sr3_4' ) ;
+	.call FF_EN.3_4_LC FF_EN (LC3_4_i, 1, CLK, RESET ;;LC3_4 ) ;
+	.call LBr3_4_1 FF_EN (DS3_3', LBr3_4_e, CLK, RESET ;;LBr3_4[1] ) ;
+	.call Sw4_2 FF_EN (Sw4_2_i, 1, CLK, RESET ;;Sr4_2' ) ;
+	.call FF_EN.4_2_La FF_EN (AK4_2, 1, CLK, RESET ;;Lak4_2 ) ;
+	.call Sw7_2 FF_EN (Sw7_2_i, 1, CLK, RESET ;;Sr7_2' ) ;
+	.call FF_EN.7_2_La FF_EN (AK7_2, 1, CLK, RESET ;;Lak7_2 ) ;
+	.call Sw8_3 FF_EN (Sw8_3_i, 1, CLK, RESET ;;Sr8_3' ) ;
+	.call FF_EN.8_3_LC FF_EN (LC8_3_i, 1, CLK, RESET ;;LC8_3 ) ;
+	.call T9[0:0]_L FF_EN (preamble_1[0:0], LBr8_3_e, CLK, RESET ;;
+	         LBr8_3[1] ) ;
+	.call TcL9_1[1] FF_EN (TcL9_1_i[1], 1, CLK, RESET ;;EN9_5 ) ;
+	.call Sw9_5 FF_EN (Sw9_5_i, 1, CLK, RESET ;;EN9_7 ) ;
+	.call TcL9_5[1] FF_EN (TcL9_5_i[1], 1, CLK, RESET ;;EN9_8 ) ;
+	.call FF_EN.9_5_La FF_EN (AK9_5, 1, CLK, RESET ;;Lak9_5 ) ;
+	.call Sw9_8 FF_EN (Sw9_8_i, 1, CLK, RESET ;;EN9_9 ) ;
+	.call FF_EN.9_8_La FF_EN (AK9_8, 1, CLK, RESET ;;Lak9_8 ) ;
+	.call Sw9_9 FF_EN (Sw9_9_i, 1, CLK, RESET ;;Sr9_9' ) ;
+	.call FF_EN.9_9_La FF_EN (AK9_9, 1, CLK, RESET ;;Lak9_9 ) ;
+	.call TcL12_1[1] FF_EN (TcL12_1_i[1], 1, CLK, RESET ;;EN12_5 ) ;
+	.call Sw12_5 FF_EN (Sw12_5_i, 1, CLK, RESET ;;EN12_7 ) ;
+	.call TcL12_5[1] FF_EN (TcL12_5_i[1], 1, CLK, RESET ;;EN12_8 ) ;
+	.call FF_EN.12_5_La FF_EN (AK12_5, 1, CLK, RESET ;;Lak12_5 ) ;
+	.call Sw12_8 FF_EN (Sw12_8_i, 1, CLK, RESET ;;Sr12_8' ) ;
+	.call FF_EN.12_8_La FF_EN (AK12_8, 1, CLK, RESET ;;Lak12_8 ) ;
+	int_shift_reg[19:19]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[19:19]_in = M1[19:19] RQ9_4 + M2[19:19] LD9_5 + M3[19:19] 
+		RQ9_7 + M4[19:19] LD9_8 + M5[19:19] RQ12_4 + M6[19:19] RQ13_3 + 
+		M7[19:19] RQ12_7 + M8[19:19] RQ14_3 + M13[19:19] RQ1_4 ;
+	int_shift_reg[18:18]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[18:18]_in = M1[18:18] RQ9_4 + M2[18:18] LD9_5 + M3[18:18] 
+		RQ9_7 + M4[18:18] LD9_8 + M5[18:18] RQ12_4 + M6[18:18] RQ13_3 + 
+		M7[18:18] RQ12_7 + M8[18:18] RQ14_3 + M13[18:18] RQ1_4 ;
+	int_shift_reg[17:17]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[17:17]_in = M1[17:17] RQ9_4 + M2[17:17] LD9_5 + M3[17:17] 
+		RQ9_7 + M4[17:17] LD9_8 + M5[17:17] RQ12_4 + M6[17:17] RQ13_3 + 
+		M7[17:17] RQ12_7 + M8[17:17] RQ14_3 + M13[17:17] RQ1_4 ;
+	int_shift_reg[16:16]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[16:16]_in = M1[16:16] RQ9_4 + M2[16:16] LD9_5 + M3[16:16] 
+		RQ9_7 + M4[16:16] LD9_8 + M5[16:16] RQ12_4 + M6[16:16] RQ13_3 + 
+		M7[16:16] RQ12_7 + M8[16:16] RQ14_3 + M13[16:16] RQ1_4 ;
+	int_shift_reg[15:15]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[15:15]_in = M1[15:15] RQ9_4 + M2[15:15] LD9_5 + M3[15:15] 
+		RQ9_7 + M4[15:15] LD9_8 + M5[15:15] RQ12_4 + M6[15:15] RQ13_3 + 
+		M7[15:15] RQ12_7 + M8[15:15] RQ14_3 + M13[15:15] RQ1_4 ;
+	int_shift_reg[14:14]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[14:14]_in = M1[14:14] RQ9_4 + M2[14:14] LD9_5 + M3[14:14] 
+		RQ9_7 + M4[14:14] LD9_8 + M5[14:14] RQ12_4 + M6[14:14] RQ13_3 + 
+		M7[14:14] RQ12_7 + M8[14:14] RQ14_3 + M13[14:14] RQ1_4 ;
+	int_shift_reg[13:13]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[13:13]_in = M1[13:13] RQ9_4 + M2[13:13] LD9_5 + M3[13:13] 
+		RQ9_7 + M4[13:13] LD9_8 + M5[13:13] RQ12_4 + M6[13:13] RQ13_3 + 
+		M7[13:13] RQ12_7 + M8[13:13] RQ14_3 + M13[13:13] RQ1_4 ;
+	int_shift_reg[12:12]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[12:12]_in = M1[12:12] RQ9_4 + M2[12:12] LD9_5 + M3[12:12] 
+		RQ9_7 + M4[12:12] LD9_8 + M5[12:12] RQ12_4 + M6[12:12] RQ13_3 + 
+		M7[12:12] RQ12_7 + M8[12:12] RQ14_3 + M13[12:12] RQ1_4 ;
+	int_shift_reg[11:11]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[11:11]_in = M1[11:11] RQ9_4 + M2[11:11] LD9_5 + M3[11:11] 
+		RQ9_7 + M4[11:11] LD9_8 + M5[11:11] RQ12_4 + M6[11:11] RQ13_3 + 
+		M7[11:11] RQ12_7 + M8[11:11] RQ14_3 + M13[11:11] RQ1_4 ;
+	int_shift_reg[10:10]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + 
+		RQ13_3 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[10:10]_in = M1[10:10] RQ9_4 + M2[10:10] LD9_5 + M3[10:10] 
+		RQ9_7 + M4[10:10] LD9_8 + M5[10:10] RQ12_4 + M6[10:10] RQ13_3 + 
+		M7[10:10] RQ12_7 + M8[10:10] RQ14_3 + M13[10:10] RQ1_4 ;
+	int_shift_reg[9:9]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[9:9]_in = M1[9:9] RQ9_4 + M2[9:9] LD9_5 + M3[9:9] RQ9_7 + 
+		M4[9:9] LD9_8 + M5[9:9] RQ12_4 + M6[9:9] RQ13_3 + M7[9:9] 
+		RQ12_7 + M8[9:9] RQ14_3 + M13[9:9] RQ1_4 ;
+	int_shift_reg[8:8]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[8:8]_in = M1[8:8] RQ9_4 + M2[8:8] LD9_5 + M3[8:8] RQ9_7 + 
+		M4[8:8] LD9_8 + M5[8:8] RQ12_4 + M6[8:8] RQ13_3 + M7[8:8] 
+		RQ12_7 + M8[8:8] RQ14_3 + M13[8:8] RQ1_4 ;
+	int_shift_reg[7:7]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[7:7]_in = M1[7:7] RQ9_4 + M2[7:7] LD9_5 + M3[7:7] RQ9_7 + 
+		M4[7:7] LD9_8 + M5[7:7] RQ12_4 + M6[7:7] RQ13_3 + M7[7:7] 
+		RQ12_7 + M8[7:7] RQ14_3 + M13[7:7] RQ1_4 ;
+	int_shift_reg[6:6]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[6:6]_in = M1[6:6] RQ9_4 + M2[6:6] LD9_5 + M3[6:6] RQ9_7 + 
+		M4[6:6] LD9_8 + M5[6:6] RQ12_4 + M6[6:6] RQ13_3 + M7[6:6] 
+		RQ12_7 + M8[6:6] RQ14_3 + M13[6:6] RQ1_4 ;
+	int_shift_reg[5:5]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[5:5]_in = M1[5:5] RQ9_4 + M2[5:5] LD9_5 + M3[5:5] RQ9_7 + 
+		M4[5:5] LD9_8 + M5[5:5] RQ12_4 + M6[5:5] RQ13_3 + M7[5:5] 
+		RQ12_7 + M8[5:5] RQ14_3 + M13[5:5] RQ1_4 ;
+	int_shift_reg[4:4]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[4:4]_in = M1[4:4] RQ9_4 + M2[4:4] LD9_5 + M3[4:4] RQ9_7 + 
+		M4[4:4] LD9_8 + M5[4:4] RQ12_4 + M6[4:4] RQ13_3 + M7[4:4] 
+		RQ12_7 + M8[4:4] RQ14_3 + M13[4:4] RQ1_4 ;
+	int_shift_reg[3:3]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[3:3]_in = M1[3:3] RQ9_4 + M2[3:3] LD9_5 + M3[3:3] RQ9_7 + 
+		M4[3:3] LD9_8 + M5[3:3] RQ12_4 + M6[3:3] RQ13_3 + M7[3:3] 
+		RQ12_7 + M8[3:3] RQ14_3 + M13[3:3] RQ1_4 ;
+	int_shift_reg[2:2]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[2:2]_in = M1[2:2] RQ9_4 + M2[2:2] LD9_5 + M3[2:2] RQ9_7 + 
+		M4[2:2] LD9_8 + M5[2:2] RQ12_4 + M6[2:2] RQ13_3 + M7[2:2] 
+		RQ12_7 + M8[2:2] RQ14_3 + M13[2:2] RQ1_4 ;
+	int_shift_reg[1:1]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[1:1]_in = M1[1:1] RQ9_4 + M2[1:1] LD9_5 + M3[1:1] RQ9_7 + 
+		M4[1:1] LD9_8 + M5[1:1] RQ12_4 + M6[1:1] RQ13_3 + M7[1:1] 
+		RQ12_7 + M8[1:1] RQ14_3 + M13[1:1] RQ1_4 ;
+	int_shift_reg[0:0]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 
+		+ RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_shift_reg[0:0]_in = bit_in[0:0] RQ9_4 + bit_in[0:0] LD9_5 + 
+		bit_in[0:0] RQ9_7 + bit_in[0:0] LD9_8 + bit_in[0:0] RQ12_4 + 
+		bit_in[0:0] RQ13_3 + bit_in[0:0] RQ12_7 + bit_in[0:0] RQ14_3 + 
+		M13[0:0] RQ1_4 ;
+	int_parity[0:0]_en = RQ9_4 + LD9_5 + RQ9_7 + LD9_8 + RQ12_4 + RQ13_3 + 
+		RQ12_7 + RQ14_3 + RQ1_4 ;
+	int_parity[0:0]_in = X2[0:0] RQ9_4 + X3[0:0] LD9_5 + X10[0:0] RQ9_7 + 
+		X11[0:0] LD9_8 + X17[0:0] RQ12_4 + X18[0:0] RQ13_3 + X27[0:0] 
+		RQ12_7 + X28[0:0] RQ14_3 + X58[0:0] RQ1_4 ;
+	int_clock_out[0:0]_en = RQ9_4 + LD9_5 + RQ8_5 ;
+	int_clock_out[0:0]_in = X1[0:0] RQ9_4 + X1[0:0] LD9_5 + X34[0:0] RQ8_5 ;
+	bit_count_A[6:6]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[6:6]_in = T26[6:6] LD9_5 + T68[6:6] RQ13_3 + M9[6:6] RQ1_4 ;
+	bit_count_A[5:5]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[5:5]_in = T26[5:5] LD9_5 + T68[5:5] RQ13_3 + M9[5:5] RQ1_4 ;
+	bit_count_A[4:4]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[4:4]_in = T26[4:4] LD9_5 + T68[4:4] RQ13_3 + M9[4:4] RQ1_4 ;
+	bit_count_A[3:3]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[3:3]_in = T26[3:3] LD9_5 + T68[3:3] RQ13_3 + M9[3:3] RQ1_4 ;
+	bit_count_A[2:2]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[2:2]_in = RQ9_4 + T26[2:2] LD9_5 + T68[2:2] RQ13_3 + 
+		M9[2:2] RQ1_4 ;
+	bit_count_A[1:1]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[1:1]_in = T26[1:1] LD9_5 + T68[1:1] RQ13_3 + M9[1:1] RQ1_4 ;
+	bit_count_A[0:0]_en = RQ9_4 + LD9_5 + RQ12_4 + RQ13_3 + RQ1_4 ;
+	bit_count_A[0:0]_in = RQ12_4 + T26[0:0] LD9_5 + T68[0:0] RQ13_3 + 
+		M9[0:0] RQ1_4 ;
+	int_load_buff[0:0]_en = LD9_5 + RQ13_3 + RQ1_4 ;
+	int_load_buff[0:0]_in = X9[0:0] LD9_5 + X26[0:0] RQ13_3 + X55[0:0] 
+		RQ1_4 ;
+	int_load_B[0:0]_en = LD9_5 + LD9_8 + RQ13_3 + RQ14_3 + RQ1_4 ;
+	int_load_B[0:0]_in = X7[0:0] LD9_5 + X15[0:0] LD9_8 + X23[0:0] RQ13_3 + 
+		X32[0:0] RQ14_3 + X56[0:0] RQ1_4 ;
+	int_load_A[0:0]_en = LD9_5 + LD9_8 + RQ13_3 + RQ14_3 + RQ1_4 ;
+	int_load_A[0:0]_in = X6[0:0] LD9_5 + X16[0:0] LD9_8 + X22[0:0] RQ13_3 + 
+		X33[0:0] RQ14_3 + X57[0:0] RQ1_4 ;
+	int_rx_status[1:1]_en = LD9_5 + LD9_8 + RQ13_3 + RQ14_3 + RQ1_4 ;
+	int_rx_status[1:1]_in = X5[0:0] LD9_5 + X13[0:0] LD9_8 + X20[0:0] 
+		RQ13_3 + X30[0:0] RQ14_3 + M12[1:1] RQ1_4 ;
+	int_rx_status[0:0]_en = LD9_5 + LD9_8 + RQ13_3 + RQ14_3 + RQ1_4 ;
+	int_rx_status[0:0]_in = X4[0:0] LD9_5 + X12[0:0] LD9_8 + X19[0:0] 
+		RQ13_3 + X29[0:0] RQ14_3 + M12[0:0] RQ1_4 ;
+	frame_counter[8:8]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[8:8]_in = T48[8:8] LD9_9 + M11[8:8] RQ1_4 ;
+	frame_counter[7:7]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[7:7]_in = T48[7:7] LD9_9 + M11[7:7] RQ1_4 ;
+	frame_counter[6:6]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[6:6]_in = T48[6:6] LD9_9 + M11[6:6] RQ1_4 ;
+	frame_counter[5:5]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[5:5]_in = T48[5:5] LD9_9 + M11[5:5] RQ1_4 ;
+	frame_counter[4:4]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[4:4]_in = T48[4:4] LD9_9 + M11[4:4] RQ1_4 ;
+	frame_counter[3:3]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[3:3]_in = T48[3:3] LD9_9 + M11[3:3] RQ1_4 ;
+	frame_counter[2:2]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[2:2]_in = T48[2:2] LD9_9 + M11[2:2] RQ1_4 ;
+	frame_counter[1:1]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[1:1]_in = T48[1:1] LD9_9 + M11[1:1] RQ1_4 ;
+	frame_counter[0:0]_en = RQ9_7 + LD9_8 + LD9_9 + RQ1_4 ;
+	frame_counter[0:0]_in = RQ9_7 + LD9_8 + T48[0:0] LD9_9 + M11[0:0] RQ1_4 ;
+	bit_count_B[6:6]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[6:6]_in = T42[6:6] LD9_8 + T84[6:6] RQ14_3 + M10[6:6] RQ1_4 ;
+	bit_count_B[5:5]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[5:5]_in = T42[5:5] LD9_8 + T84[5:5] RQ14_3 + M10[5:5] RQ1_4 ;
+	bit_count_B[4:4]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[4:4]_in = T42[4:4] LD9_8 + T84[4:4] RQ14_3 + M10[4:4] RQ1_4 ;
+	bit_count_B[3:3]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[3:3]_in = T42[3:3] LD9_8 + T84[3:3] RQ14_3 + M10[3:3] RQ1_4 ;
+	bit_count_B[2:2]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[2:2]_in = T42[2:2] LD9_8 + T84[2:2] RQ14_3 + M10[2:2] RQ1_4 ;
+	bit_count_B[1:1]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[1:1]_in = T42[1:1] LD9_8 + T84[1:1] RQ14_3 + M10[1:1] RQ1_4 ;
+	bit_count_B[0:0]_en = RQ9_7 + LD9_8 + RQ12_7 + RQ14_3 + RQ1_4 ;
+	bit_count_B[0:0]_in = RQ9_7 + RQ12_7 + T42[0:0] LD9_8 + T84[0:0] RQ14_3 
+		+ M10[0:0] RQ1_4 ;
+	int_rx_status[2:2]_en = LD9_8 + RQ13_3 + RQ14_3 + RQ1_4 ;
+	int_rx_status[2:2]_in = X14[0:0] LD9_8 + X21[0:0] RQ13_3 + X31[0:0] 
+		RQ14_3 + M12[2:2] RQ1_4 ;
+	RQ1_2 = Sr1_2 SL1_2' ;
+	Sw1_2_i = DN' ( Sr1_2' + Sr1_2 ( SL1_2 + AK1_2 ) ) ;
+	TcL1_2_i[1] = DN' ( DN + RQ1_5 ) ;
+	Br1_2[0] = reset[0:0]' LC1_2' + LBr1_2[0] LC1_2 ;
+	Br1_2[1] = reset[0:0] LC1_2' + LBr1_2[0]' LC1_2 ;
+	LC1_2_i = DN' ( RQ1_2 + LC1_2 ) ;
+	LBr1_2_e = RQ1_2 LC1_2' ;
+	T1[0:0] = LC1_2' reset[0:0] + LC1_2 LBr1_2[0]' ;
+	RQ2_2 = RQ1_2 Br1_2[1] LC1_2' ;
+	AK1_2 = RQ2_2 + RQ3_5 ;
+	SL1_2 = Br1_2[1] + Br1_2[0] DS3_1 LC1_2' ;
+	RQ1_4 = DN RQ1_5' ;
+	DS3_1 = DS3_3 SL3_3 ;
+	RQ3_3 = Sr3_3 EN3_3 SL3_3' ;
+	Sw3_3_i = DN' ( Sr3_3' + Sr3_3 EN3_3 ( SL3_3 + AK3_3 ) ) ;
+	LC3_3_i = DN' ( RQ3_3 + LC3_3 ) ;
+	LBr3_3_e = RQ3_3 LC3_3' ;
+	RQ6_2 = RQ3_3 SL3_3 LC3_3' ;
+	AK3_3 = RQ4_3 + RQ6_2 ;
+	RQ3_4 = Sr3_4 EN3_4 DS3_3' ;
+	RQ3_5 = Sr3_4' + Sr3_4 EN3_4 ( DS3_3 + AK3_4 ) ;
+	Sw3_4_i = DN' ( Sr3_4' + Sr3_4 EN3_4 ( DS3_3 + AK3_4 ) ) ;
+	LC3_4_i = DN' ( RQ3_4 + LC3_4 ) ;
+	LBr3_4_e = RQ3_4 LC3_4' ;
+	RQ16_2 = RQ3_4 DS3_3 LC3_4' ;
+	AK3_4 = RQ7_3 + RQ16_2 ;
+	RQ4_2 = Sr4_2 EN4_2 ;
+	RQ4_3 = Sr4_2' + Sr4_2 EN4_2 AK4_2 ;
+	Sw4_2_i = DN' ( Sr4_2' + Sr4_2 EN4_2 AK4_2 ) ;
+	AK4_2 = T5[0:0] RQ5_3 ;
+	RQ5_3 = RQ4_2 Lak4_2' ;
+	RQ7_2 = Sr7_2 EN7_2 ;
+	RQ7_3 = Sr7_2' + Sr7_2 EN7_2 AK7_2 ;
+	Sw7_2_i = DN' ( Sr7_2' + Sr7_2 EN7_2 AK7_2 ) ;
+	AK7_2 = T8[0:0] RQ8_5 ;
+	DS8_1 = preamble_1[0:0]' LC8_3' + LBr8_3[1]' LC8_3 ;
+	RQ8_3 = Sr8_3 EN8_3 DS8_1' ;
+	RQ8_5 = Sr8_3' + Sr8_3 EN8_3 ( DS8_1 + AK8_3 ) ;
+	Sw8_3_i = RQ8_5' ( Sr8_3' + Sr8_3 EN8_3 ( DS8_1 + AK8_3 ) ) ;
+	Br8_3[1] = preamble_1[0:0] LC8_3' + LBr8_3[1] LC8_3 ;
+	LC8_3_i = RQ8_5' ( RQ8_3 + LC8_3 ) ;
+	LBr8_3_e = RQ8_3 LC8_3' ;
+	T9[0:0] = LC8_3' preamble_1[0:0] + LC8_3 LBr8_3[1] ;
+	RQ15_2 = RQ8_3 DS8_1 LC8_3' ;
+	AK8_3 = DN9_9 + RQ15_2 ;
+	TcL9_1_i[1] = DN9_9' ( EN9_4 + EN9_5 ) ;
+	RQ9_4 = EN9_4 EN9_5' ;
+	RQ9_5 = EN9_7' EN9_5 ;
+	Sw9_5_i = RQ8_5' ( EN9_7 + EN9_7' EN9_5 AK9_5 ) ;
+	TcL9_5_i[1] = DN9_9' ( EN9_7 + EN9_8 ) ;
+	AK9_5 = T28[0:0] LD9_5 ;
+	RQ9_7 = EN9_7 EN9_8' ;
+	RQ9_8 = EN9_9' EN9_8 ;
+	Sw9_8_i = RQ8_5' ( EN9_9 + EN9_9' EN9_8 AK9_8 ) ;
+	AK9_8 = T44[0:0] LD9_8 ;
+	RQ9_9 = Sr9_9 EN9_9 ;
+	DN9_9 = Sr9_9' + Sr9_9 EN9_9 AK9_9 ;
+	Sw9_9_i = RQ8_5' ( Sr9_9' + Sr9_9 EN9_9 AK9_9 ) ;
+	AK9_9 = T88[0:0] LD9_9 ;
+	TcL12_1_i[1] = LD9_9' ( EN12_4 + EN12_5 ) ;
+	RQ12_4 = EN12_4 EN12_5' ;
+	RQ12_5 = EN12_7' EN12_5 ;
+	Sw12_5_i = LD9_9' ( EN12_7 + EN12_7' EN12_5 AK12_5 ) ;
+	TcL12_5_i[1] = LD9_9' ( EN12_7 + EN12_8 ) ;
+	AK12_5 = T70[0:0] RQ13_3 ;
+	RQ13_3 = RQ12_5 Lak12_5' ;
+	RQ12_7 = EN12_7 EN12_8' ;
+	RQ12_8 = Sr12_8 EN12_8 ;
+	Sw12_8_i = LD9_9' ( Sr12_8' + Sr12_8 EN12_8 AK12_8 ) ;
+	AK12_8 = T86[0:0] RQ14_3 ;
+	RQ14_3 = RQ12_8 Lak12_8' ;
+	DN = Sr1_2' + Sr1_2 SL1_2 ;
+	LD9_5 = RQ9_5 Lak9_5' ;
+	LD9_8 = RQ9_8 Lak9_8' ;
+	LD9_9 = Sr12_8' + Sr12_8 EN12_8 AK12_8 ;
+	EN3_3 = RQ1_2 ( LC1_2' Br1_2[0] + LC1_2 LBr1_2[0] ) ;
+	EN3_4 = Sr3_3' + Sr3_3 EN3_3 ( SL3_3 + AK3_3 DS3_3 ) ;
+	EN4_2 = RQ3_3 ( LC3_3' SL3_3' + LC3_3 LBr3_3[1] ) ;
+	EN7_2 = RQ3_4 ( LC3_4' DS3_3' + LC3_4 LBr3_4[1] ) ;
+	EN8_3 = RQ7_2 Lak7_2' ;
+	EN9_4 = RQ8_3 ( LC8_3' Br8_3[1] + LC8_3 LBr8_3[1] ) ;
+	EN12_4 = RQ9_9 Lak9_9' ;
+
+
+.endmodel daio_receiver ;
+
+
+.model daio_receiver_1 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  rx_control[2:2] reset[0:0] ;
+	.outputs T2[0:0] T3[0:0] ;
+	.net rx_control[2:2]' T2[0:0] ;
+	.net reset[0:0]' T3[0:0] ;
+
+
+
+.endmodel daio_receiver_1 ;
+
+
+.model daio_receiver_2 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  rx_control[2:2] ;
+	.outputs T5[0:0] ;
+	.net rx_control[2:2] T5[0:0] ;
+
+
+
+.endmodel daio_receiver_2 ;
+
+
+.model daio_receiver_3 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  rx_control[0:0] rx_control[1:1] reset[0:0] ;
+	.outputs T6[0:0] T6[1:1] T8[0:0] ;
+	.net rx_control[0:0] T6[0:0] ;
+	.net rx_control[1:1] T6[1:1] ;
+	.net reset[0:0] T8[0:0] ;
+
+
+
+.endmodel daio_receiver_3 ;
+
+
+.model daio_receiver_4 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  bit_in[0:0] ;
+	.outputs T10[0:0] T11[0:0] ;
+	.net bit_in[0:0] T11[0:0] T10[0:0] ;
+
+
+
+.endmodel daio_receiver_4 ;
+
+
+.model daio_receiver_5 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  int_shift_reg[0:0] int_shift_reg[1:1] int_shift_reg[2:2] 
+	         int_shift_reg[3:3] int_shift_reg[4:4] int_shift_reg[5:5] 
+	         int_shift_reg[6:6] int_shift_reg[7:7] int_shift_reg[8:8] 
+	         int_shift_reg[9:9] int_shift_reg[10:10] int_shift_reg[11:11] 
+	         int_shift_reg[12:12] int_shift_reg[13:13] int_shift_reg[14:14] 
+	         int_shift_reg[15:15] int_shift_reg[16:16] int_shift_reg[17:17] 
+	         int_shift_reg[18:18] T6[0:0] T6[1:1] xtal[0:0] xtal[1:1] 
+	         xtal[2:2] xtal[3:3] T10[0:0] ;
+	.outputs M1[1:1] M1[2:2] M1[3:3] M1[4:4] M1[5:5] M1[6:6] M1[7:7] 
+	         M1[8:8] M1[9:9] M1[10:10] M1[11:11] M1[12:12] M1[13:13] 
+	         M1[14:14] M1[15:15] M1[16:16] M1[17:17] M1[18:18] M1[19:19] 
+	         X1[0:0] X2[0:0] ;
+	.net int_shift_reg[0:0] M1[1:1] ;
+	.net int_shift_reg[1:1] M1[2:2] ;
+	.net int_shift_reg[2:2] M1[3:3] ;
+	.net int_shift_reg[3:3] M1[4:4] ;
+	.net int_shift_reg[4:4] M1[5:5] ;
+	.net int_shift_reg[5:5] M1[6:6] ;
+	.net int_shift_reg[6:6] M1[7:7] ;
+	.net int_shift_reg[7:7] M1[8:8] ;
+	.net int_shift_reg[8:8] M1[9:9] ;
+	.net int_shift_reg[9:9] M1[10:10] ;
+	.net int_shift_reg[10:10] M1[11:11] ;
+	.net int_shift_reg[11:11] M1[12:12] ;
+	.net int_shift_reg[12:12] M1[13:13] ;
+	.net int_shift_reg[13:13] M1[14:14] ;
+	.net int_shift_reg[14:14] M1[15:15] ;
+	.net int_shift_reg[15:15] M1[16:16] ;
+	.net int_shift_reg[16:16] M1[17:17] ;
+	.net int_shift_reg[17:17] M1[18:18] ;
+	.net int_shift_reg[18:18] M1[19:19] ;
+	.net T10[0:0] X2[0:0] ;
+
+	X1[0:0] = V00_T6_0_1[0:0] xtal[0:0] + V01_T6_0_1[0:0] xtal[1:1] + 
+		V10_T6_0_1[0:0] xtal[2:2] + V11_T6_0_1[0:0] xtal[3:3] ;
+	V11_T6_0_1[0:0] = T6[0:0] T6[1:1] ;
+	V10_T6_0_1[0:0] = T6[0:0] T6[1:1]' ;
+	V01_T6_0_1[0:0] = T6[0:0]' T6[1:1] ;
+	V00_T6_0_1[0:0] = T6[0:0]' T6[1:1]' ;
+
+
+.endmodel daio_receiver_5 ;
+
+
+.model daio_receiver_6 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  bit_in[0:0] int_parity[0:0] carrier_loss[0:0] 
+	         biphase_violation[0:0] bit_count_A[0:0] bit_count_A[1:1] 
+	         bit_count_A[2:2] bit_count_A[3:3] bit_count_A[4:4] 
+	         bit_count_A[5:5] bit_count_A[6:6] int_shift_reg[0:0] 
+	         int_shift_reg[1:1] int_shift_reg[2:2] int_shift_reg[3:3] 
+	         int_shift_reg[4:4] int_shift_reg[5:5] int_shift_reg[6:6] 
+	         int_shift_reg[7:7] int_shift_reg[8:8] int_shift_reg[9:9] 
+	         int_shift_reg[10:10] int_shift_reg[11:11] int_shift_reg[12:12] 
+	         int_shift_reg[13:13] int_shift_reg[14:14] int_shift_reg[15:15] 
+	         int_shift_reg[16:16] int_shift_reg[17:17] int_shift_reg[18:18] 
+	         int_rx_status[0:0] int_rx_status[1:1] int_load_A[0:0] 
+	         int_load_B[0:0] int_load_buff[0:0] ;
+	.outputs T26[0:0] T26[1:1] T26[2:2] T26[3:3] T26[4:4] T26[5:5] T26[6:6] 
+	         M2[1:1] M2[2:2] M2[3:3] M2[4:4] M2[5:5] M2[6:6] M2[7:7] M2[8:8] 
+	         M2[9:9] M2[10:10] M2[11:11] M2[12:12] M2[13:13] M2[14:14] 
+	         M2[15:15] M2[16:16] M2[17:17] M2[18:18] M2[19:19] X3[0:0] 
+	         X4[0:0] X5[0:0] X6[0:0] X7[0:0] X9[0:0] T28[0:0] ;
+	.net int_shift_reg[0:0] M2[1:1] ;
+	.net int_shift_reg[1:1] M2[2:2] ;
+	.net int_shift_reg[2:2] M2[3:3] ;
+	.net int_shift_reg[3:3] M2[4:4] ;
+	.net int_shift_reg[4:4] M2[5:5] ;
+	.net int_shift_reg[5:5] M2[6:6] ;
+	.net int_shift_reg[6:6] M2[7:7] ;
+	.net int_shift_reg[7:7] M2[8:8] ;
+	.net int_shift_reg[8:8] M2[9:9] ;
+	.net int_shift_reg[9:9] M2[10:10] ;
+	.net int_shift_reg[10:10] M2[11:11] ;
+	.net int_shift_reg[11:11] M2[12:12] ;
+	.net int_shift_reg[12:12] M2[13:13] ;
+	.net int_shift_reg[13:13] M2[14:14] ;
+	.net int_shift_reg[14:14] M2[15:15] ;
+	.net int_shift_reg[15:15] M2[16:16] ;
+	.net int_shift_reg[16:16] M2[17:17] ;
+	.net int_shift_reg[17:17] M2[18:18] ;
+	.net int_shift_reg[18:18] M2[19:19] ;
+	.net bit_count_A[0:0] T26[0:0]' ;
+
+	T26[1:1] = bit_count_A[1:1] bit_count_A[0:0]' + bit_count_A[1:1]' 
+		bit_count_A[0:0] ;
+	c_T26[2:2] = bit_count_A[0:0] bit_count_A[1:1] ;
+	T26[2:2] = bit_count_A[2:2] c_T26[2:2]' + bit_count_A[2:2]' c_T26[2:2] ;
+	c_T26[3:3] = c_T26[2:2] bit_count_A[2:2] ;
+	T26[3:3] = bit_count_A[3:3] c_T26[3:3]' + bit_count_A[3:3]' c_T26[3:3] ;
+	c_T26[4:4] = c_T26[3:3] bit_count_A[3:3] ;
+	T26[4:4] = bit_count_A[4:4] c_T26[4:4]' + bit_count_A[4:4]' c_T26[4:4] ;
+	c_T26[5:5] = c_T26[4:4] bit_count_A[4:4] ;
+	T26[5:5] = bit_count_A[5:5] c_T26[5:5]' + bit_count_A[5:5]' c_T26[5:5] ;
+	T26[7:7] = c_T26[5:5] bit_count_A[5:5] ;
+	T26[6:6] = bit_count_A[6:6] T26[7:7]' + bit_count_A[6:6]' T26[7:7] ;
+	X3[0:0] = bit_in[0:0] int_parity[0:0]' + bit_in[0:0]' int_parity[0:0] ;
+	X4[0:0] = carrier_loss[0:0] + carrier_loss[0:0]' int_rx_status[0:0] ;
+	X5[0:0] = biphase_violation[0:0] + biphase_violation[0:0]' 
+		int_rx_status[1:1] ;
+	X6[0:0] = T16[0:0] + T16[0:0]' int_load_A[0:0] ;
+	X7[0:0] = T17[0:0]' int_load_B[0:0] ;
+	X8[0:0] = T18[0:0] + T18[0:0]' int_load_buff[0:0] ;
+	X9[0:0] = T19[0:0]' X8[0:0] ;
+	c_6_T27[0:0] = 1 T26[5:5]' ;
+	T19[0:0] = bit_count_A[0:0] bit_count_A[1:1]' bit_count_A[2:2] 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T17[0:0] = bit_count_A[0:0]' bit_count_A[1:1] bit_count_A[2:2]' 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T28[0:0] = ( c_6_T27[0:0] T26[6:6]' )' ;
+	T16[0:0] = bit_count_A[0:0] bit_count_A[1:1] bit_count_A[2:2] 
+		bit_count_A[3:3] bit_count_A[4:4] bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T18[0:0] = bit_count_A[0:0] bit_count_A[1:1] bit_count_A[2:2]' 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+
+
+.endmodel daio_receiver_6 ;
+
+
+.model daio_receiver_7 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  int_shift_reg[0:0] int_shift_reg[1:1] int_shift_reg[2:2] 
+	         int_shift_reg[3:3] int_shift_reg[4:4] int_shift_reg[5:5] 
+	         int_shift_reg[6:6] int_shift_reg[7:7] int_shift_reg[8:8] 
+	         int_shift_reg[9:9] int_shift_reg[10:10] int_shift_reg[11:11] 
+	         int_shift_reg[12:12] int_shift_reg[13:13] int_shift_reg[14:14] 
+	         int_shift_reg[15:15] int_shift_reg[16:16] int_shift_reg[17:17] 
+	         int_shift_reg[18:18] T11[0:0] ;
+	.outputs M3[1:1] M3[2:2] M3[3:3] M3[4:4] M3[5:5] M3[6:6] M3[7:7] 
+	         M3[8:8] M3[9:9] M3[10:10] M3[11:11] M3[12:12] M3[13:13] 
+	         M3[14:14] M3[15:15] M3[16:16] M3[17:17] M3[18:18] M3[19:19] 
+	         X10[0:0] ;
+	.net int_shift_reg[0:0] M3[1:1] ;
+	.net int_shift_reg[1:1] M3[2:2] ;
+	.net int_shift_reg[2:2] M3[3:3] ;
+	.net int_shift_reg[3:3] M3[4:4] ;
+	.net int_shift_reg[4:4] M3[5:5] ;
+	.net int_shift_reg[5:5] M3[6:6] ;
+	.net int_shift_reg[6:6] M3[7:7] ;
+	.net int_shift_reg[7:7] M3[8:8] ;
+	.net int_shift_reg[8:8] M3[9:9] ;
+	.net int_shift_reg[9:9] M3[10:10] ;
+	.net int_shift_reg[10:10] M3[11:11] ;
+	.net int_shift_reg[11:11] M3[12:12] ;
+	.net int_shift_reg[12:12] M3[13:13] ;
+	.net int_shift_reg[13:13] M3[14:14] ;
+	.net int_shift_reg[14:14] M3[15:15] ;
+	.net int_shift_reg[15:15] M3[16:16] ;
+	.net int_shift_reg[16:16] M3[17:17] ;
+	.net int_shift_reg[17:17] M3[18:18] ;
+	.net int_shift_reg[18:18] M3[19:19] ;
+	.net T11[0:0] X10[0:0] ;
+
+
+
+.endmodel daio_receiver_7 ;
+
+
+.model daio_receiver_8 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  bit_in[0:0] int_parity[0:0] carrier_loss[0:0] 
+	         biphase_violation[0:0] bit_count_B[0:0] bit_count_B[1:1] 
+	         bit_count_B[2:2] bit_count_B[3:3] bit_count_B[4:4] 
+	         bit_count_B[5:5] bit_count_B[6:6] preamble_3[0:0] 
+	         int_shift_reg[0:0] int_shift_reg[1:1] int_shift_reg[2:2] 
+	         int_shift_reg[3:3] int_shift_reg[4:4] int_shift_reg[5:5] 
+	         int_shift_reg[6:6] int_shift_reg[7:7] int_shift_reg[8:8] 
+	         int_shift_reg[9:9] int_shift_reg[10:10] int_shift_reg[11:11] 
+	         int_shift_reg[12:12] int_shift_reg[13:13] int_shift_reg[14:14] 
+	         int_shift_reg[15:15] int_shift_reg[16:16] int_shift_reg[17:17] 
+	         int_shift_reg[18:18] int_rx_status[0:0] int_rx_status[1:1] 
+	         int_rx_status[2:2] int_load_B[0:0] int_load_A[0:0] ;
+	.outputs T42[0:0] T42[1:1] T42[2:2] T42[3:3] T42[4:4] T42[5:5] T42[6:6] 
+	         M4[1:1] M4[2:2] M4[3:3] M4[4:4] M4[5:5] M4[6:6] M4[7:7] M4[8:8] 
+	         M4[9:9] M4[10:10] M4[11:11] M4[12:12] M4[13:13] M4[14:14] 
+	         M4[15:15] M4[16:16] M4[17:17] M4[18:18] M4[19:19] X11[0:0] 
+	         X12[0:0] X13[0:0] X14[0:0] X15[0:0] X16[0:0] T44[0:0] ;
+	.net int_shift_reg[0:0] M4[1:1] ;
+	.net int_shift_reg[1:1] M4[2:2] ;
+	.net int_shift_reg[2:2] M4[3:3] ;
+	.net int_shift_reg[3:3] M4[4:4] ;
+	.net int_shift_reg[4:4] M4[5:5] ;
+	.net int_shift_reg[5:5] M4[6:6] ;
+	.net int_shift_reg[6:6] M4[7:7] ;
+	.net int_shift_reg[7:7] M4[8:8] ;
+	.net int_shift_reg[8:8] M4[9:9] ;
+	.net int_shift_reg[9:9] M4[10:10] ;
+	.net int_shift_reg[10:10] M4[11:11] ;
+	.net int_shift_reg[11:11] M4[12:12] ;
+	.net int_shift_reg[12:12] M4[13:13] ;
+	.net int_shift_reg[13:13] M4[14:14] ;
+	.net int_shift_reg[14:14] M4[15:15] ;
+	.net int_shift_reg[15:15] M4[16:16] ;
+	.net int_shift_reg[16:16] M4[17:17] ;
+	.net int_shift_reg[17:17] M4[18:18] ;
+	.net int_shift_reg[18:18] M4[19:19] ;
+	.net bit_count_B[0:0] T42[0:0]' ;
+
+	T42[1:1] = bit_count_B[1:1] bit_count_B[0:0]' + bit_count_B[1:1]' 
+		bit_count_B[0:0] ;
+	c_T42[2:2] = bit_count_B[0:0] bit_count_B[1:1] ;
+	T42[2:2] = bit_count_B[2:2] c_T42[2:2]' + bit_count_B[2:2]' c_T42[2:2] ;
+	c_T42[3:3] = c_T42[2:2] bit_count_B[2:2] ;
+	T42[3:3] = bit_count_B[3:3] c_T42[3:3]' + bit_count_B[3:3]' c_T42[3:3] ;
+	c_T42[4:4] = c_T42[3:3] bit_count_B[3:3] ;
+	T42[4:4] = bit_count_B[4:4] c_T42[4:4]' + bit_count_B[4:4]' c_T42[4:4] ;
+	c_T42[5:5] = c_T42[4:4] bit_count_B[4:4] ;
+	T42[5:5] = bit_count_B[5:5] c_T42[5:5]' + bit_count_B[5:5]' c_T42[5:5] ;
+	T42[7:7] = c_T42[5:5] bit_count_B[5:5] ;
+	T42[6:6] = bit_count_B[6:6] T42[7:7]' + bit_count_B[6:6]' T42[7:7] ;
+	X11[0:0] = bit_in[0:0] int_parity[0:0]' + bit_in[0:0]' int_parity[0:0] ;
+	X12[0:0] = carrier_loss[0:0] + carrier_loss[0:0]' int_rx_status[0:0] ;
+	X13[0:0] = biphase_violation[0:0] + biphase_violation[0:0]' 
+		int_rx_status[1:1] ;
+	X14[0:0] = T32[0:0] + T32[0:0]' int_rx_status[2:2] ;
+	X15[0:0] = T33[0:0] + T33[0:0]' int_load_B[0:0] ;
+	X16[0:0] = T34[0:0]' int_load_A[0:0] ;
+	c_6_T43[0:0] = 1 T42[5:5]' ;
+	T34[0:0] = bit_count_B[0:0]' bit_count_B[1:1] bit_count_B[2:2]' 
+		bit_count_B[3:3]' bit_count_B[4:4]' bit_count_B[5:5]' 
+		bit_count_B[6:6]' ;
+	T44[0:0] = ( c_6_T43[0:0] T42[6:6]' )' ;
+	T37[0:0] = bit_count_B[0:0]' bit_count_B[1:1]' bit_count_B[2:2] 
+		bit_count_B[3:3]' bit_count_B[4:4]' bit_count_B[5:5]' 
+		bit_count_B[6:6]' ;
+	T32[0:0] = T37[0:0] preamble_3[0:0]' ;
+	T33[0:0] = bit_count_B[0:0] bit_count_B[1:1] bit_count_B[2:2] 
+		bit_count_B[3:3] bit_count_B[4:4] bit_count_B[5:5]' 
+		bit_count_B[6:6]' ;
+
+
+.endmodel daio_receiver_8 ;
+
+
+.model daio_receiver_9 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  bit_in[0:0] frame_counter[0:0] frame_counter[1:1] 
+	         frame_counter[2:2] frame_counter[3:3] frame_counter[4:4] 
+	         frame_counter[5:5] frame_counter[6:6] frame_counter[7:7] 
+	         frame_counter[8:8] ;
+	.outputs T45[0:0] T46[0:0] T48[0:0] T48[1:1] T48[2:2] T48[3:3] T48[4:4] 
+	         T48[5:5] T48[6:6] T48[7:7] T48[8:8] ;
+	.net bit_in[0:0] T46[0:0] T45[0:0] ;
+	.net frame_counter[0:0] T48[0:0]' ;
+
+	T48[1:1] = frame_counter[1:1] frame_counter[0:0]' + frame_counter[1:1]' 
+		frame_counter[0:0] ;
+	c_T48[2:2] = frame_counter[0:0] frame_counter[1:1] ;
+	T48[2:2] = frame_counter[2:2] c_T48[2:2]' + frame_counter[2:2]' 
+		c_T48[2:2] ;
+	c_T48[3:3] = c_T48[2:2] frame_counter[2:2] ;
+	T48[3:3] = frame_counter[3:3] c_T48[3:3]' + frame_counter[3:3]' 
+		c_T48[3:3] ;
+	c_T48[4:4] = c_T48[3:3] frame_counter[3:3] ;
+	T48[4:4] = frame_counter[4:4] c_T48[4:4]' + frame_counter[4:4]' 
+		c_T48[4:4] ;
+	c_T48[5:5] = c_T48[4:4] frame_counter[4:4] ;
+	T48[5:5] = frame_counter[5:5] c_T48[5:5]' + frame_counter[5:5]' 
+		c_T48[5:5] ;
+	c_T48[6:6] = c_T48[5:5] frame_counter[5:5] ;
+	T48[6:6] = frame_counter[6:6] c_T48[6:6]' + frame_counter[6:6]' 
+		c_T48[6:6] ;
+	c_T48[7:7] = c_T48[6:6] frame_counter[6:6] ;
+	T48[7:7] = frame_counter[7:7] c_T48[7:7]' + frame_counter[7:7]' 
+		c_T48[7:7] ;
+	T48[9:9] = c_T48[7:7] frame_counter[7:7] ;
+	T48[8:8] = frame_counter[8:8] T48[9:9]' + frame_counter[8:8]' T48[9:9] ;
+
+
+.endmodel daio_receiver_9 ;
+
+
+.model daio_receiver_10 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  int_shift_reg[0:0] int_shift_reg[1:1] int_shift_reg[2:2] 
+	         int_shift_reg[3:3] int_shift_reg[4:4] int_shift_reg[5:5] 
+	         int_shift_reg[6:6] int_shift_reg[7:7] int_shift_reg[8:8] 
+	         int_shift_reg[9:9] int_shift_reg[10:10] int_shift_reg[11:11] 
+	         int_shift_reg[12:12] int_shift_reg[13:13] int_shift_reg[14:14] 
+	         int_shift_reg[15:15] int_shift_reg[16:16] int_shift_reg[17:17] 
+	         int_shift_reg[18:18] T45[0:0] ;
+	.outputs M5[1:1] M5[2:2] M5[3:3] M5[4:4] M5[5:5] M5[6:6] M5[7:7] 
+	         M5[8:8] M5[9:9] M5[10:10] M5[11:11] M5[12:12] M5[13:13] 
+	         M5[14:14] M5[15:15] M5[16:16] M5[17:17] M5[18:18] M5[19:19] 
+	         X17[0:0] ;
+	.net int_shift_reg[0:0] M5[1:1] ;
+	.net int_shift_reg[1:1] M5[2:2] ;
+	.net int_shift_reg[2:2] M5[3:3] ;
+	.net int_shift_reg[3:3] M5[4:4] ;
+	.net int_shift_reg[4:4] M5[5:5] ;
+	.net int_shift_reg[5:5] M5[6:6] ;
+	.net int_shift_reg[6:6] M5[7:7] ;
+	.net int_shift_reg[7:7] M5[8:8] ;
+	.net int_shift_reg[8:8] M5[9:9] ;
+	.net int_shift_reg[9:9] M5[10:10] ;
+	.net int_shift_reg[10:10] M5[11:11] ;
+	.net int_shift_reg[11:11] M5[12:12] ;
+	.net int_shift_reg[12:12] M5[13:13] ;
+	.net int_shift_reg[13:13] M5[14:14] ;
+	.net int_shift_reg[14:14] M5[15:15] ;
+	.net int_shift_reg[15:15] M5[16:16] ;
+	.net int_shift_reg[16:16] M5[17:17] ;
+	.net int_shift_reg[17:17] M5[18:18] ;
+	.net int_shift_reg[18:18] M5[19:19] ;
+	.net T45[0:0] X17[0:0] ;
+
+
+
+.endmodel daio_receiver_10 ;
+
+
+.model daio_receiver_11 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  bit_in[0:0] int_parity[0:0] carrier_loss[0:0] 
+	         biphase_violation[0:0] bit_count_A[0:0] bit_count_A[1:1] 
+	         bit_count_A[2:2] bit_count_A[3:3] bit_count_A[4:4] 
+	         bit_count_A[5:5] bit_count_A[6:6] preamble_2[0:0] 
+	         frame_counter[0:0] frame_counter[1:1] int_shift_reg[0:0] 
+	         int_shift_reg[1:1] int_shift_reg[2:2] int_shift_reg[3:3] 
+	         int_shift_reg[4:4] int_shift_reg[5:5] int_shift_reg[6:6] 
+	         int_shift_reg[7:7] int_shift_reg[8:8] int_shift_reg[9:9] 
+	         int_shift_reg[10:10] int_shift_reg[11:11] int_shift_reg[12:12] 
+	         int_shift_reg[13:13] int_shift_reg[14:14] int_shift_reg[15:15] 
+	         int_shift_reg[16:16] int_shift_reg[17:17] int_shift_reg[18:18] 
+	         int_rx_status[0:0] int_rx_status[1:1] int_rx_status[2:2] 
+	         int_load_A[0:0] int_load_B[0:0] int_load_buff[0:0] ;
+	.outputs T68[0:0] T68[1:1] T68[2:2] T68[3:3] T68[4:4] T68[5:5] T68[6:6] 
+	         M6[1:1] M6[2:2] M6[3:3] M6[4:4] M6[5:5] M6[6:6] M6[7:7] M6[8:8] 
+	         M6[9:9] M6[10:10] M6[11:11] M6[12:12] M6[13:13] M6[14:14] 
+	         M6[15:15] M6[16:16] M6[17:17] M6[18:18] M6[19:19] X18[0:0] 
+	         X19[0:0] X20[0:0] X21[0:0] X22[0:0] X23[0:0] X26[0:0] T70[0:0] ;
+	.net int_shift_reg[0:0] M6[1:1] ;
+	.net int_shift_reg[1:1] M6[2:2] ;
+	.net int_shift_reg[2:2] M6[3:3] ;
+	.net int_shift_reg[3:3] M6[4:4] ;
+	.net int_shift_reg[4:4] M6[5:5] ;
+	.net int_shift_reg[5:5] M6[6:6] ;
+	.net int_shift_reg[6:6] M6[7:7] ;
+	.net int_shift_reg[7:7] M6[8:8] ;
+	.net int_shift_reg[8:8] M6[9:9] ;
+	.net int_shift_reg[9:9] M6[10:10] ;
+	.net int_shift_reg[10:10] M6[11:11] ;
+	.net int_shift_reg[11:11] M6[12:12] ;
+	.net int_shift_reg[12:12] M6[13:13] ;
+	.net int_shift_reg[13:13] M6[14:14] ;
+	.net int_shift_reg[14:14] M6[15:15] ;
+	.net int_shift_reg[15:15] M6[16:16] ;
+	.net int_shift_reg[16:16] M6[17:17] ;
+	.net int_shift_reg[17:17] M6[18:18] ;
+	.net int_shift_reg[18:18] M6[19:19] ;
+	.net bit_count_A[0:0] T68[0:0]' ;
+
+	T68[1:1] = bit_count_A[1:1] bit_count_A[0:0]' + bit_count_A[1:1]' 
+		bit_count_A[0:0] ;
+	c_T68[2:2] = bit_count_A[0:0] bit_count_A[1:1] ;
+	T68[2:2] = bit_count_A[2:2] c_T68[2:2]' + bit_count_A[2:2]' c_T68[2:2] ;
+	c_T68[3:3] = c_T68[2:2] bit_count_A[2:2] ;
+	T68[3:3] = bit_count_A[3:3] c_T68[3:3]' + bit_count_A[3:3]' c_T68[3:3] ;
+	c_T68[4:4] = c_T68[3:3] bit_count_A[3:3] ;
+	T68[4:4] = bit_count_A[4:4] c_T68[4:4]' + bit_count_A[4:4]' c_T68[4:4] ;
+	c_T68[5:5] = c_T68[4:4] bit_count_A[4:4] ;
+	T68[5:5] = bit_count_A[5:5] c_T68[5:5]' + bit_count_A[5:5]' c_T68[5:5] ;
+	T68[7:7] = c_T68[5:5] bit_count_A[5:5] ;
+	T68[6:6] = bit_count_A[6:6] T68[7:7]' + bit_count_A[6:6]' T68[7:7] ;
+	X18[0:0] = bit_in[0:0] int_parity[0:0]' + bit_in[0:0]' int_parity[0:0] ;
+	X19[0:0] = carrier_loss[0:0] + carrier_loss[0:0]' int_rx_status[0:0] ;
+	X20[0:0] = biphase_violation[0:0] + biphase_violation[0:0]' 
+		int_rx_status[1:1] ;
+	X21[0:0] = T52[0:0] + T52[0:0]' int_rx_status[2:2] ;
+	X22[0:0] = T53[0:0] + T53[0:0]' int_load_A[0:0] ;
+	X23[0:0] = T54[0:0]' int_load_B[0:0] ;
+	X24[0:0] = T55[0:0] X25[0:0] + T55[0:0]' int_load_buff[0:0] ;
+	X25[0:0] = T56[0:0] + T56[0:0]' int_load_buff[0:0] ;
+	X26[0:0] = T57[0:0]' X24[0:0] ;
+	c_6_T69[0:0] = 1 T68[5:5]' ;
+	T57[0:0] = bit_count_A[0:0] bit_count_A[1:1]' bit_count_A[2:2] 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T54[0:0] = bit_count_A[0:0]' bit_count_A[1:1] bit_count_A[2:2]' 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T70[0:0] = ( c_6_T69[0:0] T68[6:6]' )' ;
+	T60[0:0] = bit_count_A[0:0]' bit_count_A[1:1]' bit_count_A[2:2] 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T52[0:0] = T60[0:0] preamble_2[0:0]' ;
+	T53[0:0] = bit_count_A[0:0] bit_count_A[1:1] bit_count_A[2:2] 
+		bit_count_A[3:3] bit_count_A[4:4] bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T55[0:0] = bit_count_A[0:0] bit_count_A[1:1] bit_count_A[2:2]' 
+		bit_count_A[3:3]' bit_count_A[4:4]' bit_count_A[5:5]' 
+		bit_count_A[6:6]' ;
+	T56[0:0] = frame_counter[0:0]' frame_counter[1:1]' ;
+
+
+.endmodel daio_receiver_11 ;
+
+
+.model daio_receiver_12 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  int_shift_reg[0:0] int_shift_reg[1:1] int_shift_reg[2:2] 
+	         int_shift_reg[3:3] int_shift_reg[4:4] int_shift_reg[5:5] 
+	         int_shift_reg[6:6] int_shift_reg[7:7] int_shift_reg[8:8] 
+	         int_shift_reg[9:9] int_shift_reg[10:10] int_shift_reg[11:11] 
+	         int_shift_reg[12:12] int_shift_reg[13:13] int_shift_reg[14:14] 
+	         int_shift_reg[15:15] int_shift_reg[16:16] int_shift_reg[17:17] 
+	         int_shift_reg[18:18] T46[0:0] ;
+	.outputs M7[1:1] M7[2:2] M7[3:3] M7[4:4] M7[5:5] M7[6:6] M7[7:7] 
+	         M7[8:8] M7[9:9] M7[10:10] M7[11:11] M7[12:12] M7[13:13] 
+	         M7[14:14] M7[15:15] M7[16:16] M7[17:17] M7[18:18] M7[19:19] 
+	         X27[0:0] ;
+	.net int_shift_reg[0:0] M7[1:1] ;
+	.net int_shift_reg[1:1] M7[2:2] ;
+	.net int_shift_reg[2:2] M7[3:3] ;
+	.net int_shift_reg[3:3] M7[4:4] ;
+	.net int_shift_reg[4:4] M7[5:5] ;
+	.net int_shift_reg[5:5] M7[6:6] ;
+	.net int_shift_reg[6:6] M7[7:7] ;
+	.net int_shift_reg[7:7] M7[8:8] ;
+	.net int_shift_reg[8:8] M7[9:9] ;
+	.net int_shift_reg[9:9] M7[10:10] ;
+	.net int_shift_reg[10:10] M7[11:11] ;
+	.net int_shift_reg[11:11] M7[12:12] ;
+	.net int_shift_reg[12:12] M7[13:13] ;
+	.net int_shift_reg[13:13] M7[14:14] ;
+	.net int_shift_reg[14:14] M7[15:15] ;
+	.net int_shift_reg[15:15] M7[16:16] ;
+	.net int_shift_reg[16:16] M7[17:17] ;
+	.net int_shift_reg[17:17] M7[18:18] ;
+	.net int_shift_reg[18:18] M7[19:19] ;
+	.net T46[0:0] X27[0:0] ;
+
+
+
+.endmodel daio_receiver_12 ;
+
+
+.model daio_receiver_13 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  bit_in[0:0] int_parity[0:0] carrier_loss[0:0] 
+	         biphase_violation[0:0] bit_count_B[0:0] bit_count_B[1:1] 
+	         bit_count_B[2:2] bit_count_B[3:3] bit_count_B[4:4] 
+	         bit_count_B[5:5] bit_count_B[6:6] preamble_3[0:0] 
+	         int_shift_reg[0:0] int_shift_reg[1:1] int_shift_reg[2:2] 
+	         int_shift_reg[3:3] int_shift_reg[4:4] int_shift_reg[5:5] 
+	         int_shift_reg[6:6] int_shift_reg[7:7] int_shift_reg[8:8] 
+	         int_shift_reg[9:9] int_shift_reg[10:10] int_shift_reg[11:11] 
+	         int_shift_reg[12:12] int_shift_reg[13:13] int_shift_reg[14:14] 
+	         int_shift_reg[15:15] int_shift_reg[16:16] int_shift_reg[17:17] 
+	         int_shift_reg[18:18] int_rx_status[0:0] int_rx_status[1:1] 
+	         int_rx_status[2:2] int_load_B[0:0] int_load_A[0:0] ;
+	.outputs T84[0:0] T84[1:1] T84[2:2] T84[3:3] T84[4:4] T84[5:5] T84[6:6] 
+	         M8[1:1] M8[2:2] M8[3:3] M8[4:4] M8[5:5] M8[6:6] M8[7:7] M8[8:8] 
+	         M8[9:9] M8[10:10] M8[11:11] M8[12:12] M8[13:13] M8[14:14] 
+	         M8[15:15] M8[16:16] M8[17:17] M8[18:18] M8[19:19] X28[0:0] 
+	         X29[0:0] X30[0:0] X31[0:0] X32[0:0] X33[0:0] T86[0:0] ;
+	.net int_shift_reg[0:0] M8[1:1] ;
+	.net int_shift_reg[1:1] M8[2:2] ;
+	.net int_shift_reg[2:2] M8[3:3] ;
+	.net int_shift_reg[3:3] M8[4:4] ;
+	.net int_shift_reg[4:4] M8[5:5] ;
+	.net int_shift_reg[5:5] M8[6:6] ;
+	.net int_shift_reg[6:6] M8[7:7] ;
+	.net int_shift_reg[7:7] M8[8:8] ;
+	.net int_shift_reg[8:8] M8[9:9] ;
+	.net int_shift_reg[9:9] M8[10:10] ;
+	.net int_shift_reg[10:10] M8[11:11] ;
+	.net int_shift_reg[11:11] M8[12:12] ;
+	.net int_shift_reg[12:12] M8[13:13] ;
+	.net int_shift_reg[13:13] M8[14:14] ;
+	.net int_shift_reg[14:14] M8[15:15] ;
+	.net int_shift_reg[15:15] M8[16:16] ;
+	.net int_shift_reg[16:16] M8[17:17] ;
+	.net int_shift_reg[17:17] M8[18:18] ;
+	.net int_shift_reg[18:18] M8[19:19] ;
+	.net bit_count_B[0:0] T84[0:0]' ;
+
+	T84[1:1] = bit_count_B[1:1] bit_count_B[0:0]' + bit_count_B[1:1]' 
+		bit_count_B[0:0] ;
+	c_T84[2:2] = bit_count_B[0:0] bit_count_B[1:1] ;
+	T84[2:2] = bit_count_B[2:2] c_T84[2:2]' + bit_count_B[2:2]' c_T84[2:2] ;
+	c_T84[3:3] = c_T84[2:2] bit_count_B[2:2] ;
+	T84[3:3] = bit_count_B[3:3] c_T84[3:3]' + bit_count_B[3:3]' c_T84[3:3] ;
+	c_T84[4:4] = c_T84[3:3] bit_count_B[3:3] ;
+	T84[4:4] = bit_count_B[4:4] c_T84[4:4]' + bit_count_B[4:4]' c_T84[4:4] ;
+	c_T84[5:5] = c_T84[4:4] bit_count_B[4:4] ;
+	T84[5:5] = bit_count_B[5:5] c_T84[5:5]' + bit_count_B[5:5]' c_T84[5:5] ;
+	T84[7:7] = c_T84[5:5] bit_count_B[5:5] ;
+	T84[6:6] = bit_count_B[6:6] T84[7:7]' + bit_count_B[6:6]' T84[7:7] ;
+	X28[0:0] = bit_in[0:0] int_parity[0:0]' + bit_in[0:0]' int_parity[0:0] ;
+	X29[0:0] = carrier_loss[0:0] + carrier_loss[0:0]' int_rx_status[0:0] ;
+	X30[0:0] = biphase_violation[0:0] + biphase_violation[0:0]' 
+		int_rx_status[1:1] ;
+	X31[0:0] = T74[0:0] + T74[0:0]' int_rx_status[2:2] ;
+	X32[0:0] = T75[0:0] + T75[0:0]' int_load_B[0:0] ;
+	X33[0:0] = T76[0:0]' int_load_A[0:0] ;
+	c_6_T85[0:0] = 1 T84[5:5]' ;
+	T76[0:0] = bit_count_B[0:0]' bit_count_B[1:1] bit_count_B[2:2]' 
+		bit_count_B[3:3]' bit_count_B[4:4]' bit_count_B[5:5]' 
+		bit_count_B[6:6]' ;
+	T86[0:0] = ( c_6_T85[0:0] T84[6:6]' )' ;
+	T79[0:0] = bit_count_B[0:0]' bit_count_B[1:1]' bit_count_B[2:2] 
+		bit_count_B[3:3]' bit_count_B[4:4]' bit_count_B[5:5]' 
+		bit_count_B[6:6]' ;
+	T74[0:0] = T79[0:0] preamble_3[0:0]' ;
+	T75[0:0] = bit_count_B[0:0] bit_count_B[1:1] bit_count_B[2:2] 
+		bit_count_B[3:3] bit_count_B[4:4] bit_count_B[5:5]' 
+		bit_count_B[6:6]' ;
+
+
+.endmodel daio_receiver_13 ;
+
+
+.model daio_receiver_14 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  T48[0:0] T48[1:1] T48[2:2] T48[3:3] T48[4:4] T48[5:5] T48[6:6] 
+	         T48[7:7] T48[8:8] ;
+	.outputs T88[0:0] ;
+
+	c_2_T87[0:0] = T48[0:0]' + T48[0:0] T48[1:1]' ;
+	d_2_T87[0:0] = T48[0:0] T48[1:1] ;
+	c_3_T87[0:0] = c_2_T87[0:0] + d_2_T87[0:0] T48[2:2]' ;
+	d_3_T87[0:0] = d_2_T87[0:0] T48[2:2] ;
+	c_4_T87[0:0] = c_3_T87[0:0] + d_3_T87[0:0] T48[3:3]' ;
+	d_4_T87[0:0] = d_3_T87[0:0] T48[3:3] ;
+	c_5_T87[0:0] = c_4_T87[0:0] + d_4_T87[0:0] T48[4:4]' ;
+	d_5_T87[0:0] = d_4_T87[0:0] T48[4:4] ;
+	c_6_T87[0:0] = c_5_T87[0:0] + d_5_T87[0:0] T48[5:5]' ;
+	d_6_T87[0:0] = d_5_T87[0:0] T48[5:5] ;
+	c_7_T87[0:0] = c_6_T87[0:0] T48[6:6]' ;
+	d_7_T87[0:0] = d_6_T87[0:0] + c_6_T87[0:0] T48[6:6] ;
+	c_8_T87[0:0] = c_7_T87[0:0] + d_7_T87[0:0] T48[7:7]' ;
+	T88[0:0] = ( c_8_T87[0:0] T48[8:8]' )' ;
+
+
+.endmodel daio_receiver_14 ;
+
+
+.model daio_receiver_15 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  T9[0:0] int_clock_out[0:0] X1[0:0] ;
+	.outputs X34[0:0] ;
+
+	X34[0:0] = T9[0:0] int_clock_out[0:0] + T9[0:0]' X1[0:0] ;
+
+
+.endmodel daio_receiver_15 ;
+
+
+.model daio_receiver_16 ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  T1[0:0] int_shift_reg[19:19] int_shift_reg[18:18] 
+	         int_shift_reg[17:17] int_shift_reg[16:16] int_shift_reg[15:15] 
+	         int_shift_reg[14:14] int_shift_reg[13:13] int_shift_reg[12:12] 
+	         int_shift_reg[11:11] int_shift_reg[10:10] int_shift_reg[9:9] 
+	         int_shift_reg[8:8] int_shift_reg[7:7] int_shift_reg[6:6] 
+	         int_shift_reg[5:5] int_shift_reg[4:4] int_shift_reg[3:3] 
+	         int_shift_reg[2:2] int_shift_reg[1:1] int_shift_reg[0:0] 
+	         int_load_buff[0:0] int_load_B[0:0] int_load_A[0:0] 
+	         int_parity[0:0] int_rx_status[3:3] int_rx_status[2:2] 
+	         int_rx_status[1:1] int_rx_status[0:0] frame_counter[8:8] 
+	         frame_counter[7:7] frame_counter[6:6] frame_counter[5:5] 
+	         frame_counter[4:4] frame_counter[3:3] frame_counter[2:2] 
+	         frame_counter[1:1] frame_counter[0:0] bit_count_B[6:6] 
+	         bit_count_B[5:5] bit_count_B[4:4] bit_count_B[3:3] 
+	         bit_count_B[2:2] bit_count_B[1:1] bit_count_B[0:0] 
+	         bit_count_A[6:6] bit_count_A[5:5] bit_count_A[4:4] 
+	         bit_count_A[3:3] bit_count_A[2:2] bit_count_A[1:1] 
+	         bit_count_A[0:0] ;
+	.outputs M9[0:0] M9[1:1] M9[2:2] M9[3:3] M9[4:4] M9[5:5] M9[6:6] 
+	         M10[0:0] M10[1:1] M10[2:2] M10[3:3] M10[4:4] M10[5:5] M10[6:6] 
+	         M11[0:0] M11[1:1] M11[2:2] M11[3:3] M11[4:4] M11[5:5] M11[6:6] 
+	         M11[7:7] M11[8:8] M12[0:0] M12[1:1] M12[2:2] M12[3:3] M13[0:0] 
+	         M13[1:1] M13[2:2] M13[3:3] M13[4:4] M13[5:5] M13[6:6] M13[7:7] 
+	         M13[8:8] M13[9:9] M13[10:10] M13[11:11] M13[12:12] M13[13:13] 
+	         M13[14:14] M13[15:15] M13[16:16] M13[17:17] M13[18:18] 
+	         M13[19:19] X55[0:0] X56[0:0] X57[0:0] X58[0:0] ;
+
+	X55[0:0] = T1[0:0]' int_load_buff[0:0] ;
+	X56[0:0] = T1[0:0]' int_load_B[0:0] ;
+	X57[0:0] = T1[0:0]' int_load_A[0:0] ;
+	X58[0:0] = T1[0:0]' int_parity[0:0] ;
+	M9[0:0] = T1[0:0]' bit_count_A[0:0] ;
+	M9[1:1] = T1[0:0]' bit_count_A[1:1] ;
+	M9[2:2] = T1[0:0]' bit_count_A[2:2] ;
+	M9[3:3] = T1[0:0]' bit_count_A[3:3] ;
+	M9[4:4] = T1[0:0]' bit_count_A[4:4] ;
+	M9[5:5] = T1[0:0]' bit_count_A[5:5] ;
+	M9[6:6] = T1[0:0]' bit_count_A[6:6] ;
+	M10[0:0] = T1[0:0]' bit_count_B[0:0] ;
+	M10[1:1] = T1[0:0]' bit_count_B[1:1] ;
+	M10[2:2] = T1[0:0]' bit_count_B[2:2] ;
+	M10[3:3] = T1[0:0]' bit_count_B[3:3] ;
+	M10[4:4] = T1[0:0]' bit_count_B[4:4] ;
+	M10[5:5] = T1[0:0]' bit_count_B[5:5] ;
+	M10[6:6] = T1[0:0]' bit_count_B[6:6] ;
+	M11[0:0] = T1[0:0]' frame_counter[0:0] ;
+	M11[1:1] = T1[0:0]' frame_counter[1:1] ;
+	M11[2:2] = T1[0:0]' frame_counter[2:2] ;
+	M11[3:3] = T1[0:0]' frame_counter[3:3] ;
+	M11[4:4] = T1[0:0]' frame_counter[4:4] ;
+	M11[5:5] = T1[0:0]' frame_counter[5:5] ;
+	M11[6:6] = T1[0:0]' frame_counter[6:6] ;
+	M11[7:7] = T1[0:0]' frame_counter[7:7] ;
+	M11[8:8] = T1[0:0]' frame_counter[8:8] ;
+	M12[0:0] = T1[0:0]' int_rx_status[0:0] ;
+	M12[1:1] = T1[0:0]' int_rx_status[1:1] ;
+	M12[2:2] = T1[0:0]' int_rx_status[2:2] ;
+	M12[3:3] = T1[0:0]' int_rx_status[3:3] ;
+	M13[0:0] = T1[0:0]' int_shift_reg[0:0] ;
+	M13[1:1] = T1[0:0]' int_shift_reg[1:1] ;
+	M13[2:2] = T1[0:0]' int_shift_reg[2:2] ;
+	M13[3:3] = T1[0:0]' int_shift_reg[3:3] ;
+	M13[4:4] = T1[0:0]' int_shift_reg[4:4] ;
+	M13[5:5] = T1[0:0]' int_shift_reg[5:5] ;
+	M13[6:6] = T1[0:0]' int_shift_reg[6:6] ;
+	M13[7:7] = T1[0:0]' int_shift_reg[7:7] ;
+	M13[8:8] = T1[0:0]' int_shift_reg[8:8] ;
+	M13[9:9] = T1[0:0]' int_shift_reg[9:9] ;
+	M13[10:10] = T1[0:0]' int_shift_reg[10:10] ;
+	M13[11:11] = T1[0:0]' int_shift_reg[11:11] ;
+	M13[12:12] = T1[0:0]' int_shift_reg[12:12] ;
+	M13[13:13] = T1[0:0]' int_shift_reg[13:13] ;
+	M13[14:14] = T1[0:0]' int_shift_reg[14:14] ;
+	M13[15:15] = T1[0:0]' int_shift_reg[15:15] ;
+	M13[16:16] = T1[0:0]' int_shift_reg[16:16] ;
+	M13[17:17] = T1[0:0]' int_shift_reg[17:17] ;
+	M13[18:18] = T1[0:0]' int_shift_reg[18:18] ;
+	M13[19:19] = T1[0:0]' int_shift_reg[19:19] ;
+
+
+.endmodel daio_receiver_16 ;
+
+
+.model FF_SR_EN ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	latchin = set + res' ( din den + dout den' ) ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_SR_EN ;
+
+
+.model FF_EN ;
+
+	.date 910104115749 ;	# January 4 1991, 11:57.49
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	latchin = dout res' den' + din res' den ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_EN ;
+

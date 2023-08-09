@@ -1,0 +1,802 @@
+                Logic Synthesis and Optimization 
+                          Benchmarks
+ 
+
+                      December 16, 1988
+
+
+
+
+---------------------------------------------------------------------------
+This report is issued to provide documentation for the benchmark examples
+used in conjunction with the 1989 MCNC International Workshop on Logic
+Synthesis.  Its distribution is limited to peer communication and to
+participants of the workshop.
+
+This report contains material previously published and distributed by the
+University of California (Copyright 1979, 1980, 1983, 1986 Regents of the
+University of California). 
+
+For information about the ideas expressed herein,
+contact the author(s) directly.  For information
+about the MCNC Technical Report Series, or
+Industrial Affiliates Program, contact
+Corporate Communications, MCNC, P.O.
+Box 12889, Research Triangle Park, NC 27709; (919)
+248-1842.
+----------------------------------------------------------------------------
+
+
+
+
+
+
+                    Table of Contents
+
+
+1  Acknowledgements .............................................  3
+2  Benchmark Distribution .......................................  4
+3  Benchmark Examples Included in v2.0 Release ..................  5
+   3.1  FSM Examples ............................................  6
+   3.2  Two-Level Examples ......................................  7
+   3.3  Multi-Level Examples ....................................  8
+4  Data Formats for Benchmark Examples ..........................  9
+   4.1  FSM Format ..............................................  9
+     4.1.1  Examples: dk27.kiss2, dk27.esp ...................... 10
+   4.2  Two-Level Format ........................................ 11
+     4.2.1  ESPRESSO INPUT FILE DESCRIPTION ..................... 11
+     4.2.2  KEYWORDS ............................................ 11
+     4.2.3  LOGICAL DESCRIPTION OF A PLA ........................ 12
+     4.2.4  SYMBOLS IN THE PLA MATRIX AND THEIR INTERPRETATION .. 13
+     4.2.5  Example con1.pla .................................... 13
+   4.3  Multi-Level Format ...................................... 14
+     4.3.1  BLIF Multi-Level Format Description ................. 14
+     4.3.2  Modules ............................................. 14
+     4.3.3  Logic Gates ......................................... 15
+     4.3.4  Example con1.blif ................................... 16
+     4.3.5  Example C17.netblif ................................. 17
+5  Cell Library Descriptions .................................... 18
+   5.1  Lib1: A Small Unit-Delay Model .......................... 18
+   5.2  Lib2: A MOSIS 2u standard cell library .................. 18
+6  Cell Library Formats ......................................... 19
+   6.1  MISII Library Format .................................... 19
+     6.1.1  MISII Library Format Example ........................ 19
+   6.1  MCNC  Library Format .................................... 20
+     6.1.1  MCNC  Library Format Example ........................ 20
+7  Guidelines for Reporting Results ............................. 21
+   7.1  Experiments ............................................. 21
+   7.2  Suggested Benchmark Subsets ............................. 21
+   7.3  Quality Criteria ........................................ 22
+     7.3.1  Area Results ........................................ 22
+     7.3.2  Delay Results ....................................... 23
+     7.3.3  CPU Results ......................................... 23
+     7.3.4  Other Criteria ...................................... 23
+   7.4  Features and Unique Solutions to Problems ............... 23
+8  Readings and References ...................................... 25
+9  Appendix ..................................................... 26
+   9.1  Cell Library 1 Databook ................................. 26
+   9.2  Cell Library 2 Databook ................................. 29
+
+
+
+
+                         1  Acknowledgements
+                         ----------------
+
+
+The logic synthesis and optimization
+benchmarks distributed by the Microelectronics Center of North Carolina have
+been provided by the following individuals and organizations:
+
+
+Gerard Beenker and Nico Benschop
+Phillips Research Laboratories
+Eindhoven, The Neitherlands
+
+Giovanni De Micheli
+Stanford University
+Department of Electrical Engineering
+Palo Alto, CA
+
+Keven Karplus
+UCSC
+Santa Cruz, CA
+
+Kurt Keutzer and Ajit Prabhu
+ATT Bell Laboratories
+Murray Hill, NJ
+
+OCT Tools Distribution
+Electronics Research Laboratory
+University of California, Berkeley
+Berkeley, CA
+
+Adam Postula and Mats Fredriksson
+National Microelectronics Program (NMP-CAD)
+SPANGA, Sweden
+
+Richard Rudell
+Electronics Research Laboratory
+University of California, Berkeley
+Berkeley, CA
+
+
+Funding for distribution of the benchmarks 
+for the 1989 MCNC International Workshop on Logic Synthesis
+has been provided by ACM SIGDA.
+
+
+
+
+
+
+
+
+                    2  Benchmark Distribution
+                    -------------------------
+
+The  benchmark examples for the 1989 International Workshop on Logic
+Synthesis can be obtained from MCNC in two ways.
+
+
+You may establish an  FTP  connection to host "mcnc.org" or "mcnc.mcnc.org" 
+and copy the files using the mget command.  The login name is "anonymous" 
+and the password is "guest". 
+The files are under the "/pub/benchmark/synth89/" directory.
+
+
+Check the FTP man page for details. The following command sequence 
+will obtain all the benchmark data contained in subdirectories
+fsmexamples (FSMs), twolexamples (two-level examples in ESPRESSO format),
+mlexamples (multi-level "blif" examples), wkslibrary (the workshop libraries
+to be used for synthesis), and DOCUMENTATION (this document in ASCII and
+LaTeX form).
+
+
+# FTP command sequence
+
+                   ftp mcnc.org
+                   (or ftp mcnc.mcnc.org)
+                   anonymous     (in response to the "Name" prompt)
+                   guest         (in response to the "password" prompt)
+                   cd pub/benchmark/synth89
+                   cd fsmexamples              
+                   mget *
+                   cd ../mlexamples
+                   mget *
+                   cd ../twolexamples
+                   mget *
+                   cd ../wkslibrary
+                   mget *
+                   cd ../DOCUMENTATION
+                   mget *
+                   bye
+
+
+We are also prepared to send you a 9-track tape in either  TAR  format
+or  VMS  format.  Contact us about your requirements.  We are requesting 
+ACM SIGDA to provide funds to cover the cost of tapes and shipping, 
+so there is no cost to you for this service.
+
+
+
+For more detailed information about  these  benchmarks,  you may contact  
+Bob Lisanke at (919) 248-1442; e-mail bob@mcnc.org or Tom Krakow,
+Benchmark Archival Secretary, (919) 248-1959; email krakow@mcnc.org.
+
+
+
+
+
+
+               3  Benchmark Examples Included in v2.0 Release
+               ----------------------------------------------
+
+
+The logic synthesis and optimization benchmark set consists of 
+examples from three broad categories.
+
+
+  1.  Two-level logic in PLA (ESPRESSO) format.
+ 
+  2.  Finite-state tables in KISS or ESPRESSO-MV format.
+
+  3.  Multi-level logic in BLIF or Netlist-BLIF format.
+
+
+The following sections present tables for each benchmark category. 
+The tables list the names of examples included in the v2.0 benchmark set
+along with some characteristics for each benchmark.
+
+
+
+
+FSM Examples 
+------------
+
+
+
+FSM Name         Inputs     Outputs    Products    States
+
+bbara               4          2          60         10
+bbsse               7          7          56         16
+bbtas               2          2          24          6
+beecount            3          4          28          7
+cse                 7          7          91         16
+dk14                3          5          56          7
+dk15                3          5          32          4
+dk16                2          3         108         27
+dk17                2          3          32          8
+dk27                1          2          14          7
+dk512               1          3          30         15
+donfile             2          1          96         24
+ex1                 9         19         138         20
+ex2                 2          2          72         19
+ex3                 2          2          36         10
+ex4                 6          9          21         14
+ex5                 2          2          32          9
+ex6                 5          8          34          8
+ex7                 2          2          36         10
+keyb                7          2         170         19
+kirkman            12          6         370         16
+lion                2          1          11          4
+lion9               2          1          25          9
+mark1               5         16          22         15
+mc                  3          5          10          4
+modulo12            1          1          24         12
+opus                5          6          22         10
+planet              7         19         115         48
+planet1             7         19         115         48
+s1                  8          6         107         20
+s1a                 8          6         107         20
+s8                  4          1          20          5
+sand               11          9         184         32
+scf                27         56         166        121
+shiftreg            1          1          16          8
+sse                 7          7          56         16
+styr                9         10         166         30
+tav                 4          4          49          4
+tbk                 6          3        1569         32
+train11             2          1          25         11
+train4              2          1          14          4
+
+
+Two-Level Examples
+------------------
+
+
+
+Circuit                              Product 
+ Name      Inputs        Outputs      Terms   
+
+5xp1           7            10         75    
+9sym           9             1         87   
+bw             5            28         87   
+duke2         22            29         87   
+rd53           5             3         32   
+rd73           7             3        141    
+rd84           8             4        256   
+sao2          10             4         58   
+vg2           25             8        110   
+con1           7             2          9   
+misex1         8             7         32   
+misex2        25            18         29   
+misex3        14            14       1848   
+misex3c       14            14        305   
+seq.pla       41            35       1459 
+clip.pla       9             5        167 
+o64.pla      130             1         65 
+e64.pla       65            65         65 
+xor5.pla       5             1         16 
+apex1.pla     45            45        206 
+apex2.pla     39             3       1035 
+apex3.pla     54            50        280 
+apex4.pla      9            19        438 
+apex5.pla    117            88       1227 
+
+
+
+
+Multi-Level Examples
+--------------------
+
+Circuit  Circuit                            Approx.      
+Name     Function          Inputs  Outputs  Gates  
+
+9symml	 Count Ones        9       1           43    
+f51ml	 Arithmetic        8       8           43    
+z4ml     2-bit Add         7       4           20    
+C432	 Priority Decoder  36      7          160    
+C499     Error Correcting  41      32         202    
+C880     ALU and Control   60      26         383    
+C1355    Error Correcting  41      32         546    
+C1908    Error Correcting  33       25        880   
+C2670    ALU and Control   233     140       1193  
+C3540    ALU and Control   50      22        1669  
+C5315    ALU and Selector  178     123       2307  
+C6288    16-bit Multiplier 32      32        2406  
+C7552    ALU and Control   207     108       3512  
+des      Data Encription   256     245       4000  
+rot      Logic             135     107        691 
+b9       Logic              41      21        125 
+apex6    Logic             135      99        452 
+apex7    Logic              49      37        176 
+
+
+
+               4  Data Formats for Benchmark Examples 
+               --------------------------------------
+
+Each benchmark category has its own data representation or format.
+FSM examples have two data formats: KISS and ESPRESSO.
+All two-level examples use the ESPRESSO format and the multi-level
+examples use two versions of blif, a logic form and a net-oriented form.
+
+
+FSM Format 
+----------
+
+FSM benchmarks are distributed in both the KISS and ESPRESSO-MV formats.
+To improve uniformity, FSM benchmarks received
+have been modified to adhere to the following conventions:
+
+
+
+  1.  KISS2 headers include the following information:
+
+
+     .i  n    # number of inputs
+     .o  m    # number of outputs
+     .p  p    # number of products
+     .s  s    # number of states used
+
+
+  2.  KISS2 format don't care states are '*' .   A current-state don't-care
+   condition indicates that no matter what state you are in, a specified
+   input produces a transition to a given next state and output condition.
+   For example,
+    
+
+        .     .    .      .
+        .     .    .      .
+       1---   *  RESET  0000 # go to state RESET if bit 0 is true,
+                             # regardless of the current state
+
+
+
+   Don't-care next states are usually indicated if an input and
+   current-state condition can not occur.  In this case, outputs
+   would also be don't care (indicated by - for each output).
+
+    Unused states are assumed by default in KISS2 to have don't-care 
+   next states and outputs.  If only k out of 2**n states are used, 
+   then the (2**n - k) unused states have the following interpretation:
+
+
+        ----  unused_1        *   ----   # don't care about next or out
+        ----  unused_2        *   ----   # will never occur
+          .      .            .    .
+          .      .            .    .
+          .      .            .    .
+        ----  unused_2**n-k   *   ----   
+
+
+
+  3.  ESPRESSO-MV format don't care states use the alias "ANY" .
+
+ All inputs are binary (no symbolic inputs permitted)
+
+   (eg. cond_A, cond_B, cond_C   -->  1000 0100 0010).
+
+
+
+
+   4.  Formats are otherwise identical to KISS and ESPRESSO-MV.
+
+
+
+
+
+
+Examples: dk27.kiss2, dk27.esp
+------------------------------
+
+
+
+dk27.kiss2
+----------
+
+.i 1 
+.o 2 
+.p 14 
+.s 7
+0 START state6 00
+0 state2 state5 00
+0 state3 state5 00
+0 state4 state6 00
+0 state5 START 10
+0 state6 START 01
+0 state7 state5 00
+1 state6 state2 01
+1 state5 state2 10
+1 state4 state6 10
+1 state7 state6 10
+1 START state4 00
+1 state2 state3 00
+1 state3 state7 00
+
+
+
+dk27.esp
+--------
+
+.type fr
+.mv 4 1 -7 -7 2
+.kiss
+.p 14
+0 START state6 00
+0 state2 state5 00
+0 state3 state5 00
+0 state4 state6 00
+0 state5 START 10
+0 state6 START 01
+0 state7 state5 00
+1 state6 state2 01
+1 state5 state2 10
+1 state4 state6 10
+1 state7 state6 10
+1 START state4 00
+1 state2 state3 00
+1 state3 state7 00
+.end
+
+
+
+
+Two-Level Format 
+----------------
+
+
+The two-level benchmarks are represented in the ESPRESSO-MV format
+described by man(5) page in the ESPRESSO distribution from
+the University of California at Berkeley.
+The ESPRESSO-MV format description is repeated here.
+
+
+
+ESPRESSO INPUT FILE DESCRIPTION
+
+     ESPRESSO accepts as input a two-level description of a
+     Boolean switching function.  This is described as a character 
+     matrix with keywords imbeded in the input to specify
+     the size of the matrix and the logical format of the input
+     function.  Comments are allowed within the input by placing
+     a pound sign (\#) as the first character on a line.  Comments
+     and unrecognized keywords are passed directly from the input
+     file to standard output.  Any white-space (blanks, tabs,
+     etc.), except when used as a delimiter in an imbedded command, 
+     is ignored.  It is generally assumed that the PLA is
+     specified such that each row of the PLA fits on a single
+     line in the input file.
+
+
+KEYWORDS
+     The following keywords are recognized by ESPRESSO.  The list
+     shows the probable order of the keywords in a PLA description.  
+     [d] denotes a decimal number and [s] denotes a text
+     string.
+
+     .i [d]      Specifies the number of input variables.
+
+     .o [d]      Specifies the number of output functions.
+
+     .type [s]   Sets the logical interpretation of the character
+                 matrix as described below under "Logical
+                 Description of a PLA".  This keyword must come
+                 before any product terms.  [s] is one of f, r,
+                 fd, fr, dr, or fdr.
+
+
+     .phase [s]  [s] is a string of as many 0's or 1's as there
+                 are output functions.  It specifies which polarity 
+                 of each output function should be used for
+                 the minimization (a 1 specifies that the ON-set
+                 of the corresponding output function should be
+                 used, and a 0 specifies that the OFF-set of the
+                 corresponding output function should be minimized).
+
+     .pair [d]   Specifies the number of pairs of variables which
+                 will be paired together using two-bit decoders.
+                 The rest of the line contains pairs of numbers
+                 which specify the binary variables of the PLA
+                 which will be paired together.  The binary variables 
+                 are numbered starting with 1.  The PLA
+                 will be reshaped so that any unpaired binary
+                 variables occupy the leftmost part of the array,
+                 then the paired multiple-valued columns, and
+                 finally any multiple-valued variables.
+
+
+     .kiss       Sets up for a KISS-style minimization.
+
+     .p [d]      Specifies the number of product terms.  The product 
+                 terms (one per line) follow immediately
+                 after this keyword.  Actually, this line is
+                 ignored, and the ".e", ".end", or the end of the
+                 file indicate the end of the input description.
+
+     .e (.end)   Marks the end of the PLA description.
+
+
+
+LOGICAL DESCRIPTION OF A PLA
+
+     When we speak of the ON-set of a Boolean function, we mean
+     those minterms which imply the function value is a 1.  Likewise, 
+     the OFF-set are those terms which imply the function
+     is a 0, and the DC-set (don't care set) are those terms for
+     which the function is unspecified.  A function is completely
+     described by providing its ON-set, OFF-set and DC-set.  Note
+     that all minterms lie in the union of the ON-set, OFF-set
+     and DC-set, and that the ON-set, OFF-set and DC-set share no
+     minterms.
+
+     The purpose of the ESPRESSO minimization program is to find
+     a logically equivalent set of product-terms to represent the
+     ON-set and optionally minterms which lie in the DC-set,
+     without containing any minterms of the OFF-set.
+
+     A Boolean function can be described in one of the following
+     ways:
+
+     1)   By providing the ON-set.  In this case, ESPRESSO computes 
+           the OFF-set as the complement of the ON-set and
+          the DC-set is empty.  This is indicated with the keyword 
+          .type f in the input file, or -f on the command line.
+
+     2)   By providing the ON-set and DC-set.  In this case,
+          ESPRESSO computes the OFF-set as the complement of the
+          union of the ON-set and the DC-set.  If any minterm
+          belongs to both the ON-set and DC-set, then it is considered 
+          a don't care and may be removed from the ON-set
+          during the minimization process.  This is indicated
+          with the keyword .type fd in the input file, or -fd on
+          the command line.
+
+     3)   By providing the ON-set and OFF-set.  In this case,
+          ESPRESSO computes the DC-set as the complement of the
+          union of the ON-set and the OFF-set.  It is an error
+          for any minterm to belong to both the ON-set and OFF-set.  
+          This error may not be detected during the minimization, 
+          but it can be checked with the subprogram "-do check" 
+          which will check the consistency of a function.
+          This is indicated with the keyword on the command line.
+
+     4)   By providing the ON-set, OFF-set and DC-set.  This is
+          indicated with the keyword .type fdr in the input file,
+          or -fdr on the command line.
+
+     If at all possible, ESPRESSO should be given the DC-set
+     (either implicitly or explicitly) in order to improve the
+     results of the minimization.
+
+     A term is represented by a "cube" which can be considered
+     either a compact representation of an algebraic product term
+     which implies the function value is a 1, or as a representation
+     of a row in a PLA which implements the term.  A cube
+     has an input part which corresponds to the input plane of a
+     PLA, and an output part which corresponds to the output
+     plane of a PLA (for the multiple-valued case, see below).
+
+
+SYMBOLS IN THE PLA MATRIX AND THEIR INTERPRETATION
+
+     Each position in the input plane corresponds to an input
+     variable where a  0 implies the corresponding input literal
+     appears complemented in the product term, a  1 implies the
+     input literal appears uncomplemented in the product term,
+     and  - implies the input literal does not appear in the 
+     product term.
+
+     With logical type  f, for each output, a  1 means this product
+     term belongs to the ON-set, and a  0 or  - means this product
+     term has no meaning for the value of this function.  This
+     logical type corresponds to an actual PLA where only the
+     ON-set is actually implemented.
+
+     With logical type  fd (the default), for each output, a  1
+     means this product term belongs to the ON-set, a  0 means
+     this product term has no meaning for the value of this function, 
+     and a  - implies this product term belongs to the DC-set.
+
+     With logical type  fr, for each output, a  1 means this product 
+     term belongs to the ON-set, a  0 means this product term
+     belongs to the OFF-set, and a  - means this product term has
+     no meaning for the value of this function.
+
+     With logical type  fdr, for each output, a  1 means this 
+     product term belongs to the ON-set, a  0 means this product term
+     belongs to the OFF-set, a  - means this product term belongs
+     to the DC-set, and a ~ implies this product term has no
+     meaning for the value of this function.
+
+
+     Note that regardless of the logical type of PLA, a ~ implies
+     the product term has no meaning for the value of this function.  
+      2 is allowed as a synonym for  -,   4 is allowed for  1,
+     and  3 is allowed for  ~ .  Also, the logical PLA type can also
+     be specified on the command line.
+ 
+
+
+Example con1.pla
+
+The following two-level logic description is an example of the
+ESPRESSO format.
+
+
+
+.i 7
+.o 2
+.p 9
+-1--1-- 10
+1-11--- 10
+-001--- 10
+01---1- 10
+-0--0-- 01
+1---0-- 01
+0-----0 01
+01--1-- 01
+10-0--- 01
+.e
+
+
+
+
+
+
+Multi-Level Format 
+------------------
+
+The multi-level logic is represented in two different flavors of BLIF which
+may be read by the Berkeley MISII program.  The "examples.blif" essentially
+use the  .names feature of the format to express the logic functions.
+The "examples.netblif" use a netlist variant which is restricted to gates
+in a library.  For the synthesis workshop we chose to associate the 
+"examples.netblif" with the "lib1.mis2lib" library (see Sec. 5 and 
+Appendix, Library 1). Each gate in the netlist version is referenced
+by the  .gate keyword. A brief description of the BLIF format is 
+repeated here.  
+
+BLIF Multi-Level Format Description
+
+
+
+
+                  Berkeley Logic Interchange Format (blif)
+
+                          University of California
+                                  Berkeley 
+
+                                May 28, 1987
+
+
+           The goal  of blif  is to  describe a  Boolean network  in
+         textual form.     A Boolean  network  is  a  representation
+         of an  arbitrary combinational  logic  network, and  is  an
+         acyclic directed graph  with a logic  function attached  to
+         each node.  Each  node in this representation has a  single
+         output.  Therefore, each net (or signal) has only a  single
+         driver, and we can therefore name either the signal or  the
+         gate which drives the signal without ambiguity.
+           In this  section, angle-brackets  surround  nonterminals,
+         and vertical bar separates  choices in a pseudo-BNF  style.
+         Bdsyn uses only  the logic-gate construct of  blif.   Bdsyn
+         uses the  the keywords  .module, .inputs,  .outputs,  .end,
+         .gate and .names.  The module-reference construct of blif is  not
+         implemented.
+
+
+
+Modules
+
+         A module is declared by:
+
+
+             .module <decl-module-name>
+             .inputs <decl-input-list>
+             .outputs <decl-output-list>
+             <logic-gate> | <pla-reference> | <module-reference>
+                      .
+                      .
+                      .
+             <logic-gate> | <pla-reference> | <module-reference>
+             .end
+
+
+
+         <decl-module-name>  is a  string  giving the  name  of  the
+         module.
+
+         <decl-input-list>  is  a   white-space-separated  list   of
+         strings (terminated  by the  end of  the line)  giving  the
+         formal parameters for the module  being declared.  If  this
+         is the  last or  only  module, then  these signals  can  be
+         identified as the primary inputs of the circuit.   Multiple
+         .inputs lines  are allowed,  and the  lists of  inputs  are
+         merely concatenated.
+
+         <decl-output-list>  is  a  white-space-separated  list   of
+         strings (terminated  by the  end of  the line)  giving  the
+         formal parameters  for  the  module being  declared.     If
+         this  is the  last  or  only  module,  then  these  signals
+         can be identified  as the primary  outputs of the  circuit.
+         Multiple .outputs  lines  are  allowed, and  the  lists  of
+         inputs are merely concatenated.
+
+           It is expected that a  blif parser may allow the  .inputs
+         and .outputs  statements  to be  optional.    If  they  are
+         not specified,  the  primary inputs  can be  inferred  from
+         the  signals  which  are  not  the  outputs  of  any  other
+         logic  block,  and the  primary  outputs  can  be  inferred
+         from the  signals which  are not  the inputs  to any  other
+         blocks.     This  makes  the  serious  assumption  that  no
+         primary output is  used as an intermediate  signal.   Also,
+         these assumptions are  only useful for  the "root"  module.
+         Subcircuits  are  invoked  with  positional  arguments  and
+         hence the specified order for the inputs is significant  in
+         a subcircuit.
+
+           The keyword .end is optional,  and is implied at the  end
+         of the file.
+
+           Anywhere in  the  file, a  `\'  (backslash) as  the  last
+         character  on  a  line   indicates  concatenation  of   the
+         subsequent line to the current line.
+
+
+Logic Gates
+
+
+
+  A logic-gate is:
+
+.names <in-1> <in-2> ... <in-n> <output>
+        <single-output-cover>
+
+OR
+
+.gate <gate-name> <formal-1>=<in-1> <formal-2>=<in-2> ... <formal-out>=<out>
+
+
+
+
+
+         single-output-cover   is   an  n-input,    1-output   PLA
+         description of  the  logic function  corresponding  to  the
+         logic gate.   f0, 1, --g is used  in the "input plane"  and
+         f0, 1, --,   ~ is used in  the "output plane".   The  logic
+         gate can have  only its  ON-set specified with  1's in  the
+         "output plane", or  can also have a  DC-set and an  OFF-set
+         specified with -'s or 0's in  the "output plane". ~  means
+         no connection.  For a more complete description of the  PLA
+         input format, see espresso(5) documentation.
+
+gate-name is the name of a gate that is associated with and defined
+by a library (see Sec. 5 on libraries). The library also defines the 
+formal parameters (pin names) of the gate to allow for an order-independent
+list. Gates may have only one output.
+
+The following examples list show the two varieties of netlist
+description. The ".netblif" example uses the gates of "lib1.mis2lib"
+(See Appendix, Library1).
+
+
+
+Example con1.blif
+-----------------
+
+.model new_con1.pla
+.inputs v0 v1 v2 v3 v4 v5 v6
+.outputs v7.0 v
+

@@ -1,0 +1,13 @@
+.model traffic_cl
+.inputs a b c d e
+.outputs f
+.names h f
+0 1
+.names d a b c e h
+000-- 1
+00-0- 1
+0-00- 1
+00--0 1
+0-0-0 1
+0--00 1
+.end

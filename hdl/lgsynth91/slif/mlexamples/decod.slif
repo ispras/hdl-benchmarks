@@ -1,0 +1,30 @@
+
+.model decod ;
+
+	.date 910103085126 ;	# January 3 1991, 08:51.26
+
+	.inputs  a b c d e ;
+	.outputs f g h i j k l m n o p q r s t u ;
+
+	f = d c b o0 ;
+	g = d' c b o0 ;
+	h = d c' b o0 ;
+	i = d' c' b o0 ;
+	j = d c b' o0 ;
+	k = d' c b' o0 ;
+	l = d c' b' o0 ;
+	m = d' c' b' o0 ;
+	n = d c b n0 ;
+	o = d' c b n0 ;
+	p = d c' b n0 ;
+	q = d' c' b n0 ;
+	r = d c b' n0 ;
+	s = d' c b' n0 ;
+	t = d c' b' n0 ;
+	u = d' c' b' n0 ;
+	o0 = a e ;
+	n0 = a' e ;
+
+
+.endmodel decod ;
+

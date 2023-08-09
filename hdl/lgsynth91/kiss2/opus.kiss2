@@ -1,0 +1,27 @@
+
+.i 5 
+.o 6 
+.p 22 
+.s 10
+--1-- * init0 110000
+--1-- init0 init0 110000
+--0-- init0 init1 110000
+--00- init1 init1 110000
+--01- init1 init2 110001
+--0-- init2 init4 110100
+--01- init4 init4 110100
+--00- init4 IOwait 000000
+0000- IOwait IOwait 000000
+1000- IOwait init1 110000
+01000 IOwait read0 101000
+11000 IOwait write0 100010
+01001 IOwait RMACK 100000
+11001 IOwait WMACK 100000
+--01- IOwait init2 110001
+--0-0 RMACK RMACK 100000
+--0-1 RMACK read0 101000
+--0-0 WMACK WMACK 100000
+--0-1 WMACK write0 100010
+--0-- read0 read1 101001
+--0-- read1 IOwait 000000
+--0-- write0 IOwait 000000

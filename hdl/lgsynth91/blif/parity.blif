@@ -1,0 +1,49 @@
+.model PARITYFDS
+.inputs a b c d e f g h i j k l m n o p
+.outputs q
+.names e0 f0 q
+01 1
+10 1
+.names p o s
+01 1
+10 1
+.names n m t
+01 1
+10 1
+.names l k u
+01 1
+10 1
+.names j i v
+01 1
+10 1
+.names h g w
+01 1
+10 1
+.names f e x
+01 1
+10 1
+.names d c y
+01 1
+10 1
+.names b a z
+01 1
+10 1
+.names s t a0
+01 1
+10 1
+.names u v b0
+01 1
+10 1
+.names w x c0
+01 1
+10 1
+.names y z d0
+01 1
+10 1
+.names a0 b0 e0
+01 1
+10 1
+.names c0 d0 f0
+01 1
+10 1
+.end

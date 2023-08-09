@@ -1,0 +1,66 @@
+.model source.pla
+.inputs CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7>
+.outputs writeRFaccess2 lastPCtobusD1 busDtobusB2 busDtobusA2 DSTtobusD2 \
+nillonreturn pLOADwrite opc2load DSTvalid pbusDtoINA
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> writeRFaccess2
+-----00 1
+----011 1
+11--0-1 1
+--000-1 1
+---0111 1
+11-1-01 1
+-1-1001 1
+101000- 1
+1-01101 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> lastPCtobusD1
+-----00 1
+101000- 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> busDtobusB2
+-----00 1
+0---011 1
+-1-1001 1
+101000- 1
+-001011 1
+-110011 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> busDtobusA2
+-----00 1
+0---011 1
+-1-1001 1
+101000- 1
+-001011 1
+-110011 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> DSTtobusD2
+0---011 1
+-1-1001 1
+-001011 1
+-110011 1
+.names CPIPE2s<1> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> CPIPE2s<7> nillonreturn
+11001 1
+.names CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> CPIPE2s<7> pLOADwrite
+0111 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> opc2load
+0000111 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> DSTvalid
+---10-1 1
+----011 1
+11--0-1 1
+--000-1 1
+---0111 1
+11-1-01 1
+1-01101 1
+.names CPIPE2s<0> CPIPE2s<1> CPIPE2s<2> CPIPE2s<3> CPIPE2s<4> CPIPE2s<5> \
+CPIPE2s<7> pbusDtoINA
+1---111 1
+-1--111 1
+--1-111 1
+-0111-1 1
+0--1101 1
+.end

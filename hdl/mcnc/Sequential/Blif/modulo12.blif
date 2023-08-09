@@ -1,0 +1,52 @@
+.model modulo12.kiss2
+.inputs v0
+.outputs v5.4
+.latch    v5.0 v1   0
+.latch    v5.1 v2   0
+.latch    v5.2 v3   0
+.latch    v5.3 v4   0
+.names [20] v5.4
+0 1
+.names [12] v5.0
+0 1
+.names [14] v5.1
+0 1
+.names [16] v5.2
+0 1
+.names [18] v5.3
+0 1
+.names v0 v2 v4 [0]
+101 1
+.names v0 v3 v4 [1]
+101 1
+.names v2 v3 v4 [2]
+110 1
+.names v0 v1 v4 [3]
+100 1
+.names v1 v3 v4 [4]
+100 1
+.names v0 v1 v2 [5]
+100 1
+.names v0 v1 v3 [6]
+100 1
+.names v0 v2 [7]
+01 1
+.names v0 v3 [8]
+01 1
+.names v0 v4 [9]
+01 1
+.names v0 v1 [10]
+01 1
+.names v1 v4 [11]
+11 1
+.names [5] [6] [10] [12]
+000 1
+.names [0] [4] [5] [7] [14]
+0000 1
+.names [1] [2] [6] [8] [16]
+0000 1
+.names [3] [9] [11] [18]
+000 1
+.names [20]
+ 1
+.end

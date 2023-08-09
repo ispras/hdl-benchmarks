@@ -1,0 +1,162 @@
+
+.model alu4 ;
+
+	.date 910103085103 ;	# January 3 1991, 08:51.03
+
+	.inputs  a b c d e f g h i j k l m n ;
+	.outputs o p q r s t u v ;
+
+	o = j1 + n g3 m + n' k1 h3 + n g3' m' + n' i3 j' r1 + n' j o1 l3 + n' 
+		i3' j' s1 + n' j' l m3 + n' e j p1 + n' m1 i3 e + n' j n1 k3 + 
+		n' e' j' u1 + n' j j3 q1 + n' j' t1 n3 ;
+	p = j1 + n k2' l2' + n k2 l2 + n' f j p1 + n' j' t1 o2 + n' j' l n2 + 
+		n' j n1 q2 + n' j q1 p2 + n' m2' j' s1 + n' k1 b l + n' m1 m2 f 
+		+ n' f' j' u1 + n' m2 j' r1 + n' m2 b j o1 ;
+	q = j1 + n v1 w1 + n' k1 x1 + n v1' w1' + n' y1 j' r1 + n' g' j' u1 + 
+		n' g j p1 + n' y1' j' s1 + n' x1 g' j' + n' m1 y1 g + n' j z1' 
+		q1 + n' j n1 a2 + n' y1 j o1 c + n' g j' c' t1 ;
+	r = j1 + n m0' p0' + n m0 p0 + n' k1 l1 + n' h1 j' r1 + n' j q1 d1 + n' 
+		j n1 t + n' h' j' u1 + n' l1 h' j' + n' m1 h1 h + n' h1' j' s1 
+		+ n' j o1 b1 + n' h j p1 + n' h j' t1 d' ;
+	s = d1 + t ;
+	t = d h ;
+	u = n n0 o0 + n m0' p0 + n o0 l' + n l w0 t + n l b1 f1 + n l q0' k b1 
+		+ n l t0 x0 z0 + n l x0 z0 a1 + n l c1 f1 h1 + n l d c1 f1 + n 
+		l w0 d1' e1 + n l t0 x0 a1 + n l' q0 t0' u0 + n l v0 y0 d' + n 
+		n0 l' r0 k + n l' s0 t0 i' d + n l' s0 t0 i' g1 + n l q0' k d 
+		c1 + n l' s0 i' d g1 + n l' s0 i z0 h1 + n l q0' k c1 h1 + n l' 
+		s0 i z0 i1 + n l' s0 i h1 i1 ;
+	v = s j3 q2 z1' + s a2 j3 q2 + s k3 p2 z1' + s q2 k3 z1' + s a2 q2 k3 + 
+		s a2 k3 p2 + s e' f' y0 g' + s e' f' a2 d3 ;
+	j1 = n l4 q0 + n' p1 s0 ;
+	g3 = n b2 i3' + n u3 q0 q3' + n m1 l' a + n r2 x2 e + n v3 k' m3 + n l 
+		a' v0 + n v3 k' n3 + n m1 i3' a j' + n q3 l x0 w3' + n r2 q3' a 
+		i' + n m1 i3 l' j + n i3 l a' k1 + n q3' l x0 w3 + n q0' i3' k 
+		l a + n r2 q3 k a' i' + n r2 i3' k i w3 + n r2 i3 k i w3' ;
+	k1 = f1 + k ;
+	h3 = a l ;
+	m1 = i' k' ;
+	i3 = i4 a' + j3' e4 + d4 e' + k4 k3 + r0 n m3 + r0 n u3 n3 ;
+	n1 = c3 + l ;
+	j3 = a' e' ;
+	o1 = i k ;
+	p1 = i' l ;
+	q1 = i' u3 ;
+	k3 = a e ;
+	l3 = a i3 ;
+	s1 = c3 + i l4 ;
+	t1 = l x2 ;
+	r1 = m1 + k l ;
+	u1 = i u3 ;
+	m3 = a e' ;
+	n3 = a' e ;
+	k2 = g3' + m ;
+	l2 = n b2 f3 + n b j2 + n r2 x2 f + n v0 d3 l + n v0 b h3 + n v0 l' e3 
+		+ n m2 l' x0 + n m2 c2 i3 + n w0 k3' o2 + n w0 k3 q2 + n s2 r3' 
+		s3' t3 + n w0 l k3 p2 + n v0 l' q3 r3 + n m2' l3' b i2 + n r2 
+		b' o3 c3 + n g2 m2 l3' b' + n g2 m2' l3 b' + n s2 r3' s3 t3' + 
+		n s2 r3 s3' t3' + n m2 l3 b i2 + n w0 b f' k3' + n s2 r3 s3 t3 
+		+ n r2 b o3' i' + n r2 m2 o1 p3 s3 + n r2 m2' o1 p3' s3 + n r2 
+		m2' o1 p3 s3' + n r2 m2 o1 p3' s3' ;
+	m2 = p2' e4 + h4 q2 + i4 b' + d4 f' + n i' s0 h3 + q2 n i' u3 n3 + p2 n 
+		i' n3 j + n i' n3' j n2 + n i' u3 n3' j o2 ;
+	n2 = b f' ;
+	o2 = b' f ;
+	p2 = b' f' ;
+	q2 = b f ;
+	v1 = l2' + k2 ;
+	w1 = n b2 e2 + n c j2 + n r2 x2 g + n v0 l' u0 + n y1 l' x0 + n y1 c2 
+		f3' + n w0 t2 a2 + n v0 x1 d3' + n v0 y0 l + n r2 o1 y2' z2' + 
+		n w0 t2' c g' + n r2 o1 y2 z2 + n r2 c a3' i' + n w0 t2' c' g + 
+		n s2 u2' v2' w2 + n s2 u2 v2 w2 + n y1 c i2 b3 + n y1' c i2 b3' 
+		+ n y1' c' b3 g2 + n r2 c' a3 c3 + n y1 c' b3' g2 + n s2 u2' v2 
+		w2' + n s2 u2 v2' w2' + n v0 v2 l' e3' + n w0 t2 l z1' ;
+	x1 = c l ;
+	y1 = h4 a2 + z1 e4 + i4 c' + d4 g' + n i' s0 b l + c g n i' u3 j4 + c' 
+		g' n i' j4 j + c g' n i' j4' j + c' g n i' u3 j4' j ;
+	z1 = g + c ;
+	a2 = c g ;
+	m0 = w1' + v1 ;
+	p0 = n b2 n0 + n d j2 + n c2 h1 e2' + n v0 l1 y0' + n x0 h1 l' + n d' 
+		f2 g2 + n w0 l' h + n d f2' i2 + n w0 e1 t + n d2 i h2 i1' + n 
+		d2 i h2' i1 + n v0 l' t0 u0' + n w0 l e1 d1 + n w0 d e1' h' + n 
+		w0 d' e1' h + n v0 y0 d' l + n v0 l' t0' u0 + n x0 l z0 t0 a1 + 
+		n x0 l z0' t0' a1 + n x0 l z0' t0 a1' + n x0 l z0 t0' a1' + n 
+		d2 d' i' t0' g1 + n d2 d' i' t0 g1' + n d l' t0 g1 f1 + n d l' 
+		t0' g1' f1 ;
+	l1 = d l ;
+	h1 = d1' e4 + d4 h' + t n d2 + t i' d2 + t n f4 + n i' x1 s0 + t n i' 
+		g4' u3 + d1 n i' g4' j + n' i' d' k' j' + n' i' d' k' l' + h' n 
+		i' d g4 j + h n i' d' g4 u3 j ;
+	b1 = d h1 ;
+	d1 = d' h' ;
+	n0 = h1' e2 ;
+	o0 = k' q0 ;
+	q0 = i j ;
+	r0 = i' j ;
+	s0 = j' k ;
+	t0 = c4 h1 + c4 d + b4 b1 q0 + b4 t v3 + b4 h1' f1 ;
+	u0 = e3 v2' ;
+	v0 = k q0 ;
+	w0 = j' x2 ;
+	x0 = j m1 ;
+	y0 = c' d3 ;
+	z0 = y3 t + t0' z3 ;
+	a1 = u2 w2 + v2 w2 + v2 u2 ;
+	c1 = b3 c + y1 c + y1 b3 ;
+	e1 = a2 + t2 z1 ;
+	f1 = i' j' ;
+	g1 = x3 c + v2 c + v2 x3 ;
+	i1 = u2 z2 + y1 z2 + y1 u2 ;
+	d3 = a' b' ;
+	e2 = f3 y1' ;
+	b2 = l o0 + j q1 ;
+	c2 = l o0 + l' r0 ;
+	d2 = j' u3 ;
+	f2 = c1 h1' + c1' h1 ;
+	g2 = l f1 + l k q0' ;
+	h2 = z0 h1' + z0' h1 ;
+	i2 = g2 + k' f1 ;
+	j2 = l4 q0' ;
+	b4 = n u3 ;
+	c4 = n j p1 ;
+	v3 = i j' ;
+	e3 = r3' q3' ;
+	v2 = c4 y1 + c4 c + b4 f1 y1' + b4 y1 c i j + b4 c i g j' ;
+	x2 = i k' ;
+	y3 = k' c4 ;
+	z3 = j' n u1 ;
+	u2 = y3 a2 + v2' z3 ;
+	w2 = s3 t3 + r3 t3 + r3 s3 ;
+	b3 = l3 b + m2 b + m2 l3 ;
+	t2 = q2 + k3 p2' ;
+	x3 = a4 b + r3 b + r3 a4 ;
+	d4 = u3 q0 + n u3' r0 + j' l n' o1 ;
+	e4 = v3 n' l4 + v3 k n ;
+	f4 = k' l q0 + k' l f1 ;
+	g4 = c g' + j4' g' + j4' c ;
+	u3 = k l' ;
+	z2 = s3 p3 + m2 p3 + m2 s3 ;
+	l4 = k' l' ;
+	c3 = i' k ;
+	r2 = j' l' ;
+	s2 = k' j p1 ;
+	y2 = u2' y1' + u2 y1 ;
+	a3 = x3 v2' + x3' v2 ;
+	f3 = m2' i3' ;
+	h4 = k4 + n d2 ;
+	i4 = m1 n' l' + m1 n' j' ;
+	j4 = o2 + n2' n3 ;
+	o3 = r3 a4' + r3' a4 ;
+	p3 = w3 i3 ;
+	q3 = c4 i3 + c4 a + b4 l3 q0 + b4 k3 v3 + b4 i3' f1 ;
+	r3 = c4 m2 + c4 b + b4 f1 m2' + b4 m2 b i j + b4 b i f j' ;
+	s3 = y3 q2 + r3' z3 ;
+	t3 = w3 q3 ;
+	w3 = y3 k3 + q3' z3 ;
+	k4 = j' q1 + n f4 ;
+	a4 = a q3 ;
+
+
+.endmodel alu4 ;
+

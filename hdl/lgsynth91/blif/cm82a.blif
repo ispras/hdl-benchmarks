@@ -1,0 +1,24 @@
+.model CM82
+.inputs a b c d e
+.outputs f g h
+.names a s f
+01 1
+10 1
+.names o r g
+11 1
+00 1
+.names o d e h
+01- 1
+0-1 1
+-11 1
+.names a b c o
+00- 1
+0-0 1
+-00 1
+.names d e r
+01 1
+10 1
+.names b c s
+01 1
+10 1
+.end

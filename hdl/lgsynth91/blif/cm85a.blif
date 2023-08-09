@@ -1,0 +1,70 @@
+.model CM85
+.inputs a b c d e f g h i j k
+.outputs l m n
+.names v0 t0 n0 l
+--0 1
+00- 1
+.names v0 w0 m
+00 1
+.names v0 u0 l0 n
+--0 1
+00- 1
+.names e d u
+01 1
+.names b u c v
+0-0 1
+-00 1
+.names e d w
+10 1
+.names b w a x
+0-0 1
+-00 1
+.names d e a0
+11 1
+00 1
+.names g f d0
+0- 1
+-1 1
+.names g f e0
+1- 1
+-0 1
+.names b a0 f0
+0- 1
+-0 1
+.names f g g0
+01 1
+10 1
+.names f0 g0 h0
+00 1
+.names e0 f0 v i0
+--0 1
+00- 1
+.names f0 d0 x j0
+--0 1
+00- 1
+.names i h k0
+01 1
+.names h0 k0 i0 l0
+0-0 1
+-00 1
+.names i h m0
+10 1
+.names h0 m0 j0 n0
+0-0 1
+-00 1
+.names h i q0
+11 1
+00 1
+.names k j t0
+0- 1
+-1 1
+.names k j u0
+1- 1
+-0 1
+.names h0 q0 v0
+0- 1
+-0 1
+.names j k w0
+01 1
+10 1
+.end

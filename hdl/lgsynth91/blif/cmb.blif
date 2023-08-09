@@ -1,0 +1,50 @@
+.model cmb
+.inputs a b c d e f g h i j k l m n o p
+.outputs q r s t
+.names l k j p0 q
+1110 1
+.names p m0 r
+1- 1
+-0 1
+.names o m0 s
+0- 1
+-0 1
+.names p o n s0 t
+0000 1
+.names e f g h v0 m0
+111-0 1
+11-00 1
+1-000 1
+-0000 1
+.names e d c n0
+111 1
+.names i h g f o0
+1111 1
+.names b a n0 o0 p0
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names i h g q0
+000 1
+.names m l k j r0
+0000 1
+.names f e q0 r0 s0
+1--- 1
+-1-- 1
+--0- 1
+---0 1
+.names e l m n o p t0
+-01--- 1
+--01-- 1
+---01- 1
+1----0 1
+.names l k t0 u0
+0-0 1
+-10 1
+.names h i j k u0 v0
+----0 1
+01--- 1
+-01-- 1
+--01- 1
+.end

@@ -1,0 +1,51 @@
+.model bbtas.kiss2
+.inputs v0 v1
+.outputs v5.3 v5.4
+.latch    v5.0 v2   0
+.latch    v5.1 v3   1
+.latch    v5.2 v4   1
+.names [18] v5.3
+0 1
+.names [20] v5.4
+0 1
+.names [12] v5.0
+0 1
+.names [14] v5.1
+0 1
+.names [16] v5.2
+0 1
+.names v0 v1 v3 [0]
+001 1
+.names v0 v1 v2 [1]
+000 1
+.names v0 v2 v4 [2]
+110 1
+.names v1 v2 v4 [3]
+110 1
+.names v2 v3 v4 [4]
+010 1
+.names v0 v1 v4 [5]
+000 1
+.names v1 v2 v3 [6]
+100 1
+.names v0 v2 v3 [7]
+100 1
+.names v1 v3 v4 [8]
+100 1
+.names v0 v3 v4 [9]
+100 1
+.names v1 v2 [10]
+11 1
+.names v0 v2 [11]
+11 1
+.names [8] [9] [10] [11] [12]
+0000 1
+.names [1] [4] [10] [11] [14]
+0000 1
+.names [0] [5] [6] [7] [16]
+0000 1
+.names [2] [18]
+0 1
+.names [3] [20]
+0 1
+.end

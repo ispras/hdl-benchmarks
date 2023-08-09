@@ -1,0 +1,27 @@
+
+.model PARITYFDS ;
+
+	.date 910103085357 ;	# January 3 1991, 08:53.57
+
+	.inputs  a b c d e f g h i j k l m n o p ;
+	.outputs q ;
+
+	q = e0 f0' + e0' f0 ;
+	e0 = a0 b0' + a0' b0 ;
+	f0 = c0 d0' + c0' d0 ;
+	s = p o' + p' o ;
+	t = n m' + n' m ;
+	u = l k' + l' k ;
+	v = j i' + j' i ;
+	w = h g' + h' g ;
+	x = f e' + f' e ;
+	y = d c' + d' c ;
+	z = b a' + b' a ;
+	a0 = s t' + s' t ;
+	b0 = u v' + u' v ;
+	c0 = w x' + w' x ;
+	d0 = y z' + y' z ;
+
+
+.endmodel PARITYFDS ;
+

@@ -1,0 +1,905 @@
+
+.model phase_decoder ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  CLK RESET data[0:0] reset[0:0] ;
+	.outputs DN bit_value[0:0] bit_clock[0:0] preamble_1[0:0] 
+	         preamble_2[0:0] preamble_3[0:0] carrier_loss[0:0] 
+	         biphase_violation[0:0] edge[0:0] save_edge[0:0] ;
+
+	.call phase_decoder_1 phase_decoder_1 (T2[0:0], data[0:0] ;;T3[0:0] ) ;
+	.call phase_decoder_2 phase_decoder_2 (T2[0:0], data[0:0] ;;T6[0:0] ) ;
+	.call phase_decoder_3 phase_decoder_3 (reset[0:0] ;;T7[0:0] ) ;
+	.call phase_decoder_4 phase_decoder_4 (T4[0:0], sample[0:0], T2[0:0], 
+	         int_edge[0:0] ;;X1[0:0], X2[0:0] ) ;
+	.call phase_decoder_5 phase_decoder_5 (window_ctr[0:0], 
+	         window_ctr[1:1], window_ctr[2:2], window_ctr[3:3], 
+	         int_edge[0:0], bit_counter[0:0], bit_counter[1:1], 
+	         bit_counter[2:2], bit_counter[3:3], int_carrier_loss[0:0], 
+	         violation[1:1], violation[2:2], violation[3:3], 
+	         violation[0:0], data_bits[0:0], data_bits[1:1], 
+	         data_bits[2:2], data_bits[3:3], int_save_edge[0:0] ;;T9[0:0], 
+	         T9[1:1], T9[2:2], T9[3:3], T10[0:0], T18[0:0], T11[0:0], 
+	         T12[0:0], T13[0:0], T14[0:0], T15[0:0], T16[0:0], T17[0:0], 
+	         T19[0:0] ) ;
+	.call phase_decoder_6 phase_decoder_6 (int_edge[0:0] ;;T47[0:0], 
+	         T46[0:0] ) ;
+	.call phase_decoder_7 phase_decoder_7 (sample[0:0], bit_counter[0:0], 
+	         bit_counter[1:1], bit_counter[2:2], bit_counter[3:3] ;;
+	         T48[0:0], T49[0:0], T50[0:0] ) ;
+	.call phase_decoder_8 phase_decoder_8 (sample[0:0], data[0:0], T9[0:0], 
+	         T9[1:1], T9[2:2], T9[3:3], window_ctr[3:3], window_ctr[2:2], 
+	         window_ctr[1:1], window_ctr[0:0], T10[0:0], T11[0:0], 
+	         T16[0:0], T46[0:0] ;;T69[0:0], T70[0:0], T70[1:1], T70[2:2], 
+	         T70[3:3] ) ;
+	.call phase_decoder_9 phase_decoder_9 (T70[0:0], T70[1:1], T70[2:2], 
+	         T70[3:3] ;;T71[0:0] ) ;
+	.call phase_decoder_10 phase_decoder_10 (data[0:0], T9[0:0], T9[1:1], 
+	         T9[2:2], T9[3:3], bit_counter[3:3], bit_counter[2:2], 
+	         bit_counter[1:1], bit_counter[0:0], T10[0:0], T16[0:0], 
+	         T48[0:0], T46[0:0], T17[0:0] ;;T73[0:0], T74[0:0], T74[1:1], 
+	         T74[2:2], T74[3:3], T75[0:0], T75[1:1], T75[2:2], T75[3:3] ) ;
+	.call phase_decoder_11 phase_decoder_11 (T9[0:0], T9[1:1], T9[2:2], 
+	         T9[3:3], int_bit_value[0:0], T10[0:0], T18[0:0], T16[0:0], 
+	         T48[0:0], T49[0:0], T50[0:0], T17[0:0], T19[0:0], 
+	         int_bit_clock[0:0], T11[0:0], int_preamble_1[0:0], T13[0:0], 
+	         int_preamble_2[0:0], T14[0:0], int_preamble_3[0:0], T15[0:0], 
+	         int_carrier_loss[0:0], T12[0:0], int_biphase_violation[0:0], 
+	         T47[0:0], int_save_edge[0:0], int_edge[0:0] ;;X42[0:0], 
+	         X51[0:0], X53[0:0], X55[0:0], X57[0:0], X59[0:0], X62[0:0], 
+	         X64[0:0] ) ;
+	.call phase_decoder_12 phase_decoder_12 (violation[0:0], 
+	         violation[1:1], violation[2:2], data_bits[0:0], 
+	         data_bits[1:1], data_bits[2:2], T9[0:0], T9[1:1], T9[2:2], 
+	         T9[3:3], violation[3:3], data_bits[3:3], T10[0:0], T18[0:0], 
+	         T16[0:0], T47[0:0], T48[0:0], T49[0:0], T50[0:0], T17[0:0], 
+	         T19[0:0], T71[0:0], T70[3:3], T70[2:2], T70[1:1], T70[0:0], 
+	         T73[0:0], T74[3:3], T75[3:3], T74[2:2], T75[2:2], T74[1:1], 
+	         T75[1:1], T74[0:0], T75[0:0], reset[0:0] ;;X68[0:0], X69[0:0], 
+	         X70[0:0], X71[0:0], X72[0:0], X73[0:0], X74[0:0], X75[0:0], 
+	         X105[0:0], X106[0:0], X107[0:0], X108[0:0], X109[0:0], 
+	         X110[0:0], X111[0:0], X112[0:0], T77[0:0] ) ;
+	.call phase_decoder_13 phase_decoder_13 (T1[0:0], int_edge[0:0], 
+	         T8[0:0], X2[0:0] ;;X113[0:0] ) ;
+	.call FF_SR_EN1 FF_SR_EN (data[0:0], RQ2_2, CLK, 0, RESET ;;T2[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (sample[0:0]_in, sample[0:0]_en, CLK, 0, RESET ;;
+	         sample[0:0] ) ;
+	.call FF_SR_EN3 FF_SR_EN (int_edge[0:0]_in, int_edge[0:0]_en, CLK, 0, 
+	         RESET ;;int_edge[0:0] ) ;
+	.call FF_SR_EN4 FF_SR_EN (X64[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_save_edge[0:0] ) ;
+	.call FF_SR_EN5 FF_SR_EN (X62[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_biphase_violation[0:0] ) ;
+	.call FF_SR_EN6 FF_SR_EN (X59[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_carrier_loss[0:0] ) ;
+	.call FF_SR_EN7 FF_SR_EN (X57[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_preamble_3[0:0] ) ;
+	.call FF_SR_EN8 FF_SR_EN (X55[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_preamble_2[0:0] ) ;
+	.call FF_SR_EN9 FF_SR_EN (X53[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_preamble_1[0:0] ) ;
+	.call FF_SR_EN10 FF_SR_EN (X51[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_bit_clock[0:0] ) ;
+	.call FF_SR_EN11 FF_SR_EN (X42[0:0], EN7_9, CLK, 0, RESET ;;
+	         int_bit_value[0:0] ) ;
+	.call FF_SR_EN12 FF_SR_EN (X109[0:0], EN7_9, CLK, 0, RESET ;;
+	         bit_counter[3:3] ) ;
+	.call FF_SR_EN13 FF_SR_EN (X110[0:0], EN7_9, CLK, 0, RESET ;;
+	         bit_counter[2:2] ) ;
+	.call FF_SR_EN14 FF_SR_EN (X111[0:0], EN7_9, CLK, 0, RESET ;;
+	         bit_counter[1:1] ) ;
+	.call FF_SR_EN15 FF_SR_EN (X112[0:0], EN7_9, CLK, 0, RESET ;;
+	         bit_counter[0:0] ) ;
+	.call FF_SR_EN16 FF_SR_EN (X105[0:0], EN7_9, CLK, 0, RESET ;;
+	         window_ctr[3:3] ) ;
+	.call FF_SR_EN17 FF_SR_EN (X106[0:0], EN7_9, CLK, 0, RESET ;;
+	         window_ctr[2:2] ) ;
+	.call FF_SR_EN18 FF_SR_EN (X107[0:0], EN7_9, CLK, 0, RESET ;;
+	         window_ctr[1:1] ) ;
+	.call FF_SR_EN19 FF_SR_EN (X108[0:0], EN7_9, CLK, 0, RESET ;;
+	         window_ctr[0:0] ) ;
+	.call FF_SR_EN20 FF_SR_EN (X68[0:0], EN7_9, CLK, 0, RESET ;;
+	         violation[3:3] ) ;
+	.call FF_SR_EN21 FF_SR_EN (X69[0:0], EN7_9, CLK, 0, RESET ;;
+	         violation[2:2] ) ;
+	.call FF_SR_EN22 FF_SR_EN (X70[0:0], EN7_9, CLK, 0, RESET ;;
+	         violation[1:1] ) ;
+	.call FF_SR_EN23 FF_SR_EN (X71[0:0], EN7_9, CLK, 0, RESET ;;
+	         violation[0:0] ) ;
+	.call FF_SR_EN24 FF_SR_EN (X72[0:0], EN7_9, CLK, 0, RESET ;;
+	         data_bits[3:3] ) ;
+	.call FF_SR_EN25 FF_SR_EN (X73[0:0], EN7_9, CLK, 0, RESET ;;
+	         data_bits[2:2] ) ;
+	.call FF_SR_EN26 FF_SR_EN (X74[0:0], EN7_9, CLK, 0, RESET ;;
+	         data_bits[1:1] ) ;
+	.call FF_SR_EN27 FF_SR_EN (X75[0:0], EN7_9, CLK, 0, RESET ;;
+	         data_bits[0:0] ) ;
+	.call FF_EN_bit_value0 FF_EN (bit_value_in[0:0], bit_value_en[0:0], 
+	         CLK, RESET ;;bit_value[0:0] ) ;
+	.call FF_EN_bit_clock0 FF_EN (bit_clock_in[0:0], bit_clock_en[0:0], 
+	         CLK, RESET ;;bit_clock[0:0] ) ;
+	.call FF_EN_preamble_10 FF_EN (preamble_1_in[0:0], preamble_1_en[0:0], 
+	         CLK, RESET ;;preamble_1[0:0] ) ;
+	.call FF_EN_preamble_20 FF_EN (preamble_2_in[0:0], preamble_2_en[0:0], 
+	         CLK, RESET ;;preamble_2[0:0] ) ;
+	.call FF_EN_preamble_30 FF_EN (preamble_3_in[0:0], preamble_3_en[0:0], 
+	         CLK, RESET ;;preamble_3[0:0] ) ;
+	.call FF_EN_carrier_loss0 FF_EN (carrier_loss_in[0:0], 
+	         carrier_loss_en[0:0], CLK, RESET ;;carrier_loss[0:0] ) ;
+	.call FF_EN_biphase_violation0 FF_EN (biphase_violation_in[0:0], 
+	         biphase_violation_en[0:0], CLK, RESET ;;biphase_violation[0:0] ) ;
+	.call FF_EN_edge0 FF_EN (edge_in[0:0], edge_en[0:0], CLK, RESET ;;
+	         edge[0:0] ) ;
+	.call FF_EN_save_edge0 FF_EN (save_edge_in[0:0], save_edge_en[0:0], 
+	         CLK, RESET ;;save_edge[0:0] ) ;
+	.call Sw1_2 FF_EN (Sw1_2_i, 1, CLK, RESET ;;DN ) ;
+	.call TcL1_2[1] FF_EN (TcL1_2_i[1], 1, CLK, RESET ;;RQ1_5 ) ;
+	.call FF_EN.1_2_LC FF_EN (LC1_2_i, 1, CLK, RESET ;;LC1_2 ) ;
+	.call T1[0:0]_L FF_EN (reset[0:0], LBr1_2_e, CLK, RESET ;;LBr1_2[0]' ) ;
+	.call TcL2_1[1] FF_EN (TcL2_1_i[1], 1, CLK, RESET ;;EN2_4 ) ;
+	.call Sw2_4 FF_EN (Sw2_4_i, 1, CLK, RESET ;;Sr2_4' ) ;
+	.call FF_EN.2_4_LC FF_EN (LC2_4_i, 1, CLK, RESET ;;LC2_4 ) ;
+	.call T4[0:0]_L FF_EN (T3[0:0], LBr2_4_e, CLK, RESET ;;LBr2_4[1] ) ;
+	.call Sw2_6 FF_EN (Sw2_6_i, 1, CLK, RESET ;;Sr2_6' ) ;
+	.call FF_EN.2_6_LC FF_EN (LC2_6_i, 1, CLK, RESET ;;LC2_6 ) ;
+	.call T8[0:0]_L FF_EN (T7[0:0], LBr2_6_e, CLK, RESET ;;LBr2_6[1] ) ;
+	.call TcL3_1[1] FF_EN (TcL3_1_i[1], 1, CLK, RESET ;;DN3_2 ) ;
+	.call Sw3_3 FF_EN (Sw3_3_i, 1, CLK, RESET ;;Sr3_3' ) ;
+	.call FF_EN.3_3_La FF_EN (AK3_3, 1, CLK, RESET ;;Lak3_3 ) ;
+	.call TcL6_1[1] FF_EN (TcL6_1_i[1], 1, CLK, RESET ;;EN6_4 ) ;
+	.call Sw6_4 FF_EN (Sw6_4_i, 1, CLK, RESET ;;Sr6_4' ) ;
+	.call FF_EN.6_4_La FF_EN (AK6_4, 1, CLK, RESET ;;Lak6_4 ) ;
+	.call TcL7_1[1] FF_EN (TcL7_1_i[1], 1, CLK, RESET ;;DN7_9 ) ;
+	.call TcL9_1[1] FF_EN (TcL9_1_i[1], 1, CLK, RESET ;;DN9_9 ) ;
+	sample[0:0]_en = RQ3_2 + RQ6_3 + EN7_9 ;
+	sample[0:0]_in = T2[0:0] RQ3_2 + X1[0:0] RQ6_3 + data[0:0] EN7_9 ;
+	int_edge[0:0]_en = RQ3_2 + RQ6_3 + EN7_9 + RQ1_4 ;
+	int_edge[0:0]_in = RQ3_2 + X2[0:0] RQ6_3 + T69[0:0] EN7_9 + X113[0:0] 
+		RQ1_4 ;
+	bit_value_in[0:0] = X42[0:0] RQ7_9 ;
+	bit_value_en[0:0] = RQ7_9 + RQ9_2 ;
+	bit_clock_in[0:0] = X51[0:0] RQ7_10 ;
+	bit_clock_en[0:0] = RQ7_10 + RQ9_3 ;
+	preamble_1_in[0:0] = X53[0:0] RQ7_11 ;
+	preamble_1_en[0:0] = RQ7_11 + RQ9_4 ;
+	preamble_2_in[0:0] = X55[0:0] RQ7_12 ;
+	preamble_2_en[0:0] = RQ7_12 + RQ9_5 ;
+	preamble_3_in[0:0] = X57[0:0] RQ7_13 ;
+	preamble_3_en[0:0] = RQ7_13 + RQ9_6 ;
+	carrier_loss_in[0:0] = X59[0:0] RQ7_14 ;
+	carrier_loss_en[0:0] = RQ7_14 + RQ9_7 ;
+	biphase_violation_in[0:0] = X62[0:0] RQ7_15 ;
+	biphase_violation_en[0:0] = RQ7_15 + RQ9_8 ;
+	edge_in[0:0] = T69[0:0] RQ7_16 ;
+	edge_en[0:0] = RQ7_16 + RQ9_9 ;
+	save_edge_in[0:0] = X64[0:0] RQ7_17 ;
+	save_edge_en[0:0] = RQ7_17 + RQ9_10 ;
+	Sw1_2_i = DN' ( DN + DN' AK1_2 ) ;
+	TcL1_2_i[1] = DN' ( DN + RQ1_5 ) ;
+	Br1_2[0] = reset[0:0]' LC1_2' + LBr1_2[0] LC1_2 ;
+	Br1_2[1] = reset[0:0] LC1_2' + LBr1_2[0]' LC1_2 ;
+	LC1_2_i = DN' ( DN' + LC1_2 ) ;
+	LBr1_2_e = DN' LC1_2' ;
+	T1[0:0] = LC1_2' reset[0:0] + LC1_2 LBr1_2[0]' ;
+	AK1_2 = RQ2_7 + EN9_9 ;
+	RQ1_4 = DN RQ1_5' ;
+	DS2_4 = T7[0:0]' LC2_6' + LBr2_6[1]' LC2_6 ;
+	TcL2_1_i[1] = RQ2_7' ( EN2_2 + EN2_4 ) ;
+	RQ2_2 = EN2_2 EN2_4' ;
+	RQ2_4 = Sr2_4 EN2_4 SL2_4' ;
+	Sw2_4_i = DN' ( Sr2_4' + Sr2_4 EN2_4 ( SL2_4 + AK2_4 ) ) ;
+	Br2_4[1] = T3[0:0] LC2_4' + LBr2_4[1] LC2_4 ;
+	LC2_4_i = DN' ( RQ2_4 + LC2_4 ) ;
+	LBr2_4_e = RQ2_4 LC2_4' ;
+	T4[0:0] = LC2_4' T3[0:0] + LC2_4 LBr2_4[1] ;
+	RQ5_2 = RQ2_4 SL2_4 LC2_4' ;
+	AK2_4 = GFDN_3 + RQ5_2 ;
+	SL2_4 = T3[0:0]' LC2_4' + LBr2_4[1]' LC2_4 ;
+	RQ2_6 = Sr2_6 EN2_6 DS2_4' ;
+	RQ2_7 = Sr2_6' + Sr2_6 EN2_6 ( DS2_4 + AK2_6 ) ;
+	Sw2_6_i = DN' ( Sr2_6' + Sr2_6 EN2_6 ( DS2_4 + AK2_6 ) ) ;
+	Br2_6[1] = T7[0:0] LC2_6' + LBr2_6[1] LC2_6 ;
+	LC2_6_i = DN' ( RQ2_6 + LC2_6 ) ;
+	LBr2_6_e = RQ2_6 LC2_6' ;
+	T8[0:0] = LC2_6' T7[0:0] + LC2_6 LBr2_6[1] ;
+	RQ8_2 = RQ2_6 DS2_4 LC2_6' ;
+	AK2_6 = RQ6_5 + RQ8_2 ;
+	GFDN_3 = EN3_3 DN3_3 ;
+	TcL3_1_i[1] = GFDN_3' ( EN3_3 + DN3_2 ) ;
+	RQ3_2 = EN3_3 DN3_2' ;
+	RQ3_3 = Sr3_3 EN3_3 ;
+	Sw3_3_i = DN' ( Sr3_3' + Sr3_3 EN3_3 AK3_3 ) ;
+	AK3_3 = T6[0:0] RQ4_3 ;
+	RQ4_3 = RQ3_3 Lak3_3' ;
+	TcL6_1_i[1] = RQ6_5' ( EN6_3 + EN6_4 ) ;
+	RQ6_3 = EN6_3 EN6_4' ;
+	RQ6_4 = Sr6_4 EN6_4 ;
+	RQ6_5 = Sr6_4' + Sr6_4 EN6_4 AK6_4 ;
+	Sw6_4_i = DN' ( Sr6_4' + Sr6_4 EN6_4 AK6_4 ) ;
+	AK6_4 = T77[0:0] EN7_9 ;
+	TcL7_1_i[1] = EN7_9' ( EN7_9 + DN7_9 ) ;
+	RQ7_9 = EN7_9 DN7_9' ;
+	RQ7_10 = EN7_9 DN7_9' ;
+	RQ7_11 = EN7_9 DN7_9' ;
+	RQ7_12 = EN7_9 DN7_9' ;
+	RQ7_13 = EN7_9 DN7_9' ;
+	RQ7_14 = EN7_9 DN7_9' ;
+	RQ7_15 = EN7_9 DN7_9' ;
+	RQ7_16 = EN7_9 DN7_9' ;
+	RQ7_17 = EN7_9 DN7_9' ;
+	TcL9_1_i[1] = EN9_9' ( EN9_9 + DN9_9 ) ;
+	RQ9_2 = EN9_9 DN9_9' ;
+	RQ9_3 = EN9_9 DN9_9' ;
+	RQ9_4 = EN9_9 DN9_9' ;
+	RQ9_5 = EN9_9 DN9_9' ;
+	RQ9_6 = EN9_9 DN9_9' ;
+	RQ9_7 = EN9_9 DN9_9' ;
+	RQ9_8 = EN9_9 DN9_9' ;
+	RQ9_9 = EN9_9 DN9_9' ;
+	RQ9_10 = EN9_9 DN9_9' ;
+	EN2_2 = DN' ( LC1_2' Br1_2[0] + LC1_2 LBr1_2[0] ) ;
+	EN2_6 = Sr2_4' + Sr2_4 EN2_4 ( SL2_4 + AK2_4 DS2_4 ) ;
+	DN3_3 = Sr3_3' + Sr3_3 EN3_3 AK3_3 ;
+	EN3_3 = RQ2_4 ( LC2_4' Br2_4[1] + LC2_4 LBr2_4[1] ) ;
+	EN6_3 = RQ2_6 ( LC2_6' Br2_6[1] + LC2_6 LBr2_6[1] ) ;
+	EN7_9 = RQ6_4 Lak6_4' ;
+	EN9_9 = DN' Br1_2[1] LC1_2' ;
+
+
+.endmodel phase_decoder ;
+
+
+.model phase_decoder_1 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  T2[0:0] data[0:0] ;
+	.outputs T3[0:0] ;
+
+	T3[0:0] = T2[0:0] data[0:0] + T2[0:0]' data[0:0]' ;
+
+
+.endmodel phase_decoder_1 ;
+
+
+.model phase_decoder_2 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  T2[0:0] data[0:0] ;
+	.outputs T6[0:0] ;
+
+	T6[0:0] = ( T2[0:0] data[0:0] + T2[0:0]' data[0:0]' )' ;
+
+
+.endmodel phase_decoder_2 ;
+
+
+.model phase_decoder_3 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  reset[0:0] ;
+	.outputs T7[0:0] ;
+	.net reset[0:0]' T7[0:0] ;
+
+
+
+.endmodel phase_decoder_3 ;
+
+
+.model phase_decoder_4 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  T4[0:0] sample[0:0] T2[0:0] int_edge[0:0] ;
+	.outputs X1[0:0] X2[0:0] ;
+
+	X1[0:0] = T4[0:0] sample[0:0] + T4[0:0]' T2[0:0] ;
+	X2[0:0] = T4[0:0]' + T4[0:0] int_edge[0:0] ;
+
+
+.endmodel phase_decoder_4 ;
+
+
+.model phase_decoder_5 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  window_ctr[0:0] window_ctr[1:1] window_ctr[2:2] 
+	         window_ctr[3:3] int_edge[0:0] bit_counter[0:0] bit_counter[1:1] 
+	         bit_counter[2:2] bit_counter[3:3] int_carrier_loss[0:0] 
+	         violation[1:1] violation[2:2] violation[3:3] violation[0:0] 
+	         data_bits[0:0] data_bits[1:1] data_bits[2:2] data_bits[3:3] 
+	         int_save_edge[0:0] ;
+	.outputs T9[0:0] T9[1:1] T9[2:2] T9[3:3] T10[0:0] T18[0:0] T11[0:0] 
+	         T12[0:0] T13[0:0] T14[0:0] T15[0:0] T16[0:0] T17[0:0] T19[0:0] ;
+	.net window_ctr[0:0] T9[0:0] ;
+	.net window_ctr[1:1] T9[1:1] ;
+	.net window_ctr[2:2] T9[2:2] ;
+	.net window_ctr[3:3] T9[3:3] ;
+	.net int_edge[0:0] T17[0:0] T10[0:0] ;
+	.net int_carrier_loss[0:0] T11[0:0] ;
+	.net int_save_edge[0:0] T16[0:0] ;
+
+	T22[0:0] = T37[0:0] + T38[0:0] ;
+	T24[0:0] = T22[0:0] + T40[0:0] ;
+	T26[0:0] = T24[0:0] + T42[0:0] ;
+	T39[0:0] = T37[0:0] + T38[0:0] ;
+	T41[0:0] = T39[0:0] + T40[0:0] ;
+	T43[0:0] = T41[0:0] + T42[0:0] ;
+	T18[0:0] = T26[0:0] + T44[0:0] ;
+	T12[0:0] = violation[1:1] violation[2:2] violation[3:3] ;
+	T13[0:0] = T30[0:0] T31[0:0] ;
+	T14[0:0] = T33[0:0] T34[0:0] ;
+	T15[0:0] = T33[0:0] T31[0:0] ;
+	T19[0:0] = T43[0:0] + T44[0:0] ;
+	T30[0:0] = violation[0:0]' violation[1:1] violation[2:2]' 
+		violation[3:3] ;
+	T31[0:0] = data_bits[0:0]' data_bits[1:1] data_bits[2:2] 
+		data_bits[3:3]' ;
+	T33[0:0] = violation[0:0]' violation[1:1]' violation[2:2] 
+		violation[3:3] ;
+	T34[0:0] = data_bits[0:0] data_bits[1:1]' data_bits[2:2] 
+		data_bits[3:3]' ;
+	T37[0:0] = bit_counter[0:0]' bit_counter[1:1] bit_counter[2:2] 
+		bit_counter[3:3]' ;
+	T38[0:0] = bit_counter[0:0] bit_counter[1:1] bit_counter[2:2] 
+		bit_counter[3:3]' ;
+	T40[0:0] = bit_counter[0:0]' bit_counter[1:1]' bit_counter[2:2]' 
+		bit_counter[3:3] ;
+	T42[0:0] = bit_counter[0:0] bit_counter[1:1]' bit_counter[2:2]' 
+		bit_counter[3:3] ;
+	T44[0:0] = bit_counter[0:0]' bit_counter[1:1] bit_counter[2:2]' 
+		bit_counter[3:3] ;
+
+
+.endmodel phase_decoder_5 ;
+
+
+.model phase_decoder_6 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  int_edge[0:0] ;
+	.outputs T47[0:0] T46[0:0] ;
+	.net int_edge[0:0]' T46[0:0]' T47[0:0] ;
+
+
+
+.endmodel phase_decoder_6 ;
+
+
+.model phase_decoder_7 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  sample[0:0] bit_counter[0:0] bit_counter[1:1] bit_counter[2:2] 
+	         bit_counter[3:3] ;
+	.outputs T48[0:0] T49[0:0] T50[0:0] ;
+	.net sample[0:0] T48[0:0] ;
+
+	T53[0:0] = T51[0:0] + T52[0:0] ;
+	T55[0:0] = T53[0:0] + T60[0:0] ;
+	T57[0:0] = T55[0:0] + T61[0:0] ;
+	T62[0:0] = T60[0:0] + T61[0:0] ;
+	T64[0:0] = T62[0:0] + T63[0:0] ;
+	T66[0:0] = T64[0:0] + T65[0:0] ;
+	T49[0:0] = T57[0:0] + T63[0:0] ;
+	T50[0:0] = T66[0:0] + T67[0:0] ;
+	T51[0:0] = bit_counter[0:0] bit_counter[1:1]' bit_counter[2:2] 
+		bit_counter[3:3]' ;
+	T52[0:0] = bit_counter[0:0]' bit_counter[1:1] bit_counter[2:2] 
+		bit_counter[3:3]' ;
+	T60[0:0] = bit_counter[0:0] bit_counter[1:1] bit_counter[2:2] 
+		bit_counter[3:3]' ;
+	T61[0:0] = bit_counter[0:0]' bit_counter[1:1]' bit_counter[2:2]' 
+		bit_counter[3:3] ;
+	T63[0:0] = bit_counter[0:0] bit_counter[1:1]' bit_counter[2:2]' 
+		bit_counter[3:3] ;
+	T65[0:0] = bit_counter[0:0]' bit_counter[1:1] bit_counter[2:2]' 
+		bit_counter[3:3] ;
+	T67[0:0] = bit_counter[0:0] bit_counter[1:1] bit_counter[2:2]' 
+		bit_counter[3:3] ;
+
+
+.endmodel phase_decoder_7 ;
+
+
+.model phase_decoder_8 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  sample[0:0] data[0:0] T9[0:0] T9[1:1] T9[2:2] T9[3:3] 
+	         window_ctr[3:3] window_ctr[2:2] window_ctr[1:1] window_ctr[0:0] 
+	         T10[0:0] T11[0:0] T16[0:0] T46[0:0] ;
+	.outputs T69[0:0] T70[0:0] T70[1:1] T70[2:2] T70[3:3] ;
+
+	T69[0:0] = sample[0:0] data[0:0]' + sample[0:0]' data[0:0] ;
+	X7[0:0] = T10[0:0]' window_ctr[3:3] ;
+	X8[0:0] = T10[0:0]' window_ctr[2:2] ;
+	X9[0:0] = T10[0:0]' window_ctr[1:1] ;
+	X10[0:0] = T10[0:0]' window_ctr[0:0] ;
+	X11[0:0] = T11[0:0] + T11[0:0]' window_ctr[3:3] ;
+	X12[0:0] = T11[0:0]' window_ctr[2:2] ;
+	X13[0:0] = T11[0:0]' window_ctr[1:1] ;
+	X14[0:0] = T11[0:0] + T11[0:0]' window_ctr[0:0] ;
+	X15[0:0] = T16[0:0]' X19[0:0] + T16[0:0] window_ctr[3:3] ;
+	X16[0:0] = T16[0:0]' X20[0:0] + T16[0:0] window_ctr[2:2] ;
+	X17[0:0] = T16[0:0]' X21[0:0] + T16[0:0] window_ctr[1:1] ;
+	X18[0:0] = T16[0:0]' X22[0:0] + T16[0:0] window_ctr[0:0] ;
+	X19[0:0] = T46[0:0]' window_ctr[3:3] ;
+	X20[0:0] = T46[0:0]' window_ctr[2:2] ;
+	X21[0:0] = T46[0:0]' window_ctr[1:1] ;
+	X22[0:0] = T46[0:0]' window_ctr[0:0] ;
+	T70[0:0] = ( V1111_T9[0:3] window_ctr[0:0] + V0111_T9[0:3] 
+		window_ctr[0:0] + V1011_T9[0:3] window_ctr[0:0] + V0011_T9[0:3] 
+		window_ctr[0:0] + V1101_T9[0:3] window_ctr[0:0] + V0101_T9[0:3] 
+		window_ctr[0:0] + V0001_T9[0:3] window_ctr[0:0] + V1110_T9[0:3] 
+		window_ctr[0:0] + V0110_T9[0:3] window_ctr[0:0] + V1010_T9[0:3] 
+		window_ctr[0:0] + V1100_T9[0:3] window_ctr[0:0] + V1001_T9[0:3] 
+		X10[0:0] + V0010_T9[0:3] X14[0:0] + V0100_T9[0:3] 
+		window_ctr[0:0] + V1000_T9[0:3] X18[0:0] + V0000_T9[0:3] 
+		window_ctr[0:0] )' ;
+	T70[1:1] = M1[1:1] T70[0:0] + M1[1:1]' T70[0:0]' ;
+	c_T70[2:2] = T70[0:0]' M1[1:1] ;
+	T70[2:2] = M1[2:2] c_T70[2:2]' + M1[2:2]' c_T70[2:2] ;
+	T70[4:4] = c_T70[2:2] M1[2:2] ;
+	T70[3:3] = M1[3:3] T70[4:4]' + M1[3:3]' T70[4:4] ;
+	V0000_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V1000_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V0100_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3]' ;
+	V0010_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3]' ;
+	V1001_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3] ;
+	V1100_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3]' ;
+	V1010_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3]' ;
+	V0110_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3]' ;
+	V1110_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3]' ;
+	V0001_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3] ;
+	V0101_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3] ;
+	V1101_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3] ;
+	V0011_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3] ;
+	V1011_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3] ;
+	V0111_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3] ;
+	V1111_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3] ;
+	M1[1:1] = V1111_T9[0:3] window_ctr[1:1] + V0111_T9[0:3] window_ctr[1:1] 
+		+ V1011_T9[0:3] window_ctr[1:1] + V0011_T9[0:3] window_ctr[1:1] 
+		+ V1101_T9[0:3] window_ctr[1:1] + V0101_T9[0:3] window_ctr[1:1] 
+		+ V0001_T9[0:3] window_ctr[1:1] + V1110_T9[0:3] window_ctr[1:1] 
+		+ V0110_T9[0:3] window_ctr[1:1] + V1010_T9[0:3] window_ctr[1:1] 
+		+ V1100_T9[0:3] window_ctr[1:1] + V1001_T9[0:3] X9[0:0] + 
+		V0010_T9[0:3] X13[0:0] + V0100_T9[0:3] window_ctr[1:1] + 
+		V1000_T9[0:3] X17[0:0] + V0000_T9[0:3] window_ctr[1:1] ;
+	M1[2:2] = V1111_T9[0:3] window_ctr[2:2] + V0111_T9[0:3] window_ctr[2:2] 
+		+ V1011_T9[0:3] window_ctr[2:2] + V0011_T9[0:3] window_ctr[2:2] 
+		+ V1101_T9[0:3] window_ctr[2:2] + V0101_T9[0:3] window_ctr[2:2] 
+		+ V0001_T9[0:3] window_ctr[2:2] + V1110_T9[0:3] window_ctr[2:2] 
+		+ V0110_T9[0:3] window_ctr[2:2] + V1010_T9[0:3] window_ctr[2:2] 
+		+ V1100_T9[0:3] window_ctr[2:2] + V1001_T9[0:3] X8[0:0] + 
+		V0010_T9[0:3] X12[0:0] + V0100_T9[0:3] window_ctr[2:2] + 
+		V1000_T9[0:3] X16[0:0] + V0000_T9[0:3] window_ctr[2:2] ;
+	M1[3:3] = V1111_T9[0:3] window_ctr[3:3] + V0111_T9[0:3] window_ctr[3:3] 
+		+ V1011_T9[0:3] window_ctr[3:3] + V0011_T9[0:3] window_ctr[3:3] 
+		+ V1101_T9[0:3] window_ctr[3:3] + V0101_T9[0:3] window_ctr[3:3] 
+		+ V0001_T9[0:3] window_ctr[3:3] + V1110_T9[0:3] window_ctr[3:3] 
+		+ V0110_T9[0:3] window_ctr[3:3] + V1010_T9[0:3] window_ctr[3:3] 
+		+ V1100_T9[0:3] window_ctr[3:3] + V1001_T9[0:3] X7[0:0] + 
+		V0010_T9[0:3] X11[0:0] + V0100_T9[0:3] window_ctr[3:3] + 
+		V1000_T9[0:3] X15[0:0] + V0000_T9[0:3] window_ctr[3:3] ;
+
+
+.endmodel phase_decoder_8 ;
+
+
+.model phase_decoder_9 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  T70[0:0] T70[1:1] T70[2:2] T70[3:3] ;
+	.outputs T71[0:0] ;
+
+	T71[0:0] = T70[0:0]' T70[1:1] T70[2:2]' T70[3:3] ;
+
+
+.endmodel phase_decoder_9 ;
+
+
+.model phase_decoder_10 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  data[0:0] T9[0:0] T9[1:1] T9[2:2] T9[3:3] bit_counter[3:3] 
+	         bit_counter[2:2] bit_counter[1:1] bit_counter[0:0] T10[0:0] 
+	         T16[0:0] T48[0:0] T46[0:0] T17[0:0] ;
+	.outputs T73[0:0] T74[0:0] T74[1:1] T74[2:2] T74[3:3] T75[0:0] T75[1:1] 
+	         T75[2:2] T75[3:3] ;
+	.net data[0:0] T73[0:0] ;
+	.net T75[0:0] T74[0:0] ;
+
+	X27[0:0] = T10[0:0]' bit_counter[3:3] ;
+	X28[0:0] = T10[0:0]' bit_counter[2:2] ;
+	X29[0:0] = T10[0:0]' bit_counter[1:1] ;
+	X30[0:0] = T10[0:0]' bit_counter[0:0] ;
+	X31[0:0] = T16[0:0]' X36[0:0] + T16[0:0] bit_counter[3:3] ;
+	X32[0:0] = T16[0:0]' X36[0:0] + T16[0:0] bit_counter[2:2] ;
+	X33[0:0] = T16[0:0]' X36[0:0] + T16[0:0] bit_counter[1:1] ;
+	X34[0:0] = T16[0:0]' T46[0:0]' + T16[0:0] bit_counter[0:0] ;
+	X36[0:0] = T46[0:0]' T48[0:0]' ;
+	X38[0:0] = T17[0:0]' bit_counter[3:3] ;
+	X39[0:0] = T17[0:0]' bit_counter[2:2] ;
+	X40[0:0] = T17[0:0]' bit_counter[1:1] ;
+	X41[0:0] = T17[0:0]' bit_counter[0:0] ;
+	T74[1:1] = M3[1:1]' T75[0:0] + M3[1:1] T75[0:0]' ;
+	c_T74[2:2] = M3[1:1] + T75[0:0]' ;
+	T74[2:2] = M3[2:2]' c_T74[2:2]' + M3[2:2] c_T74[2:2] ;
+	T74[4:4] = M3[2:2] + c_T74[2:2] ;
+	T74[3:3] = M3[3:3]' T74[4:4]' + M3[3:3] T74[4:4] ;
+	T75[0:0] = ( V1111_T9[0:3] bit_counter[0:0] + V0111_T9[0:3] 
+		bit_counter[0:0] + V1011_T9[0:3] bit_counter[0:0] + 
+		V0011_T9[0:3] bit_counter[0:0] + V1101_T9[0:3] bit_counter[0:0] 
+		+ V0101_T9[0:3] bit_counter[0:0] + V0001_T9[0:3] 
+		bit_counter[0:0] + V1110_T9[0:3] bit_counter[0:0] + 
+		V0110_T9[0:3] bit_counter[0:0] + V1010_T9[0:3] bit_counter[0:0] 
+		+ V1100_T9[0:3] bit_counter[0:0] + V1001_T9[0:3] X30[0:0] + 
+		V0010_T9[0:3] bit_counter[0:0] + V0100_T9[0:3] bit_counter[0:0] 
+		+ V1000_T9[0:3] X34[0:0] + V0000_T9[0:3] X41[0:0] )' ;
+	T75[1:1] = M3[1:1] T75[0:0] + M3[1:1]' T75[0:0]' ;
+	c_T75[2:2] = T75[0:0]' M3[1:1] ;
+	T75[2:2] = M3[2:2] c_T75[2:2]' + M3[2:2]' c_T75[2:2] ;
+	T75[4:4] = c_T75[2:2] M3[2:2] ;
+	T75[3:3] = M3[3:3] T75[4:4]' + M3[3:3]' T75[4:4] ;
+	V0000_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V1000_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V0100_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3]' ;
+	V0010_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3]' ;
+	V1001_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3] ;
+	V1100_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3]' ;
+	V1010_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3]' ;
+	V0110_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3]' ;
+	V1110_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3]' ;
+	V0001_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3] ;
+	V0101_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3] ;
+	V1101_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3] ;
+	V0011_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3] ;
+	V1011_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3] ;
+	V0111_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3] ;
+	V1111_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3] ;
+	M3[1:1] = V1111_T9[0:3] bit_counter[1:1] + V0111_T9[0:3] 
+		bit_counter[1:1] + V1011_T9[0:3] bit_counter[1:1] + 
+		V0011_T9[0:3] bit_counter[1:1] + V1101_T9[0:3] bit_counter[1:1] 
+		+ V0101_T9[0:3] bit_counter[1:1] + V0001_T9[0:3] 
+		bit_counter[1:1] + V1110_T9[0:3] bit_counter[1:1] + 
+		V0110_T9[0:3] bit_counter[1:1] + V1010_T9[0:3] bit_counter[1:1] 
+		+ V1100_T9[0:3] bit_counter[1:1] + V1001_T9[0:3] X29[0:0] + 
+		V0010_T9[0:3] bit_counter[1:1] + V0100_T9[0:3] bit_counter[1:1] 
+		+ V1000_T9[0:3] X33[0:0] + V0000_T9[0:3] X40[0:0] ;
+	M3[2:2] = V1111_T9[0:3] bit_counter[2:2] + V0111_T9[0:3] 
+		bit_counter[2:2] + V1011_T9[0:3] bit_counter[2:2] + 
+		V0011_T9[0:3] bit_counter[2:2] + V1101_T9[0:3] bit_counter[2:2] 
+		+ V0101_T9[0:3] bit_counter[2:2] + V0001_T9[0:3] 
+		bit_counter[2:2] + V1110_T9[0:3] bit_counter[2:2] + 
+		V0110_T9[0:3] bit_counter[2:2] + V1010_T9[0:3] bit_counter[2:2] 
+		+ V1100_T9[0:3] bit_counter[2:2] + V1001_T9[0:3] X28[0:0] + 
+		V0010_T9[0:3] bit_counter[2:2] + V0100_T9[0:3] bit_counter[2:2] 
+		+ V1000_T9[0:3] X32[0:0] + V0000_T9[0:3] X39[0:0] ;
+	M3[3:3] = V1111_T9[0:3] bit_counter[3:3] + V0111_T9[0:3] 
+		bit_counter[3:3] + V1011_T9[0:3] bit_counter[3:3] + 
+		V0011_T9[0:3] bit_counter[3:3] + V1101_T9[0:3] bit_counter[3:3] 
+		+ V0101_T9[0:3] bit_counter[3:3] + V0001_T9[0:3] 
+		bit_counter[3:3] + V1110_T9[0:3] bit_counter[3:3] + 
+		V0110_T9[0:3] bit_counter[3:3] + V1010_T9[0:3] bit_counter[3:3] 
+		+ V1100_T9[0:3] bit_counter[3:3] + V1001_T9[0:3] X27[0:0] + 
+		V0010_T9[0:3] bit_counter[3:3] + V0100_T9[0:3] bit_counter[3:3] 
+		+ V1000_T9[0:3] X31[0:0] + V0000_T9[0:3] X38[0:0] ;
+
+
+.endmodel phase_decoder_10 ;
+
+
+.model phase_decoder_11 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  T9[0:0] T9[1:1] T9[2:2] T9[3:3] int_bit_value[0:0] T10[0:0] 
+	         T18[0:0] T16[0:0] T48[0:0] T49[0:0] T50[0:0] T17[0:0] T19[0:0] 
+	         int_bit_clock[0:0] T11[0:0] int_preamble_1[0:0] T13[0:0] 
+	         int_preamble_2[0:0] T14[0:0] int_preamble_3[0:0] T15[0:0] 
+	         int_carrier_loss[0:0] T12[0:0] int_biphase_violation[0:0] 
+	         T47[0:0] int_save_edge[0:0] int_edge[0:0] ;
+	.outputs X42[0:0] X51[0:0] X53[0:0] X55[0:0] X57[0:0] X59[0:0] X62[0:0] 
+	         X64[0:0] ;
+
+	X42[0:0] = V1111_T9[0:3] int_bit_value[0:0] + V0111_T9[0:3] 
+		int_bit_value[0:0] + V1011_T9[0:3] int_bit_value[0:0] + 
+		V0011_T9[0:3] int_bit_value[0:0] + V1101_T9[0:3] 
+		int_bit_value[0:0] + V0101_T9[0:3] int_bit_value[0:0] + 
+		V0001_T9[0:3] int_bit_value[0:0] + V1110_T9[0:3] 
+		int_bit_value[0:0] + V0110_T9[0:3] int_bit_value[0:0] + 
+		V1010_T9[0:3] int_bit_value[0:0] + V1100_T9[0:3] 
+		int_bit_value[0:0] + V1001_T9[0:3] X43[0:0] + V0010_T9[0:3] 
+		int_bit_value[0:0] + V0100_T9[0:3] int_bit_value[0:0] + 
+		V1000_T9[0:3] X45[0:0] + V0000_T9[0:3] X49[0:0] ;
+	X43[0:0] = T10[0:0]' int_bit_value[0:0] + T10[0:0] T18[0:0]' ;
+	X45[0:0] = T16[0:0]' X46[0:0] + T16[0:0] int_bit_value[0:0] ;
+	X46[0:0] = T48[0:0]' T49[0:0]' + T48[0:0] T50[0:0]' ;
+	X49[0:0] = T17[0:0]' int_bit_value[0:0] + T17[0:0] T19[0:0]' ;
+	X51[0:0] = V0111_T9[0:3] int_bit_clock[0:0] + V1111_T9[0:3] 
+		int_bit_clock[0:0] + V0011_T9[0:3] int_bit_clock[0:0] + 
+		V1011_T9[0:3] int_bit_clock[0:0] + V1101_T9[0:3] 
+		int_bit_clock[0:0] + V0001_T9[0:3] int_bit_clock[0:0] + 
+		V1110_T9[0:3] int_bit_clock[0:0] + V0101_T9[0:3] 
+		int_bit_clock[0:0] + V1010_T9[0:3] int_bit_clock[0:0] + 
+		V1100_T9[0:3] int_bit_clock[0:0] + V0110_T9[0:3] 
+		int_bit_clock[0:0] + V0010_T9[0:3] T11[0:0]' + V0100_T9[0:3] 
+		int_bit_clock[0:0] + V1000_T9[0:3] int_bit_clock[0:0] + 
+		V0000_T9[0:3] int_bit_clock[0:0] ;
+	X53[0:0] = V1111_T9[0:3] int_preamble_1[0:0] + V0111_T9[0:3] 
+		int_preamble_1[0:0] + V1011_T9[0:3] int_preamble_1[0:0] + 
+		V0011_T9[0:3] int_preamble_1[0:0] + V1101_T9[0:3] 
+		int_preamble_1[0:0] + V0101_T9[0:3] int_preamble_1[0:0] + 
+		V0001_T9[0:3] int_preamble_1[0:0] + V1110_T9[0:3] 
+		int_preamble_1[0:0] + V0110_T9[0:3] int_preamble_1[0:0] + 
+		V1010_T9[0:3] int_preamble_1[0:0] + V1100_T9[0:3] 
+		int_preamble_1[0:0] + V1001_T9[0:3] int_preamble_1[0:0] + 
+		V0010_T9[0:3] int_preamble_1[0:0] + V0100_T9[0:3] T13[0:0] + 
+		V1000_T9[0:3] int_preamble_1[0:0] + V0000_T9[0:3] 
+		int_preamble_1[0:0] ;
+	X55[0:0] = V1111_T9[0:3] int_preamble_2[0:0] + V0111_T9[0:3] 
+		int_preamble_2[0:0] + V1011_T9[0:3] int_preamble_2[0:0] + 
+		V0011_T9[0:3] int_preamble_2[0:0] + V1101_T9[0:3] 
+		int_preamble_2[0:0] + V0101_T9[0:3] int_preamble_2[0:0] + 
+		V0001_T9[0:3] int_preamble_2[0:0] + V1110_T9[0:3] 
+		int_preamble_2[0:0] + V0110_T9[0:3] int_preamble_2[0:0] + 
+		V1010_T9[0:3] int_preamble_2[0:0] + V1100_T9[0:3] 
+		int_preamble_2[0:0] + V1001_T9[0:3] int_preamble_2[0:0] + 
+		V0010_T9[0:3] int_preamble_2[0:0] + V0100_T9[0:3] T14[0:0] + 
+		V1000_T9[0:3] int_preamble_2[0:0] + V0000_T9[0:3] 
+		int_preamble_2[0:0] ;
+	X57[0:0] = V1111_T9[0:3] int_preamble_3[0:0] + V0111_T9[0:3] 
+		int_preamble_3[0:0] + V1011_T9[0:3] int_preamble_3[0:0] + 
+		V0011_T9[0:3] int_preamble_3[0:0] + V1101_T9[0:3] 
+		int_preamble_3[0:0] + V0101_T9[0:3] int_preamble_3[0:0] + 
+		V0001_T9[0:3] int_preamble_3[0:0] + V1110_T9[0:3] 
+		int_preamble_3[0:0] + V0110_T9[0:3] int_preamble_3[0:0] + 
+		V1010_T9[0:3] int_preamble_3[0:0] + V1100_T9[0:3] 
+		int_preamble_3[0:0] + V1001_T9[0:3] int_preamble_3[0:0] + 
+		V0010_T9[0:3] int_preamble_3[0:0] + V0100_T9[0:3] T15[0:0] + 
+		V1000_T9[0:3] int_preamble_3[0:0] + V0000_T9[0:3] 
+		int_preamble_3[0:0] ;
+	X59[0:0] = V1111_T9[0:3] int_carrier_loss[0:0] + V0111_T9[0:3] 
+		int_carrier_loss[0:0] + V1011_T9[0:3] int_carrier_loss[0:0] + 
+		V0011_T9[0:3] int_carrier_loss[0:0] + V1101_T9[0:3] 
+		int_carrier_loss[0:0] + V0101_T9[0:3] int_carrier_loss[0:0] + 
+		V0001_T9[0:3] int_carrier_loss[0:0] + V1110_T9[0:3] 
+		int_carrier_loss[0:0] + V0110_T9[0:3] int_carrier_loss[0:0] + 
+		V1010_T9[0:3] int_carrier_loss[0:0] + V1100_T9[0:3] 
+		int_carrier_loss[0:0] + V1001_T9[0:3] int_carrier_loss[0:0] + 
+		V0010_T9[0:3] X60[0:0] + V0100_T9[0:3] T12[0:0] + V1000_T9[0:3] 
+		int_carrier_loss[0:0] + V0000_T9[0:3] int_carrier_loss[0:0] ;
+	X60[0:0] = T11[0:0]' int_carrier_loss[0:0] ;
+	X62[0:0] = V1111_T9[0:3] int_biphase_violation[0:0] + V0111_T9[0:3] 
+		int_biphase_violation[0:0] + V1011_T9[0:3] 
+		int_biphase_violation[0:0] + V0011_T9[0:3] 
+		int_biphase_violation[0:0] + V1101_T9[0:3] 
+		int_biphase_violation[0:0] + V0101_T9[0:3] 
+		int_biphase_violation[0:0] + V0001_T9[0:3] 
+		int_biphase_violation[0:0] + V1110_T9[0:3] 
+		int_biphase_violation[0:0] + V0110_T9[0:3] 
+		int_biphase_violation[0:0] + V1010_T9[0:3] 
+		int_biphase_violation[0:0] + V1100_T9[0:3] 
+		int_biphase_violation[0:0] + V1001_T9[0:3] 
+		int_biphase_violation[0:0] + V0010_T9[0:3] 
+		int_biphase_violation[0:0] + V0100_T9[0:3] 
+		int_biphase_violation[0:0] + V1000_T9[0:3] X63[0:0] + 
+		V0000_T9[0:3] int_biphase_violation[0:0] ;
+	X63[0:0] = T16[0:0]' T47[0:0] ;
+	X64[0:0] = V1111_T9[0:3] int_save_edge[0:0] + V0111_T9[0:3] 
+		int_save_edge[0:0] + V1011_T9[0:3] int_save_edge[0:0] + 
+		V0011_T9[0:3] int_save_edge[0:0] + V1101_T9[0:3] 
+		int_save_edge[0:0] + V0101_T9[0:3] int_save_edge[0:0] + 
+		V0001_T9[0:3] int_save_edge[0:0] + V1110_T9[0:3] 
+		int_save_edge[0:0] + V0110_T9[0:3] int_save_edge[0:0] + 
+		V1010_T9[0:3] int_save_edge[0:0] + V1100_T9[0:3] 
+		int_save_edge[0:0] + V1001_T9[0:3] X65[0:0] + V0010_T9[0:3] 
+		int_save_edge[0:0] + V0100_T9[0:3] int_save_edge[0:0] + 
+		V1000_T9[0:3] X66[0:0] + V0000_T9[0:3] X67[0:0] ;
+	X65[0:0] = T10[0:0] + T10[0:0]' int_save_edge[0:0] ;
+	X66[0:0] = T16[0:0]' int_edge[0:0] ;
+	X67[0:0] = T17[0:0] + T17[0:0]' int_save_edge[0:0] ;
+	V0000_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V1000_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V0100_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3]' ;
+	V0010_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3]' ;
+	V1001_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3] ;
+	V1100_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3]' ;
+	V1010_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3]' ;
+	V0110_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3]' ;
+	V1110_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3]' ;
+	V0001_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3] ;
+	V0101_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3] ;
+	V1101_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3] ;
+	V0011_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3] ;
+	V1011_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3] ;
+	V0111_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3] ;
+	V1111_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3] ;
+
+
+.endmodel phase_decoder_11 ;
+
+
+.model phase_decoder_12 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  violation[0:0] violation[1:1] violation[2:2] data_bits[0:0] 
+	         data_bits[1:1] data_bits[2:2] T9[0:0] T9[1:1] T9[2:2] T9[3:3] 
+	         violation[3:3] data_bits[3:3] T10[0:0] T18[0:0] T16[0:0] 
+	         T47[0:0] T48[0:0] T49[0:0] T50[0:0] T17[0:0] T19[0:0] T71[0:0] 
+	         T70[3:3] T70[2:2] T70[1:1] T70[0:0] T73[0:0] T74[3:3] T75[3:3] 
+	         T74[2:2] T75[2:2] T74[1:1] T75[1:1] T74[0:0] T75[0:0] 
+	         reset[0:0] ;
+	.outputs X68[0:0] X69[0:0] X70[0:0] X71[0:0] X72[0:0] X73[0:0] X74[0:0] 
+	         X75[0:0] X105[0:0] X106[0:0] X107[0:0] X108[0:0] X109[0:0] 
+	         X110[0:0] X111[0:0] X112[0:0] T77[0:0] ;
+	.net reset[0:0] T77[0:0] ;
+
+	X68[0:0] = V1111_T9[0:3] violation[3:3] + V0111_T9[0:3] violation[3:3] 
+		+ V1011_T9[0:3] violation[3:3] + V0011_T9[0:3] violation[3:3] + 
+		V1101_T9[0:3] violation[3:3] + V0101_T9[0:3] violation[3:3] + 
+		V0001_T9[0:3] violation[3:3] + V1110_T9[0:3] violation[3:3] + 
+		V0110_T9[0:3] violation[3:3] + V1010_T9[0:3] violation[3:3] + 
+		V1100_T9[0:3] violation[3:3] + V1001_T9[0:3] X76[0:0] + 
+		V0010_T9[0:3] violation[3:3] + V0100_T9[0:3] violation[3:3] + 
+		V1000_T9[0:3] X85[0:0] + V0000_T9[0:3] X96[0:0] ;
+	X69[0:0] = V1111_T9[0:3] violation[2:2] + V0111_T9[0:3] violation[2:2] 
+		+ V1011_T9[0:3] violation[2:2] + V0011_T9[0:3] violation[2:2] + 
+		V1101_T9[0:3] violation[2:2] + V0101_T9[0:3] violation[2:2] + 
+		V0001_T9[0:3] violation[2:2] + V1110_T9[0:3] violation[2:2] + 
+		V0110_T9[0:3] violation[2:2] + V1010_T9[0:3] violation[2:2] + 
+		V1100_T9[0:3] violation[2:2] + V1001_T9[0:3] X77[0:0] + 
+		V0010_T9[0:3] violation[2:2] + V0100_T9[0:3] violation[2:2] + 
+		V1000_T9[0:3] X86[0:0] + V0000_T9[0:3] X97[0:0] ;
+	X70[0:0] = V1111_T9[0:3] violation[1:1] + V0111_T9[0:3] violation[1:1] 
+		+ V1011_T9[0:3] violation[1:1] + V0011_T9[0:3] violation[1:1] + 
+		V1101_T9[0:3] violation[1:1] + V0101_T9[0:3] violation[1:1] + 
+		V0001_T9[0:3] violation[1:1] + V1110_T9[0:3] violation[1:1] + 
+		V0110_T9[0:3] violation[1:1] + V1010_T9[0:3] violation[1:1] + 
+		V1100_T9[0:3] violation[1:1] + V1001_T9[0:3] X78[0:0] + 
+		V0010_T9[0:3] violation[1:1] + V0100_T9[0:3] violation[1:1] + 
+		V1000_T9[0:3] X87[0:0] + V0000_T9[0:3] X98[0:0] ;
+	X71[0:0] = V1111_T9[0:3] violation[0:0] + V0111_T9[0:3] violation[0:0] 
+		+ V1011_T9[0:3] violation[0:0] + V0011_T9[0:3] violation[0:0] + 
+		V1101_T9[0:3] violation[0:0] + V0101_T9[0:3] violation[0:0] + 
+		V0001_T9[0:3] violation[0:0] + V1110_T9[0:3] violation[0:0] + 
+		V0110_T9[0:3] violation[0:0] + V1010_T9[0:3] violation[0:0] + 
+		V1100_T9[0:3] violation[0:0] + V1001_T9[0:3] X79[0:0] + 
+		V0010_T9[0:3] violation[0:0] + V0100_T9[0:3] violation[0:0] + 
+		V1000_T9[0:3] X88[0:0] + V0000_T9[0:3] X99[0:0] ;
+	X72[0:0] = V1111_T9[0:3] data_bits[3:3] + V0111_T9[0:3] data_bits[3:3] 
+		+ V1011_T9[0:3] data_bits[3:3] + V0011_T9[0:3] data_bits[3:3] + 
+		V1101_T9[0:3] data_bits[3:3] + V0101_T9[0:3] data_bits[3:3] + 
+		V0001_T9[0:3] data_bits[3:3] + V1110_T9[0:3] data_bits[3:3] + 
+		V0110_T9[0:3] data_bits[3:3] + V1010_T9[0:3] data_bits[3:3] + 
+		V1100_T9[0:3] data_bits[3:3] + V1001_T9[0:3] X80[0:0] + 
+		V0010_T9[0:3] data_bits[3:3] + V0100_T9[0:3] data_bits[3:3] + 
+		V1000_T9[0:3] X89[0:0] + V0000_T9[0:3] X100[0:0] ;
+	X73[0:0] = V1111_T9[0:3] data_bits[2:2] + V0111_T9[0:3] data_bits[2:2] 
+		+ V1011_T9[0:3] data_bits[2:2] + V0011_T9[0:3] data_bits[2:2] + 
+		V1101_T9[0:3] data_bits[2:2] + V0101_T9[0:3] data_bits[2:2] + 
+		V0001_T9[0:3] data_bits[2:2] + V1110_T9[0:3] data_bits[2:2] + 
+		V0110_T9[0:3] data_bits[2:2] + V1010_T9[0:3] data_bits[2:2] + 
+		V1100_T9[0:3] data_bits[2:2] + V1001_T9[0:3] X81[0:0] + 
+		V0010_T9[0:3] data_bits[2:2] + V0100_T9[0:3] data_bits[2:2] + 
+		V1000_T9[0:3] X90[0:0] + V0000_T9[0:3] X101[0:0] ;
+	X74[0:0] = V1111_T9[0:3] data_bits[1:1] + V0111_T9[0:3] data_bits[1:1] 
+		+ V1011_T9[0:3] data_bits[1:1] + V0011_T9[0:3] data_bits[1:1] + 
+		V1101_T9[0:3] data_bits[1:1] + V0101_T9[0:3] data_bits[1:1] + 
+		V0001_T9[0:3] data_bits[1:1] + V1110_T9[0:3] data_bits[1:1] + 
+		V0110_T9[0:3] data_bits[1:1] + V1010_T9[0:3] data_bits[1:1] + 
+		V1100_T9[0:3] data_bits[1:1] + V1001_T9[0:3] X82[0:0] + 
+		V0010_T9[0:3] data_bits[1:1] + V0100_T9[0:3] data_bits[1:1] + 
+		V1000_T9[0:3] X91[0:0] + V0000_T9[0:3] X102[0:0] ;
+	X75[0:0] = V1111_T9[0:3] data_bits[0:0] + V0111_T9[0:3] data_bits[0:0] 
+		+ V1011_T9[0:3] data_bits[0:0] + V0011_T9[0:3] data_bits[0:0] + 
+		V1101_T9[0:3] data_bits[0:0] + V0101_T9[0:3] data_bits[0:0] + 
+		V0001_T9[0:3] data_bits[0:0] + V1110_T9[0:3] data_bits[0:0] + 
+		V0110_T9[0:3] data_bits[0:0] + V1010_T9[0:3] data_bits[0:0] + 
+		V1100_T9[0:3] data_bits[0:0] + V1001_T9[0:3] X83[0:0] + 
+		V0010_T9[0:3] data_bits[0:0] + V0100_T9[0:3] data_bits[0:0] + 
+		V1000_T9[0:3] X92[0:0] + V0000_T9[0:3] X103[0:0] ;
+	X76[0:0] = T10[0:0]' violation[3:3] + T10[0:0] violation[2:2] ;
+	X77[0:0] = T10[0:0]' violation[2:2] + T10[0:0] violation[1:1] ;
+	X78[0:0] = T10[0:0]' violation[1:1] + T10[0:0] violation[0:0] ;
+	X79[0:0] = T10[0:0]' violation[0:0] ;
+	X80[0:0] = T10[0:0]' data_bits[3:3] + T10[0:0] data_bits[2:2] ;
+	X81[0:0] = T10[0:0]' data_bits[2:2] + T10[0:0] data_bits[1:1] ;
+	X82[0:0] = T10[0:0]' data_bits[1:1] + T10[0:0] data_bits[0:0] ;
+	X83[0:0] = T10[0:0]' data_bits[0:0] + T10[0:0] T18[0:0]' ;
+	X85[0:0] = T16[0:0]' violation[2:2] + T16[0:0] violation[3:3] ;
+	X86[0:0] = T16[0:0]' violation[1:1] + T16[0:0] violation[2:2] ;
+	X87[0:0] = T16[0:0]' violation[0:0] + T16[0:0] violation[1:1] ;
+	X88[0:0] = T16[0:0]' T47[0:0] + T16[0:0] violation[0:0] ;
+	X89[0:0] = T16[0:0]' data_bits[2:2] + T16[0:0] data_bits[3:3] ;
+	X90[0:0] = T16[0:0]' data_bits[1:1] + T16[0:0] data_bits[2:2] ;
+	X91[0:0] = T16[0:0]' data_bits[0:0] + T16[0:0] data_bits[1:1] ;
+	X92[0:0] = T16[0:0]' X93[0:0] + T16[0:0] data_bits[0:0] ;
+	X93[0:0] = T48[0:0]' T49[0:0]' + T48[0:0] T50[0:0]' ;
+	X96[0:0] = T17[0:0]' violation[3:3] + T17[0:0] violation[2:2] ;
+	X97[0:0] = T17[0:0]' violation[2:2] + T17[0:0] violation[1:1] ;
+	X98[0:0] = T17[0:0]' violation[1:1] + T17[0:0] violation[0:0] ;
+	X99[0:0] = T17[0:0]' violation[0:0] ;
+	X100[0:0] = T17[0:0]' data_bits[3:3] + T17[0:0] data_bits[2:2] ;
+	X101[0:0] = T17[0:0]' data_bits[2:2] + T17[0:0] data_bits[1:1] ;
+	X102[0:0] = T17[0:0]' data_bits[1:1] + T17[0:0] data_bits[0:0] ;
+	X103[0:0] = T17[0:0]' data_bits[0:0] + T17[0:0] T19[0:0]' ;
+	X105[0:0] = T71[0:0]' T70[3:3] ;
+	X106[0:0] = T71[0:0]' T70[2:2] ;
+	X107[0:0] = T71[0:0]' T70[1:1] ;
+	X108[0:0] = T71[0:0]' T70[0:0] ;
+	X109[0:0] = T73[0:0]' T74[3:3] + T73[0:0] T75[3:3] ;
+	X110[0:0] = T73[0:0]' T74[2:2] + T73[0:0] T75[2:2] ;
+	X111[0:0] = T73[0:0]' T74[1:1] + T73[0:0] T75[1:1] ;
+	X112[0:0] = T73[0:0]' T74[0:0] + T73[0:0] T75[0:0] ;
+	V0000_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V1000_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3]' ;
+	V0100_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3]' ;
+	V0010_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3]' ;
+	V1001_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2]' T9[3:3] ;
+	V1100_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3]' ;
+	V1010_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3]' ;
+	V0110_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3]' ;
+	V1110_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3]' ;
+	V0001_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2]' T9[3:3] ;
+	V0101_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2]' T9[3:3] ;
+	V1101_T9[0:3] = T9[0:0] T9[1:1] T9[2:2]' T9[3:3] ;
+	V0011_T9[0:3] = T9[0:0]' T9[1:1]' T9[2:2] T9[3:3] ;
+	V1011_T9[0:3] = T9[0:0] T9[1:1]' T9[2:2] T9[3:3] ;
+	V0111_T9[0:3] = T9[0:0]' T9[1:1] T9[2:2] T9[3:3] ;
+	V1111_T9[0:3] = T9[0:0] T9[1:1] T9[2:2] T9[3:3] ;
+
+
+.endmodel phase_decoder_12 ;
+
+
+.model phase_decoder_13 ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  T1[0:0] int_edge[0:0] T8[0:0] X2[0:0] ;
+	.outputs X113[0:0] ;
+
+	X113[0:0] = T1[0:0]' X114[0:0] + T1[0:0] int_edge[0:0] ;
+	X114[0:0] = T8[0:0] int_edge[0:0] + T8[0:0]' X2[0:0] ;
+
+
+.endmodel phase_decoder_13 ;
+
+
+.model FF_SR_EN ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	latchin = set + res' ( din den + dout den' ) ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_SR_EN ;
+
+
+.model FF_EN ;
+
+	.date 910104120429 ;	# January 4 1991, 12:04.29
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	latchin = dout res' den' + din res' den ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_EN ;
+

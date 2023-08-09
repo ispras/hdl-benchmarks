@@ -1,0 +1,20 @@
+.model daio ;
+
+           .inputs in  clk;
+           .outputs sample viol;
+
+           x1 = @D(in, clk);
+           x2 = @D(x1, clk);
+           y0 = x1 x2 + x1' x2';
+           y1 = in x1 + in' x1';
+
+           y2 = y0 y1;
+           viol = y2;
+           y3 = y2 + y4';
+           y4 = @D(y3, clk);
+           y5 = y4' y0' + y4 y6;
+           y6 = @D(y5, clk);
+           sample = y6; 
+
+.endmodel daio ;
+

@@ -1,0 +1,51 @@
+
+.model CM162 ;
+
+	.date 910108214940 ;	# January 8 1991, 21:49.40
+
+	.inputs  a b c d e f g h i j k l m n ;
+	.outputs o p q r s ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1740_r CMOS3_1740 (zz_23, zz_22, zz_20, zz_19 ;;r ) ;
+	.call CMOS3_1740_q CMOS3_1740 (zz_17, zz_16, zz_14, zz_13 ;;q ) ;
+	.call CMOS3_1740_p CMOS3_1740 (zz_11, zz_10, zz_8, zz_7 ;;p ) ;
+	.call CMOS3_1740_o CMOS3_1740 (zz_5, zz_4, zz_2, zz_1 ;;o ) ;
+	.call CMOS3_1610_s CMOS3_1610 (n0, e ;;s ) ;
+	.call CMOS3_1120_o0 CMOS3_1120 (l0, n0 ;;o0 ) ;
+	.call CMOS3_1120_m0 CMOS3_1120 (l0, i ;;m0 ) ;
+	.call CMOS3_1120_f0 CMOS3_1120 (o0, k0 ;;f0 ) ;
+	.call CMOS3_1120_zz_8 CMOS3_1120 (g0, d0 ;;zz_8 ) ;
+	.call CMOS3_1120_zz_7 CMOS3_1120 (g0, b ;;zz_7 ) ;
+	.call CMOS3_1120_zz_5 CMOS3_1120 (f0, d0 ;;zz_5 ) ;
+	.call CMOS3_1120_zz_4 CMOS3_1120 (f0, a ;;zz_4 ) ;
+	.call CMOS3_1120_zz_2 CMOS3_1120 (e0, d0 ;;zz_2 ) ;
+	.call CMOS3_1120_zz_1 CMOS3_1120 (e0, a ;;zz_1 ) ;
+	.call CMOS3_1120_zz_23 CMOS3_1120 (f0, d0 ;;zz_23 ) ;
+	.call CMOS3_1120_zz_22 CMOS3_1120 (f0, h ;;zz_22 ) ;
+	.call CMOS3_1120_zz_19 CMOS3_1120 (q0, h ;;zz_19 ) ;
+	.call CMOS3_1120_zz_20 CMOS3_1120 (q0, d0 ;;zz_20 ) ;
+	.call CMOS3_1120_zz_17 CMOS3_1120 (f0, d0 ;;zz_17 ) ;
+	.call CMOS3_1120_zz_16 CMOS3_1120 (f0, g ;;zz_16 ) ;
+	.call CMOS3_1120_zz_14 CMOS3_1120 (p0, d0 ;;zz_14 ) ;
+	.call CMOS3_1120_zz_13 CMOS3_1120 (p0, g ;;zz_13 ) ;
+	.call CMOS3_1120_zz_11 CMOS3_1120 (f0, d0 ;;zz_11 ) ;
+	.call CMOS3_1120_zz_10 CMOS3_1120 (f0, b ;;zz_10 ) ;
+	.call CMOS3_1310_f CMOS3_1310 (f ;;f' ) ;
+	.call CMOS3_1130_r0 CMOS3_1130 (k, i, l0 ;;r0 ) ;
+	.call CMOS3_1130_d0 CMOS3_1130 (f', d, o0 ;;d0 ) ;
+	.call CMOS3_2310_e0 CMOS3_2310 (l0, i ;;e0 ) ;
+	.call CMOS3_2350_q0 CMOS3_2350 (m, s0 ;;q0 ) ;
+	.call CMOS3_2350_p0 CMOS3_2350 (l, r0 ;;p0 ) ;
+	.call CMOS3_2350_g0 CMOS3_2350 (k, m0 ;;g0 ) ;
+	.call CMOS3_1220_n0 CMOS3_1220 (j, n ;;n0 ) ;
+	.call CMOS3_1220_k0 CMOS3_1220 (d, f ;;k0 ) ;
+	.call CMOS3_1230_l0 CMOS3_1230 (c, d, e ;;l0 ) ;
+	.call CMOS3_1140_s0 CMOS3_1140 (k, i, l0, l ;;s0 ) ;
+
+.endmodel CM162 ;
+

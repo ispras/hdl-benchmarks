@@ -1,0 +1,35 @@
+
+.i 1 
+.o 3 
+.p 30 
+.s 15
+0 state_1 state_8 000
+0 state_2 state_4 000
+0 state_3 state_5 000
+0 state_4 state_8 000
+0 state_5 state_8 000
+0 state_6 state_13 000
+0 state_7 state_4 000
+0 state_8 state_1 001
+0 state_9 state_4 000
+0 state_10 state_1 010
+0 state_11 state_3 010
+0 state_12 state_4 100
+0 state_13 state_5 100
+0 state_14 state_3 100
+0 state_15 state_4 000
+1 state_1 state_9 000
+1 state_2 state_3 000
+1 state_3 state_6 000
+1 state_4 state_11 000
+1 state_5 state_12 000
+1 state_6 state_14 000
+1 state_7 state_15 000
+1 state_8 state_2 001
+1 state_9 state_3 001
+1 state_10 state_2 010
+1 state_11 state_4 010
+1 state_12 state_3 001
+1 state_13 state_6 100
+1 state_14 state_7 100
+1 state_15 state_6 000

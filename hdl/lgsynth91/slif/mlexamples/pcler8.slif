@@ -1,0 +1,36 @@
+
+.model pcler8 ;
+
+	.date 910103085358 ;	# January 3 1991, 08:53.58
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u v w x y z a0 ;
+	.outputs b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 ;
+
+	b0 = a0 c2 a2 ;
+	c0 = a i ;
+	d0 = b i ;
+	e0 = c i ;
+	f0 = d i ;
+	g0 = e i ;
+	h0 = f i ;
+	i0 = g i ;
+	j0 = h i ;
+	k0 = c0 + l b0 + t' a2 ;
+	l0 = d0 + b0 m + a2 t' u + a2 t u' ;
+	m0 = e0 + b0 n + a2 v' f2 + a2 v f2' ;
+	n0 = f0 + b0 o + a2 w' d2 + a2 w d2' ;
+	o0 = g0 + b0 p + a2 x' g2 + a2 x g2' ;
+	p0 = h0 + b0 q + a2 y' b2 + a2 y b2' ;
+	q0 = i0 + b0 r + a2 z' e2 + a2 z e2' ;
+	r0 = j0 + b0 s + a2 a0' c2 + a2 a0 c2' ;
+	c2 = z e2 ;
+	a2 = i' j k' ;
+	f2 = t u ;
+	d2 = v f2 ;
+	g2 = w d2 ;
+	b2 = x g2 ;
+	e2 = y b2 ;
+
+
+.endmodel pcler8 ;
+

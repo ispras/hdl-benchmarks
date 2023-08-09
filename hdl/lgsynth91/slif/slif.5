@@ -1,0 +1,326 @@
+.TX SLIF 5CAD "5 August 1988"
+.SH NAME
+SLIF \- Structure Logic Intermediate Format
+.SH DESCRIPTION
+.I SLIF
+is a concise format used 
+to describe a structural view of logic circuits and their interconnections.
+It is an hierarchical, non-procedural notation that is
+described in ASCII files.
+.SH SYNTAX
+.I SLIF 
+is a free-format notation; i.e., statements may begin at any point on a
+line, and whitespace may be used freely.  Each statement must be terminated
+by a semicolon. Statements may appear in any order within the description of
+a model, with the restriction that inputs, outputs, inouts and types must
+be declared before they are used and that the last statement in the model
+description must be the 
+.I .endmodel
+statement (see the COMMANDS section below for more details).
+.PP
+.B Identifiers
+are character strings restricted to alphanumeric characters and the 
+following symbols:
+.nf
+.ti +15
+: ^ % [ ] _ . / ~ -
+.fi
+Variables, model names and instance names are all identifiers.
+There are two special variables, "1" and "0", which represent the
+logic values TRUE and FALSE, respectively.
+.PP
+.B Commands
+in 
+.I SLIF
+are command words preceded by a period (e.g.,
+.I .library).  
+and are summarized in the next 
+section.  Any declaration that does not begin with a command is a 
+.B logic statement 
+and has the form
+.nf
+.ti +15
+.I var = expression ;
+.fi
+where
+.I var 
+is an identifier and
+.I expression 
+is an expression in Boolean form, consisting of variables and
+.B operators.  
+The operators
+.B +, *
+and 
+.B '
+represent Boolean addition, multiplication and inversion (i.e., AND, OR and
+NOT), respectively; the `*' operator is optional and may be omitted.  e.g.,
+.nf
+.ti +10
+out = reset' + clock * (in0' + (in1 * in2)) ;
+is equivalent to
+.ti +10
+out = reset' + clock (in0' + in1 in2) ;
+.fi
+An expression, like a literal, may be complemented using the prime (i.e.,
+apostrophe) symbol; e.g.,
+.ti +15
+x = (a (b + c)' + d)' ;
+.PP
+By default, the
+.I expression
+represents the
+.I ON SET
+of the variable
+.I var.
+Two symbols,
+.B '
+and
+.B ~
+are appended to
+.I var
+to indicate the
+.I expression
+is its
+.I OFF SET
+or
+.I DON'T CARE SET
+respectively.
+The
+.B ~
+can also be used in the
+.I expression
+to indicate the
+.I DON'T CARE SET
+of a variable.
+Used alone,
+.B ~ 
+means the global
+.I DON'T CARE SET
+of the surrounding model.
+
+.PP
+There are two 
+.B built-in functions.  
+The arguments of these functions must be variables 
+(not expressions).  The built-in functions are: 
+.TP
+.B D(a,c)
+A flow-through generic D-type latch, which has input 
+.I a
+and is clocked by
+.I c.
+.TP
+.B T(a,b)
+A three-state gate whose output is
+.I a
+when
+.I b
+is true, or high-impedance otherwise.
+.PP
+The use of a built-in function is indicated by the 
+.B `@' 
+symbol; e.g.,
+.nf
+.ti +15
+out1 = @ D (sig1, clock') ;
+.fi
+In addition to built-in functions, library functions may be called; these
+are defined as a separate model (see 
+.I .library
+below).
+.PP
+.B Comments
+are identified by the symbol `#'.  This symbol indicates that the remainder
+of the line is to be ignored by any program reading the
+.I SLIF
+description.
+.SH COMMANDS
+.TP
+.BI .attribute " type_name variable_name parameters ";
+Specifies parameters for one variable (or one instance), named 
+.I variable_name.
+The parameters consist of a sequence of strings, integers and floats,
+defined in the type
+.I type_name.
+If the type used allows for a variable number of parameters, the
+corresponding list has to be enclosed in parentheses "(" and ")".
+.TP
+.BI .call " instance_name model_name ( inputs ; inouts ; outputs ) ";
+Creates an instance
+.I instance_name
+of the 
+.I SLIF
+model
+.I model_name,
+which may be described in the same file or in a file specified by a
+.I .search
+statement.  The called model may be a library element.  Variables are 
+linked according to the parameter listing;
+.I inputs, inouts 
+and 
+.I outputs
+are lists of variables separated by commas, which must agree in number and
+order with those in the called model.
+.TP
+.BI .date " time_stamp ";
+Specify the time of the last modification (optional).
+The
+.I time_stamp
+format is
+.I YYMMDDHHmmSS
+where YY is the year, MM the month, DD the day, HH the hour, mm the minutes,
+and SS the seconds. Each element of the
+.I time_stamp
+is a two-digit number. 
+.TP
+.BI .endmodel " name ";
+Terminates the model. Each model has to be terminated by this declaration. 
+There may be more than one model within the same file.
+.TP
+.BI .global_attribute " type_name parameters ";
+Specifies parameters valid for an entire model.
+.TP
+.BI .include " file_name ";
+Indicates that the information in 
+.I file_name
+will be read as if it was part of the current file.
+.TP
+.BI .inouts " var1 var2 ... varn ";
+Declares variables
+.I var1 ... varn 
+as global bidirectional ``inouts.''
+.TP
+.BI .inputs " var1 var2 ... varn ";
+Declares variables
+.I var1 ... varn 
+as global inputs.
+.TP
+.B .library ;
+Identifies the model as a library element.
+.TP
+.BI .model " name ";
+Indicates the beginning of a new model and assigns it name
+.I name.
+Each model has to be declared using this declaration.  Multiple models
+may be described in a single file.
+.TP
+.BI .net " var1 var2 ... varn ";
+Lists variables that are connected together.  The net will be named after one
+of the variables.  If there are global inputs, outputs or inouts then the net
+will be inherit one of their names; otherwise it will be named after 
+.I var1.
+.TP
+.BI .outputs " var1 var2 ... varn ";
+Declares variables
+.I var1 ... varn 
+as global outputs.
+.TP
+.BI .search " file_name ";
+Indicates that models included in 
+.I file_name
+may be used, if they are needed.  Users are encouraged to use the absolute
+path to the file.
+.TP
+.BI .type " type_name spec1 spec2 ... specn ";
+Declares a type
+.I type_name
+as a sequence of specifications
+.I spec1 spec2 ... specn
+where
+.I spec
+is any of 
+.I %d %f %s
+(integer, float or string). A number may be used in front of a
+.I spec,
+to tell how many
+.I specs
+are to be used.
+A
+.I spec
+or set of
+.I specs
+can also be included inside parentheses, to indicate
+a variable number of that
+.I spec
+(or set of
+.I specs
+).
+A type is used whenever a
+.I .attribute
+or
+.I .global_attribute
+command is used. The type defines all the information that follows
+the type name. For 
+.I .attribute,
+a string HAS to be inserted between the type name and the typed
+information. This string indicates the variable (or instance) to
+which the attribute will be attached.
+.SH EXAMPLE
+.sp
+.nf
+.cs R 22
+.B     fileA:
+
+ .model main ;                        # definition of model "main"
+ .inputs a b c d ;                    # inputs list
+ .outputs w x y z ;                   # outputs list
+ .inouts t ;                          # inouts list
+ .include fileC ;                     # fileC will be inserted here
+ .search fileB ;                      # fileB may contain needed
+                                      #  models
+ .type FORMAT1 2 %s %d ;              # type definition
+ .type FORMAT2 (%s (%f));
+ .attribute FORMAT2 r (a (2.0));      # annotation of signal "r"
+ .attribute FORMAT1 inst0 z b 5 ;     # annotation of instance "inst0"
+ q = a b ;   r = a b' + a' b ;        # logic equations
+ x = r'  ;   s = a' b' c'    ;  
+ y = d + d' (s + c q) ;
+ w = @ T (y, enable) ;                # tristate latch
+ .net enable clock r ;                # all 3 signals are the same net
+ .call inst0 OR2 (b, c; ; z) ;        # OR-gate described externally
+ .call inst1 d_latch (c, clock; ;w);  # D-latch described externally
+ .endmodel main ;                     # end definition (model "main")
+
+.B     fileB:
+
+ #	Externally-called models.  Calling model must have 
+ #	argument lists of correct size and in correct order.
+ .model d_latch ;
+ .inputs a b ;
+ .outputs t ;
+ t = @ D(a,b) ;               # built-in function
+ .endmodel d_latch ;
+
+ .model OR2;
+ .inputs x y;
+ .outputs z;
+ .library;                    # identifies as a library element
+ .endmodel OR2;
+
+.B     fileC:
+
+ #      Information that will be inserted in model main
+
+ .type FORMAT1 2 %s %d ;      # types may be redefined if all
+ .type FORMAT2 (%s (%f));     # definitions are consistent
+
+ .global_attribute FORMAT1 cap low 5;
+ .global_attribute FORMAT2 (min_res (3.0) typ_res (5.0 0.2));
+ .global_attribute FORMAT2 (delay (0.1 0.3 1.0 2.1));
+
+.cs R
+.fi
+.sp
+.SH COMMENTS
+Problems, comments
+and suggestions should be addressed to mailhot@Pegasus.Stanford.EDU.
+.SH SEE ALSO
+sliftools(5CAD), janus(1CAD)
+
+.SH AUTHORS
+.nf
+Giovanni DeMicheli
+Philip Johnson
+David Ku
+Frederic Mailhot
+.fi

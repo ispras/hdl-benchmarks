@@ -1,0 +1,34 @@
+
+.model cu ;
+
+	.date 910103085125 ;	# January 3 1991, 08:51.25
+
+	.inputs  a b c d e f g i j k l m n o ;
+	.outputs p q r s t u v w x y z ;
+
+	q = d' o0' ;
+	r = o' f e' t0' ;
+	s = o' f e' x0' ;
+	t = o' f e' y0' ;
+	u = o' f e' z0' ;
+	v = a1' b1' + c b1' ;
+	w = o' i1' ;
+	x = j1' b1' + c b1' ;
+	y = o g ;
+	z = f' d' g + c' d' g ;
+	o0 = e' f' + c' f' + e f + c f + c e' + c' e ;
+	t0 = a + b + c + d ;
+	x0 = a' + b + c + d ;
+	y0 = a + b' + c + d ;
+	z0 = a' + b' + c + d ;
+	a1 = f1' + a b m + a' b l + a b' k ;
+	b1 = d + e' + o c + f c ;
+	i1 = c + d + e + f' ;
+	j1 = f' + n + o' ;
+	f1 = i' g1' ;
+	g1 = f' + o' + n + a' b' j ;
+	p = ( d' o0' )' ;
+
+
+.endmodel cu ;
+

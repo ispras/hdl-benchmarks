@@ -1,0 +1,419 @@
+
+.model gcd ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  CLK RESET xi[0:0] xi[1:1] xi[2:2] xi[3:3] xi[4:4] xi[5:5] 
+	         xi[6:6] xi[7:7] yi[0:0] yi[1:1] yi[2:2] yi[3:3] yi[4:4] yi[5:5] 
+	         yi[6:6] yi[7:7] rst[0:0] ;
+	.outputs DN ou[0:0] ou[1:1] ou[2:2] ou[3:3] ou[4:4] ou[5:5] ou[6:6] 
+	         ou[7:7] peekx[0:0] peekx[1:1] peekx[2:2] peekx[3:3] peekx[4:4] 
+	         peekx[5:5] peekx[6:6] peekx[7:7] peeky[0:0] peeky[1:1] 
+	         peeky[2:2] peeky[3:3] peeky[4:4] peeky[5:5] peeky[6:6] 
+	         peeky[7:7] ;
+
+	.call gcd_1 gcd_1 (rst[0:0] ;;SL1_3' ) ;
+	.call gcd_2 gcd_2 (rst[0:0] ;;T3[0:0] ) ;
+	.call gcd_3 gcd_3 (T5[0:0], T5[1:1], T5[2:2], T5[3:3], T5[4:4], 
+	         T5[5:5], T5[6:6], T5[7:7], T4[0:0], T4[1:1], T4[2:2], T4[3:3], 
+	         T4[4:4], T4[5:5], T4[6:6], T4[7:7] ;;T8[0:0] ) ;
+	.call gcd_4 gcd_4 (peekx[0:0], peekx[1:1], peekx[2:2], peekx[3:3], 
+	         peekx[4:4], peekx[5:5], peekx[6:6], peekx[7:7], peeky[0:0], 
+	         peeky[1:1], peeky[2:2], peeky[3:3], peeky[4:4], peeky[5:5], 
+	         peeky[6:6], peeky[7:7] ;;SL7_3' ) ;
+	.call gcd_5 gcd_5 (peekx[0:0], peekx[1:1], peekx[2:2], peekx[3:3], 
+	         peekx[4:4], peekx[5:5], peekx[6:6], peekx[7:7], peeky[0:0], 
+	         peeky[1:1], peeky[2:2], peeky[3:3], peeky[4:4], peeky[5:5], 
+	         peeky[6:6], peeky[7:7] ;;T11[0:0], T11[1:1], T11[2:2], 
+	         T11[3:3], T11[4:4], T11[5:5], T11[6:6], T11[7:7], T13[0:0] ) ;
+	.call gcd_6 gcd_6 (peekx[0:0], peekx[1:1], peekx[2:2], peekx[3:3], 
+	         peekx[4:4], peekx[5:5], peekx[6:6], peekx[7:7] ;;T15[0:0] ) ;
+	.call gcd_7 gcd_7 (T9[0:0], T5[7:7], peekx[7:7], T5[6:6], peekx[6:6], 
+	         T5[5:5], peekx[5:5], T5[4:4], peekx[4:4], T5[3:3], peekx[3:3], 
+	         T5[2:2], peekx[2:2], T5[1:1], peekx[1:1], T5[0:0], peekx[0:0] ;;
+	         M1[0:0], M1[1:1], M1[2:2], M1[3:3], M1[4:4], M1[5:5], M1[6:6], 
+	         M1[7:7] ) ;
+	.call FF_SR_EN1 FF_SR_EN (yi[0:0], RQ1_4, CLK, 0, RESET ;;T4[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (yi[1:1], RQ1_4, CLK, 0, RESET ;;T4[1:1] ) ;
+	.call FF_SR_EN3 FF_SR_EN (yi[2:2], RQ1_4, CLK, 0, RESET ;;T4[2:2] ) ;
+	.call FF_SR_EN4 FF_SR_EN (yi[3:3], RQ1_4, CLK, 0, RESET ;;T4[3:3] ) ;
+	.call FF_SR_EN5 FF_SR_EN (yi[4:4], RQ1_4, CLK, 0, RESET ;;T4[4:4] ) ;
+	.call FF_SR_EN6 FF_SR_EN (yi[5:5], RQ1_4, CLK, 0, RESET ;;T4[5:5] ) ;
+	.call FF_SR_EN7 FF_SR_EN (yi[6:6], RQ1_4, CLK, 0, RESET ;;T4[6:6] ) ;
+	.call FF_SR_EN8 FF_SR_EN (yi[7:7], RQ1_4, CLK, 0, RESET ;;T4[7:7] ) ;
+	.call FF_SR_EN9 FF_SR_EN (xi[0:0], RQ1_5, CLK, 0, RESET ;;T5[0:0] ) ;
+	.call FF_SR_EN10 FF_SR_EN (xi[1:1], RQ1_5, CLK, 0, RESET ;;T5[1:1] ) ;
+	.call FF_SR_EN11 FF_SR_EN (xi[2:2], RQ1_5, CLK, 0, RESET ;;T5[2:2] ) ;
+	.call FF_SR_EN12 FF_SR_EN (xi[3:3], RQ1_5, CLK, 0, RESET ;;T5[3:3] ) ;
+	.call FF_SR_EN13 FF_SR_EN (xi[4:4], RQ1_5, CLK, 0, RESET ;;T5[4:4] ) ;
+	.call FF_SR_EN14 FF_SR_EN (xi[5:5], RQ1_5, CLK, 0, RESET ;;T5[5:5] ) ;
+	.call FF_SR_EN15 FF_SR_EN (xi[6:6], RQ1_5, CLK, 0, RESET ;;T5[6:6] ) ;
+	.call FF_SR_EN16 FF_SR_EN (xi[7:7], RQ1_5, CLK, 0, RESET ;;T5[7:7] ) ;
+	.call FF_SR_EN17 FF_SR_EN (y[7:7]_in, y[7:7]_en, CLK, 0, RESET ;;
+	         peeky[7:7] ) ;
+	.call FF_SR_EN18 FF_SR_EN (y[6:6]_in, y[6:6]_en, CLK, 0, RESET ;;
+	         peeky[6:6] ) ;
+	.call FF_SR_EN19 FF_SR_EN (y[5:5]_in, y[5:5]_en, CLK, 0, RESET ;;
+	         peeky[5:5] ) ;
+	.call FF_SR_EN20 FF_SR_EN (y[4:4]_in, y[4:4]_en, CLK, 0, RESET ;;
+	         peeky[4:4] ) ;
+	.call FF_SR_EN21 FF_SR_EN (y[3:3]_in, y[3:3]_en, CLK, 0, RESET ;;
+	         peeky[3:3] ) ;
+	.call FF_SR_EN22 FF_SR_EN (y[2:2]_in, y[2:2]_en, CLK, 0, RESET ;;
+	         peeky[2:2] ) ;
+	.call FF_SR_EN23 FF_SR_EN (y[1:1]_in, y[1:1]_en, CLK, 0, RESET ;;
+	         peeky[1:1] ) ;
+	.call FF_SR_EN24 FF_SR_EN (y[0:0]_in, y[0:0]_en, CLK, 0, RESET ;;
+	         peeky[0:0] ) ;
+	.call FF_SR_EN25 FF_SR_EN (x[7:7]_in, x[7:7]_en, CLK, 0, RESET ;;
+	         peekx[7:7] ) ;
+	.call FF_SR_EN26 FF_SR_EN (x[6:6]_in, x[6:6]_en, CLK, 0, RESET ;;
+	         peekx[6:6] ) ;
+	.call FF_SR_EN27 FF_SR_EN (x[5:5]_in, x[5:5]_en, CLK, 0, RESET ;;
+	         peekx[5:5] ) ;
+	.call FF_SR_EN28 FF_SR_EN (x[4:4]_in, x[4:4]_en, CLK, 0, RESET ;;
+	         peekx[4:4] ) ;
+	.call FF_SR_EN29 FF_SR_EN (x[3:3]_in, x[3:3]_en, CLK, 0, RESET ;;
+	         peekx[3:3] ) ;
+	.call FF_SR_EN30 FF_SR_EN (x[2:2]_in, x[2:2]_en, CLK, 0, RESET ;;
+	         peekx[2:2] ) ;
+	.call FF_SR_EN31 FF_SR_EN (x[1:1]_in, x[1:1]_en, CLK, 0, RESET ;;
+	         peekx[1:1] ) ;
+	.call FF_SR_EN32 FF_SR_EN (x[0:0]_in, x[0:0]_en, CLK, 0, RESET ;;
+	         peekx[0:0] ) ;
+	.call FF_EN_ou0 FF_EN (ou_in[0:0], RQ1_9, CLK, RESET ;;ou[0:0] ) ;
+	.call FF_EN_ou1 FF_EN (ou_in[1:1], RQ1_9, CLK, RESET ;;ou[1:1] ) ;
+	.call FF_EN_ou2 FF_EN (ou_in[2:2], RQ1_9, CLK, RESET ;;ou[2:2] ) ;
+	.call FF_EN_ou3 FF_EN (ou_in[3:3], RQ1_9, CLK, RESET ;;ou[3:3] ) ;
+	.call FF_EN_ou4 FF_EN (ou_in[4:4], RQ1_9, CLK, RESET ;;ou[4:4] ) ;
+	.call FF_EN_ou5 FF_EN (ou_in[5:5], RQ1_9, CLK, RESET ;;ou[5:5] ) ;
+	.call FF_EN_ou6 FF_EN (ou_in[6:6], RQ1_9, CLK, RESET ;;ou[6:6] ) ;
+	.call FF_EN_ou7 FF_EN (ou_in[7:7], RQ1_9, CLK, RESET ;;ou[7:7] ) ;
+	.call Sw1_3 FF_EN (Sw1_3_i, 1, CLK, RESET ;;Sr1_3' ) ;
+	.call TcL1_3[1] FF_EN (TcL1_3_i[1], 1, CLK, RESET ;;EN1_7 ) ;
+	.call FF_EN.1_3_LC FF_EN (LC1_3_i, 1, CLK, RESET ;;LC1_3 ) ;
+	.call LBr1_3_1 FF_EN (SL1_3', LBr1_3_e, CLK, RESET ;;LBr1_3[1] ) ;
+	.call Sw1_7 FF_EN (Sw1_7_i, 1, CLK, RESET ;;Sr1_7' ) ;
+	.call TcL1_7[1] FF_EN (TcL1_7_i[1], 1, CLK, RESET ;;DN1_9 ) ;
+	.call FF_EN.1_7_LC FF_EN (LC1_7_i, 1, CLK, RESET ;;LC1_7 ) ;
+	.call T9[0:0]_L FF_EN (T8[0:0], LBr1_7_e, CLK, RESET ;;T9[0:0]_L ) ;
+	.call Sw2_2 FF_EN (Sw2_2_i, 1, CLK, RESET ;;Sr2_2' ) ;
+	.call FF_EN.2_2_La FF_EN (AK2_2, 1, CLK, RESET ;;Lak2_2 ) ;
+	.call TcL6_1[1] FF_EN (TcL6_1_i[1], 1, CLK, RESET ;;EN6_3 ) ;
+	.call Sw6_3 FF_EN (Sw6_3_i, 1, CLK, RESET ;;Sr6_3' ) ;
+	.call FF_EN.6_3_La FF_EN (AK6_3, 1, CLK, RESET ;;Lak6_3 ) ;
+	.call Sw7_3 FF_EN (Sw7_3_i, 1, CLK, RESET ;;Sr7_3' ) ;
+	.call TcL7_3[1] FF_EN (TcL7_3_i[1], 1, CLK, RESET ;;RQ7_5 ) ;
+	.call FF_EN.7_3_LC FF_EN (LC7_3_i, 1, CLK, RESET ;;LC7_3 ) ;
+	.call LBr7_3_1 FF_EN (SL7_3', LBr7_3_e, CLK, RESET ;;LBr7_3[1] ) ;
+	.call Sw8_2 FF_EN (Sw8_2_i, 1, CLK, RESET ;;Sr8_2' ) ;
+	.call FF_EN.8_2_La FF_EN (AK8_2, 1, CLK, RESET ;;Lak8_2 ) ;
+	y[7:7]_en = RQ6_2 + DN7_3 ;
+	y[7:7]_in = T4[7:7] RQ6_2 + peekx[7:7] DN7_3 ;
+	y[6:6]_en = RQ6_2 + DN7_3 ;
+	y[6:6]_in = T4[6:6] RQ6_2 + peekx[6:6] DN7_3 ;
+	y[5:5]_en = RQ6_2 + DN7_3 ;
+	y[5:5]_in = T4[5:5] RQ6_2 + peekx[5:5] DN7_3 ;
+	y[4:4]_en = RQ6_2 + DN7_3 ;
+	y[4:4]_in = T4[4:4] RQ6_2 + peekx[4:4] DN7_3 ;
+	y[3:3]_en = RQ6_2 + DN7_3 ;
+	y[3:3]_in = T4[3:3] RQ6_2 + peekx[3:3] DN7_3 ;
+	y[2:2]_en = RQ6_2 + DN7_3 ;
+	y[2:2]_in = T4[2:2] RQ6_2 + peekx[2:2] DN7_3 ;
+	y[1:1]_en = RQ6_2 + DN7_3 ;
+	y[1:1]_in = T4[1:1] RQ6_2 + peekx[1:1] DN7_3 ;
+	y[0:0]_en = RQ6_2 + DN7_3 ;
+	y[0:0]_in = T4[0:0] RQ6_2 + peekx[0:0] DN7_3 ;
+	x[7:7]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[7:7]_in = T5[7:7] RQ6_2 + T11[7:7] RQ9_3 + peeky[7:7] DN7_3 ;
+	x[6:6]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[6:6]_in = T5[6:6] RQ6_2 + T11[6:6] RQ9_3 + peeky[6:6] DN7_3 ;
+	x[5:5]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[5:5]_in = T5[5:5] RQ6_2 + T11[5:5] RQ9_3 + peeky[5:5] DN7_3 ;
+	x[4:4]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[4:4]_in = T5[4:4] RQ6_2 + T11[4:4] RQ9_3 + peeky[4:4] DN7_3 ;
+	x[3:3]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[3:3]_in = T5[3:3] RQ6_2 + T11[3:3] RQ9_3 + peeky[3:3] DN7_3 ;
+	x[2:2]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[2:2]_in = T5[2:2] RQ6_2 + T11[2:2] RQ9_3 + peeky[2:2] DN7_3 ;
+	x[1:1]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[1:1]_in = T5[1:1] RQ6_2 + T11[1:1] RQ9_3 + peeky[1:1] DN7_3 ;
+	x[0:0]_en = RQ6_2 + RQ9_3 + DN7_3 ;
+	x[0:0]_in = T5[0:0] RQ6_2 + T11[0:0] RQ9_3 + peeky[0:0] DN7_3 ;
+	ou_in[0:0] = M1[0:0] RQ1_9 ;
+	ou_in[1:1] = M1[1:1] RQ1_9 ;
+	ou_in[2:2] = M1[2:2] RQ1_9 ;
+	ou_in[3:3] = M1[3:3] RQ1_9 ;
+	ou_in[4:4] = M1[4:4] RQ1_9 ;
+	ou_in[5:5] = M1[5:5] RQ1_9 ;
+	ou_in[6:6] = M1[6:6] RQ1_9 ;
+	ou_in[7:7] = M1[7:7] RQ1_9 ;
+	RQ1_3 = Sr1_3 SL1_3' ;
+	Sw1_3_i = DN' ( Sr1_3' + Sr1_3 ( SL1_3 + AK1_3 ) ) ;
+	TcL1_3_i[1] = DN' ( EN1_5 + EN1_7 ) ;
+	LC1_3_i = DN' ( RQ1_3 + LC1_3 ) ;
+	LBr1_3_e = RQ1_3 LC1_3' ;
+	RQ4_2 = RQ1_3 SL1_3 LC1_3' ;
+	AK1_3 = RQ2_3 + RQ4_2 ;
+	RQ1_4 = EN1_5 EN1_7' ;
+	RQ1_5 = EN1_5 EN1_7' ;
+	RQ1_7 = Sr1_7 EN1_7 SL1_7' ;
+	Sw1_7_i = DN' ( Sr1_7' + Sr1_7 EN1_7 ( SL1_7 + AK1_7 ) ) ;
+	TcL1_7_i[1] = DN' ( DN + DN1_9 ) ;
+	Br1_7[1] = T8[0:0] LC1_7' + T9[0:0]_L LC1_7 ;
+	LC1_7_i = DN' ( RQ1_7 + LC1_7 ) ;
+	LBr1_7_e = RQ1_7 LC1_7' ;
+	T9[0:0] = LC1_7' T8[0:0] + LC1_7 T9[0:0]_L ;
+	RQ5_2 = RQ1_7 SL1_7 ;
+	AK1_7 = RQ5_2 + RQ6_4 ;
+	SL1_7 = T8[0:0]' LC1_7' + T9[0:0]_L' LC1_7 ;
+	RQ1_9 = DN DN1_9' ;
+	RQ2_2 = Sr2_2 EN2_2 ;
+	RQ2_3 = Sr2_2' + Sr2_2 EN2_2 AK2_2 ;
+	Sw2_2_i = DN' ( Sr2_2' + Sr2_2 EN2_2 AK2_2 ) ;
+	AK2_2 = T3[0:0] RQ3_3 ;
+	RQ3_3 = RQ2_2 Lak2_2' ;
+	TcL6_1_i[1] = RQ6_4' ( EN6_2 + EN6_3 ) ;
+	RQ6_2 = EN6_2 EN6_3' ;
+	RQ6_3 = Sr6_3 EN6_3 ;
+	RQ6_4 = Sr6_3' + Sr6_3 EN6_3 AK6_3 ;
+	Sw6_3_i = DN' ( Sr6_3' + Sr6_3 EN6_3 AK6_3 ) ;
+	AK6_3 = T15[0:0] DN7_3 ;
+	RQ7_3 = Sr7_3 EN7_3 SL7_3' ;
+	DN7_3 = Sr7_3' + Sr7_3 EN7_3 SL7_3 ;
+	Sw7_3_i = DN7_3' ( Sr7_3' + Sr7_3 EN7_3 ( SL7_3 + AK7_3 ) ) ;
+	TcL7_3_i[1] = DN7_3' ( DN7_3 + RQ7_5 ) ;
+	LC7_3_i = DN7_3' ( RQ7_3 + LC7_3 ) ;
+	LBr7_3_e = RQ7_3 LC7_3' ;
+	RQ10_2 = RQ7_3 SL7_3 LC7_3' ;
+	AK7_3 = RQ8_3 + RQ10_2 ;
+	RQ8_2 = Sr8_2 EN8_2 ;
+	RQ8_3 = Sr8_2' + Sr8_2 EN8_2 AK8_2 ;
+	Sw8_2_i = DN7_3' ( Sr8_2' + Sr8_2 EN8_2 AK8_2 ) ;
+	AK8_2 = T13[0:0] RQ9_3 ;
+	RQ9_3 = RQ8_2 Lak8_2' ;
+	DN = Sr1_7' + Sr1_7 EN1_7 SL1_7 ;
+	EN1_5 = Sr1_3' + Sr1_3 SL1_3 ;
+	EN2_2 = RQ1_3 ( LC1_3' SL1_3' + LC1_3 LBr1_3[1] ) ;
+	EN6_2 = RQ1_7 Br1_7[1] ;
+	EN7_3 = RQ6_3 Lak6_3' ;
+	EN8_2 = RQ7_3 ( LC7_3' SL7_3' + LC7_3 LBr7_3[1] ) ;
+
+
+.endmodel gcd ;
+
+
+.model gcd_1 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  rst[0:0] ;
+	.outputs T1[0:0] ;
+	.net rst[0:0]' T1[0:0] ;
+
+
+
+.endmodel gcd_1 ;
+
+
+.model gcd_2 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  rst[0:0] ;
+	.outputs T3[0:0] ;
+	.net rst[0:0] T3[0:0] ;
+
+
+
+.endmodel gcd_2 ;
+
+
+.model gcd_3 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  T5[0:0] T5[1:1] T5[2:2] T5[3:3] T5[4:4] T5[5:5] T5[6:6] 
+	         T5[7:7] T4[0:0] T4[1:1] T4[2:2] T4[3:3] T4[4:4] T4[5:5] T4[6:6] 
+	         T4[7:7] ;
+	.outputs T8[0:0] ;
+
+	T8[0:0] = T6[0:0] T7[0:0] ;
+	T6[0:0] = ( T5[0:0]' T5[1:1]' T5[2:2]' T5[3:3]' T5[4:4]' T5[5:5]' 
+		T5[6:6]' T5[7:7]' )' ;
+	T7[0:0] = ( T4[0:0]' T4[1:1]' T4[2:2]' T4[3:3]' T4[4:4]' T4[5:5]' 
+		T4[6:6]' T4[7:7]' )' ;
+
+
+.endmodel gcd_3 ;
+
+
+.model gcd_4 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  x[0:0] x[1:1] x[2:2] x[3:3] x[4:4] x[5:5] x[6:6] x[7:7] y[0:0] 
+	         y[1:1] y[2:2] y[3:3] y[4:4] y[5:5] y[6:6] y[7:7] ;
+	.outputs T10[0:0] ;
+
+	c_1_T10[0:0] = y[0:0] x[0:0]' ;
+	d_1_T10[0:0] = y[0:0]' + x[0:0] ;
+	c_2_T10[0:0] = d_1_T10[0:0] y[1:1] x[1:1]' + c_1_T10[0:0] ( y[1:1] + 
+		x[1:1]' ) ;
+	d_2_T10[0:0] = c_1_T10[0:0] y[1:1]' x[1:1] + d_1_T10[0:0] ( y[1:1]' + 
+		x[1:1] ) ;
+	c_3_T10[0:0] = d_2_T10[0:0] y[2:2] x[2:2]' + c_2_T10[0:0] ( y[2:2] + 
+		x[2:2]' ) ;
+	d_3_T10[0:0] = c_2_T10[0:0] y[2:2]' x[2:2] + d_2_T10[0:0] ( y[2:2]' + 
+		x[2:2] ) ;
+	c_4_T10[0:0] = d_3_T10[0:0] y[3:3] x[3:3]' + c_3_T10[0:0] ( y[3:3] + 
+		x[3:3]' ) ;
+	d_4_T10[0:0] = c_3_T10[0:0] y[3:3]' x[3:3] + d_3_T10[0:0] ( y[3:3]' + 
+		x[3:3] ) ;
+	c_5_T10[0:0] = d_4_T10[0:0] y[4:4] x[4:4]' + c_4_T10[0:0] ( y[4:4] + 
+		x[4:4]' ) ;
+	d_5_T10[0:0] = c_4_T10[0:0] y[4:4]' x[4:4] + d_4_T10[0:0] ( y[4:4]' + 
+		x[4:4] ) ;
+	c_6_T10[0:0] = d_5_T10[0:0] y[5:5] x[5:5]' + c_5_T10[0:0] ( y[5:5] + 
+		x[5:5]' ) ;
+	d_6_T10[0:0] = c_5_T10[0:0] y[5:5]' x[5:5] + d_5_T10[0:0] ( y[5:5]' + 
+		x[5:5] ) ;
+	c_7_T10[0:0] = d_6_T10[0:0] y[6:6] x[6:6]' + c_6_T10[0:0] ( y[6:6] + 
+		x[6:6]' ) ;
+	d_7_T10[0:0] = c_6_T10[0:0] y[6:6]' x[6:6] + d_6_T10[0:0] ( y[6:6]' + 
+		x[6:6] ) ;
+	T10[0:0] = c_7_T10[0:0] y[7:7]' x[7:7] + d_7_T10[0:0] ( y[7:7]' + 
+		x[7:7] ) ;
+
+
+.endmodel gcd_4 ;
+
+
+.model gcd_5 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  x[0:0] x[1:1] x[2:2] x[3:3] x[4:4] x[5:5] x[6:6] x[7:7] y[0:0] 
+	         y[1:1] y[2:2] y[3:3] y[4:4] y[5:5] y[6:6] y[7:7] ;
+	.outputs T11[0:0] T11[1:1] T11[2:2] T11[3:3] T11[4:4] T11[5:5] T11[6:6] 
+	         T11[7:7] T13[0:0] ;
+
+	T11[0:0] = x[0:0]' y[0:0] + x[0:0] y[0:0]' ;
+	c_T11[1:1] = x[0:0] + y[0:0]' + x[0:0] y[0:0]' ;
+	T11[1:1] = x[1:1]' y[1:1]' c_T11[1:1]' + x[1:1] y[1:1] c_T11[1:1]' + 
+		x[1:1]' y[1:1] c_T11[1:1] + x[1:1] y[1:1]' c_T11[1:1] ;
+	c_T11[2:2] = x[1:1] y[1:1]' + c_T11[1:1] ( x[1:1] + y[1:1]' ) ;
+	T11[2:2] = x[2:2]' y[2:2]' c_T11[2:2]' + x[2:2] y[2:2] c_T11[2:2]' + 
+		x[2:2]' y[2:2] c_T11[2:2] + x[2:2] y[2:2]' c_T11[2:2] ;
+	c_T11[3:3] = x[2:2] y[2:2]' + c_T11[2:2] ( x[2:2] + y[2:2]' ) ;
+	T11[3:3] = x[3:3]' y[3:3]' c_T11[3:3]' + x[3:3] y[3:3] c_T11[3:3]' + 
+		x[3:3]' y[3:3] c_T11[3:3] + x[3:3] y[3:3]' c_T11[3:3] ;
+	c_T11[4:4] = x[3:3] y[3:3]' + c_T11[3:3] ( x[3:3] + y[3:3]' ) ;
+	T11[4:4] = x[4:4]' y[4:4]' c_T11[4:4]' + x[4:4] y[4:4] c_T11[4:4]' + 
+		x[4:4]' y[4:4] c_T11[4:4] + x[4:4] y[4:4]' c_T11[4:4] ;
+	c_T11[5:5] = x[4:4] y[4:4]' + c_T11[4:4] ( x[4:4] + y[4:4]' ) ;
+	T11[5:5] = x[5:5]' y[5:5]' c_T11[5:5]' + x[5:5] y[5:5] c_T11[5:5]' + 
+		x[5:5]' y[5:5] c_T11[5:5] + x[5:5] y[5:5]' c_T11[5:5] ;
+	c_T11[6:6] = x[5:5] y[5:5]' + c_T11[5:5] ( x[5:5] + y[5:5]' ) ;
+	T11[6:6] = x[6:6]' y[6:6]' c_T11[6:6]' + x[6:6] y[6:6] c_T11[6:6]' + 
+		x[6:6]' y[6:6] c_T11[6:6] + x[6:6] y[6:6]' c_T11[6:6] ;
+	T11[8:8] = x[6:6] y[6:6]' + c_T11[6:6] ( x[6:6] + y[6:6]' ) ;
+	T11[7:7] = x[7:7]' y[7:7]' T11[8:8]' + x[7:7] y[7:7] T11[8:8]' + 
+		x[7:7]' y[7:7] T11[8:8] + x[7:7] y[7:7]' T11[8:8] ;
+	c_1_T12[0:0] = y[0:0] T11[0:0]' ;
+	d_1_T12[0:0] = y[0:0]' + T11[0:0] ;
+	c_2_T12[0:0] = d_1_T12[0:0] y[1:1] T11[1:1]' + c_1_T12[0:0] ( y[1:1] + 
+		T11[1:1]' ) ;
+	d_2_T12[0:0] = c_1_T12[0:0] y[1:1]' T11[1:1] + d_1_T12[0:0] ( y[1:1]' + 
+		T11[1:1] ) ;
+	c_3_T12[0:0] = d_2_T12[0:0] y[2:2] T11[2:2]' + c_2_T12[0:0] ( y[2:2] + 
+		T11[2:2]' ) ;
+	d_3_T12[0:0] = c_2_T12[0:0] y[2:2]' T11[2:2] + d_2_T12[0:0] ( y[2:2]' + 
+		T11[2:2] ) ;
+	c_4_T12[0:0] = d_3_T12[0:0] y[3:3] T11[3:3]' + c_3_T12[0:0] ( y[3:3] + 
+		T11[3:3]' ) ;
+	d_4_T12[0:0] = c_3_T12[0:0] y[3:3]' T11[3:3] + d_3_T12[0:0] ( y[3:3]' + 
+		T11[3:3] ) ;
+	c_5_T12[0:0] = d_4_T12[0:0] y[4:4] T11[4:4]' + c_4_T12[0:0] ( y[4:4] + 
+		T11[4:4]' ) ;
+	d_5_T12[0:0] = c_4_T12[0:0] y[4:4]' T11[4:4] + d_4_T12[0:0] ( y[4:4]' + 
+		T11[4:4] ) ;
+	c_6_T12[0:0] = d_5_T12[0:0] y[5:5] T11[5:5]' + c_5_T12[0:0] ( y[5:5] + 
+		T11[5:5]' ) ;
+	d_6_T12[0:0] = c_5_T12[0:0] y[5:5]' T11[5:5] + d_5_T12[0:0] ( y[5:5]' + 
+		T11[5:5] ) ;
+	c_7_T12[0:0] = d_6_T12[0:0] y[6:6] T11[6:6]' + c_6_T12[0:0] ( y[6:6] + 
+		T11[6:6]' ) ;
+	d_7_T12[0:0] = c_6_T12[0:0] y[6:6]' T11[6:6] + d_6_T12[0:0] ( y[6:6]' + 
+		T11[6:6] ) ;
+	T13[0:0] = ( c_7_T12[0:0] y[7:7]' T11[7:7] + d_7_T12[0:0] ( y[7:7]' + 
+		T11[7:7] ) )' ;
+
+
+.endmodel gcd_5 ;
+
+
+.model gcd_6 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  x[0:0] x[1:1] x[2:2] x[3:3] x[4:4] x[5:5] x[6:6] x[7:7] ;
+	.outputs T15[0:0] ;
+
+	T15[0:0] = x[0:0]' x[1:1]' x[2:2]' x[3:3]' x[4:4]' x[5:5]' x[6:6]' 
+		x[7:7]' ;
+
+
+.endmodel gcd_6 ;
+
+
+.model gcd_7 ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  T9[0:0] T5[7:7] x[7:7] T5[6:6] x[6:6] T5[5:5] x[5:5] T5[4:4] 
+	         x[4:4] T5[3:3] x[3:3] T5[2:2] x[2:2] T5[1:1] x[1:1] T5[0:0] 
+	         x[0:0] ;
+	.outputs M1[0:0] M1[1:1] M1[2:2] M1[3:3] M1[4:4] M1[5:5] M1[6:6] 
+	         M1[7:7] ;
+
+	M1[0:0] = T9[0:0]' T5[0:0] + T9[0:0] x[0:0] ;
+	M1[1:1] = T9[0:0]' T5[1:1] + T9[0:0] x[1:1] ;
+	M1[2:2] = T9[0:0]' T5[2:2] + T9[0:0] x[2:2] ;
+	M1[3:3] = T9[0:0]' T5[3:3] + T9[0:0] x[3:3] ;
+	M1[4:4] = T9[0:0]' T5[4:4] + T9[0:0] x[4:4] ;
+	M1[5:5] = T9[0:0]' T5[5:5] + T9[0:0] x[5:5] ;
+	M1[6:6] = T9[0:0]' T5[6:6] + T9[0:0] x[6:6] ;
+	M1[7:7] = T9[0:0]' T5[7:7] + T9[0:0] x[7:7] ;
+
+
+.endmodel gcd_7 ;
+
+
+.model FF_SR_EN ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	latchin = set + res' ( din den + dout den' ) ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_SR_EN ;
+
+
+.model FF_EN ;
+
+	.date 910104120322 ;	# January 4 1991, 12:03.22
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	latchin = dout res' den' + din res' den ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_EN ;
+

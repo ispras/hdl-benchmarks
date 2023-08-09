@@ -1,0 +1,61 @@
+
+.model xor5.pla ;
+
+	.date 910108212208 ;	# January 8 1991, 21:22.08
+
+	.inputs  d c b a e ;
+	.outputs xor5 ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1230_xor5 CMOS3_1230 (zz_11', zz_8', zz_0' ;;xor5 ) ;
+	.call CMOS3_1130_zz_59 CMOS3_1130 (a, b, c ;;zz_59 ) ;
+	.call CMOS3_1130_zz_56 CMOS3_1130 (e, a, b ;;zz_56 ) ;
+	.call CMOS3_1130_zz_53 CMOS3_1130 (e, a, b ;;zz_53 ) ;
+	.call CMOS3_1130_zz_44 CMOS3_1130 (e, a, c ;;zz_44 ) ;
+	.call CMOS3_1130_zz_11 CMOS3_1130 (zz_13, [7211], [7212] ;;zz_11' ) ;
+	.call CMOS3_1930_zz_5 CMOS3_1930 (zz_49, e, zz_48, b, d', zz_44 ;;
+	         zz_5 ) ;
+	.call CMOS3_1930_zz_3 CMOS3_1930 (zz_52, e, zz_51, c, d', zz_53 ;;
+	         zz_3 ) ;
+	.call CMOS3_1930_zz_13 CMOS3_1930 (d, c, zz_17, zz_16, a, zz_15 ;;
+	         zz_13 ) ;
+	.call CMOS3_1120_zz_51 CMOS3_1120 (a, b ;;zz_51 ) ;
+	.call CMOS3_1120_zz_48 CMOS3_1120 (a, c ;;zz_48 ) ;
+	.call CMOS3_1120_zz_42 CMOS3_1120 (a, d ;;zz_42 ) ;
+	.call CMOS3_1120_zz_39 CMOS3_1120 (e, a ;;zz_39 ) ;
+	.call CMOS3_1120_zz_33 CMOS3_1120 (b, c ;;zz_33 ) ;
+	.call CMOS3_1120_zz_30 CMOS3_1120 (b, d ;;zz_30 ) ;
+	.call CMOS3_1120_zz_27 CMOS3_1120 (e, b ;;zz_27 ) ;
+	.call CMOS3_1120_zz_24 CMOS3_1120 (c, d ;;zz_24 ) ;
+	.call CMOS3_1120_zz_21 CMOS3_1120 (e, c ;;zz_21 ) ;
+	.call CMOS3_1120_zz_15 CMOS3_1120 (e, d ;;zz_15 ) ;
+	.call CMOS3_1660_zz_52 CMOS3_1660 (d, c ;;zz_52 ) ;
+	.call CMOS3_1660_zz_49 CMOS3_1660 (d, b ;;zz_49 ) ;
+	.call CMOS3_1660_zz_16 CMOS3_1660 (c, b ;;zz_16 ) ;
+	.call CMOS3_1670_zz_17 CMOS3_1670 (b, a, e ;;zz_17 ) ;
+	.call CMOS3_1220_zz_37 CMOS3_1220 (a, d' ;;zz_37' ) ;
+	.call CMOS3_1610_zz_61 CMOS3_1610 (d, e ;;zz_61 ) ;
+	.call CMOS3_1610_zz_58 CMOS3_1610 (c, d ;;zz_58 ) ;
+	.call CMOS3_1310_d CMOS3_1310 (d ;;d' ) ;
+	.call CMOS3_1140_[7216] CMOS3_1140 (zz_37', e, b, c ;;[7216] ) ;
+	.call CMOS3_1140_zz_8 CMOS3_1140 ([7213], [7214], [7215], [7216] ;;
+	         zz_8' ) ;
+	.call CMOS3_1140_zz_0 CMOS3_1140 ([7217], [7218], zz_5, zz_1 ;;
+	         zz_0' ) ;
+	.call CMOS3_1620_zz_1 CMOS3_1620 (zz_3, zz_2' ;;zz_1 ) ;
+	.call CMOS3_1870_zz_2 CMOS3_1870 (zz_58, zz_56, zz_61, zz_59 ;;
+	         zz_2' ) ;
+	.call CMOS3_1680_[7218] CMOS3_1680 (c, b, e, zz_42 ;;[7218] ) ;
+	.call CMOS3_1680_[7217] CMOS3_1680 (d, c, b, zz_39 ;;[7217] ) ;
+	.call CMOS3_1680_[7215] CMOS3_1680 (d, a, e, zz_33 ;;[7215] ) ;
+	.call CMOS3_1680_[7214] CMOS3_1680 (c, a, e, zz_30 ;;[7214] ) ;
+	.call CMOS3_1680_[7213] CMOS3_1680 (d, c, a, zz_27 ;;[7213] ) ;
+	.call CMOS3_1680_[7212] CMOS3_1680 (b, a, e, zz_24 ;;[7212] ) ;
+	.call CMOS3_1680_[7211] CMOS3_1680 (d, b, a, zz_21 ;;[7211] ) ;
+
+.endmodel xor5.pla ;
+

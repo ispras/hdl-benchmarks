@@ -1,0 +1,28 @@
+
+.model CM150 ;
+
+	.date 910103085113 ;	# January 3 1991, 08:51.13
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u ;
+	.outputs v ;
+
+	v = u + q0' ;
+	q0 = h0' o0' + t o0' + t' h0' ;
+	z = a' q' + b' q + a' b' ;
+	a0 = c' q' + d' q + c' d' ;
+	b0 = e' q' + f' q + e' f' ;
+	c0 = g' q' + h' q + g' h' ;
+	e0 = z' a0' + r a0' + r' z' ;
+	f0 = b0' c0' + r c0' + r' b0' ;
+	h0 = e0' f0' + s f0' + s' e0' ;
+	i0 = i' q' + j' q + i' j' ;
+	j0 = k' q' + l' q + k' l' ;
+	k0 = m' q' + n' q + m' n' ;
+	l0 = o' q' + p' q + o' p' ;
+	m0 = i0' j0' + r j0' + r' i0' ;
+	n0 = k0' l0' + r l0' + r' k0' ;
+	o0 = m0' n0' + s n0' + s' m0' ;
+
+
+.endmodel CM150 ;
+

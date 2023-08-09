@@ -1,0 +1,14 @@
+
+.model CM152 ;
+
+	.date 910103085116 ;	# January 3 1991, 08:51.16
+
+	.inputs  a b c d e f g h i j k ;
+	.outputs l ;
+
+	l = k j i h + k j i' g + k j' i f + k j' i' e + k' j i d + k' j i' c + 
+		k' j' a i' + k' j' b i ;
+
+
+.endmodel CM152 ;
+

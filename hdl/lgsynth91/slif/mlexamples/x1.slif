@@ -1,0 +1,151 @@
+
+.model x1 ;
+
+	.date 910103085410 ;	# January 3 1991, 08:54.10
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u v w y z a0 b0 c0 d0 
+	         e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0 y0 
+	         z0 ;
+	.outputs a1 b1 c1 d1 e1 f1 g1 h1 i1 j1 k1 l1 m1 n1 o1 p1 q1 r1 s1 t1 u1 
+	         v1 w1 x1 y1 z1 a2 b2 c2 d2 e2 f2 g2 h2 i2 ;
+	.net m0 i1 ;
+	.net n0 j1 ;
+	.net y p1 ;
+	.net z q1 ;
+	.net x0 t1 ;
+	.net y0 u1 ;
+	.net h0 c2 ;
+
+	a1 = a0 b' + b' r0 + b' f0 + a0 l' + a0 m + a0 n + j' r' v' a0 ;
+	b1 = o0 t0 + j c w' g0 + a' b j' m' n' v k0 + a' b j m' n' k' l a0 + a' 
+		b j' m' n' v k' l a0 ;
+	c1 = v b0 + v' b0 m' ;
+	d1 = v c0 + v' c0 m' + v' m' a' d' h' p' d0 + v' m' a' d' h' d0 o' ;
+	e1 = o0 u0 + m' o' a' h' e0 + d g m' o' d0 e + d g m' o' u d0 + d m' o' 
+		u' d0 e' w' ;
+	f1 = o' q0 i' + q0 q' i' + g' q0 q' + g' o' q0 + o a' h' m' p e0 ;
+	g1 = v d0 + o0 v0 + p' a' g h' p0 i' s' + p' v a' h' p0 i' s' + o' a' g 
+		h' p0 i' s' + e m' o p v' d0 g + m' o p u v' d0 g + o' v a' h' 
+		r' p0 i' + p' v a' h' r' p0 i' + o' a' g h' r' p0 i' + p' a' g 
+		h' r' p0 i' + v a' h' q' r' p0 i' + a' g h' q' p0 i' s' + v a' 
+		h' q' p0 i' s' + e' m' o p u' v' d0 + o' v a' h' p0 i' s' + a' 
+		g h' q' r' p0 i' + m' o' v' a' g' h' p0 d' s' + m' p' v' a' c' 
+		g' h' p0 s' + m' o' v' a' c' g' h' r' p0 + m' p' v' a' c' g' h' 
+		r' p0 + m' v' a' c' g' h' q' r' p0 + m' o' v' a' g' h' r' p0 d' 
+		+ m' p' v' a' g' h' r' p0 d' + m' v' a' g' h' q' r' p0 d' + m' 
+		o' v' a' c' g' h' p0 s' + m' v' a' c' g' h' q' p0 s' + m' p' v' 
+		a' g' h' p0 d' s' + m' v' a' g' h' q' p0 d' s' ;
+	h1 = a' e' h u' w' p0 + a' e' h u' w' s0 + a' e' h u' w' d' d0 + a' e' 
+		h u' w' o' e0 ;
+	k1 = q0 a + k0 a + m e0 + m g0 + m h0 + b r0 + m k0 + m q0 + m s0 + a 
+		j0 + a a0 + s0 a + p0 a + d0 a + h0 a + e0 a + r s l0 + g0 a j' 
+		+ m v' d0 + m v' p0 + m v' c0 + m v' b0 + p0 r s + a t i0 + d 
+		v' w d0 ;
+	l1 = u h0 + e h0 + h0 w + b f0 + h u d0 + h d0 e + h u e0 + h e e0 + b 
+		k a0 + o p q q0 + o p q p0 + h' u a' g' v' e0 + h' e a' g' v' 
+		e0 + h' u d0 a' d g' v' + h' d0 e a' d g' v' + h' u a' o p' v' 
+		e0 + h' e a' o p' v' e0 + h' u d0 a' d o p' v' + h' d0 e a' d o 
+		p' v' + h' u d0 a' d' g' o p v' + h' d0 e a' d' g' o p v' ;
+	m1 = j h0 + a' d e' m' o p' u' v' w' d0 ;
+	n1 = a' f j' v g0 + a' j g0 c' h' m' + a' h' m' e' u' w' s0 + a' m' e' 
+		u' w' o0 w0 + a' j' m' e' u' w' h0 + a' m' e' o p' u' w' e0 + 
+		a' m' e' o p u' w' g' q' q0 + a' v' c m' e' u' w' g' d p0 ;
+	o1 = a' i v p0 + a' h' i i0 + a' i v' p0 g o' + a' i v' g q0 p' + a' i 
+		v' p0 g p' + a' i v' p0 g q' + a' i v' g q' q0 + a' i v' g q0 
+		o' ;
+	r1 = a' j0 + a' h' i' i0 + a h' i' i0 t' + a' b j' m' r s' v' k0 + a' b 
+		j' m' r s' v' k' l a0 ;
+	s1 = h t i0 ;
+	v1 = a' j' m' v' g0 + a' j' m' v' k0 r' + a' j' m' v g0 f' + a' j' m' n 
+		v k0 ;
+	w1 = r s k0 + r s a0 ;
+	x1 = z + h0 + j' f0 + j' r0 + j' g0 ;
+	y1 = j z' h0' + z' h0' f0' g0' r0' ;
+	z1 = c0 + d0 ;
+	a2 = r0 + f0 ;
+	b2 = a' e' m' o p' u' v' w' p0 + a' e' m' o p' u' v' w' e0 + a' e' g' 
+		m' o p u' v' w' e0 + a' e' g' m' o p u' v' w' p0 ;
+	d2 = i0 + h0 + z + y + a' i v p0 + a' g i p' p0 + a' g i o' p0 + a' g i 
+		q' p0 + a' g i q' v' q0 + a' g i v' q0 p' + a' g i v' q0 o' ;
+	e2 = a y' z' h0' i0' + y' z' h0' i0' i' + y' z' h0' i0' p0' q0' + y' z' 
+		h0' i0' v p0' + y' z' h0' i0' g' p0' + y' z' h0' i0' g' v' + y' 
+		z' h0' i0' v' o p q + y' z' h0' i0' p0' o p q ;
+	f2 = a0' f0' m0' r0' x0' h' + f0' m0' r0' x0' h' b l z0 + o a0' d0' f0' 
+		i0' m0' p0' r0' s0' x0' + o a0' f0' i0' m0' p0' r0' s0' x0' d + 
+		a0' d0' f0' i0' m0' p0' r0' s0' x0' e0' + a0' f0' i0' m0' p0' 
+		r0' s0' x0' d e0' + o a0' d0' f0' m0' p0' r0' s0' x0' t' + o 
+		a0' f0' m0' p0' r0' s0' x0' d t' + a0' f0' m0' p0' r0' s0' x0' 
+		d e0' t' + a0' d0' f0' m0' p0' r0' s0' x0' e0' t' + f0' m0' r0' 
+		x0' h' b j' l m' r + o f0' m0' p0' r0' s0' x0' d t' b l z0 + o 
+		d0' f0' m0' p0' r0' s0' x0' t' b l z0 + f0' i0' m0' p0' r0' s0' 
+		x0' d e0' b l z0 + o f0' i0' m0' p0' r0' s0' x0' d b l z0 + o 
+		d0' f0' i0' m0' p0' r0' s0' x0' b l z0 + f0' m0' p0' r0' s0' 
+		x0' d e0' t' b l z0 + d0' f0' m0' p0' r0' s0' x0' e0' t' b l z0 
+		+ d0' f0' i0' m0' p0' r0' s0' x0' e0' b l z0 + o d0' f0' i0' 
+		m0' p0' r0' s0' x0' b j' l m' r + o f0' i0' m0' p0' r0' s0' x0' 
+		d b j' l m' r + d0' f0' i0' m0' p0' r0' s0' x0' e0' b j' l m' r 
+		+ f0' i0' m0' p0' r0' s0' x0' d e0' b j' l m' r + o d0' f0' m0' 
+		p0' r0' s0' x0' t' b j' l m' r + o f0' m0' p0' r0' s0' x0' d t' 
+		b j' l m' r + d0' f0' m0' p0' r0' s0' x0' e0' t' b j' l m' r + 
+		f0' m0' p0' r0' s0' x0' d e0' t' b j' l m' r ;
+	g2 = f0 + r0 + x0 + m0 + h s0 + b' a0 + h p0 + b l' a0 + h o' e0 + h t 
+		i0 + h d' d0 + b a0 r' z0' + b a0 z0' m + b a0 z0' j ;
+	h2 = i' j' l' y' z' b0' c0' h0' d0' + i' j' y' z' b0' c0' h0' b' d0' + 
+		i' l' y' z' b0' c0' h0' c' d0' + i' y' z' b0' c0' h0' b' c' d0' 
+		+ j' l' y' z' b0' c0' h0' d0' i0' + j' y' z' b0' c0' h0' b' d0' 
+		i0' + l' y' z' b0' c0' h0' c' d0' i0' + y' z' b0' c0' h0' b' c' 
+		d0' i0' + i' l' y' z' b0' c0' h0' d0' g0' + i' y' z' b0' c0' 
+		h0' b' d0' g0' + l' y' z' b0' c0' h0' d0' i0' g0' + y' z' b0' 
+		c0' h0' b' d0' i0' g0' + i' j' y' z' b0' c0' h0' d0' v' + j' y' 
+		z' b0' c0' h0' d0' i0' v' + i' y' z' b0' c0' h0' c' d0' a + j' 
+		y' z' b0' c0' h0' d0' i0' a + y' z' b0' c0' h0' c' d0' i0' a + 
+		i' y' z' b0' c0' h0' d0' g0' a + y' z' b0' c0' h0' d0' i0' g0' 
+		a + i' j' y' z' b0' c0' h0' d0' m + i' y' z' b0' c0' h0' c' d0' 
+		m + j' y' z' b0' c0' h0' d0' i0' m + y' z' b0' c0' h0' c' d0' 
+		i0' m + i' y' z' b0' c0' h0' d0' g0' m + y' z' b0' c0' h0' d0' 
+		i0' g0' m + i' j' y' z' b0' c0' h0' d0' n + i' y' z' b0' c0' 
+		h0' c' d0' n + j' y' z' b0' c0' h0' d0' i0' n + y' z' b0' c0' 
+		h0' c' d0' i0' n + i' y' z' b0' c0' h0' d0' g0' n + y' z' b0' 
+		c0' h0' d0' i0' g0' n + i' j' y' z' b0' c0' h0' d0' a + d' h y' 
+		z' b0' c0' h0' i0' g0' a + d' h i' y' z' b0' c0' h0' g0' a + d' 
+		h y' z' b0' c0' h0' c' i0' a + d' h j' y' z' b0' c0' h0' i0' a 
+		+ d' h i' y' z' b0' c0' h0' c' a + d' h i' j' y' z' b0' c0' h0' 
+		a + y' z' b0' c0' h0' d0' i0' a0' g0' v' + i' y' z' b0' c0' h0' 
+		d0' a0' g0' v' + y' z' b0' c0' h0' c' d0' i0' a0' v' + i' y' z' 
+		b0' c0' h0' c' d0' a0' v' + d' h j' y' z' b0' c0' h0' i0' v' + 
+		d' h i' j' y' z' b0' c0' h0' v' + j y' z' b0' c0' h0' d0' i0' 
+		a0' g0' + d' h i' j' y' z' b0' c0' h0' m + i' j y' z' b0' c0' 
+		h0' d0' a0' g0' + d' h l' y' z' b0' c0' h0' i0' g0' + d' h i' 
+		y' z' b0' c0' h0' b' g0' + d' h i' l' y' z' b0' c0' h0' g0' + j 
+		y' z' b0' c0' h0' c' d0' i0' a0' + i' j y' z' b0' c0' h0' c' 
+		d0' a0' + d' h y' z' b0' c0' h0' b' c' i0' + d' h l' y' z' b0' 
+		c0' h0' c' i0' + d' h j' y' z' b0' c0' h0' b' i0' + d' h j' l' 
+		y' z' b0' c0' h0' i0' + d' h i' y' z' b0' c0' h0' b' c' + d' h 
+		i' l' y' z' b0' c0' h0' c' + d' h i' j' y' z' b0' c0' h0' b' + 
+		d' h i' j' l' y' z' b0' c0' h0' + d' h i' y' z' b0' c0' h0' c' 
+		m + d' h j' y' z' b0' c0' h0' i0' m + d' h y' z' b0' c0' h0' c' 
+		i0' m + d' h i' y' z' b0' c0' h0' g0' m + d' h y' z' b0' c0' 
+		h0' i0' g0' m + d' h i' j' y' z' b0' c0' h0' n + d' h i' y' z' 
+		b0' c0' h0' c' n + d' h j' y' z' b0' c0' h0' i0' n + d' h y' z' 
+		b0' c0' h0' c' i0' n + d' h i' y' z' b0' c0' h0' g0' n + d' h 
+		y' z' b0' c0' h0' i0' g0' n + i' j' y' z' b0' c0' h0' d0' a0' 
+		k0' + i' y' z' b0' c0' h0' c' d0' a0' k0' + j' y' z' b0' c0' 
+		h0' d0' i0' a0' k0' + y' z' b0' c0' h0' c' d0' i0' a0' k0' + i' 
+		y' z' b0' c0' h0' d0' a0' g0' k0' + y' z' b0' c0' h0' d0' i0' 
+		a0' g0' k0' + d' h y' z' b0' c0' h0' b' i0' g0' + d' h i' j y' 
+		z' b0' c0' h0' c' a0' + d' h j y' z' b0' c0' h0' c' i0' a0' + 
+		d' h i' j y' z' b0' c0' h0' a0' g0' + d' h j y' z' b0' c0' h0' 
+		i0' a0' g0' + d' h i' y' z' b0' c0' h0' c' a0' v' + d' h y' z' 
+		b0' c0' h0' c' i0' a0' v' + d' h i' y' z' b0' c0' h0' a0' g0' 
+		v' + d' h y' z' b0' c0' h0' i0' a0' g0' v' + d' h i' j' y' z' 
+		b0' c0' h0' a0' k0' + d' h i' y' z' b0' c0' h0' c' a0' k0' + d' 
+		h j' y' z' b0' c0' h0' i0' a0' k0' + d' h y' z' b0' c0' h0' c' 
+		i0' a0' k0' + d' h i' y' z' b0' c0' h0' a0' g0' k0' + d' h y' 
+		z' b0' c0' h0' i0' a0' g0' k0' ;
+	i2 = z + h0 + c0 + b0 + y + d0 d + h' d0 + i i0 + c j g0 + j a' b l m' 
+		n' a0 + a' b l m' n' v a0 + j' a' b l m' n' v k0 + c g0 a' b l 
+		m' n' v k0 ;
+
+
+.endmodel x1 ;
+

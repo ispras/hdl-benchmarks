@@ -1,0 +1,67 @@
+.model CM150
+.inputs a b c d e f g h i j k l m n o p q r s t u
+.outputs v
+.names q0 u v
+0- 1
+-1 1
+.names a b q z
+00- 1
+-01 1
+0-0 1
+.names c d q a0
+00- 1
+-01 1
+0-0 1
+.names e f q b0
+00- 1
+-01 1
+0-0 1
+.names g h q c0
+00- 1
+-01 1
+0-0 1
+.names r z a0 e0
+00- 1
+1-0 1
+-00 1
+.names r b0 c0 f0
+00- 1
+1-0 1
+-00 1
+.names s e0 f0 h0
+00- 1
+1-0 1
+-00 1
+.names i j q i0
+00- 1
+-01 1
+0-0 1
+.names k l q j0
+00- 1
+-01 1
+0-0 1
+.names m n q k0
+00- 1
+-01 1
+0-0 1
+.names o p q l0
+00- 1
+-01 1
+0-0 1
+.names r i0 j0 m0
+00- 1
+1-0 1
+-00 1
+.names r k0 l0 n0
+00- 1
+1-0 1
+-00 1
+.names s m0 n0 o0
+00- 1
+1-0 1
+-00 1
+.names t h0 o0 q0
+00- 1
+1-0 1
+-00 1
+.end

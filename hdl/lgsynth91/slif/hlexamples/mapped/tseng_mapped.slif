@@ -1,0 +1,2917 @@
+
+.model tseng ;
+
+	.date 910109115653 ;	# January 9 1991, 11:56.53
+
+	.inputs  CLK RESET reset[0:0] ;
+	.inouts  v1[0:0] v1[1:1] v1[2:2] v1[3:3] v1[4:4] v1[5:5] v1[6:6] 
+	         v1[7:7] v2[0:0] v2[1:1] v2[2:2] v2[3:3] v2[4:4] v2[5:5] v2[6:6] 
+	         v2[7:7] v3[0:0] v3[1:1] v3[2:2] v3[3:3] v3[4:4] v3[5:5] v3[6:6] 
+	         v3[7:7] v4[0:0] v4[1:1] v4[2:2] v4[3:3] v4[4:4] v4[5:5] v4[6:6] 
+	         v4[7:7] v5[0:0] v5[1:1] v5[2:2] v5[3:3] v5[4:4] v5[5:5] v5[6:6] 
+	         v5[7:7] v6[0:0] v6[1:1] v6[2:2] v6[3:3] v6[4:4] v6[5:5] v6[6:6] 
+	         v6[7:7] v7[0:0] v7[1:1] v7[2:2] v7[3:3] v7[4:4] v7[5:5] v7[6:6] 
+	         v7[7:7] v8[0:0] v8[1:1] v8[2:2] v8[3:3] v8[4:4] v8[5:5] v8[6:6] 
+	         v8[7:7] v9[0:0] v9[1:1] v9[2:2] v9[3:3] v9[4:4] v9[5:5] v9[6:6] 
+	         v9[7:7] v10[0:0] v10[1:1] v10[2:2] v10[3:3] v10[4:4] v10[5:5] 
+	         v10[6:6] v10[7:7] v11[0:0] v11[1:1] v11[2:2] v11[3:3] v11[4:4] 
+	         v11[5:5] v11[6:6] v11[7:7] v12[0:0] v12[1:1] v12[2:2] v12[3:3] 
+	         v12[4:4] v12[5:5] v12[6:6] v12[7:7] v13[0:0] v13[1:1] v13[2:2] 
+	         v13[3:3] v13[4:4] v13[5:5] v13[6:6] v13[7:7] v14[0:0] v14[1:1] 
+	         v14[2:2] v14[3:3] v14[4:4] v14[5:5] v14[6:6] v14[7:7] v15[0:0] 
+	         v15[1:1] v15[2:2] v15[3:3] v15[4:4] v15[5:5] v15[6:6] v15[7:7] 
+	         ready[0:0] ;
+	.outputs DN ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1830_Sr1_2 CMOS3_1830 (Sw1_2_FF_EN.latchin', CLK ;;
+	         Sr1_2' ) ;
+	.call CMOS3_1830_T6[5:5] CMOS3_1830 (FF_SR_EN14_FF_SR_EN.latchin, CLK ;;
+	         T6[5:5], T6[5:5]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[5:5] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN11_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.count[5:5]' ) ;
+	.call CMOS3_1830_T6[3:3] CMOS3_1830 (FF_SR_EN12_FF_SR_EN.latchin, CLK ;;
+	         T6[3:3], T6[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[3:3] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN13_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.count[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[1:1] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN7_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]' ) ;
+	.call CMOS3_1830_T6[1:1] CMOS3_1830 (FF_SR_EN10_FF_SR_EN.latchin, CLK ;;
+	         T6[1:1], T6[1:1]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[1:1] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN15_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.count[1:1]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[3:3] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN5_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]' ) ;
+	.call CMOS3_1830_T5[7:7] CMOS3_1830 (FF_SR_EN8_FF_SR_EN.latchin, CLK ;;
+	         T5[7:7], T5[7:7]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.Sr4_3 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.Sw4_3_FF_EN.latchin', CLK ;;
+	         auto_divide_8[0]_divide_8.Sr4_3, 
+	         auto_divide_8[0]_divide_8.Sr4_3' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[5:5] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN3_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]' ) ;
+	.call CMOS3_1830_T5[5:5] CMOS3_1830 (FF_SR_EN6_FF_SR_EN.latchin, CLK ;;
+	         T5[5:5], T5[5:5]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[7:7] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN1_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[7:7], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]' ) ;
+	.call CMOS3_1830_T5[3:3] CMOS3_1830 (FF_SR_EN4_FF_SR_EN.latchin, CLK ;;
+	         T5[3:3], T5[3:3]' ) ;
+	.call CMOS3_1830_T5[1:1] CMOS3_1830 (FF_SR_EN2_FF_SR_EN.latchin, CLK ;;
+	         T5[1:1], T5[1:1]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.Sr3_3 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.Sw3_3_FF_EN.latchin', CLK ;;
+	         auto_divide_8[0]_divide_8.Sr3_3' ) ;
+	.call CMOS3_1830_DN3_9 CMOS3_1830 (TcL3_3[6]_FF_EN.latchin, CLK ;;
+	         DN3_9, DN3_9' ) ;
+	.call CMOS3_1830_DN3_8 CMOS3_1830 (TcL3_3[5]_FF_EN.latchin, CLK ;;
+	         DN3_8, DN3_8' ) ;
+	.call CMOS3_1830_DN3_7 CMOS3_1830 (TcL3_3[4]_FF_EN.latchin, CLK ;;
+	         DN3_7, DN3_7' ) ;
+	.call CMOS3_1830_DN3_6 CMOS3_1830 (TcL3_3[3]_FF_EN.latchin, CLK ;;
+	         DN3_6, DN3_6' ) ;
+	.call CMOS3_1830_T13[7:7] CMOS3_1830 (FF_SR_EN65_FF_SR_EN.latchin, 
+	         CLK ;;T13[7:7]' ) ;
+	.call CMOS3_1830_DN3_5 CMOS3_1830 (TcL3_3[2]_FF_EN.latchin, CLK ;;
+	         DN3_5, DN3_5' ) ;
+	.call CMOS3_1830_DN3_4 CMOS3_1830 (TcL3_3[1]_FF_EN.latchin, CLK ;;
+	         DN3_4, DN3_4' ) ;
+	.call CMOS3_1830_T13[5:5] CMOS3_1830 (FF_SR_EN63_FF_SR_EN.latchin, 
+	         CLK ;;T13[5:5]' ) ;
+	.call CMOS3_1830_T13[3:3] CMOS3_1830 (FF_SR_EN61_FF_SR_EN.latchin, 
+	         CLK ;;T13[3:3]' ) ;
+	.call CMOS3_1830_T9[6:6] CMOS3_1830 (FF_SR_EN39_FF_SR_EN.latchin, CLK ;;
+	         T9[6:6]' ) ;
+	.call CMOS3_1830_T13[1:1] CMOS3_1830 (FF_SR_EN59_FF_SR_EN.latchin, 
+	         CLK ;;T13[1:1]' ) ;
+	.call CMOS3_1830_T9[4:4] CMOS3_1830 (FF_SR_EN37_FF_SR_EN.latchin, CLK ;;
+	         T9[4:4], T9[4:4]' ) ;
+	.call CMOS3_1830_T9[2:2] CMOS3_1830 (FF_SR_EN35_FF_SR_EN.latchin, CLK ;;
+	         T9[2:2], T9[2:2]' ) ;
+	.call CMOS3_1830_T9[0:0] CMOS3_1830 (FF_SR_EN33_FF_SR_EN.latchin, CLK ;;
+	         T9[0:0]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.LBr3_3[1] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.T4[0:0]_L_FF_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.LBr3_3[1]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.Sr1_3 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.Sw1_3_FF_EN.latchin', CLK ;;
+	         auto_divide_8[0]_divide_8.Sr1_3' ) ;
+	.call CMOS3_1830_GFDN_3 CMOS3_1830 (TcL3_14[2]_FF_EN.latchin, CLK ;;
+	         GFDN_3, GFDN_3' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.T4[0:0] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN16_FF_SR_EN.latchin', 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.T4[0:0]' ) ;
+	.call CMOS3_1830_T8[6:6] CMOS3_1830 (FF_SR_EN31_FF_SR_EN.latchin, CLK ;;
+	         T8[6:6], T8[6:6]' ) ;
+	.call CMOS3_1830_T8[4:4] CMOS3_1830 (FF_SR_EN29_FF_SR_EN.latchin, CLK ;;
+	         T8[4:4]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.DN4_2 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.TcL4_1[1]_FF_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.DN4_2, 
+	         auto_divide_8[0]_divide_8.DN4_2' ) ;
+	.call CMOS3_1830_T8[2:2] CMOS3_1830 (FF_SR_EN27_FF_SR_EN.latchin, CLK ;;
+	         T8[2:2]' ) ;
+	.call CMOS3_1830_T11[6:6] CMOS3_1830 (FF_SR_EN55_FF_SR_EN.latchin, 
+	         CLK ;;T11[6:6], T11[6:6]' ) ;
+	.call CMOS3_1830_T11[4:4] CMOS3_1830 (FF_SR_EN53_FF_SR_EN.latchin, 
+	         CLK ;;T11[4:4], T11[4:4]' ) ;
+	.call CMOS3_1830_T8[0:0] CMOS3_1830 (FF_SR_EN25_FF_SR_EN.latchin, CLK ;;
+	         T8[0:0], T8[0:0]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[6:6] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN10_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[6:6], 
+	         auto_divide_8[0]_divide_8.tmp[6:6]' ) ;
+	.call CMOS3_1830_T7[6:6] CMOS3_1830 (FF_SR_EN23_FF_SR_EN.latchin, CLK ;;
+	         T7[6:6], T7[6:6]' ) ;
+	.call CMOS3_1830_T11[2:2] CMOS3_1830 (FF_SR_EN51_FF_SR_EN.latchin, 
+	         CLK ;;T11[2:2], T11[2:2]' ) ;
+	.call CMOS3_1830_DN CMOS3_1830 (TcL1_2[1]_FF_EN.latchin, CLK ;;DN, 
+	         DN' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[4:4] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN12_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[4:4], 
+	         auto_divide_8[0]_divide_8.tmp[4:4]' ) ;
+	.call CMOS3_1830_T7[4:4] CMOS3_1830 (FF_SR_EN21_FF_SR_EN.latchin, CLK ;;
+	         T7[4:4], T7[4:4]' ) ;
+	.call CMOS3_1830_T11[0:0] CMOS3_1830 (FF_SR_EN49_FF_SR_EN.latchin, 
+	         CLK ;;T11[0:0]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[2:2] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN14_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[2:2], 
+	         auto_divide_8[0]_divide_8.tmp[2:2]' ) ;
+	.call CMOS3_1830_T10[6:6] CMOS3_1830 (FF_SR_EN47_FF_SR_EN.latchin, 
+	         CLK ;;T10[6:6]' ) ;
+	.call CMOS3_1830_T7[2:2] CMOS3_1830 (FF_SR_EN19_FF_SR_EN.latchin, CLK ;;
+	         T7[2:2], T7[2:2]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.DN1_5 CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.TcL1_3[1]_FF_EN.latchin, CLK ;;
+	         auto_smultiply_8[0]_smultiply_8.DN1_5, 
+	         auto_smultiply_8[0]_smultiply_8.DN1_5' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[0:0] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN16_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[0:0]' ) ;
+	.call CMOS3_1830_T10[4:4] CMOS3_1830 (FF_SR_EN45_FF_SR_EN.latchin, 
+	         CLK ;;T10[4:4]' ) ;
+	.call CMOS3_1830_T7[0:0] CMOS3_1830 (FF_SR_EN17_FF_SR_EN.latchin, CLK ;;
+	         T7[0:0]' ) ;
+	.call CMOS3_1830_T10[2:2] CMOS3_1830 (FF_SR_EN43_FF_SR_EN.latchin, 
+	         CLK ;;T10[2:2]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.LBr1_3[0] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.T2[0:0]_L_FF_EN.latchin', CLK ;;
+	         auto_divide_8[0]_divide_8.LBr1_3[0], 
+	         auto_divide_8[0]_divide_8.LBr1_3[0]' ) ;
+	.call CMOS3_1830_T10[0:0] CMOS3_1830 (FF_SR_EN41_FF_SR_EN.latchin, 
+	         CLK ;;T10[0:0]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.DN2_2 CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.TcL2_1[1]_FF_EN.latchin, CLK ;;
+	         auto_smultiply_8[0]_smultiply_8.DN2_2, 
+	         auto_smultiply_8[0]_smultiply_8.DN2_2' ) ;
+	.call CMOS3_1830_T6[6:6] CMOS3_1830 (FF_SR_EN15_FF_SR_EN.latchin, CLK ;;
+	         T6[6:6], T6[6:6]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[6:6] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN10_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.count[6:6]' ) ;
+	.call CMOS3_1830_T6[4:4] CMOS3_1830 (FF_SR_EN13_FF_SR_EN.latchin, CLK ;;
+	         T6[4:4], T6[4:4]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[4:4] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN12_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.count[4:4]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[0:0] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN8_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]' ) ;
+	.call CMOS3_1830_T6[2:2] CMOS3_1830 (FF_SR_EN11_FF_SR_EN.latchin, CLK ;;
+	         T6[2:2], T6[2:2]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[2:2] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN14_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[2:2]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[2:2] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN6_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]' ) ;
+	.call CMOS3_1830_LC3_3 CMOS3_1830 (FF_EN.3_3_LC_FF_EN.latchin, CLK ;;
+	         LC3_3' ) ;
+	.call CMOS3_1830_T6[0:0] CMOS3_1830 (FF_SR_EN9_FF_SR_EN.latchin, CLK ;;
+	         T6[0:0], T6[0:0]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[4:4] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN4_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.Lak2_3 CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_EN.2_3_La_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.Lak2_3' ) ;
+	.call CMOS3_1830_T5[6:6] CMOS3_1830 (FF_SR_EN7_FF_SR_EN.latchin, CLK ;;
+	         T5[6:6], T5[6:6]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.tmp[6:6] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN2_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.tmp[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]' ) ;
+	.call CMOS3_1830_Lak4_2 CMOS3_1830 (FF_EN.4_2_La_FF_EN.latchin, CLK ;;
+	         Lak4_2, Lak4_2' ) ;
+	.call CMOS3_1830_T5[4:4] CMOS3_1830 (FF_SR_EN5_FF_SR_EN.latchin, CLK ;;
+	         T5[4:4], T5[4:4]' ) ;
+	.call CMOS3_1830_T5[2:2] CMOS3_1830 (FF_SR_EN3_FF_SR_EN.latchin, CLK ;;
+	         T5[2:2], T5[2:2]' ) ;
+	.call CMOS3_1830_T5[0:0] CMOS3_1830 (FF_SR_EN1_FF_SR_EN.latchin, CLK ;;
+	         T5[0:0], T5[0:0]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.Sr1_3 CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.Sw1_3_FF_EN.latchin', CLK ;;
+	         auto_smultiply_8[0]_smultiply_8.Sr1_3, 
+	         auto_smultiply_8[0]_smultiply_8.Sr1_3' ) ;
+	.call CMOS3_1830_LBr1_2[0] CMOS3_1830 (T1[0:0]_L_FF_EN.latchin', CLK ;;
+	         LBr1_2[0]' ) ;
+	.call CMOS3_1830_T13[6:6] CMOS3_1830 (FF_SR_EN64_FF_SR_EN.latchin, 
+	         CLK ;;T13[6:6]' ) ;
+	.call CMOS3_1830_LC1_2 CMOS3_1830 (FF_EN.1_2_LC_FF_EN.latchin, CLK ;;
+	         LC1_2, LC1_2' ) ;
+	.call CMOS3_1830_T13[4:4] CMOS3_1830 (FF_SR_EN62_FF_SR_EN.latchin, 
+	         CLK ;;T13[4:4]' ) ;
+	.call CMOS3_1830_T9[7:7] CMOS3_1830 (FF_SR_EN40_FF_SR_EN.latchin, CLK ;;
+	         T9[7:7]' ) ;
+	.call CMOS3_1830_T13[2:2] CMOS3_1830 (FF_SR_EN60_FF_SR_EN.latchin, 
+	         CLK ;;T13[2:2]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.Sr2_3 CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.Sw2_3_FF_EN.latchin', CLK ;;
+	         auto_smultiply_8[0]_smultiply_8.Sr2_3, 
+	         auto_smultiply_8[0]_smultiply_8.Sr2_3' ) ;
+	.call CMOS3_1830_T9[5:5] CMOS3_1830 (FF_SR_EN38_FF_SR_EN.latchin, CLK ;;
+	         T9[5:5], T9[5:5]' ) ;
+	.call CMOS3_1830_EN3_10 CMOS3_1830 (TcL3_3[7]_FF_EN.latchin, CLK ;;
+	         EN3_10, EN3_10' ) ;
+	.call CMOS3_1830_T13[0:0] CMOS3_1830 (FF_SR_EN58_FF_SR_EN.latchin, 
+	         CLK ;;T13[0:0]' ) ;
+	.call CMOS3_1830_T9[3:3] CMOS3_1830 (FF_SR_EN36_FF_SR_EN.latchin, CLK ;;
+	         T9[3:3], T9[3:3]' ) ;
+	.call CMOS3_1830_T9[1:1] CMOS3_1830 (FF_SR_EN34_FF_SR_EN.latchin, CLK ;;
+	         T9[1:1], T9[1:1]' ) ;
+	.call CMOS3_1830_DN3_15 CMOS3_1830 (TcL3_14[3]_FF_EN.latchin, CLK ;;
+	         DN3_15, DN3_15' ) ;
+	.call CMOS3_1830_DN3_10 CMOS3_1830 (TcL3_3[8]_FF_EN.latchin, CLK ;;
+	         DN3_10, DN3_10' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.LC3_3 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_EN.3_3_LC_FF_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.LC3_3' ) ;
+	.call CMOS3_1830_T8[7:7] CMOS3_1830 (FF_SR_EN32_FF_SR_EN.latchin, CLK ;;
+	         T8[7:7]' ) ;
+	.call CMOS3_1830_Sr4_2 CMOS3_1830 (Sw4_2_FF_EN.latchin', CLK ;;
+	         Sr4_2' ) ;
+	.call CMOS3_1830_T8[5:5] CMOS3_1830 (FF_SR_EN30_FF_SR_EN.latchin, CLK ;;
+	         T8[5:5]' ) ;
+	.call CMOS3_1830_T11[7:7] CMOS3_1830 (FF_SR_EN56_FF_SR_EN.latchin, 
+	         CLK ;;T11[7:7], T11[7:7]' ) ;
+	.call CMOS3_1830_T8[3:3] CMOS3_1830 (FF_SR_EN28_FF_SR_EN.latchin, CLK ;;
+	         T8[3:3], T8[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.LBr1_3[1] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0]_L_FF_EN.latchin, CLK ;;
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3[1]' ) ;
+	.call CMOS3_1830_T11[5:5] CMOS3_1830 (FF_SR_EN54_FF_SR_EN.latchin, 
+	         CLK ;;T11[5:5], T11[5:5]' ) ;
+	.call CMOS3_1830_T8[1:1] CMOS3_1830 (FF_SR_EN26_FF_SR_EN.latchin, CLK ;;
+	         T8[1:1], T8[1:1]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[7:7] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN9_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[7:7], 
+	         auto_divide_8[0]_divide_8.tmp[7:7]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.Lak4_3 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_EN.4_3_La_FF_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.Lak4_3, 
+	         auto_divide_8[0]_divide_8.Lak4_3' ) ;
+	.call CMOS3_1830_T7[7:7] CMOS3_1830 (FF_SR_EN24_FF_SR_EN.latchin, CLK ;;
+	         T7[7:7], T7[7:7]' ) ;
+	.call CMOS3_1830_T11[3:3] CMOS3_1830 (FF_SR_EN52_FF_SR_EN.latchin, 
+	         CLK ;;T11[3:3], T11[3:3]' ) ;
+	.call CMOS3_1830_Sr3_3 CMOS3_1830 (Sw3_3_FF_EN.latchin', CLK ;;
+	         Sr3_3, Sr3_3' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[5:5] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN11_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[5:5], 
+	         auto_divide_8[0]_divide_8.tmp[5:5]' ) ;
+	.call CMOS3_1830_T7[5:5] CMOS3_1830 (FF_SR_EN22_FF_SR_EN.latchin, CLK ;;
+	         T7[5:5], T7[5:5]' ) ;
+	.call CMOS3_1830_T11[1:1] CMOS3_1830 (FF_SR_EN50_FF_SR_EN.latchin, 
+	         CLK ;;T11[1:1], T11[1:1]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[3:3] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN13_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[3:3], 
+	         auto_divide_8[0]_divide_8.tmp[3:3]' ) ;
+	.call CMOS3_1830_T10[7:7] CMOS3_1830 (FF_SR_EN48_FF_SR_EN.latchin, 
+	         CLK ;;T10[7:7]' ) ;
+	.call CMOS3_1830_T7[3:3] CMOS3_1830 (FF_SR_EN20_FF_SR_EN.latchin, CLK ;;
+	         T7[3:3]' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.LC1_3 CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_EN.1_3_LC_FF_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.LC1_3' ) ;
+	.call CMOS3_1830_Sr3_17 CMOS3_1830 (Sw3_17_FF_EN.latchin', CLK ;;
+	         Sr3_17' ) ;
+	.call CMOS3_1830_Sr3_14 CMOS3_1830 (Sw3_14_FF_EN.latchin', CLK ;;
+	         Sr3_14' ) ;
+	.call CMOS3_1830_auto_divide_8[0]_divide_8.tmp[1:1] CMOS3_1830 (
+	         auto_divide_8[0]_divide_8.FF_SR_EN15_FF_SR_EN.latchin, CLK ;;
+	         auto_divide_8[0]_divide_8.tmp[1:1], 
+	         auto_divide_8[0]_divide_8.tmp[1:1]' ) ;
+	.call CMOS3_1830_T10[5:5] CMOS3_1830 (FF_SR_EN46_FF_SR_EN.latchin, 
+	         CLK ;;T10[5:5]' ) ;
+	.call CMOS3_1830_T7[1:1] CMOS3_1830 (FF_SR_EN18_FF_SR_EN.latchin, CLK ;;
+	         T7[1:1]' ) ;
+	.call CMOS3_1830_RQ3_11 CMOS3_1830 (TcL3_14[1]_FF_EN.latchin, CLK ;;
+	         RQ3_11' ) ;
+	.call CMOS3_1830_T10[3:3] CMOS3_1830 (FF_SR_EN44_FF_SR_EN.latchin, 
+	         CLK ;;T10[3:3]' ) ;
+	.call CMOS3_1830_T10[1:1] CMOS3_1830 (FF_SR_EN42_FF_SR_EN.latchin, 
+	         CLK ;;T10[1:1]' ) ;
+	.call CMOS3_1830_LBr3_3[1] CMOS3_1830 (LBr3_3_1_FF_EN.latchin, CLK ;;
+	         LBr3_3[1], LBr3_3[1]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.LC1_3 CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_EN.1_3_LC_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.LC1_3' ) ;
+	.call CMOS3_1830_T6[7:7] CMOS3_1830 (FF_SR_EN16_FF_SR_EN.latchin, CLK ;;
+	         T6[7:7], T6[7:7]' ) ;
+	.call CMOS3_1830_auto_smultiply_8[0]_smultiply_8.count[7:7] CMOS3_1830 (
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN9_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_8[0]_smultiply_8.count[7:7], 
+	         auto_smultiply_8[0]_smultiply_8.count[7:7]' ) ;
+	.call CMOS3_1350_zz_102 CMOS3_1350 (auto_add_8[0].ob0[3:3], T11[3:3], 
+	         DN_Latch3_10 ;;zz_102 ) ;
+	.call CMOS3_1350_zz_1139 CMOS3_1350 (v6[5:5], T8[5:5], RQ3_7 ;;
+	         zz_1139 ) ;
+	.call CMOS3_1350_zz_1136 CMOS3_1350 (v6[3:3], T8[3:3], RQ3_7 ;;
+	         zz_1136 ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.T2[0:0] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3[1], 
+	         auto_smultiply_8[0]_smultiply_8.LC1_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ) ;
+	.call CMOS3_1350_zz_1014 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[1:1]_in, 
+	         auto_divide_8[0]_divide_8.tmp[1:1], 
+	         auto_divide_8[0]_divide_8.tmp[1:1]_en ;;zz_1014 ) ;
+	.call CMOS3_1350_zz_1007 CMOS3_1350 (v2[7:7], T6[7:7], RQ3_5 ;;
+	         zz_1007 ) ;
+	.call CMOS3_1350_Br1_2[1] CMOS3_1350 (reset[0:0], LBr1_2[0]', LC1_2' ;;
+	         Br1_2[1] ) ;
+	.call CMOS3_1350_auto_divide_8[0]_divide_8.Br3_3[0] CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.T3[0:0]', 
+	         auto_divide_8[0]_divide_8.LBr3_3[1]', 
+	         auto_divide_8[0]_divide_8.LC3_3' ;;
+	         auto_divide_8[0]_divide_8.Br3_3[0] ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[1:1] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[1:1], T8[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[1:1] ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[3:3] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[3:3], T8[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[3:3] ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[5:5] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[5:5], T8[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[5:5] ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[7:7] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[7:7], T8[7:7], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[7:7] ) ;
+	.call CMOS3_1350_auto_divide_8[0]_divide_8.Br1_3[1] CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.T1[0:0], 
+	         auto_divide_8[0]_divide_8.LBr1_3[0]', 
+	         auto_divide_8[0]_divide_8.LC1_3' ;;
+	         auto_divide_8[0]_divide_8.Br1_3[1] ) ;
+	.call CMOS3_1350_auto_divide_8[0]_divide_8.Br1_3[0] CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.T1[0:0]', 
+	         auto_divide_8[0]_divide_8.LBr1_3[0], 
+	         auto_divide_8[0]_divide_8.LC1_3' ;;
+	         auto_divide_8[0]_divide_8.Br1_3[0] ) ;
+	.call CMOS3_1350_zz_997 CMOS3_1350 (auto_add_8[0].ob0[5:5], T11[5:5], 
+	         DN_Latch3_10 ;;zz_997 ) ;
+	.call CMOS3_1350_zz_958 CMOS3_1350 (v4[5:5], T7[5:5], RQ3_6 ;;
+	         zz_958 ) ;
+	.call CMOS3_1350_zz_954 CMOS3_1350 (zz_1635, LBr1_2[0], LC1_2' ;;
+	         zz_954 ) ;
+	.call CMOS3_1350_zz_950 CMOS3_1350 (v11[4:4], T10[4:4], RQ3_9 ;;
+	         zz_950 ) ;
+	.call CMOS3_1350_zz_1999 CMOS3_1350 (v4[3:3], T7[3:3], RQ3_6 ;;
+	         zz_1999 ) ;
+	.call CMOS3_1350_zz_1996 CMOS3_1350 (v4[1:1], T7[1:1], RQ3_6 ;;
+	         zz_1996 ) ;
+	.call CMOS3_1350_zz_1993 CMOS3_1350 (auto_add_8[0].ob0[2:2], 
+	         T13[2:2], DN_Latch3_12 ;;zz_1993 ) ;
+	.call CMOS3_1350_zz_926 CMOS3_1350 (v10[3:3], T9[3:3], RQ3_8 ;;
+	         zz_926 ) ;
+	.call CMOS3_1350_zz_1990 CMOS3_1350 (auto_add_8[0].ob0[0:0], 
+	         T13[0:0], DN_Latch3_12 ;;zz_1990 ) ;
+	.call CMOS3_1350_zz_923 CMOS3_1350 (v1[6:6], T5[6:6], RQ3_4 ;;
+	         zz_923 ) ;
+	.call CMOS3_1350_zz_920 CMOS3_1350 (v1[5:5], T5[5:5], RQ3_4 ;;
+	         zz_920 ) ;
+	.call CMOS3_1350_zz_895 CMOS3_1350 (auto_add_8[0].ob0[7:7], T11[7:7], 
+	         DN_Latch3_10 ;;zz_895 ) ;
+	.call CMOS3_1350_zz_1979 CMOS3_1350 (v4[4:4], T7[4:4], RQ3_6 ;;
+	         zz_1979 ) ;
+	.call CMOS3_1350_zz_1976 CMOS3_1350 (v4[2:2], T7[2:2], RQ3_6 ;;
+	         zz_1976 ) ;
+	.call CMOS3_1350_zz_909 CMOS3_1350 (auto_add_8[0].ob0[2:2], T11[2:2], 
+	         DN_Latch3_10 ;;zz_909 ) ;
+	.call CMOS3_1350_zz_888 CMOS3_1350 (v6[2:2], T8[2:2], RQ3_7 ;;
+	         zz_888 ) ;
+	.call CMOS3_1350_zz_906 CMOS3_1350 (auto_add_8[0].ob0[0:0], T11[0:0], 
+	         DN_Latch3_10 ;;zz_906 ) ;
+	.call CMOS3_1350_zz_1969 CMOS3_1350 (v10[2:2], T9[2:2], RQ3_8 ;;
+	         zz_1969 ) ;
+	.call CMOS3_1350_zz_880 CMOS3_1350 (v2[0:0], T6[0:0], RQ3_5 ;;
+	         zz_880 ) ;
+	.call CMOS3_1350_zz_877 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[5:5]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.count[5:5]_en ;;zz_877 ) ;
+	.call CMOS3_1350_zz_1963 CMOS3_1350 (v11[5:5], T10[5:5], RQ3_9 ;;
+	         zz_1963 ) ;
+	.call CMOS3_1350_zz_1956 CMOS3_1350 (v11[0:0], T10[0:0], RQ3_9 ;;
+	         zz_1956 ) ;
+	.call CMOS3_1350_zz_1953 CMOS3_1350 (v10[6:6], T9[6:6], RQ3_8 ;;
+	         zz_1953 ) ;
+	.call CMOS3_1350_zz_1946 CMOS3_1350 (v6[6:6], T8[6:6], RQ3_7 ;;
+	         zz_1946 ) ;
+	.call CMOS3_1350_zz_51 CMOS3_1350 (v1[3:3], T5[3:3], RQ3_4 ;;zz_51 ) ;
+	.call CMOS3_1350_zz_1943 CMOS3_1350 (v6[4:4], T8[4:4], RQ3_7 ;;
+	         zz_1943 ) ;
+	.call CMOS3_1350_zz_23 CMOS3_1350 (v6[0:0], T8[0:0], RQ3_7 ;;zz_23 ) ;
+	.call CMOS3_1350_zz_1915 CMOS3_1350 (v1[1:1], T5[1:1], RQ3_4 ;;
+	         zz_1915 ) ;
+	.call CMOS3_1350_zz_828 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[1:1]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.count[1:1]_en ;;zz_828 ) ;
+	.call CMOS3_1350_zz_15 CMOS3_1350 (v10[7:7], T9[7:7], RQ3_8 ;;zz_15 ) ;
+	.call CMOS3_1350_zz_12 CMOS3_1350 (v10[5:5], T9[5:5], RQ3_8 ;;zz_12 ) ;
+	.call CMOS3_1350_zz_1886 CMOS3_1350 (auto_add_8[0].ob0[3:3], 
+	         T13[3:3], DN_Latch3_12 ;;zz_1886 ) ;
+	.call CMOS3_1350_zz_1905 CMOS3_1350 (v4[6:6], T7[6:6], RQ3_6 ;;
+	         zz_1905 ) ;
+	.call CMOS3_1350_zz_1883 CMOS3_1350 (auto_add_8[0].ob0[1:1], 
+	         T13[1:1], DN_Latch3_12 ;;zz_1883 ) ;
+	.call CMOS3_1350_zz_811 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[0:0]_in, 
+	         auto_divide_8[0]_divide_8.tmp[0:0], 
+	         auto_divide_8[0]_divide_8.tmp[0:0]_en ;;zz_811 ) ;
+	.call CMOS3_1350_zz_1872 CMOS3_1350 (v10[1:1], T9[1:1], RQ3_8 ;;
+	         zz_1872 ) ;
+	.call CMOS3_1350_zz_1869 CMOS3_1350 (v11[6:6], T10[6:6], RQ3_9 ;;
+	         zz_1869 ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.Br1_3[0] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0]', 
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3[1]', 
+	         auto_smultiply_8[0]_smultiply_8.LC1_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.Br1_3[0] ) ;
+	.call CMOS3_1350_zz_1846 CMOS3_1350 (ready[0:0]', LBr3_3[1], LC3_3' ;;
+	         zz_1846 ) ;
+	.call CMOS3_1350_zz_2011 CMOS3_1350 (v2[4:4], T6[4:4], RQ3_5 ;;
+	         zz_2011 ) ;
+	.call CMOS3_1350_zz_696 CMOS3_1350 (v6[1:1], T8[1:1], RQ3_7 ;;
+	         zz_696 ) ;
+	.call CMOS3_1350_zz_714 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[2:2]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.count[2:2]_en ;;zz_714 ) ;
+	.call CMOS3_1350_zz_1778 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[4:4]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.count[4:4]_en ;;zz_1778 ) ;
+	.call CMOS3_1350_zz_700 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[7:7]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[7:7], 
+	         auto_smultiply_8[0]_smultiply_8.count[7:7]_en ;;zz_700 ) ;
+	.call CMOS3_1350_zz_661 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[7:7]_in, 
+	         auto_divide_8[0]_divide_8.tmp[7:7], 
+	         auto_divide_8[0]_divide_8.tmp[7:7]_en ;;zz_661 ) ;
+	.call CMOS3_1350_zz_1739 CMOS3_1350 (v2[6:6], T6[6:6], RQ3_5 ;;
+	         zz_1739 ) ;
+	.call CMOS3_1350_zz_1736 CMOS3_1350 (v2[2:2], T6[2:2], RQ3_5 ;;
+	         zz_1736 ) ;
+	.call CMOS3_1350_zz_630 CMOS3_1350 (v10[0:0], T9[0:0], RQ3_8 ;;
+	         zz_630 ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[0:0] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0]', T8[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[0:0] ) ;
+	.call CMOS3_1350_zz_544 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[3:3]_in, 
+	         auto_divide_8[0]_divide_8.tmp[3:3], 
+	         auto_divide_8[0]_divide_8.tmp[3:3]_en ;;zz_544 ) ;
+	.call CMOS3_1350_zz_1620 CMOS3_1350 (auto_add_8[0].ob0[1:1], 
+	         T11[1:1], DN_Latch3_10 ;;zz_1620 ) ;
+	.call CMOS3_1350_zz_1617 CMOS3_1350 (v11[7:7], T10[7:7], RQ3_9 ;;
+	         zz_1617 ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[2:2] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[2:2], T8[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[2:2] ) ;
+	.call CMOS3_1350_zz_524 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.Br1_3[0], 
+	         auto_divide_8[0]_divide_8.LBr1_3[0], 
+	         auto_divide_8[0]_divide_8.LC1_3' ;;zz_524 ) ;
+	.call CMOS3_1350_zz_1586 CMOS3_1350 (v1[2:2], T5[2:2], RQ3_4 ;;
+	         zz_1586 ) ;
+	.call CMOS3_1350_zz_499 CMOS3_1350 (v2[5:5], T6[5:5], RQ3_5 ;;
+	         zz_499 ) ;
+	.call CMOS3_1350_zz_517 CMOS3_1350 (v1[4:4], T5[4:4], RQ3_4 ;;
+	         zz_517 ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[4:4] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[4:4], T8[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[4:4] ) ;
+	.call CMOS3_1350_zz_1553 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[0:0]_in, 
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0]', 
+	         auto_smultiply_8[0]_smultiply_8.count[0:0]_en ;;zz_1553 ) ;
+	.call CMOS3_1350_zz_467 CMOS3_1350 (v10[4:4], T9[4:4], RQ3_8 ;;
+	         zz_467 ) ;
+	.call CMOS3_1350_auto_smultiply_8[0]_smultiply_8.M1[6:6] CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[6:6], T8[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.M1[6:6] ) ;
+	.call CMOS3_1350_zz_464 CMOS3_1350 (v1[0:0], T5[0:0], RQ3_4 ;;
+	         zz_464 ) ;
+	.call CMOS3_1350_zz_1499 CMOS3_1350 (v6[7:7], T8[7:7], RQ3_7 ;;
+	         zz_1499 ) ;
+	.call CMOS3_1350_zz_396 CMOS3_1350 (v11[1:1], T10[1:1], RQ3_9 ;;
+	         zz_396 ) ;
+	.call CMOS3_1350_zz_413 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[4:4]_in, 
+	         auto_divide_8[0]_divide_8.tmp[4:4], 
+	         auto_divide_8[0]_divide_8.tmp[4:4]_en ;;zz_413 ) ;
+	.call CMOS3_1350_zz_1475 CMOS3_1350 (auto_add_8[0].ob0[4:4], 
+	         T11[4:4], DN_Latch3_10 ;;zz_1475 ) ;
+	.call CMOS3_1350_zz_1472 CMOS3_1350 (v4[0:0], T7[0:0], RQ3_6 ;;
+	         zz_1472 ) ;
+	.call CMOS3_1350_zz_1456 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[2:2]_in, 
+	         auto_divide_8[0]_divide_8.tmp[2:2], 
+	         auto_divide_8[0]_divide_8.tmp[2:2]_en ;;zz_1456 ) ;
+	.call CMOS3_1350_zz_365 CMOS3_1350 (auto_add_8[0].ob0[6:6], T11[6:6], 
+	         DN_Latch3_10 ;;zz_365 ) ;
+	.call CMOS3_1350_zz_346 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[5:5]_in, 
+	         auto_divide_8[0]_divide_8.tmp[5:5], 
+	         auto_divide_8[0]_divide_8.tmp[5:5]_en ;;zz_346 ) ;
+	.call CMOS3_1350_zz_1399 CMOS3_1350 (v2[3:3], T6[3:3], RQ3_5 ;;
+	         zz_1399 ) ;
+	.call CMOS3_1350_zz_1421 CMOS3_1350 (auto_add_8[0].ob0[7:7], 
+	         T13[7:7], DN_Latch3_12 ;;zz_1421 ) ;
+	.call CMOS3_1350_zz_1392 CMOS3_1350 (v1[7:7], T5[7:7], RQ3_4 ;;
+	         zz_1392 ) ;
+	.call CMOS3_1350_zz_1410 CMOS3_1350 (v11[3:3], T10[3:3], RQ3_9 ;;
+	         zz_1410 ) ;
+	.call CMOS3_1350_zz_306 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[3:3]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.count[3:3]_en ;;zz_306 ) ;
+	.call CMOS3_1350_zz_263 CMOS3_1350 (auto_add_8[0].ob0[4:4], T13[4:4], 
+	         DN_Latch3_12 ;;zz_263 ) ;
+	.call CMOS3_1350_zz_256 CMOS3_1350 (v4[7:7], T7[7:7], RQ3_6 ;;
+	         zz_256 ) ;
+	.call CMOS3_1350_zz_1312 CMOS3_1350 (
+	         auto_divide_8[0]_divide_8.tmp[6:6]_in, 
+	         auto_divide_8[0]_divide_8.tmp[6:6], 
+	         auto_divide_8[0]_divide_8.tmp[6:6]_en ;;zz_1312 ) ;
+	.call CMOS3_1350_zz_1304 CMOS3_1350 (
+	         auto_smultiply_8[0]_smultiply_8.count[6:6]_in, 
+	         auto_smultiply_8[0]_smultiply_8.count[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.count[6:6]_en ;;zz_1304 ) ;
+	.call CMOS3_1350_zz_203 CMOS3_1350 (auto_add_8[0].ob0[6:6], T13[6:6], 
+	         DN_Latch3_12 ;;zz_203 ) ;
+	.call CMOS3_1350_zz_161 CMOS3_1350 (auto_add_8[0].ob0[5:5], T13[5:5], 
+	         DN_Latch3_12 ;;zz_161 ) ;
+	.call CMOS3_1350_zz_1219 CMOS3_1350 (v2[1:1], T6[1:1], RQ3_5 ;;
+	         zz_1219 ) ;
+	.call CMOS3_1350_zz_113 CMOS3_1350 (v11[2:2], T10[2:2], RQ3_9 ;;
+	         zz_113 ) ;
+	.call CMOS3_1220_zz_1096 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.T5[5:5]', T12[5:5] ;;zz_1096 ) ;
+	.call CMOS3_1220_zz_1083 CMOS3_1220 (T8[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_4_T1[0:0] ;;
+	         zz_1083' ) ;
+	.call CMOS3_1220_EN4_2 CMOS3_1220 (RQ3_3, zz_1846 ;;EN4_2' ) ;
+	.call CMOS3_1220_AK3_14 CMOS3_1220 (zz_1835', 
+	         auto_smultiply_8[0]_smultiply_8.Sr1_3 ;;AK3_14 ) ;
+	.call CMOS3_1220_zz_1026 CMOS3_1220 (T9[4:4]', T12[4:4] ;;zz_1026 ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.count[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6] ) ;
+	.call CMOS3_1220_LBr3_3_e CMOS3_1220 (RQ3_3, LC3_3' ;;LBr3_3_e' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.LBr1_3_e CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ1_3, 
+	         auto_smultiply_8[0]_smultiply_8.LC1_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3_e' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.count[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4] ) ;
+	.call CMOS3_1220_EN3_4 CMOS3_1220 (zz_1743', Sr3_3 ;;EN3_4 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.GFDN_4 CMOS3_1220 (
+	         zz_1633', auto_divide_8[0]_divide_8.Sr4_3 ;;
+	         auto_divide_8[0]_divide_8.GFDN_4 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0] CMOS3_1220 (
+	         zz_1625', zz_1623' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0] ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.FF_SR_EN16_FF_SR_EN.latchin CMOS3_1220 (
+	         zz_1553, RESET' ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN16_FF_SR_EN.latchin' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_3_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0], 
+	         T8[2:2]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_3_T1[0:0]' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[0:0]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[0:0]_en ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[2:2]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[2:2]_en ) ;
+	.call CMOS3_1220_auto_smultiply_8[0].EN CMOS3_1220 (Sr3_14, Sr3_17' ;;
+	         auto_smultiply_8[0].EN' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[4:4]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[4:4]_en ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.c_5_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.c_4_T1[0:0]', 
+	         zz_1083' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.c_5_T1[0:0] ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_1_T3[0:0] CMOS3_1220 (
+	         T12[0:0], T9[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_1_T3[0:0]' ) ;
+	.call CMOS3_1220_auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0] CMOS3_1220 (
+	         auto_add_8[0].ib0[0:0], auto_add_8[0].ib1[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0]' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_1_T3[0:0] CMOS3_1220 (
+	         T9[0:0]', T12[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_1_T3[0:0] ) ;
+	.call CMOS3_1220_zz_975 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_7_T5[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.T4[7:7] ;;zz_975 ) ;
+	.call CMOS3_1220_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2] CMOS3_1220 (
+	         T7[1:1]', T7[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2]' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_1_T1[0:0] CMOS3_1220 (
+	         T9[0:0]', T12[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_1_T1[0:0] ) ;
+	.call CMOS3_1220_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4] CMOS3_1220 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[3:3], 
+	         T7[3:3]' ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4]' ) ;
+	.call CMOS3_1220_RQ3_2 CMOS3_1220 (RQ1_2, zz_954 ;;RQ3_2' ) ;
+	.call CMOS3_1220_zz_79 CMOS3_1220 (T9[3:3]', T12[3:3] ;;zz_79 ) ;
+	.call CMOS3_1220_zz_1949 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0], 
+	         zz_1950 ;;zz_1949' ) ;
+	.call CMOS3_1220_zz_1950 CMOS3_1220 (T9[6:6]', T12[6:6] ;;zz_1950 ) ;
+	.call CMOS3_1220_zz_859 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en' ;;zz_859' ) ;
+	.call CMOS3_1220_zz_858 CMOS3_1220 (zz_860', zz_859' ;;zz_858 ) ;
+	.call CMOS3_1220_zz_1938 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.T5[2:2]', T12[2:2] ;;zz_1938 ) ;
+	.call CMOS3_1220_zz_853 CMOS3_1220 (T9[1:1]', T12[1:1] ;;zz_853 ) ;
+	.call CMOS3_1220_zz_1927 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]', T11[6:6]' ;;
+	         zz_1927 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0] CMOS3_1220 (
+	         zz_867', zz_865' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0] ) ;
+	.call CMOS3_1220_zz_836 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.tmp[1:1]', T12[1:1] ;;zz_836 ) ;
+	.call CMOS3_1220_zz_18 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.T4[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_6_T5[0:0] ;;
+	         zz_18' ) ;
+	.call CMOS3_1220_zz_1913 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.tmp[2:2]', T12[2:2] ;;zz_1913 ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en ) ;
+	.call CMOS3_1220_zz_1876 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.tmp[4:4]', T12[4:4] ;;zz_1876 ) ;
+	.call CMOS3_1220_zz_809 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.tmp[3:3]', T12[3:3] ;;zz_809 ) ;
+	.call CMOS3_1220_zz_781 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.tmp[5:5]', T12[5:5] ;;zz_781 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[1:1]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[1:1]_en ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_1_T1[0:0] CMOS3_1220 (
+	         T12[0:0], T9[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_1_T1[0:0]' ) ;
+	.call CMOS3_1220_auto_divide_8[0].EN CMOS3_1220 (Sr3_17, EN3_10 ;;
+	         auto_divide_8[0].EN' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[3:3]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[3:3]_en ) ;
+	.call CMOS3_1220_zz_1835 CMOS3_1220 (auto_smultiply_8[0].EN, 
+	         auto_smultiply_8[0]_smultiply_8.Br1_3[0] ;;zz_1835' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en ) ;
+	.call CMOS3_1220_zz_736 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.DN2_2, 
+	         auto_smultiply_8[0]_smultiply_8.AK2_3 ;;zz_736' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[5:5]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[5:5]_en ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_4_T1[0:0], 
+	         T8[4:4]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0]' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.GFDN_2 CMOS3_1220 (
+	         zz_736', auto_smultiply_8[0]_smultiply_8.Sr2_3 ;;
+	         auto_smultiply_8[0]_smultiply_8.GFDN_2 ) ;
+	.call CMOS3_1220_zz_704 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.T5[4:4]', T12[4:4] ;;zz_704 ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.count[4:4]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5] ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.count[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3] ) ;
+	.call CMOS3_1220_zz_1743 CMOS3_1220 (RQ3_2, ready[0:0] ;;zz_1743' ) ;
+	.call CMOS3_1220_zz_1733 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.T5[1:1]', T12[1:1] ;;zz_1733 ) ;
+	.call CMOS3_1220_zz_642 CMOS3_1220 (T9[1:1]', T12[1:1] ;;zz_642 ) ;
+	.call CMOS3_1220_zz_638 CMOS3_1220 (T9[5:5]', T12[5:5] ;;zz_638 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[7:7]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[7:7]_en ) ;
+	.call CMOS3_1220_zz_583 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.T5[6:6]', T12[6:6] ;;zz_583 ) ;
+	.call CMOS3_1220_zz_1637 CMOS3_1220 (T9[4:4]', T12[4:4] ;;zz_1637 ) ;
+	.call CMOS3_1220_zz_1633 CMOS3_1220 (auto_divide_8[0]_divide_8.DN4_2, 
+	         auto_divide_8[0]_divide_8.AK4_3 ;;zz_1633' ) ;
+	.call CMOS3_1220_zz_1623 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_1_T7[0:0], 
+	         zz_1624 ;;zz_1623' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.RQ3_2 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ1_3, zz_524 ;;
+	         auto_divide_8[0]_divide_8.RQ3_2' ) ;
+	.call CMOS3_1220_zz_1577 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.T4[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_5_T5[0:0] ;;
+	         zz_1577' ) ;
+	.call CMOS3_1220_zz_479 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]', T11[4:4]' ;;
+	         zz_479 ) ;
+	.call CMOS3_1220_zz_451 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.tmp[6:6]', T12[6:6] ;;zz_451 ) ;
+	.call CMOS3_1220_zz_1527 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]', T11[5:5]' ;;
+	         zz_1527 ) ;
+	.call CMOS3_1220_zz_436 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]', T11[2:2]' ;;
+	         zz_436 ) ;
+	.call CMOS3_1220_zz_389 CMOS3_1220 (T9[2:2]', T12[2:2] ;;zz_389 ) ;
+	.call CMOS3_1220_zz_385 CMOS3_1220 (T9[6:6]', T12[6:6] ;;zz_385 ) ;
+	.call CMOS3_1220_zz_400 CMOS3_1220 (T9[2:2]', T12[2:2] ;;zz_400 ) ;
+	.call CMOS3_1220_zz_1460 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]', T11[3:3]' ;;
+	         zz_1460 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.LBr3_3_e CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ3_3, 
+	         auto_divide_8[0]_divide_8.LC3_3' ;;
+	         auto_divide_8[0]_divide_8.LBr3_3_e' ) ;
+	.call CMOS3_1220_zz_1441 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]', T11[1:1]' ;;
+	         zz_1441 ) ;
+	.call CMOS3_1220_zz_350 CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.T5[3:3]', T12[3:3] ;;zz_350 ) ;
+	.call CMOS3_1220_zz_1433 CMOS3_1220 (T9[3:3]', T12[3:3] ;;zz_1433 ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.LBr1_3_e CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ1_3, 
+	         auto_divide_8[0]_divide_8.LC1_3' ;;
+	         auto_divide_8[0]_divide_8.LBr1_3_e' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_6_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0], 
+	         T8[5:5]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_6_T1[0:0]' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0] CMOS3_1220 (
+	         zz_244', zz_242' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0] ) ;
+	.call CMOS3_1220_zz_1403 CMOS3_1220 (T9[5:5]', T12[5:5] ;;zz_1403 ) ;
+	.call CMOS3_1220_zz_1358 CMOS3_1220 (auto_divide_8[0]_divide_8.DN4_2, 
+	         auto_divide_8[0]_divide_8.AK4_3 ;;zz_1358' ) ;
+	.call CMOS3_1220_zz_1311 CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.T4[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_4_T5[0:0] ;;
+	         zz_1311' ) ;
+	.call CMOS3_1220_auto_divide_8[0]_divide_8.tmp[6:6]_en CMOS3_1220 (
+	         auto_divide_8[0]_divide_8.RQ4_2', 
+	         auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.tmp[6:6]_en ) ;
+	.call CMOS3_1220_zz_188 CMOS3_1220 (AK3_14, Sr3_17' ;;zz_188' ) ;
+	.call CMOS3_1220_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T4[8:8] CMOS3_1220 (
+	         auto_smultiply_8[0]_smultiply_8.count[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T4[8:8] ) ;
+	.call CMOS3_1660_T15[3:3] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3] ;;T15[3:3] ) ;
+	.call CMOS3_1660_T15[1:1] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1] ;;T15[1:1] ) ;
+	.call CMOS3_1660_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1] CMOS3_1660 (
+	         auto_divide_8[0]_divide_8.tmp[0:0]', T12[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1]' ) ;
+	.call CMOS3_1660_T15[6:6] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6] ;;T15[6:6] ) ;
+	.call CMOS3_1660_T15[4:4] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4] ;;T15[4:4] ) ;
+	.call CMOS3_1660_T15[2:2] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2] ;;T15[2:2] ) ;
+	.call CMOS3_1660_T15[0:0] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0] ;;T15[0:0] ) ;
+	.call CMOS3_1660_zz_823 CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T4[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_3_T5[0:0] ;;
+	         zz_823 ) ;
+	.call CMOS3_1660_zz_504 CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T4[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_2_T5[0:0] ;;
+	         zz_504 ) ;
+	.call CMOS3_1660_T15[7:7] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7] ;;T15[7:7] ) ;
+	.call CMOS3_1660_T15[5:5] CMOS3_1660 (
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5] ;;T15[5:5] ) ;
+	.call CMOS3_1670_auto_divide_8[0]_divide_8.GFDN_2 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.RQ1_3, 
+	         auto_divide_8[0]_divide_8.LC1_3', 
+	         auto_divide_8[0]_divide_8.Br1_3[1] ;;
+	         auto_divide_8[0]_divide_8.GFDN_2 ) ;
+	.call CMOS3_1670_zz_342 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[2:2], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2]', 
+	         T12[2:2] ;;zz_342 ) ;
+	.call CMOS3_1670_zz_339 CMOS3_1670 (T12[2:2], 
+	         auto_divide_8[0]_divide_8.tmp[2:2]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2] ;;
+	         zz_339 ) ;
+	.call CMOS3_1670_zz_298 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[4:4], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4]', 
+	         T12[4:4] ;;zz_298 ) ;
+	.call CMOS3_1670_zz_295 CMOS3_1670 (T12[4:4], 
+	         auto_divide_8[0]_divide_8.tmp[4:4]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4] ;;
+	         zz_295 ) ;
+	.call CMOS3_1670_zz_1368 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[1:1], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1]', 
+	         T12[1:1] ;;zz_1368 ) ;
+	.call CMOS3_1670_zz_1365 CMOS3_1670 (T12[1:1], 
+	         auto_divide_8[0]_divide_8.tmp[1:1]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1] ;;
+	         zz_1365 ) ;
+	.call CMOS3_1670_zz_252 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[6:6], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6]', 
+	         T12[6:6] ;;zz_252 ) ;
+	.call CMOS3_1670_zz_249 CMOS3_1670 (T12[6:6], 
+	         auto_divide_8[0]_divide_8.tmp[6:6]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6] ;;
+	         zz_249 ) ;
+	.call CMOS3_1670_zz_1325 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[3:3], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3]', 
+	         T12[3:3] ;;zz_1325 ) ;
+	.call CMOS3_1670_zz_1322 CMOS3_1670 (T12[3:3], 
+	         auto_divide_8[0]_divide_8.tmp[3:3]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3] ;;
+	         zz_1322 ) ;
+	.call CMOS3_1670_zz_1264 CMOS3_1670 (T12[1:1], T9[1:1]', 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_1_T1[0:0] ;;
+	         zz_1264 ) ;
+	.call CMOS3_1670_zz_1258 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[5:5], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5]', 
+	         T12[5:5] ;;zz_1258 ) ;
+	.call CMOS3_1670_zz_1255 CMOS3_1670 (T12[5:5], 
+	         auto_divide_8[0]_divide_8.tmp[5:5]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5] ;;
+	         zz_1255 ) ;
+	.call CMOS3_1670_zz_1193 CMOS3_1670 (
+	         auto_divide_8[0]_divide_8.tmp[7:7], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8]', 
+	         T12[7:7] ;;zz_1193 ) ;
+	.call CMOS3_1670_zz_1190 CMOS3_1670 (T12[7:7], 
+	         auto_divide_8[0]_divide_8.tmp[7:7]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8] ;;
+	         zz_1190 ) ;
+	.call CMOS3_1130_zz_1121 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en' ;;zz_1121 ) ;
+	.call CMOS3_1130_zz_1093 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3[1]', 
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3_e, RESET ;;zz_1093 ) ;
+	.call CMOS3_1130_zz_1091 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0]', RESET, 
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3_e' ;;zz_1091 ) ;
+	.call CMOS3_1130_TcL3_14[1]_FF_EN.latchin CMOS3_1130 (zz_1315', 
+	         RESET, GFDN_3 ;;TcL3_14[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_8[0]_smultiply_8.TcL1_3[1]_FF_EN.latchin CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.DN1_5', AK3_14, RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.TcL1_3[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_8[0]_smultiply_8.RQ1_3 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.Sr1_3', 
+	         auto_smultiply_8[0]_smultiply_8.Br1_3[0], 
+	         auto_smultiply_8[0].EN' ;;
+	         auto_smultiply_8[0]_smultiply_8.RQ1_3 ) ;
+	.call CMOS3_1130_TcL3_14[3]_FF_EN.latchin CMOS3_1130 (DN3_15', 
+	         GFDN_3, RESET ;;TcL3_14[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.FF_EN.3_3_LC_FF_EN.latchin CMOS3_1130 (
+	         zz_699', RESET, AK3_17 ;;
+	         auto_divide_8[0]_divide_8.FF_EN.3_3_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.LD4_3 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.Sr4_3', 
+	         auto_divide_8[0]_divide_8.Lak4_3, 
+	         auto_divide_8[0]_divide_8.DN4_2' ;;
+	         auto_divide_8[0]_divide_8.LD4_3 ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.TcL4_1[1]_FF_EN.latchin CMOS3_1130 (
+	         zz_976', RESET, auto_divide_8[0]_divide_8.GFDN_4 ;;
+	         auto_divide_8[0]_divide_8.TcL4_1[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_3[1]_FF_EN.latchin CMOS3_1130 (zz_1765', RESET, 
+	         GFDN_3 ;;TcL3_3[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_967 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.LBr1_3_e, RESET, 
+	         auto_divide_8[0]_divide_8.LBr1_3[0] ;;zz_967 ) ;
+	.call CMOS3_1130_TcL1_2[1]_FF_EN.latchin CMOS3_1130 (RQ1_3', RESET, 
+	         DN ;;TcL1_2[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_965 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.T1[0:0]', RESET, 
+	         auto_divide_8[0]_divide_8.LBr1_3_e' ;;zz_965 ) ;
+	.call CMOS3_1130_auto_smultiply_8[0]_smultiply_8.TcL2_1[1]_FF_EN.latchin CMOS3_1130 (
+	         zz_1329', RESET, auto_smultiply_8[0]_smultiply_8.GFDN_2 ;;
+	         auto_smultiply_8[0]_smultiply_8.TcL2_1[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_RQ3_3 CMOS3_1130 (Sr3_3', ready[0:0], RQ3_2' ;;
+	         RQ3_3 ) ;
+	.call CMOS3_1130_zz_76 CMOS3_1130 (LBr3_3[1]', LBr3_3_e, RESET ;;
+	         zz_76 ) ;
+	.call CMOS3_1130_zz_74 CMOS3_1130 (LBr3_3_e', RESET, ready[0:0] ;;
+	         zz_74 ) ;
+	.call CMOS3_1130_zz_34 CMOS3_1130 (T8[7:7]', T8[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_6_T1[0:0]' ;;
+	         zz_34 ) ;
+	.call CMOS3_1130_zz_822 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[7:7]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en' ;;zz_822 ) ;
+	.call CMOS3_1130_zz_771 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en' ;;zz_771 ) ;
+	.call CMOS3_1130_zz_1849 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.T3[0:0]', RESET, 
+	         auto_divide_8[0]_divide_8.LBr3_3_e' ;;zz_1849 ) ;
+	.call CMOS3_1130_zz_1851 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.LBr3_3[1]', 
+	         auto_divide_8[0]_divide_8.LBr3_3_e, RESET ;;zz_1851 ) ;
+	.call CMOS3_1130_TcL3_3[2]_FF_EN.latchin CMOS3_1130 (zz_1752', RESET, 
+	         GFDN_3 ;;TcL3_3[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_748 CMOS3_1130 (T9[7:7]', T12[7:7], 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_7_T3[0:0]' ;;
+	         zz_748 ) ;
+	.call CMOS3_1130_zz_745 CMOS3_1130 (ready[0:0], Sr4_2', zz_1453 ;;
+	         zz_745' ) ;
+	.call CMOS3_1130_TcL3_3[7]_FF_EN.latchin CMOS3_1130 (zz_1631', RESET, 
+	         GFDN_3 ;;TcL3_3[7]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_1808 CMOS3_1130 (T12[7:7], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_7_T7[0:0]', 
+	         auto_divide_8[0]_divide_8.T5[7:7]' ;;zz_1808' ) ;
+	.call CMOS3_1130_zz_687 CMOS3_1130 (T11[1:1]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1] ;;zz_687 ) ;
+	.call CMOS3_1130_zz_685 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1], 
+	         T11[1:1] ;;zz_685 ) ;
+	.call CMOS3_1130_zz_682 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1]', 
+	         T11[1:1], auto_smultiply_8[0]_smultiply_8.tmp[1:1] ;;zz_682 ) ;
+	.call CMOS3_1130_TcL3_3[4]_FF_EN.latchin CMOS3_1130 (zz_1714', RESET, 
+	         GFDN_3 ;;TcL3_3[4]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_680 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]', T11[1:1]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1]' ;;
+	         zz_680 ) ;
+	.call CMOS3_1130_auto_smultiply_8[0]_smultiply_8.FF_EN.1_3_LC_FF_EN.latchin CMOS3_1130 (
+	         zz_1667', RESET, AK3_14 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_EN.1_3_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_613 CMOS3_1130 (T11[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3] ;;zz_613 ) ;
+	.call CMOS3_1130_zz_611 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3], 
+	         T11[3:3] ;;zz_611 ) ;
+	.call CMOS3_1130_zz_608 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3]', 
+	         T11[3:3], auto_smultiply_8[0]_smultiply_8.tmp[3:3] ;;zz_608 ) ;
+	.call CMOS3_1130_zz_606 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]', T11[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3]' ;;
+	         zz_606 ) ;
+	.call CMOS3_1130_TcL3_3[8]_FF_EN.latchin CMOS3_1130 (zz_1616', RESET, 
+	         GFDN_3 ;;TcL3_3[8]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_568 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5], 
+	         T11[5:5] ;;zz_568 ) ;
+	.call CMOS3_1130_zz_570 CMOS3_1130 (T11[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5] ;;zz_570 ) ;
+	.call CMOS3_1130_zz_1649 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2], 
+	         T11[2:2] ;;zz_1649 ) ;
+	.call CMOS3_1130_zz_1651 CMOS3_1130 (T11[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2] ;;zz_1651 ) ;
+	.call CMOS3_1130_zz_565 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5]', 
+	         T11[5:5], auto_smultiply_8[0]_smultiply_8.tmp[5:5] ;;zz_565 ) ;
+	.call CMOS3_1130_zz_563 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]', T11[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5]' ;;
+	         zz_563 ) ;
+	.call CMOS3_1130_zz_1646 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2]', 
+	         T11[2:2], auto_smultiply_8[0]_smultiply_8.tmp[2:2] ;;zz_1646 ) ;
+	.call CMOS3_1130_zz_1644 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]', T11[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2]' ;;
+	         zz_1644 ) ;
+	.call CMOS3_1130_TcL3_14[2]_FF_EN.latchin CMOS3_1130 (RQ3_11', RESET, 
+	         GFDN_3 ;;TcL3_14[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_1630 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en' ;;zz_1630 ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.RQ3_3 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.Sr3_3', 
+	         auto_divide_8[0]_divide_8.Br3_3[0], 
+	         auto_divide_8[0]_divide_8.RQ3_2' ;;
+	         auto_divide_8[0]_divide_8.RQ3_3 ) ;
+	.call CMOS3_1130_zz_1613 CMOS3_1130 (T11[4:4]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4] ;;zz_1613 ) ;
+	.call CMOS3_1130_zz_1611 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4], 
+	         T11[4:4] ;;zz_1611 ) ;
+	.call CMOS3_1130_zz_1608 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4]', 
+	         T11[4:4], auto_smultiply_8[0]_smultiply_8.tmp[4:4] ;;zz_1608 ) ;
+	.call CMOS3_1130_zz_1606 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]', T11[4:4]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4]' ;;
+	         zz_1606 ) ;
+	.call CMOS3_1130_zz_515 CMOS3_1130 (T11[7:7]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7] ;;zz_515 ) ;
+	.call CMOS3_1130_zz_513 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8], 
+	         T11[7:7] ;;zz_513 ) ;
+	.call CMOS3_1130_zz_508 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]', T11[7:7]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8]' ;;
+	         zz_508 ) ;
+	.call CMOS3_1130_zz_510 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8]', 
+	         T11[7:7], auto_smultiply_8[0]_smultiply_8.tmp[7:7] ;;zz_510 ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.FF_EN.1_3_LC_FF_EN.latchin CMOS3_1130 (
+	         zz_709', RESET, AK3_17 ;;
+	         auto_divide_8[0]_divide_8.FF_EN.1_3_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_1564 CMOS3_1130 (T11[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6] ;;zz_1564 ) ;
+	.call CMOS3_1130_zz_1562 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6], 
+	         T11[6:6] ;;zz_1562 ) ;
+	.call CMOS3_1130_zz_1559 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6]', 
+	         T11[6:6], auto_smultiply_8[0]_smultiply_8.tmp[6:6] ;;zz_1559 ) ;
+	.call CMOS3_1130_zz_1557 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]', T11[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6]' ;;
+	         zz_1557 ) ;
+	.call CMOS3_1130_FF_EN.3_3_LC_FF_EN.latchin CMOS3_1130 (zz_1445', 
+	         RESET, DN ;;FF_EN.3_3_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_EN.1_2_LC_FF_EN.latchin CMOS3_1130 (zz_1090', 
+	         RESET, DN ;;FF_EN.1_2_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_1453 CMOS3_1130 (Sr4_2', EN4_2', AK4_2' ;;
+	         zz_1453 ) ;
+	.call CMOS3_1130_zz_344 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2], 
+	         T12[2:2], auto_divide_8[0]_divide_8.tmp[2:2] ;;zz_344 ) ;
+	.call CMOS3_1130_zz_337 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[2:2]', T12[2:2], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2]' ;;
+	         zz_337 ) ;
+	.call CMOS3_1130_TcL3_3[6]_FF_EN.latchin CMOS3_1130 (zz_1662', RESET, 
+	         GFDN_3 ;;TcL3_3[6]_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.RQ1_3 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.Sr1_3', 
+	         auto_divide_8[0]_divide_8.SL1_3, auto_divide_8[0].EN' ;;
+	         auto_divide_8[0]_divide_8.RQ1_3 ) ;
+	.call CMOS3_1130_auto_divide_8[0]_divide_8.AK4_3 CMOS3_1130 (zz_1808', 
+	         zz_1806', auto_divide_8[0]_divide_8.LD4_3' ;;
+	         auto_divide_8[0]_divide_8.AK4_3 ) ;
+	.call CMOS3_1130_zz_293 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[4:4]', T12[4:4], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4]' ;;
+	         zz_293 ) ;
+	.call CMOS3_1130_zz_287 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[4:4]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en' ;;zz_287 ) ;
+	.call CMOS3_1130_zz_1370 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1], 
+	         T12[1:1], auto_divide_8[0]_divide_8.tmp[1:1] ;;zz_1370 ) ;
+	.call CMOS3_1130_zz_300 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4], 
+	         T12[4:4], auto_divide_8[0]_divide_8.tmp[4:4] ;;zz_300 ) ;
+	.call CMOS3_1130_zz_1363 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[1:1]', T12[1:1], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1]' ;;
+	         zz_1363 ) ;
+	.call CMOS3_1130_zz_254 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6], 
+	         T12[6:6], auto_divide_8[0]_divide_8.tmp[6:6] ;;zz_254 ) ;
+	.call CMOS3_1130_zz_247 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[6:6]', T12[6:6], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6]' ;;
+	         zz_247 ) ;
+	.call CMOS3_1130_zz_1327 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3], 
+	         T12[3:3], auto_divide_8[0]_divide_8.tmp[3:3] ;;zz_1327 ) ;
+	.call CMOS3_1130_zz_1318 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en' ;;zz_1318 ) ;
+	.call CMOS3_1130_zz_1320 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[3:3]', T12[3:3], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3]' ;;
+	         zz_1320 ) ;
+	.call CMOS3_1130_TcL3_3[5]_FF_EN.latchin CMOS3_1130 (zz_1693', RESET, 
+	         GFDN_3 ;;TcL3_3[5]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_202 CMOS3_1130 (
+	         auto_smultiply_8[0]_smultiply_8.T3[1:1]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en' ;;zz_202 ) ;
+	.call CMOS3_1130_zz_1260 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5], 
+	         T12[5:5], auto_divide_8[0]_divide_8.tmp[5:5] ;;zz_1260 ) ;
+	.call CMOS3_1130_zz_1253 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[5:5]', T12[5:5], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5]' ;;
+	         zz_1253 ) ;
+	.call CMOS3_1130_TcL3_3[3]_FF_EN.latchin CMOS3_1130 (zz_1727', RESET, 
+	         GFDN_3 ;;TcL3_3[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_1195 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8], 
+	         T12[7:7], auto_divide_8[0]_divide_8.tmp[7:7] ;;zz_1195 ) ;
+	.call CMOS3_1130_zz_1188 CMOS3_1130 (
+	         auto_divide_8[0]_divide_8.tmp[7:7]', T12[7:7], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8]' ;;
+	         zz_1188 ) ;
+	.call CMOS3_1610_FF_SR_EN13_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_2011 ;;FF_SR_EN13_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN20_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1999 ;;FF_SR_EN20_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN18_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1996 ;;FF_SR_EN18_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN60_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1993 ;;FF_SR_EN60_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN58_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1990 ;;FF_SR_EN58_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN21_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1979 ;;FF_SR_EN21_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN19_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1976 ;;FF_SR_EN19_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN35_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1969 ;;FF_SR_EN35_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN46_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1963 ;;FF_SR_EN46_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN41_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1956 ;;FF_SR_EN41_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN39_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1953 ;;FF_SR_EN39_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN31_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1946 ;;FF_SR_EN31_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN29_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1943 ;;FF_SR_EN29_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN2_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1915 ;;FF_SR_EN2_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN23_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1905 ;;FF_SR_EN23_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN61_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1886 ;;FF_SR_EN61_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN59_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1883 ;;FF_SR_EN59_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN34_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1872 ;;FF_SR_EN34_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN47_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1869 ;;FF_SR_EN47_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.RQ1_5 CMOS3_1610 (
+	         auto_smultiply_8[0]_smultiply_8.DN1_5, AK3_14 ;;
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN12_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1778 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN12_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN15_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1739 ;;FF_SR_EN15_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN11_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1736 ;;FF_SR_EN11_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_6_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_8[0]_smultiply_8.T4[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_5_T5[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_6_T5[0:0] ) ;
+	.call CMOS3_1610_LBr1_2_e CMOS3_1610 (LC1_2, RQ1_2 ;;LBr1_2_e ) ;
+	.call CMOS3_1610_FF_SR_EN50_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1620 ;;FF_SR_EN50_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN48_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1617 ;;FF_SR_EN48_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN3_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1586 ;;FF_SR_EN3_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN32_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1499 ;;FF_SR_EN32_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN53_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1475 ;;FF_SR_EN53_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN17_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1472 ;;FF_SR_EN17_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN14_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1456 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN14_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN65_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1421 ;;FF_SR_EN65_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_5_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_8[0]_smultiply_8.T4[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_4_T5[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_5_T5[0:0] ) ;
+	.call CMOS3_1610_FF_SR_EN44_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1410 ;;FF_SR_EN44_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN12_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1399 ;;FF_SR_EN12_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN8_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1392 ;;FF_SR_EN8_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN10_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1312 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN10_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN10_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1304 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN10_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN10_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1219 ;;FF_SR_EN10_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN30_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1139 ;;FF_SR_EN30_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN28_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1136 ;;FF_SR_EN28_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_EN.4_3_La_FF_EN.latchin CMOS3_1610 (
+	         RESET, auto_divide_8[0]_divide_8.AK4_3 ;;
+	         auto_divide_8[0]_divide_8.FF_EN.4_3_La_FF_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_1_T7[0:0] CMOS3_1610 (
+	         auto_divide_8[0]_divide_8.T5[0:0], T12[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_1_T7[0:0] ) ;
+	.call CMOS3_1610_FF_EN.4_2_La_FF_EN.latchin CMOS3_1610 (RESET, AK4_2 ;;
+	         FF_EN.4_2_La_FF_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN15_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1014 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN15_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN16_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_1007 ;;FF_SR_EN16_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN54_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_997 ;;FF_SR_EN54_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN22_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_958 ;;FF_SR_EN22_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN45_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_950 ;;FF_SR_EN45_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN36_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_926 ;;FF_SR_EN36_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN7_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_923 ;;
+	         FF_SR_EN7_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN6_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_920 ;;
+	         FF_SR_EN6_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN51_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_909 ;;FF_SR_EN51_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN49_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_906 ;;FF_SR_EN49_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN56_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_895 ;;FF_SR_EN56_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN27_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_888 ;;FF_SR_EN27_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN9_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_880 ;;
+	         FF_SR_EN9_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN11_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_877 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN11_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN8_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_858 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN8_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_4_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_8[0]_smultiply_8.T4[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_3_T5[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_4_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN15_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_828 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN15_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN16_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_811 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN16_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN14_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_714 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN14_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN9_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_700 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN9_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_zz_1735 CMOS3_1610 (T12[1:1], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_1_T7[0:0] ;;
+	         zz_1735 ) ;
+	.call CMOS3_1610_FF_SR_EN26_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_696 ;;FF_SR_EN26_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN9_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_661 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN9_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_zz_615 CMOS3_1610 (Sr1_2', zz_617' ;;zz_615' ) ;
+	.call CMOS3_1610_FF_SR_EN33_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_630 ;;FF_SR_EN33_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_3_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_8[0]_smultiply_8.T4[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_2_T5[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_3_T5[0:0] ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN13_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_544 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN13_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN5_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_517 ;;
+	         FF_SR_EN5_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN14_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_499 ;;FF_SR_EN14_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN37_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_467 ;;FF_SR_EN37_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN1_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_464 ;;
+	         FF_SR_EN1_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN12_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_413 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN12_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN42_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_396 ;;FF_SR_EN42_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN55_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_365 ;;FF_SR_EN55_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_divide_8[0]_divide_8.FF_SR_EN11_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_346 ;;
+	         auto_divide_8[0]_divide_8.FF_SR_EN11_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.FF_SR_EN13_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_306 ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN13_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN62_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_263 ;;FF_SR_EN62_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN24_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_256 ;;FF_SR_EN24_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN64_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_203 ;;FF_SR_EN64_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_zz_1356 CMOS3_1610 (auto_divide_8[0]_divide_8.Sr4_3', 
+	         zz_1358' ;;zz_1356' ) ;
+	.call CMOS3_1610_FF_SR_EN63_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_161 ;;FF_SR_EN63_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN43_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_113 ;;FF_SR_EN43_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_zz_186 CMOS3_1610 (Sr3_14', zz_188' ;;zz_186' ) ;
+	.call CMOS3_1610_FF_SR_EN52_FF_SR_EN.latchin CMOS3_1610 (RESET, 
+	         zz_102 ;;FF_SR_EN52_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_7_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_8[0]_smultiply_8.T4[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_6_T5[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_7_T5[0:0] ) ;
+	.call CMOS3_1610_FF_SR_EN4_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_51 ;;
+	         FF_SR_EN4_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN25_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_23 ;;
+	         FF_SR_EN25_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN40_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_15 ;;
+	         FF_SR_EN40_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_FF_SR_EN38_FF_SR_EN.latchin CMOS3_1610 (RESET, zz_12 ;;
+	         FF_SR_EN38_FF_SR_EN.latchin ) ;
+	.call CMOS3_1680_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_7_T5[0:0] CMOS3_1680 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_4_T5[0:0]', 
+	         zz_1311', zz_1577', zz_18' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_7_T5[0:0]' ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[0:0]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[0:0]_en ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[2:2]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[2:2]_en ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[4:4]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[4:4]_en ) ;
+	.call CMOS3_1230_auto_divide_8[0]_divide_8.GFDN_6 CMOS3_1230 (
+	         auto_divide_8[0]_divide_8.RQ3_3, 
+	         auto_divide_8[0]_divide_8.LC3_3', 
+	         auto_divide_8[0]_divide_8.Br3_3[0] ;;
+	         auto_divide_8[0]_divide_8.GFDN_6' ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[6:6]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[6:6]_en ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[1:1]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[1:1]_en ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[3:3]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[3:3]_en ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[5:5]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[5:5]_en ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.count[7:7]_en CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3', 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ;;
+	         auto_smultiply_8[0]_smultiply_8.count[7:7]_en ) ;
+	.call CMOS3_1230_zz_867 CMOS3_1230 (T12[1:1], T9[1:1]', 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_1_T3[0:0] ;;
+	         zz_867' ) ;
+	.call CMOS3_1230_zz_860 CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.T3[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en ;;zz_860' ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.LD2_3 CMOS3_1230 (
+	         auto_smultiply_8[0]_smultiply_8.Sr2_3, 
+	         auto_smultiply_8[0]_smultiply_8.Lak2_3', 
+	         auto_smultiply_8[0]_smultiply_8.DN2_2 ;;
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ) ;
+	.call CMOS3_1230_zz_1625 CMOS3_1230 (T12[1:1], 
+	         auto_divide_8[0]_divide_8.T5[1:1]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_1_T7[0:0] ;;
+	         zz_1625' ) ;
+	.call CMOS3_1230_zz_244 CMOS3_1230 (T12[3:3], 
+	         auto_divide_8[0]_divide_8.T5[3:3]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_3_T7[0:0] ;;
+	         zz_244' ) ;
+	.call CMOS3_1230_auto_smultiply_8[0]_smultiply_8.AK2_3 CMOS3_1230 (
+	         zz_975, 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_7_T5[0:0]', 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3 ;;
+	         auto_smultiply_8[0]_smultiply_8.AK2_3' ) ;
+	.call CMOS3_1230_zz_1217 CMOS3_1230 (
+	         auto_divide_8[0]_divide_8.Br1_3[0], 
+	         auto_divide_8[0]_divide_8.LC1_3', 
+	         auto_divide_8[0]_divide_8.Br3_3[0] ;;zz_1217' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[2:2] CMOS3_1140 (
+	         zz_1651, zz_1649, zz_1646, zz_1644 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[2:2]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[4:4] CMOS3_1140 (
+	         zz_1613, zz_1611, zz_1608, zz_1606 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[4:4]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[6:6] CMOS3_1140 (
+	         zz_1564, zz_1562, zz_1559, zz_1557 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[6:6]' ) ;
+	.call CMOS3_1140_auto_divide_8[0]_divide_8.T5[7:7] CMOS3_1140 (
+	         zz_1195, zz_1193, zz_1190, zz_1188 ;;
+	         auto_divide_8[0]_divide_8.T5[7:7]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.c_4_T1[0:0] CMOS3_1140 (
+	         T8[0:0], zz_463, zz_887, T8[1:1] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.c_4_T1[0:0]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_4_T5[0:0] CMOS3_1140 (
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0], zz_504, zz_823, 
+	         auto_smultiply_8[0]_smultiply_8.T4[1:1] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_4_T5[0:0]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[1:1] CMOS3_1140 (
+	         zz_687, zz_685, zz_682, zz_680 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[1:1]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[3:3] CMOS3_1140 (
+	         zz_613, zz_611, zz_608, zz_606 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[3:3]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[5:5] CMOS3_1140 (
+	         zz_570, zz_568, zz_565, zz_563 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[5:5]' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T3[7:7] CMOS3_1140 (
+	         zz_515, zz_513, zz_510, zz_508 ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[7:7]' ) ;
+	.call CMOS3_1140_auto_divide_8[0]_divide_8.T5[6:6] CMOS3_1140 (zz_254, 
+	         zz_252, zz_249, zz_247 ;;auto_divide_8[0]_divide_8.T5[6:6]' ) ;
+	.call CMOS3_1140_zz_1416 CMOS3_1140 (auto_divide_8[0]_divide_8.SL1_3, 
+	         auto_divide_8[0]_divide_8.Sr3_3', 
+	         auto_divide_8[0]_divide_8.GFDN_2, zz_1641 ;;zz_1416' ) ;
+	.call CMOS3_1140_auto_smultiply_8[0]_smultiply_8.T1[0:0] CMOS3_1140 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.c_5_T1[0:0], 
+	         zz_1668, zz_2010, zz_34 ;;
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0]' ) ;
+	.call CMOS3_1120_zz_101 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0]', 
+	         T9[3:3] ;;zz_101 ) ;
+	.call CMOS3_1120_T14[7:7] CMOS3_1120 (T10[7:7]', T13[7:7]' ;;
+	         T14[7:7] ) ;
+	.call CMOS3_1120_zz_1119 CMOS3_1120 (zz_1121, zz_1120 ;;zz_1119' ) ;
+	.call CMOS3_1120_zz_1098 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0]', 
+	         T12[5:5] ;;zz_1098 ) ;
+	.call CMOS3_1120_zz_1120 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en ;;zz_1120 ) ;
+	.call CMOS3_1120_zz_1090 CMOS3_1120 (RQ1_2, LC1_2 ;;zz_1090' ) ;
+	.call CMOS3_1120_T14[5:5] CMOS3_1120 (T10[5:5]', T13[5:5]' ;;
+	         T14[5:5] ) ;
+	.call CMOS3_1120_T14[3:3] CMOS3_1120 (T10[3:3]', T13[3:3]' ;;
+	         T14[3:3] ) ;
+	.call CMOS3_1120_zz_1062 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_7_T1[0:0]', 
+	         T9[7:7] ;;zz_1062 ) ;
+	.call CMOS3_1120_zz_1052 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0]', 
+	         auto_divide_8[0]_divide_8.T5[5:5] ;;zz_1052 ) ;
+	.call CMOS3_1120_T14[1:1] CMOS3_1120 (T10[1:1]', T13[1:1]' ;;
+	         T14[1:1] ) ;
+	.call CMOS3_1120_AK3_17 CMOS3_1120 (zz_1845, 
+	         auto_divide_8[0]_divide_8.Sr1_3' ;;AK3_17' ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0] CMOS3_1120 (
+	         T8[1:1], T8[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0] ) ;
+	.call CMOS3_1120_zz_1028 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0]', 
+	         T12[4:4] ;;zz_1028 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2] CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.count[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2]' ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.RQ2_2 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.EN2_2', 
+	         auto_smultiply_8[0]_smultiply_8.DN2_2 ;;
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN2_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_1628', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN2_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.T1[8:8] CMOS3_1120 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6]', 
+	         T7[6:6] ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.T1[8:8] ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN6_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_1316', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN6_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_auto_divide_8[0]_divide_8.EN4_2 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.RQ3_3', zz_1274' ;;
+	         auto_divide_8[0]_divide_8.EN4_2 ) ;
+	.call CMOS3_1120_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0] CMOS3_1120 (
+	         zz_1264, zz_1262 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0]' ) ;
+	.call CMOS3_1120_DN_Latch3_10 CMOS3_1120 (EN3_10', DN3_10 ;;
+	         DN_Latch3_10 ) ;
+	.call CMOS3_1120_DN_Latch3_12 CMOS3_1120 (RQ3_11', GFDN_3 ;;
+	         DN_Latch3_12 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_EN.2_3_La_FF_EN.latchin CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.AK2_3', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_EN.2_3_La_FF_EN.latchin ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3 ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en' ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN3_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_1119', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN3_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_976 CMOS3_1120 (auto_divide_8[0]_divide_8.EN4_2, 
+	         auto_divide_8[0]_divide_8.DN4_2 ;;zz_976' ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_2_T5[0:0] CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.T4[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.d_2_T5[0:0] ) ;
+	.call CMOS3_1120_zz_945 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0]', 
+	         auto_smultiply_8[0]_smultiply_8.LC1_3 ;;zz_945 ) ;
+	.call CMOS3_1120_zz_944 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.LC1_3', 
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3[1]' ;;zz_944 ) ;
+	.call CMOS3_1120_zz_943 CMOS3_1120 (zz_945, zz_944 ;;zz_943' ) ;
+	.call CMOS3_1120_RQ3_9 CMOS3_1120 (DN3_8', DN3_9 ;;RQ3_9 ) ;
+	.call CMOS3_1120_RQ3_8 CMOS3_1120 (DN3_7', DN3_8 ;;RQ3_8 ) ;
+	.call CMOS3_1120_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6] CMOS3_1120 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5]', 
+	         T7[5:5] ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6] ) ;
+	.call CMOS3_1120_RQ3_7 CMOS3_1120 (DN3_6', DN3_7 ;;RQ3_7 ) ;
+	.call CMOS3_1120_RQ3_6 CMOS3_1120 (DN3_5', DN3_6 ;;RQ3_6 ) ;
+	.call CMOS3_1120_RQ3_5 CMOS3_1120 (DN3_4', DN3_5 ;;RQ3_5 ) ;
+	.call CMOS3_1120_auto_divide_8[0]_divide_8.T2[0:0]_L_FF_EN.latchin CMOS3_1120 (
+	         zz_967, zz_965 ;;
+	         auto_divide_8[0]_divide_8.T2[0:0]_L_FF_EN.latchin' ) ;
+	.call CMOS3_1120_RQ3_4 CMOS3_1120 (EN3_4', DN3_4 ;;RQ3_4 ) ;
+	.call CMOS3_1120_zz_1985 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0]', 
+	         T9[6:6] ;;zz_1985 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.EN2_2 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.RQ1_3', zz_943' ;;
+	         auto_smultiply_8[0]_smultiply_8.EN2_2 ) ;
+	.call CMOS3_1120_zz_81 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0]', 
+	         T12[3:3] ;;zz_81 ) ;
+	.call CMOS3_1120_zz_887 CMOS3_1120 (T8[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_3_T1[0:0]' ;;
+	         zz_887 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_4_T1[0:0] CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_3_T1[0:0]', 
+	         T8[3:3] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_4_T1[0:0] ) ;
+	.call CMOS3_1120_zz_866 CMOS3_1120 (T12[1:1], T9[1:1]' ;;zz_866' ) ;
+	.call CMOS3_1120_zz_855 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_1_T3[0:0]', 
+	         T12[1:1] ;;zz_855 ) ;
+	.call CMOS3_1120_zz_1940 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0]', 
+	         T12[2:2] ;;zz_1940 ) ;
+	.call CMOS3_1120_T14[6:6] CMOS3_1120 (T10[6:6]', T13[6:6]' ;;
+	         T14[6:6] ) ;
+	.call CMOS3_1120_zz_821 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en ;;zz_821 ) ;
+	.call CMOS3_1120_zz_820 CMOS3_1120 (zz_822, zz_821 ;;zz_820' ) ;
+	.call CMOS3_1120_T14[4:4] CMOS3_1120 (T10[4:4]', T13[4:4]' ;;
+	         T14[4:4] ) ;
+	.call CMOS3_1120_zz_807 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0]', 
+	         T9[4:4] ;;zz_807 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN1_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_820', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN1_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_1864 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0]', 
+	         auto_divide_8[0]_divide_8.T5[2:2] ;;zz_1864 ) ;
+	.call CMOS3_1120_T14[2:2] CMOS3_1120 (T10[2:2]', T13[2:2]' ;;
+	         T14[2:2] ) ;
+	.call CMOS3_1120_zz_769 CMOS3_1120 (zz_771, zz_770 ;;zz_769' ) ;
+	.call CMOS3_1120_zz_770 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en ;;zz_770 ) ;
+	.call CMOS3_1120_zz_1845 CMOS3_1120 (auto_divide_8[0].EN', 
+	         auto_divide_8[0]_divide_8.SL1_3' ;;zz_1845 ) ;
+	.call CMOS3_1120_T14[0:0] CMOS3_1120 (T10[0:0]', T13[0:0]' ;;
+	         T14[0:0] ) ;
+	.call CMOS3_1120_zz_744 CMOS3_1120 (RQ3_2', zz_745' ;;zz_744 ) ;
+	.call CMOS3_1120_zz_742 CMOS3_1120 (zz_744, Sr3_3' ;;zz_742' ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN5_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_769', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN5_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_RQ1_3 CMOS3_1120 (Br1_2[1], Sr1_2' ;;RQ1_3' ) ;
+	.call CMOS3_1120_zz_2010 CMOS3_1120 (T8[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_6_T1[0:0]' ;;
+	         zz_2010 ) ;
+	.call CMOS3_1120_RQ1_2 CMOS3_1120 (Sr1_2', Br1_2[1] ;;RQ1_2 ) ;
+	.call CMOS3_1120_auto_divide_8[0]_divide_8.T3[0:0] CMOS3_1120 (zz_748, 
+	         zz_746 ;;auto_divide_8[0]_divide_8.T3[0:0]' ) ;
+	.call CMOS3_1120_zz_699 CMOS3_1120 (auto_divide_8[0]_divide_8.RQ3_3, 
+	         auto_divide_8[0]_divide_8.LC3_3 ;;zz_699' ) ;
+	.call CMOS3_1120_zz_709 CMOS3_1120 (auto_divide_8[0]_divide_8.RQ1_3, 
+	         auto_divide_8[0]_divide_8.LC1_3 ;;zz_709' ) ;
+	.call CMOS3_1120_zz_706 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0]', 
+	         T12[4:4] ;;zz_706 ) ;
+	.call CMOS3_1120_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0] CMOS3_1120 (
+	         T11[0:0]', T7[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0] ) ;
+	.call CMOS3_1120_zz_1765 CMOS3_1120 (EN3_4, DN3_4 ;;zz_1765' ) ;
+	.call CMOS3_1120_zz_674 CMOS3_1120 (EN4_2', AK4_2' ;;zz_674 ) ;
+	.call CMOS3_1120_zz_672 CMOS3_1120 (zz_674, Sr4_2' ;;zz_672' ) ;
+	.call CMOS3_1120_zz_667 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0]', 
+	         auto_divide_8[0]_divide_8.T5[4:4] ;;zz_667 ) ;
+	.call CMOS3_1120_zz_1752 CMOS3_1120 (DN3_4, DN3_5 ;;zz_1752' ) ;
+	.call CMOS3_1120_zz_644 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_1_T1[0:0]', 
+	         T12[1:1] ;;zz_644 ) ;
+	.call CMOS3_1120_zz_1727 CMOS3_1120 (DN3_5, DN3_6 ;;zz_1727' ) ;
+	.call CMOS3_1120_zz_640 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0]', 
+	         T12[5:5] ;;zz_640 ) ;
+	.call CMOS3_1120_auto_divide_8[0]_divide_8.RQ4_2 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.EN4_2', 
+	         auto_divide_8[0]_divide_8.DN4_2 ;;
+	         auto_divide_8[0]_divide_8.RQ4_2 ) ;
+	.call CMOS3_1120_zz_1714 CMOS3_1120 (DN3_6, DN3_7 ;;zz_1714' ) ;
+	.call CMOS3_1120_zz_1693 CMOS3_1120 (DN3_7, DN3_8 ;;zz_1693' ) ;
+	.call CMOS3_1120_zz_1688 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0]', 
+	         T9[4:4] ;;zz_1688 ) ;
+	.call CMOS3_1120_zz_617 CMOS3_1120 (Br1_2[1], GFDN_3 ;;zz_617' ) ;
+	.call CMOS3_1120_zz_1668 CMOS3_1120 (T8[5:5]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0]' ;;
+	         zz_1668 ) ;
+	.call CMOS3_1120_zz_604 CMOS3_1120 (EN3_10', AK3_17' ;;zz_604 ) ;
+	.call CMOS3_1120_zz_1667 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.RQ1_3, 
+	         auto_smultiply_8[0]_smultiply_8.LC1_3 ;;zz_1667' ) ;
+	.call CMOS3_1120_zz_602 CMOS3_1120 (zz_604, Sr3_17' ;;zz_602' ) ;
+	.call CMOS3_1120_zz_1662 CMOS3_1120 (DN3_8, DN3_9 ;;zz_1662' ) ;
+	.call CMOS3_1120_zz_1642 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.Br3_3[0], 
+	         auto_divide_8[0]_divide_8.AK3_3 ;;zz_1642' ) ;
+	.call CMOS3_1120_zz_1639 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0]', 
+	         T12[4:4] ;;zz_1639 ) ;
+	.call CMOS3_1120_zz_1641 CMOS3_1120 (auto_divide_8[0]_divide_8.RQ3_2', 
+	         zz_1642' ;;zz_1641 ) ;
+	.call CMOS3_1120_zz_1635 CMOS3_1120 (LC1_2, reset[0:0] ;;zz_1635 ) ;
+	.call CMOS3_1120_zz_1629 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en ;;zz_1629 ) ;
+	.call CMOS3_1120_zz_1631 CMOS3_1120 (DN3_9, EN3_10 ;;zz_1631' ) ;
+	.call CMOS3_1120_zz_1628 CMOS3_1120 (zz_1630, zz_1629 ;;zz_1628' ) ;
+	.call CMOS3_1120_zz_1616 CMOS3_1120 (EN3_10, DN3_10 ;;zz_1616' ) ;
+	.call CMOS3_1120_zz_498 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0]', 
+	         T9[3:3] ;;zz_498 ) ;
+	.call CMOS3_1120_zz_1548 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0]', 
+	         T9[6:6] ;;zz_1548 ) ;
+	.call CMOS3_1120_zz_463 CMOS3_1120 (T8[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0]' ;;
+	         zz_463 ) ;
+	.call CMOS3_1120_zz_1540 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0]', 
+	         T9[2:2] ;;zz_1540 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1] CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]', T11[0:0]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1] ) ;
+	.call CMOS3_1120_zz_426 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0]', 
+	         T9[2:2] ;;zz_426 ) ;
+	.call CMOS3_1120_zz_391 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0]', 
+	         T12[2:2] ;;zz_391 ) ;
+	.call CMOS3_1120_zz_387 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0]', 
+	         T12[6:6] ;;zz_387 ) ;
+	.call CMOS3_1120_zz_402 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0]', 
+	         T12[2:2] ;;zz_402 ) ;
+	.call CMOS3_1120_zz_1445 CMOS3_1120 (RQ3_3, LC3_3 ;;zz_1445' ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN4_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_285', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN4_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_352 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_3_T7[0:0]', 
+	         T12[3:3] ;;zz_352 ) ;
+	.call CMOS3_1120_zz_1435 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0]', 
+	         T12[3:3] ;;zz_1435 ) ;
+	.call CMOS3_1120_zz_1427 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0]', 
+	         T9[5:5] ;;zz_1427 ) ;
+	.call CMOS3_1120_zz_1415 CMOS3_1120 (auto_divide_8[0].EN', zz_1416' ;;
+	         zz_1415 ) ;
+	.call CMOS3_1120_zz_1413 CMOS3_1120 (zz_1415, 
+	         auto_divide_8[0]_divide_8.Sr1_3' ;;zz_1413' ) ;
+	.call CMOS3_1120_zz_1405 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0]', 
+	         T12[5:5] ;;zz_1405 ) ;
+	.call CMOS3_1120_zz_1379 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.Br3_3[0], 
+	         auto_divide_8[0]_divide_8.AK3_3 ;;zz_1379' ) ;
+	.call CMOS3_1120_zz_1378 CMOS3_1120 (auto_divide_8[0]_divide_8.RQ3_2', 
+	         zz_1379' ;;zz_1378 ) ;
+	.call CMOS3_1120_zz_1376 CMOS3_1120 (zz_1378, 
+	         auto_divide_8[0]_divide_8.Sr3_3' ;;zz_1376' ) ;
+	.call CMOS3_1120_zz_291 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.Br1_3[0], 
+	         auto_smultiply_8[0]_smultiply_8.GFDN_2 ;;zz_291' ) ;
+	.call CMOS3_1120_zz_288 CMOS3_1120 (zz_290, 
+	         auto_smultiply_8[0]_smultiply_8.Sr1_3' ;;zz_288' ) ;
+	.call CMOS3_1120_zz_290 CMOS3_1120 (auto_smultiply_8[0].EN', zz_291' ;;
+	         zz_290 ) ;
+	.call CMOS3_1120_auto_smultiply_8[0]_smultiply_8.FF_SR_EN7_FF_SR_EN.latchin CMOS3_1120 (
+	         zz_200', RESET ;;
+	         auto_smultiply_8[0]_smultiply_8.FF_SR_EN7_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_286 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en ;;zz_286 ) ;
+	.call CMOS3_1120_zz_285 CMOS3_1120 (zz_287, zz_286 ;;zz_285' ) ;
+	.call CMOS3_1120_zz_282 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.DN2_2', 
+	         auto_smultiply_8[0]_smultiply_8.AK2_3' ;;zz_282 ) ;
+	.call CMOS3_1120_zz_280 CMOS3_1120 (zz_282, 
+	         auto_smultiply_8[0]_smultiply_8.Sr2_3' ;;zz_280' ) ;
+	.call CMOS3_1120_zz_1343 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_6_T7[0:0]', 
+	         auto_divide_8[0]_divide_8.T5[6:6] ;;zz_1343 ) ;
+	.call CMOS3_1120_zz_1329 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.EN2_2, 
+	         auto_smultiply_8[0]_smultiply_8.DN2_2 ;;zz_1329' ) ;
+	.call CMOS3_1120_zz_243 CMOS3_1120 (T12[3:3], 
+	         auto_divide_8[0]_divide_8.T5[3:3]' ;;zz_243' ) ;
+	.call CMOS3_1120_zz_1317 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en ;;zz_1317 ) ;
+	.call CMOS3_1120_zz_1316 CMOS3_1120 (zz_1318, zz_1317 ;;zz_1316' ) ;
+	.call CMOS3_1120_zz_1315 CMOS3_1120 (RQ3_11, Sr3_14' ;;zz_1315' ) ;
+	.call CMOS3_1120_RQ3_15 CMOS3_1120 (GFDN_3', DN3_15 ;;RQ3_15 ) ;
+	.call CMOS3_1120_RQ3_12 CMOS3_1120 (RQ3_11', GFDN_3 ;;RQ3_12 ) ;
+	.call CMOS3_1120_RQ3_10 CMOS3_1120 (EN3_10', DN3_10 ;;RQ3_10 ) ;
+	.call CMOS3_1120_zz_1276 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.T3[0:0]', 
+	         auto_divide_8[0]_divide_8.LC3_3 ;;zz_1276 ) ;
+	.call CMOS3_1120_zz_1275 CMOS3_1120 (auto_divide_8[0]_divide_8.LC3_3', 
+	         auto_divide_8[0]_divide_8.LBr3_3[1]' ;;zz_1275 ) ;
+	.call CMOS3_1120_zz_1274 CMOS3_1120 (zz_1276, zz_1275 ;;zz_1274' ) ;
+	.call CMOS3_1120_zz_1273 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0]', 
+	         T9[5:5] ;;zz_1273 ) ;
+	.call CMOS3_1120_zz_201 CMOS3_1120 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]', 
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en ;;zz_201 ) ;
+	.call CMOS3_1120_zz_200 CMOS3_1120 (zz_202, zz_201 ;;zz_200' ) ;
+	.call CMOS3_1120_zz_1263 CMOS3_1120 (T12[1:1], T9[1:1]' ;;zz_1263' ) ;
+	.call CMOS3_1120_zz_1262 CMOS3_1120 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_1_T1[0:0]', 
+	         zz_1263' ;;zz_1262 ) ;
+	.call CMOS3_1120_zz_169 CMOS3_1120 (LBr1_2_e', RESET ;;zz_169 ) ;
+	.call CMOS3_1120_zz_171 CMOS3_1120 (LBr1_2_e, RESET ;;zz_171 ) ;
+	.call CMOS3_1120_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[3:3] CMOS3_1120 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2]', 
+	         T7[2:2] ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[3:3] ) ;
+	.call CMOS3_1120_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5] CMOS3_1120 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4]', 
+	         T7[4:4] ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5] ) ;
+	.call CMOS3_1760_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T6[0:0] CMOS3_1760 (
+	         T11[1:1], auto_subtract_8[0]_subtract_8.T1[1:1] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T6[0:0] ) ;
+	.call CMOS3_1760_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T24[0:0] CMOS3_1760 (
+	         T11[4:4], auto_subtract_8[0]_subtract_8.T1[4:4] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T24[0:0] ) ;
+	.call CMOS3_1760_auto_add_8[0]_add_8.add_8_1_add_8_1.T18[0:0] CMOS3_1760 (
+	         auto_add_8[0].ib0[3:3], auto_add_8[0].ib1[3:3] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T18[0:0] ) ;
+	.call CMOS3_1760_auto_add_8[0]_add_8.add_8_1_add_8_1.T6[0:0] CMOS3_1760 (
+	         auto_add_8[0].ib0[1:1], auto_add_8[0].ib1[1:1] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T6[0:0] ) ;
+	.call CMOS3_1760_zz_1050 CMOS3_1760 (T12[5:5], 
+	         auto_divide_8[0]_divide_8.T5[5:5]' ;;zz_1050 ) ;
+	.call CMOS3_1760_auto_divide_8[0]_divide_8.T4[0:0]_L_FF_EN.latchin CMOS3_1760 (
+	         zz_1851, zz_1849 ;;
+	         auto_divide_8[0]_divide_8.T4[0:0]_L_FF_EN.latchin ) ;
+	.call CMOS3_1760_auto_add_8[0]_add_8.add_8_1_add_8_1.T30[0:0] CMOS3_1760 (
+	         auto_add_8[0].ib0[5:5], auto_add_8[0].ib1[5:5] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T30[0:0] ) ;
+	.call CMOS3_1760_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T18[0:0] CMOS3_1760 (
+	         T11[3:3], auto_subtract_8[0]_subtract_8.T1[3:3] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T18[0:0] ) ;
+	.call CMOS3_1760_auto_smultiply_8[0]_smultiply_8.T2[0:0]_L_FF_EN.latchin CMOS3_1760 (
+	         zz_1093, zz_1091 ;;
+	         auto_smultiply_8[0]_smultiply_8.T2[0:0]_L_FF_EN.latchin ) ;
+	.call CMOS3_1760_auto_add_8[0]_add_8.add_8_1_add_8_1.T24[0:0] CMOS3_1760 (
+	         auto_add_8[0].ib0[4:4], auto_add_8[0].ib1[4:4] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T24[0:0] ) ;
+	.call CMOS3_1760_auto_add_8[0]_add_8.add_8_1_add_8_1.T12[0:0] CMOS3_1760 (
+	         auto_add_8[0].ib0[2:2], auto_add_8[0].ib1[2:2] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T12[0:0] ) ;
+	.call CMOS3_1760_zz_865 CMOS3_1760 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_1_T3[0:0]', 
+	         zz_866' ;;zz_865' ) ;
+	.call CMOS3_1760_zz_1862 CMOS3_1760 (T12[2:2], 
+	         auto_divide_8[0]_divide_8.T5[2:2]' ;;zz_1862 ) ;
+	.call CMOS3_1760_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T36[0:0] CMOS3_1760 (
+	         T11[6:6], auto_subtract_8[0]_subtract_8.T1[6:6] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T36[0:0] ) ;
+	.call CMOS3_1760_zz_665 CMOS3_1760 (T12[4:4], 
+	         auto_divide_8[0]_divide_8.T5[4:4]' ;;zz_665 ) ;
+	.call CMOS3_1760_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T30[0:0] CMOS3_1760 (
+	         T11[5:5], auto_subtract_8[0]_subtract_8.T1[5:5] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T30[0:0] ) ;
+	.call CMOS3_1760_zz_1624 CMOS3_1760 (T12[1:1], 
+	         auto_divide_8[0]_divide_8.T5[1:1]' ;;zz_1624 ) ;
+	.call CMOS3_1760_auto_add_8[0]_add_8.add_8_1_add_8_1.T36[0:0] CMOS3_1760 (
+	         auto_add_8[0].ib0[6:6], auto_add_8[0].ib1[6:6] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T36[0:0] ) ;
+	.call CMOS3_1760_zz_1341 CMOS3_1760 (T12[6:6], 
+	         auto_divide_8[0]_divide_8.T5[6:6]' ;;zz_1341 ) ;
+	.call CMOS3_1760_zz_242 CMOS3_1760 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_3_T7[0:0]', 
+	         zz_243' ;;zz_242' ) ;
+	.call CMOS3_1760_LBr3_3_1_FF_EN.latchin CMOS3_1760 (zz_76, zz_74 ;;
+	         LBr3_3_1_FF_EN.latchin ) ;
+	.call CMOS3_1760_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T12[0:0] CMOS3_1760 (
+	         T11[2:2], auto_subtract_8[0]_subtract_8.T1[2:2] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T12[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_3_T7[0:0] CMOS3_1970 (
+	         auto_divide_8[0]_divide_8.T5[2:2], zz_1940, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0], 
+	         zz_1938 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_3_T7[0:0] ) ;
+	.call CMOS3_1970_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8] CMOS3_1970 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6], T11[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6], 
+	         zz_1927 ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0] CMOS3_1970 (
+	         T9[4:4], zz_1639, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0], 
+	         zz_1637 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_7_T1[0:0] CMOS3_1970 (
+	         T12[6:6], zz_1548, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0], 
+	         zz_1546 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_7_T1[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0] CMOS3_1970 (
+	         T12[2:2], zz_1540, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0], 
+	         zz_1538 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0] ) ;
+	.call CMOS3_1970_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6] CMOS3_1970 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5], T11[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5], 
+	         zz_1527 ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6] ) ;
+	.call CMOS3_1970_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4] CMOS3_1970 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3], T11[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3], 
+	         zz_1460 ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4] ) ;
+	.call CMOS3_1970_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2] CMOS3_1970 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1], T11[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1], 
+	         zz_1441 ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0] CMOS3_1970 (
+	         T9[3:3], zz_1435, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0], 
+	         zz_1433 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0] CMOS3_1970 (
+	         T9[5:5], zz_1405, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0], 
+	         zz_1403 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[0:0]_in CMOS3_1970 (
+	         T9[0:0], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[0:0], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[0:0]_in ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[2:2]_in CMOS3_1970 (
+	         T9[2:2], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[2:2], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[2:2]_in ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[4:4]_in CMOS3_1970 (
+	         T9[4:4], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[4:4], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[4:4]_in ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0] CMOS3_1970 (
+	         T12[4:4], zz_807, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0], 
+	         zz_805 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[1:1]_in CMOS3_1970 (
+	         T9[1:1], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[1:1], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[1:1]_in ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[3:3]_in CMOS3_1970 (
+	         T9[3:3], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[3:3], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[3:3]_in ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[5:5]_in CMOS3_1970 (
+	         T9[5:5], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[5:5], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[5:5]_in ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0] CMOS3_1970 (
+	         auto_divide_8[0]_divide_8.T5[4:4], zz_706, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0], 
+	         zz_704 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0] CMOS3_1970 (
+	         T9[1:1], zz_644, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_1_T1[0:0], 
+	         zz_642 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0] CMOS3_1970 (
+	         T9[5:5], zz_640, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0], 
+	         zz_638 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[7:7]_in CMOS3_1970 (
+	         T9[7:7], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[7:7], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[7:7]_in ) ;
+	.call CMOS3_1970_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5] CMOS3_1970 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4], T11[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4], 
+	         zz_479 ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5] ) ;
+	.call CMOS3_1970_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3] CMOS3_1970 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2], T11[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2], 
+	         zz_436 ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0] CMOS3_1970 (
+	         T9[2:2], zz_402, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0], 
+	         zz_400 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0] CMOS3_1970 (
+	         T12[3:3], zz_101, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0], 
+	         zz_99 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0] ) ;
+	.call CMOS3_1970_auto_divide_8[0]_divide_8.tmp[6:6]_in CMOS3_1970 (
+	         T9[6:6], auto_divide_8[0]_divide_8.RQ4_2, 
+	         auto_divide_8[0]_divide_8.T5[6:6], 
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.tmp[6:6]_in ) ;
+	.call CMOS3_2350_T12[7:7] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T39[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T38[0:0]' ;;
+	         T12[7:7] ) ;
+	.call CMOS3_2350_T12[5:5] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T27[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0]' ;;
+	         T12[5:5] ) ;
+	.call CMOS3_2350_T12[3:3] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T15[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0]' ;;
+	         T12[3:3] ) ;
+	.call CMOS3_2350_auto_smultiply_8[0]_smultiply_8.T4[2:2] CMOS3_2350 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.count[2:2] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[2:2] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[1:1] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T3[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0]' ;;
+	         auto_add_8[0].ob0[1:1] ) ;
+	.call CMOS3_2350_auto_smultiply_8[0]_smultiply_8.T4[4:4] CMOS3_2350 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.count[4:4] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[4:4] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[3:3] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T15[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0]' ;;
+	         auto_add_8[0].ob0[3:3] ) ;
+	.call CMOS3_2350_auto_smultiply_8[0]_smultiply_8.T4[6:6] CMOS3_2350 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.count[6:6] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[6:6] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[5:5] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T27[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0]' ;;
+	         auto_add_8[0].ob0[5:5] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[7:7] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T39[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T38[0:0]' ;;
+	         auto_add_8[0].ob0[7:7] ) ;
+	.call CMOS3_2350_auto_subtract_8[0]_subtract_8.T1[2:2] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2], 
+	         T7[2:2] ;;auto_subtract_8[0]_subtract_8.T1[2:2] ) ;
+	.call CMOS3_2350_auto_subtract_8[0]_subtract_8.T1[4:4] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4], 
+	         T7[4:4] ;;auto_subtract_8[0]_subtract_8.T1[4:4] ) ;
+	.call CMOS3_2350_auto_subtract_8[0]_subtract_8.T1[6:6] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6], 
+	         T7[6:6] ;;auto_subtract_8[0]_subtract_8.T1[6:6] ) ;
+	.call CMOS3_2350_T12[6:6] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T33[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0]' ;;
+	         T12[6:6] ) ;
+	.call CMOS3_2350_T12[4:4] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T21[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0]' ;;
+	         T12[4:4] ) ;
+	.call CMOS3_2350_T12[2:2] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T9[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0]' ;;
+	         T12[2:2] ) ;
+	.call CMOS3_2350_auto_smultiply_8[0]_smultiply_8.T4[3:3] CMOS3_2350 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.count[3:3] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[3:3] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[2:2] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T9[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0]' ;;
+	         auto_add_8[0].ob0[2:2] ) ;
+	.call CMOS3_2350_auto_smultiply_8[0]_smultiply_8.T4[5:5] CMOS3_2350 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.count[5:5] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[5:5] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[4:4] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T21[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0]' ;;
+	         auto_add_8[0].ob0[4:4] ) ;
+	.call CMOS3_2350_auto_smultiply_8[0]_smultiply_8.T4[7:7] CMOS3_2350 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T4[8:8], 
+	         auto_smultiply_8[0]_smultiply_8.count[7:7] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[7:7] ) ;
+	.call CMOS3_2350_auto_add_8[0].ob0[6:6] CMOS3_2350 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T33[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0]' ;;
+	         auto_add_8[0].ob0[6:6] ) ;
+	.call CMOS3_2350_auto_subtract_8[0]_subtract_8.T1[3:3] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[3:3], 
+	         T7[3:3] ;;auto_subtract_8[0]_subtract_8.T1[3:3] ) ;
+	.call CMOS3_2350_auto_subtract_8[0]_subtract_8.T1[5:5] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5], 
+	         T7[5:5] ;;auto_subtract_8[0]_subtract_8.T1[5:5] ) ;
+	.call CMOS3_2350_auto_subtract_8[0]_subtract_8.T1[7:7] CMOS3_2350 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.T1[8:8], 
+	         T7[7:7] ;;auto_subtract_8[0]_subtract_8.T1[7:7] ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_7_T3[0:0] CMOS3_1870 (
+	         T12[6:6], zz_1985, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0], 
+	         zz_1983 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_7_T3[0:0]' ) ;
+	.call CMOS3_1870_auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0] CMOS3_1870 (
+	         auto_add_8[0].ib0[3:3], auto_add_8[0].ib1[3:3], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T18[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0]' ) ;
+	.call CMOS3_1870_auto_add_8[0]_add_8.add_8_1_add_8_1.T38[0:0] CMOS3_1870 (
+	         auto_add_8[0].ib0[6:6], auto_add_8[0].ib1[6:6], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T36[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T38[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.tmp[2:2], T12[2:2]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2], 
+	         zz_1913 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.tmp[4:4], T12[4:4]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4], 
+	         zz_1876 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_3_T7[0:0] CMOS3_1870 (
+	         T12[2:2], zz_1864, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0], 
+	         zz_1862 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_3_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0] CMOS3_1870 (
+	         auto_add_8[0].ib0[4:4], auto_add_8[0].ib1[4:4], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T24[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.T5[1:1], zz_1735, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_1_T7[0:0], 
+	         zz_1733 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0] CMOS3_1870 (
+	         T12[4:4], zz_1688, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0], 
+	         zz_1686 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0]' ) ;
+	.call CMOS3_1870_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0] CMOS3_1870 (
+	         T11[1:1], auto_subtract_8[0]_subtract_8.T1[1:1], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T6[0:0] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0] CMOS3_1870 (
+	         T12[5:5], zz_1427, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0], 
+	         zz_1425 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_7_T7[0:0] CMOS3_1870 (
+	         T12[6:6], zz_1343, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0], 
+	         zz_1341 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_7_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0] CMOS3_1870 (
+	         T12[5:5], zz_1273, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0], 
+	         zz_1271 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0]' ) ;
+	.call CMOS3_1870_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T38[0:0] CMOS3_1870 (
+	         T11[6:6], auto_subtract_8[0]_subtract_8.T1[6:6], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T36[0:0] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T38[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_6_T7[0:0] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.T5[5:5], zz_1098, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0], 
+	         zz_1096 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_6_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0] CMOS3_1870 (
+	         T11[3:3], auto_subtract_8[0]_subtract_8.T1[3:3], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T18[0:0] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.T1[0:0] CMOS3_1870 (
+	         T12[7:7], zz_1062, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_7_T1[0:0], 
+	         zz_1060 ;;auto_divide_8[0]_divide_8.T1[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0] CMOS3_1870 (
+	         T12[5:5], zz_1052, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0], 
+	         zz_1050 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0] CMOS3_1870 (
+	         T9[4:4], zz_1028, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0], 
+	         zz_1026 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0]' ) ;
+	.call CMOS3_1870_auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0] CMOS3_1870 (
+	         auto_add_8[0].ib0[5:5], auto_add_8[0].ib1[5:5], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T30[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0] CMOS3_1870 (
+	         T9[1:1], zz_855, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_1_T3[0:0], 
+	         zz_853 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.tmp[1:1], T12[1:1]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1], 
+	         zz_836 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.tmp[3:3], T12[3:3]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3], 
+	         zz_809 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.tmp[5:5], T12[5:5]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5], 
+	         zz_781 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6]' ) ;
+	.call CMOS3_1870_zz_746 CMOS3_1870 (zz_1951', zz_1949', T9[7:7]', 
+	         T12[7:7] ;;zz_746 ) ;
+	.call CMOS3_1870_zz_1806 CMOS3_1870 (zz_584', zz_582', T12[7:7], 
+	         auto_divide_8[0]_divide_8.T5[7:7]' ;;zz_1806' ) ;
+	.call CMOS3_1870_auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0] CMOS3_1870 (
+	         auto_add_8[0].ib0[2:2], auto_add_8[0].ib1[2:2], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T12[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0] CMOS3_1870 (
+	         T12[4:4], zz_667, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0], 
+	         zz_665 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0] CMOS3_1870 (
+	         T12[3:3], zz_498, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0], 
+	         zz_496 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.tmp[6:6], T12[6:6]', 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6], 
+	         zz_451 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0] CMOS3_1870 (
+	         T12[2:2], zz_426, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0], 
+	         zz_424 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0]' ) ;
+	.call CMOS3_1870_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0] CMOS3_1870 (
+	         T11[2:2], auto_subtract_8[0]_subtract_8.T1[2:2], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T12[0:0] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0] CMOS3_1870 (
+	         T9[2:2], zz_391, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0], 
+	         zz_389 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_7_T1[0:0] CMOS3_1870 (
+	         T9[6:6], zz_387, 
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0], 
+	         zz_385 ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_7_T1[0:0]' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0] CMOS3_1870 (
+	         auto_divide_8[0]_divide_8.T5[3:3], zz_352, 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_3_T7[0:0], 
+	         zz_350 ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0]' ) ;
+	.call CMOS3_1870_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0] CMOS3_1870 (
+	         T11[4:4], auto_subtract_8[0]_subtract_8.T1[4:4], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T24[0:0] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0]' ) ;
+	.call CMOS3_1870_auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0] CMOS3_1870 (
+	         auto_add_8[0].ib0[1:1], auto_add_8[0].ib1[1:1], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0], 
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T6[0:0] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0]' ) ;
+	.call CMOS3_1870_T1[0:0]_L_FF_EN.latchin CMOS3_1870 (zz_171, 
+	         LBr1_2[0]', reset[0:0], zz_169 ;;T1[0:0]_L_FF_EN.latchin' ) ;
+	.call CMOS3_1870_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0] CMOS3_1870 (
+	         T9[3:3], zz_81, 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0], 
+	         zz_79 ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0]' ) ;
+	.call CMOS3_1870_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0] CMOS3_1870 (
+	         T11[5:5], auto_subtract_8[0]_subtract_8.T1[5:5], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T30[0:0] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0]' ) ;
+	.call CMOS3_1620_zz_1060 CMOS3_1620 (T12[7:7], T9[7:7] ;;zz_1060 ) ;
+	.call CMOS3_1620_auto_divide_8[0]_divide_8.SL1_3 CMOS3_1620 (
+	         auto_divide_8[0]_divide_8.Br1_3[1], zz_1217' ;;
+	         auto_divide_8[0]_divide_8.SL1_3 ) ;
+	.call CMOS3_1620_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_1_T7[0:0] CMOS3_1620 (
+	         auto_divide_8[0]_divide_8.T5[0:0], T12[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_1_T7[0:0] ) ;
+	.call CMOS3_1620_zz_99 CMOS3_1620 (T12[3:3], T9[3:3] ;;zz_99 ) ;
+	.call CMOS3_1620_zz_1983 CMOS3_1620 (T12[6:6], T9[6:6] ;;zz_1983 ) ;
+	.call CMOS3_1620_zz_805 CMOS3_1620 (T12[4:4], T9[4:4] ;;zz_805 ) ;
+	.call CMOS3_1620_zz_1686 CMOS3_1620 (T12[4:4], T9[4:4] ;;zz_1686 ) ;
+	.call CMOS3_1620_zz_582 CMOS3_1620 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_6_T7[0:0]', 
+	         zz_583 ;;zz_582' ) ;
+	.call CMOS3_1620_zz_496 CMOS3_1620 (T12[3:3], T9[3:3] ;;zz_496 ) ;
+	.call CMOS3_1620_zz_1546 CMOS3_1620 (T12[6:6], T9[6:6] ;;zz_1546 ) ;
+	.call CMOS3_1620_zz_1538 CMOS3_1620 (T12[2:2], T9[2:2] ;;zz_1538 ) ;
+	.call CMOS3_1620_zz_424 CMOS3_1620 (T12[2:2], T9[2:2] ;;zz_424 ) ;
+	.call CMOS3_1620_zz_1425 CMOS3_1620 (T12[5:5], T9[5:5] ;;zz_1425 ) ;
+	.call CMOS3_1620_auto_divide_8[0]_divide_8.AK3_3 CMOS3_1620 (
+	         auto_divide_8[0]_divide_8.GFDN_4, 
+	         auto_divide_8[0]_divide_8.GFDN_6' ;;
+	         auto_divide_8[0]_divide_8.AK3_3 ) ;
+	.call CMOS3_1620_zz_1271 CMOS3_1620 (T12[5:5], T9[5:5] ;;zz_1271 ) ;
+	.call CMOS3_1770_auto_divide_8[0]_divide_8.Sw3_3_FF_EN.latchin CMOS3_1770 (
+	         zz_1376', RESET, AK3_17 ;;
+	         auto_divide_8[0]_divide_8.Sw3_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_14_FF_EN.latchin CMOS3_1770 (zz_186', RESET, DN ;;
+	         Sw3_14_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_3_FF_EN.latchin CMOS3_1770 (zz_742', RESET, DN ;;
+	         Sw3_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_auto_divide_8[0]_divide_8.Sw1_3_FF_EN.latchin CMOS3_1770 (
+	         zz_1413', RESET, AK3_17 ;;
+	         auto_divide_8[0]_divide_8.Sw1_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_auto_divide_8[0]_divide_8.Sw4_3_FF_EN.latchin CMOS3_1770 (
+	         zz_1356', RESET, AK3_17 ;;
+	         auto_divide_8[0]_divide_8.Sw4_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_zz_1951 CMOS3_1770 (T9[6:6]', T12[6:6], 
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0]' ;;
+	         zz_1951' ) ;
+	.call CMOS3_1770_Sw1_2_FF_EN.latchin CMOS3_1770 (zz_615', RESET, DN ;;
+	         Sw1_2_FF_EN.latchin' ) ;
+	.call CMOS3_1770_zz_584 CMOS3_1770 (
+	         auto_divide_8[0]_divide_8.T5[6:6]', T12[6:6], 
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0]' ;;
+	         zz_584' ) ;
+	.call CMOS3_1770_Sw4_2_FF_EN.latchin CMOS3_1770 (zz_672', RESET, DN ;;
+	         Sw4_2_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_17_FF_EN.latchin CMOS3_1770 (zz_602', RESET, DN ;;
+	         Sw3_17_FF_EN.latchin' ) ;
+	.call CMOS3_1770_auto_smultiply_8[0]_smultiply_8.Sw2_3_FF_EN.latchin CMOS3_1770 (
+	         zz_280', RESET, AK3_14 ;;
+	         auto_smultiply_8[0]_smultiply_8.Sw2_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_auto_smultiply_8[0]_smultiply_8.Sw1_3_FF_EN.latchin CMOS3_1770 (
+	         zz_288', RESET, AK3_14 ;;
+	         auto_smultiply_8[0]_smultiply_8.Sw1_3_FF_EN.latchin' ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T21[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[4:4], auto_add_8[0].ib1[4:4] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T21[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T39[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[7:7], auto_add_8[0].ib1[7:7] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T39[0:0] ) ;
+	.call CMOS3_2310_auto_smultiply_8[0]_smultiply_8.T3[0:0] CMOS3_2310 (
+	         T11[0:0], auto_smultiply_8[0]_smultiply_8.tmp[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.T3[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T27[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[5:5], auto_add_8[0].ib1[5:5] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T27[0:0] ) ;
+	.call CMOS3_2310_T12[1:1] CMOS3_2310 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T3[0:0], 
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0] ;;
+	         T12[1:1] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T9[0:0] CMOS3_2310 (
+	         T11[2:2], auto_subtract_8[0]_subtract_8.T1[2:2] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T9[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T39[0:0] CMOS3_2310 (
+	         T11[7:7], auto_subtract_8[0]_subtract_8.T1[7:7] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T39[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T21[0:0] CMOS3_2310 (
+	         T11[4:4], auto_subtract_8[0]_subtract_8.T1[4:4] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T21[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T3[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[1:1], auto_add_8[0].ib1[1:1] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T3[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T33[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[6:6], auto_add_8[0].ib1[6:6] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T33[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T15[0:0] CMOS3_2310 (
+	         T11[3:3], auto_subtract_8[0]_subtract_8.T1[3:3] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T15[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T15[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[3:3], auto_add_8[0].ib1[3:3] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T15[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T3[0:0] CMOS3_2310 (
+	         T11[1:1], auto_subtract_8[0]_subtract_8.T1[1:1] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T3[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T27[0:0] CMOS3_2310 (
+	         T11[5:5], auto_subtract_8[0]_subtract_8.T1[5:5] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T27[0:0] ) ;
+	.call CMOS3_2310_T12[0:0] CMOS3_2310 (T11[0:0], T7[0:0] ;;T12[0:0] ) ;
+	.call CMOS3_2310_auto_smultiply_8[0]_smultiply_8.T4[1:1] CMOS3_2310 (
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.count[1:1] ;;
+	         auto_smultiply_8[0]_smultiply_8.T4[1:1] ) ;
+	.call CMOS3_2310_auto_divide_8[0]_divide_8.T5[0:0] CMOS3_2310 (
+	         T12[0:0], auto_divide_8[0]_divide_8.tmp[0:0] ;;
+	         auto_divide_8[0]_divide_8.T5[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0].ob0[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[0:0], auto_add_8[0].ib1[0:0] ;;
+	         auto_add_8[0].ob0[0:0] ) ;
+	.call CMOS3_2310_auto_add_8[0]_add_8.add_8_1_add_8_1.T9[0:0] CMOS3_2310 (
+	         auto_add_8[0].ib0[2:2], auto_add_8[0].ib1[2:2] ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T9[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T33[0:0] CMOS3_2310 (
+	         T11[6:6], auto_subtract_8[0]_subtract_8.T1[6:6] ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T33[0:0] ) ;
+	.call CMOS3_2310_auto_subtract_8[0]_subtract_8.T1[1:1] CMOS3_2310 (
+	         T7[0:0], T7[1:1] ;;auto_subtract_8[0]_subtract_8.T1[1:1] ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[0:0]_in CMOS3_1810 (
+	         T8[0:0], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[0:0], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[0:0]_in ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[2:2]_in CMOS3_1810 (
+	         T8[2:2], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[2:2], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[2:2]_in ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[4:4]_in CMOS3_1810 (
+	         T8[4:4], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[4:4], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[4:4]_in ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[6:6]_in CMOS3_1810 (
+	         T8[6:6], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[6:6], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[6:6]_in ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[1:1] CMOS3_1810 (T5[1:1], RQ3_10, 
+	         T11[1:1], RQ3_12, T14[1:1], RQ3_15 ;;
+	         auto_add_8[0].ib0[1:1] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[3:3] CMOS3_1810 (T5[3:3], RQ3_10, 
+	         T11[3:3], RQ3_12, T14[3:3], RQ3_15 ;;
+	         auto_add_8[0].ib0[3:3] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[5:5] CMOS3_1810 (T5[5:5], RQ3_10, 
+	         T11[5:5], RQ3_12, T14[5:5], RQ3_15 ;;
+	         auto_add_8[0].ib0[5:5] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[7:7] CMOS3_1810 (T5[7:7], RQ3_10, 
+	         T11[7:7], RQ3_12, T14[7:7], RQ3_15 ;;
+	         auto_add_8[0].ib0[7:7] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[1:1] CMOS3_1810 (T6[1:1], RQ3_10, 
+	         T12[1:1], RQ3_12, T15[1:1], RQ3_15 ;;
+	         auto_add_8[0].ib1[1:1] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[3:3] CMOS3_1810 (T6[3:3], RQ3_10, 
+	         T12[3:3], RQ3_12, T15[3:3], RQ3_15 ;;
+	         auto_add_8[0].ib1[3:3] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[5:5] CMOS3_1810 (T6[5:5], RQ3_10, 
+	         T12[5:5], RQ3_12, T15[5:5], RQ3_15 ;;
+	         auto_add_8[0].ib1[5:5] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[7:7] CMOS3_1810 (T6[7:7], RQ3_10, 
+	         T12[7:7], RQ3_12, T15[7:7], RQ3_15 ;;
+	         auto_add_8[0].ib1[7:7] ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[1:1]_in CMOS3_1810 (
+	         T8[1:1], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[1:1], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[1:1]_in ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[3:3]_in CMOS3_1810 (
+	         T8[3:3], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[3:3], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[3:3]_in ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[5:5]_in CMOS3_1810 (
+	         T8[5:5], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[5:5], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[5:5]_in ) ;
+	.call CMOS3_1810_auto_smultiply_8[0]_smultiply_8.count[7:7]_in CMOS3_1810 (
+	         T8[7:7], auto_smultiply_8[0]_smultiply_8.RQ2_2, 
+	         auto_smultiply_8[0]_smultiply_8.T4[7:7], 
+	         auto_smultiply_8[0]_smultiply_8.LD2_3, 
+	         auto_smultiply_8[0]_smultiply_8.M1[7:7], 
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.count[7:7]_in ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[0:0] CMOS3_1810 (T5[0:0], RQ3_10, 
+	         T11[0:0], RQ3_12, T14[0:0], RQ3_15 ;;
+	         auto_add_8[0].ib0[0:0] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[2:2] CMOS3_1810 (T5[2:2], RQ3_10, 
+	         T11[2:2], RQ3_12, T14[2:2], RQ3_15 ;;
+	         auto_add_8[0].ib0[2:2] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[4:4] CMOS3_1810 (T5[4:4], RQ3_10, 
+	         T11[4:4], RQ3_12, T14[4:4], RQ3_15 ;;
+	         auto_add_8[0].ib0[4:4] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib0[6:6] CMOS3_1810 (T5[6:6], RQ3_10, 
+	         T11[6:6], RQ3_12, T14[6:6], RQ3_15 ;;
+	         auto_add_8[0].ib0[6:6] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[0:0] CMOS3_1810 (T6[0:0], RQ3_10, 
+	         T12[0:0], RQ3_12, T15[0:0], RQ3_15 ;;
+	         auto_add_8[0].ib1[0:0] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[2:2] CMOS3_1810 (T6[2:2], RQ3_10, 
+	         T12[2:2], RQ3_12, T15[2:2], RQ3_15 ;;
+	         auto_add_8[0].ib1[2:2] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[4:4] CMOS3_1810 (T6[4:4], RQ3_10, 
+	         T12[4:4], RQ3_12, T15[4:4], RQ3_15 ;;
+	         auto_add_8[0].ib1[4:4] ) ;
+	.call CMOS3_1810_auto_add_8[0].ib1[6:6] CMOS3_1810 (T6[6:6], RQ3_10, 
+	         T12[6:6], RQ3_12, T15[6:6], RQ3_15 ;;
+	         auto_add_8[0].ib1[6:6] ) ;
+	.call CMOS3_1740_auto_divide_8[0]_divide_8.T5[1:1] CMOS3_1740 (
+	         zz_1370, zz_1368, zz_1365, zz_1363 ;;
+	         auto_divide_8[0]_divide_8.T5[1:1] ) ;
+	.call CMOS3_1740_auto_divide_8[0]_divide_8.T5[3:3] CMOS3_1740 (
+	         zz_1327, zz_1325, zz_1322, zz_1320 ;;
+	         auto_divide_8[0]_divide_8.T5[3:3] ) ;
+	.call CMOS3_1740_auto_divide_8[0]_divide_8.T5[5:5] CMOS3_1740 (
+	         zz_1260, zz_1258, zz_1255, zz_1253 ;;
+	         auto_divide_8[0]_divide_8.T5[5:5] ) ;
+	.call CMOS3_1740_AK4_2 CMOS3_1740 (ready[0:0]', Lak4_2, EN4_2', 
+	         Sr4_2' ;;AK4_2' ) ;
+	.call CMOS3_1740_auto_divide_8[0]_divide_8.T5[2:2] CMOS3_1740 (zz_344, 
+	         zz_342, zz_339, zz_337 ;;auto_divide_8[0]_divide_8.T5[2:2] ) ;
+	.call CMOS3_1740_auto_divide_8[0]_divide_8.T5[4:4] CMOS3_1740 (zz_300, 
+	         zz_298, zz_295, zz_293 ;;auto_divide_8[0]_divide_8.T5[4:4] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[1:1] ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0] ) ;
+	.call CMOS3_1310_auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0] CMOS3_1310 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0]' ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.T3[8:8]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_2_T7[0:0]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[3:3] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.LD4_3 CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.LD4_3 ;;
+	         auto_divide_8[0]_divide_8.LD4_3' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[5:5] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_3_T1[0:0]' ) ;
+	.call CMOS3_1310_AK3_17 CMOS3_1310 (AK3_17' ;;AK3_17 ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[6:6]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_2_T1[0:0]' ) ;
+	.call CMOS3_1310_T12[5:5] CMOS3_1310 (T12[5:5] ;;T12[5:5]' ) ;
+	.call CMOS3_1310_auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0] CMOS3_1310 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0]' ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0] ) ;
+	.call CMOS3_1310_T12[3:3] CMOS3_1310 (T12[3:3] ;;T12[3:3]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.RQ1_3 CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.RQ1_3 ;;
+	         auto_smultiply_8[0]_smultiply_8.RQ1_3' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[4:4]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.RQ1_5 CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5 ;;
+	         auto_smultiply_8[0]_smultiply_8.RQ1_5' ) ;
+	.call CMOS3_1310_LBr3_3_e CMOS3_1310 (LBr3_3_e' ;;LBr3_3_e ) ;
+	.call CMOS3_1310_T12[1:1] CMOS3_1310 (T12[1:1] ;;T12[1:1]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_4_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[6:6]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.LBr1_3_e CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3_e' ;;
+	         auto_smultiply_8[0]_smultiply_8.LBr1_3_e ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[2:2]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_6_T3[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[4:4]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_6_T3[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[2:2] ) ;
+	.call CMOS3_1310_ready[0:0] CMOS3_1310 (ready[0:0]' ;;ready[0:0] ) ;
+	.call CMOS3_1310_EN3_4 CMOS3_1310 (EN3_4 ;;EN3_4' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[1:1] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[1:1] ;;
+	         auto_divide_8[0]_divide_8.T5[1:1]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_2_T7[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[6:6]_en' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.RQ2_2 CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2 ;;
+	         auto_smultiply_8[0]_smultiply_8.RQ2_2' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[3:3] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[3:3] ;;
+	         auto_divide_8[0]_divide_8.T5[3:3]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_5_T3[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0].EN CMOS3_1310 (
+	         auto_smultiply_8[0].EN' ;;auto_smultiply_8[0].EN ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_5_T3[0:0]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.EN4_2 CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.EN4_2 ;;
+	         auto_divide_8[0]_divide_8.EN4_2' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[4:4]_en' ) ;
+	.call CMOS3_1310_LBr1_2_e CMOS3_1310 (LBr1_2_e ;;LBr1_2_e' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_6_T1[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_2_T1[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[5:5] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[5:5] ;;
+	         auto_divide_8[0]_divide_8.T5[5:5]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.SL1_3 CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.SL1_3 ;;
+	         auto_divide_8[0]_divide_8.SL1_3' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[7:7] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[7:7]' ;;
+	         auto_divide_8[0]_divide_8.T5[7:7] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[2:2]_en' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en' ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[0:0]_en ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T20[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T1[0:0]' ;;
+	         auto_divide_8[0]_divide_8.T1[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_6_T7[0:0] ) ;
+	.call CMOS3_1310_auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0] CMOS3_1310 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0]' ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T2[0:0] ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2]' ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[2:2] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_5_T1[0:0] ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4]' ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[4:4] ) ;
+	.call CMOS3_1310_auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0] CMOS3_1310 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0]' ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0] ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6] ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[6:6]' ) ;
+	.call CMOS3_1310_RQ3_2 CMOS3_1310 (RQ3_2' ;;RQ3_2 ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.EN2_2 CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.EN2_2 ;;
+	         auto_smultiply_8[0]_smultiply_8.EN2_2' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_2_T3[0:0]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_2_T3[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.LD2_3 CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.LD2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.LD2_3 ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[7:7]_en' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[2:2] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[4:4] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_5_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[5:5]_en' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_T5[6:6] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[3:3]_en' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0]' ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_1_smultiply_8_1.d_5_T1[0:0] ) ;
+	.call CMOS3_1310_AK4_2 CMOS3_1310 (AK4_2' ;;AK4_2 ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en ;;
+	         auto_smultiply_8[0]_smultiply_8.tmp[1:1]_en' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[5:5]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_5_T7[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T4[3:3]' ) ;
+	.call CMOS3_1310_RESET CMOS3_1310 (RESET ;;RESET' ) ;
+	.call CMOS3_1310_auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0] CMOS3_1310 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0]' ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.RQ4_2 CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.RQ4_2 ;;
+	         auto_divide_8[0]_divide_8.RQ4_2' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_5_T7[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_2_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.RQ3_3 CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.RQ3_3 ;;
+	         auto_divide_8[0]_divide_8.RQ3_3' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_6_T1[0:0]' ) ;
+	.call CMOS3_1310_T12[6:6] CMOS3_1310 (T12[6:6] ;;T12[6:6]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.c_4_T1[0:0] ) ;
+	.call CMOS3_1310_T12[4:4] CMOS3_1310 (T12[4:4] ;;T12[4:4]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[5:5]' ) ;
+	.call CMOS3_1310_T12[2:2] CMOS3_1310 (T12[2:2] ;;T12[2:2]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.T5[8:8] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[3:3]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_3_T3[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_3_T3[0:0]' ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T14[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1] ;;
+	         auto_smultiply_8[0]_smultiply_8.smultiply_8_2_smultiply_8_2.c_T3[1:1]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_1_divide_8_1.d_3_T1[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.d_4_T7[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[2:2] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[2:2] ;;
+	         auto_divide_8[0]_divide_8.T5[2:2]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.LBr3_3_e CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.LBr3_3_e' ;;
+	         auto_divide_8[0]_divide_8.LBr3_3_e ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T26[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[4:4] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[4:4] ;;
+	         auto_divide_8[0]_divide_8.T5[4:4]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.LBr1_3_e CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.LBr1_3_e' ;;
+	         auto_divide_8[0]_divide_8.LBr1_3_e ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_3_divide_8_3.c_4_T7[0:0]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.T5[6:6] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.T5[6:6]' ;;
+	         auto_divide_8[0]_divide_8.T5[6:6] ) ;
+	.call CMOS3_1310_auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0] CMOS3_1310 (
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0]' ;;
+	         auto_add_8[0]_add_8.add_8_1_add_8_1.T8[0:0] ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0] ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.c_4_T3[0:0]' ) ;
+	.call CMOS3_1310_auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0] CMOS3_1310 (
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0]' ;;
+	         auto_divide_8[0]_divide_8.divide_8_2_divide_8_2.d_4_T3[0:0] ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0]' ;;
+	         auto_subtract_8[0]_subtract_8.auto_add_8[0]_add_8.add_8_1_add_8_1.T32[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.AK2_3 CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.AK2_3' ;;
+	         auto_smultiply_8[0]_smultiply_8.AK2_3 ) ;
+	.call CMOS3_1310_auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5] CMOS3_1310 (
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5] ;;
+	         auto_subtract_8[0]_subtract_8.subtract_8_1_subtract_8_1.c_T1[5:5]' ) ;
+	.call CMOS3_1310_auto_smultiply_8[0]_smultiply_8.T1[0:0] CMOS3_1310 (
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0]' ;;
+	         auto_smultiply_8[0]_smultiply_8.T1[0:0] ) ;
+
+.endmodel tseng ;
+

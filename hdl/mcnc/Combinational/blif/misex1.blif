@@ -1,0 +1,43 @@
+.model source.pla
+.inputs dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip page rmwB
+.outputs dmnst3B dmnst2B dmnst1B dmnst0B adctlp2B adctlp1B adctlp0B
+.names dmpst3 dmpst2 dmpst1 dmpst0 dmnst3B
+0111 1
+1010 1
+.names dmpst3 dmpst2 dmpst1 dmpst0 yskip page dmnst2B
+010--- 1
+0011-- 1
+1001-- 1
+001-1- 1
+0-00-1 1
+.names dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip page dmnst1B
+01-1--- 1
+1001--- 1
+010-1-- 1
+0010-0- 1
+0000--0 1
+.names dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip rmwB dmnst0B
+1010--- 1
+-010-0- 1
+010---0 1
+01000-- 1
+.names dmpst3 dmpst2 dmpst1 dmpst0 adctlp2B
+010- 1
+0-11 1
+-010 1
+0-00 1
+1001 1
+.names dmpst3 dmpst2 dmpst1 dmpst0 yskip page adctlp1B
+010--- 1
+0-11-- 1
+1001-- 1
+1010-- 1
+001-1- 1
+0-00-1 1
+.names dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip adctlp0B
+01-1-- 1
+1001-- 1
+1010-- 1
+010-0- 1
+-010-0 1
+.end

@@ -1,0 +1,21 @@
+
+.model CM151 ;
+
+	.date 910103085115 ;	# January 3 1991, 08:51.15
+
+	.inputs  a b c d e f g h i j k l ;
+	.outputs m n ;
+	.net n m' ;
+
+	b0 = y' z' + k z' + k' y' ;
+	t = a' i' + b' i + a' b' ;
+	u = c' i' + d' i + c' d' ;
+	v = e' i' + f' i + e' f' ;
+	w = g' i' + h' i + g' h' ;
+	y = t' u' + j u' + j' t' ;
+	z = v' w' + j w' + j' v' ;
+	n = ( b0' l' )' ;
+
+
+.endmodel CM151 ;
+

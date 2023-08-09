@@ -1,0 +1,15 @@
+.model source.pla
+.inputs f b c d a h g
+.outputs f0 f1
+.names f b c d a h f0
+-1--1- 1
+1-11-- 1
+-001-- 1
+01---1 1
+.names f b d a g f1
+1--0- 1
+-0-0- 1
+0---0 1
+100-- 1
+01-1- 1
+.end

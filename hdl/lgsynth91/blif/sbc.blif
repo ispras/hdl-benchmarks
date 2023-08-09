@@ -1,0 +1,2267 @@
+## inputs 40
+## outputs 56
+## latches 28
+## initial 0000000000000000000000000000
+
+
+.model sbc
+.inputs ACKl BUS_Inactive GRANTi LastRQSTi SBCResetPCC PCCReq PCCReqCode0 PCCReqCode1 PCCReqCode2 PCCReqCode3 
+.inputs PCCConfirm RQSTi SingleStep STARTi TM0i TM1i VACKl VTM0i VSACKi ACKi 
+.inputs RESETi SlotSpace_Id_Match PCCSawReset CoherencyState1i CoherencyState2i NuBusActive PCCAck PCCsync STARTo Tag_Match 
+.inputs TM1l VTM0l VTM1l PCCAckCode VACKi physrecXXXXstate0 physrecXXXXstate1 wdcntXXXXstate1 wdcntXXXXstate2 wdcntXXXXstate3 
+
+.outputs physrecXXXXNextState0 physrecXXXXNextState1 wdcntXXXXNextState1 wdcntXXXXNextState2 wdcntXXXXNextState3 masterXXXXArb_active masterXXXXEn_ABufo masterXXXXEn_PDBufi masterXXXXL_PDBufi masterXXXXEn_VDBufi 
+.outputs masterXXXXEn_PDBufo masterXXXXL_DBufo_if_TM0 masterXXXXRQSTo masterXXXXSBC_WriteCache nubusXXXXNuBusActive nubusXXXXL_PABufi resetXXXXSBCResetPCC resetXXXXReset slaveXXXXL_VABufi slaveXXXXSBCReq 
+.outputs slaveXXXXSBCReqCode0 slaveXXXXSBCReqCode1 slaveXXXXSBCReqCode2 slaveXXXXSnoopAddrFromProc slaveXXXXSnoopVTag_W slaveXXXXSnoopState_W slaveXXXXGenerateNextState slaveXXXXSnoopVTagState_R virmachXXXXEn_VDBufo virmachXXXXSBCsetDirty 
+.outputs virmachXXXXSBCCacheRelease virmachXXXXSBCConfigure wdcntXXXXwd_cnt0 wdcntXXXXwd_cnt1 wdcntXXXXwd_cnt2 encodemuxXXXXMX_AD_8 nextstateXXXXCoherencyState2o orXXXXACKo orXXXXEn_CNTL orXXXXRESETo 
+.outputs orXXXXTM0o orXXXXTM1o orXXXXEn_START orXXXXSBCAck orXXXXSBCAckCodelatch orXXXXSBCAckCode0 orXXXXSBCAckCode1 orXXXXSBCAckCode2 orXXXXSBCAckCode3 orXXXXSTARTo 
+.outputs orXXXXEn_VCNTL orXXXXVSACKo orXXXXVACKo orXXXXVTM0o orXXXXVTM1o orXXXXL_DBufo 
+.latch masterXXXXNextState0 masterXXXXstate0  0
+.latch masterXXXXNextState1 masterXXXXstate1  0
+.latch masterXXXXNextState2 masterXXXXstate2  0
+.latch masterXXXXNextState3 masterXXXXstate3  0
+.latch nubusXXXXNextState0 nubusXXXXstate0  0
+.latch nubusXXXXNextState1 nubusXXXXstate1  0
+.latch slaveXXXXNextState0 slaveXXXXstate0  0
+.latch slaveXXXXNextState1 slaveXXXXstate1  0
+.latch slaveXXXXNextState2 slaveXXXXstate2  0
+.latch resetXXXXNextState0 resetXXXXstate0  0
+.latch resetXXXXNextState1 resetXXXXstate1  0
+.latch resetXXXXNextState2 resetXXXXstate2  0
+.latch virmachXXXXNextState0 virmachXXXXstate0  0
+.latch virmachXXXXNextState1 virmachXXXXstate1  0
+.latch wdcntXXXXNextState0 wdcntXXXXstate0  0
+.latch orXXXXGen_Reset Gen_Reset  0
+.latch nubusXXXXIntr_req Intr_req  0
+.latch slaveXXXXIntr_done Intr_done  0
+.latch masterXXXXUpdateReq UpdateReq  0
+.latch slaveXXXXUpdateDone UpdateDone  0
+.latch orXXXXReset_wd_cnt_x Reset_wd_cnt  0
+.latch orXXXXSet_ex_wd_cnt1 Set_ex_wd_cnt1  0
+.latch orXXXXIncr_wd_cnt Incr_wd_cnt  0
+.latch wdcntXXXXwd_cnt_test wd_cnt_test  0
+.latch masterXXXXP_receive_begin P_receive_begin  0
+.latch masterXXXXP_receive_cancel P_receive_cancel  0
+.latch masterXXXXV_receive_begin V_receive_begin  0
+.latch slaveXXXXV_transmit_begin V_transmit_begin  0
+
+
+.names  {masterXXXXNextState3} masterXXXXNextState3
+1 1
+.names  {masterXXXXNextState2} masterXXXXNextState2
+1 1
+.names  {masterXXXXNextState1} masterXXXXNextState1
+1 1
+.names  {masterXXXXNextState0} masterXXXXNextState0
+1 1
+.names  [14529] masterXXXXArb_active
+1 1
+.names  [14535] masterXXXXEn_ABufo
+1 1
+.names  [10703]_inv* masterXXXXEn_PDBufi
+1 1
+.names  [10703]_inv* masterXXXXL_PDBufi
+1 1
+.names  [14902]* masterXXXXEn_VDBufi
+1 1
+.names  [15247] masterXXXXEn_PDBufo
+1 1
+.names  [15247] masterXXXXL_DBufo_if_TM0
+1 1
+.names  [14443] masterXXXXP_receive_begin
+1 1
+.names  [15017] masterXXXXP_receive_cancel
+1 1
+.names  [14531] masterXXXXRQSTo
+1 1
+.names  {masterXXXXUpdateReq} masterXXXXUpdateReq
+1 1
+.names  [15017] masterXXXXV_receive_begin
+1 1
+.names  {masterXXXXSBC_WriteCache} masterXXXXSBC_WriteCache
+1 1
+.names  {nubusXXXXNextState1} nubusXXXXNextState1
+1 1
+.names  {nubusXXXXNextState0} nubusXXXXNextState0
+1 1
+.names  {nubusXXXXNuBusActive} nubusXXXXNuBusActive
+1 1
+.names  {nubusXXXXL_PABufi} nubusXXXXL_PABufi
+1 1
+.names  [14883] nubusXXXXIntr_req
+1 1
+.names  {physrecXXXXNextState1} physrecXXXXNextState1
+1 1
+.names  [14928] physrecXXXXNextState0
+1 1
+.names  {resetXXXXNextState2} resetXXXXNextState2
+1 1
+.names  {resetXXXXNextState1} resetXXXXNextState1
+1 1
+.names  [14976] resetXXXXNextState0
+1 1
+.names  {resetXXXXSBCResetPCC} resetXXXXSBCResetPCC
+1 1
+.names  [15676] resetXXXXReset
+1 1
+.names  {slaveXXXXNextState2} slaveXXXXNextState2
+1 1
+.names  {slaveXXXXNextState1} slaveXXXXNextState1
+1 1
+.names  {slaveXXXXNextState0} slaveXXXXNextState0
+1 1
+.names  [15190] slaveXXXXIntr_done
+1 1
+.names  {slaveXXXXL_VABufi} slaveXXXXL_VABufi
+1 1
+.names  {slaveXXXXSBCReq} slaveXXXXSBCReq
+1 1
+.names  {slaveXXXXSBCReqCode0} slaveXXXXSBCReqCode0
+1 1
+.names  {slaveXXXXSBCReqCode1} slaveXXXXSBCReqCode1
+1 1
+.names  [14654] slaveXXXXSBCReqCode2
+1 1
+.names  [14681] slaveXXXXUpdateDone
+1 1
+.names  [14852] slaveXXXXV_transmit_begin
+1 1
+.names  [14681] slaveXXXXSnoopAddrFromProc
+1 1
+.names  [14681] slaveXXXXSnoopVTag_W
+1 1
+.names  {slaveXXXXSnoopState_W} slaveXXXXSnoopState_W
+1 1
+.names  [14676]* slaveXXXXGenerateNextState
+1 1
+.names  [14764] slaveXXXXSnoopVTagState_R
+1 1
+.names  {virmachXXXXNextState1} virmachXXXXNextState1
+1 1
+.names  {virmachXXXXNextState0} virmachXXXXNextState0
+1 1
+.names  [15452] virmachXXXXEn_VDBufo
+1 1
+.names  [15228] virmachXXXXSBCsetDirty
+1 1
+.names  [15169] virmachXXXXSBCCacheRelease
+1 1
+.names  {virmachXXXXSBCConfigure} virmachXXXXSBCConfigure
+1 1
+.names  [14984]* wdcntXXXXNextState3
+1 1
+.names  [14797]* wdcntXXXXNextState2
+1 1
+.names  [14857]* wdcntXXXXNextState1
+1 1
+.names  [15030]* wdcntXXXXNextState0
+1 1
+.names  [14984]* wdcntXXXXwd_cnt0
+1 1
+.names  [14797]* wdcntXXXXwd_cnt1
+1 1
+.names  [14857]* wdcntXXXXwd_cnt2
+1 1
+.names  {wdcntXXXXwd_cnt_test} wdcntXXXXwd_cnt_test
+1 1
+.names  [15198] encodemuxXXXXMX_AD_8
+1 1
+.names  [15334] nextstateXXXXCoherencyState2o
+1 1
+.names  {orXXXXACKo} orXXXXACKo
+1 1
+.names  {orXXXXEn_CNTL} orXXXXEn_CNTL
+1 1
+.names  {orXXXXRESETo} orXXXXRESETo
+1 1
+.names  [14862]* orXXXXTM0o
+1 1
+.names  {orXXXXTM1o} orXXXXTM1o
+1 1
+.names  {orXXXXEn_START} orXXXXEn_START
+1 1
+.names  [14627]* orXXXXGen_Reset
+1 1
+.names  {orXXXXIncr_wd_cnt} orXXXXIncr_wd_cnt
+1 1
+.names  {orXXXXSBCAck} orXXXXSBCAck
+1 1
+.names  {orXXXXSBCAckCodelatch} orXXXXSBCAckCodelatch
+1 1
+.names  {orXXXXSBCAckCode0} orXXXXSBCAckCode0
+1 1
+.names  {orXXXXSBCAckCode1} orXXXXSBCAckCode1
+1 1
+.names  {orXXXXSBCAckCode2} orXXXXSBCAckCode2
+1 1
+.names  {orXXXXSBCAckCode3} orXXXXSBCAckCode3
+1 1
+.names  [14567] orXXXXSTARTo
+1 1
+.names  {orXXXXEn_VCNTL} orXXXXEn_VCNTL
+1 1
+.names  {orXXXXVSACKo} orXXXXVSACKo
+1 1
+.names  {orXXXXVACKo} orXXXXVACKo
+1 1
+.names  {orXXXXVTM0o} orXXXXVTM0o
+1 1
+.names  [14417] orXXXXVTM1o
+1 1
+.names  {orXXXXReset_wd_cnt_x} orXXXXReset_wd_cnt_x
+1 1
+.names  [14467] orXXXXSet_ex_wd_cnt1
+1 1
+.names  {orXXXXL_DBufo} orXXXXL_DBufo
+1 1
+.names  [14698]* [14387]* {orXXXXVSACKo}
+1- 1
+-1 1
+.names  [14757] [14505] masterXXXXVSACKo {masterXXXXUpdateReq}
+1-- 1
+-1- 1
+--1 1
+.names  I88 [14421]* {orXXXXTM1o}
+1- 1
+-1 1
+.names  PCCReqCode2 [10483]_inv* I88
+11 1
+.names  [15184] [14852] [15159] masterXXXXVSACKo {orXXXXVTM0o}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  I91 [14411]* {masterXXXXNextState1}
+1- 1
+-1 1
+.names  [10089] [10889]_inv* I91
+11 1
+.names  [15192]* masterXXXXVSACKo* [15159]* [14764]* [14387]
+1111 1
+.names  PCCReqCode1 [14443] [14417]
+11 1
+.names  [14443]* [10458]_inv masterXXXXVSACKo
+1- 1
+-1 1
+.names  [14441] [14450] [15159] [14952] {orXXXXL_DBufo}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  [14450] [14862]* [14421]
+11 1
+.names  [14902] [14448]* [14411]
+11 1
+.names  [10483]_inv* [15614] [10458]_inv
+1- 1
+-1 1
+.names  PCCReqCode0 [14512]* [14443]
+11 1
+.names  [10483]_inv [10126]* [14467]
+11 1
+.names  PCCReqCode0* [14505]* [14450]
+11 1
+.names  [15017] [15011] [14512] [14496] {orXXXXReset_wd_cnt_x}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  PCCReqCode2* [14496]* [14441]
+11 1
+.names  [14478]* I105 {slaveXXXXNextState1}
+1- 1
+-1 1
+.names  [10696]_inv* RESETi* I105
+11 1
+.names  [14488]* SBCResetPCC* [14448]
+11 1
+.names  I109 I108 {masterXXXXNextState3}
+1- 1
+-1 1
+.names  [14409]* SBCResetPCC* I108
+11 1
+.names  [14490]* [10889]_inv* I109
+11 1
+.names  [14769]* [14419]* {masterXXXXNextState2}
+1- 1
+-1 1
+.names  [10493] [10492] {orXXXXSBCAckCode2}
+1- 1
+-1 1
+.names  [14911] [14469] {orXXXXSBCAckCode0}
+1- 1
+-1 1
+.names  [14911] [14494] masterXXXXACKo [2836] {orXXXXSBCAck}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  [10507]_inv [15697]* [14496]
+11 1
+.names  [10507]_inv [15550]* [14505]
+11 1
+.names  [10507]_inv* PCCReqCode2* [14512]
+11 1
+.names  [15219] masterXXXXACKo {orXXXXACKo}
+1- 1
+-1 1
+.names  [15336] [14469] [15041] [2836] {orXXXXSBCAckCodelatch}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  [15105]* [14757]* [14492]* [14419]
+111 1
+.names  slaveXXXXstate1* [1] [14478]
+11 1
+.names  [14959]* [14751]* [14480]* [10580]* [14409]
+1111 1
+.names  [14595]* SBCResetPCC* [14529]
+11 1
+.names  [14521]* [14959]* [14726]* [14488]
+111 1
+.names  [10507]_inv PCCReqCode1 [10483]_inv
+1- 1
+-1 1
+.names  [14484]* I126 {slaveXXXXNextState2}
+1- 1
+-1 1
+.names  [14571]* RESETi* I126
+11 1
+.names  [15046]* I128 {orXXXXEn_START}
+1- 1
+-1 1
+.names  [14525]* SBCResetPCC* I128
+11 1
+.names  I131 I130 {slaveXXXXNextState0}
+1- 1
+-1 1
+.names  [10944]_inv* [10682]_inv* I130
+11 1
+.names  [15553] [14539]* I131
+11 1
+.names  [14593]* SBCResetPCC* [14531]
+11 1
+.names  [14688]* SBCResetPCC* [10749]_inv* [14535]
+111 1
+.names  [15302]* [10533]* [14525]
+11 1
+.names  [14508]* SBCResetPCC* [14469]
+11 1
+.names  [14603]* [10822]_inv* [14521]
+11 1
+.names  [10937]_inv [14688] [10894]_inv [10507]_inv
+1-- 1
+-1- 1
+--1 1
+.names  I140 I139 [10492]
+1- 1
+-1 1
+.names  [14503]* SBCResetPCC* I139
+11 1
+.names  [15604] resetXXXXstate1* I140
+11 1
+.names  [10525] [15192] [14523] {orXXXXEn_VCNTL}
+1-- 1
+-1- 1
+--1 1
+.names  [15041]* [10506]_inv masterXXXXACKo
+1- 1
+-1 1
+.names  [14533]* SBCResetPCC* [14492]
+11 1
+.names  [14537]* [10339]* [1]
+1- 1
+-1 1
+.names  [14693]* [15223]* [14993]* [14593]
+111 1
+.names  [14617]* [10591]* [14490]
+11 1
+.names  [10632] [15247] [14541] {masterXXXXNextState0}
+1-- 1
+-1- 1
+--1 1
+.names  [14860]* [14543]* [14484]
+11 1
+.names  [14517]* RQSTi* [14480]
+11 1
+.names  slaveXXXXstate2 [13378]_inv* [14539]
+11 1
+.names  [14693]* [15235]* [14959]* [14595]
+111 1
+.names  [14676]* [14681] {slaveXXXXSnoopState_W}
+1- 1
+-1 1
+.names  SBCResetPCC* [14723] [10506]_inv
+1- 1
+-1 1
+.names  masterXXXXstate3 [14666]* [14617]
+11 1
+.names  [14676]* [14654] {slaveXXXXSBCReq}
+1- 1
+-1 1
+.names  [14668]* SBCResetPCC* [10749]_inv* [14523]
+111 1
+.names  [14723]* [14917]* [2838]* [14508]
+111 1
+.names  [14711]* VSACKi* [14603]
+11 1
+.names  SBCResetPCC [10296]* [14541]
+11 1
+.names  [14802]* [2838]* [14717]* [14640]* [14503]
+1111 1
+.names  [10882]_inv [3] [14688]
+11 1
+.names  I164 I163 [10591]
+1- 1
+-1 1
+.names  [14659]* LastRQSTi* I163
+11 1
+.names  [15545] ACKl* I164
+11 1
+.names  [14627]* [15276] [14972] {orXXXXRESETo}
+1-- 1
+-1- 1
+--1 1
+.names  [14709]* I167 [10525]
+1- 1
+-1 1
+.names  [15148]* [10817]_inv* I167
+11 1
+.names  [14627]* [15604] {orXXXXSBCAckCode3}
+1- 1
+-1 1
+.names  [15553] [10375] slaveXXXXstate1* [14543]
+111 1
+.names  [14760]* [14585]* [14533]
+11 1
+.names  I173 I172 {orXXXXEn_CNTL}
+1- 1
+-1 1
+.names  [14661]* SBCResetPCC* I172
+11 1
+.names  [10559]_inv* RESETi* I173
+11 1
+.names  [14575]* [10586]* [14517]
+11 1
+.names  [14674] RESETi [15280] [14634] {slaveXXXXL_VABufi}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  I177 [10061] [13378]_inv
+1- 1
+-1 1
+.names  slaveXXXXstate1 VSACKi I177
+11 1
+.names  [14661]* I179 [10533]
+1- 1
+-1 1
+.names  [14830]* LastRQSTi* I179
+11 1
+.names  [14909]* [10878]_inv* [14757]
+11 1
+.names  [14902] [10511]_inv {masterXXXXSBC_WriteCache}
+1- 1
+-1 1
+.names  [14619]* [10937]_inv* [14567]
+11 1
+.names  slaveXXXXstate2 [15553] [10061] [14537]
+111 1
+.names  [14846]* [10924]_inv* [14693]
+11 1
+.names  [14547]* SBCResetPCC* [14494]
+11 1
+.names  I188 I187 {orXXXXSBCAckCode1}
+1- 1
+-1 1
+.names  [14816] TM0i* I187
+11 1
+.names  [10190] [10935]_inv* I188
+11 1
+.names  [15137]* [14823]* [14668]
+11 1
+.names  [15304]* [14767]* [14698]
+11 1
+.names  I193 I192 {slaveXXXXSBCReqCode0}
+1- 1
+-1 1
+.names  VTM1l [14852] I192
+11 1
+.names  [15529] [10624]_inv* I193
+11 1
+.names  [15232]* [10643]_inv* [14723]
+11 1
+.names  [14823]* [15396]* [3]
+1- 1
+-1 1
+.names  PCCReqCode0 [14897] [14717]
+11 1
+.names  masterXXXXstate2 [14871]* [14711]
+11 1
+.names  I199 [14808]* {virmachXXXXNextState0}
+1- 1
+-1 1
+.names  PCCAck [10866]_inv* I199
+11 1
+.names  I201 [1048] [2838]
+1- 1
+-1 1
+.names  masterXXXXstate3 [14897] I201
+11 1
+.names  RESETi* [10688]_inv {nubusXXXXL_PABufi}
+1- 1
+-1 1
+.names  [15052] [15604] [14816] [2836]
+1-- 1
+-1- 1
+--1 1
+.names  [15452]* [14852]* [14709]
+11 1
+.names  [10653]* [15039]* [14966]* [14661]
+111 1
+.names  I208 I207 {slaveXXXXSBCReqCode1}
+1- 1
+-1 1
+.names  [15357] [10750]_inv* I207
+11 1
+.names  [15529] [10624]_inv* I208
+11 1
+.names  [15379]* [15338]* [15396]* [14924]* [14666]
+1111 1
+.names  I211 [15219] {nubusXXXXNextState1}
+1- 1
+-1 1
+.names  [10662]_inv* ACKi* I211
+11 1
+.names  PCCConfirm [15344]* [10643]_inv* [14640]
+111 1
+.names  I215 I214 [10296]
+1- 1
+-1 1
+.names  [14781]* [10823]_inv* I214
+11 1
+.names  [15223] STARTi* I215
+11 1
+.names  [15545]* [14771]* [14659]
+11 1
+.names  [14852]* [14804]* [14676]
+11 1
+.names  I220 I219 [10632]
+1- 1
+-1 1
+.names  [14733]* [10889]_inv* I219
+11 1
+.names  [14730] [10937]_inv* I220
+11 1
+.names  I223 I222 [10493]
+1- 1
+-1 1
+.names  [14747]* [10935]_inv* I222
+11 1
+.names  [15538] [14816] I223
+11 1
+.names  [14821]* masterXXXXstate1* [10882]_inv* [14575]
+111 1
+.names  [15054] [14737] [15159] [15066] {orXXXXIncr_wd_cnt}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  [14982]* [1048]* [14917]* [14897]* [14547]
+1111 1
+.names  [15030]* [10686]_inv* {wdcntXXXXwd_cnt_test}
+1- 1
+-1 1
+.names  I229 [10817]_inv [10703]_inv
+1- 1
+-1 1
+.names  [15109]* [14944]* I229
+11 1
+.names  I232 I231 [10375]
+1- 1
+-1 1
+.names  PCCsync* slaveXXXXstate2* I231
+11 1
+.names  [14963]* slaveXXXXstate2 I232
+11 1
+.names  [14879]* [2] [14627]
+11 1
+.names  I236 I235 [10061]
+1- 1
+-1 1
+.names  [14963]* slaveXXXXstate1* I235
+11 1
+.names  [15510]* [10944]_inv* I236
+11 1
+.names  [15707] [10335] [10696]_inv
+1- 1
+-1 1
+.names  [15021]* [14730]* [14619]
+11 1
+.names  [15452] [14952] {virmachXXXXSBCConfigure}
+1- 1
+-1 1
+.names  [15489]* [10718]* [14571]
+11 1
+.names  [15545]* [14922]* [14846]
+11 1
+.names  slaveXXXXstate2 [14900]* Intr_req* [10934]_inv* [14634]
+1111 1
+.names  UpdateReq [15707] [14942]* RESETi* [14681]
+1111 1
+.names  [10889]_inv [8] [14902]
+11 1
+.names  UpdateDone [9] [14909]
+11 1
+.names  [10544]_inv* [4] [14726]
+11 1
+.names  [10889]_inv [6] [14769]
+11 1
+.names  [14980]* physrecXXXXstate0* [14830]
+11 1
+.names  [14838]* masterXXXXstate2* [10882]_inv* [14585]
+111 1
+.names  slaveXXXXstate2 [14950]* [10907]_inv* [14654]
+111 1
+.names  [10945]_inv* [10] [14928]
+11 1
+.names  [15169] [15041] {orXXXXVACKo}
+1- 1
+-1 1
+.names  [15021]* SingleStep [10643]_inv
+1- 1
+-1 1
+.names  Intr_done* [10327] [10688]_inv
+1- 1
+-1 1
+.names  TM1l* [10750]_inv [10624]_inv
+1- 1
+-1 1
+.names  [15079]* ACKl* [14924]
+11 1
+.names  [15085]* [13] [14984]
+11 1
+.names  [15120]* [10750]_inv* [14804]
+11 1
+.names  [10918]_inv* [10685]_inv* [14802]
+11 1
+.names  [15143] [15035]* [10932]_inv* [14751]
+111 1
+.names  [15133]* [15003]* [14797]
+11 1
+.names  GRANTi [14940]* [14781]
+11 1
+.names  ACKl [14955]* [14771]
+11 1
+.names  [10888]_inv* [10307] [10662]_inv
+1- 1
+-1 1
+.names  [10821]_inv* [12] [14966]
+11 1
+.names  [10685]_inv* SBCResetPCC* [14816]
+11 1
+.names  [15120]* [5] [14767]
+11 1
+.names  PCCConfirm [15021] [14823]
+11 1
+.names  BUS_Inactive [15232] [15465]* SingleStep* [14871]
+1111 1
+.names  [15159]* [14987]* [14808]
+11 1
+.names  [15655] [10750]_inv* [14852]
+11 1
+.names  I273 [14987] {virmachXXXXNextState1}
+1- 1
+-1 1
+.names  [10866]_inv* PCCAck* I273
+11 1
+.names  [15247]* [15109]* [6]
+1- 1
+-1 1
+.names  I276 [14990] {nubusXXXXNextState0}
+1- 1
+-1 1
+.names  [10863]_inv* TM1i* I276
+11 1
+.names  [15362]* [15382]* [10089]* [10640]* [14733]
+1111 1
+.names  I280 I279 [10339]
+1- 1
+-1 1
+.names  [10907]_inv* [10933]_inv* I279
+11 1
+.names  [14997]* RESETi* I280
+11 1
+.names  I282 [10573]_inv* [10580]
+1- 1
+-1 1
+.names  masterXXXXstate1 [10928]_inv* I282
+11 1
+.names  I285 I284 [10335]
+1- 1
+-1 1
+.names  [15327]* [10921]_inv* I284
+11 1
+.names  slaveXXXXstate2 [15367]* I285
+11 1
+.names  I288 I287 {physrecXXXXNextState1}
+1- 1
+-1 1
+.names  [15081]* [10945]_inv* I287
+11 1
+.names  [15582] [10845]_inv* I288
+11 1
+.names  PCCReq [15614]* [15643]* [15091]* [14821]
+1111 1
+.names  [15240] [14990] {nubusXXXXNuBusActive}
+1- 1
+-1 1
+.names  I292 [15676] {resetXXXXNextState1}
+1- 1
+-1 1
+.names  [15129]* PCCSawReset* I292
+11 1
+.names  Tag_Match [15089]* [14963]
+11 1
+.names  I296 I295 [10190]
+1- 1
+-1 1
+.names  [15349]* TM0i* I295
+11 1
+.names  physrecXXXXstate1 [15050]* I296
+11 1
+.names  STARTi [15215]* [10907]_inv* [14860]
+111 1
+.names  I300 I299 [1048]
+1- 1
+-1 1
+.names  [10658]_inv* [10657]_inv* I299
+11 1
+.names  PCCReqCode1 [10748]_inv* I300
+11 1
+.names  masterXXXXstate2 [15068]* [10822]_inv* [14760]
+111 1
+.names  [14970]* masterXXXXstate1* [14838]
+11 1
+.names  I305 I304 [10586]
+1- 1
+-1 1
+.names  [15176]* [10924]_inv* I304
+11 1
+.names  [10928]_inv* masterXXXXstate0* I305
+11 1
+.names  [15442]* [15064]* [14857]
+11 1
+.names  [15219]* [15041]* [14862]
+11 1
+.names  [10748]_inv* SBCResetPCC* [14879]
+11 1
+.names  [15512]* [10657]_inv* RQSTi* PCCReqCode3* [14730]
+1111 1
+.names  [15141]* [10912]_inv* [10888]_inv* [14883]
+111 1
+.names  PCCReqCode2 [10748]_inv* [14897]
+11 1
+.names  [10422]* [7] [14900]
+11 1
+.names  [15017]* [15382]* [8]
+1- 1
+-1 1
+.names  [15037]* masterXXXXstate2* [9]
+1- 1
+-1 1
+.names  [10924]_inv* [15074]* [4]
+1- 1
+-1 1
+.names  [15074]* RQSTi* [14922]
+11 1
+.names  [14911]* [15465]* [2]
+1- 1
+-1 1
+.names  [14915]* [10877]_inv* [14764]
+11 1
+.names  [15577]* [15097]* [14942]
+11 1
+.names  [15123]* ACKl* [14944]
+11 1
+.names  I323 I322 [10718]
+1- 1
+-1 1
+.names  [15577] [15206]* I322
+11 1
+.names  [15707] [10363] I323
+11 1
+.names  [10908]_inv [11] [14950]
+11 1
+.names  PCCReqCode0 [10748]_inv* [14917]
+11 1
+.names  wd_cnt_test [15135]* [14980]
+11 1
+.names  [15143]* [10823]_inv* [14993]
+11 1
+.names  PCCAck* [15192]* [14952]
+11 1
+.names  VTM0i [15026]* SBCResetPCC* [14737]
+111 1
+.names  [15508]* [15] [15030]
+11 1
+.names  ACKi [14946]* slaveXXXXstate0* [14674]
+111 1
+.names  [15182]* [10497]* [14747]
+11 1
+.names  BUS_Inactive* [15235]* [15039]
+11 1
+.names  [15655] [10819]_inv* [5]
+1- 1
+-1 1
+.names  PCCConfirm [15344] [10816]_inv* [14940]
+111 1
+.names  Incr_wd_cnt [15418] wdcntXXXXstate2* [15003]
+111 1
+.names  [15452] wd_cnt_test* [15159]
+11 1
+.names  [15439] [15349]* [10]
+1- 1
+-1 1
+.names  I341 I340 [10640]
+1- 1
+-1 1
+.names  [15300]* [10928]_inv* I340
+11 1
+.names  masterXXXXstate3 [15379] I341
+11 1
+.names  BUS_Inactive [15566] [10822]_inv* [15021]
+111 1
+.names  [15290]* [15566]* [15393]* [14955]
+111 1
+.names  wd_cnt_test [15452] [15169]
+11 1
+.names  [15452] PCCAckCode* [15184]
+11 1
+.names  [15418] [15288]* [15085]
+11 1
+.names  I348 [10943]_inv [10685]_inv
+1- 1
+-1 1
+.names  [15545]* [15393]* I348
+11 1
+.names  [10882]_inv masterXXXXstate1 [15329] [10929]_inv [10573]_inv
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  [15247] [15674]* [15066]
+11 1
+.names  [15637]* [15319]* [15079]
+11 1
+.names  [15329]* [15444]* [12]
+1- 1
+-1 1
+.names  I354 [15676] {resetXXXXNextState2}
+1- 1
+-1 1
+.names  RESETi [15407]* I354
+11 1
+.names  PCCReqCode3* [10813]_inv [10748]_inv
+1- 1
+-1 1
+.names  I357 [10894]_inv [10544]_inv
+1- 1
+-1 1
+.names  [15465]* RQSTi* I357
+11 1
+.names  masterXXXXstate3* [10813]_inv [10657]_inv
+1- 1
+-1 1
+.names  [10817]_inv* [15362] [10511]_inv
+1- 1
+-1 1
+.names  I361 [10912]_inv [10559]_inv
+1- 1
+-1 1
+.names  [15670]* [15377]* I361
+11 1
+.names  I364 I363 [10653]
+1- 1
+-1 1
+.names  [10943]_inv* [10651]_inv* I363
+11 1
+.names  masterXXXXstate2 [10882]_inv* I364
+11 1
+.names  [15624]* I366 [10686]_inv
+1- 1
+-1 1
+.names  [15456]* [15418]* I366
+11 1
+.names  I369 I368 [10327]
+1- 1
+-1 1
+.names  [15692] [10939]_inv* I368
+11 1
+.names  ACKi [2536] I369
+11 1
+.names  [15344]* SingleStep [10749]_inv
+1- 1
+-1 1
+.names  STARTi [15223] [14959]
+11 1
+.names  I374 I373 [10497]
+1- 1
+-1 1
+.names  [15538] [15582]* I373
+11 1
+.names  physrecXXXXstate1 [15266]* I374
+11 1
+.names  slaveXXXXstate2* [10819]_inv [10750]_inv
+1- 1
+-1 1
+.names  I377 [2536] [10307]
+1- 1
+-1 1
+.names  [10897]_inv* SlotSpace_Id_Match* I377
+11 1
+.names  [15456]* [15710]* [13]
+1- 1
+-1 1
+.names  GRANTi [10823]_inv* [15235]
+11 1
+.names  [15512]* [530]* [15232]
+11 1
+.names  physrecXXXXstate0* wd_cnt_test* [10612]_inv* [15054]
+111 1
+.names  [15670]* [15446]* [15141]
+11 1
+.names  [15577]* [15495]* [15215]
+11 1
+.names  [15471]* [15577]* [15405]* [14946]
+111 1
+.names  [15252]* [15310]* [11]
+1- 1
+-1 1
+.names  [15349]* [10918]_inv* [15182]
+11 1
+.names  wd_cnt_test [15538]* [15416]* physrecXXXXstate0* [15050]
+1111 1
+.names  [15247]* [15296]* [15046]
+11 1
+.names  [15702] [10889]_inv* [10821]_inv* [15041]
+111 1
+.names  [15574]* [15412]* [15176]
+11 1
+.names  wdcntXXXXstate3 Incr_wd_cnt [10854]_inv* [15064]
+111 1
+.names  [10901]_inv [16] [15148]
+11 1
+.names  [15686] [10929]_inv* PCCReqCode0* [15037]
+111 1
+.names  [15686]* [15614]* [15643]* [530]* [15035]
+1111 1
+.names  [15569] [10816]_inv* [530]* [15068]
+111 1
+.names  [15410]* [15668]* [15]
+1- 1
+-1 1
+.names  I399 I398 [10363]
+1- 1
+-1 1
+.names  [10877]_inv* [10721]_inv* I398
+11 1
+.names  slaveXXXXstate2 [15310]* I399
+11 1
+.names  [15355]* masterXXXXstate1* [15074]
+11 1
+.names  [15439]* [15298]* [15081]
+11 1
+.names  NuBusActive [15425]* [7]
+1- 1
+-1 1
+.names  physrecXXXXstate1 [10935]_inv* [15230]* physrecXXXXstate0* [14911]
+1111 1
+.names  [15338]* masterXXXXstate1* [15123]
+11 1
+.names  TM1l [17] [15327]
+11 1
+.names  [15211]* SBCResetPCC* [14987]
+11 1
+.names  V_transmit_begin [14] [15026]
+11 1
+.names  [15553]* [15056]* [14915]
+11 1
+.names  [15284]* PCCReqCode3* [15091]
+11 1
+.names  GRANTi [10816]_inv* [15143]
+11 1
+.names  nubusXXXXstate1* Intr_done* [10863]_inv* [15240]
+111 1
+.names  [15369]* [10894]_inv* [10899]_inv* [14970]
+111 1
+.names  [10821]_inv* RQSTi* [15137]
+11 1
+.names  [15294]* [10877]_inv* [15097]
+11 1
+.names  VSACKi VTM0i [15591] [10817]_inv* [15017]
+1111 1
+.names  RESETi [15407] resetXXXXstate2* [14976]
+111 1
+.names  [13753]_inv* [15481]* [15192]
+11 1
+.names  [10817]_inv [15338]* [15105]
+11 1
+.names  [15292]* VSACKi* [10943]_inv* [14982]
+111 1
+.names  slaveXXXXstate2* [15206]* [14997]
+11 1
+.names  [15399]* [10901]_inv* [15109]
+11 1
+.names  [15529]* [15357]* [15120]
+11 1
+.names  [15353]* CoherencyState2i* [15089]
+11 1
+.names  [15487]* [10854]_inv* [15133]
+11 1
+.names  [15665]* [15427]* [15135]
+11 1
+.names  STARTi [15391]* [10938]_inv* [14972]
+111 1
+.names  [15389]* STARTi* [10907]_inv* [14990]
+111 1
+.names  [15403]* resetXXXXstate2* [15129]
+11 1
+.names  Tag_Match* [15553]* [10944]_inv [10819]_inv
+1-- 1
+-1- 1
+--1 1
+.names  [15591] masterXXXXstate3* [15393]
+11 1
+.names  [15566] STARTi* [15319]
+11 1
+.names  [15569] PCCReqCode2* [15329]
+11 1
+.names  PCCReq* [15646]* masterXXXXstate0 [10813]_inv
+1-- 1
+-1- 1
+--1 1
+.names  [15560] RESETi resetXXXXstate2 resetXXXXstate0 {resetXXXXSBCResetPCC}
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names  [15655] VTM1l* [15334]
+11 1
+.names  BUS_Inactive* [15702]* [10816]_inv
+1- 1
+-1 1
+.names  [15553] PCCAck* slaveXXXXstate2* [15304]
+111 1
+.names  [10936]_inv* [10886]_inv* [10944]_inv* slaveXXXXstate2* [15011]
+1111 1
+.names  [10921]_inv [10907]_inv [10682]_inv
+1- 1
+-1 1
+.names  wdcntXXXXstate2* [10890]_inv [10854]_inv
+1- 1
+-1 1
+.names  [15499]* [15492]* [14]
+1- 1
+-1 1
+.names  PCCConfirm* [10894]_inv [530]
+1- 1
+-1 1
+.names  [10930]_inv masterXXXXstate2 [10929]_inv
+1- 1
+-1 1
+.names  [10932]_inv masterXXXXstate3 [10823]_inv
+1- 1
+-1 1
+.names  [10907]_inv [10940]_inv [10863]_inv
+1- 1
+-1 1
+.names  masterXXXXstate3* [15646]* [10821]_inv
+1- 1
+-1 1
+.names  [10899]_inv* [15512] [10658]_inv
+1- 1
+-1 1
+.names  [10911]_inv [10945]_inv P_receive_cancel [10612]_inv
+1-- 1
+-1- 1
+--1 1
+.names  I451 I450 [2536]
+1- 1
+-1 1
+.names  [10940]_inv* nubusXXXXstate1* I450
+11 1
+.names  nubusXXXXstate0 [10897]_inv* I451
+11 1
+.names  I453 LastRQSTi [10651]_inv
+1- 1
+-1 1
+.names  [15591]* masterXXXXstate1* I453
+11 1
+.names  VTM0l [10886]_inv* RESETi* [15056]
+111 1
+.names  Incr_wd_cnt [15624]* [15288]
+11 1
+.names  VSACKi [15521]* [15290]
+11 1
+.names  STARTi [15526]* [15294]
+11 1
+.names  P_receive_begin [15582] [15302]
+11 1
+.names  GRANTi* [15574]* [10822]_inv
+1- 1
+-1 1
+.names  [15582]* [10945]_inv* [15296]
+11 1
+.names  [15587]* [15599]* [15300]
+11 1
+.names  physrecXXXXstate1 [15572]* [15298]
+11 1
+.names  [10946]_inv* virmachXXXXstate1* [15452]
+11 1
+.names  I465 [13753]_inv [10866]_inv
+1- 1
+-1 1
+.names  virmachXXXXstate1* V_transmit_begin* I465
+11 1
+.names  nubusXXXXstate1 [10923]_inv* [15446]
+11 1
+.names  [10930]_inv* masterXXXXstate0* [15444]
+11 1
+.names  wdcntXXXXstate1 [10890]_inv* [15442]
+11 1
+.names  TM1i [10911]_inv* [15427]
+11 1
+.names  ACKi [10933]_inv* [15425]
+11 1
+.names  wdcntXXXXstate3 [10890]_inv* [15418]
+11 1
+.names  [15646]* [15637]* [16]
+1- 1
+-1 1
+.names  wd_cnt_test [10911]_inv* [15439]
+11 1
+.names  I476 I475 [10089]
+1- 1
+-1 1
+.names  VSACKi [15574] I475
+11 1
+.names  masterXXXXstate1 ACKl* I476
+11 1
+.names  [10936]_inv [15489]* [15190]
+11 1
+.names  [10918]_inv* P_receive_cancel* [15416]
+11 1
+.names  [15569]* PCCReqCode2* PCCReqCode3* [15198]
+111 1
+.names  [15506]* [15707]* [15536]* [15206]
+111 1
+.names  [15499]* [15492]* [15211]
+11 1
+.names  VACKl [15574]* [15382]
+11 1
+.names  Intr_done [15692] [10938]_inv* STARTi* [15219]
+1111 1
+.names  VTM0l [15526]* [17]
+1- 1
+-1 1
+.names  masterXXXXstate0 [15646] masterXXXXstate3* [15223]
+111 1
+.names  virmachXXXXstate1 VACKi VTM0i [10946]_inv* [15228]
+1111 1
+.names  wdcntXXXXstate0 [10890]_inv* [15410]
+11 1
+.names  [15653]* [15637]* [15399]
+11 1
+.names  [15646] RQSTi* [15396]
+11 1
+.names  PCCReqCode0 [15686] [15465]
+11 1
+.names  [10901]_inv* masterXXXXstate3* [10889]_inv* [15247]
+111 1
+.names  Incr_wd_cnt [10890]_inv* [15456]
+11 1
+.names  slaveXXXXstate0 Intr_req [10934]_inv* [10933]_inv* [15252]
+1111 1
+.names  [10894]_inv* masterXXXXstate3* [15412]
+11 1
+.names  [15692]* [15541]* [15391]
+11 1
+.names  [15670]* [15541]* [15389]
+11 1
+.names  [10921]_inv* slaveXXXXstate1* [15471]
+11 1
+.names  virmachXXXXstate1* [18] [15481]
+11 1
+.names  [15646] [15702]* [15379]
+11 1
+.names  [15521]* [15591]* [15292]
+11 1
+.names  [15582]* [10935]_inv* [15336]
+11 1
+.names  [10923]_inv [15541]* [15377]
+11 1
+.names  [15697]* [15550]* [15369]
+11 1
+.names  [15661]* [10894]_inv* [15355]
+11 1
+.names  masterXXXXstate2* [15599]* [15338]
+11 1
+.names  [15512]* [10894]_inv* [15344]
+11 1
+.names  [15558]* [10901]_inv* [15362]
+11 1
+.names  [15712] [15529]* [15357]
+11 1
+.names  [15665]* physrecXXXXstate0* [15349]
+11 1
+.names  [15658]* RESETi* [15403]
+11 1
+.names  ACKi [10888]_inv* [10939]_inv* nubusXXXXstate1* [15276]
+1111 1
+.names  [10877]_inv* PCCsync* [15495]
+11 1
+.names  [15680]* PCCsync* [15310]
+11 1
+.names  I516 I515 [10422]
+1- 1
+-1 1
+.names  ACKi STARTi I515
+11 1
+.names  slaveXXXXstate0 [10912]_inv* I516
+11 1
+.names  PCCsync [15680]* [15367]
+11 1
+.names  masterXXXXstate3* [10889]_inv [10817]_inv
+1- 1
+-1 1
+.names  CoherencyState1i [15712]* [15353]
+11 1
+.names  [15658] Gen_Reset [15407]
+11 1
+.names  [2537]* physrecXXXXstate0* [15266]
+11 1
+.names  [10908]_inv* slaveXXXXstate2* [10912]_inv* [15280]
+111 1
+.names  slaveXXXXstate2* [15680]* [15405]
+11 1
+.names  [15663]* [2537]* [15230]
+11 1
+.names  [15686]* SingleStep* [15284]
+11 1
+.names  masterXXXXstate2 UpdateDone [10878]_inv* [15052]
+111 1
+.names  nubusXXXXstate0* RESETi [10938]_inv
+1- 1
+-1 1
+.names  STARTi* nubusXXXXstate0 [10940]_inv
+1- 1
+-1 1
+.names  masterXXXXstate2* masterXXXXstate1* [10932]_inv
+1- 1
+-1 1
+.names  PCCReq* PCCReqCode3 [10894]_inv
+1- 1
+-1 1
+.names  VTM0l* slaveXXXXstate1 [10944]_inv
+1- 1
+-1 1
+.names  TM0i* TM1i [10918]_inv
+1- 1
+-1 1
+.names  NuBusActive* STARTi [10933]_inv
+1- 1
+-1 1
+.names  masterXXXXstate2* ACKl [10901]_inv
+1- 1
+-1 1
+.names  I537 I536 [10126]
+1- 1
+-1 1
+.names  PCCReqCode2 PCCReqCode0* I536
+11 1
+.names  PCCReqCode2* PCCReqCode0 I537
+11 1
+.names  Reset_wd_cnt* SBCResetPCC* [10890]_inv
+1- 1
+-1 1
+.names  virmachXXXXstate0* SBCResetPCC [10946]_inv
+1- 1
+-1 1
+.names  PCCReqCode3* PCCReq* [10930]_inv
+1- 1
+-1 1
+.names  STARTi* ACKi STARTo [10886]_inv
+1-- 1
+-1- 1
+--1 1
+.names  I543 STARTi* [10721]_inv
+1- 1
+-1 1
+.names  VTM0l STARTo* I543
+11 1
+.names  masterXXXXstate0* SBCResetPCC [10889]_inv
+1- 1
+-1 1
+.names  masterXXXXstate3* masterXXXXstate0 [10882]_inv
+1- 1
+-1 1
+.names  ACKi* SBCResetPCC [10935]_inv
+1- 1
+-1 1
+.names  slaveXXXXstate1* VSACKi [10934]_inv
+1- 1
+-1 1
+.names  masterXXXXstate0* ACKl* [10943]_inv
+1- 1
+-1 1
+.names  SlotSpace_Id_Match* nubusXXXXstate0 [10923]_inv
+1- 1
+-1 1
+.names  STARTi* slaveXXXXstate2 [10921]_inv
+1- 1
+-1 1
+.names  physrecXXXXstate1* TM0i* [10911]_inv
+1- 1
+-1 1
+.names  wdcntXXXXstate0 wdcntXXXXstate3 [15710]
+11 1
+.names  P_receive_begin* SBCResetPCC [10845]_inv
+1- 1
+-1 1
+.names  masterXXXXstate3* masterXXXXstate2* [10928]_inv
+1- 1
+-1 1
+.names  slaveXXXXstate2 slaveXXXXstate1 [15577]
+11 1
+.names  V_receive_begin V_transmit_begin* [18]
+1- 1
+-1 1
+.names  wdcntXXXXstate3 Incr_wd_cnt wdcntXXXXstate1* [15487]
+111 1
+.names  slaveXXXXstate1 PCCAck slaveXXXXstate2* [15489]
+111 1
+.names  V_receive_begin virmachXXXXstate0* virmachXXXXstate1* [15492]
+111 1
+.names  nubusXXXXstate1* STARTi [10897]_inv
+1- 1
+-1 1
+.names  virmachXXXXstate1 virmachXXXXstate0 VACKi* [15499]
+111 1
+.names  NuBusActive Intr_req* ACKi* [15506]
+111 1
+.names  Set_ex_wd_cnt1 Reset_wd_cnt wdcntXXXXstate1* SBCResetPCC* [15508]
+1111 1
+.names  TM1l CoherencyState2i CoherencyState1i [15510]
+111 1
+.names  PCCReqCode2 PCCReqCode1 [15512]
+11 1
+.names  masterXXXXstate1 VACKl [15521]
+11 1
+.names  VTM0l STARTo [15526]
+11 1
+.names  CoherencyState1i CoherencyState2i* [15529]
+11 1
+.names  slaveXXXXstate0 VSACKi [15536]
+11 1
+.names  TM1i TM0i* [15538]
+11 1
+.names  masterXXXXstate1 masterXXXXstate3* [15574]
+11 1
+.names  nubusXXXXstate1 Intr_done* [15541]
+11 1
+.names  masterXXXXstate3 masterXXXXstate1 [15545]
+11 1
+.names  masterXXXXstate2 STARTi* [15591]
+11 1
+.names  PCCReqCode1 PCCReqCode2* [15550]
+11 1
+.names  slaveXXXXstate0 RESETi* [15553]
+11 1
+.names  VSACKi* VTM0i [15599]
+11 1
+.names  STARTi VSACKi* [15558]
+11 1
+.names  resetXXXXstate1 PCCSawReset* [15560]
+11 1
+.names  masterXXXXstate2 VSACKi* [15566]
+11 1
+.names  resetXXXXstate2 RESETi* [15604]
+11 1
+.names  PCCReqCode0 PCCReqCode1* [15569]
+11 1
+.names  PCCReqCode2 PCCReqCode0 [15614]
+11 1
+.names  P_receive_cancel physrecXXXXstate0* [15572]
+11 1
+.names  wdcntXXXXstate2 wdcntXXXXstate1 [15624]
+11 1
+.names  VSACKi STARTi [15637]
+11 1
+.names  resetXXXXstate2 RESETi [15676]
+11 1
+.names  VSACKi STARTi* [15587]
+11 1
+.names  physrecXXXXstate1 physrecXXXXstate0 [15582]
+11 1
+.names  nubusXXXXstate0 nubusXXXXstate1* [15670]
+11 1
+.names  masterXXXXstate3 SingleStep* [15661]
+11 1
+.names  physrecXXXXstate1 P_receive_cancel [15665]
+11 1
+.names  CoherencyState2i TM1l* [15655]
+11 1
+.names  PCCReqCode1 PCCReqCode0* [15643]
+11 1
+.names  nubusXXXXstate0 STARTi [10939]_inv
+1- 1
+-1 1
+.names  SingleStep SBCResetPCC [10937]_inv
+1- 1
+-1 1
+.names  masterXXXXstate2* masterXXXXstate1* [15646]
+11 1
+.names  wd_cnt_test* I599 [2537]
+1- 1
+-1 1
+.names  P_receive_cancel* TM0i* I599
+11 1
+.names  SingleStep RQSTi [10899]_inv
+1- 1
+-1 1
+.names  slaveXXXXstate1 slaveXXXXstate0 [10908]_inv
+1- 1
+-1 1
+.names  VSACKi* STARTi* [15653]
+11 1
+.names  slaveXXXXstate0 RESETi [10936]_inv
+1- 1
+-1 1
+.names  slaveXXXXstate2 slaveXXXXstate1 [10877]_inv
+1- 1
+-1 1
+.names  resetXXXXstate1* resetXXXXstate0* [15658]
+11 1
+.names  masterXXXXstate0 SBCResetPCC masterXXXXstate1 [10878]_inv
+1-- 1
+-1- 1
+--1 1
+.names  P_receive_cancel* TM1i* [15663]
+11 1
+.names  masterXXXXstate2 masterXXXXstate0 [10924]_inv
+1- 1
+-1 1
+.names  wdcntXXXXstate3* wdcntXXXXstate2* [15668]
+11 1
+.names  virmachXXXXstate0 SBCResetPCC [13753]_inv
+1- 1
+-1 1
+.names  TM0i* STARTi* [15674]
+11 1
+.names  RESETi ACKi [10907]_inv
+1- 1
+-1 1
+.names  Intr_req* SlotSpace_Id_Match* [15680]
+11 1
+.names  PCCReqCode2* PCCReqCode1* [15686]
+11 1
+.names  nubusXXXXstate1* ACKi* [15692]
+11 1
+.names  Intr_done RESETi [10888]_inv
+1- 1
+-1 1
+.names  PCCReqCode1* PCCReqCode0* [15697]
+11 1
+.names  VSACKi* SingleStep* [15702]
+11 1
+.names  ACKi STARTi [10912]_inv
+1- 1
+-1 1
+.names  slaveXXXXstate0* ACKi* [15707]
+11 1
+.names  ACKi SBCResetPCC [10945]_inv
+1- 1
+-1 1
+.names  VTM1l* TM1l* [15712]
+11 1
+.names  [10703]_inv [10703]_inv*
+0 1
+.names  [14902] [14902]*
+0 1
+.names  [14676] [14676]*
+0 1
+.names  [14984] [14984]*
+0 1
+.names  [14797] [14797]*
+0 1
+.names  [14857] [14857]*
+0 1
+.names  [15030] [15030]*
+0 1
+.names  [14862] [14862]*
+0 1
+.names  [14627] [14627]*
+0 1
+.names  [14387] [14387]*
+0 1
+.names  [14698] [14698]*
+0 1
+.names  [14421] [14421]*
+0 1
+.names  [10483]_inv [10483]_inv*
+0 1
+.names  [14411] [14411]*
+0 1
+.names  [10889]_inv [10889]_inv*
+0 1
+.names  [14764] [14764]*
+0 1
+.names  [15159] [15159]*
+0 1
+.names  masterXXXXVSACKo masterXXXXVSACKo*
+0 1
+.names  [15192] [15192]*
+0 1
+.names  [14443] [14443]*
+0 1
+.names  [14448] [14448]*
+0 1
+.names  [14512] [14512]*
+0 1
+.names  [10126] [10126]*
+0 1
+.names  [14505] [14505]*
+0 1
+.names  PCCReqCode0 PCCReqCode0*
+0 1
+.names  [14496] [14496]*
+0 1
+.names  PCCReqCode2 PCCReqCode2*
+0 1
+.names  RESETi RESETi*
+0 1
+.names  [10696]_inv [10696]_inv*
+0 1
+.names  [14478] [14478]*
+0 1
+.names  SBCResetPCC SBCResetPCC*
+0 1
+.names  [14488] [14488]*
+0 1
+.names  [14409] [14409]*
+0 1
+.names  [14490] [14490]*
+0 1
+.names  [14419] [14419]*
+0 1
+.names  [14769] [14769]*
+0 1
+.names  [15697] [15697]*
+0 1
+.names  [15550] [15550]*
+0 1
+.names  [10507]_inv [10507]_inv*
+0 1
+.names  [14492] [14492]*
+0 1
+.names  [14757] [14757]*
+0 1
+.names  [15105] [15105]*
+0 1
+.names  slaveXXXXstate1 slaveXXXXstate1*
+0 1
+.names  [10580] [10580]*
+0 1
+.names  [14480] [14480]*
+0 1
+.names  [14751] [14751]*
+0 1
+.names  [14959] [14959]*
+0 1
+.names  [14595] [14595]*
+0 1
+.names  [14726] [14726]*
+0 1
+.names  [14521] [14521]*
+0 1
+.names  [14571] [14571]*
+0 1
+.names  [14484] [14484]*
+0 1
+.names  [14525] [14525]*
+0 1
+.names  [15046] [15046]*
+0 1
+.names  [10682]_inv [10682]_inv*
+0 1
+.names  [10944]_inv [10944]_inv*
+0 1
+.names  [14539] [14539]*
+0 1
+.names  [14593] [14593]*
+0 1
+.names  [10749]_inv [10749]_inv*
+0 1
+.names  [14688] [14688]*
+0 1
+.names  [10533] [10533]*
+0 1
+.names  [15302] [15302]*
+0 1
+.names  [14508] [14508]*
+0 1
+.names  [10822]_inv [10822]_inv*
+0 1
+.names  [14603] [14603]*
+0 1
+.names  [14503] [14503]*
+0 1
+.names  resetXXXXstate1 resetXXXXstate1*
+0 1
+.names  [15041] [15041]*
+0 1
+.names  [14533] [14533]*
+0 1
+.names  [10339] [10339]*
+0 1
+.names  [14537] [14537]*
+0 1
+.names  [14993] [14993]*
+0 1
+.names  [15223] [15223]*
+0 1
+.names  [14693] [14693]*
+0 1
+.names  [10591] [10591]*
+0 1
+.names  [14617] [14617]*
+0 1
+.names  [14543] [14543]*
+0 1
+.names  [14860] [14860]*
+0 1
+.names  RQSTi RQSTi*
+0 1
+.names  [14517] [14517]*
+0 1
+.names  [13378]_inv [13378]_inv*
+0 1
+.names  [15235] [15235]*
+0 1
+.names  [14666] [14666]*
+0 1
+.names  [14668] [14668]*
+0 1
+.names  [2838] [2838]*
+0 1
+.names  [14917] [14917]*
+0 1
+.names  [14723] [14723]*
+0 1
+.names  VSACKi VSACKi*
+0 1
+.names  [14711] [14711]*
+0 1
+.names  [10296] [10296]*
+0 1
+.names  [14640] [14640]*
+0 1
+.names  [14717] [14717]*
+0 1
+.names  [14802] [14802]*
+0 1
+.names  LastRQSTi LastRQSTi*
+0 1
+.names  [14659] [14659]*
+0 1
+.names  ACKl ACKl*
+0 1
+.names  [10817]_inv [10817]_inv*
+0 1
+.names  [15148] [15148]*
+0 1
+.names  [14709] [14709]*
+0 1
+.names  [14585] [14585]*
+0 1
+.names  [14760] [14760]*
+0 1
+.names  [14661] [14661]*
+0 1
+.names  [10559]_inv [10559]_inv*
+0 1
+.names  [10586] [10586]*
+0 1
+.names  [14575] [14575]*
+0 1
+.names  [14830] [14830]*
+0 1
+.names  [10878]_inv [10878]_inv*
+0 1
+.names  [14909] [14909]*
+0 1
+.names  [10937]_inv [10937]_inv*
+0 1
+.names  [14619] [14619]*
+0 1
+.names  [10924]_inv [10924]_inv*
+0 1
+.names  [14846] [14846]*
+0 1
+.names  [14547] [14547]*
+0 1
+.names  TM0i TM0i*
+0 1
+.names  [10935]_inv [10935]_inv*
+0 1
+.names  [14823] [14823]*
+0 1
+.names  [15137] [15137]*
+0 1
+.names  [14767] [14767]*
+0 1
+.names  [15304] [15304]*
+0 1
+.names  [10624]_inv [10624]_inv*
+0 1
+.names  [10643]_inv [10643]_inv*
+0 1
+.names  [15232] [15232]*
+0 1
+.names  [15396] [15396]*
+0 1
+.names  [14871] [14871]*
+0 1
+.names  [14808] [14808]*
+0 1
+.names  [10866]_inv [10866]_inv*
+0 1
+.names  [14852] [14852]*
+0 1
+.names  [15452] [15452]*
+0 1
+.names  [14966] [14966]*
+0 1
+.names  [15039] [15039]*
+0 1
+.names  [10653] [10653]*
+0 1
+.names  [10750]_inv [10750]_inv*
+0 1
+.names  [14924] [14924]*
+0 1
+.names  [15338] [15338]*
+0 1
+.names  [15379] [15379]*
+0 1
+.names  ACKi ACKi*
+0 1
+.names  [10662]_inv [10662]_inv*
+0 1
+.names  [15344] [15344]*
+0 1
+.names  [10823]_inv [10823]_inv*
+0 1
+.names  [14781] [14781]*
+0 1
+.names  STARTi STARTi*
+0 1
+.names  [14771] [14771]*
+0 1
+.names  [15545] [15545]*
+0 1
+.names  [14804] [14804]*
+0 1
+.names  [14733] [14733]*
+0 1
+.names  [14747] [14747]*
+0 1
+.names  [10882]_inv [10882]_inv*
+0 1
+.names  masterXXXXstate1 masterXXXXstate1*
+0 1
+.names  [14821] [14821]*
+0 1
+.names  [14897] [14897]*
+0 1
+.names  [1048] [1048]*
+0 1
+.names  [14982] [14982]*
+0 1
+.names  [10686]_inv [10686]_inv*
+0 1
+.names  [14944] [14944]*
+0 1
+.names  [15109] [15109]*
+0 1
+.names  slaveXXXXstate2 slaveXXXXstate2*
+0 1
+.names  PCCsync PCCsync*
+0 1
+.names  [14963] [14963]*
+0 1
+.names  [14879] [14879]*
+0 1
+.names  [15510] [15510]*
+0 1
+.names  [14730] [14730]*
+0 1
+.names  [15021] [15021]*
+0 1
+.names  [10718] [10718]*
+0 1
+.names  [15489] [15489]*
+0 1
+.names  [14922] [14922]*
+0 1
+.names  [10934]_inv [10934]_inv*
+0 1
+.names  Intr_req Intr_req*
+0 1
+.names  [14900] [14900]*
+0 1
+.names  [14942] [14942]*
+0 1
+.names  [10544]_inv [10544]_inv*
+0 1
+.names  physrecXXXXstate0 physrecXXXXstate0*
+0 1
+.names  [14980] [14980]*
+0 1
+.names  masterXXXXstate2 masterXXXXstate2*
+0 1
+.names  [14838] [14838]*
+0 1
+.names  [10907]_inv [10907]_inv*
+0 1
+.names  [14950] [14950]*
+0 1
+.names  [10945]_inv [10945]_inv*
+0 1
+.names  Intr_done Intr_done*
+0 1
+.names  TM1l TM1l*
+0 1
+.names  [15079] [15079]*
+0 1
+.names  [15085] [15085]*
+0 1
+.names  [15120] [15120]*
+0 1
+.names  [10685]_inv [10685]_inv*
+0 1
+.names  [10918]_inv [10918]_inv*
+0 1
+.names  [10932]_inv [10932]_inv*
+0 1
+.names  [15035] [15035]*
+0 1
+.names  [15003] [15003]*
+0 1
+.names  [15133] [15133]*
+0 1
+.names  [14940] [14940]*
+0 1
+.names  [14955] [14955]*
+0 1
+.names  [10888]_inv [10888]_inv*
+0 1
+.names  [10821]_inv [10821]_inv*
+0 1
+.names  SingleStep SingleStep*
+0 1
+.names  [15465] [15465]*
+0 1
+.names  [14987] [14987]*
+0 1
+.names  PCCAck PCCAck*
+0 1
+.names  [15247] [15247]*
+0 1
+.names  TM1i TM1i*
+0 1
+.names  [10863]_inv [10863]_inv*
+0 1
+.names  [10640] [10640]*
+0 1
+.names  [10089] [10089]*
+0 1
+.names  [15382] [15382]*
+0 1
+.names  [15362] [15362]*
+0 1
+.names  [10933]_inv [10933]_inv*
+0 1
+.names  [14997] [14997]*
+0 1
+.names  [10573]_inv [10573]_inv*
+0 1
+.names  [10928]_inv [10928]_inv*
+0 1
+.names  [10921]_inv [10921]_inv*
+0 1
+.names  [15327] [15327]*
+0 1
+.names  [15367] [15367]*
+0 1
+.names  [15081] [15081]*
+0 1
+.names  [10845]_inv [10845]_inv*
+0 1
+.names  [15091] [15091]*
+0 1
+.names  [15643] [15643]*
+0 1
+.names  [15614] [15614]*
+0 1
+.names  PCCSawReset PCCSawReset*
+0 1
+.names  [15129] [15129]*
+0 1
+.names  [15089] [15089]*
+0 1
+.names  [15349] [15349]*
+0 1
+.names  [15050] [15050]*
+0 1
+.names  [15215] [15215]*
+0 1
+.names  [10657]_inv [10657]_inv*
+0 1
+.names  [10658]_inv [10658]_inv*
+0 1
+.names  [10748]_inv [10748]_inv*
+0 1
+.names  [15068] [15068]*
+0 1
+.names  [14970] [14970]*
+0 1
+.names  [15176] [15176]*
+0 1
+.names  masterXXXXstate0 masterXXXXstate0*
+0 1
+.names  [15064] [15064]*
+0 1
+.names  [15442] [15442]*
+0 1
+.names  [15219] [15219]*
+0 1
+.names  PCCReqCode3 PCCReqCode3*
+0 1
+.names  [15512] [15512]*
+0 1
+.names  [10912]_inv [10912]_inv*
+0 1
+.names  [15141] [15141]*
+0 1
+.names  [10422] [10422]*
+0 1
+.names  [15017] [15017]*
+0 1
+.names  [15037] [15037]*
+0 1
+.names  [15074] [15074]*
+0 1
+.names  [14911] [14911]*
+0 1
+.names  [10877]_inv [10877]_inv*
+0 1
+.names  [14915] [14915]*
+0 1
+.names  [15097] [15097]*
+0 1
+.names  [15577] [15577]*
+0 1
+.names  [15123] [15123]*
+0 1
+.names  [15206] [15206]*
+0 1
+.names  [15135] [15135]*
+0 1
+.names  [15143] [15143]*
+0 1
+.names  [15026] [15026]*
+0 1
+.names  [15508] [15508]*
+0 1
+.names  slaveXXXXstate0 slaveXXXXstate0*
+0 1
+.names  [14946] [14946]*
+0 1
+.names  [10497] [10497]*
+0 1
+.names  [15182] [15182]*
+0 1
+.names  BUS_Inactive BUS_Inactive*
+0 1
+.names  [10819]_inv [10819]_inv*
+0 1
+.names  [10816]_inv [10816]_inv*
+0 1
+.names  wdcntXXXXstate2 wdcntXXXXstate2*
+0 1
+.names  wd_cnt_test wd_cnt_test*
+0 1
+.names  [15300] [15300]*
+0 1
+.names  [15393] [15393]*
+0 1
+.names  [15566] [15566]*
+0 1
+.names  [15290] [15290]*
+0 1
+.names  PCCAckCode PCCAckCode*
+0 1
+.names  [15288] [15288]*
+0 1
+.names  [15674] [15674]*
+0 1
+.names  [15319] [15319]*
+0 1
+.names  [15637] [15637]*
+0 1
+.names  [15444] [15444]*
+0 1
+.names  [15329] [15329]*
+0 1
+.names  [15407] [15407]*
+0 1
+.names  masterXXXXstate3 masterXXXXstate3*
+0 1
+.names  [15377] [15377]*
+0 1
+.names  [15670] [15670]*
+0 1
+.names  [10651]_inv [10651]_inv*
+0 1
+.names  [10943]_inv [10943]_inv*
+0 1
+.names  [15418] [15418]*
+0 1
+.names  [15456] [15456]*
+0 1
+.names  [15624] [15624]*
+0 1
+.names  [10939]_inv [10939]_inv*
+0 1
+.names  [15582] [15582]*
+0 1
+.names  [15266] [15266]*
+0 1
+.names  SlotSpace_Id_Match SlotSpace_Id_Match*
+0 1
+.names  [10897]_inv [10897]_inv*
+0 1
+.names  [15710] [15710]*
+0 1
+.names  [530] [530]*
+0 1
+.names  [10612]_inv [10612]_inv*
+0 1
+.names  [15446] [15446]*
+0 1
+.names  [15495] [15495]*
+0 1
+.names  [15405] [15405]*
+0 1
+.names  [15471] [15471]*
+0 1
+.names  [15310] [15310]*
+0 1
+.names  [15252] [15252]*
+0 1
+.names  [15416] [15416]*
+0 1
+.names  [15538] [15538]*
+0 1
+.names  [15296] [15296]*
+0 1
+.names  [15412] [15412]*
+0 1
+.names  [15574] [15574]*
+0 1
+.names  [10854]_inv [10854]_inv*
+0 1
+.names  [10929]_inv [10929]_inv*
+0 1
+.names  [15686] [15686]*
+0 1
+.names  [15668] [15668]*
+0 1
+.names  [15410] [15410]*
+0 1
+.names  [10721]_inv [10721]_inv*
+0 1
+.names  [15355] [15355]*
+0 1
+.names  [15298] [15298]*
+0 1
+.names  [15439] [15439]*
+0 1
+.names  [15425] [15425]*
+0 1
+.names  [15230] [15230]*
+0 1
+.names  [15211] [15211]*
+0 1
+.names  [15056] [15056]*
+0 1
+.names  [15553] [15553]*
+0 1
+.names  [15284] [15284]*
+0 1
+.names  nubusXXXXstate1 nubusXXXXstate1*
+0 1
+.names  [10899]_inv [10899]_inv*
+0 1
+.names  [10894]_inv [10894]_inv*
+0 1
+.names  [15369] [15369]*
+0 1
+.names  [15294] [15294]*
+0 1
+.names  resetXXXXstate2 resetXXXXstate2*
+0 1
+.names  [15481] [15481]*
+0 1
+.names  [13753]_inv [13753]_inv*
+0 1
+.names  [15292] [15292]*
+0 1
+.names  [10901]_inv [10901]_inv*
+0 1
+.names  [15399] [15399]*
+0 1
+.names  [15357] [15357]*
+0 1
+.names  [15529] [15529]*
+0 1
+.names  CoherencyState2i CoherencyState2i*
+0 1
+.names  [15353] [15353]*
+0 1
+.names  [15487] [15487]*
+0 1
+.names  [15427] [15427]*
+0 1
+.names  [15665] [15665]*
+0 1
+.names  [10938]_inv [10938]_inv*
+0 1
+.names  [15391] [15391]*
+0 1
+.names  [15389] [15389]*
+0 1
+.names  [15403] [15403]*
+0 1
+.names  Tag_Match Tag_Match*
+0 1
+.names  [15646] [15646]*
+0 1
+.names  PCCReq PCCReq*
+0 1
+.names  VTM1l VTM1l*
+0 1
+.names  [15702] [15702]*
+0 1
+.names  [10886]_inv [10886]_inv*
+0 1
+.names  [10936]_inv [10936]_inv*
+0 1
+.names  [15492] [15492]*
+0 1
+.names  [15499] [15499]*
+0 1
+.names  PCCConfirm PCCConfirm*
+0 1
+.names  [10940]_inv [10940]_inv*
+0 1
+.names  [15591] [15591]*
+0 1
+.names  [15521] [15521]*
+0 1
+.names  [15526] [15526]*
+0 1
+.names  GRANTi GRANTi*
+0 1
+.names  [15599] [15599]*
+0 1
+.names  [15587] [15587]*
+0 1
+.names  [15572] [15572]*
+0 1
+.names  virmachXXXXstate1 virmachXXXXstate1*
+0 1
+.names  [10946]_inv [10946]_inv*
+0 1
+.names  V_transmit_begin V_transmit_begin*
+0 1
+.names  [10923]_inv [10923]_inv*
+0 1
+.names  [10930]_inv [10930]_inv*
+0 1
+.names  [10890]_inv [10890]_inv*
+0 1
+.names  [10911]_inv [10911]_inv*
+0 1
+.names  P_receive_cancel P_receive_cancel*
+0 1
+.names  [15569] [15569]*
+0 1
+.names  [15536] [15536]*
+0 1
+.names  [15707] [15707]*
+0 1
+.names  [15506] [15506]*
+0 1
+.names  [15653] [15653]*
+0 1
+.names  [15541] [15541]*
+0 1
+.names  [15692] [15692]*
+0 1
+.names  [15661] [15661]*
+0 1
+.names  [15558] [15558]*
+0 1
+.names  [15658] [15658]*
+0 1
+.names  [15680] [15680]*
+0 1
+.names  [15712] [15712]*
+0 1
+.names  [2537] [2537]*
+0 1
+.names  [10908]_inv [10908]_inv*
+0 1
+.names  [15663] [15663]*
+0 1
+.names  nubusXXXXstate0 nubusXXXXstate0*
+0 1
+.names  VTM0l VTM0l*
+0 1
+.names  NuBusActive NuBusActive*
+0 1
+.names  Reset_wd_cnt Reset_wd_cnt*
+0 1
+.names  virmachXXXXstate0 virmachXXXXstate0*
+0 1
+.names  STARTo STARTo*
+0 1
+.names  physrecXXXXstate1 physrecXXXXstate1*
+0 1
+.names  P_receive_begin P_receive_begin*
+0 1
+.names  wdcntXXXXstate1 wdcntXXXXstate1*
+0 1
+.names  VACKi VACKi*
+0 1
+.names  PCCReqCode1 PCCReqCode1*
+0 1
+.names  resetXXXXstate0 resetXXXXstate0*
+0 1
+.names  wdcntXXXXstate3 wdcntXXXXstate3*
+0 1
+.end

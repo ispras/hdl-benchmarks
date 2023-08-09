@@ -1,0 +1,13 @@
+.model source.pla
+.inputs CPIPE1s<6> CPIPE1s<0> CPIPE1s<1> CPIPE1s<2> CPIPE1s<3> CPIPE1s<4> \
+CPIPE1s<5> CPIPE1s<7> AIprocessed<31> AIprocessed<30>
+.outputs shiftAbus31 shiftAbus30
+.names CPIPE1s<6> CPIPE1s<0> CPIPE1s<1> CPIPE1s<2> CPIPE1s<3> CPIPE1s<4> \
+CPIPE1s<5> CPIPE1s<7> AIprocessed<31> shiftAbus31
+10-000111 1
+-01000111 1
+.names CPIPE1s<6> CPIPE1s<0> CPIPE1s<1> CPIPE1s<2> CPIPE1s<3> CPIPE1s<4> \
+CPIPE1s<5> CPIPE1s<7> AIprocessed<31> AIprocessed<30> shiftAbus30
+00-000111- 1
+10100011-1 1
+.end

@@ -1,0 +1,24 @@
+
+.model traffic_cl ;
+
+	.date 910108215956 ;	# January 8 1991, 21:59.56
+
+	.inputs  a b c d e ;
+	.outputs f ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1140_f CMOS3_1140 (zz_14', zz_12', zz_10', zz_0' ;;f ) ;
+	.call CMOS3_1130_zz_6 CMOS3_1130 (d, b, c ;;zz_6' ) ;
+	.call CMOS3_1130_zz_4 CMOS3_1130 (d, a, c ;;zz_4' ) ;
+	.call CMOS3_1130_zz_2 CMOS3_1130 (d, a, b ;;zz_2' ) ;
+	.call CMOS3_1130_zz_14 CMOS3_1130 (d, c, e ;;zz_14' ) ;
+	.call CMOS3_1130_zz_12 CMOS3_1130 (d, b, e ;;zz_12' ) ;
+	.call CMOS3_1130_zz_10 CMOS3_1130 (d, a, e ;;zz_10' ) ;
+	.call CMOS3_1770_zz_0 CMOS3_1770 (zz_6', zz_4', zz_2' ;;zz_0' ) ;
+
+.endmodel traffic_cl ;
+

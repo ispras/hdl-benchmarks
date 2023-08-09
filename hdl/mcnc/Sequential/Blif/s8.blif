@@ -1,0 +1,41 @@
+.model s8.kiss2
+.inputs v0 v1 v2 v3
+.outputs v7.3
+.latch    v7.0 v4   0
+.latch    v7.1 v5   0
+.latch    v7.2 v6   1
+.names [15] v7.3
+0 1
+.names [9] v7.0
+0 1
+.names [11] v7.1
+0 1
+.names [13] v7.2
+0 1
+.names v0 v2 v4 v6 [0]
+0010 1
+.names v0 v1 v5 v6 [1]
+0010 1
+.names v3 v5 v6 [2]
+100 1
+.names v3 v5 v6 [3]
+011 1
+.names v1 v2 v5 [4]
+001 1
+.names v2 v3 v6 [5]
+001 1
+.names v1 v5 v6 [6]
+100 1
+.names v2 v3 v4 [7]
+001 1
+.names [8]
+ 1
+.names [1] [6] [7] [9]
+000 1
+.names [1] [4] [6] [7] [11]
+0000 1
+.names [0] [2] [3] [5] [13]
+0000 1
+.names [8] [15]
+0 1
+.end

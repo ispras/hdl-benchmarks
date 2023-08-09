@@ -1,0 +1,51 @@
+.model pcle_cl
+.inputs a b c d e f g h i j k l m n o p q r s
+.outputs t u v w x y z a0 b0
+.names s v0 u0 t
+111 1
+.names a i l u0 u
+11-- 1
+--01 1
+.names u0 b i l m v
+-11-- 1
+1--01 1
+1--10 1
+.names u0 c i n a1 w
+-11-- 1
+1--01 1
+1--10 1
+.names u0 d i o z0 x
+-11-- 1
+1--01 1
+1--10 1
+.names u0 e i p y0 y
+-11-- 1
+1--01 1
+1--10 1
+.names u0 f i q x0 z
+-11-- 1
+1--01 1
+1--10 1
+.names u0 g i r w0 a0
+-11-- 1
+1--01 1
+1--10 1
+.names u0 h i s v0 b0
+-11-- 1
+1--01 1
+1--10 1
+.names i j k u0
+010 1
+.names r w0 v0
+11 1
+.names q x0 w0
+11 1
+.names p y0 x0
+11 1
+.names o z0 y0
+11 1
+.names n a1 z0
+11 1
+.names l m a1
+11 1
+.end

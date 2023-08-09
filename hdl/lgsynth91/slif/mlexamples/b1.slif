@@ -1,0 +1,15 @@
+
+.model b1 ;
+
+	.date 910103085107 ;	# January 3 1991, 08:51.07
+
+	.inputs  a b c ;
+	.outputs d e f g ;
+	.net c g' d ;
+
+	e = ( a' b' + a b )' ;
+	f = ( b' c' + a' c' + b c + a c + a b' + a' b )' ;
+
+
+.endmodel b1 ;
+

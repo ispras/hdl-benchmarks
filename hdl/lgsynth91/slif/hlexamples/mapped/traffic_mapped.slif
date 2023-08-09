@@ -1,0 +1,177 @@
+
+.model traffic ;
+
+	.date 910109112211 ;	# January 9 1991, 11:22.11
+
+	.inputs  CLK RESET run[0:0] Cars[0:0] TimeoutL[0:0] TimeoutS[0:0] ;
+	.outputs DN HiWayL[0:0] HiWayL[1:1] HiWayL[2:2] FarmL[0:0] FarmL[1:1] 
+	         FarmL[2:2] StartTimer[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call traffic_1 traffic_1 (state[0:0], state[1:1], state[2:2], 
+	         Cars[0:0], TimeoutL[0:0], TimeoutS[0:0], run[0:0] ;;
+	         M1[0:0], M1[1:1], M1[2:2], X1[0:0], X2[0:0], X3[0:0], 
+	         X4[0:0], X5[0:0], T9[0:0] ) ;
+	.call FF_SR_EN1 FF_SR_EN (newST[0:0]_in, newST[0:0]_en, CLK, 0, 
+	         RESET ;;StartTimer[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (0, newFL[2:2]_en, CLK, 0, RESET ;;
+	         FarmL[2:2] ) ;
+	.call FF_SR_EN3 FF_SR_EN (newFL[1:1]_in, newFL[1:1]_en, CLK, 0, 
+	         RESET ;;FarmL[1:1] ) ;
+	.call FF_SR_EN4 FF_SR_EN (newFL[0:0]_in, newFL[0:0]_en, CLK, 0, 
+	         RESET ;;FarmL[0:0] ) ;
+	.call FF_SR_EN5 FF_SR_EN (0, newHL[2:2]_en, CLK, 0, RESET ;;
+	         HiWayL[2:2] ) ;
+	.call FF_SR_EN6 FF_SR_EN (newHL[1:1]_in, newHL[1:1]_en, CLK, 0, 
+	         RESET ;;HiWayL[1:1] ) ;
+	.call FF_SR_EN7 FF_SR_EN (newHL[0:0]_in, newHL[0:0]_en, CLK, 0, 
+	         RESET ;;HiWayL[0:0] ) ;
+	.call FF_SR_EN8 FF_SR_EN (state[2:2]_in, state[2:2]_en, CLK, 0, 
+	         RESET ;;state[2:2] ) ;
+	.call FF_SR_EN9 FF_SR_EN (state[1:1]_in, state[1:1]_en, CLK, 0, 
+	         RESET ;;state[1:1] ) ;
+	.call FF_SR_EN10 FF_SR_EN (state[0:0]_in, state[0:0]_en, CLK, 0, 
+	         RESET ;;state[0:0] ) ;
+	.call TcL1_1[1] FF_EN (DN', 1, CLK, RESET ;;RQ1_2' ) ;
+	.call Sw1_3 FF_EN (Sw1_3_i, 1, CLK, RESET ;;Sr1_3' ) ;
+	.call FF_EN.1_3_La FF_EN (AK1_3, 1, CLK, RESET ;;Lak1_3 ) ;
+	.call CMOS3_1660_state[1:1]_in CMOS3_1660 (M1[1:1], RQ2_3 ;;
+	         state[1:1]_in ) ;
+	.call CMOS3_1660_newFL[1:1]_in CMOS3_1660 (X2[0:0], RQ2_3 ;;
+	         newFL[1:1]_in ) ;
+	.call CMOS3_1660_newST[0:0]_in CMOS3_1660 (X1[0:0], RQ2_3 ;;
+	         newST[0:0]_in ) ;
+	.call CMOS3_1660_state[0:0]_in CMOS3_1660 (M1[0:0], RQ2_3 ;;
+	         state[0:0]_in ) ;
+	.call CMOS3_1660_newFL[0:0]_in CMOS3_1660 (X3[0:0], RQ2_3 ;;
+	         newFL[0:0]_in ) ;
+	.call CMOS3_1660_state[2:2]_in CMOS3_1660 (M1[2:2], RQ2_3 ;;
+	         state[2:2]_in ) ;
+	.call CMOS3_1660_newHL[0:0]_in CMOS3_1660 (X5[0:0], RQ2_3 ;;
+	         newHL[0:0]_in ) ;
+	.call CMOS3_1660_AK1_3 CMOS3_1660 (T9[0:0], RQ2_3 ;;AK1_3 ) ;
+	.call CMOS3_1660_newHL[1:1]_in CMOS3_1660 (X4[0:0], RQ2_3 ;;
+	         newHL[1:1]_in ) ;
+	.call CMOS3_1120_RQ2_3 CMOS3_1120 (RQ1_3', Lak1_3 ;;RQ2_3 ) ;
+	.call CMOS3_1120_Sw1_3_i CMOS3_1120 (zz_0', DN ;;Sw1_3_i ) ;
+	.call CMOS3_1310_DN CMOS3_1310 (DN ;;DN' ) ;
+
+.endmodel traffic ;
+
+
+.model traffic_1 ;
+
+	.date 910109112220 ;	# January 9 1991, 11:22.20
+
+	.inputs  state[0:0] state[1:1] state[2:2] Cars[0:0] TimeoutL[0:0] 
+	         TimeoutS[0:0] run[0:0] ;
+	.outputs M1[0:0] M1[1:1] M1[2:2] X1[0:0] X2[0:0] X3[0:0] X4[0:0] 
+	         X5[0:0] T9[0:0] ;
+	.net M1[2:2] 0 ;
+	.net T9[0:0]' run[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1130_V000_T1_0_2[0:0] CMOS3_1130 (state[2:2], state[1:1], 
+	         state[0:0] ;;V000_T1_0_2[0:0] ) ;
+	.call CMOS3_1130_V010_T1_0_2[0:0] CMOS3_1130 (state[1:1]', 
+	         state[2:2], state[0:0] ;;V010_T1_0_2[0:0] ) ;
+	.call CMOS3_1130_V100_T1_0_2[0:0] CMOS3_1130 (state[0:0]', 
+	         state[2:2], state[1:1] ;;V100_T1_0_2[0:0] ) ;
+	.call CMOS3_1230_X3[0:0] CMOS3_1230 (V000_T1_0_2[0:0]', 
+	         V100_T1_0_2[0:0]', V010_T1_0_2[0:0]' ;;X3[0:0] ) ;
+	.call CMOS3_1230_X2[0:0] CMOS3_1230 (V000_T1_0_2[0:0]', 
+	         V100_T1_0_2[0:0]', V110_T1_0_2[0:0]' ;;X2[0:0] ) ;
+	.call CMOS3_1230_X5[0:0] CMOS3_1230 (V000_T1_0_2[0:0]', 
+	         V010_T1_0_2[0:0]', V110_T1_0_2[0:0]' ;;X5[0:0] ) ;
+	.call CMOS3_1230_X4[0:0] CMOS3_1230 (V100_T1_0_2[0:0]', 
+	         V010_T1_0_2[0:0]', V110_T1_0_2[0:0]' ;;X4[0:0] ) ;
+	.call CMOS3_1230_M1[1:1] CMOS3_1230 (V100_T1_0_2[0:0]', 
+	         V010_T1_0_2[0:0]', zz_2' ;;M1[1:1] ) ;
+	.call CMOS3_1620_T4[0:0] CMOS3_1620 (TimeoutL[0:0], Cars[0:0] ;;
+	         T4[0:0] ) ;
+	.call CMOS3_1120_zz_19 CMOS3_1120 (V000_T1_0_2[0:0]', X8[0:0]' ;;
+	         zz_19 ) ;
+	.call CMOS3_1120_zz_18 CMOS3_1120 (V100_T1_0_2[0:0]', TimeoutS[0:0] ;;
+	         zz_18 ) ;
+	.call CMOS3_1120_zz_16 CMOS3_1120 (V010_T1_0_2[0:0]', T4[0:0]' ;;
+	         zz_16 ) ;
+	.call CMOS3_1120_zz_15 CMOS3_1120 (V110_T1_0_2[0:0]', TimeoutS[0:0] ;;
+	         zz_15 ) ;
+	.call CMOS3_1310_V000_T1_0_2[0:0] CMOS3_1310 (V000_T1_0_2[0:0] ;;
+	         V000_T1_0_2[0:0]' ) ;
+	.call CMOS3_1310_V110_T1_0_2[0:0] CMOS3_1310 (V110_T1_0_2[0:0] ;;
+	         V110_T1_0_2[0:0]' ) ;
+	.call CMOS3_1310_X8[0:0] CMOS3_1310 (X8[0:0] ;;X8[0:0]' ) ;
+	.call CMOS3_1310_state[2:2] CMOS3_1310 (state[2:2] ;;state[2:2]' ) ;
+	.call CMOS3_1310_state[0:0] CMOS3_1310 (state[0:0] ;;state[0:0]' ) ;
+	.call CMOS3_1310_V010_T1_0_2[0:0] CMOS3_1310 (V010_T1_0_2[0:0] ;;
+	         V010_T1_0_2[0:0]' ) ;
+	.call CMOS3_1310_T4[0:0] CMOS3_1310 (T4[0:0] ;;T4[0:0]' ) ;
+	.call CMOS3_1310_V100_T1_0_2[0:0] CMOS3_1310 (V100_T1_0_2[0:0] ;;
+	         V100_T1_0_2[0:0]' ) ;
+	.call CMOS3_1310_state[1:1] CMOS3_1310 (state[1:1] ;;state[1:1]' ) ;
+	.call CMOS3_1220_X1[0:0] CMOS3_1220 (zz_8', zz_5' ;;X1[0:0] ) ;
+	.call CMOS3_1760_zz_2 CMOS3_1760 (V110_T1_0_2[0:0]', TimeoutS[0:0] ;;
+	         zz_2' ) ;
+	.call CMOS3_1870_zz_8 CMOS3_1870 (V000_T1_0_2[0:0], X8[0:0], 
+	         V100_T1_0_2[0:0], TimeoutS[0:0] ;;zz_8' ) ;
+	.call CMOS3_1870_zz_5 CMOS3_1870 (V010_T1_0_2[0:0], T4[0:0], 
+	         V110_T1_0_2[0:0], TimeoutS[0:0] ;;zz_5' ) ;
+	.call CMOS3_1660_X8[0:0] CMOS3_1660 (Cars[0:0], TimeoutL[0:0] ;;
+	         X8[0:0] ) ;
+	.call CMOS3_1740_M1[0:0] CMOS3_1740 (zz_19, zz_18, zz_16, zz_15 ;;
+	         M1[0:0] ) ;
+	.call CMOS3_1670_V110_T1_0_2[0:0] CMOS3_1670 (state[0:0], 
+	         state[2:2]', state[1:1] ;;V110_T1_0_2[0:0] ) ;
+
+.endmodel traffic_1 ;
+
+
+.model FF_EN ;
+
+	.date 910109112230 ;	# January 9 1991, 11:22.30
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1830_dout CMOS3_1830 (latchin, clk ;;dout, dout' ) ;
+	.call CMOS3_1970_latchin CMOS3_1970 (dout, zz_3, din, zz_1 ;;
+	         latchin ) ;
+	.call CMOS3_1610_zz_1 CMOS3_1610 (res, den ;;zz_1 ) ;
+	.call CMOS3_1120_zz_3 CMOS3_1120 (den, res ;;zz_3 ) ;
+
+.endmodel FF_EN ;
+
+
+.model FF_SR_EN ;
+
+	.date 910109112254 ;	# January 9 1991, 11:22.54
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1830_dout CMOS3_1830 (latchin, clk ;;dout, dout' ) ;
+	.call CMOS3_1760_latchin CMOS3_1760 (set, zz_0 ;;latchin ) ;
+	.call CMOS3_1610_zz_0 CMOS3_1610 (res, zz_1 ;;zz_0 ) ;
+	.call CMOS3_1350_zz_1 CMOS3_1350 (din, dout, den ;;zz_1 ) ;
+
+.endmodel FF_SR_EN ;
+

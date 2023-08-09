@@ -1,0 +1,7 @@
+echo rs ../tech/cmos3 >.slifrc
+echo r $1 >>.slifrc
+echo set depth 5 >>.slifrc
+echo map >>.slifrc
+echo "ps >mapped/$1_mapped.slif" >>.slifrc
+echo q >>.slifrc
+ceres

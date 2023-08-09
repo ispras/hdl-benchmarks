@@ -1,0 +1,45 @@
+
+.model cc ;
+
+	.date 910103085110 ;	# January 3 1991, 08:51.10
+
+	.inputs  a b c d e f g h i j k l m o p q r s t u v ;
+	.outputs w x y z a0 b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 ;
+	.net t' a0 ;
+	.net u b0 ;
+	.net q c0 ;
+	.net s d0 ;
+	.net r e0 ;
+	.net g0 f0' ;
+	.net p h0 ;
+
+	w = v l ;
+	x = q p' k i ;
+	y = l1' h2' + p h2' ;
+	z = q i2' ;
+	i0 = l1' m1' + o m1' ;
+	j0 = r1' s1' + p s1' ;
+	k0 = u1' v1' + i' v1' + k' v1' ;
+	l0 = l1' x1' + p' r x1' ;
+	m0 = l1' z1' + s z1' ;
+	n0 = l1' b2' + t b2' ;
+	o0 = l1' d2' + u d2' ;
+	p0 = l1' f2' + v f2' ;
+	l1 = i' + k' + q ;
+	h2 = l + m' ;
+	i2 = i' + k' + m' + p ;
+	m1 = m' + a' i k q' ;
+	r1 = i' + k' + q' ;
+	s1 = m' + b i k q' ;
+	u1 = c' + q ;
+	v1 = m' + i' q' + k' q' ;
+	x1 = m' + d' i k q' ;
+	z1 = m' + e' i k q' ;
+	b2 = m' + f' i k q' ;
+	d2 = m' + g' i k q' ;
+	f2 = m' + h' i k q' ;
+	g0 = ( j i )' ;
+
+
+.endmodel cc ;
+

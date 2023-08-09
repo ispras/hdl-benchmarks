@@ -1,0 +1,28 @@
+
+.model CM163 ;
+
+	.date 910103085119 ;	# January 3 1991, 08:51.19
+
+	.inputs  a b c d e f g h i j k l m n o p ;
+	.outputs q r s t u ;
+
+	q = g0' h0' + a' h0' + g0' i0' + a' i0' ;
+	r = g0' h0' + b' h0' + g0' j0' + b' j0' ;
+	s = g0' h0' + g' h0' + g0' n0' + g' n0' ;
+	t = g0' h0' + h' h0' + g0' o0' + h' o0' ;
+	u = p0' d ;
+	g0 = e' f ;
+	i0 = l0 j' + l0' j ;
+	h0 = e f ;
+	j0 = m0' l' + m0 l ;
+	n0 = q0' m' + q0 m ;
+	o0 = r0' n' + r0 n ;
+	p0 = p' + i' + k' + o' ;
+	l0 = d' + c' ;
+	m0 = j' l0' ;
+	q0 = l0' j' l' ;
+	r0 = m' l0' j' l' ;
+
+
+.endmodel CM163 ;
+

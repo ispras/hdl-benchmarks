@@ -1,0 +1,20 @@
+.model source.pla
+.inputs EX_INSpass byteEX s1 s0 phi3
+.outputs ex3 ex2 ex1 ex0 ins3 ins2 ins1 ins0
+.names EX_INSpass byteEX s1 s0 phi3 ex3
+01111 1
+.names EX_INSpass byteEX s1 s0 phi3 ex2
+01101 1
+.names EX_INSpass byteEX s1 s0 phi3 ex1
+01011 1
+.names EX_INSpass byteEX s1 s0 phi3 ex0
+01001 1
+.names EX_INSpass byteEX s1 s0 phi3 ins3
+00111 1
+.names EX_INSpass byteEX s1 s0 phi3 ins2
+00101 1
+.names EX_INSpass byteEX s1 s0 phi3 ins1
+00011 1
+.names EX_INSpass byteEX s1 s0 phi3 ins0
+00001 1
+.end

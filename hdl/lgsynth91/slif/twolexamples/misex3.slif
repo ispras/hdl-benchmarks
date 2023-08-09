@@ -1,0 +1,2099 @@
+
+.model misex3.pla ;
+
+	.date 910103091120 ;	# January 3 1991, 09:11.20
+
+	.inputs  a b c d e f g h i j k l m n ;
+	.outputs r2 s2 t2 u2 n2 o2 p2 q2 h2 i2 j2 k2 m2 l2 ;
+
+	[2910] = c e' f h k l' m' n' ;
+	[2911] = c d' f h k l' m' n' ;
+	[2912] = c e' f h j k' m' n' ;
+	[2913] = c d' f h j k' m' n' ;
+	[2914] = c e' f h j' k m' n' ;
+	[2915] = c d' f h j' k m' n' ;
+	[2916] = c e' f h i' k m' n' ;
+	[2917] = c d' f h i' k m' n' ;
+	[2918] = c e' f h' i k m' n' ;
+	[2919] = c d' f h' i k m' n' ;
+	[2920] = a' b e g' h k m n' ;
+	[2921] = a' b e h k l' m n' ;
+	[2922] = c d e f' h k l' m' n' ;
+	[2923] = c d e f' h j k' m' n' ;
+	[2924] = c d e f' h j' k m' n' ;
+	[2925] = c d e f' h i' k m' n' ;
+	[2926] = c d e f' h' i k m' n' ;
+	[2927] = c e' f h' i j' l m' n' ;
+	[2928] = c d' f h' i j' l m' n' ;
+	[2929] = b d' e f' g' h k m n' ;
+	[2930] = b d e' f h k l' m' n ;
+	[2931] = b d' e f' h k l' m n' ;
+	[2932] = b e' f g' h k l' m' n ;
+	[2933] = b d e' f h j k' m' n ;
+	[2934] = b e' f g' h j k' m' n ;
+	[2935] = b d e' f h j' k m' n ;
+	[2936] = b e' f g' h j' k m' n ;
+	[2937] = b d e' f h i' k m' n ;
+	[2938] = b e' f g' h i' k m' n ;
+	[2939] = b d e' f h' i k m' n ;
+	[2940] = b e' f g' h' i k m' n ;
+	[2941] = a' b e g j k' l m n' ;
+	[2942] = a' b e g j' k l' m n' ;
+	[2943] = a' b e g i k l' m n' ;
+	[2944] = a' b e g i j' k m n' ;
+	[2945] = a' b e g i' j l m n' ;
+	[2946] = a' b e g i' j k' m n' ;
+	[2947] = a' b e g h j l' m n' ;
+	[2948] = a' b e g' h j' l m n' ;
+	[2949] = a' b e g h i' l m n' ;
+	[2950] = a' b e g h' i l m n' ;
+	[2951] = c d e f' h' i j' l m' n' ;
+	[2952] = b d' e f' g j k' l m n' ;
+	[2953] = b d' e f' g j' k l' m n' ;
+	[2954] = b d' e f' g i k l' m n' ;
+	[2955] = b d' e f' g i j' k m n' ;
+	[2956] = b d' e f' g i' j l m n' ;
+	[2957] = b d' e f' g i' j k' m n' ;
+	[2958] = b c d' e f' h k l' m' n ;
+	[2959] = b d' e f g h k l' m' n ;
+	[2960] = b c e f' g h k l' m' n ;
+	[2961] = b c d' e' g h k l' m' n ;
+	[2962] = b c' d f g h k l' m' n ;
+	[2963] = b c e f' g' h k l' m' n ;
+	[2964] = b c' d f g' h k l' m' n ;
+	[2965] = b d' e f' g h j l' m n' ;
+	[2966] = b c d' e f' h j k' m' n ;
+	[2967] = b d' e f g h j k' m' n ;
+	[2968] = b c e f' g h j k' m' n ;
+	[2969] = b c d' e' g h j k' m' n ;
+	[2970] = b c' d f g h j k' m' n ;
+	[2971] = b c e f' g' h j k' m' n ;
+	[2972] = b c' d f g' h j k' m' n ;
+	[2973] = b d' e f' g' h j' l m n' ;
+	[2974] = b c d' e f' h j' k m' n ;
+	[2975] = b d' e f g h j' k m' n ;
+	[2976] = b c e f' g h j' k m' n ;
+	[2977] = b c d' e' g h j' k m' n ;
+	[2978] = b c' d f g h j' k m' n ;
+	[2979] = b c e f' g' h j' k m' n ;
+	[2980] = b c' d f g' h j' k m' n ;
+	[2981] = b d' e f' g h i' l m n' ;
+	[2982] = b c d' e f' h i' k m' n ;
+	[2983] = b d' e f g h i' k m' n ;
+	[2984] = b c e f' g h i' k m' n ;
+	[2985] = b c d' e' g h i' k m' n ;
+	[2986] = b c' d f g h i' k m' n ;
+	[2987] = b c e f' g' h i' k m' n ;
+	[2988] = b c' d f g' h i' k m' n ;
+	[2989] = b d' e f' g h' i l m n' ;
+	[2990] = b c d' e f' h' i k m' n ;
+	[2991] = b d' e f g h' i k m' n ;
+	[2992] = b c e f' g h' i k m' n ;
+	[2993] = b c d' e' g h' i k m' n ;
+	[2994] = b c' d f g h' i k m' n ;
+	[2995] = b c e f' g' h' i k m' n ;
+	[2996] = b c' d f g' h' i k m' n ;
+	[2997] = b d e' f h' i j' l m' n ;
+	[2998] = b e' f g' h' i j' l m' n ;
+	[2999] = a b d e' f g' h k m n' ;
+	[3000] = a b d e' f' g' h k m n' ;
+	[3001] = a b c d' e g' h k m n' ;
+	[3002] = a b c' d e' g' h k m n' ;
+	[3003] = a b d e' f h k l' m n' ;
+	[3004] = a b d e' f' h k l' m n' ;
+	[3005] = a b c d' e h k l' m n' ;
+	[3006] = a b c' d e' h k l' m n' ;
+	[3007] = b c d' e f' h' i j' l m' n ;
+	[3008] = b d' e f g h' i j' l m' n ;
+	[3009] = b c e f' g h' i j' l m' n ;
+	[3010] = b c d' e' g h' i j' l m' n ;
+	[3011] = b c' d f g h' i j' l m' n ;
+	[3012] = b c e f' g' h' i j' l m' n ;
+	[3013] = b c' d f g' h' i j' l m' n ;
+	[3014] = a b d e' f g j k' l m n' ;
+	[3015] = a b d e' f' g j k' l m n' ;
+	[3016] = a b c d' e g j k' l m n' ;
+	[3017] = a b c' d e' g j k' l m n' ;
+	[3018] = a b d e' f g j' k l' m n' ;
+	[3019] = a b d e' f' g j' k l' m n' ;
+	[3020] = a b c d' e g j' k l' m n' ;
+	[3021] = a b c' d e' g j' k l' m n' ;
+	[3022] = a b d e' f g i k l' m n' ;
+	[3023] = a b d e' f' g i k l' m n' ;
+	[3024] = a b c d' e g i k l' m n' ;
+	[3025] = a b c' d e' g i k l' m n' ;
+	[3026] = a b d e' f g i j' k m n' ;
+	[3027] = a b d e' f' g i j' k m n' ;
+	[3028] = a b c d' e g i j' k m n' ;
+	[3029] = a b c' d e' g i j' k m n' ;
+	[3030] = a b d e' f g i' j l m n' ;
+	[3031] = a b d e' f' g i' j l m n' ;
+	[3032] = a b c d' e g i' j l m n' ;
+	[3033] = a b c' d e' g i' j l m n' ;
+	[3034] = a b d e' f g i' j k' m n' ;
+	[3035] = a b d e' f' g i' j k' m n' ;
+	[3036] = a b c d' e g i' j k' m n' ;
+	[3037] = a b c' d e' g i' j k' m n' ;
+	[3038] = a b c' d' e f g' h k m n' ;
+	[3039] = a b c' d' e f h k l' m n' ;
+	[3040] = a b d e' f g h j l' m n' ;
+	[3041] = a b d e' f' g h j l' m n' ;
+	[3042] = a b c d' e g h j l' m n' ;
+	[3043] = a b c' d e' g h j l' m n' ;
+	[3044] = a b d e' f g' h j' l m n' ;
+	[3045] = a b d e' f' g' h j' l m n' ;
+	[3046] = a b c d' e g' h j' l m n' ;
+	[3047] = a b c' d e' g' h j' l m n' ;
+	[3048] = a b d e' f g h i' l m n' ;
+	[3049] = a b d e' f' g h i' l m n' ;
+	[3050] = a b c d' e g h i' l m n' ;
+	[3051] = a b c' d e' g h i' l m n' ;
+	[3052] = a b d e' f g h' i l m n' ;
+	[3053] = a b d e' f' g h' i l m n' ;
+	[3054] = a b c d' e g h' i l m n' ;
+	[3055] = a b c' d e' g h' i l m n' ;
+	[3056] = a b c' d' e f g j k' l m n' ;
+	[3057] = a b c' d' e f g j' k l' m n' ;
+	[3058] = a b c' d' e f g i k l' m n' ;
+	[3059] = a b c' d' e f g i j' k m n' ;
+	[3060] = a b c' d' e f g i' j l m n' ;
+	[3061] = a b c' d' e f g i' j k' m n' ;
+	[3062] = a b c' d' e f g h j l' m n' ;
+	[3063] = a b c' d' e f g' h j' l m n' ;
+	[3064] = a b c' d' e f g h i' l m n' ;
+	[3065] = a b c' d' e f g h' i l m n' ;
+	[3066] = c' d f h k l' m' n' ;
+	[3067] = c' d f h j k' m' n' ;
+	[3068] = c' d f h j' k m' n' ;
+	[3069] = c' d f h i' k m' n' ;
+	[3070] = c' d f h' i k m' n' ;
+	[3071] = b' c f h k l' m' n ;
+	[3072] = b' c f h j k' m' n ;
+	[3073] = b' c f h j' k m' n ;
+	[3074] = b' c f h i' k m' n ;
+	[3075] = b' c f h' i k m' n ;
+	[3076] = c d e f' h k l' m' n' ;
+	[3077] = c d e' f h k l' m' n' ;
+	[3078] = c e' f g' h k l' m' n ;
+	[3079] = c d e f' h j k' m' n' ;
+	[3080] = c d e' f h j k' m' n' ;
+	[3081] = c e' f g' h j k' m' n ;
+	[3082] = c d e f' h j' k m' n' ;
+	[3083] = c d e' f h j' k m' n' ;
+	[3084] = c e' f g' h j' k m' n ;
+	[3085] = c d e f' h i' k m' n' ;
+	[3086] = c d e' f h i' k m' n' ;
+	[3087] = c e' f g' h i' k m' n ;
+	[3088] = c d e f' h' i k m' n' ;
+	[3089] = c d e' f h' i k m' n' ;
+	[3090] = c e' f g' h' i k m' n ;
+	[3091] = c' d f h' i j' l m' n' ;
+	[3092] = b' c f h' i j' l m' n ;
+	[3093] = a c' d f g' h k m n' ;
+	[3094] = a c' d e' g' h k m n' ;
+	[3095] = a c' d f h k l' m n' ;
+	[3096] = a c' d e' h k l' m n' ;
+	[3097] = a' b d e g' h k m n' ;
+	[3098] = a' b d e h k l' m n' ;
+	[3099] = c d e f' h' i j' l m' n' ;
+	[3100] = c d e' f h' i j' l m' n' ;
+	[3101] = c e' f g' h' i j' l m' n ;
+	[3102] = b c d e' f h k l' m' n ;
+	[3103] = b c d' e f' h k l' m' n ;
+	[3104] = b c e f' g h k l' m' n ;
+	[3105] = b c e f' g' h k l' m' n ;
+	[3106] = b c d e' f h j k' m' n ;
+	[3107] = b c d' e f' h j k' m' n ;
+	[3108] = b c e f' g h j k' m' n ;
+	[3109] = b c e f' g' h j k' m' n ;
+	[3110] = b c d e' f h j' k m' n ;
+	[3111] = b c d' e f' h j' k m' n ;
+	[3112] = b c e f' g h j' k m' n ;
+	[3113] = b c e f' g' h j' k m' n ;
+	[3114] = b c d e' f h i' k m' n ;
+	[3115] = b c d' e f' h i' k m' n ;
+	[3116] = b c e f' g h i' k m' n ;
+	[3117] = b c e f' g' h i' k m' n ;
+	[3118] = b c d e' f h' i k m' n ;
+	[3119] = b c d' e f' h' i k m' n ;
+	[3120] = b c e f' g h' i k m' n ;
+	[3121] = b c e f' g' h' i k m' n ;
+	[3122] = a c' d f g j k' l m n' ;
+	[3123] = a c' d e' g j k' l m n' ;
+	[3124] = a c' d f g j' k l' m n' ;
+	[3125] = a c' d e' g j' k l' m n' ;
+	[3126] = a c' d f g i k l' m n' ;
+	[3127] = a c' d e' g i k l' m n' ;
+	[3128] = a c' d f g i j' k m n' ;
+	[3129] = a c' d e' g i j' k m n' ;
+	[3130] = a c' d f g i' j l m n' ;
+	[3131] = a c' d e' g i' j l m n' ;
+	[3132] = a c' d f g i' j k' m n' ;
+	[3133] = a c' d e' g i' j k' m n' ;
+	[3134] = a c' d f g h j l' m n' ;
+	[3135] = a c' d e' g h j l' m n' ;
+	[3136] = a c' d f g' h j' l m n' ;
+	[3137] = a c' d e' g' h j' l m n' ;
+	[3138] = a c' d f g h i' l m n' ;
+	[3139] = a c' d e' g h i' l m n' ;
+	[3140] = a c' d f g h' i l m n' ;
+	[3141] = a c' d e' g h' i l m n' ;
+	[3142] = a b d e' f g' h k m n' ;
+	[3143] = a b d e' f' g' h k m n' ;
+	[3144] = a b d e' f h k l' m n' ;
+	[3145] = a b d e' f' h k l' m n' ;
+	[3146] = a b' c e' f g' h k m n' ;
+	[3147] = a b' c e' f h k l' m n' ;
+	[3148] = a' b d e g j k' l m n' ;
+	[3149] = a' b d e g j' k l' m n' ;
+	[3150] = a' b d e g i k l' m n' ;
+	[3151] = a' b d e g i j' k m n' ;
+	[3152] = a' b d e g i' j l m n' ;
+	[3153] = a' b d e g i' j k' m n' ;
+	[3154] = a' b d e g h j l' m n' ;
+	[3155] = a' b d e g' h j' l m n' ;
+	[3156] = a' b d e g h i' l m n' ;
+	[3157] = a' b d e g h' i l m n' ;
+	[3158] = b c d' e' f g h k l' m' n ;
+	[3159] = b c d' e' f g h j k' m' n ;
+	[3160] = b c d' e' f g h j' k m' n ;
+	[3161] = b c d' e' f g h i' k m' n ;
+	[3162] = b c d' e' f g h' i k m' n ;
+	[3163] = b c d e' f h' i j' l m' n ;
+	[3164] = b c d' e f' h' i j' l m' n ;
+	[3165] = b c e f' g h' i j' l m' n ;
+	[3166] = b c e f' g' h' i j' l m' n ;
+	[3167] = a b d e' f g j k' l m n' ;
+	[3168] = a b d e' f' g j k' l m n' ;
+	[3169] = a b d e' f g j' k l' m n' ;
+	[3170] = a b d e' f' g j' k l' m n' ;
+	[3171] = a b d e' f g i k l' m n' ;
+	[3172] = a b d e' f' g i k l' m n' ;
+	[3173] = a b d e' f g i j' k m n' ;
+	[3174] = a b d e' f' g i j' k m n' ;
+	[3175] = a b d e' f g i' j l m n' ;
+	[3176] = a b d e' f' g i' j l m n' ;
+	[3177] = a b d e' f g i' j k' m n' ;
+	[3178] = a b d e' f' g i' j k' m n' ;
+	[3179] = a b d e' f g h j l' m n' ;
+	[3180] = a b d e' f' g h j l' m n' ;
+	[3181] = a b d e' f g' h j' l m n' ;
+	[3182] = a b d e' f' g' h j' l m n' ;
+	[3183] = a b d e' f g h i' l m n' ;
+	[3184] = a b d e' f' g h i' l m n' ;
+	[3185] = a b d e' f g h' i l m n' ;
+	[3186] = a b d e' f' g h' i l m n' ;
+	[3187] = a b' c e' f g j k' l m n' ;
+	[3188] = a b' c e' f g j' k l' m n' ;
+	[3189] = a b' c e' f g i k l' m n' ;
+	[3190] = a b' c e' f g i j' k m n' ;
+	[3191] = a b' c e' f g i' j l m n' ;
+	[3192] = a b' c e' f g i' j k' m n' ;
+	[3193] = a b' c d e f g' h k m n' ;
+	[3194] = a b' c d e f' g' h k m n' ;
+	[3195] = a b' c d e f h k l' m n' ;
+	[3196] = a b' c d e f' h k l' m n' ;
+	[3197] = a b' c e' f g h j l' m n' ;
+	[3198] = a b' c e' f g' h j' l m n' ;
+	[3199] = a b' c e' f g h i' l m n' ;
+	[3200] = a b' c e' f g h' i l m n' ;
+	[3201] = b c d' e' f g h' i j' l m' n ;
+	[3202] = a b' c d e f g j k' l m n' ;
+	[3203] = a b' c d e f' g j k' l m n' ;
+	[3204] = a b' c d e f g j' k l' m n' ;
+	[3205] = a b' c d e f' g j' k l' m n' ;
+	[3206] = a b' c d e f g i k l' m n' ;
+	[3207] = a b' c d e f' g i k l' m n' ;
+	[3208] = a b' c d e f g i j' k m n' ;
+	[3209] = a b' c d e f' g i j' k m n' ;
+	[3210] = a b' c d e f g i' j l m n' ;
+	[3211] = a b' c d e f' g i' j l m n' ;
+	[3212] = a b' c d e f g i' j k' m n' ;
+	[3213] = a b' c d e f' g i' j k' m n' ;
+	[3214] = a b' c d e f g h j l' m n' ;
+	[3215] = a b' c d e f' g h j l' m n' ;
+	[3216] = a b' c d e f g' h j' l m n' ;
+	[3217] = a b' c d e f' g' h j' l m n' ;
+	[3218] = a b' c d e f g h i' l m n' ;
+	[3219] = a b' c d e f' g h i' l m n' ;
+	[3220] = a b' c d e f g h' i l m n' ;
+	[3221] = a b' c d e f' g h' i l m n' ;
+	[3222] = c e f' h k l' m' n' ;
+	[3223] = c e f' h j k' m' n' ;
+	[3224] = c e f' h j' k m' n' ;
+	[3225] = c e f' h i' k m' n' ;
+	[3226] = c e f' h' i k m' n' ;
+	[3227] = c d' e f h k l' m' n' ;
+	[3228] = c' d e f h k l' m' n' ;
+	[3229] = c d' e f h j k' m' n' ;
+	[3230] = c' d e f h j k' m' n' ;
+	[3231] = c d' e f h j' k m' n' ;
+	[3232] = c' d e f h j' k m' n' ;
+	[3233] = c d' e f h i' k m' n' ;
+	[3234] = c' d e f h i' k m' n' ;
+	[3235] = c d' e f h' i k m' n' ;
+	[3236] = c' d e f h' i k m' n' ;
+	[3237] = c e f' h' i j' l m' n' ;
+	[3238] = b d' e f' h k l' m' n ;
+	[3239] = b d' e g h k l' m' n ;
+	[3240] = b d' e f' h j k' m' n ;
+	[3241] = b d' e g h j k' m' n ;
+	[3242] = b d' e f' h j' k m' n ;
+	[3243] = b d' e g h j' k m' n ;
+	[3244] = b d' e f' h i' k m' n ;
+	[3245] = b d' e g h i' k m' n ;
+	[3246] = b d' e f' h' i k m' n ;
+	[3247] = b d' e g h' i k m' n ;
+	[3248] = b' c e f h k l' m' n ;
+	[3249] = b' c e f h j k' m' n ;
+	[3250] = b' c e f h j' k m' n ;
+	[3251] = b' c e f h i' k m' n ;
+	[3252] = b' c e f h' i k m' n ;
+	[3253] = a d e' f g' h k m n' ;
+	[3254] = a d e' f h k l' m n' ;
+	[3255] = a' b e f g' h k m n' ;
+	[3256] = a' b d' f g' h k m n' ;
+	[3257] = a' b e f h k l' m n' ;
+	[3258] = a' b d' f h k l' m n' ;
+	[3259] = c d' e f h' i j' l m' n' ;
+	[3260] = c' d e f h' i j' l m' n' ;
+	[3261] = b c e f' g h k l' m' n ;
+	[3262] = b c' d f' g h k l' m' n ;
+	[3263] = b c e f' g' h k l' m' n ;
+	[3264] = b c e f' g h j k' m' n ;
+	[3265] = b c' d f' g h j k' m' n ;
+	[3266] = b c e f' g' h j k' m' n ;
+	[3267] = b c e f' g h j' k m' n ;
+	[3268] = b c' d f' g h j' k m' n ;
+	[3269] = b c e f' g' h j' k m' n ;
+	[3270] = b c e f' g h i' k m' n ;
+	[3271] = b c' d f' g h i' k m' n ;
+	[3272] = b c e f' g' h i' k m' n ;
+	[3273] = b c e f' g h' i k m' n ;
+	[3274] = b c' d f' g h' i k m' n ;
+	[3275] = b c e f' g' h' i k m' n ;
+	[3276] = b d' e f' h' i j' l m' n ;
+	[3277] = b d' e g h' i j' l m' n ;
+	[3278] = b' c e f h' i j' l m' n ;
+	[3279] = a d e' f g j k' l m n' ;
+	[3280] = a d e' f g j' k l' m n' ;
+	[3281] = a d e' f g i k l' m n' ;
+	[3282] = a d e' f g i j' k m n' ;
+	[3283] = a d e' f g i' j l m n' ;
+	[3284] = a d e' f g i' j k' m n' ;
+	[3285] = a c d' e f g' h k m n' ;
+	[3286] = a c d' e f h k l' m n' ;
+	[3287] = a d e' f g h j l' m n' ;
+	[3288] = a d e' f g' h j' l m n' ;
+	[3289] = a d e' f g h i' l m n' ;
+	[3290] = a d e' f g h' i l m n' ;
+	[3291] = a b c' d' f g' h k m n' ;
+	[3292] = a b c' d' f h k l' m n' ;
+	[3293] = a b' c d f g' h k m n' ;
+	[3294] = a b' c' d f g' h k m n' ;
+	[3295] = a b' c d f h k l' m n' ;
+	[3296] = a b' c' d f h k l' m n' ;
+	[3297] = a' b e f g j k' l m n' ;
+	[3298] = a' b d' f g j k' l m n' ;
+	[3299] = a' b e f g j' k l' m n' ;
+	[3300] = a' b d' f g j' k l' m n' ;
+	[3301] = a' b e f g i k l' m n' ;
+	[3302] = a' b d' f g i k l' m n' ;
+	[3303] = a' b e f g i j' k m n' ;
+	[3304] = a' b d' f g i j' k m n' ;
+	[3305] = a' b e f g i' j l m n' ;
+	[3306] = a' b d' f g i' j l m n' ;
+	[3307] = a' b e f g i' j k' m n' ;
+	[3308] = a' b d' f g i' j k' m n' ;
+	[3309] = a' b e f g h j l' m n' ;
+	[3310] = a' b d' f g h j l' m n' ;
+	[3311] = a' b e f g' h j' l m n' ;
+	[3312] = a' b d' f g' h j' l m n' ;
+	[3313] = a' b e f g h i' l m n' ;
+	[3314] = a' b d' f g h i' l m n' ;
+	[3315] = a' b e f g h' i l m n' ;
+	[3316] = a' b d' f g h' i l m n' ;
+	[3317] = b c' d e f g h k l' m' n ;
+	[3318] = b c' d e f g' h k l' m' n ;
+	[3319] = b c' d e f g h j k' m' n ;
+	[3320] = b c' d e f g' h j k' m' n ;
+	[3321] = b c' d e f g h j' k m' n ;
+	[3322] = b c' d e f g' h j' k m' n ;
+	[3323] = b c' d e f g h i' k m' n ;
+	[3324] = b c' d e f g' h i' k m' n ;
+	[3325] = b c' d e f g h' i k m' n ;
+	[3326] = b c' d e f g' h' i k m' n ;
+	[3327] = b c e f' g h' i j' l m' n ;
+	[3328] = b c' d f' g h' i j' l m' n ;
+	[3329] = b c e f' g' h' i j' l m' n ;
+	[3330] = a c d' e f g j k' l m n' ;
+	[3331] = a c d' e f g j' k l' m n' ;
+	[3332] = a c d' e f g i k l' m n' ;
+	[3333] = a c d' e f g i j' k m n' ;
+	[3334] = a c d' e f g i' j l m n' ;
+	[3335] = a c d' e f g i' j k' m n' ;
+	[3336] = a c d' e f g h j l' m n' ;
+	[3337] = a c d' e f g' h j' l m n' ;
+	[3338] = a c d' e f g h i' l m n' ;
+	[3339] = a c d' e f g h' i l m n' ;
+	[3340] = a b c' d' f g j k' l m n' ;
+	[3341] = a b c' d' f g j' k l' m n' ;
+	[3342] = a b c' d' f g i k l' m n' ;
+	[3343] = a b c' d' f g i j' k m n' ;
+	[3344] = a b c' d' f g i' j l m n' ;
+	[3345] = a b c' d' f g i' j k' m n' ;
+	[3346] = a b c' d' f g h j l' m n' ;
+	[3347] = a b c' d' f g' h j' l m n' ;
+	[3348] = a b c' d' f g h i' l m n' ;
+	[3349] = a b c' d' f g h' i l m n' ;
+	[3350] = a b' c d f g j k' l m n' ;
+	[3351] = a b' c' d f g j k' l m n' ;
+	[3352] = a b' c d f g j' k l' m n' ;
+	[3353] = a b' c' d f g j' k l' m n' ;
+	[3354] = a b' c d f g i k l' m n' ;
+	[3355] = a b' c' d f g i k l' m n' ;
+	[3356] = a b' c d f g i j' k m n' ;
+	[3357] = a b' c' d f g i j' k m n' ;
+	[3358] = a b' c d f g i' j l m n' ;
+	[3359] = a b' c' d f g i' j l m n' ;
+	[3360] = a b' c d f g i' j k' m n' ;
+	[3361] = a b' c' d f g i' j k' m n' ;
+	[3362] = a b' c d f g h j l' m n' ;
+	[3363] = a b' c' d f g h j l' m n' ;
+	[3364] = a b' c d f g' h j' l m n' ;
+	[3365] = a b' c' d f g' h j' l m n' ;
+	[3366] = a b' c d f g h i' l m n' ;
+	[3367] = a b' c' d f g h i' l m n' ;
+	[3368] = a b' c d f g h' i l m n' ;
+	[3369] = a b' c' d f g h' i l m n' ;
+	[3370] = b c' d e f g h' i j' l m' n ;
+	[3371] = b c' d e f g' h' i j' l m' n ;
+	[3372] = c e f' g h k l' m' n' ;
+	[3373] = c e' f g h k l' m' n' ;
+	[3374] = c' d f g h k l' m' n' ;
+	[3375] = c' d e' g h k l' m' n' ;
+	[3376] = c e f' g h j k' m' n' ;
+	[3377] = c e' f g h j k' m' n' ;
+	[3378] = c' d f g h j k' m' n' ;
+	[3379] = c' d e' g h j k' m' n' ;
+	[3380] = c e f' g h j' k m' n' ;
+	[3381] = c e' f g h j' k m' n' ;
+	[3382] = c' d f g h j' k m' n' ;
+	[3383] = c' d e' g h j' k m' n' ;
+	[3384] = c e f' g h i' k m' n' ;
+	[3385] = c e' f g h i' k m' n' ;
+	[3386] = c' d f g h i' k m' n' ;
+	[3387] = c' d e' g h i' k m' n' ;
+	[3388] = c e f' g h' i k m' n' ;
+	[3389] = c e' f g h' i k m' n' ;
+	[3390] = c' d f g h' i k m' n' ;
+	[3391] = c' d e' g h' i k m' n' ;
+	[3392] = b e f' g i k l' m n' ;
+	[3393] = b e f' g i j' k m n' ;
+	[3394] = b e f' g h k l' m' n ;
+	[3395] = b e f' g h j k' m' n ;
+	[3396] = b e f' g h j' k m' n ;
+	[3397] = b e f' g' h i k m n' ;
+	[3398] = b e f' g h i' k m' n ;
+	[3399] = b e f' g h' i l m n' ;
+	[3400] = b e f' g h' i k m' n ;
+	[3401] = b' c f g h k l' m' n ;
+	[3402] = b' c e' g h k l' m' n ;
+	[3403] = b' c f g h j k' m' n ;
+	[3404] = b' c e' g h j k' m' n ;
+	[3405] = b' c f g h j' k m' n ;
+	[3406] = b' c e' g h j' k m' n ;
+	[3407] = b' c f g h i' k m' n ;
+	[3408] = b' c e' g h i' k m' n ;
+	[3409] = b' c f g h' i k m' n ;
+	[3410] = b' c e' g h' i k m' n ;
+	[3411] = a' b e g i k l' m n' ;
+	[3412] = a' b e g i j' k m n' ;
+	[3413] = a' b e g' h i k m n' ;
+	[3414] = a' b e g h' i l m n' ;
+	[3415] = c d' e f g h k l' m' n' ;
+	[3416] = c d' e f g h j k' m' n' ;
+	[3417] = c d' e f g h j' k m' n' ;
+	[3418] = c d' e f g h i' k m' n' ;
+	[3419] = c d' e f g h' i k m' n' ;
+	[3420] = c e f' g h' i j' l m' n' ;
+	[3421] = c e' f g h' i j' l m' n' ;
+	[3422] = c' d f g h' i j' l m' n' ;
+	[3423] = c' d e' g h' i j' l m' n' ;
+	[3424] = b e f' g i j k' l m n' ;
+	[3425] = b d e' f g h k l' m' n ;
+	[3426] = b c d' e' g h k l' m' n ;
+	[3427] = b c' d e g h k l' m' n ;
+	[3428] = b c' d' e g h k l' m' n ;
+	[3429] = b d e' f g h j k' m' n ;
+	[3430] = b c d' e' g h j k' m' n ;
+	[3431] = b c' d e g h j k' m' n ;
+	[3432] = b c' d' e g h j k' m' n ;
+	[3433] = b d e' f g h j' k m' n ;
+	[3434] = b c d' e' g h j' k m' n ;
+	[3435] = b c' d e g h j' k m' n ;
+	[3436] = b c' d' e g h j' k m' n ;
+	[3437] = b e f' g h i j l' m n' ;
+	[3438] = b e f' g' h i j' l m n' ;
+	[3439] = b d e' f g h i' k m' n ;
+	[3440] = b c d' e' g h i' k m' n ;
+	[3441] = b c' d e g h i' k m' n ;
+	[3442] = b c' d' e g h i' k m' n ;
+	[3443] = b d e' f g h' i k m' n ;
+	[3444] = b c d' e' g h' i k m' n ;
+	[3445] = b c' d e g h' i k m' n ;
+	[3446] = b c' d' e g h' i k m' n ;
+	[3447] = b e f' g h' i j' l m' n ;
+	[3448] = b' c f g h' i j' l m' n ;
+	[3449] = b' c e' g h' i j' l m' n ;
+	[3450] = a d e' f g i k l' m n' ;
+	[3451] = a d' e f' g i k l' m n' ;
+	[3452] = a c e f' g i k l' m n' ;
+	[3453] = a c d' e g i k l' m n' ;
+	[3454] = a c' d f g i k l' m n' ;
+	[3455] = a c' d e' g i k l' m n' ;
+	[3456] = a d e' f g i j' k m n' ;
+	[3457] = a d' e f' g i j' k m n' ;
+	[3458] = a c e f' g i j' k m n' ;
+	[3459] = a c d' e g i j' k m n' ;
+	[3460] = a c' d f g i j' k m n' ;
+	[3461] = a c' d e' g i j' k m n' ;
+	[3462] = a d e' f g' h i k m n' ;
+	[3463] = a d' e f' g' h i k m n' ;
+	[3464] = a c e f' g' h i k m n' ;
+	[3465] = a c d' e g' h i k m n' ;
+	[3466] = a c' d f g' h i k m n' ;
+	[3467] = a c' d e' g' h i k m n' ;
+	[3468] = a d e' f g h' i l m n' ;
+	[3469] = a d' e f' g h' i l m n' ;
+	[3470] = a c e f' g h' i l m n' ;
+	[3471] = a c d' e g h' i l m n' ;
+	[3472] = a c' d f g h' i l m n' ;
+	[3473] = a c' d e' g h' i l m n' ;
+	[3474] = a b d f' g i k l' m n' ;
+	[3475] = a b c' f g i k l' m n' ;
+	[3476] = a b d f' g i j' k m n' ;
+	[3477] = a b c' f g i j' k m n' ;
+	[3478] = a b d f' g' h i k m n' ;
+	[3479] = a b c' f g' h i k m n' ;
+	[3480] = a b d f' g h' i l m n' ;
+	[3481] = a b c' f g h' i l m n' ;
+	[3482] = a b' c f g i k l' m n' ;
+	[3483] = a b' c f g i j' k m n' ;
+	[3484] = a b' c f g' h i k m n' ;
+	[3485] = a b' c f g h' i l m n' ;
+	[3486] = a' b d' f g i k l' m n' ;
+	[3487] = a' b e g i j k' l m n' ;
+	[3488] = a' b d' f g i j' k m n' ;
+	[3489] = a' b d' f g' h i k m n' ;
+	[3490] = a' b e g h i j l' m n' ;
+	[3491] = a' b e g' h i j' l m n' ;
+	[3492] = a' b d' f g h' i l m n' ;
+	[3493] = c d' e f g h' i j' l m' n' ;
+	[3494] = b d e' f g h' i j' l m' n ;
+	[3495] = b c d' e' g h' i j' l m' n ;
+	[3496] = b c' d e g h' i j' l m' n ;
+	[3497] = b c' d' e g h' i j' l m' n ;
+	[3498] = a d e' f g i j k' l m n' ;
+	[3499] = a d' e f' g i j k' l m n' ;
+	[3500] = a c e f' g i j k' l m n' ;
+	[3501] = a c d' e g i j k' l m n' ;
+	[3502] = a c' d f g i j k' l m n' ;
+	[3503] = a c' d e' g i j k' l m n' ;
+	[3504] = a d e' f g h i j l' m n' ;
+	[3505] = a d' e f' g h i j l' m n' ;
+	[3506] = a c e f' g h i j l' m n' ;
+	[3507] = a c d' e g h i j l' m n' ;
+	[3508] = a c' d f g h i j l' m n' ;
+	[3509] = a c' d e' g h i j l' m n' ;
+	[3510] = a d e' f g' h i j' l m n' ;
+	[3511] = a d' e f' g' h i j' l m n' ;
+	[3512] = a c e f' g' h i j' l m n' ;
+	[3513] = a c d' e g' h i j' l m n' ;
+	[3514] = a c' d f g' h i j' l m n' ;
+	[3515] = a c' d e' g' h i j' l m n' ;
+	[3516] = a b d f' g i j k' l m n' ;
+	[3517] = a b c' f g i j k' l m n' ;
+	[3518] = a b d f' g h i j l' m n' ;
+	[3519] = a b c' f g h i j l' m n' ;
+	[3520] = a b d f' g' h i j' l m n' ;
+	[3521] = a b c' f g' h i j' l m n' ;
+	[3522] = a b' c f g i j k' l m n' ;
+	[3523] = a b' c f g h i j l' m n' ;
+	[3524] = a b' c f g' h i j' l m n' ;
+	[3525] = a' b d' f g i j k' l m n' ;
+	[3526] = a' b d' f g h i j l' m n' ;
+	[3527] = a' b d' f g' h i j' l m n' ;
+	[3528] = c f g' h j' k m' n ;
+	[3529] = c f g' h j' k m' n' ;
+	[3530] = c e f' h j' k m' n' ;
+	[3531] = c e' f h j' k m' n' ;
+	[3532] = c d' f h j' k m' n' ;
+	[3533] = c' d f h j' k m' n' ;
+	[3534] = c f g' h i' k m' n ;
+	[3535] = c f g' h i' k m' n' ;
+	[3536] = c e f' h i' k m' n' ;
+	[3537] = c e' f h i' k m' n' ;
+	[3538] = c d' f h i' k m' n' ;
+	[3539] = c' d f h i' k m' n' ;
+	[3540] = b' c f h j' k m' n ;
+	[3541] = b' c f h i' k m' n ;
+	[3542] = c' d e' g h j' k m' n' ;
+	[3543] = c f g' h i j k' m' n ;
+	[3544] = c f g' h i j k' m' n' ;
+	[3545] = c e f' h i j k' m' n' ;
+	[3546] = c e' f h i j k' m' n' ;
+	[3547] = c d' f h i j k' m' n' ;
+	[3548] = c' d f h i j k' m' n' ;
+	[3549] = c' d e' g h i' k m' n' ;
+	[3550] = b e f' g i j' k m n' ;
+	[3551] = b e f' g h j' k m' n ;
+	[3552] = b e' f g' h j' k m' n ;
+	[3553] = b d f g' h j' k m' n ;
+	[3554] = b d e' f h j' k m' n ;
+	[3555] = b d' e g h j' k m' n ;
+	[3556] = b d' e f' h j' k m' n ;
+	[3557] = b c e g' h j' k m' n ;
+	[3558] = b c d' g h j' k m' n ;
+	[3559] = b c' d g h j' k m' n ;
+	[3560] = b e f' g h i' k m' n ;
+	[3561] = b e' f g' h i' k m' n ;
+	[3562] = b d f g' h i' k m' n ;
+	[3563] = b d e' f h i' k m' n ;
+	[3564] = b d' e g h i' k m' n ;
+	[3565] = b d' e f' h i' k m' n ;
+	[3566] = b c e g' h i' k m' n ;
+	[3567] = b c d' g h i' k m' n ;
+	[3568] = b c' d g h i' k m' n ;
+	[3569] = b e f' g j' k l' m n' ;
+	[3570] = b' c e' g h j' k m' n ;
+	[3571] = b' c f h i j k' m' n ;
+	[3572] = b' c e' g h i' k m' n ;
+	[3573] = a' b e g i j' k m n' ;
+	[3574] = a' b e g j' k l' m n' ;
+	[3575] = c' d e' g h i j k' m' n' ;
+	[3576] = b e f' g h i j k' m' n ;
+	[3577] = b e' f g' h i j k' m' n ;
+	[3578] = b d f g' h i j k' m' n ;
+	[3579] = b d e' f h i j k' m' n ;
+	[3580] = b d' e g h i j k' m' n ;
+	[3581] = b d' e f' h i j k' m' n ;
+	[3582] = b c e g' h i j k' m' n ;
+	[3583] = b c d' g h i j k' m' n ;
+	[3584] = b c' d g h i j k' m' n ;
+	[3585] = b e f' g h i' j k' m n' ;
+	[3586] = b e f' g i' j k l m n' ;
+	[3587] = b e f' g h j k' l m n' ;
+	[3588] = b e f' g h i' j' l m n' ;
+	[3589] = b e f' g h' i k l m n' ;
+	[3590] = b e f' g h j k' l' m n' ;
+	[3591] = b e f' g h' i k l' m n' ;
+	[3592] = b' c e' g h i j k' m' n ;
+	[3593] = a d e' f g i j' k m n' ;
+	[3594] = a d' e f' g i j' k m n' ;
+	[3595] = a c e f' g i j' k m n' ;
+	[3596] = a c d' e g i j' k m n' ;
+	[3597] = a c' d f g i j' k m n' ;
+	[3598] = a c' d e' g i j' k m n' ;
+	[3599] = a d e' f g j' k l' m n' ;
+	[3600] = a d' e f' g j' k l' m n' ;
+	[3601] = a c e f' g j' k l' m n' ;
+	[3602] = a c d' e g j' k l' m n' ;
+	[3603] = a c' d f g j' k l' m n' ;
+	[3604] = a c' d e' g j' k l' m n' ;
+	[3605] = a b d f' g i j' k m n' ;
+	[3606] = a b c' f g i j' k m n' ;
+	[3607] = a b d f' g j' k l' m n' ;
+	[3608] = a b c' f g j' k l' m n' ;
+	[3609] = a b' c f g i j' k m n' ;
+	[3610] = a b' c f g j' k l' m n' ;
+	[3611] = a' b d' f g i j' k m n' ;
+	[3612] = a' b e g h i' j k' m n' ;
+	[3613] = a' b e g i' j k l m n' ;
+	[3614] = a' b e g h j k' l m n' ;
+	[3615] = a' b e g h i' j' l m n' ;
+	[3616] = a' b e g h' i k l m n' ;
+	[3617] = a' b d' f g j' k l' m n' ;
+	[3618] = a' b e g h j k' l' m n' ;
+	[3619] = a' b e g h' i k l' m n' ;
+	[3620] = a d e' f g h i' j k' m n' ;
+	[3621] = a d' e f' g h i' j k' m n' ;
+	[3622] = a c e f' g h i' j k' m n' ;
+	[3623] = a c d' e g h i' j k' m n' ;
+	[3624] = a c' d f g h i' j k' m n' ;
+	[3625] = a c' d e' g h i' j k' m n' ;
+	[3626] = a d e' f g i' j k l m n' ;
+	[3627] = a d' e f' g i' j k l m n' ;
+	[3628] = a c e f' g i' j k l m n' ;
+	[3629] = a c d' e g i' j k l m n' ;
+	[3630] = a c' d f g i' j k l m n' ;
+	[3631] = a c' d e' g i' j k l m n' ;
+	[3632] = a d e' f g h j k' l m n' ;
+	[3633] = a d' e f' g h j k' l m n' ;
+	[3634] = a c e f' g h j k' l m n' ;
+	[3635] = a c d' e g h j k' l m n' ;
+	[3636] = a c' d f g h j k' l m n' ;
+	[3637] = a c' d e' g h j k' l m n' ;
+	[3638] = a d e' f g h i' j' l m n' ;
+	[3639] = a d' e f' g h i' j' l m n' ;
+	[3640] = a c e f' g h i' j' l m n' ;
+	[3641] = a c d' e g h i' j' l m n' ;
+	[3642] = a c' d f g h i' j' l m n' ;
+	[3643] = a c' d e' g h i' j' l m n' ;
+	[3644] = a d e' f g h' i k l m n' ;
+	[3645] = a d' e f' g h' i k l m n' ;
+	[3646] = a c e f' g h' i k l m n' ;
+	[3647] = a c d' e g h' i k l m n' ;
+	[3648] = a c' d f g h' i k l m n' ;
+	[3649] = a c' d e' g h' i k l m n' ;
+	[3650] = a d e' f g h j k' l' m n' ;
+	[3651] = a d' e f' g h j k' l' m n' ;
+	[3652] = a c e f' g h j k' l' m n' ;
+	[3653] = a c d' e g h j k' l' m n' ;
+	[3654] = a c' d f g h j k' l' m n' ;
+	[3655] = a c' d e' g h j k' l' m n' ;
+	[3656] = a d e' f g h' i k l' m n' ;
+	[3657] = a d' e f' g h' i k l' m n' ;
+	[3658] = a c e f' g h' i k l' m n' ;
+	[3659] = a c d' e g h' i k l' m n' ;
+	[3660] = a c' d f g h' i k l' m n' ;
+	[3661] = a c' d e' g h' i k l' m n' ;
+	[3662] = a b d f' g h i' j k' m n' ;
+	[3663] = a b c' f g h i' j k' m n' ;
+	[3664] = a b d f' g i' j k l m n' ;
+	[3665] = a b c' f g i' j k l m n' ;
+	[3666] = a b d f' g h j k' l m n' ;
+	[3667] = a b c' f g h j k' l m n' ;
+	[3668] = a b d f' g h i' j' l m n' ;
+	[3669] = a b c' f g h i' j' l m n' ;
+	[3670] = a b d f' g h' i k l m n' ;
+	[3671] = a b c' f g h' i k l m n' ;
+	[3672] = a b d f' g h j k' l' m n' ;
+	[3673] = a b c' f g h j k' l' m n' ;
+	[3674] = a b d f' g h' i k l' m n' ;
+	[3675] = a b c' f g h' i k l' m n' ;
+	[3676] = a b' c f g h i' j k' m n' ;
+	[3677] = a b' c f g i' j k l m n' ;
+	[3678] = a b' c f g h j k' l m n' ;
+	[3679] = a b' c f g h i' j' l m n' ;
+	[3680] = a b' c f g h' i k l m n' ;
+	[3681] = a b' c f g h j k' l' m n' ;
+	[3682] = a b' c f g h' i k l' m n' ;
+	[3683] = a' b d' f g h i' j k' m n' ;
+	[3684] = a' b d' f g i' j k l m n' ;
+	[3685] = a' b d' f g h j k' l m n' ;
+	[3686] = a' b d' f g h i' j' l m n' ;
+	[3687] = a' b d' f g h' i k l m n' ;
+	[3688] = a' b d' f g h j k' l' m n' ;
+	[3689] = a' b d' f g h' i k l' m n' ;
+	[3690] = c f g' h' i k m' n ;
+	[3691] = c f g' h' i k m' n' ;
+	[3692] = c e f' h' i k m' n' ;
+	[3693] = c e' f h' i k m' n' ;
+	[3694] = c d' f h' i k m' n' ;
+	[3695] = c' d f h' i k m' n' ;
+	[3696] = b e f' g' h k m n' ;
+	[3697] = b' c f h' i k m' n ;
+	[3698] = a' b e g' h k m n' ;
+	[3699] = c f g' h i j k' m' n ;
+	[3700] = c f g' h i j k' m' n' ;
+	[3701] = c e f' h i j k' m' n' ;
+	[3702] = c e' f h i j k' m' n' ;
+	[3703] = c d' f h i j k' m' n' ;
+	[3704] = c' d f h i j k' m' n' ;
+	[3705] = c f g' h i j' k m' n ;
+	[3706] = c f g' h i j' k m' n' ;
+	[3707] = c e f' h i j' k m' n' ;
+	[3708] = c e' f h i j' k m' n' ;
+	[3709] = c d' f h i j' k m' n' ;
+	[3710] = c' d f h i j' k m' n' ;
+	[3711] = c' d e' g h' i k m' n' ;
+	[3712] = b e f' g h' i k m' n ;
+	[3713] = b e' f g' h' i k m' n ;
+	[3714] = b d f g' h' i k m' n ;
+	[3715] = b d e' f h' i k m' n ;
+	[3716] = b d' e g h' i k m' n ;
+	[3717] = b d' e f' h' i k m' n ;
+	[3718] = b c e g' h' i k m' n ;
+	[3719] = b c d' g h' i k m' n ;
+	[3720] = b c' d g h' i k m' n ;
+	[3721] = b e f' h j' k l' m n' ;
+	[3722] = b' c f h i j k' m' n ;
+	[3723] = b' c f h i j' k m' n ;
+	[3724] = b' c e' g h' i k m' n ;
+	[3725] = a d e' f g' h k m n' ;
+	[3726] = a d' e f' g' h k m n' ;
+	[3727] = a c e f' g' h k m n' ;
+	[3728] = a c d' e g' h k m n' ;
+	[3729] = a c' d f g' h k m n' ;
+	[3730] = a c' d e' g' h k m n' ;
+	[3731] = a b d f' g' h k m n' ;
+	[3732] = a b c' f g' h k m n' ;
+	[3733] = a b' c f g' h k m n' ;
+	[3734] = a' b d' f g' h k m n' ;
+	[3735] = a' b e h j' k l' m n' ;
+	[3736] = c' d e' g h i j k' m' n' ;
+	[3737] = c' d e' g h i j' k m' n' ;
+	[3738] = b e f' g h i j k' m' n ;
+	[3739] = b e' f g' h i j k' m' n ;
+	[3740] = b d f g' h i j k' m' n ;
+	[3741] = b d e' f h i j k' m' n ;
+	[3742] = b d' e g h i j k' m' n ;
+	[3743] = b d' e f' h i j k' m' n ;
+	[3744] = b c e g' h i j k' m' n ;
+	[3745] = b c d' g h i j k' m' n ;
+	[3746] = b c' d g h i j k' m' n ;
+	[3747] = b e f' g h i j' k m n' ;
+	[3748] = b e f' g h i j' k m' n ;
+	[3749] = b e' f g' h i j' k m' n ;
+	[3750] = b d f g' h i j' k m' n ;
+	[3751] = b d e' f h i j' k m' n ;
+	[3752] = b d' e g h i j' k m' n ;
+	[3753] = b d' e f' h i j' k m' n ;
+	[3754] = b c e g' h i j' k m' n ;
+	[3755] = b c d' g h i j' k m' n ;
+	[3756] = b c' d g h i j' k m' n ;
+	[3757] = b e f' g h i' j k' m n' ;
+	[3758] = b e f' g h j k' l m n' ;
+	[3759] = b e f' g h j k' l' m n' ;
+	[3760] = b' c e' g h i j k' m' n ;
+	[3761] = b' c e' g h i j' k m' n ;
+	[3762] = a d e' f h j' k l' m n' ;
+	[3763] = a d' e f' h j' k l' m n' ;
+	[3764] = a c e f' h j' k l' m n' ;
+	[3765] = a c d' e h j' k l' m n' ;
+	[3766] = a c' d f h j' k l' m n' ;
+	[3767] = a c' d e' h j' k l' m n' ;
+	[3768] = a b d f' h j' k l' m n' ;
+	[3769] = a b c' f h j' k l' m n' ;
+	[3770] = a b' c f h j' k l' m n' ;
+	[3771] = a' b e g h i j' k m n' ;
+	[3772] = a' b e g h i' j k' m n' ;
+	[3773] = a' b e g h j k' l m n' ;
+	[3774] = a' b e g h j k' l' m n' ;
+	[3775] = a' b d' f h j' k l' m n' ;
+	[3776] = b e f' g h i' j' k l m n' ;
+	[3777] = a d e' f g h i j' k m n' ;
+	[3778] = a d' e f' g h i j' k m n' ;
+	[3779] = a c e f' g h i j' k m n' ;
+	[3780] = a c d' e g h i j' k m n' ;
+	[3781] = a c' d f g h i j' k m n' ;
+	[3782] = a c' d e' g h i j' k m n' ;
+	[3783] = a d e' f g h i' j k' m n' ;
+	[3784] = a d' e f' g h i' j k' m n' ;
+	[3785] = a c e f' g h i' j k' m n' ;
+	[3786] = a c d' e g h i' j k' m n' ;
+	[3787] = a c' d f g h i' j k' m n' ;
+	[3788] = a c' d e' g h i' j k' m n' ;
+	[3789] = a d e' f g h j k' l m n' ;
+	[3790] = a d' e f' g h j k' l m n' ;
+	[3791] = a c e f' g h j k' l m n' ;
+	[3792] = a c d' e g h j k' l m n' ;
+	[3793] = a c' d f g h j k' l m n' ;
+	[3794] = a c' d e' g h j k' l m n' ;
+	[3795] = a d e' f g h j k' l' m n' ;
+	[3796] = a d' e f' g h j k' l' m n' ;
+	[3797] = a c e f' g h j k' l' m n' ;
+	[3798] = a c d' e g h j k' l' m n' ;
+	[3799] = a c' d f g h j k' l' m n' ;
+	[3800] = a c' d e' g h j k' l' m n' ;
+	[3801] = a b d f' g h i j' k m n' ;
+	[3802] = a b c' f g h i j' k m n' ;
+	[3803] = a b d f' g h i' j k' m n' ;
+	[3804] = a b c' f g h i' j k' m n' ;
+	[3805] = a b d f' g h j k' l m n' ;
+	[3806] = a b c' f g h j k' l m n' ;
+	[3807] = a b d f' g h j k' l' m n' ;
+	[3808] = a b c' f g h j k' l' m n' ;
+	[3809] = a b' c f g h i j' k m n' ;
+	[3810] = a b' c f g h i' j k' m n' ;
+	[3811] = a b' c f g h j k' l m n' ;
+	[3812] = a b' c f g h j k' l' m n' ;
+	[3813] = a' b d' f g h i j' k m n' ;
+	[3814] = a' b d' f g h i' j k' m n' ;
+	[3815] = a' b d' f g h j k' l m n' ;
+	[3816] = a' b e g h i' j' k l m n' ;
+	[3817] = a' b d' f g h j k' l' m n' ;
+	[3818] = a d e' f g h i' j' k l m n' ;
+	[3819] = a d' e f' g h i' j' k l m n' ;
+	[3820] = a c e f' g h i' j' k l m n' ;
+	[3821] = a c d' e g h i' j' k l m n' ;
+	[3822] = a c' d f g h i' j' k l m n' ;
+	[3823] = a c' d e' g h i' j' k l m n' ;
+	[3824] = a b d f' g h i' j' k l m n' ;
+	[3825] = a b c' f g h i' j' k l m n' ;
+	[3826] = a b' c f g h i' j' k l m n' ;
+	[3827] = a' b d' f g h i' j' k l m n' ;
+	[3828] = c f g' h j k' m' n ;
+	[3829] = c f g' h j k' m' n' ;
+	[3830] = c e f' h j k' m' n' ;
+	[3831] = c e' f h j k' m' n' ;
+	[3832] = c d' f h j k' m' n' ;
+	[3833] = c' d f h j k' m' n' ;
+	[3834] = b' c f h j k' m' n ;
+	[3835] = c' d e' g h j k' m' n' ;
+	[3836] = c f g' h i' j k m' n ;
+	[3837] = c f g' h i' j k m' n' ;
+	[3838] = c e f' h i' j k m' n' ;
+	[3839] = c e' f h i' j k m' n' ;
+	[3840] = c d' f h i' j k m' n' ;
+	[3841] = c' d f h i' j k m' n' ;
+	[3842] = c f g' h' i j k m' n ;
+	[3843] = c f g' h' i j k m' n' ;
+	[3844] = c e f' h' i j k m' n' ;
+	[3845] = c e' f h' i j k m' n' ;
+	[3846] = c d' f h' i j k m' n' ;
+	[3847] = c' d f h' i j k m' n' ;
+	[3848] = b e f' g i' j k' m n' ;
+	[3849] = b e f' g' h j k m n' ;
+	[3850] = b e f' g h j k' m' n ;
+	[3851] = b e' f g' h j k' m' n ;
+	[3852] = b d f g' h j k' m' n ;
+	[3853] = b d e' f h j k' m' n ;
+	[3854] = b d' e g h j k' m' n ;
+	[3855] = b d' e f' h j k' m' n ;
+	[3856] = b c e g' h j k' m' n ;
+	[3857] = b c d' g h j k' m' n ;
+	[3858] = b c' d g h j k' m' n ;
+	[3859] = b e f' g i' j l m n' ;
+	[3860] = b' c e' g h j k' m' n ;
+	[3861] = b' c f h i' j k m' n ;
+	[3862] = b' c f h' i j k m' n ;
+	[3863] = a' b e g i' j k' m n' ;
+	[3864] = a' b e g' h j k m n' ;
+	[3865] = a' b e g i' j l m n' ;
+	[3866] = b e f' g h' i k' l m n' ;
+	[3867] = a' b e g h' i k' l m n' ;
+	[3868] = c' d e' g h i' j k m' n' ;
+	[3869] = c' d e' g h' i j k m' n' ;
+	[3870] = b e f' g h i' j k m' n ;
+	[3871] = b e' f g' h i' j k m' n ;
+	[3872] = b d f g' h i' j k m' n ;
+	[3873] = b d e' f h i' j k m' n ;
+	[3874] = b d' e g h i' j k m' n ;
+	[3875] = b d' e f' h i' j k m' n ;
+	[3876] = b c e g' h i' j k m' n ;
+	[3877] = b c d' g h i' j k m' n ;
+	[3878] = b c' d g h i' j k m' n ;
+	[3879] = b e f' g h' i j k m' n ;
+	[3880] = b e' f g' h' i j k m' n ;
+	[3881] = b d f g' h' i j k m' n ;
+	[3882] = b d e' f h' i j k m' n ;
+	[3883] = b d' e g h' i j k m' n ;
+	[3884] = b d' e f' h' i j k m' n ;
+	[3885] = b c e g' h' i j k m' n ;
+	[3886] = b c d' g h' i j k m' n ;
+	[3887] = b c' d g h' i j k m' n ;
+	[3888] = b e f' g h j k' l m n' ;
+	[3889] = b e f' g h j k' l' m n' ;
+	[3890] = b' c e' g h i' j k m' n ;
+	[3891] = b' c e' g h' i j k m' n ;
+	[3892] = a d e' f g i' j k' m n' ;
+	[3893] = a d' e f' g i' j k' m n' ;
+	[3894] = a c e f' g i' j k' m n' ;
+	[3895] = a c d' e g i' j k' m n' ;
+	[3896] = a c' d f g i' j k' m n' ;
+	[3897] = a c' d e' g i' j k' m n' ;
+	[3898] = a d e' f g' h j k m n' ;
+	[3899] = a d' e f' g' h j k m n' ;
+	[3900] = a c e f' g' h j k m n' ;
+	[3901] = a c d' e g' h j k m n' ;
+	[3902] = a c' d f g' h j k m n' ;
+	[3903] = a c' d e' g' h j k m n' ;
+	[3904] = a d e' f g i' j l m n' ;
+	[3905] = a d' e f' g i' j l m n' ;
+	[3906] = a c e f' g i' j l m n' ;
+	[3907] = a c d' e g i' j l m n' ;
+	[3908] = a c' d f g i' j l m n' ;
+	[3909] = a c' d e' g i' j l m n' ;
+	[3910] = a b d f' g i' j k' m n' ;
+	[3911] = a b c' f g i' j k' m n' ;
+	[3912] = a b d f' g' h j k m n' ;
+	[3913] = a b c' f g' h j k m n' ;
+	[3914] = a b d f' g i' j l m n' ;
+	[3915] = a b c' f g i' j l m n' ;
+	[3916] = a b' c f g i' j k' m n' ;
+	[3917] = a b' c f g' h j k m n' ;
+	[3918] = a b' c f g i' j l m n' ;
+	[3919] = a' b d' f g i' j k' m n' ;
+	[3920] = a' b d' f g' h j k m n' ;
+	[3921] = a' b d' f g i' j l m n' ;
+	[3922] = a' b e g h j k' l m n' ;
+	[3923] = a' b e g h j k' l' m n' ;
+	[3924] = a d e' f g h' i k' l m n' ;
+	[3925] = a d' e f' g h' i k' l m n' ;
+	[3926] = a c e f' g h' i k' l m n' ;
+	[3927] = a c d' e g h' i k' l m n' ;
+	[3928] = a c' d f g h' i k' l m n' ;
+	[3929] = a c' d e' g h' i k' l m n' ;
+	[3930] = a b d f' g h' i k' l m n' ;
+	[3931] = a b c' f g h' i k' l m n' ;
+	[3932] = a b' c f g h' i k' l m n' ;
+	[3933] = a' b d' f g h' i k' l m n' ;
+	[3934] = b e f' g h' i j k l m n' ;
+	[3935] = b e f' g h' i j k l' m n' ;
+	[3936] = a d e' f g h j k' l m n' ;
+	[3937] = a d' e f' g h j k' l m n' ;
+	[3938] = a c e f' g h j k' l m n' ;
+	[3939] = a c d' e g h j k' l m n' ;
+	[3940] = a c' d f g h j k' l m n' ;
+	[3941] = a c' d e' g h j k' l m n' ;
+	[3942] = a d e' f g h j k' l' m n' ;
+	[3943] = a d' e f' g h j k' l' m n' ;
+	[3944] = a c e f' g h j k' l' m n' ;
+	[3945] = a c d' e g h j k' l' m n' ;
+	[3946] = a c' d f g h j k' l' m n' ;
+	[3947] = a c' d e' g h j k' l' m n' ;
+	[3948] = a b d f' g h j k' l m n' ;
+	[3949] = a b c' f g h j k' l m n' ;
+	[3950] = a b d f' g h j k' l' m n' ;
+	[3951] = a b c' f g h j k' l' m n' ;
+	[3952] = a b' c f g h j k' l m n' ;
+	[3953] = a b' c f g h j k' l' m n' ;
+	[3954] = a' b d' f g h j k' l m n' ;
+	[3955] = a' b e g h' i j k l m n' ;
+	[3956] = a' b d' f g h j k' l' m n' ;
+	[3957] = a' b e g h' i j k l' m n' ;
+	[3958] = a d e' f g h' i j k l m n' ;
+	[3959] = a d' e f' g h' i j k l m n' ;
+	[3960] = a c e f' g h' i j k l m n' ;
+	[3961] = a c d' e g h' i j k l m n' ;
+	[3962] = a c' d f g h' i j k l m n' ;
+	[3963] = a c' d e' g h' i j k l m n' ;
+	[3964] = a d e' f g h' i j k l' m n' ;
+	[3965] = a d' e f' g h' i j k l' m n' ;
+	[3966] = a c e f' g h' i j k l' m n' ;
+	[3967] = a c d' e g h' i j k l' m n' ;
+	[3968] = a c' d f g h' i j k l' m n' ;
+	[3969] = a c' d e' g h' i j k l' m n' ;
+	[3970] = a b d f' g h' i j k l m n' ;
+	[3971] = a b c' f g h' i j k l m n' ;
+	[3972] = a b d f' g h' i j k l' m n' ;
+	[3973] = a b c' f g h' i j k l' m n' ;
+	[3974] = a b' c f g h' i j k l m n' ;
+	[3975] = a b' c f g h' i j k l' m n' ;
+	[3976] = a' b d' f g h' i j k l m n' ;
+	[3977] = a' b d' f g h' i j k l' m n' ;
+	[3978] = c f g' h j k' l m' n ;
+	[3979] = c f g' h j k' l m' n' ;
+	[3980] = c e f' h j k' l m' n' ;
+	[3981] = c e' f h j k' l m' n' ;
+	[3982] = c d' f h j k' l m' n' ;
+	[3983] = c' d f h j k' l m' n' ;
+	[3984] = c f g' h j' k l m' n ;
+	[3985] = c f g' h j' k l m' n' ;
+	[3986] = c e f' h j' k l m' n' ;
+	[3987] = c e' f h j' k l m' n' ;
+	[3988] = c d' f h j' k l m' n' ;
+	[3989] = c' d f h j' k l m' n' ;
+	[3990] = c f g' h' i k l m' n ;
+	[3991] = c f g' h' i k l m' n' ;
+	[3992] = c e f' h' i k l m' n' ;
+	[3993] = c e' f h' i k l m' n' ;
+	[3994] = c d' f h' i k l m' n' ;
+	[3995] = c' d f h' i k l m' n' ;
+	[3996] = c f g' h' i j' l m' n ;
+	[3997] = c f g' h' i j' l m' n' ;
+	[3998] = c e f' h' i j' l m' n' ;
+	[3999] = c e' f h' i j' l m' n' ;
+	[4000] = c d' f h' i j' l m' n' ;
+	[4001] = c' d f h' i j' l m' n' ;
+	[4002] = b e f' g j k' l m n' ;
+	[4003] = b e f' g' h k l m n' ;
+	[4004] = b e f' g' h j' l m n' ;
+	[4005] = b' c f h j k' l m' n ;
+	[4006] = b' c f h j' k l m' n ;
+	[4007] = b' c f h' i k l m' n ;
+	[4008] = b' c f h' i j' l m' n ;
+	[4009] = a' b e g j k' l m n' ;
+	[4010] = a' b e g' h k l m n' ;
+	[4011] = a' b e g' h j' l m n' ;
+	[4012] = c' d e' g h j k' l m' n' ;
+	[4013] = c' d e' g h j' k l m' n' ;
+	[4014] = c f g' h i' j k l m' n ;
+	[4015] = c f g' h i' j k l m' n' ;
+	[4016] = c e f' h i' j k l m' n' ;
+	[4017] = c e' f h i' j k l m' n' ;
+	[4018] = c d' f h i' j k l m' n' ;
+	[4019] = c' d f h i' j k l m' n' ;
+	[4020] = c' d e' g h' i k l m' n' ;
+	[4021] = c' d e' g h' i j' l m' n' ;
+	[4022] = b e f' g i j' k l m n' ;
+	[4023] = b e f' g h j k' l m' n ;
+	[4024] = b e' f g' h j k' l m' n ;
+	[4025] = b d f g' h j k' l m' n ;
+	[4026] = b d e' f h j k' l m' n ;
+	[4027] = b d' e g h j k' l m' n ;
+	[4028] = b d' e f' h j k' l m' n ;
+	[4029] = b c e g' h j k' l m' n ;
+	[4030] = b c d' g h j k' l m' n ;
+	[4031] = b c' d g h j k' l m' n ;
+	[4032] = b e f' g h j' k l m' n ;
+	[4033] = b e' f g' h j' k l m' n ;
+	[4034] = b d f g' h j' k l m' n ;
+	[4035] = b d e' f h j' k l m' n ;
+	[4036] = b d' e g h j' k l m' n ;
+	[4037] = b d' e f' h j' k l m' n ;
+	[4038] = b c e g' h j' k l m' n ;
+	[4039] = b c d' g h j' k l m' n ;
+	[4040] = b c' d g h j' k l m' n ;
+	[4041] = b e f' g h i' j' l m n' ;
+	[4042] = b e f' g h' i k l m' n ;
+	[4043] = b e' f g' h' i k l m' n ;
+	[4044] = b d f g' h' i k l m' n ;
+	[4045] = b d e' f h' i k l m' n ;
+	[4046] = b d' e g h' i k l m' n ;
+	[4047] = b d' e f' h' i k l m' n ;
+	[4048] = b c e g' h' i k l m' n ;
+	[4049] = b c d' g h' i k l m' n ;
+	[4050] = b c' d g h' i k l m' n ;
+	[4051] = b e f' g h' i j l m n' ;
+	[4052] = b e f' g h' i j' l m' n ;
+	[4053] = b e' f g' h' i j' l m' n ;
+	[4054] = b d f g' h' i j' l m' n ;
+	[4055] = b d e' f h' i j' l m' n ;
+	[4056] = b d' e g h' i j' l m' n ;
+	[4057] = b d' e f' h' i j' l m' n ;
+	[4058] = b c e g' h' i j' l m' n ;
+	[4059] = b c d' g h' i j' l m' n ;
+	[4060] = b c' d g h' i j' l m' n ;
+	[4061] = b e f' g h' i' j l m n' ;
+	[4062] = b' c e' g h j k' l m' n ;
+	[4063] = b' c e' g h j' k l m' n ;
+	[4064] = b' c f h i' j k l m' n ;
+	[4065] = b' c e' g h' i k l m' n ;
+	[4066] = b' c e' g h' i j' l m' n ;
+	[4067] = a d e' f g j k' l m n' ;
+	[4068] = a d' e f' g j k' l m n' ;
+	[4069] = a c e f' g j k' l m n' ;
+	[4070] = a c d' e g j k' l m n' ;
+	[4071] = a c' d f g j k' l m n' ;
+	[4072] = a c' d e' g j k' l m n' ;
+	[4073] = a d e' f g' h k l m n' ;
+	[4074] = a d' e f' g' h k l m n' ;
+	[4075] = a c e f' g' h k l m n' ;
+	[4076] = a c d' e g' h k l m n' ;
+	[4077] = a c' d f g' h k l m n' ;
+	[4078] = a c' d e' g' h k l m n' ;
+	[4079] = a d e' f g' h j' l m n' ;
+	[4080] = a d' e f' g' h j' l m n' ;
+	[4081] = a c e f' g' h j' l m n' ;
+	[4082] = a c d' e g' h j' l m n' ;
+	[4083] = a c' d f g' h j' l m n' ;
+	[4084] = a c' d e' g' h j' l m n' ;
+	[4085] = a b d f' g j k' l m n' ;
+	[4086] = a b c' f g j k' l m n' ;
+	[4087] = a b d f' g' h k l m n' ;
+	[4088] = a b c' f g' h k l m n' ;
+	[4089] = a b d f' g' h j' l m n' ;
+	[4090] = a b c' f g' h j' l m n' ;
+	[4091] = a b' c f g j k' l m n' ;
+	[4092] = a b' c f g' h k l m n' ;
+	[4093] = a b' c f g' h j' l m n' ;
+	[4094] = a' b d' f g j k' l m n' ;
+	[4095] = a' b e g i j' k l m n' ;
+	[4096] = a' b d' f g' h k l m n' ;
+	[4097] = a' b d' f g' h j' l m n' ;
+	[4098] = a' b e g h i' j' l m n' ;
+	[4099] = a' b e g h' i j l m n' ;
+	[4100] = a' b e g h' i' j l m n' ;
+	[4101] = c' d e' g h i' j k l m' n' ;
+	[4102] = b e f' g h i' j k l m' n ;
+	[4103] = b e' f g' h i' j k l m' n ;
+	[4104] = b d f g' h i' j k l m' n ;
+	[4105] = b d e' f h i' j k l m' n ;
+	[4106] = b d' e g h i' j k l m' n ;
+	[4107] = b d' e f' h i' j k l m' n ;
+	[4108] = b c e g' h i' j k l m' n ;
+	[4109] = b c d' g h i' j k l m' n ;
+	[4110] = b c' d g h i' j k l m' n ;
+	[4111] = b' c e' g h i' j k l m' n ;
+	[4112] = a d e' f g i j' k l m n' ;
+	[4113] = a d' e f' g i j' k l m n' ;
+	[4114] = a c e f' g i j' k l m n' ;
+	[4115] = a c d' e g i j' k l m n' ;
+	[4116] = a c' d f g i j' k l m n' ;
+	[4117] = a c' d e' g i j' k l m n' ;
+	[4118] = a d e' f g h i' j' l m n' ;
+	[4119] = a d' e f' g h i' j' l m n' ;
+	[4120] = a c e f' g h i' j' l m n' ;
+	[4121] = a c d' e g h i' j' l m n' ;
+	[4122] = a c' d f g h i' j' l m n' ;
+	[4123] = a c' d e' g h i' j' l m n' ;
+	[4124] = a d e' f g h' i j l m n' ;
+	[4125] = a d' e f' g h' i j l m n' ;
+	[4126] = a c e f' g h' i j l m n' ;
+	[4127] = a c d' e g h' i j l m n' ;
+	[4128] = a c' d f g h' i j l m n' ;
+	[4129] = a c' d e' g h' i j l m n' ;
+	[4130] = a d e' f g h' i' j l m n' ;
+	[4131] = a d' e f' g h' i' j l m n' ;
+	[4132] = a c e f' g h' i' j l m n' ;
+	[4133] = a c d' e g h' i' j l m n' ;
+	[4134] = a c' d f g h' i' j l m n' ;
+	[4135] = a c' d e' g h' i' j l m n' ;
+	[4136] = a b d f' g i j' k l m n' ;
+	[4137] = a b c' f g i j' k l m n' ;
+	[4138] = a b d f' g h i' j' l m n' ;
+	[4139] = a b c' f g h i' j' l m n' ;
+	[4140] = a b d f' g h' i j l m n' ;
+	[4141] = a b c' f g h' i j l m n' ;
+	[4142] = a b d f' g h' i' j l m n' ;
+	[4143] = a b c' f g h' i' j l m n' ;
+	[4144] = a b' c f g i j' k l m n' ;
+	[4145] = a b' c f g h i' j' l m n' ;
+	[4146] = a b' c f g h' i j l m n' ;
+	[4147] = a b' c f g h' i' j l m n' ;
+	[4148] = a' b d' f g i j' k l m n' ;
+	[4149] = a' b d' f g h i' j' l m n' ;
+	[4150] = a' b d' f g h' i j l m n' ;
+	[4151] = a' b d' f g h' i' j l m n' ;
+	[4152] = a c e f' g' h k m n' ;
+	[4153] = a c d' e g' h k m n' ;
+	[4154] = a c e f' h k l' m n' ;
+	[4155] = a c d' e h k l' m n' ;
+	[4156] = a b' c f g' h k m n' ;
+	[4157] = a b' c f h k l' m n' ;
+	[4158] = a' b c e g' h k m n' ;
+	[4159] = a' b c e h k l' m n' ;
+	[4160] = c' d' f' g' h' i' k' l' m' n' ;
+	[4161] = a c e f' g j k' l m n' ;
+	[4162] = a c d' e g j k' l m n' ;
+	[4163] = a c e f' g j' k l' m n' ;
+	[4164] = a c d' e g j' k l' m n' ;
+	[4165] = a c e f' g i k l' m n' ;
+	[4166] = a c d' e g i k l' m n' ;
+	[4167] = a c e f' g i j' k m n' ;
+	[4168] = a c d' e g i j' k m n' ;
+	[4169] = a c e f' g i' j l m n' ;
+	[4170] = a c d' e g i' j l m n' ;
+	[4171] = a c e f' g i' j k' m n' ;
+	[4172] = a c d' e g i' j k' m n' ;
+	[4173] = a c d e' f g' h k m n' ;
+	[4174] = a c d e' f h k l' m n' ;
+	[4175] = a c e f' g h j l' m n' ;
+	[4176] = a c d' e g h j l' m n' ;
+	[4177] = a c e f' g' h j' l m n' ;
+	[4178] = a c d' e g' h j' l m n' ;
+	[4179] = a c e f' g h i' l m n' ;
+	[4180] = a c d' e g h i' l m n' ;
+	[4181] = a c e f' g h' i l m n' ;
+	[4182] = a c d' e g h' i l m n' ;
+	[4183] = a b c d f' g' h k m n' ;
+	[4184] = a b c d f' h k l' m n' ;
+	[4185] = a b' c f g j k' l m n' ;
+	[4186] = a b' c f g j' k l' m n' ;
+	[4187] = a b' c f g i k l' m n' ;
+	[4188] = a b' c f g i j' k m n' ;
+	[4189] = a b' c f g i' j l m n' ;
+	[4190] = a b' c f g i' j k' m n' ;
+	[4191] = a b' c f g h j l' m n' ;
+	[4192] = a b' c f g' h j' l m n' ;
+	[4193] = a b' c f g h i' l m n' ;
+	[4194] = a b' c f g h' i l m n' ;
+	[4195] = a' b c e g j k' l m n' ;
+	[4196] = a' b c e g j' k l' m n' ;
+	[4197] = a' b c e g i k l' m n' ;
+	[4198] = a' b c e g i j' k m n' ;
+	[4199] = a' b c e g i' j l m n' ;
+	[4200] = a' b c e g i' j k' m n' ;
+	[4201] = a' b c d' f g' h k m n' ;
+	[4202] = a' b c d' f h k l' m n' ;
+	[4203] = a' b c e g h j l' m n' ;
+	[4204] = a' b c e g' h j' l m n' ;
+	[4205] = a' b c e g h i' l m n' ;
+	[4206] = a' b c e g h' i l m n' ;
+	[4207] = c' d' f' g' h i j k l m' n' ;
+	[4208] = a c d e' f g j k' l m n' ;
+	[4209] = a c d e' f g j' k l' m n' ;
+	[4210] = a c d e' f g i k l' m n' ;
+	[4211] = a c d e' f g i j' k m n' ;
+	[4212] = a c d e' f g i' j l m n' ;
+	[4213] = a c d e' f g i' j k' m n' ;
+	[4214] = a c d e' f g h j l' m n' ;
+	[4215] = a c d e' f g' h j' l m n' ;
+	[4216] = a c d e' f g h i' l m n' ;
+	[4217] = a c d e' f g h' i l m n' ;
+	[4218] = a b c d f' g j k' l m n' ;
+	[4219] = a b c d f' g j' k l' m n' ;
+	[4220] = a b c d f' g i k l' m n' ;
+	[4221] = a b c d f' g i j' k m n' ;
+	[4222] = a b c d f' g i' j l m n' ;
+	[4223] = a b c d f' g i' j k' m n' ;
+	[4224] = a b c d f' g h j l' m n' ;
+	[4225] = a b c d f' g' h j' l m n' ;
+	[4226] = a b c d f' g h i' l m n' ;
+	[4227] = a b c d f' g h' i l m n' ;
+	[4228] = a' b c d' f g j k' l m n' ;
+	[4229] = a' b c d' f g j' k l' m n' ;
+	[4230] = a' b c d' f g i k l' m n' ;
+	[4231] = a' b c d' f g i j' k m n' ;
+	[4232] = a' b c d' f g i' j l m n' ;
+	[4233] = a' b c d' f g i' j k' m n' ;
+	[4234] = a' b c d' f g h j l' m n' ;
+	[4235] = a' b c d' f g' h j' l m n' ;
+	[4236] = a' b c d' f g h i' l m n' ;
+	[4237] = a' b c d' f g h' i l m n' ;
+	[4238] = c' d' e f g h i j' k' l m' n' ;
+	[4239] = c' d' e f g h' i' j k l m' n' ;
+	[4240] = b d f g' h k l' m' n ;
+	[4241] = b d e' f h k l' m' n ;
+	[4242] = b c' d g h k l' m' n ;
+	[4243] = b d f g' h j k' m' n ;
+	[4244] = b d e' f h j k' m' n ;
+	[4245] = b c' d g h j k' m' n ;
+	[4246] = b d f g' h j' k m' n ;
+	[4247] = b d e' f h j' k m' n ;
+	[4248] = b c' d g h j' k m' n ;
+	[4249] = b d f g' h i' k m' n ;
+	[4250] = b d e' f h i' k m' n ;
+	[4251] = b c' d g h i' k m' n ;
+	[4252] = b d f g' h' i k m' n ;
+	[4253] = b d e' f h' i k m' n ;
+	[4254] = b c' d g h' i k m' n ;
+	[4255] = b' c d f h k l' m' n ;
+	[4256] = b' c d f h j k' m' n ;
+	[4257] = b' c d f h j' k m' n ;
+	[4258] = b' c d f h i' k m' n ;
+	[4259] = b' c d f h' i k m' n ;
+	[4260] = a d' e f' g' h k m n' ;
+	[4261] = a c d' e g' h k m n' ;
+	[4262] = a d' e f' h k l' m n' ;
+	[4263] = a c d' e h k l' m n' ;
+	[4264] = b d e f' g h k l' m' n ;
+	[4265] = b c d e g' h k l' m' n ;
+	[4266] = b d e f' g h j k' m' n ;
+	[4267] = b c d e g' h j k' m' n ;
+	[4268] = b d e f' g h j' k m' n ;
+	[4269] = b c d e g' h j' k m' n ;
+	[4270] = b d e f' g h i' k m' n ;
+	[4271] = b c d e g' h i' k m' n ;
+	[4272] = b d e f' g h' i k m' n ;
+	[4273] = b c d e g' h' i k m' n ;
+	[4274] = b d f g' h' i j' l m' n ;
+	[4275] = b d e' f h' i j' l m' n ;
+	[4276] = b c' d g h' i j' l m' n ;
+	[4277] = b' c d e' g h k l' m' n ;
+	[4278] = b' c d e' g h j k' m' n ;
+	[4279] = b' c d e' g h j' k m' n ;
+	[4280] = b' c d e' g h i' k m' n ;
+	[4281] = b' c d e' g h' i k m' n ;
+	[4282] = b' c d f h' i j' l m' n ;
+	[4283] = a d' e f' g j k' l m n' ;
+	[4284] = a c d' e g j k' l m n' ;
+	[4285] = a d' e f' g j' k l' m n' ;
+	[4286] = a c d' e g j' k l' m n' ;
+	[4287] = a d' e f' g i k l' m n' ;
+	[4288] = a c d' e g i k l' m n' ;
+	[4289] = a d' e f' g i j' k m n' ;
+	[4290] = a c d' e g i j' k m n' ;
+	[4291] = a d' e f' g i' j l m n' ;
+	[4292] = a c d' e g i' j l m n' ;
+	[4293] = a d' e f' g i' j k' m n' ;
+	[4294] = a c d' e g i' j k' m n' ;
+	[4295] = a c' d e f g' h k m n' ;
+	[4296] = a c' d e f h k l' m n' ;
+	[4297] = a d' e f' g h j l' m n' ;
+	[4298] = a c d' e g h j l' m n' ;
+	[4299] = a d' e f' g' h j' l m n' ;
+	[4300] = a c d' e g' h j' l m n' ;
+	[4301] = a d' e f' g h i' l m n' ;
+	[4302] = a c d' e g h i' l m n' ;
+	[4303] = a d' e f' g h' i l m n' ;
+	[4304] = a c d' e g h' i l m n' ;
+	[4305] = a b d e' f g' h k m n' ;
+	[4306] = a b d e' f' g' h k m n' ;
+	[4307] = a b c' d e' g' h k m n' ;
+	[4308] = a b c' d' f g' h k m n' ;
+	[4309] = a b d e' f h k l' m n' ;
+	[4310] = a b d e' f' h k l' m n' ;
+	[4311] = a b c' d e' h k l' m n' ;
+	[4312] = a b c' d' f h k l' m n' ;
+	[4313] = a b' c e f g' h k m n' ;
+	[4314] = a b' c e f' g' h k m n' ;
+	[4315] = a b' c e f h k l' m n' ;
+	[4316] = a b' c e f' h k l' m n' ;
+	[4317] = c' d' e' f' g' h' i' k' l' m' n' ;
+	[4318] = b d e f' g h' i j' l m' n ;
+	[4319] = b c d e g' h' i j' l m' n ;
+	[4320] = b' c d e' g h' i j' l m' n ;
+	[4321] = a c' d e f g j k' l m n' ;
+	[4322] = a c' d e f g j' k l' m n' ;
+	[4323] = a c' d e f g i k l' m n' ;
+	[4324] = a c' d e f g i j' k m n' ;
+	[4325] = a c' d e f g i' j l m n' ;
+	[4326] = a c' d e f g i' j k' m n' ;
+	[4327] = a c' d e f g h j l' m n' ;
+	[4328] = a c' d e f g' h j' l m n' ;
+	[4329] = a c' d e f g h i' l m n' ;
+	[4330] = a c' d e f g h' i l m n' ;
+	[4331] = a b d e' f g j k' l m n' ;
+	[4332] = a b d e' f' g j k' l m n' ;
+	[4333] = a b c' d e' g j k' l m n' ;
+	[4334] = a b c' d' f g j k' l m n' ;
+	[4335] = a b d e' f g j' k l' m n' ;
+	[4336] = a b d e' f' g j' k l' m n' ;
+	[4337] = a b c' d e' g j' k l' m n' ;
+	[4338] = a b c' d' f g j' k l' m n' ;
+	[4339] = a b d e' f g i k l' m n' ;
+	[4340] = a b d e' f' g i k l' m n' ;
+	[4341] = a b c' d e' g i k l' m n' ;
+	[4342] = a b c' d' f g i k l' m n' ;
+	[4343] = a b d e' f g i j' k m n' ;
+	[4344] = a b d e' f' g i j' k m n' ;
+	[4345] = a b c' d e' g i j' k m n' ;
+	[4346] = a b c' d' f g i j' k m n' ;
+	[4347] = a b d e' f g i' j l m n' ;
+	[4348] = a b d e' f' g i' j l m n' ;
+	[4349] = a b c' d e' g i' j l m n' ;
+	[4350] = a b c' d' f g i' j l m n' ;
+	[4351] = a b d e' f g i' j k' m n' ;
+	[4352] = a b d e' f' g i' j k' m n' ;
+	[4353] = a b c' d e' g i' j k' m n' ;
+	[4354] = a b c' d' f g i' j k' m n' ;
+	[4355] = a b d e' f g h j l' m n' ;
+	[4356] = a b d e' f' g h j l' m n' ;
+	[4357] = a b c' d e' g h j l' m n' ;
+	[4358] = a b c' d' f g h j l' m n' ;
+	[4359] = a b d e' f g' h j' l m n' ;
+	[4360] = a b d e' f' g' h j' l m n' ;
+	[4361] = a b c' d e' g' h j' l m n' ;
+	[4362] = a b c' d' f g' h j' l m n' ;
+	[4363] = a b d e' f g h i' l m n' ;
+	[4364] = a b d e' f' g h i' l m n' ;
+	[4365] = a b c' d e' g h i' l m n' ;
+	[4366] = a b c' d' f g h i' l m n' ;
+	[4367] = a b d e' f g h' i l m n' ;
+	[4368] = a b d e' f' g h' i l m n' ;
+	[4369] = a b c' d e' g h' i l m n' ;
+	[4370] = a b c' d' f g h' i l m n' ;
+	[4371] = a b' c e f g j k' l m n' ;
+	[4372] = a b' c e f' g j k' l m n' ;
+	[4373] = a b' c e f g j' k l' m n' ;
+	[4374] = a b' c e f' g j' k l' m n' ;
+	[4375] = a b' c e f g i k l' m n' ;
+	[4376] = a b' c e f' g i k l' m n' ;
+	[4377] = a b' c e f g i j' k m n' ;
+	[4378] = a b' c e f' g i j' k m n' ;
+	[4379] = a b' c e f g i' j l m n' ;
+	[4380] = a b' c e f' g i' j l m n' ;
+	[4381] = a b' c e f g i' j k' m n' ;
+	[4382] = a b' c e f' g i' j k' m n' ;
+	[4383] = a b' c e f g h j l' m n' ;
+	[4384] = a b' c e f' g h j l' m n' ;
+	[4385] = a b' c e f g' h j' l m n' ;
+	[4386] = a b' c e f' g' h j' l m n' ;
+	[4387] = a b' c e f g h i' l m n' ;
+	[4388] = a b' c e f' g h i' l m n' ;
+	[4389] = a b' c e f g h' i l m n' ;
+	[4390] = a b' c e f' g h' i l m n' ;
+	[4391] = c' d' e' f' g' h i j k l m' n' ;
+	[4392] = c d e' f' g h i j' k' l m' n' ;
+	[4393] = c' d' e f g h i j' k' l m' n' ;
+	[4394] = c d e' f' g h' i' j k l m' n' ;
+	[4395] = c' d e f' g h' i' j k l m' n' ;
+	[4396] = c d e f g h' i' j k' l' m' n' ;
+	[4397] = b c d e' f' g h i j' k' l m' n ;
+	[4398] = b c d e' f' g h' i' j k l m' n ;
+	[4399] = b c d e f g h' i' j k' l' m' n ;
+	[4400] = b' c d e f' g h' i' j k l m' n ;
+	[4401] = c' d' f' g' h' i' j' k' l' m' n' ;
+	[4402] = c' d' e' f' g' h i j k l m' n' ;
+	[4403] = c d e' f' g h i j' k' l m' n' ;
+	[4404] = c' d e f' g h i j' k' l m' n' ;
+	[4405] = c' d e f' g h' i j k' l m' n' ;
+	[4406] = c d e' f' g h' i' j k l m' n' ;
+	[4407] = c' d' e f g h' i' j k l m' n' ;
+	[4408] = b c d e' f' g h i j' k' l m' n ;
+	[4409] = b c d e' f' g h' i' j k l m' n ;
+	[4410] = b' c d e f' g h i j' k' l m' n ;
+	[4411] = b' c d e f' g h' i j k' l m' n ;
+	[4412] = a' b c d e' f g' h i j k' l m n' ;
+	[4413] = a' b c d e' f g h i j' k' l m n' ;
+	[4414] = c' d' e' f' g' h' i' k' l' m' n' ;
+	[4415] = c d e f g h i j k l m' n' ;
+	[4416] = c' d' e f' g' h i j k l m' n' ;
+	[4417] = c d e' f' g h i j' k' l m' n' ;
+	[4418] = c' d e f' g h i j' k' l m' n' ;
+	[4419] = c' d e f' g h' i' j k l m' n' ;
+	[4420] = c' d' e f g h' i' j k l m' n' ;
+	[4421] = b c d e f g h i j k l m' n ;
+	[4422] = b c d e' f' g h i j' k' l m' n ;
+	[4423] = b' c d e f' g h i j' k' l m' n ;
+	[4424] = b' c d e f' g h' i' j k l m' n ;
+	[4425] = a b c d e f g h i j k l m n' ;
+	[4426] = a' b c d e' f g h i j' k' l m n' ;
+	[4427] = c' d' f' g' h' i' k' l' m' n' ;
+	[4428] = c' d' f' g' h i j k l m' n' ;
+	[4429] = c d e f g h i j k l m' n' ;
+	[4430] = c d e' f' g h i j' k' l m' n' ;
+	[4431] = c' d e f' g h i j' k' l m' n' ;
+	[4432] = c' d' e f g h i j' k' l m' n' ;
+	[4433] = c d e' f' g' h i' j' k' l m' n' ;
+	[4434] = c' d e f' g h' i j k' l m' n' ;
+	[4435] = c d e' f' g h' i' j k l m' n' ;
+	[4436] = c' d e f' g h' i' j k l m' n' ;
+	[4437] = c' d' e f g h' i' j k l m' n' ;
+	[4438] = c d e f g h' i' j k' l' m' n' ;
+	[4439] = b c d e f g h i j k l m' n ;
+	[4440] = b c d e' f' g h i j' k' l m' n ;
+	[4441] = b c d e' f' g h' i' j k l m' n ;
+	[4442] = b c d e f g h' i' j k' l' m' n ;
+	[4443] = b' c d e f' g h i j' k' l m' n ;
+	[4444] = b' c d e' f' g' h i' j' k' l m' n ;
+	[4445] = b' c d e f' g h' i j k' l m' n ;
+	[4446] = b' c d e f' g h' i' j k l m' n ;
+	[4447] = a b c d e f g h i j k l m n' ;
+	[4448] = a' b c d e' f g' h i j k' l m n' ;
+	[4449] = a' b c d e' f g h i j' k' l m n' ;
+	[4450] = a' b c d' e' f' g h' i' j' k l m n' ;
+	[4451] = b' c' m' n ;
+	[4452] = a' b' m n' ;
+	[4453] = g' k' l' m n' ;
+	[4454] = j' k' l' m n' ;
+	[4455] = f g' h' m n' ;
+	[4456] = c' g' h' m n' ;
+	[4457] = g' h' l' m n' ;
+	[4458] = g' h' k m n' ;
+	[4459] = g' h' k' m n' ;
+	[4460] = g' h' j' m n' ;
+	[4461] = g' h' i' m' n ;
+	[4462] = d' h' i' m' n ;
+	[4463] = c' h' i' m' n ;
+	[4464] = h' i' j' m' n ;
+	[4465] = b' g' h' m n' ;
+	[4466] = d' e' f' g' m' n ;
+	[4467] = c' e' f' g' m' n ;
+	[4468] = c' d f' g' m' n ;
+	[4469] = c' d f' g' m' n' ;
+	[4470] = c' d' f g' m' n' ;
+	[4471] = c' d' e' g m' n ;
+	[4472] = c' d' e' f' m n' ;
+	[4473] = e' f' g' l' m' n ;
+	[4474] = d' e' f' l' m n' ;
+	[4475] = c e' f' l' m' n' ;
+	[4476] = c' d' g l' m' n' ;
+	[4477] = e' f' g' k m' n ;
+	[4478] = d' e' f' k' m n' ;
+	[4479] = e' f' g' j m' n ;
+	[4480] = d' e' f' j m n' ;
+	[4481] = f' g' j k' m n' ;
+	[4482] = e g' j k' m n' ;
+	[4483] = d' g' j k' m n' ;
+	[4484] = c' g' j k' m n' ;
+	[4485] = e' f' g' i m' n ;
+	[4486] = d' e' f' i m n' ;
+	[4487] = c' d' i l' m' n' ;
+	[4488] = g' i' j k' m n' ;
+	[4489] = d' e' f' h m n' ;
+	[4490] = f h j' k' m' n ;
+	[4491] = d' h j' k' m' n ;
+	[4492] = c' h j' k' m' n ;
+	[4493] = c' d' h i' m' n' ;
+	[4494] = e f' g' h' m n' ;
+	[4495] = e' f' g' h' m' n ;
+	[4496] = d f' g' h' m n' ;
+	[4497] = g' h' k' l' m' n ;
+	[4498] = f' h' k' l' m' n ;
+	[4499] = e' h' k' l' m' n ;
+	[4500] = d' h' k' l' m' n ;
+	[4501] = c' h' k' l' m' n ;
+	[4502] = f' g' h' j m n' ;
+	[4503] = g' h' j k' m' n ;
+	[4504] = d' h' j k' m' n ;
+	[4505] = c' h' j k' m' n ;
+	[4506] = h' j' k' l' m' n ;
+	[4507] = f' g' h' i m n' ;
+	[4508] = h' i k' l' m n' ;
+	[4509] = h' i k' l' m' n ;
+	[4510] = h' i k' l' m' n' ;
+	[4511] = f g' h' i' m' n' ;
+	[4512] = e' f h' i' m' n ;
+	[4513] = e' f h' i' m' n' ;
+	[4514] = c g' h' i' m' n' ;
+	[4515] = c d' h' i' m' n' ;
+	[4516] = f h' i' l m' n ;
+	[4517] = f' h' i' l' m' n ;
+	[4518] = e' h' i' l' m' n ;
+	[4519] = g' h' i' k m' n' ;
+	[4520] = f h' i' k m' n ;
+	[4521] = g h' i' j' m' n' ;
+	[4522] = b e' f' g' m' n ;
+	[4523] = b' e f' g' m' n ;
+	[4524] = b' d' f' g' m' n ;
+	[4525] = b' d' e f' m' n ;
+	[4526] = b' d' e' f' m n' ;
+	[4527] = b' c e' f' m n' ;
+	[4528] = b' c' d' f m n' ;
+	[4529] = b' f' g' l' m' n ;
+	[4530] = b' e f' l' m' n ;
+	[4531] = b' f' g' k m' n ;
+	[4532] = b' f' g' j m' n ;
+	[4533] = b' g' j k' m n' ;
+	[4534] = b' f' g' i m' n ;
+	[4535] = b' f' g' h' m' n ;
+	[4536] = b' f h' i' m' n ;
+	[4537] = a d' e' f' m n' ;
+	[4538] = a g' j k' m n' ;
+	[4539] = a f' g' h' m n' ;
+	[4540] = a' d e' f' m n' ;
+	[4541] = a' c' e' f' m n' ;
+	[4542] = a' c' d e' m n' ;
+	[4543] = a' e' f' l' m n' ;
+	[4544] = a' d e' l' m n' ;
+	[4545] = a' e' f' k' m n' ;
+	[4546] = a' e' f' j m n' ;
+	[4547] = a' e' f' i m n' ;
+	[4548] = a' e' f' h m n' ;
+	[4549] = c' d' e f g' m' n ;
+	[4550] = c' e f' g l' m' n' ;
+	[4551] = d' e' f' g' k m n' ;
+	[4552] = c e' f' g' j m' n' ;
+	[4553] = d' e' f' g' j' m n' ;
+	[4554] = c' d' e' f j' m' n' ;
+	[4555] = c e' f' g' i m' n' ;
+	[4556] = c' f' g' i l' m' n' ;
+	[4557] = c' e f' i l' m' n' ;
+	[4558] = c' f' g' i k' m' n' ;
+	[4559] = c' d' g' i k' m' n' ;
+	[4560] = c e' f' i j m' n' ;
+	[4561] = c' d' g i j m' n' ;
+	[4562] = c' d' f i j m' n' ;
+	[4563] = c' f' g' i j' m' n' ;
+	[4564] = c' d' g' i j' m' n' ;
+	[4565] = c' d' f' i j' m' n' ;
+	[4566] = c' d' e' i j' m' n' ;
+	[4567] = c' d' i j' k m' n' ;
+	[4568] = c d' e' f' i' m' n' ;
+	[4569] = c' d' f' g i' m' n' ;
+	[4570] = c' d' e' g i' m' n' ;
+	[4571] = c' d' e' f i' m' n' ;
+	[4572] = c' f' g' i' l m' n' ;
+	[4573] = c' d' g' i' l m' n' ;
+	[4574] = c' f' g' i' k m' n' ;
+	[4575] = c' d' g' i' k m' n' ;
+	[4576] = c' d' g i' k' m' n' ;
+	[4577] = c' d' g i' j' m' n' ;
+	[4578] = f g' h j' k' m' n' ;
+	[4579] = e g' h j' k' m' n ;
+	[4580] = e' f h j' k' m' n' ;
+	[4581] = f' h j' k' l' m' n ;
+	[4582] = e' h j' k' l' m' n ;
+	[4583] = g' h i j' k' m' n ;
+	[4584] = g' h i j' k' m' n' ;
+	[4585] = h i j' k' l' m' n ;
+	[4586] = h i j' k' l' m' n' ;
+	[4587] = c' f' g' h i' m' n' ;
+	[4588] = c' e f' h i' m' n' ;
+	[4589] = g h i' j' k' m' n ;
+	[4590] = g h i' j' k' m' n' ;
+	[4591] = e h i' j' k' m' n ;
+	[4592] = c' h i' j' k' m' n' ;
+	[4593] = c e' f' g' h' m' n' ;
+	[4594] = f g' h' k' l' m' n' ;
+	[4595] = c g' h' k' l' m' n' ;
+	[4596] = c f' h' k' l' m' n' ;
+	[4597] = c' g h' k' l' m' n' ;
+	[4598] = f g' h' j k' m' n' ;
+	[4599] = e' f h' j k' m' n ;
+	[4600] = c g' h' j k' m' n' ;
+	[4601] = c' f' g' h' i m' n' ;
+	[4602] = c' d' g' h' i m' n' ;
+	[4603] = c' d' f h' i m' n' ;
+	[4604] = g' h' i j k' m' n' ;
+	[4605] = f h' i j k' m' n ;
+	[4606] = f h' i j k' m' n' ;
+	[4607] = e' h' i j k' m' n ;
+	[4608] = c' d' h' i j' m' n' ;
+	[4609] = d' f' g h' i' m' n' ;
+	[4610] = c e f' h' i' m' n' ;
+	[4611] = c' e' g h' i' m' n' ;
+	[4612] = c' d g' h' i' m' n' ;
+	[4613] = c' d f h' i' m' n' ;
+	[4614] = c f h' i' l m' n' ;
+	[4615] = c' g' h' i' l m' n' ;
+	[4616] = c f' h' i' l' m' n' ;
+	[4617] = c' g h' i' l' m' n' ;
+	[4618] = c f h' i' k m' n' ;
+	[4619] = f' g h' i' k' m' n' ;
+	[4620] = e f' h' i' k' m' n ;
+	[4621] = e' g h' i' k' m' n ;
+	[4622] = c' g h' i' k' m' n' ;
+	[4623] = h' i' j k l' m n' ;
+	[4624] = f h' i' j' l m n' ;
+	[4625] = c' h' i' j' l m n' ;
+	[4626] = h' i' j' k' l m n' ;
+	[4627] = b g' h j' k' m' n ;
+	[4628] = b e h j' k' m' n ;
+	[4629] = b e f' h' i' m' n ;
+	[4630] = b' c' d e f' m n' ;
+	[4631] = b' e f' j' k m' n ;
+	[4632] = b' e f' i k m' n ;
+	[4633] = b' e f' i' k' m' n ;
+	[4634] = b' e f' i' j' m' n ;
+	[4635] = b' e f' h j m' n ;
+	[4636] = b' e f' h i' m' n ;
+	[4637] = b' f h' k' l' m' n ;
+	[4638] = b' f h' j k' m' n ;
+	[4639] = b' e f' h' j' m' n ;
+	[4640] = b' e' g h' i' m' n ;
+	[4641] = b' h' i' j' l m n' ;
+	[4642] = a' e' f' g' k m n' ;
+	[4643] = a' d e' g' k m n' ;
+	[4644] = a' d e' f k m n' ;
+	[4645] = a' e' f' g' j' m n' ;
+	[4646] = a' d e' g' j' m n' ;
+	[4647] = a' d e' f i' m n' ;
+	[4648] = a' d e' i' k' m n' ;
+	[4649] = a' d e' f h' m n' ;
+	[4650] = a' d e' h' k' m n' ;
+	[4651] = c e' f' g i k m' n' ;
+	[4652] = c' e f' g i k m' n' ;
+	[4653] = c' d' f' g i k m' n' ;
+	[4654] = c d' e' f' i j' m' n' ;
+	[4655] = c e' f' i j' k m' n' ;
+	[4656] = c' e f' i j' k m' n' ;
+	[4657] = c e' f' g' i' k m' n' ;
+	[4658] = c e' f' g i' k' m' n' ;
+	[4659] = c' e f' g i' k' m' n' ;
+	[4660] = c e' f' g i' j' m' n' ;
+	[4661] = c' e f' g i' j' m' n' ;
+	[4662] = c e' f' g h j m' n' ;
+	[4663] = c' e f' g h j m' n' ;
+	[4664] = c' d' f' g h j m' n' ;
+	[4665] = c e g' h j' k' m' n' ;
+	[4666] = c' d g' h j' k' m' n' ;
+	[4667] = c g' h j' k' l' m' n' ;
+	[4668] = c f' h j' k' l' m' n' ;
+	[4669] = c' g h j' k' l' m' n' ;
+	[4670] = g' h i j k l m' n ;
+	[4671] = f' h i j k l m' n ;
+	[4672] = e' h i j k l m' n ;
+	[4673] = d' h i j k l m' n ;
+	[4674] = c' h i j k l m' n ;
+	[4675] = f' g h i j' k' m n' ;
+	[4676] = e g h i j' k' m n' ;
+	[4677] = d f h i j' k' m' n' ;
+	[4678] = d' g h i j' k' m n' ;
+	[4679] = d' f' h i j' k' m' n' ;
+	[4680] = c f h i j' k' m' n' ;
+	[4681] = c e h i j' k' m' n' ;
+	[4682] = c' g h i j' k' m n' ;
+	[4683] = c' e' h i j' k' m' n' ;
+	[4684] = c e' f' g h i' m' n' ;
+	[4685] = c d' h i' j' k' m' n' ;
+	[4686] = c' d g' h' k' l' m' n' ;
+	[4687] = c' d g' h' j k' m' n' ;
+	[4688] = e' f h' j' k' l' m' n' ;
+	[4689] = e' g h' i j k' m' n' ;
+	[4690] = d' g h' i j k' m' n' ;
+	[4691] = c f' h' i j k' m' n' ;
+	[4692] = c e' f' h' i j' m' n' ;
+	[4693] = c' e f' h' i j' m' n' ;
+	[4694] = e f' h' i' j' l m n' ;
+	[4695] = d f' h' i' j' l m n' ;
+	[4696] = b c d e' f' l' m' n ;
+	[4697] = b e f' h' j k' m' n ;
+	[4698] = b f' h' i j k' m' n ;
+	[4699] = b' e' g h j' k' m' n ;
+	[4700] = b' g h i j' k' m n' ;
+	[4701] = b' e' h i j' k' m' n ;
+	[4702] = b' e' g h' j k' m' n ;
+	[4703] = a g h i j' k' m n' ;
+	[4704] = a f' h' i' j' l m n' ;
+	[4705] = a b c d' e' f m n' ;
+	[4706] = a b c d' e' l' m n' ;
+	[4707] = a b c d' e' k' m n' ;
+	[4708] = a' d e' g j k' m n' ;
+	[4709] = c d e f g i l' m' n' ;
+	[4710] = c d e f g i j' m' n' ;
+	[4711] = c d e f g i' l m' n' ;
+	[4712] = c d e f g i' k m' n' ;
+	[4713] = c d e f g i' j' m' n' ;
+	[4714] = f g' h i j k l m' n' ;
+	[4715] = f' g h i j k l m n' ;
+	[4716] = f' g h i j k l m' n' ;
+	[4717] = e' g h i j k l m' n' ;
+	[4718] = d g' h i j k l m' n' ;
+	[4719] = d' g h i j k l m' n' ;
+	[4720] = c g' h i j k l m' n' ;
+	[4721] = c f' h i j k l m' n' ;
+	[4722] = c' g h i j k l m n' ;
+	[4723] = c' f h i j k l m' n' ;
+	[4724] = c d e f g h i' m' n' ;
+	[4725] = c e f' h i' j' k' m' n' ;
+	[4726] = c f h i' j' k' l m' n' ;
+	[4727] = c d e f g h' i m' n' ;
+	[4728] = b c d e f g j' m' n ;
+	[4729] = b c d e' f' j' k m' n ;
+	[4730] = b c d e' f' i k m' n ;
+	[4731] = b c d e' f' i j m' n ;
+	[4732] = b c d e' f' h j m' n ;
+	[4733] = b c d e' f' h' j' m' n ;
+	[4734] = b' g h i j k l m n' ;
+	[4735] = b' f h i j k l m' n ;
+	[4736] = a b c d e f l' m n' ;
+	[4737] = a b c d' e' g' k m n' ;
+	[4738] = a b c d e f k' m n' ;
+	[4739] = a b c d' e' g' j' m n' ;
+	[4740] = a b c d e f i' m n' ;
+	[4741] = a b c d e f h' m n' ;
+	[4742] = c d e f g i j k' m' n' ;
+	[4743] = e' f g h i j k l m n' ;
+	[4744] = d' f g h i j k l m n' ;
+	[4745] = b c d e f g i l' m' n ;
+	[4746] = b c d e f g i k' m' n ;
+	[4747] = b c d e f g i' l m' n ;
+	[4748] = b c d e f g i' k m' n ;
+	[4749] = b c d e' f' g i' k' m' n ;
+	[4750] = b c d e' f' g i' j' m' n ;
+	[4751] = b c d e f g h i' m' n ;
+	[4752] = b c d e' f' g h i' m' n ;
+	[4753] = b c d e f g h' i m' n ;
+	[4754] = a b c d e f g' k m n' ;
+	[4755] = a b c d e f g' j' m n' ;
+	[4756] = a b c d e f j' k m n' ;
+	[4757] = a' f g h i j k l m n' ;
+	r2 = ( [2910]' [2911]' [2912]' [2913]' [2914]' [2915]' [2916]' [2917]' 
+		[2918]' [2919]' [2920]' [2921]' [2922]' [2923]' [2924]' [2925]' 
+		[2926]' [2927]' [2928]' [2929]' [2930]' [2931]' [2932]' [2933]' 
+		[2934]' [2935]' [2936]' [2937]' [2938]' [2939]' [2940]' [2941]' 
+		[2942]' [2943]' [2944]' [2945]' [2946]' [2947]' [2948]' [2949]' 
+		[2950]' [2951]' [2952]' [2953]' [2954]' [2955]' [2956]' [2957]' 
+		[2958]' [2959]' [2960]' [2961]' [2962]' [2963]' [2964]' [2965]' 
+		[2966]' [2967]' [2968]' [2969]' [2970]' [2971]' [2972]' [2973]' 
+		[2974]' [2975]' [2976]' [2977]' [2978]' [2979]' [2980]' [2981]' 
+		[2982]' [2983]' [2984]' [2985]' [2986]' [2987]' [2988]' [2989]' 
+		[2990]' [2991]' [2992]' [2993]' [2994]' [2995]' [2996]' [2997]' 
+		[2998]' [2999]' [3000]' [3001]' [3002]' [3003]' [3004]' [3005]' 
+		[3006]' [3007]' [3008]' [3009]' [3010]' [3011]' [3012]' [3013]' 
+		[3014]' [3015]' [3016]' [3017]' [3018]' [3019]' [3020]' [3021]' 
+		[3022]' [3023]' [3024]' [3025]' [3026]' [3027]' [3028]' [3029]' 
+		[3030]' [3031]' [3032]' [3033]' [3034]' [3035]' [3036]' [3037]' 
+		[3038]' [3039]' [3040]' [3041]' [3042]' [3043]' [3044]' [3045]' 
+		[3046]' [3047]' [3048]' [3049]' [3050]' [3051]' [3052]' [3053]' 
+		[3054]' [3055]' [3056]' [3057]' [3058]' [3059]' [3060]' [3061]' 
+		[3062]' [3063]' [3064]' [3065]' )' ;
+	s2 = ( [3066]' [3067]' [3068]' [3069]' [3070]' [3071]' [3072]' [3073]' 
+		[3074]' [3075]' [3076]' [3077]' [3078]' [3079]' [3080]' [3081]' 
+		[3082]' [3083]' [3084]' [3085]' [3086]' [3087]' [3088]' [3089]' 
+		[3090]' [3091]' [3092]' [3093]' [3094]' [3095]' [3096]' [3097]' 
+		[3098]' [3099]' [3100]' [3101]' [3102]' [3103]' [3104]' [3105]' 
+		[3106]' [3107]' [3108]' [3109]' [3110]' [3111]' [3112]' [3113]' 
+		[3114]' [3115]' [3116]' [3117]' [3118]' [3119]' [3120]' [3121]' 
+		[3122]' [3123]' [3124]' [3125]' [3126]' [3127]' [3128]' [3129]' 
+		[3130]' [3131]' [3132]' [3133]' [3134]' [3135]' [3136]' [3137]' 
+		[3138]' [3139]' [3140]' [3141]' [3142]' [3143]' [3144]' [3145]' 
+		[3146]' [3147]' [3148]' [3149]' [3150]' [3151]' [3152]' [3153]' 
+		[3154]' [3155]' [3156]' [3157]' [3158]' [3159]' [3160]' [3161]' 
+		[3162]' [3163]' [3164]' [3165]' [3166]' [3167]' [3168]' [3169]' 
+		[3170]' [3171]' [3172]' [3173]' [3174]' [3175]' [3176]' [3177]' 
+		[3178]' [3179]' [3180]' [3181]' [3182]' [3183]' [3184]' [3185]' 
+		[3186]' [3187]' [3188]' [3189]' [3190]' [3191]' [3192]' [3193]' 
+		[3194]' [3195]' [3196]' [3197]' [3198]' [3199]' [3200]' [3201]' 
+		[3202]' [3203]' [3204]' [3205]' [3206]' [3207]' [3208]' [3209]' 
+		[3210]' [3211]' [3212]' [3213]' [3214]' [3215]' [3216]' [3217]' 
+		[3218]' [3219]' [3220]' [3221]' )' ;
+	t2 = ( [3222]' [3223]' [3224]' [3225]' [3226]' [3227]' [3228]' [3229]' 
+		[3230]' [3231]' [3232]' [3233]' [3234]' [3235]' [3236]' [3237]' 
+		[3238]' [3239]' [3240]' [3241]' [3242]' [3243]' [3244]' [3245]' 
+		[3246]' [3247]' [3248]' [3249]' [3250]' [3251]' [3252]' [3253]' 
+		[3254]' [3255]' [3256]' [3257]' [3258]' [3259]' [3260]' [3261]' 
+		[3262]' [3263]' [3264]' [3265]' [3266]' [3267]' [3268]' [3269]' 
+		[3270]' [3271]' [3272]' [3273]' [3274]' [3275]' [3276]' [3277]' 
+		[3278]' [3279]' [3280]' [3281]' [3282]' [3283]' [3284]' [3285]' 
+		[3286]' [3287]' [3288]' [3289]' [3290]' [3291]' [3292]' [3293]' 
+		[3294]' [3295]' [3296]' [3297]' [3298]' [3299]' [3300]' [3301]' 
+		[3302]' [3303]' [3304]' [3305]' [3306]' [3307]' [3308]' [3309]' 
+		[3310]' [3311]' [3312]' [3313]' [3314]' [3315]' [3316]' [3317]' 
+		[3318]' [3319]' [3320]' [3321]' [3322]' [3323]' [3324]' [3325]' 
+		[3326]' [3327]' [3328]' [3329]' [3330]' [3331]' [3332]' [3333]' 
+		[3334]' [3335]' [3336]' [3337]' [3338]' [3339]' [3340]' [3341]' 
+		[3342]' [3343]' [3344]' [3345]' [3346]' [3347]' [3348]' [3349]' 
+		[3350]' [3351]' [3352]' [3353]' [3354]' [3355]' [3356]' [3357]' 
+		[3358]' [3359]' [3360]' [3361]' [3362]' [3363]' [3364]' [3365]' 
+		[3366]' [3367]' [3368]' [3369]' [3370]' [3371]' )' ;
+	u2 = ( [3372]' [3373]' [3374]' [3375]' [3376]' [3377]' [3378]' [3379]' 
+		[3380]' [3381]' [3382]' [3383]' [3384]' [3385]' [3386]' [3387]' 
+		[3388]' [3389]' [3390]' [3391]' [3392]' [3393]' [3394]' [3395]' 
+		[3396]' [3397]' [3398]' [3399]' [3400]' [3401]' [3402]' [3403]' 
+		[3404]' [3405]' [3406]' [3407]' [3408]' [3409]' [3410]' [3411]' 
+		[3412]' [3413]' [3414]' [3415]' [3416]' [3417]' [3418]' [3419]' 
+		[3420]' [3421]' [3422]' [3423]' [3424]' [3425]' [3426]' [3427]' 
+		[3428]' [3429]' [3430]' [3431]' [3432]' [3433]' [3434]' [3435]' 
+		[3436]' [3437]' [3438]' [3439]' [3440]' [3441]' [3442]' [3443]' 
+		[3444]' [3445]' [3446]' [3447]' [3448]' [3449]' [3450]' [3451]' 
+		[3452]' [3453]' [3454]' [3455]' [3456]' [3457]' [3458]' [3459]' 
+		[3460]' [3461]' [3462]' [3463]' [3464]' [3465]' [3466]' [3467]' 
+		[3468]' [3469]' [3470]' [3471]' [3472]' [3473]' [3474]' [3475]' 
+		[3476]' [3477]' [3478]' [3479]' [3480]' [3481]' [3482]' [3483]' 
+		[3484]' [3485]' [3486]' [3487]' [3488]' [3489]' [3490]' [3491]' 
+		[3492]' [3493]' [3494]' [3495]' [3496]' [3497]' [3498]' [3499]' 
+		[3500]' [3501]' [3502]' [3503]' [3504]' [3505]' [3506]' [3507]' 
+		[3508]' [3509]' [3510]' [3511]' [3512]' [3513]' [3514]' [3515]' 
+		[3516]' [3517]' [3518]' [3519]' [3520]' [3521]' [3522]' [3523]' 
+		[3524]' [3525]' [3526]' [3527]' )' ;
+	n2 = ( [3528]' [3529]' [3530]' [3531]' [3532]' [3533]' [3534]' [3535]' 
+		[3536]' [3537]' [3538]' [3539]' [3540]' [3541]' [3542]' [3543]' 
+		[3544]' [3545]' [3546]' [3547]' [3548]' [3549]' [3550]' [3551]' 
+		[3552]' [3553]' [3554]' [3555]' [3556]' [3557]' [3558]' [3559]' 
+		[3560]' [3561]' [3562]' [3563]' [3564]' [3565]' [3566]' [3567]' 
+		[3568]' [3569]' [3570]' [3571]' [3572]' [3573]' [3574]' [3575]' 
+		[3576]' [3577]' [3578]' [3579]' [3580]' [3581]' [3582]' [3583]' 
+		[3584]' [3585]' [3586]' [3587]' [3588]' [3589]' [3590]' [3591]' 
+		[3592]' [3593]' [3594]' [3595]' [3596]' [3597]' [3598]' [3599]' 
+		[3600]' [3601]' [3602]' [3603]' [3604]' [3605]' [3606]' [3607]' 
+		[3608]' [3609]' [3610]' [3611]' [3612]' [3613]' [3614]' [3615]' 
+		[3616]' [3617]' [3618]' [3619]' [3620]' [3621]' [3622]' [3623]' 
+		[3624]' [3625]' [3626]' [3627]' [3628]' [3629]' [3630]' [3631]' 
+		[3632]' [3633]' [3634]' [3635]' [3636]' [3637]' [3638]' [3639]' 
+		[3640]' [3641]' [3642]' [3643]' [3644]' [3645]' [3646]' [3647]' 
+		[3648]' [3649]' [3650]' [3651]' [3652]' [3653]' [3654]' [3655]' 
+		[3656]' [3657]' [3658]' [3659]' [3660]' [3661]' [3662]' [3663]' 
+		[3664]' [3665]' [3666]' [3667]' [3668]' [3669]' [3670]' [3671]' 
+		[3672]' [3673]' [3674]' [3675]' [3676]' [3677]' [3678]' [3679]' 
+		[3680]' [3681]' [3682]' [3683]' [3684]' [3685]' [3686]' [3687]' 
+		[3688]' [3689]' )' ;
+	o2 = ( [3690]' [3691]' [3692]' [3693]' [3694]' [3695]' [3696]' [3697]' 
+		[3698]' [3699]' [3700]' [3701]' [3702]' [3703]' [3704]' [3705]' 
+		[3706]' [3707]' [3708]' [3709]' [3710]' [3711]' [3712]' [3713]' 
+		[3714]' [3715]' [3716]' [3717]' [3718]' [3719]' [3720]' [3721]' 
+		[3722]' [3723]' [3724]' [3725]' [3726]' [3727]' [3728]' [3729]' 
+		[3730]' [3731]' [3732]' [3733]' [3734]' [3735]' [3736]' [3737]' 
+		[3738]' [3739]' [3740]' [3741]' [3742]' [3743]' [3744]' [3745]' 
+		[3746]' [3747]' [3748]' [3749]' [3750]' [3751]' [3752]' [3753]' 
+		[3754]' [3755]' [3756]' [3757]' [3758]' [3759]' [3760]' [3761]' 
+		[3762]' [3763]' [3764]' [3765]' [3766]' [3767]' [3768]' [3769]' 
+		[3770]' [3771]' [3772]' [3773]' [3774]' [3775]' [3776]' [3777]' 
+		[3778]' [3779]' [3780]' [3781]' [3782]' [3783]' [3784]' [3785]' 
+		[3786]' [3787]' [3788]' [3789]' [3790]' [3791]' [3792]' [3793]' 
+		[3794]' [3795]' [3796]' [3797]' [3798]' [3799]' [3800]' [3801]' 
+		[3802]' [3803]' [3804]' [3805]' [3806]' [3807]' [3808]' [3809]' 
+		[3810]' [3811]' [3812]' [3813]' [3814]' [3815]' [3816]' [3817]' 
+		[3818]' [3819]' [3820]' [3821]' [3822]' [3823]' [3824]' [3825]' 
+		[3826]' [3827]' )' ;
+	p2 = ( [3828]' [3829]' [3830]' [3831]' [3832]' [3833]' [3834]' [3835]' 
+		[3836]' [3837]' [3838]' [3839]' [3840]' [3841]' [3842]' [3843]' 
+		[3844]' [3845]' [3846]' [3847]' [3848]' [3849]' [3850]' [3851]' 
+		[3852]' [3853]' [3854]' [3855]' [3856]' [3857]' [3858]' [3859]' 
+		[3860]' [3861]' [3862]' [3863]' [3864]' [3865]' [3866]' [3867]' 
+		[3868]' [3869]' [3870]' [3871]' [3872]' [3873]' [3874]' [3875]' 
+		[3876]' [3877]' [3878]' [3879]' [3880]' [3881]' [3882]' [3883]' 
+		[3884]' [3885]' [3886]' [3887]' [3888]' [3889]' [3890]' [3891]' 
+		[3892]' [3893]' [3894]' [3895]' [3896]' [3897]' [3898]' [3899]' 
+		[3900]' [3901]' [3902]' [3903]' [3904]' [3905]' [3906]' [3907]' 
+		[3908]' [3909]' [3910]' [3911]' [3912]' [3913]' [3914]' [3915]' 
+		[3916]' [3917]' [3918]' [3919]' [3920]' [3921]' [3922]' [3923]' 
+		[3924]' [3925]' [3926]' [3927]' [3928]' [3929]' [3930]' [3931]' 
+		[3932]' [3933]' [3934]' [3935]' [3936]' [3937]' [3938]' [3939]' 
+		[3940]' [3941]' [3942]' [3943]' [3944]' [3945]' [3946]' [3947]' 
+		[3948]' [3949]' [3950]' [3951]' [3952]' [3953]' [3954]' [3955]' 
+		[3956]' [3957]' [3958]' [3959]' [3960]' [3961]' [3962]' [3963]' 
+		[3964]' [3965]' [3966]' [3967]' [3968]' [3969]' [3970]' [3971]' 
+		[3972]' [3973]' [3974]' [3975]' [3976]' [3977]' )' ;
+	q2 = ( [3978]' [3979]' [3980]' [3981]' [3982]' [3983]' [3984]' [3985]' 
+		[3986]' [3987]' [3988]' [3989]' [3990]' [3991]' [3992]' [3993]' 
+		[3994]' [3995]' [3996]' [3997]' [3998]' [3999]' [4000]' [4001]' 
+		[4002]' [4003]' [4004]' [4005]' [4006]' [4007]' [4008]' [4009]' 
+		[4010]' [4011]' [4012]' [4013]' [4014]' [4015]' [4016]' [4017]' 
+		[4018]' [4019]' [4020]' [4021]' [4022]' [4023]' [4024]' [4025]' 
+		[4026]' [4027]' [4028]' [4029]' [4030]' [4031]' [4032]' [4033]' 
+		[4034]' [4035]' [4036]' [4037]' [4038]' [4039]' [4040]' [4041]' 
+		[4042]' [4043]' [4044]' [4045]' [4046]' [4047]' [4048]' [4049]' 
+		[4050]' [4051]' [4052]' [4053]' [4054]' [4055]' [4056]' [4057]' 
+		[4058]' [4059]' [4060]' [4061]' [4062]' [4063]' [4064]' [4065]' 
+		[4066]' [4067]' [4068]' [4069]' [4070]' [4071]' [4072]' [4073]' 
+		[4074]' [4075]' [4076]' [4077]' [4078]' [4079]' [4080]' [4081]' 
+		[4082]' [4083]' [4084]' [4085]' [4086]' [4087]' [4088]' [4089]' 
+		[4090]' [4091]' [4092]' [4093]' [4094]' [4095]' [4096]' [4097]' 
+		[4098]' [4099]' [4100]' [4101]' [4102]' [4103]' [4104]' [4105]' 
+		[4106]' [4107]' [4108]' [4109]' [4110]' [4111]' [4112]' [4113]' 
+		[4114]' [4115]' [4116]' [4117]' [4118]' [4119]' [4120]' [4121]' 
+		[4122]' [4123]' [4124]' [4125]' [4126]' [4127]' [4128]' [4129]' 
+		[4130]' [4131]' [4132]' [4133]' [4134]' [4135]' [4136]' [4137]' 
+		[4138]' [4139]' [4140]' [4141]' [4142]' [4143]' [4144]' [4145]' 
+		[4146]' [4147]' [4148]' [4149]' [4150]' [4151]' )' ;
+	h2 = ( [4152]' [4153]' [4154]' [4155]' [4156]' [4157]' [4158]' [4159]' 
+		[4160]' [4161]' [4162]' [4163]' [4164]' [4165]' [4166]' [4167]' 
+		[4168]' [4169]' [4170]' [4171]' [4172]' [4173]' [4174]' [4175]' 
+		[4176]' [4177]' [4178]' [4179]' [4180]' [4181]' [4182]' [4183]' 
+		[4184]' [4185]' [4186]' [4187]' [4188]' [4189]' [4190]' [4191]' 
+		[4192]' [4193]' [4194]' [4195]' [4196]' [4197]' [4198]' [4199]' 
+		[4200]' [4201]' [4202]' [4203]' [4204]' [4205]' [4206]' [4207]' 
+		[4208]' [4209]' [4210]' [4211]' [4212]' [4213]' [4214]' [4215]' 
+		[4216]' [4217]' [4218]' [4219]' [4220]' [4221]' [4222]' [4223]' 
+		[4224]' [4225]' [4226]' [4227]' [4228]' [4229]' [4230]' [4231]' 
+		[4232]' [4233]' [4234]' [4235]' [4236]' [4237]' [4238]' [4239]' 
+		)' ;
+	i2 = ( [4240]' [4241]' [4242]' [4243]' [4244]' [4245]' [4246]' [4247]' 
+		[4248]' [4249]' [4250]' [4251]' [4252]' [4253]' [4254]' [4255]' 
+		[4256]' [4257]' [4258]' [4259]' [4260]' [4261]' [4262]' [4263]' 
+		[4264]' [4265]' [4266]' [4267]' [4268]' [4269]' [4270]' [4271]' 
+		[4272]' [4273]' [4274]' [4275]' [4276]' [4277]' [4278]' [4279]' 
+		[4280]' [4281]' [4282]' [4283]' [4284]' [4285]' [4286]' [4287]' 
+		[4288]' [4289]' [4290]' [4291]' [4292]' [4293]' [4294]' [4295]' 
+		[4296]' [4297]' [4298]' [4299]' [4300]' [4301]' [4302]' [4303]' 
+		[4304]' [4305]' [4306]' [4307]' [4308]' [4309]' [4310]' [4311]' 
+		[4312]' [4313]' [4314]' [4315]' [4316]' [4317]' [4318]' [4319]' 
+		[4320]' [4321]' [4322]' [4323]' [4324]' [4325]' [4326]' [4327]' 
+		[4328]' [4329]' [4330]' [4331]' [4332]' [4333]' [4334]' [4335]' 
+		[4336]' [4337]' [4338]' [4339]' [4340]' [4341]' [4342]' [4343]' 
+		[4344]' [4345]' [4346]' [4347]' [4348]' [4349]' [4350]' [4351]' 
+		[4352]' [4353]' [4354]' [4355]' [4356]' [4357]' [4358]' [4359]' 
+		[4360]' [4361]' [4362]' [4363]' [4364]' [4365]' [4366]' [4367]' 
+		[4368]' [4369]' [4370]' [4371]' [4372]' [4373]' [4374]' [4375]' 
+		[4376]' [4377]' [4378]' [4379]' [4380]' [4381]' [4382]' [4383]' 
+		[4384]' [4385]' [4386]' [4387]' [4388]' [4389]' [4390]' [4391]' 
+		[4392]' [4393]' [4394]' [4395]' [4396]' [4397]' [4398]' [4399]' 
+		[4400]' )' ;
+	j2 = ( [4401]' [4402]' [4403]' [4404]' [4405]' [4406]' [4407]' [4408]' 
+		[4409]' [4410]' [4411]' [4412]' [4413]' )' ;
+	k2 = ( [4414]' [4415]' [4416]' [4417]' [4418]' [4419]' [4420]' [4421]' 
+		[4422]' [4423]' [4424]' [4425]' [4426]' )' ;
+	m2 = ( [4427]' [4428]' [4429]' [4430]' [4431]' [4432]' [4433]' [4434]' 
+		[4435]' [4436]' [4437]' [4438]' [4439]' [4440]' [4441]' [4442]' 
+		[4443]' [4444]' [4445]' [4446]' [4447]' [4448]' [4449]' [4450]' 
+		)' ;
+	l2 = ( [4451]' [4452]' [4453]' [4454]' [4455]' [4456]' [4457]' [4458]' 
+		[4459]' [4460]' [4461]' [4462]' [4463]' [4464]' [4465]' [4466]' 
+		[4467]' [4468]' [4469]' [4470]' [4471]' [4472]' [4473]' [4474]' 
+		[4475]' [4476]' [4477]' [4478]' [4479]' [4480]' [4481]' [4482]' 
+		[4483]' [4484]' [4485]' [4486]' [4487]' [4488]' [4489]' [4490]' 
+		[4491]' [4492]' [4493]' [4494]' [4495]' [4496]' [4497]' [4498]' 
+		[4499]' [4500]' [4501]' [4502]' [4503]' [4504]' [4505]' [4506]' 
+		[4507]' [4508]' [4509]' [4510]' [4511]' [4512]' [4513]' [4514]' 
+		[4515]' [4516]' [4517]' [4518]' [4519]' [4520]' [4521]' [4522]' 
+		[4523]' [4524]' [4525]' [4526]' [4527]' [4528]' [4529]' [4530]' 
+		[4531]' [4532]' [4533]' [4534]' [4535]' [4536]' [4537]' [4538]' 
+		[4539]' [4540]' [4541]' [4542]' [4543]' [4544]' [4545]' [4546]' 
+		[4547]' [4548]' [4549]' [4550]' [4551]' [4552]' [4553]' [4554]' 
+		[4555]' [4556]' [4557]' [4558]' [4559]' [4560]' [4561]' [4562]' 
+		[4563]' [4564]' [4565]' [4566]' [4567]' [4568]' [4569]' [4570]' 
+		[4571]' [4572]' [4573]' [4574]' [4575]' [4576]' [4577]' [4578]' 
+		[4579]' [4580]' [4581]' [4582]' [4583]' [4584]' [4585]' [4586]' 
+		[4587]' [4588]' [4589]' [4590]' [4591]' [4592]' [4593]' [4594]' 
+		[4595]' [4596]' [4597]' [4598]' [4599]' [4600]' [4601]' [4602]' 
+		[4603]' [4604]' [4605]' [4606]' [4607]' [4608]' [4609]' [4610]' 
+		[4611]' [4612]' [4613]' [4614]' [4615]' [4616]' [4617]' [4618]' 
+		[4619]' [4620]' [4621]' [4622]' [4623]' [4624]' [4625]' [4626]' 
+		[4627]' [4628]' [4629]' [4630]' [4631]' [4632]' [4633]' [4634]' 
+		[4635]' [4636]' [4637]' [4638]' [4639]' [4640]' [4641]' [4642]' 
+		[4643]' [4644]' [4645]' [4646]' [4647]' [4648]' [4649]' [4650]' 
+		[4651]' [4652]' [4653]' [4654]' [4655]' [4656]' [4657]' [4658]' 
+		[4659]' [4660]' [4661]' [4662]' [4663]' [4664]' [4665]' [4666]' 
+		[4667]' [4668]' [4669]' [4670]' [4671]' [4672]' [4673]' [4674]' 
+		[4675]' [4676]' [4677]' [4678]' [4679]' [4680]' [4681]' [4682]' 
+		[4683]' [4684]' [4685]' [4686]' [4687]' [4688]' [4689]' [4690]' 
+		[4691]' [4692]' [4693]' [4694]' [4695]' [4696]' [4697]' [4698]' 
+		[4699]' [4700]' [4701]' [4702]' [4703]' [4704]' [4705]' [4706]' 
+		[4707]' [4708]' [4709]' [4710]' [4711]' [4712]' [4713]' [4714]' 
+		[4715]' [4716]' [4717]' [4718]' [4719]' [4720]' [4721]' [4722]' 
+		[4723]' [4724]' [4725]' [4726]' [4727]' [4728]' [4729]' [4730]' 
+		[4731]' [4732]' [4733]' [4734]' [4735]' [4736]' [4737]' [4738]' 
+		[4739]' [4740]' [4741]' [4742]' [4743]' [4744]' [4745]' [4746]' 
+		[4747]' [4748]' [4749]' [4750]' [4751]' [4752]' [4753]' [4754]' 
+		[4755]' [4756]' [4757]' )' ;
+
+
+.endmodel misex3.pla ;
+

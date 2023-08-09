@@ -1,0 +1,22 @@
+.model s27 ;
+# 4 inputs
+# 1 outputs
+# 3 D-type flipflops
+# 2 inverters
+# 8 gates (1 ANDs + 1 NANDs + 2 ORs + 4 NORs)
+.inputs G0 G1 G2 G3  CK ;
+.outputs G17  ;
+G5 = @D ( G10, CK ) ;
+G6 = @D ( G11, CK ) ;
+G7 = @D ( G13, CK ) ;
+G14 = G0' ;
+G17 = G11' ;
+G8 = G14 G6 ;
+G15 = G12 +G8 ;
+G16 = G3 +G8 ;
+G9 = ( G16 G15 )' ;
+G10 = ( G14 +G11 )' ;
+G11 = ( G5 +G9 )' ;
+G12 = ( G1 +G7 )' ;
+G13 = ( G2 +G12 )' ;
+.endmodel s27 ;

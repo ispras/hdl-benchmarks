@@ -1,0 +1,85 @@
+
+.model pcler8_cl ;
+
+	.date 910108220237 ;	# January 8 1991, 22:02.37
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u v w x y z a0 ;
+	.outputs b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1220_g2 CMOS3_1220 (w, d2 ;;g2' ) ;
+	.call CMOS3_1220_f2 CMOS3_1220 (t, u ;;f2' ) ;
+	.call CMOS3_1220_e2 CMOS3_1220 (y, b2 ;;e2' ) ;
+	.call CMOS3_1220_zz_4 CMOS3_1220 (l, b0 ;;zz_4' ) ;
+	.call CMOS3_1220_zz_53 CMOS3_1220 (b0, s ;;zz_53' ) ;
+	.call CMOS3_1220_zz_46 CMOS3_1220 (b0, r ;;zz_46' ) ;
+	.call CMOS3_1220_zz_39 CMOS3_1220 (b0, q ;;zz_39' ) ;
+	.call CMOS3_1220_zz_32 CMOS3_1220 (b0, p ;;zz_32' ) ;
+	.call CMOS3_1220_zz_25 CMOS3_1220 (b0, o ;;zz_25' ) ;
+	.call CMOS3_1220_zz_18 CMOS3_1220 (b0, n ;;zz_18' ) ;
+	.call CMOS3_1220_zz_11 CMOS3_1220 (b0, m ;;zz_11' ) ;
+	.call CMOS3_1120_zz_5 CMOS3_1120 (zz_8, zz_6 ;;zz_5' ) ;
+	.call CMOS3_1120_zz_47 CMOS3_1120 (zz_50, zz_48 ;;zz_47' ) ;
+	.call CMOS3_1120_zz_40 CMOS3_1120 (zz_43, zz_41 ;;zz_40' ) ;
+	.call CMOS3_1120_zz_33 CMOS3_1120 (zz_36, zz_34 ;;zz_33' ) ;
+	.call CMOS3_1120_zz_26 CMOS3_1120 (zz_29, zz_27 ;;zz_26' ) ;
+	.call CMOS3_1120_zz_19 CMOS3_1120 (zz_22, zz_20 ;;zz_19' ) ;
+	.call CMOS3_1120_zz_12 CMOS3_1120 (zz_15, zz_13 ;;zz_12' ) ;
+	.call CMOS3_1670_b0 CMOS3_1670 (a0, c2, a2 ;;b0 ) ;
+	.call CMOS3_1670_zz_48 CMOS3_1670 (a2, c2', a0 ;;zz_48 ) ;
+	.call CMOS3_1670_zz_41 CMOS3_1670 (a2, e2', z ;;zz_41 ) ;
+	.call CMOS3_1670_zz_34 CMOS3_1670 (a2, b2', y ;;zz_34 ) ;
+	.call CMOS3_1670_zz_27 CMOS3_1670 (a2, g2', x ;;zz_27 ) ;
+	.call CMOS3_1670_zz_20 CMOS3_1670 (a2, d2', w ;;zz_20 ) ;
+	.call CMOS3_1670_zz_13 CMOS3_1670 (a2, f2', v ;;zz_13 ) ;
+	.call CMOS3_1130_a2 CMOS3_1130 (j', k, i ;;a2 ) ;
+	.call CMOS3_1130_zz_8 CMOS3_1130 (a2', t, u' ;;zz_8 ) ;
+	.call CMOS3_1130_zz_6 CMOS3_1130 (a2', u, t' ;;zz_6 ) ;
+	.call CMOS3_1130_zz_50 CMOS3_1130 (a2', a0, c2' ;;zz_50 ) ;
+	.call CMOS3_1130_zz_43 CMOS3_1130 (a2', z, e2' ;;zz_43 ) ;
+	.call CMOS3_1130_zz_36 CMOS3_1130 (a2', y, b2' ;;zz_36 ) ;
+	.call CMOS3_1130_zz_29 CMOS3_1130 (a2', x, g2' ;;zz_29 ) ;
+	.call CMOS3_1130_zz_22 CMOS3_1130 (a2', w, d2' ;;zz_22 ) ;
+	.call CMOS3_1130_zz_15 CMOS3_1130 (a2', v, f2' ;;zz_15 ) ;
+	.call CMOS3_1310_j0 CMOS3_1310 (j0 ;;j0' ) ;
+	.call CMOS3_1310_i0 CMOS3_1310 (i0 ;;i0' ) ;
+	.call CMOS3_1310_h0 CMOS3_1310 (h0 ;;h0' ) ;
+	.call CMOS3_1310_g0 CMOS3_1310 (g0 ;;g0' ) ;
+	.call CMOS3_1310_f0 CMOS3_1310 (f0 ;;f0' ) ;
+	.call CMOS3_1310_e0 CMOS3_1310 (e0 ;;e0' ) ;
+	.call CMOS3_1310_d2 CMOS3_1310 (d2 ;;d2' ) ;
+	.call CMOS3_1310_d0 CMOS3_1310 (d0 ;;d0' ) ;
+	.call CMOS3_1310_c0 CMOS3_1310 (c0 ;;c0' ) ;
+	.call CMOS3_1310_c2 CMOS3_1310 (c2 ;;c2' ) ;
+	.call CMOS3_1310_b2 CMOS3_1310 (b2 ;;b2' ) ;
+	.call CMOS3_1310_a2 CMOS3_1310 (a2 ;;a2' ) ;
+	.call CMOS3_1310_u CMOS3_1310 (u ;;u' ) ;
+	.call CMOS3_1310_t CMOS3_1310 (t ;;t' ) ;
+	.call CMOS3_1310_j CMOS3_1310 (j ;;j' ) ;
+	.call CMOS3_1760_zz_3 CMOS3_1760 (a2', t ;;zz_3' ) ;
+	.call CMOS3_1610_d2 CMOS3_1610 (f2', v ;;d2 ) ;
+	.call CMOS3_1610_c2 CMOS3_1610 (e2', z ;;c2 ) ;
+	.call CMOS3_1610_b2 CMOS3_1610 (g2', x ;;b2 ) ;
+	.call CMOS3_1660_j0 CMOS3_1660 (h, i ;;j0 ) ;
+	.call CMOS3_1660_i0 CMOS3_1660 (g, i ;;i0 ) ;
+	.call CMOS3_1660_h0 CMOS3_1660 (f, i ;;h0 ) ;
+	.call CMOS3_1660_g0 CMOS3_1660 (e, i ;;g0 ) ;
+	.call CMOS3_1660_f0 CMOS3_1660 (d, i ;;f0 ) ;
+	.call CMOS3_1660_e0 CMOS3_1660 (c, i ;;e0 ) ;
+	.call CMOS3_1660_d0 CMOS3_1660 (b, i ;;d0 ) ;
+	.call CMOS3_1660_c0 CMOS3_1660 (a, i ;;c0 ) ;
+	.call CMOS3_1230_r0 CMOS3_1230 (j0', zz_53', zz_47' ;;r0 ) ;
+	.call CMOS3_1230_q0 CMOS3_1230 (i0', zz_46', zz_40' ;;q0 ) ;
+	.call CMOS3_1230_p0 CMOS3_1230 (h0', zz_39', zz_33' ;;p0 ) ;
+	.call CMOS3_1230_o0 CMOS3_1230 (g0', zz_32', zz_26' ;;o0 ) ;
+	.call CMOS3_1230_n0 CMOS3_1230 (f0', zz_25', zz_19' ;;n0 ) ;
+	.call CMOS3_1230_m0 CMOS3_1230 (e0', zz_18', zz_12' ;;m0 ) ;
+	.call CMOS3_1230_l0 CMOS3_1230 (d0', zz_11', zz_5' ;;l0 ) ;
+	.call CMOS3_1230_k0 CMOS3_1230 (c0', zz_4', zz_3' ;;k0 ) ;
+
+.endmodel pcler8_cl ;
+

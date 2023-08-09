@@ -1,0 +1,37 @@
+
+.i 3 
+.o 5 
+.p 32 
+.s 4
+000 state1 state1 00101
+000 state2 state2 10010
+000 state3 state1 00101
+000 state4 state2 10010
+001 state1 state2 00010
+001 state2 state2 10100
+001 state3 state2 00010
+001 state4 state2 10100
+010 state1 state3 00010
+010 state2 state3 10010
+010 state3 state3 00010
+010 state4 state3 10010
+011 state3 state1 00100
+011 state4 state1 00100
+011 state1 state2 10001
+011 state2 state2 10001
+111 state3 state1 00100
+111 state4 state1 00100
+111 state1 state3 10101
+111 state2 state3 10101
+100 state1 state1 01001
+100 state3 state1 10100
+100 state4 state1 01001
+100 state2 state3 01001
+101 state1 state2 01010
+101 state2 state2 01010
+101 state3 state2 01000
+101 state4 state2 01010
+110 state1 state3 01010
+110 state2 state3 01010
+110 state4 state3 10000
+110 state3 state4 01010

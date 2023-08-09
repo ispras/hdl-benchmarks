@@ -1,0 +1,117 @@
+.model unreg
+.inputs a b c d e f g h i j k l m n o p q s t u v w x y z a0 b0 c0 d0 e0 f0 \
+g0 h0 i0 j0 k0
+.outputs l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0 y0 z0 a1
+.names w1 v u l0
+0-1 1
+-00 1
+.names y1 w u m0
+0-1 1
+-00 1
+.names a2 x u n0
+0-1 1
+-00 1
+.names b2 y u o0
+0-1 1
+-00 1
+.names e2 z u p0
+0-1 1
+-00 1
+.names g2 a0 u q0
+0-1 1
+-00 1
+.names i2 b0 u r0
+0-1 1
+-00 1
+.names j2 c0 u s0
+0-1 1
+-00 1
+.names m2 d0 u t0
+0-1 1
+-00 1
+.names o2 e0 u u0
+0-1 1
+-00 1
+.names q2 f0 u v0
+0-1 1
+-00 1
+.names r2 g0 u w0
+0-1 1
+-00 1
+.names u2 h0 u x0
+0-1 1
+-00 1
+.names w2 i0 u y0
+0-1 1
+-00 1
+.names y2 j0 u z0
+0-1 1
+-00 1
+.names z2 k0 u a1
+0-1 1
+-00 1
+.names d t w s w1
+---1 1
+00-- 1
+-11- 1
+.names c t x s y1
+---1 1
+00-- 1
+-11- 1
+.names b t y s a2
+---1 1
+00-- 1
+-11- 1
+.names a q t s b2
+---1 1
+-01- 1
+0-0- 1
+.names h t a0 s e2
+---1 1
+00-- 1
+-11- 1
+.names g t b0 s g2
+---1 1
+00-- 1
+-11- 1
+.names f t c0 s i2
+---1 1
+00-- 1
+-11- 1
+.names e t v s j2
+---1 1
+00-- 1
+-11- 1
+.names l t e0 s m2
+---1 1
+00-- 1
+-11- 1
+.names k t f0 s o2
+---1 1
+00-- 1
+-11- 1
+.names j t g0 s q2
+---1 1
+00-- 1
+-11- 1
+.names i t z s r2
+---1 1
+00-- 1
+-11- 1
+.names p t i0 s u2
+---1 1
+00-- 1
+-11- 1
+.names o t j0 s w2
+---1 1
+00-- 1
+-11- 1
+.names n t k0 s y2
+---1 1
+00-- 1
+-11- 1
+.names m t d0 s z2
+---1 1
+00-- 1
+-11- 1
+.end

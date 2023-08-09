@@ -1,0 +1,109 @@
+.model i1
+.inputs  V27_0
+.inputs  V7_1
+.inputs  V7_2
+.inputs  V7_3
+.inputs  V7_4
+.inputs  V7_5
+.inputs  V7_6
+.inputs  V7_7
+.inputs  V8_0
+.inputs  V9_0
+.inputs  V10_0
+.inputs  V11_0
+.inputs  V12_0
+.inputs  V13_0
+.inputs  V14_0
+.inputs  V15_0
+.inputs  V16_0
+.inputs  V17_0
+.inputs  V18_0
+.inputs  V29_0
+.inputs  V27_3
+.inputs  V22_2
+.inputs  V22_3
+.inputs  V22_4
+.inputs  V22_5
+.outputs  V27_0
+.outputs  V27_1
+.outputs  V27_2
+.outputs  V27_3
+.outputs  V27_4
+.outputs  V28_0
+.outputs  V29_0
+.outputs  V30_0
+.outputs  V31_0
+.outputs  V32_0
+.outputs  V33_0
+.outputs  V34_0
+.outputs  V35_0
+.outputs  V36_0
+.outputs  V37_0
+.outputs  V38_0
+.names  V7_1  V39
+0 1
+.names  V7_2  V40
+0 1
+.names  V7_3  V42
+0 1
+.names  V7_4  V44
+0 1
+.names  V7_5  V46
+0 1
+.names  V7_6  V48
+0 1
+.names  V7_7  V50
+0 1
+.names  V50 V46 V42 V39 V40 V44 V48  V51
+1111111 1
+.names  V27_0  V52
+0 1
+.names  V52 V29_0  V53
+11 1
+.names  V8_0  V55
+0 1
+.names  V55 V29_0 V51  V56
+111 1
+.names  V9_0  V57
+0 1
+.names  V57 V56  V58
+11 1
+.names  V9_0 V51 V29_0 V8_0  V60
+1111 1
+.names  V51  V62
+0 1
+.names  V62 V29_0 V27_0  V63
+111 1
+.names  V57 V51 V29_0 V8_0  V64
+1111 1
+.names  V60 V53 V58  V27_1
+000 0
+.names  V64 V63  V27_2
+00 0
+.names  V27_3 V22_2  V27_4
+00 0
+.names  V56 V10_0  V28_0
+00 0
+.names  V22_5 V18_0  V30_0
+11 1
+.names  V22_5  V66
+0 1
+.names  V66 V11_0  V67
+11 1
+.names  V22_5 V11_0  V32_0
+11 1
+.names  V66 V14_0 V22_3  V33_0
+111 1
+.names  V66 V17_0 V22_3  V34_0
+111 1
+.names  V66 V14_0 V22_4  V35_0
+111 1
+.names  V66 V17_0 V22_4  V36_0
+111 1
+.names  V66 V16_0  V37_0
+11 1
+.names  V32_0 V67  V31_0
+00 0
+.names  V15_0 V13_0 V12_0 V14_0  V38_0
+0000 0
+.end

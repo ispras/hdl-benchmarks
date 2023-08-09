@@ -1,0 +1,154 @@
+.model count
+.inputs a b c d e f g h i j k l m n o p q r s u v w x y z a0 b0 c0 d0 e0 f0 \
+g0 h0 i0 j0
+.outputs k0 l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0 y0 z0
+.names p q s a2 k0
+--1- 1
+00-- 1
+-1-0 1
+.names o q s c2 l0
+--1- 1
+00-- 1
+-1-0 1
+.names n q s f2 m0
+--1- 1
+00-- 1
+-1-0 1
+.names m q s h2 n0
+--1- 1
+00-- 1
+-1-0 1
+.names l q s q2 o0
+--1- 1
+00-- 1
+-1-0 1
+.names k q s s2 p0
+--1- 1
+00-- 1
+-1-0 1
+.names j q s v2 q0
+--1- 1
+00-- 1
+-1-0 1
+.names i q s x2 r0
+--1- 1
+00-- 1
+-1-0 1
+.names h q s g3 s0
+--1- 1
+00-- 1
+-1-0 1
+.names g q s i3 t0
+--1- 1
+00-- 1
+-1-0 1
+.names f q s l3 u0
+--1- 1
+00-- 1
+-1-0 1
+.names e q s n3 v0
+--1- 1
+00-- 1
+-1-0 1
+.names d q s u3 w0
+--1- 1
+00-- 1
+-1-0 1
+.names c q s w3 x0
+--1- 1
+00-- 1
+-1-0 1
+.names b q s z3 y0
+--1- 1
+00-- 1
+-1-0 1
+.names a q s c4 z0
+--1- 1
+00-- 1
+-1-0 1
+.names r u t1
+00 1
+.names t1 v v1
+0- 1
+-1 1
+.names w v1 x1
+00 1
+.names x x1 y1
+1- 1
+-0 1
+.names u r a2
+01 1
+10 1
+.names v t1 c2
+11 1
+00 1
+.names w v1 f2
+01 1
+10 1
+.names x x1 h2
+11 1
+00 1
+.names y y1 k2
+00 1
+.names z k2 l2
+1- 1
+-0 1
+.names a0 l2 n2
+00 1
+.names b0 n2 o2
+1- 1
+-0 1
+.names y y1 q2
+01 1
+10 1
+.names z k2 s2
+11 1
+00 1
+.names a0 l2 v2
+01 1
+10 1
+.names b0 n2 x2
+11 1
+00 1
+.names c0 o2 a3
+00 1
+.names d0 a3 b3
+1- 1
+-0 1
+.names e0 b3 d3
+00 1
+.names f0 d3 e3
+1- 1
+-0 1
+.names c0 o2 g3
+01 1
+10 1
+.names d0 a3 i3
+11 1
+00 1
+.names e0 b3 l3
+01 1
+10 1
+.names f0 d3 n3
+11 1
+00 1
+.names g0 e3 q3
+00 1
+.names h0 q3 r3
+1- 1
+-0 1
+.names i0 r3 s3
+00 1
+.names g0 e3 u3
+01 1
+10 1
+.names h0 q3 w3
+11 1
+00 1
+.names i0 r3 z3
+01 1
+10 1
+.names j0 s3 c4
+11 1
+00 1
+.end

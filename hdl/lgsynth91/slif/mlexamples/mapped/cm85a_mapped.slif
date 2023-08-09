@@ -1,0 +1,52 @@
+
+.model CM85 ;
+
+	.date 910108215008 ;	# January 8 1991, 21:50.08
+
+	.inputs  a b c d e f g h i j k ;
+	.outputs l m n ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1760_j0 CMOS3_1760 (zz_11, x' ;;j0 ) ;
+	.call CMOS3_1760_i0 CMOS3_1760 (zz_10, v' ;;i0 ) ;
+	.call CMOS3_1760_n CMOS3_1760 (zz_1, l0' ;;n ) ;
+	.call CMOS3_1760_l CMOS3_1760 (zz_0, n0' ;;l ) ;
+	.call CMOS3_1120_n0 CMOS3_1120 (zz_15, zz_14 ;;n0' ) ;
+	.call CMOS3_1120_l0 CMOS3_1120 (zz_13, zz_12 ;;l0' ) ;
+	.call CMOS3_1120_h0 CMOS3_1120 (g0, f0 ;;h0 ) ;
+	.call CMOS3_1120_zz_5 CMOS3_1120 (a, w ;;zz_5 ) ;
+	.call CMOS3_1120_zz_4 CMOS3_1120 (a, b ;;zz_4 ) ;
+	.call CMOS3_1120_zz_3 CMOS3_1120 (c, u ;;zz_3 ) ;
+	.call CMOS3_1120_zz_2 CMOS3_1120 (c, b ;;zz_2 ) ;
+	.call CMOS3_1120_zz_15 CMOS3_1120 (j0, m0 ;;zz_15 ) ;
+	.call CMOS3_1120_zz_14 CMOS3_1120 (j0, h0 ;;zz_14 ) ;
+	.call CMOS3_1120_zz_13 CMOS3_1120 (i0, k0 ;;zz_13 ) ;
+	.call CMOS3_1120_zz_12 CMOS3_1120 (i0, h0 ;;zz_12 ) ;
+	.call CMOS3_1120_x CMOS3_1120 (zz_5, zz_4 ;;x' ) ;
+	.call CMOS3_1120_v CMOS3_1120 (zz_3, zz_2 ;;v' ) ;
+	.call CMOS3_1120_m CMOS3_1120 (w0, v0 ;;m ) ;
+	.call CMOS3_1610_m0 CMOS3_1610 (h, i ;;m0 ) ;
+	.call CMOS3_1610_k0 CMOS3_1610 (i, h ;;k0 ) ;
+	.call CMOS3_1610_w CMOS3_1610 (d, e ;;w ) ;
+	.call CMOS3_1610_u CMOS3_1610 (e, d ;;u ) ;
+	.call CMOS3_1130_zz_1 CMOS3_1130 (j', k, v0 ;;zz_1 ) ;
+	.call CMOS3_1130_zz_0 CMOS3_1130 (k', j, v0 ;;zz_0 ) ;
+	.call CMOS3_1130_zz_11 CMOS3_1130 (g', f, f0 ;;zz_11 ) ;
+	.call CMOS3_1130_zz_10 CMOS3_1130 (f', g, f0 ;;zz_10 ) ;
+	.call CMOS3_1310_k CMOS3_1310 (k ;;k' ) ;
+	.call CMOS3_1310_j CMOS3_1310 (j ;;j' ) ;
+	.call CMOS3_1310_g CMOS3_1310 (g ;;g' ) ;
+	.call CMOS3_1310_f CMOS3_1310 (f ;;f' ) ;
+	.call CMOS3_2350_q0 CMOS3_2350 (i, h ;;q0 ) ;
+	.call CMOS3_2350_a0 CMOS3_2350 (e, d ;;a0 ) ;
+	.call CMOS3_1220_v0 CMOS3_1220 (h0, q0 ;;v0 ) ;
+	.call CMOS3_1220_f0 CMOS3_1220 (b, a0 ;;f0 ) ;
+	.call CMOS3_2310_w0 CMOS3_2310 (j, k ;;w0 ) ;
+	.call CMOS3_2310_g0 CMOS3_2310 (f, g ;;g0 ) ;
+
+.endmodel CM85 ;
+

@@ -1,0 +1,26 @@
+
+.model b1 ;
+
+	.date 910108214748 ;	# January 8 1991, 21:47.48
+
+	.inputs  a b c ;
+	.outputs d e f g ;
+	.net d c ;
+	.net g' c ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_2310_e CMOS3_2310 (a, b ;;e ) ;
+	.call CMOS3_1140_f CMOS3_1140 (zz_11', zz_10', zz_9', zz_2' ;;f ) ;
+	.call CMOS3_1120_zz_11 CMOS3_1120 (b, c ;;zz_11' ) ;
+	.call CMOS3_1120_zz_10 CMOS3_1120 (a, c ;;zz_10' ) ;
+	.call CMOS3_1220_zz_6 CMOS3_1220 (c, a ;;zz_6 ) ;
+	.call CMOS3_1220_zz_2 CMOS3_1220 (zz_6, zz_3 ;;zz_2' ) ;
+	.call CMOS3_2350_zz_3 CMOS3_2350 (b, a ;;zz_3 ) ;
+	.call CMOS3_1660_zz_9 CMOS3_1660 (c, b ;;zz_9' ) ;
+
+.endmodel b1 ;
+

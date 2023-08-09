@@ -1,0 +1,25 @@
+
+.model CM42 ;
+
+	.date 910103085120 ;	# January 3 1991, 08:51.20
+
+	.inputs  a b c d ;
+	.outputs e f g h i j k l m n ;
+
+	e = o0' + b + a ;
+	f = o0' + b + a' ;
+	g = o0' + b' + a ;
+	h = o0' + b' + a' ;
+	i = p0' + b + a ;
+	j = p0' + b + a' ;
+	k = p0' + b' + a ;
+	l = p0' + b' + a' ;
+	m = n0' + a ;
+	n = n0' + a' ;
+	o0 = c' d' ;
+	p0 = o0' d' ;
+	n0 = b' c' d ;
+
+
+.endmodel CM42 ;
+

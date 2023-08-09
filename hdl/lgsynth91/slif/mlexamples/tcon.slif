@@ -1,0 +1,28 @@
+
+.model tcon ;
+
+	.date 910103085402 ;	# January 3 1991, 08:54.02
+
+	.inputs  a b c d e f g h i k l m n o p q r ;
+	.outputs s t u v w x y z a0 b0 c0 d0 e0 f0 g0 h0 ;
+	.net k s ;
+	.net l t ;
+	.net m u ;
+	.net n v ;
+	.net o w ;
+	.net p x ;
+	.net q y ;
+	.net r z ;
+
+	a0 = k a + i a + i' k ;
+	b0 = l b + i b + i' l ;
+	c0 = m c + i c + i' m ;
+	d0 = n d + i d + i' n ;
+	e0 = o e + i e + i' o ;
+	f0 = p f + i f + i' p ;
+	g0 = q g + i g + i' q ;
+	h0 = r h + i h + i' r ;
+
+
+.endmodel tcon ;
+

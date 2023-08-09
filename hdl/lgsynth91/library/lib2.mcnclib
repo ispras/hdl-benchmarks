@@ -1,0 +1,992 @@
+ 
+
+
+cell begin inv1x
+   area=928.000000
+   equation="O = ! a"
+   transistors=2
+   max_loads=999.000000
+   primitive=INV
+   termlist
+      a
+      unateness=INV
+      loads=0.051391
+      nominal_rise_delay=0.420000
+      nominal_rise_fan=4.710000
+      nominal_fall_delay=0.420000
+      nominal_fall_fan=3.600000 ;
+      y ; 
+
+cell end inv1x
+
+cell begin inv2x
+   area=928.000000
+   equation="O = ! a"
+   transistors=2
+   max_loads=999.000000
+   primitive=INV
+   termlist
+      a
+      unateness=INV
+      loads=0.100863
+      nominal_rise_delay=0.300000
+      nominal_rise_fan=1.980000
+      nominal_fall_delay=0.290000
+      nominal_fall_fan=1.820000 ;
+      y ; 
+
+cell end inv2x
+
+cell begin inv4x
+   area=1392.000000
+   equation="O = ! a"
+   transistors=2
+   max_loads=999.000000
+   primitive=INV
+   termlist
+      a
+      unateness=INV
+      loads=0.189698
+      nominal_rise_delay=0.230000
+      nominal_rise_fan=1.080000
+      nominal_fall_delay=0.270000
+      nominal_fall_fan=0.850000 ;
+      y ; 
+
+cell end inv4x
+
+cell begin xor
+   area=2320.000000
+   equation="O = ((!a * b) + (a * !b))"
+   transistors=10
+   max_loads=999.000000
+   primitive=XOR
+   termlist
+      a
+      unateness=UNKNOWN
+      loads=0.144166
+      nominal_rise_delay=1.770000
+      nominal_rise_fan=5.230000
+      nominal_fall_delay=0.960000
+      nominal_fall_fan=4.640000 ;
+      b
+      unateness=UNKNOWN
+      loads=0.138126
+      nominal_rise_delay=1.940000
+      nominal_rise_fan=4.650000
+      nominal_fall_delay=1.140000
+      nominal_fall_fan=5.220000 ;
+      y ; 
+
+cell end xor
+
+cell begin xnor
+   area=2320.000000
+   equation="O = ((!a * !b) + (a * b))"
+   transistors=10
+   max_loads=999.000000
+   primitive=XNOR
+   termlist
+      a
+      unateness=UNKNOWN
+      loads=0.150240
+      nominal_rise_delay=1.110000
+      nominal_rise_fan=4.860000
+      nominal_fall_delay=1.070000
+      nominal_fall_fan=3.390000 ;
+      b
+      unateness=UNKNOWN
+      loads=0.135176
+      nominal_rise_delay=1.550000
+      nominal_rise_fan=4.870000
+      nominal_fall_delay=1.070000
+      nominal_fall_fan=3.390000 ;
+      y ; 
+
+cell end xnor
+
+cell begin nand2
+   area=1392.000000
+   equation="O = ! (a * b)"
+   transistors=4
+   max_loads=999.000000
+   primitive=NAND2
+   termlist
+      a
+      unateness=INV
+      loads=0.077658
+      nominal_rise_delay=0.640000
+      nominal_rise_fan=4.090000
+      nominal_fall_delay=0.400000
+      nominal_fall_fan=2.570000 ;
+      b
+      unateness=INV
+      loads=0.071606
+      nominal_rise_delay=0.460000
+      nominal_rise_fan=4.100000
+      nominal_fall_delay=0.370000
+      nominal_fall_fan=2.570000 ;
+      y ; 
+
+cell end nand2
+
+cell begin nand3
+   area=1856.000000
+   equation="O = ! (a * b * c)"
+   transistors=6
+   max_loads=999.000000
+   primitive=NAND3
+   termlist
+      a
+      unateness=INV
+      loads=0.099951
+      nominal_rise_delay=0.890000
+      nominal_rise_fan=3.600000
+      nominal_fall_delay=0.510000
+      nominal_fall_fan=2.490000 ;
+      b
+      unateness=INV
+      loads=0.082763
+      nominal_rise_delay=0.710000
+      nominal_rise_fan=4.110000
+      nominal_fall_delay=0.420000
+      nominal_fall_fan=2.500000 ;
+      c
+      unateness=INV
+      loads=0.077720
+      nominal_rise_delay=0.560000
+      nominal_rise_fan=4.390000
+      nominal_fall_delay=0.350000
+      nominal_fall_fan=2.490000 ;
+      y ; 
+
+cell end nand3
+
+cell begin nand4
+   area=2320.000000
+   equation="O = ! (a * b * c * d)"
+   transistors=8
+   max_loads=999.000000
+   primitive=NAND4
+   termlist
+      a
+      unateness=INV
+      loads=0.103003
+      nominal_rise_delay=1.270000
+      nominal_rise_fan=3.620000
+      nominal_fall_delay=0.670000
+      nominal_fall_fan=2.390000 ;
+      b
+      unateness=INV
+      loads=0.097977
+      nominal_rise_delay=1.090000
+      nominal_rise_fan=3.610000
+      nominal_fall_delay=0.610000
+      nominal_fall_fan=2.390000 ;
+      c
+      unateness=INV
+      loads=0.097977
+      nominal_rise_delay=0.820000
+      nominal_rise_fan=3.620000
+      nominal_fall_delay=0.550000
+      nominal_fall_fan=2.400000 ;
+      d
+      unateness=INV
+      loads=0.105029
+      nominal_rise_delay=0.580000
+      nominal_rise_fan=3.620000
+      nominal_fall_delay=0.380000
+      nominal_fall_fan=2.390000 ;
+      y ; 
+
+cell end nand4
+
+cell begin nor2
+   area=1392.000000
+   equation="O = ! (a + b)"
+   transistors=4
+   max_loads=999.000000
+   primitive=NOR2
+   termlist
+      a
+      unateness=INV
+      loads=0.073568
+      nominal_rise_delay=0.330000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.450000
+      nominal_fall_fan=3.640000 ;
+      b
+      unateness=INV
+      loads=0.096761
+      nominal_rise_delay=0.500000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.700000
+      nominal_fall_fan=3.660000 ;
+      y ; 
+
+cell end nor2
+
+cell begin nor3
+   area=1856.000000
+   equation="O = ! (a + b + c)"
+   transistors=6
+   max_loads=999.000000
+   primitive=NOR3
+   termlist
+      a
+      unateness=INV
+      loads=0.085649
+      nominal_rise_delay=0.840000
+      nominal_rise_fan=5.040000
+      nominal_fall_delay=1.300000
+      nominal_fall_fan=3.450000 ;
+      b
+      unateness=INV
+      loads=0.080649
+      nominal_rise_delay=0.780000
+      nominal_rise_fan=5.030000
+      nominal_fall_delay=1.140000
+      nominal_fall_fan=3.430000 ;
+      c
+      unateness=INV
+      loads=0.082649
+      nominal_rise_delay=0.520000
+      nominal_rise_fan=5.030000
+      nominal_fall_delay=0.840000
+      nominal_fall_fan=3.440000 ;
+      y ; 
+
+cell end nor3
+
+cell begin nor4
+   area=2320.000000
+   equation="O = ! (a + b + c + d)"
+   transistors=8
+   max_loads=999.000000
+   primitive=NOR4
+   termlist
+      a
+      unateness=INV
+      loads=0.088697
+      nominal_rise_delay=0.410000
+      nominal_rise_fan=5.910000
+      nominal_fall_delay=1.160000
+      nominal_fall_fan=3.200000 ;
+      b
+      unateness=INV
+      loads=0.086697
+      nominal_rise_delay=0.850000
+      nominal_rise_fan=5.910000
+      nominal_fall_delay=1.530000
+      nominal_fall_fan=3.180000 ;
+      c
+      unateness=INV
+      loads=0.086697
+      nominal_rise_delay=1.110000
+      nominal_rise_fan=5.920000
+      nominal_fall_delay=1.750000
+      nominal_fall_fan=3.190000 ;
+      d
+      unateness=INV
+      loads=0.088697
+      nominal_rise_delay=1.270000
+      nominal_rise_fan=5.910000
+      nominal_fall_delay=1.940000
+      nominal_fall_fan=3.200000 ;
+      y ; 
+
+cell end nor4
+
+cell begin aoi21
+   area=1856.000000
+   equation="O = ! ((a1 * a2) + b)"
+   transistors=6
+   max_loads=999.000000
+   primitive=AOI21
+   termlist
+      a1
+      unateness=INV
+      loads=0.102893
+      nominal_rise_delay=0.750000
+      nominal_rise_fan=3.520000
+      nominal_fall_delay=0.670000
+      nominal_fall_fan=2.530000 ;
+      a2
+      unateness=INV
+      loads=0.090783
+      nominal_rise_delay=0.670000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.620000
+      nominal_fall_fan=2.520000 ;
+      b
+      unateness=INV
+      loads=0.111004
+      nominal_rise_delay=0.580000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.210000
+      nominal_fall_fan=1.280000 ;
+      y ; 
+
+cell end aoi21
+
+cell begin aoi31
+   area=2320.000000
+   equation="O =  ! ((a1 * a2 * a3) + b)"
+   transistors=8
+   max_loads=999.000000
+   primitive=AOI31
+   termlist
+      a1
+      unateness=INV
+      loads=0.100903
+      nominal_rise_delay=0.910000
+      nominal_rise_fan=4.040000
+      nominal_fall_delay=0.810000
+      nominal_fall_fan=2.860000 ;
+      a2
+      unateness=INV
+      loads=0.104935
+      nominal_rise_delay=1.050000
+      nominal_rise_fan=3.930000
+      nominal_fall_delay=0.870000
+      nominal_fall_fan=2.870000 ;
+      a3
+      unateness=INV
+      loads=0.105936
+      nominal_rise_delay=1.150000
+      nominal_rise_fan=3.940000
+      nominal_fall_delay=0.940000
+      nominal_fall_fan=2.860000 ;
+      b
+      unateness=INV
+      loads=0.097907
+      nominal_rise_delay=0.890000
+      nominal_rise_fan=4.060000
+      nominal_fall_delay=0.250000
+      nominal_fall_fan=1.280000 ;
+      y ; 
+
+cell end aoi31
+
+cell begin aoi22
+   area=2320.000000
+   equation="O =  ! ((a1 * a2) + (b1 * b2))"
+   transistors=8
+   max_loads=999.000000
+   primitive=AOI22
+   termlist
+      a1
+      unateness=INV
+      loads=0.101857
+      nominal_rise_delay=0.920000
+      nominal_rise_fan=3.460000
+      nominal_fall_delay=0.940000
+      nominal_fall_fan=2.790000 ;
+      a2
+      unateness=INV
+      loads=0.090757
+      nominal_rise_delay=0.840000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.850000
+      nominal_fall_fan=2.790000 ;
+      b1
+      unateness=INV
+      loads=0.095821
+      nominal_rise_delay=0.610000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.490000
+      nominal_fall_fan=2.930000 ;
+      b2
+      unateness=INV
+      loads=0.098821
+      nominal_rise_delay=0.700000
+      nominal_rise_fan=3.640000
+      nominal_fall_delay=0.540000
+      nominal_fall_fan=2.930000 ;
+      y ; 
+
+cell end aoi22
+
+cell begin aoi32
+   area=2784.000000
+   equation="O =  ! ((a1 * a2 * a3) + (b1 * b2))"
+   transistors=10
+   max_loads=999.000000
+   primitive=AOI32
+   termlist
+      a1
+      unateness=INV
+      loads=0.102919
+      nominal_rise_delay=1.060000
+      nominal_rise_fan=3.810000
+      nominal_fall_delay=0.960000
+      nominal_fall_fan=2.910000 ;
+      a2
+      unateness=INV
+      loads=0.100919
+      nominal_rise_delay=1.200000
+      nominal_rise_fan=3.810000
+      nominal_fall_delay=1.030000
+      nominal_fall_fan=2.900000 ;
+      a3
+      unateness=INV
+      loads=0.105952
+      nominal_rise_delay=1.290000
+      nominal_rise_fan=3.690000
+      nominal_fall_delay=1.060000
+      nominal_fall_fan=2.910000 ;
+      b1
+      unateness=INV
+      loads=0.097887
+      nominal_rise_delay=0.910000
+      nominal_rise_fan=3.810000
+      nominal_fall_delay=0.430000
+      nominal_fall_fan=2.120000 ;
+      b2
+      unateness=INV
+      loads=0.104935
+      nominal_rise_delay=0.780000
+      nominal_rise_fan=3.590000
+      nominal_fall_delay=0.430000
+      nominal_fall_fan=2.120000 ;
+      y ; 
+
+cell end aoi32
+
+cell begin aoi33
+   area=3248.000000
+   equation="O =  ! ((a1 * a2 * a3) + (b1 * b2 * b3))"
+   transistors=12
+   max_loads=999.000000
+   primitive=AOI33
+   termlist
+      a1
+      unateness=INV
+      loads=0.102919
+      nominal_rise_delay=1.330000
+      nominal_rise_fan=3.910000
+      nominal_fall_delay=1.300000
+      nominal_fall_fan=2.910000 ;
+      a2
+      unateness=INV
+      loads=0.102936
+      nominal_rise_delay=1.460000
+      nominal_rise_fan=3.840000
+      nominal_fall_delay=1.410000
+      nominal_fall_fan=2.910000 ;
+      a3
+      unateness=INV
+      loads=0.112000
+      nominal_rise_delay=1.470000
+      nominal_rise_fan=3.650000
+      nominal_fall_delay=1.410000
+      nominal_fall_fan=2.910000 ;
+      b1
+      unateness=INV
+      loads=0.102936
+      nominal_rise_delay=1.110000
+      nominal_rise_fan=3.590000
+      nominal_fall_delay=0.760000
+      nominal_fall_fan=2.900000 ;
+      b2
+      unateness=INV
+      loads=0.094871
+      nominal_rise_delay=1.040000
+      nominal_rise_fan=3.910000
+      nominal_fall_delay=0.680000
+      nominal_fall_fan=2.910000 ;
+      b3
+      unateness=INV
+      loads=0.103936
+      nominal_rise_delay=0.840000
+      nominal_rise_fan=3.580000
+      nominal_fall_delay=0.640000
+      nominal_fall_fan=2.900000 ;
+      y ; 
+
+cell end aoi33
+
+cell begin aoi211
+   area=2320.000000
+   equation="O = ! ((a1 * a2) + b + c)"
+   transistors=8
+   max_loads=999.000000
+   primitive=AOI211
+   termlist
+      a1
+      unateness=INV
+      loads=0.103863
+      nominal_rise_delay=1.120000
+      nominal_rise_fan=4.810000
+      nominal_fall_delay=1.030000
+      nominal_fall_fan=2.380000 ;
+      a2
+      unateness=INV
+      loads=0.108968
+      nominal_rise_delay=1.290000
+      nominal_rise_fan=4.810000
+      nominal_fall_delay=1.030000
+      nominal_fall_fan=2.380000 ;
+      b
+      unateness=INV
+      loads=0.107968
+      nominal_rise_delay=1.040000
+      nominal_rise_fan=4.830000
+      nominal_fall_delay=0.520000
+      nominal_fall_fan=1.400000 ;
+      c
+      unateness=INV
+      loads=0.100831
+      nominal_rise_delay=0.680000
+      nominal_rise_fan=4.830000
+      nominal_fall_delay=0.510000
+      nominal_fall_fan=1.790000 ;
+      y ; 
+
+cell end aoi211
+
+cell begin aoi221
+   area=2784.000000
+   equation="O = ! ((a1 * a2) + (b1 * b2) + c)"
+   transistors=10
+   max_loads=999.000000
+   primitive=AOI221
+   termlist
+      a1
+      unateness=INV
+      loads=0.108922
+      nominal_rise_delay=1.480000
+      nominal_rise_fan=4.430000
+      nominal_fall_delay=1.330000
+      nominal_fall_fan=2.780000 ;
+      a2
+      unateness=INV
+      loads=0.094821
+      nominal_rise_delay=1.420000
+      nominal_rise_fan=4.560000
+      nominal_fall_delay=1.400000
+      nominal_fall_fan=2.750000 ;
+      b1
+      unateness=INV
+      loads=0.102885
+      nominal_rise_delay=0.760000
+      nominal_rise_fan=4.470000
+      nominal_fall_delay=0.790000
+      nominal_fall_fan=2.890000 ;
+      b2
+      unateness=INV
+      loads=0.104853
+      nominal_rise_delay=0.730000
+      nominal_rise_fan=4.580000
+      nominal_fall_delay=0.780000
+      nominal_fall_fan=2.910000 ;
+      c
+      unateness=INV
+      loads=0.110990
+      nominal_rise_delay=1.390000
+      nominal_rise_fan=4.560000
+      nominal_fall_delay=0.700000
+      nominal_fall_fan=1.510000 ;
+      y ; 
+
+cell end aoi221
+
+cell begin aoi222
+   area=3712.000000
+   equation="O = ! ((a1 * a2) + (b1 * b2) + (c1 * c2) )"
+   transistors=12
+   max_loads=999.000000
+   primitive=AOI222
+   termlist
+      a1
+      unateness=INV
+      loads=0.101853
+      nominal_rise_delay=1.770000
+      nominal_rise_fan=4.580000
+      nominal_fall_delay=1.560000
+      nominal_fall_fan=2.950000 ;
+      a2
+      unateness=INV
+      loads=0.095821
+      nominal_rise_delay=1.730000
+      nominal_rise_fan=4.690000
+      nominal_fall_delay=1.600000
+      nominal_fall_fan=2.930000 ;
+      b1
+      unateness=INV
+      loads=0.103886
+      nominal_rise_delay=1.340000
+      nominal_rise_fan=4.680000
+      nominal_fall_delay=1.210000
+      nominal_fall_fan=2.920000 ;
+      b2
+      unateness=INV
+      loads=0.103886
+      nominal_rise_delay=1.500000
+      nominal_rise_fan=4.690000
+      nominal_fall_delay=1.220000
+      nominal_fall_fan=2.920000 ;
+      c1
+      unateness=INV
+      loads=0.095821
+      nominal_rise_delay=0.920000
+      nominal_rise_fan=4.670000
+      nominal_fall_delay=0.810000
+      nominal_fall_fan=2.920000 ;
+      c2
+      unateness=INV
+      loads=0.103886
+      nominal_rise_delay=0.770000
+      nominal_rise_fan=4.470000
+      nominal_fall_delay=0.760000
+      nominal_fall_fan=2.920000 ;
+      y ; 
+
+cell end aoi222
+
+cell begin oai21
+   area=1856.000000
+   equation="O = ! ( (a1 + a2) * b)"
+   transistors=6
+   max_loads=999.000000
+   primitive=OAI21
+   termlist
+      a1
+      unateness=INV
+      loads=0.101887
+      nominal_rise_delay=0.690000
+      nominal_rise_fan=3.940000
+      nominal_fall_delay=0.530000
+      nominal_fall_fan=2.470000 ;
+      a2
+      unateness=INV
+      loads=0.097887
+      nominal_rise_delay=0.870000
+      nominal_rise_fan=3.930000
+      nominal_fall_delay=0.630000
+      nominal_fall_fan=2.470000 ;
+      b
+      unateness=INV
+      loads=0.099847
+      nominal_rise_delay=0.370000
+      nominal_rise_fan=2.050000
+      nominal_fall_delay=0.570000
+      nominal_fall_fan=2.510000 ;
+      y ; 
+
+cell end oai21
+
+cell begin oai31
+   area=2320.000000
+   equation="O = ! ( (a1 + a2 + a3) * b)"
+   transistors=8
+   max_loads=999.000000
+   primitive=OAI31
+   termlist
+      a1
+      unateness=INV
+      loads=0.108925
+      nominal_rise_delay=1.270000
+      nominal_rise_fan=4.710000
+      nominal_fall_delay=1.030000
+      nominal_fall_fan=2.430000 ;
+      a2
+      unateness=INV
+      loads=0.104879
+      nominal_rise_delay=1.110000
+      nominal_rise_fan=4.710000
+      nominal_fall_delay=1.040000
+      nominal_fall_fan=2.570000 ;
+      a3
+      unateness=INV
+      loads=0.108968
+      nominal_rise_delay=0.850000
+      nominal_rise_fan=4.710000
+      nominal_fall_delay=0.690000
+      nominal_fall_fan=2.380000 ;
+      b
+      unateness=INV
+      loads=0.105896
+      nominal_rise_delay=0.380000
+      nominal_rise_fan=1.860000
+      nominal_fall_delay=0.810000
+      nominal_fall_fan=2.730000 ;
+      y ; 
+
+cell end oai31
+
+cell begin oai22
+   area=2320.000000
+   equation="O = ! ( (a1 + a2) * (b1 + b2))"
+   transistors=8
+   max_loads=999.000000
+   primitive=OAI22
+   termlist
+      a1
+      unateness=INV
+      loads=0.100877
+      nominal_rise_delay=1.100000
+      nominal_rise_fan=4.060000
+      nominal_fall_delay=0.900000
+      nominal_fall_fan=2.500000 ;
+      a2
+      unateness=INV
+      loads=0.102933
+      nominal_rise_delay=0.990000
+      nominal_rise_fan=4.060000
+      nominal_fall_delay=0.680000
+      nominal_fall_fan=2.360000 ;
+      b1
+      unateness=INV
+      loads=0.095815
+      nominal_rise_delay=0.690000
+      nominal_rise_fan=3.660000
+      nominal_fall_delay=0.740000
+      nominal_fall_fan=2.530000 ;
+      b2
+      unateness=INV
+      loads=0.103946
+      nominal_rise_delay=0.610000
+      nominal_rise_fan=3.660000
+      nominal_fall_delay=0.560000
+      nominal_fall_fan=2.060000 ;
+      y ; 
+
+cell end oai22
+
+cell begin oai32
+   area=2784.000000
+   equation="O = ! ( (a1 + a2 + a3) * (b1 + b2))"
+   transistors=10
+   max_loads=999.000000
+   primitive=OAI32
+   termlist
+      a1
+      unateness=INV
+      loads=0.112958
+      nominal_rise_delay=1.390000
+      nominal_rise_fan=4.460000
+      nominal_fall_delay=1.040000
+      nominal_fall_fan=2.460000 ;
+      a2
+      unateness=INV
+      loads=0.106895
+      nominal_rise_delay=1.250000
+      nominal_rise_fan=4.460000
+      nominal_fall_delay=1.090000
+      nominal_fall_fan=2.630000 ;
+      a3
+      unateness=INV
+      loads=0.114000
+      nominal_rise_delay=0.990000
+      nominal_rise_fan=4.460000
+      nominal_fall_delay=0.740000
+      nominal_fall_fan=2.420000 ;
+      b1
+      unateness=INV
+      loads=0.105879
+      nominal_rise_delay=0.580000
+      nominal_rise_fan=3.200000
+      nominal_fall_delay=0.790000
+      nominal_fall_fan=2.710000 ;
+      b2
+      unateness=INV
+      loads=0.112984
+      nominal_rise_delay=0.680000
+      nominal_rise_fan=3.210000
+      nominal_fall_delay=0.830000
+      nominal_fall_fan=2.340000 ;
+      y ; 
+
+cell end oai32
+
+cell begin oai33
+   area=3248.000000
+   equation="O = ! ( (a1 + a2 + a3) * (b1 + b2 + b3))"
+   transistors=12
+   max_loads=999.000000
+   primitive=OAI33
+   termlist
+      a1
+      unateness=INV
+      loads=0.116990
+      nominal_rise_delay=1.580000
+      nominal_rise_fan=4.300000
+      nominal_fall_delay=1.480000
+      nominal_fall_fan=2.470000 ;
+      a2
+      unateness=INV
+      loads=0.108912
+      nominal_rise_delay=1.500000
+      nominal_rise_fan=4.310000
+      nominal_fall_delay=1.420000
+      nominal_fall_fan=2.630000 ;
+      a3
+      unateness=INV
+      loads=0.107912
+      nominal_rise_delay=1.240000
+      nominal_rise_fan=4.310000
+      nominal_fall_delay=1.170000
+      nominal_fall_fan=2.650000 ;
+      b1
+      unateness=INV
+      loads=0.117016
+      nominal_rise_delay=0.800000
+      nominal_rise_fan=4.300000
+      nominal_fall_delay=0.820000
+      nominal_fall_fan=2.270000 ;
+      b2
+      unateness=INV
+      loads=0.108912
+      nominal_rise_delay=0.000000
+      nominal_rise_fan=4.300000
+      nominal_fall_delay=1.170000
+      nominal_fall_fan=2.640000 ;
+      b3
+      unateness=INV
+      loads=0.110912
+      nominal_rise_delay=1.130000
+      nominal_rise_fan=4.310000
+      nominal_fall_delay=1.350000
+      nominal_fall_fan=2.650000 ;
+      y ; 
+
+cell end oai33
+
+cell begin oai211
+   area=2320.000000
+   equation="O = ! ( (a1 + a2) * b * c)"
+   transistors=8
+   max_loads=999.000000
+   primitive=OAI211
+   termlist
+      a1
+      unateness=INV
+      loads=0.107005
+      nominal_rise_delay=1.120000
+      nominal_rise_fan=4.170000
+      nominal_fall_delay=0.590000
+      nominal_fall_fan=2.310000 ;
+      a2
+      unateness=INV
+      loads=0.113066
+      nominal_rise_delay=1.300000
+      nominal_rise_fan=4.160000
+      nominal_fall_delay=0.790000
+      nominal_fall_fan=2.360000 ;
+      b
+      unateness=INV
+      loads=0.104962
+      nominal_rise_delay=0.510000
+      nominal_rise_fan=2.130000
+      nominal_fall_delay=0.690000
+      nominal_fall_fan=2.400000 ;
+      c
+      unateness=INV
+      loads=0.105002
+      nominal_rise_delay=0.500000
+      nominal_rise_fan=2.460000
+      nominal_fall_delay=0.520000
+      nominal_fall_fan=2.410000 ;
+      y ; 
+
+cell end oai211
+
+cell begin oai221
+   area=2784.000000
+   equation="O = ! ( (a1 + a2) * (b1 + b2) * c)"
+   transistors=10
+   max_loads=999.000000
+   primitive=OAI221
+   termlist
+      a1
+      unateness=INV
+      loads=0.103929
+      nominal_rise_delay=1.580000
+      nominal_rise_fan=4.170000
+      nominal_fall_delay=1.110000
+      nominal_fall_fan=2.470000 ;
+      a2
+      unateness=INV
+      loads=0.104969
+      nominal_rise_delay=1.480000
+      nominal_rise_fan=4.170000
+      nominal_fall_delay=0.860000
+      nominal_fall_fan=2.360000 ;
+      b1
+      unateness=INV
+      loads=0.108018
+      nominal_rise_delay=0.940000
+      nominal_rise_fan=4.030000
+      nominal_fall_delay=0.810000
+      nominal_fall_fan=2.500000 ;
+      b2
+      unateness=INV
+      loads=0.106002
+      nominal_rise_delay=0.760000
+      nominal_rise_fan=4.030000
+      nominal_fall_delay=0.640000
+      nominal_fall_fan=2.500000 ;
+      c
+      unateness=INV
+      loads=0.101929
+      nominal_rise_delay=0.780000
+      nominal_rise_fan=2.280000
+      nominal_fall_delay=0.900000
+      nominal_fall_fan=2.540000 ;
+      y ; 
+
+cell end oai221
+
+cell begin oai222
+   area=3248.000000
+   equation="O = ! ( (a1 + a2) * (b1 + b2) * (c1 + c2))"
+   transistors=12
+   max_loads=999.000000
+   primitive=OAI222
+   termlist
+      a1
+      unateness=INV
+      loads=0.116076
+      nominal_rise_delay=1.770000
+      nominal_rise_fan=3.750000
+      nominal_fall_delay=1.210000
+      nominal_fall_fan=2.470000 ;
+      a2
+      unateness=INV
+      loads=0.111034
+      nominal_rise_delay=1.620000
+      nominal_rise_fan=3.750000
+      nominal_fall_delay=1.130000
+      nominal_fall_fan=2.480000 ;
+      b1
+      unateness=INV
+      loads=0.100929
+      nominal_rise_delay=1.170000
+      nominal_rise_fan=3.580000
+      nominal_fall_delay=1.070000
+      nominal_fall_fan=2.480000 ;
+      b2
+      unateness=INV
+      loads=0.119098
+      nominal_rise_delay=1.350000
+      nominal_rise_fan=3.580000
+      nominal_fall_delay=1.100000
+      nominal_fall_fan=2.350000 ;
+      c1
+      unateness=INV
+      loads=0.105982
+      nominal_rise_delay=0.990000
+      nominal_rise_fan=3.590000
+      nominal_fall_delay=0.930000
+      nominal_fall_fan=2.490000 ;
+      c2
+      unateness=INV
+      loads=0.114030
+      nominal_rise_delay=0.820000
+      nominal_rise_fan=3.580000
+      nominal_fall_delay=0.790000
+      nominal_fall_fan=2.480000 ;
+      y ; 
+
+cell end oai222

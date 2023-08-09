@@ -1,0 +1,49 @@
+
+.model cmb ;
+
+	.date 910108215018 ;	# January 8 1991, 21:50.18
+
+	.inputs  a b c d e f g h i j k l m n o p ;
+	.outputs q r s t ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1670_q CMOS3_1670 (l, k, zz_0 ;;q ) ;
+	.call CMOS3_1760_r CMOS3_1760 (p, m0' ;;r ) ;
+	.call CMOS3_1220_s CMOS3_1220 (o, m0 ;;s ) ;
+	.call CMOS3_1140_t0 CMOS3_1140 (zz_33, zz_32, zz_30, zz_29 ;;t0' ) ;
+	.call CMOS3_1140_r0 CMOS3_1140 (j, k, l, m ;;r0 ) ;
+	.call CMOS3_1140_zz_15 CMOS3_1140 (v0, h, g, f ;;zz_15 ) ;
+	.call CMOS3_1140_zz_12 CMOS3_1140 (e', v0, h, g ;;zz_12 ) ;
+	.call CMOS3_1140_t CMOS3_1140 (s0, n, o, p ;;t ) ;
+	.call CMOS3_1680_o0 CMOS3_1680 (i, h, g, f ;;o0 ) ;
+	.call CMOS3_1680_zz_0 CMOS3_1680 (j, zz_22', b, a ;;zz_0 ) ;
+	.call CMOS3_1680_zz_22 CMOS3_1680 (e, d, c, o0 ;;zz_22' ) ;
+	.call CMOS3_1120_u0 CMOS3_1120 (zz_35, zz_34 ;;u0' ) ;
+	.call CMOS3_1120_zz_9 CMOS3_1120 (v0, h ;;zz_9 ) ;
+	.call CMOS3_1120_zz_27 CMOS3_1120 (e, f ;;zz_27' ) ;
+	.call CMOS3_1610_zz_38 CMOS3_1610 (j, k ;;zz_38 ) ;
+	.call CMOS3_1610_zz_40 CMOS3_1610 (i, j ;;zz_40 ) ;
+	.call CMOS3_1610_zz_37 CMOS3_1610 (h, i ;;zz_37 ) ;
+	.call CMOS3_1610_zz_34 CMOS3_1610 (l, t0' ;;zz_34 ) ;
+	.call CMOS3_1610_zz_33 CMOS3_1610 (p, e ;;zz_33 ) ;
+	.call CMOS3_1610_zz_32 CMOS3_1610 (n, o ;;zz_32 ) ;
+	.call CMOS3_1610_zz_29 CMOS3_1610 (l, m ;;zz_29 ) ;
+	.call CMOS3_1610_zz_30 CMOS3_1610 (m, n ;;zz_30 ) ;
+	.call CMOS3_1660_zz_7 CMOS3_1660 (e, f ;;zz_7 ) ;
+	.call CMOS3_1660_zz_35 CMOS3_1660 (k, t0' ;;zz_35 ) ;
+	.call CMOS3_1310_v0 CMOS3_1310 (v0 ;;v0' ) ;
+	.call CMOS3_1310_m0 CMOS3_1310 (m0' ;;m0 ) ;
+	.call CMOS3_1310_e CMOS3_1310 (e ;;e' ) ;
+	.call CMOS3_1930_zz_4 CMOS3_1930 (e, f, zz_9, zz_7, v0', g ;;
+	         zz_4 ) ;
+	.call CMOS3_1130_q0 CMOS3_1130 (g, h, i ;;q0 ) ;
+	.call CMOS3_1130_m0 CMOS3_1130 (zz_15, zz_12, zz_4 ;;m0' ) ;
+	.call CMOS3_1230_s0 CMOS3_1230 (zz_27', q0, r0 ;;s0 ) ;
+	.call CMOS3_1740_v0 CMOS3_1740 (zz_40, u0', zz_37, zz_38 ;;v0 ) ;
+
+.endmodel cmb ;
+

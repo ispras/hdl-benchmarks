@@ -1,0 +1,45 @@
+
+.model ADDERFDS ;
+
+	.date 910103085354 ;	# January 3 1991, 08:53.54
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u v w x y z a0 b0 c0 
+	         d0 e0 f0 g0 ;
+	.outputs h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0 ;
+
+	u2 = r' t2 + b' t2 + b' r' ;
+	t2 = s' s2 + c' s2 + c' s' ;
+	s2 = t' r2 + d' r2 + d' t' ;
+	r2 = u' q2 + e' q2 + e' u' ;
+	q2 = v' p2 + f' p2 + f' v' ;
+	p2 = w' o2 + g' o2 + g' w' ;
+	o2 = x' n2 + h' n2 + h' x' ;
+	n2 = y' m2 + i' m2 + i' y' ;
+	m2 = z' l2 + j' l2 + j' z' ;
+	l2 = a0' k2 + k' k2 + k' a0' ;
+	k2 = b0' j2 + l' j2 + l' b0' ;
+	j2 = c0' i2 + m' i2 + m' c0' ;
+	i2 = d0' h2 + n' h2 + n' d0' ;
+	h2 = e0' g2 + o' g2 + o' e0' ;
+	g2 = f0' g0' + p' g0' + p' f0' ;
+	h0 = ( a q' u2' + a' q u2' + a' q' u2 + a q u2 )' ;
+	i0 = ( b r' t2' + b' r t2' + b' r' t2 + b r t2 )' ;
+	j0 = ( c s' s2' + c' s s2' + c' s' s2 + c s s2 )' ;
+	k0 = ( d t' r2' + d' t r2' + d' t' r2 + d t r2 )' ;
+	l0 = ( e u' q2' + e' u q2' + e' u' q2 + e u q2 )' ;
+	m0 = ( f v' p2' + f' v p2' + f' v' p2 + f v p2 )' ;
+	n0 = ( g w' o2' + g' w o2' + g' w' o2 + g w o2 )' ;
+	o0 = ( h x' n2' + h' x n2' + h' x' n2 + h x n2 )' ;
+	p0 = ( i y' m2' + i' y m2' + i' y' m2 + i y m2 )' ;
+	q0 = ( j z' l2' + j' z l2' + j' z' l2 + j z l2 )' ;
+	r0 = ( k a0' k2' + k' a0 k2' + k' a0' k2 + k a0 k2 )' ;
+	s0 = ( l b0' j2' + l' b0 j2' + l' b0' j2 + l b0 j2 )' ;
+	t0 = ( m c0' i2' + m' c0 i2' + m' c0' i2 + m c0 i2 )' ;
+	u0 = ( n d0' h2' + n' d0 h2' + n' d0' h2 + n d0 h2 )' ;
+	v0 = ( o e0' g2' + o' e0 g2' + o' e0' g2 + o e0 g2 )' ;
+	w0 = ( p' f0' g0' + p f0 g0' + p f0' g0 + p' f0 g0 )' ;
+	x0 = ( q' u2 + a' u2 + a' q' )' ;
+
+
+.endmodel ADDERFDS ;
+

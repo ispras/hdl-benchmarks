@@ -1,0 +1,30 @@
+.model train4.kiss2
+.inputs v0 v1
+.outputs v4.2
+.latch    v4.0 v2   0
+.latch    v4.1 v3   0
+.names [10] v4.2
+0 1
+.names [6] v4.0
+0 1
+.names [8] v4.1
+0 1
+.names v0 v1 v2 [0]
+001 1
+.names v0 v1 [1]
+11 1
+.names v1 v3 [2]
+10 1
+.names v0 v3 [3]
+10 1
+.names v1 v3 [4]
+11 1
+.names v0 v3 [5]
+11 1
+.names [0] [1] [2] [3] [6]
+0000 1
+.names [0] [1] [4] [5] [8]
+0000 1
+.names [0] [2] [3] [4] [5] [10]
+00000 1
+.end

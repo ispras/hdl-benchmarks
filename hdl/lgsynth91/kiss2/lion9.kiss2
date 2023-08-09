@@ -1,0 +1,30 @@
+
+.i 2 
+.o 1 
+.p 25 
+.s 9
+10 st0 st1 0
+00 st0 st0 0
+00 st1 st0 0
+10 st1 st1 0
+11 st1 st2 0
+10 st2 st1 0
+11 st2 st2 0
+01 st2 st3 0
+11 st3 st2 1
+01 st3 st3 1
+00 st3 st4 1
+01 st4 st3 1
+00 st4 st4 1
+10 st4 st5 1
+00 st5 st4 1
+10 st5 st5 1
+11 st5 st6 1
+10 st6 st5 1
+11 st6 st6 1
+01 st6 st7 1
+11 st7 st6 1
+01 st7 st7 1
+00 st7 st8 1
+01 st8 st7 1
+00 st8 st8 1

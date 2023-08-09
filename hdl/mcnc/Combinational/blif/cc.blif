@@ -1,0 +1,98 @@
+.model cc
+.inputs a b c d e f g h i j k l m o p q r s t u v
+.outputs w x y z a0 b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0
+.names v l w
+11 1
+.names q p k i x
+1011 1
+.names p l1 h2 y
+1-0 1
+-00 1
+.names q i2 z
+10 1
+.names t a0
+0 1
+.names j i f0
+11 1
+.names f0 g0
+0 1
+.names o l1 m1 i0
+1-0 1
+-00 1
+.names p r1 s1 j0
+1-0 1
+-00 1
+.names k i u1 v1 k0
+0--0 1
+-0-0 1
+--00 1
+.names p l1 r x1 l0
+-0-0 1
+0-10 1
+.names s l1 z1 m0
+1-0 1
+-00 1
+.names t l1 b2 n0
+1-0 1
+-00 1
+.names u l1 d2 o0
+1-0 1
+-00 1
+.names v l1 f2 p0
+1-0 1
+-00 1
+.names q k i l1
+1-- 1
+-0- 1
+--0 1
+.names a i k q m m1
+----0 1
+0110- 1
+.names q k i r1
+0-- 1
+-0- 1
+--0 1
+.names b i k q m s1
+----0 1
+1110- 1
+.names q c u1
+1- 1
+-0 1
+.names i k m q v1
+--0- 1
+0--0 1
+-0-0 1
+.names d i k q m x1
+----0 1
+0110- 1
+.names e i k q m z1
+----0 1
+0110- 1
+.names f i k q m b2
+----0 1
+0110- 1
+.names g i k q m d2
+----0 1
+0110- 1
+.names h i k q m f2
+----0 1
+0110- 1
+.names m l h2
+0- 1
+-1 1
+.names p m k i i2
+1--- 1
+-0-- 1
+--0- 1
+---0 1
+.names u b0
+1 1
+.names q c0
+1 1
+.names s d0
+1 1
+.names r e0
+1 1
+.names p h0
+1 1
+.end

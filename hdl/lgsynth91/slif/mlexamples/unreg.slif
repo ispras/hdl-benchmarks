@@ -1,0 +1,45 @@
+
+.model unreg ;
+
+	.date 910103085408 ;	# January 3 1991, 08:54.08
+
+	.inputs  a b c d e f g h i j k l m n o p q s t u v w x y z a0 b0 c0 d0 
+	         e0 f0 g0 h0 i0 j0 k0 ;
+	.outputs l0 m0 n0 o0 p0 q0 r0 s0 t0 u0 v0 w0 x0 y0 z0 a1 ;
+
+	l0 = v' u' + w1' u ;
+	m0 = w' u' + y1' u ;
+	n0 = x' u' + a2' u ;
+	o0 = y' u' + b2' u ;
+	p0 = z' u' + e2' u ;
+	q0 = a0' u' + g2' u ;
+	r0 = b0' u' + i2' u ;
+	s0 = c0' u' + j2' u ;
+	t0 = d0' u' + m2' u ;
+	u0 = e0' u' + o2' u ;
+	v0 = f0' u' + q2' u ;
+	w0 = g0' u' + r2' u ;
+	x0 = h0' u' + u2' u ;
+	y0 = i0' u' + w2' u ;
+	z0 = j0' u' + y2' u ;
+	a1 = k0' u' + z2' u ;
+	w1 = s + d' t' + t w ;
+	y1 = s + c' t' + t x ;
+	a2 = s + b' t' + t y ;
+	b2 = s + q' t + a' t' ;
+	e2 = s + h' t' + t a0 ;
+	g2 = s + g' t' + t b0 ;
+	i2 = s + f' t' + t c0 ;
+	j2 = s + e' t' + t v ;
+	m2 = s + l' t' + t e0 ;
+	o2 = s + k' t' + t f0 ;
+	q2 = s + j' t' + t g0 ;
+	r2 = s + i' t' + t z ;
+	u2 = s + p' t' + t i0 ;
+	w2 = s + o' t' + t j0 ;
+	y2 = s + n' t' + t k0 ;
+	z2 = s + m' t' + t d0 ;
+
+
+.endmodel unreg ;
+

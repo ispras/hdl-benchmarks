@@ -1,0 +1,40 @@
+.model source.pla
+.inputs tagcompare tCPIPE1s<0> tCPIPE1s<1> tCPIPE1s<2> tCPIPE1s<3> tCPIPE1s<4> \
+tCPIPE1s<5> tCPIPE1s<7> tbusA<31> tbusB<31> tbusB<30> tbusB<29> tbusB<28> \
+tCPIPE1s<6> tCPIPE1s<8>
+.outputs GStrap trapinstr TAGtrap pov_unflow skipCONDenable
+.names tagcompare tCPIPE1s<0> tCPIPE1s<1> tCPIPE1s<2> tCPIPE1s<3> tCPIPE1s<4> \
+tCPIPE1s<5> tCPIPE1s<7> tbusA<31> tbusB<31> tbusB<30> tbusB<29> tbusB<28> \
+tCPIPE1s<6> GStrap
+----10011----1 1
+00001101-----1 1
+-0001101-00001 1
+.names tCPIPE1s<0> tCPIPE1s<1> tCPIPE1s<2> tCPIPE1s<3> tCPIPE1s<4> tCPIPE1s<5> \
+tCPIPE1s<7> trapinstr
+1--0101 1
+-1-0101 1
+--10101 1
+.names tCPIPE1s<0> tCPIPE1s<1> tCPIPE1s<2> tCPIPE1s<3> tCPIPE1s<4> tCPIPE1s<5> \
+tCPIPE1s<7> tbusA<31> tbusB<31> tCPIPE1s<6> tCPIPE1s<8> TAGtrap
+---01011-1- 1
+0-0-0111-1- 1
+0--00111-1- 1
+---0101-010 1
+-0010111-1- 1
+-1100111-1- 1
+0-0-011-010 1
+0--0011-010 1
+00011010-1- 1
+-011101011- 1
+-0111010-11 1
+-001011-010 1
+-110011-010 1
+-01-1011010 1
+.names tCPIPE1s<0> tCPIPE1s<1> tCPIPE1s<2> tCPIPE1s<3> tCPIPE1s<4> tCPIPE1s<5> \
+tCPIPE1s<7> tCPIPE1s<6> pov_unflow
+0-010111 1
+-0010111 1
+.names tCPIPE1s<0> tCPIPE1s<1> tCPIPE1s<2> tCPIPE1s<3> tCPIPE1s<4> tCPIPE1s<5> \
+tCPIPE1s<7> skipCONDenable
+0000101 1
+.end

@@ -1,0 +1,53 @@
+
+.model frg1 ;
+
+	.date 910103085147 ;	# January 3 1991, 08:51.47
+
+	.inputs  a b c e f g h i j k l m n o p q r s t u v w x y z a0 b0 c0 ;
+	.outputs d0 e0 f0 ;
+
+	d0 = c b' + c' e h' g' + c' h' g' a + c' e j' i' + c' j' a i' + c' e k' 
+		l' + c' k' a l' + c' e m' n' + c' a m' n' + c' e l' n' + c' a 
+		l' n' + c' e' a' c0' + c' e g' u' l' + c' g' a u' l' + c' e g' 
+		i' l' + c' g' a i' l' + c' e g' o' w' i' + c' g' a o' w' i' + 
+		c' e g' o' m' i' + c' g' a o' m' i' + c' e h' j' v' l' + c' h' 
+		j' v' a l' + c' e j' v' u' l' + c' j' v' a u' l' + c' e s' t' 
+		i' l' + c' a s' t' i' l' + c' e h' j' z' n' + c' e j' z' y' n' 
+		+ c' e j' g' y' n' + c' h' j' z' a n' + c' j' z' y' a n' + c' 
+		j' g' y' a n' + c' e g' y' w' n' + c' g' y' a w' n' + c' h' z' 
+		a x' n' + c' e h' z' x' n' + c' g' a w' i' n' + c' e h' x' i' 
+		n' + c' h' a x' i' n' + c' e w' x' i' n' + c' a w' x' i' n' + 
+		c' e g' w' i' n' + c' h' k' a p' m' i' + c' e h' k' p' m' i' + 
+		c' h' k' a p' x' i' + c' e h' k' p' x' i' + c' g' q' a o' u' m' 
+		+ c' e g' q' o' u' m' + c' j' g' q' a u' m' + c' e j' g' q' u' 
+		m' + c' h' r' k' a p' m' + c' e h' r' k' p' m' + c' g' k' q' a 
+		o' m' + c' e g' k' q' o' m' + c' j' g' k' q' a m' + c' e k' o' 
+		p' m' i' + c' j' r' k' q' a m' + c' h' j' r' v' a m' + c' e j' 
+		g' k' q' m' + c' e j' r' k' q' m' + c' e h' j' r' k' m' + c' e 
+		h' j' r' v' m' + c' j' g' q' y' a u' + c' e j' g' q' y' u' + c' 
+		j' g' k' q' y' a + c' h' j' r' z' k' a + c' h' j' r' v' z' a + 
+		c' e j' g' k' q' y' + c' e h' j' r' z' k' + c' e h' j' r' v' z' 
+		+ c' k' a o' p' m' i' + c' e h' v' s' t' l' + c' z' y' a w' x' 
+		n' + c' e v' s' t' u' l' + c' v' a s' t' u' l' + c' e z' y' w' 
+		x' n' + c' h' v' a s' t' l' + c' h' j' r' k' a m' + c' e j' r' 
+		z' k' q' y' + c' j' r' z' k' q' y' a + c' e g' k' q' y' o' w' + 
+		c' g' k' q' y' a o' w' + c' e g' q' y' o' u' w' + c' g' q' y' a 
+		o' u' w' + c' e h' r' z' k' p' x' + c' h' r' z' k' a p' x' + c' 
+		e r' k' q' o' p' m' + c' r' k' q' a o' p' m' + c' e j' r' v' q' 
+		u' m' + c' j' r' v' q' a u' m' + c' e h' p' s' t' x' i' + c' h' 
+		a p' s' t' x' i' + c' e k' o' p' w' x' i' + c' k' a o' p' w' x' 
+		i' + c' e h' p' s' t' m' i' + c' h' a p' s' t' m' i' + c' e o' 
+		p' s' t' m' i' + c' a o' p' s' t' m' i' + c' e j' r' v' z' q' 
+		y' u' + c' j' r' v' z' q' y' a u' + c' e h' r' v' p' s' t' m' + 
+		c' h' r' v' a p' s' t' m' + c' e o' p' s' t' w' x' i' + c' a o' 
+		p' s' t' w' x' i' + c' e h' r' v' z' p' s' t' x' + c' h' r' v' 
+		z' a p' s' t' x' + c' e r' z' k' q' y' o' p' w' x' + c' r' z' 
+		k' q' y' a o' p' w' x' + c' e r' v' q' o' p' s' t' u' m' + c' 
+		r' v' q' a o' p' s' t' u' m' + c' e r' v' z' q' y' o' p' s' t' 
+		u' w' x' + c' r' v' z' q' y' a o' p' s' t' u' w' x' ;
+	e0 = c + a + f a0' + f e ;
+	f0 = e' c + e' b0' + a e' ;
+
+
+.endmodel frg1 ;
+

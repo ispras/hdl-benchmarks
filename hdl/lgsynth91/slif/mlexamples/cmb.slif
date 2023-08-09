@@ -1,0 +1,26 @@
+
+.model cmb ;
+
+	.date 910103085122 ;	# January 3 1991, 08:51.22
+
+	.inputs  a b c d e f g h i j k l m n o p ;
+	.outputs q r s t ;
+
+	q = l k j p0' ;
+	r = m0' + p ;
+	s = m0' + o' ;
+	t = p' o' n' s0' ;
+	p0 = o0' + n0' + a' + b' ;
+	m0 = f' g' h' v0' + e g' h' v0' + e f h' v0' + e f g v0' ;
+	s0 = r0' + q0' + e + f ;
+	v0 = u0' + i' j + j' k + h' i ;
+	n0 = e d c ;
+	o0 = i h g f ;
+	q0 = i' h' g' ;
+	r0 = m' l' k' j' ;
+	t0 = e p' + n' o + m' n + l' m ;
+	u0 = k t0' + l' t0' ;
+
+
+.endmodel cmb ;
+

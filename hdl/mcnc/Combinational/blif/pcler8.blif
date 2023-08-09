@@ -1,0 +1,75 @@
+.model pcler8_cl
+.inputs a b c d e f g h i j k l m n o p q r s t u v w x y z a0
+.outputs b0 c0 d0 e0 f0 g0 h0 i0 j0 k0 l0 m0 n0 o0 p0 q0 r0
+.names a0 c2 a2 b0
+111 1
+.names a i c0
+11 1
+.names b i d0
+11 1
+.names c i e0
+11 1
+.names d i f0
+11 1
+.names e i g0
+11 1
+.names f i h0
+11 1
+.names g i i0
+11 1
+.names h i j0
+11 1
+.names l b0 c0 t a2 k0
+--1-- 1
+11--- 1
+---01 1
+.names a2 b0 d0 m t u l0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names a2 b0 e0 n v f2 m0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names a2 b0 f0 o w d2 n0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names a2 b0 g0 p x g2 o0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names a2 b0 h0 q y b2 p0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names a2 b0 i0 r z e2 q0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names a2 b0 j0 s a0 c2 r0
+--1--- 1
+-1-1-- 1
+1---01 1
+1---10 1
+.names i j k a2
+010 1
+.names x g2 b2
+11 1
+.names z e2 c2
+11 1
+.names v f2 d2
+11 1
+.names y b2 e2
+11 1
+.names t u f2
+11 1
+.names w d2 g2
+11 1
+.end

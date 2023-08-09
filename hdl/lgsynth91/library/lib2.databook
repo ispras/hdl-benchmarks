@@ -1,0 +1,1279 @@
+
+
+
+
+ GATE inv1x:
+
+      AREA: 928.000000 (square microns)
+      PRIMITIVE: INV
+      LOGIC_EQUATION: O = ! a
+      INPUT_PIN_COUNT: 1
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.4200   +   loads *   4.7100
+
+         delay hi-to-low(fall) =   0.4200   +   loads *   3.6000
+
+         this pin has capacitance =     0.0514 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.4200   +   loads *   4.7100
+
+         delay hi-to-low(fall) =   0.4200   +   loads *   3.6000
+
+         this pin has capacitance =     0.0514 loads(pF)
+
+
+
+ GATE inv2x:
+
+      AREA: 928.000000 (square microns)
+      PRIMITIVE: INV
+      LOGIC_EQUATION: O = ! a
+      INPUT_PIN_COUNT: 1
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.3000   +   loads *   1.9800
+
+         delay hi-to-low(fall) =   0.2900   +   loads *   1.8200
+
+         this pin has capacitance =     0.1009 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.3000   +   loads *   1.9800
+
+         delay hi-to-low(fall) =   0.2900   +   loads *   1.8200
+
+         this pin has capacitance =     0.1009 loads(pF)
+
+
+
+ GATE inv4x:
+
+      AREA: 1392.000000 (square microns)
+      PRIMITIVE: INV
+      LOGIC_EQUATION: O = ! a
+      INPUT_PIN_COUNT: 1
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.2300   +   loads *   1.0800
+
+         delay hi-to-low(fall) =   0.2700   +   loads *   0.8500
+
+         this pin has capacitance =     0.1897 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.2300   +   loads *   1.0800
+
+         delay hi-to-low(fall) =   0.2700   +   loads *   0.8500
+
+         this pin has capacitance =     0.1897 loads(pF)
+
+
+
+ GATE xor:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: XOR
+      LOGIC_EQUATION: O = ((!a * b) + (a * !b))
+      INPUT_PIN_COUNT: 2
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.7700   +   loads *   5.2300
+
+         delay hi-to-low(fall) =   0.9600   +   loads *   4.6400
+
+         this pin has capacitance =     0.1442 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.9400   +   loads *   4.6500
+
+         delay hi-to-low(fall) =   1.1400   +   loads *   5.2200
+
+         this pin has capacitance =     0.1381 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.9400   +   loads *   5.2300
+
+         delay hi-to-low(fall) =   1.1400   +   loads *   5.2200
+
+         this pin has capacitance =     0.1442 loads(pF)
+
+
+
+ GATE xnor:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: XNOR
+      LOGIC_EQUATION: O = ((!a * !b) + (a * b))
+      INPUT_PIN_COUNT: 2
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1100   +   loads *   4.8600
+
+         delay hi-to-low(fall) =   1.0700   +   loads *   3.3900
+
+         this pin has capacitance =     0.1502 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.5500   +   loads *   4.8700
+
+         delay hi-to-low(fall) =   1.0700   +   loads *   3.3900
+
+         this pin has capacitance =     0.1352 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.5500   +   loads *   4.8700
+
+         delay hi-to-low(fall) =   1.0700   +   loads *   3.3900
+
+         this pin has capacitance =     0.1502 loads(pF)
+
+
+
+ GATE nand2:
+
+      AREA: 1392.000000 (square microns)
+      PRIMITIVE: NAND2
+      LOGIC_EQUATION: O = ! (a * b)
+      INPUT_PIN_COUNT: 2
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6400   +   loads *   4.0900
+
+         delay hi-to-low(fall) =   0.4000   +   loads *   2.5700
+
+         this pin has capacitance =     0.0777 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.4600   +   loads *   4.1000
+
+         delay hi-to-low(fall) =   0.3700   +   loads *   2.5700
+
+         this pin has capacitance =     0.0716 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.6400   +   loads *   4.1000
+
+         delay hi-to-low(fall) =   0.4000   +   loads *   2.5700
+
+         this pin has capacitance =     0.0777 loads(pF)
+
+
+
+ GATE nand3:
+
+      AREA: 1856.000000 (square microns)
+      PRIMITIVE: NAND3
+      LOGIC_EQUATION: O = ! (a * b * c)
+      INPUT_PIN_COUNT: 3
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8900   +   loads *   3.6000
+
+         delay hi-to-low(fall) =   0.5100   +   loads *   2.4900
+
+         this pin has capacitance =     0.1000 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7100   +   loads *   4.1100
+
+         delay hi-to-low(fall) =   0.4200   +   loads *   2.5000
+
+         this pin has capacitance =     0.0828 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5600   +   loads *   4.3900
+
+         delay hi-to-low(fall) =   0.3500   +   loads *   2.4900
+
+         this pin has capacitance =     0.0777 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.8900   +   loads *   4.3900
+
+         delay hi-to-low(fall) =   0.5100   +   loads *   2.5000
+
+         this pin has capacitance =     0.1000 loads(pF)
+
+
+
+ GATE nand4:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: NAND4
+      LOGIC_EQUATION: O = ! (a * b * c * d)
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2700   +   loads *   3.6200
+
+         delay hi-to-low(fall) =   0.6700   +   loads *   2.3900
+
+         this pin has capacitance =     0.1030 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.0900   +   loads *   3.6100
+
+         delay hi-to-low(fall) =   0.6100   +   loads *   2.3900
+
+         this pin has capacitance =     0.0980 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8200   +   loads *   3.6200
+
+         delay hi-to-low(fall) =   0.5500   +   loads *   2.4000
+
+         this pin has capacitance =     0.0980 loads(pF)
+
+      DELAY_EQUATION (pin d to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5800   +   loads *   3.6200
+
+         delay hi-to-low(fall) =   0.3800   +   loads *   2.3900
+
+         this pin has capacitance =     0.1050 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.2700   +   loads *   3.6200
+
+         delay hi-to-low(fall) =   0.6700   +   loads *   2.4000
+
+         this pin has capacitance =     0.1050 loads(pF)
+
+
+
+ GATE nor2:
+
+      AREA: 1392.000000 (square microns)
+      PRIMITIVE: NOR2
+      LOGIC_EQUATION: O = ! (a + b)
+      INPUT_PIN_COUNT: 2
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.3300   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.4500   +   loads *   3.6400
+
+         this pin has capacitance =     0.0736 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5000   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.7000   +   loads *   3.6600
+
+         this pin has capacitance =     0.0968 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.5000   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.7000   +   loads *   3.6600
+
+         this pin has capacitance =     0.0968 loads(pF)
+
+
+
+ GATE nor3:
+
+      AREA: 1856.000000 (square microns)
+      PRIMITIVE: NOR3
+      LOGIC_EQUATION: O = ! (a + b + c)
+      INPUT_PIN_COUNT: 3
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8400   +   loads *   5.0400
+
+         delay hi-to-low(fall) =   1.3000   +   loads *   3.4500
+
+         this pin has capacitance =     0.0856 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7800   +   loads *   5.0300
+
+         delay hi-to-low(fall) =   1.1400   +   loads *   3.4300
+
+         this pin has capacitance =     0.0806 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5200   +   loads *   5.0300
+
+         delay hi-to-low(fall) =   0.8400   +   loads *   3.4400
+
+         this pin has capacitance =     0.0826 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.8400   +   loads *   5.0400
+
+         delay hi-to-low(fall) =   1.3000   +   loads *   3.4500
+
+         this pin has capacitance =     0.0856 loads(pF)
+
+
+
+ GATE nor4:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: NOR4
+      LOGIC_EQUATION: O = ! (a + b + c + d)
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.4100   +   loads *   5.9100
+
+         delay hi-to-low(fall) =   1.1600   +   loads *   3.2000
+
+         this pin has capacitance =     0.0887 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8500   +   loads *   5.9100
+
+         delay hi-to-low(fall) =   1.5300   +   loads *   3.1800
+
+         this pin has capacitance =     0.0867 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1100   +   loads *   5.9200
+
+         delay hi-to-low(fall) =   1.7500   +   loads *   3.1900
+
+         this pin has capacitance =     0.0867 loads(pF)
+
+      DELAY_EQUATION (pin d to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2700   +   loads *   5.9100
+
+         delay hi-to-low(fall) =   1.9400   +   loads *   3.2000
+
+         this pin has capacitance =     0.0887 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.2700   +   loads *   5.9200
+
+         delay hi-to-low(fall) =   1.9400   +   loads *   3.2000
+
+         this pin has capacitance =     0.0887 loads(pF)
+
+
+
+ GATE aoi21:
+
+      AREA: 1856.000000 (square microns)
+      PRIMITIVE: AOI21
+      LOGIC_EQUATION: O = ! ((a1 * a2) + b)
+      INPUT_PIN_COUNT: 3
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7500   +   loads *   3.5200
+
+         delay hi-to-low(fall) =   0.6700   +   loads *   2.5300
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6700   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.6200   +   loads *   2.5200
+
+         this pin has capacitance =     0.0908 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5800   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.2100   +   loads *   1.2800
+
+         this pin has capacitance =     0.1110 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.7500   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.6700   +   loads *   2.5300
+
+         this pin has capacitance =     0.1110 loads(pF)
+
+
+
+ GATE aoi31:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: AOI31
+      LOGIC_EQUATION: O =  ! ((a1 * a2 * a3) + b)
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9100   +   loads *   4.0400
+
+         delay hi-to-low(fall) =   0.8100   +   loads *   2.8600
+
+         this pin has capacitance =     0.1009 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.0500   +   loads *   3.9300
+
+         delay hi-to-low(fall) =   0.8700   +   loads *   2.8700
+
+         this pin has capacitance =     0.1049 loads(pF)
+
+      DELAY_EQUATION (pin a3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1500   +   loads *   3.9400
+
+         delay hi-to-low(fall) =   0.9400   +   loads *   2.8600
+
+         this pin has capacitance =     0.1059 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8900   +   loads *   4.0600
+
+         delay hi-to-low(fall) =   0.2500   +   loads *   1.2800
+
+         this pin has capacitance =     0.0979 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.1500   +   loads *   4.0600
+
+         delay hi-to-low(fall) =   0.9400   +   loads *   2.8700
+
+         this pin has capacitance =     0.1059 loads(pF)
+
+
+
+ GATE aoi22:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: AOI22
+      LOGIC_EQUATION: O =  ! ((a1 * a2) + (b1 * b2))
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9200   +   loads *   3.4600
+
+         delay hi-to-low(fall) =   0.9400   +   loads *   2.7900
+
+         this pin has capacitance =     0.1019 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8400   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.8500   +   loads *   2.7900
+
+         this pin has capacitance =     0.0908 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6100   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.4900   +   loads *   2.9300
+
+         this pin has capacitance =     0.0958 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7000   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.5400   +   loads *   2.9300
+
+         this pin has capacitance =     0.0988 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.9200   +   loads *   3.6400
+
+         delay hi-to-low(fall) =   0.9400   +   loads *   2.9300
+
+         this pin has capacitance =     0.1019 loads(pF)
+
+
+
+ GATE aoi32:
+
+      AREA: 2784.000000 (square microns)
+      PRIMITIVE: AOI32
+      LOGIC_EQUATION: O =  ! ((a1 * a2 * a3) + (b1 * b2))
+      INPUT_PIN_COUNT: 5
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.0600   +   loads *   3.8100
+
+         delay hi-to-low(fall) =   0.9600   +   loads *   2.9100
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2000   +   loads *   3.8100
+
+         delay hi-to-low(fall) =   1.0300   +   loads *   2.9000
+
+         this pin has capacitance =     0.1009 loads(pF)
+
+      DELAY_EQUATION (pin a3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2900   +   loads *   3.6900
+
+         delay hi-to-low(fall) =   1.0600   +   loads *   2.9100
+
+         this pin has capacitance =     0.1060 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9100   +   loads *   3.8100
+
+         delay hi-to-low(fall) =   0.4300   +   loads *   2.1200
+
+         this pin has capacitance =     0.0979 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7800   +   loads *   3.5900
+
+         delay hi-to-low(fall) =   0.4300   +   loads *   2.1200
+
+         this pin has capacitance =     0.1049 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.2900   +   loads *   3.8100
+
+         delay hi-to-low(fall) =   1.0600   +   loads *   2.9100
+
+         this pin has capacitance =     0.1060 loads(pF)
+
+
+
+ GATE aoi33:
+
+      AREA: 3248.000000 (square microns)
+      PRIMITIVE: AOI33
+      LOGIC_EQUATION: O =  ! ((a1 * a2 * a3) + (b1 * b2 * b3))
+      INPUT_PIN_COUNT: 6
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.3300   +   loads *   3.9100
+
+         delay hi-to-low(fall) =   1.3000   +   loads *   2.9100
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.4600   +   loads *   3.8400
+
+         delay hi-to-low(fall) =   1.4100   +   loads *   2.9100
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin a3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.4700   +   loads *   3.6500
+
+         delay hi-to-low(fall) =   1.4100   +   loads *   2.9100
+
+         this pin has capacitance =     0.1120 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1100   +   loads *   3.5900
+
+         delay hi-to-low(fall) =   0.7600   +   loads *   2.9000
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.0400   +   loads *   3.9100
+
+         delay hi-to-low(fall) =   0.6800   +   loads *   2.9100
+
+         this pin has capacitance =     0.0949 loads(pF)
+
+      DELAY_EQUATION (pin b3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8400   +   loads *   3.5800
+
+         delay hi-to-low(fall) =   0.6400   +   loads *   2.9000
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.4700   +   loads *   3.9100
+
+         delay hi-to-low(fall) =   1.4100   +   loads *   2.9100
+
+         this pin has capacitance =     0.1120 loads(pF)
+
+
+
+ GATE aoi211:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: AOI211
+      LOGIC_EQUATION: O = ! ((a1 * a2) + b + c)
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1200   +   loads *   4.8100
+
+         delay hi-to-low(fall) =   1.0300   +   loads *   2.3800
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2900   +   loads *   4.8100
+
+         delay hi-to-low(fall) =   1.0300   +   loads *   2.3800
+
+         this pin has capacitance =     0.1090 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.0400   +   loads *   4.8300
+
+         delay hi-to-low(fall) =   0.5200   +   loads *   1.4000
+
+         this pin has capacitance =     0.1080 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6800   +   loads *   4.8300
+
+         delay hi-to-low(fall) =   0.5100   +   loads *   1.7900
+
+         this pin has capacitance =     0.1008 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.2900   +   loads *   4.8300
+
+         delay hi-to-low(fall) =   1.0300   +   loads *   2.3800
+
+         this pin has capacitance =     0.1090 loads(pF)
+
+
+
+ GATE aoi221:
+
+      AREA: 2784.000000 (square microns)
+      PRIMITIVE: AOI221
+      LOGIC_EQUATION: O = ! ((a1 * a2) + (b1 * b2) + c)
+      INPUT_PIN_COUNT: 5
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.4800   +   loads *   4.4300
+
+         delay hi-to-low(fall) =   1.3300   +   loads *   2.7800
+
+         this pin has capacitance =     0.1089 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.4200   +   loads *   4.5600
+
+         delay hi-to-low(fall) =   1.4000   +   loads *   2.7500
+
+         this pin has capacitance =     0.0948 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7600   +   loads *   4.4700
+
+         delay hi-to-low(fall) =   0.7900   +   loads *   2.8900
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7300   +   loads *   4.5800
+
+         delay hi-to-low(fall) =   0.7800   +   loads *   2.9100
+
+         this pin has capacitance =     0.1049 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.3900   +   loads *   4.5600
+
+         delay hi-to-low(fall) =   0.7000   +   loads *   1.5100
+
+         this pin has capacitance =     0.1110 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.4800   +   loads *   4.5800
+
+         delay hi-to-low(fall) =   1.4000   +   loads *   2.9100
+
+         this pin has capacitance =     0.1110 loads(pF)
+
+
+
+ GATE aoi222:
+
+      AREA: 3712.000000 (square microns)
+      PRIMITIVE: AOI222
+      LOGIC_EQUATION: O = ! ((a1 * a2) + (b1 * b2) + (c1 * c2) )
+      INPUT_PIN_COUNT: 6
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.7700   +   loads *   4.5800
+
+         delay hi-to-low(fall) =   1.5600   +   loads *   2.9500
+
+         this pin has capacitance =     0.1019 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.7300   +   loads *   4.6900
+
+         delay hi-to-low(fall) =   1.6000   +   loads *   2.9300
+
+         this pin has capacitance =     0.0958 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.3400   +   loads *   4.6800
+
+         delay hi-to-low(fall) =   1.2100   +   loads *   2.9200
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.5000   +   loads *   4.6900
+
+         delay hi-to-low(fall) =   1.2200   +   loads *   2.9200
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      DELAY_EQUATION (pin c1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9200   +   loads *   4.6700
+
+         delay hi-to-low(fall) =   0.8100   +   loads *   2.9200
+
+         this pin has capacitance =     0.0958 loads(pF)
+
+      DELAY_EQUATION (pin c2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7700   +   loads *   4.4700
+
+         delay hi-to-low(fall) =   0.7600   +   loads *   2.9200
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.7700   +   loads *   4.6900
+
+         delay hi-to-low(fall) =   1.6000   +   loads *   2.9500
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+
+
+ GATE oai21:
+
+      AREA: 1856.000000 (square microns)
+      PRIMITIVE: OAI21
+      LOGIC_EQUATION: O = ! ( (a1 + a2) * b)
+      INPUT_PIN_COUNT: 3
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6900   +   loads *   3.9400
+
+         delay hi-to-low(fall) =   0.5300   +   loads *   2.4700
+
+         this pin has capacitance =     0.1019 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8700   +   loads *   3.9300
+
+         delay hi-to-low(fall) =   0.6300   +   loads *   2.4700
+
+         this pin has capacitance =     0.0979 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.3700   +   loads *   2.0500
+
+         delay hi-to-low(fall) =   0.5700   +   loads *   2.5100
+
+         this pin has capacitance =     0.0998 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   0.8700   +   loads *   3.9400
+
+         delay hi-to-low(fall) =   0.6300   +   loads *   2.5100
+
+         this pin has capacitance =     0.1019 loads(pF)
+
+
+
+ GATE oai31:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: OAI31
+      LOGIC_EQUATION: O = ! ( (a1 + a2 + a3) * b)
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2700   +   loads *   4.7100
+
+         delay hi-to-low(fall) =   1.0300   +   loads *   2.4300
+
+         this pin has capacitance =     0.1089 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1100   +   loads *   4.7100
+
+         delay hi-to-low(fall) =   1.0400   +   loads *   2.5700
+
+         this pin has capacitance =     0.1049 loads(pF)
+
+      DELAY_EQUATION (pin a3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8500   +   loads *   4.7100
+
+         delay hi-to-low(fall) =   0.6900   +   loads *   2.3800
+
+         this pin has capacitance =     0.1090 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.3800   +   loads *   1.8600
+
+         delay hi-to-low(fall) =   0.8100   +   loads *   2.7300
+
+         this pin has capacitance =     0.1059 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.2700   +   loads *   4.7100
+
+         delay hi-to-low(fall) =   1.0400   +   loads *   2.7300
+
+         this pin has capacitance =     0.1090 loads(pF)
+
+
+
+ GATE oai22:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: OAI22
+      LOGIC_EQUATION: O = ! ( (a1 + a2) * (b1 + b2))
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1000   +   loads *   4.0600
+
+         delay hi-to-low(fall) =   0.9000   +   loads *   2.5000
+
+         this pin has capacitance =     0.1009 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9900   +   loads *   4.0600
+
+         delay hi-to-low(fall) =   0.6800   +   loads *   2.3600
+
+         this pin has capacitance =     0.1029 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6900   +   loads *   3.6600
+
+         delay hi-to-low(fall) =   0.7400   +   loads *   2.5300
+
+         this pin has capacitance =     0.0958 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6100   +   loads *   3.6600
+
+         delay hi-to-low(fall) =   0.5600   +   loads *   2.0600
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.1000   +   loads *   4.0600
+
+         delay hi-to-low(fall) =   0.9000   +   loads *   2.5300
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+
+
+ GATE oai32:
+
+      AREA: 2784.000000 (square microns)
+      PRIMITIVE: OAI32
+      LOGIC_EQUATION: O = ! ( (a1 + a2 + a3) * (b1 + b2))
+      INPUT_PIN_COUNT: 5
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.3900   +   loads *   4.4600
+
+         delay hi-to-low(fall) =   1.0400   +   loads *   2.4600
+
+         this pin has capacitance =     0.1130 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2500   +   loads *   4.4600
+
+         delay hi-to-low(fall) =   1.0900   +   loads *   2.6300
+
+         this pin has capacitance =     0.1069 loads(pF)
+
+      DELAY_EQUATION (pin a3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9900   +   loads *   4.4600
+
+         delay hi-to-low(fall) =   0.7400   +   loads *   2.4200
+
+         this pin has capacitance =     0.1140 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5800   +   loads *   3.2000
+
+         delay hi-to-low(fall) =   0.7900   +   loads *   2.7100
+
+         this pin has capacitance =     0.1059 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.6800   +   loads *   3.2100
+
+         delay hi-to-low(fall) =   0.8300   +   loads *   2.3400
+
+         this pin has capacitance =     0.1130 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.3900   +   loads *   4.4600
+
+         delay hi-to-low(fall) =   1.0900   +   loads *   2.7100
+
+         this pin has capacitance =     0.1140 loads(pF)
+
+
+
+ GATE oai33:
+
+      AREA: 3248.000000 (square microns)
+      PRIMITIVE: OAI33
+      LOGIC_EQUATION: O = ! ( (a1 + a2 + a3) * (b1 + b2 + b3))
+      INPUT_PIN_COUNT: 6
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.5800   +   loads *   4.3000
+
+         delay hi-to-low(fall) =   1.4800   +   loads *   2.4700
+
+         this pin has capacitance =     0.1170 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.5000   +   loads *   4.3100
+
+         delay hi-to-low(fall) =   1.4200   +   loads *   2.6300
+
+         this pin has capacitance =     0.1089 loads(pF)
+
+      DELAY_EQUATION (pin a3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.2400   +   loads *   4.3100
+
+         delay hi-to-low(fall) =   1.1700   +   loads *   2.6500
+
+         this pin has capacitance =     0.1079 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8000   +   loads *   4.3000
+
+         delay hi-to-low(fall) =   0.8200   +   loads *   2.2700
+
+         this pin has capacitance =     0.1170 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.0000   +   loads *   4.3000
+
+         delay hi-to-low(fall) =   1.1700   +   loads *   2.6400
+
+         this pin has capacitance =     0.1089 loads(pF)
+
+      DELAY_EQUATION (pin b3 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1300   +   loads *   4.3100
+
+         delay hi-to-low(fall) =   1.3500   +   loads *   2.6500
+
+         this pin has capacitance =     0.1109 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.5800   +   loads *   4.3100
+
+         delay hi-to-low(fall) =   1.4800   +   loads *   2.6500
+
+         this pin has capacitance =     0.1170 loads(pF)
+
+
+
+ GATE oai211:
+
+      AREA: 2320.000000 (square microns)
+      PRIMITIVE: OAI211
+      LOGIC_EQUATION: O = ! ( (a1 + a2) * b * c)
+      INPUT_PIN_COUNT: 4
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1200   +   loads *   4.1700
+
+         delay hi-to-low(fall) =   0.5900   +   loads *   2.3100
+
+         this pin has capacitance =     0.1070 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.3000   +   loads *   4.1600
+
+         delay hi-to-low(fall) =   0.7900   +   loads *   2.3600
+
+         this pin has capacitance =     0.1131 loads(pF)
+
+      DELAY_EQUATION (pin b to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5100   +   loads *   2.1300
+
+         delay hi-to-low(fall) =   0.6900   +   loads *   2.4000
+
+         this pin has capacitance =     0.1050 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.5000   +   loads *   2.4600
+
+         delay hi-to-low(fall) =   0.5200   +   loads *   2.4100
+
+         this pin has capacitance =     0.1050 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.3000   +   loads *   4.1700
+
+         delay hi-to-low(fall) =   0.7900   +   loads *   2.4100
+
+         this pin has capacitance =     0.1131 loads(pF)
+
+
+
+ GATE oai221:
+
+      AREA: 2784.000000 (square microns)
+      PRIMITIVE: OAI221
+      LOGIC_EQUATION: O = ! ( (a1 + a2) * (b1 + b2) * c)
+      INPUT_PIN_COUNT: 5
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.5800   +   loads *   4.1700
+
+         delay hi-to-low(fall) =   1.1100   +   loads *   2.4700
+
+         this pin has capacitance =     0.1039 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.4800   +   loads *   4.1700
+
+         delay hi-to-low(fall) =   0.8600   +   loads *   2.3600
+
+         this pin has capacitance =     0.1050 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9400   +   loads *   4.0300
+
+         delay hi-to-low(fall) =   0.8100   +   loads *   2.5000
+
+         this pin has capacitance =     0.1080 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7600   +   loads *   4.0300
+
+         delay hi-to-low(fall) =   0.6400   +   loads *   2.5000
+
+         this pin has capacitance =     0.1060 loads(pF)
+
+      DELAY_EQUATION (pin c to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.7800   +   loads *   2.2800
+
+         delay hi-to-low(fall) =   0.9000   +   loads *   2.5400
+
+         this pin has capacitance =     0.1019 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.5800   +   loads *   4.1700
+
+         delay hi-to-low(fall) =   1.1100   +   loads *   2.5400
+
+         this pin has capacitance =     0.1080 loads(pF)
+
+
+
+ GATE oai222:
+
+      AREA: 3248.000000 (square microns)
+      PRIMITIVE: OAI222
+      LOGIC_EQUATION: O = ! ( (a1 + a2) * (b1 + b2) * (c1 + c2))
+      INPUT_PIN_COUNT: 6
+      MAX_LOADS: 999.000000
+
+      DELAY_EQUATION (pin a1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.7700   +   loads *   3.7500
+
+         delay hi-to-low(fall) =   1.2100   +   loads *   2.4700
+
+         this pin has capacitance =     0.1161 loads(pF)
+
+      DELAY_EQUATION (pin a2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.6200   +   loads *   3.7500
+
+         delay hi-to-low(fall) =   1.1300   +   loads *   2.4800
+
+         this pin has capacitance =     0.1110 loads(pF)
+
+      DELAY_EQUATION (pin b1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.1700   +   loads *   3.5800
+
+         delay hi-to-low(fall) =   1.0700   +   loads *   2.4800
+
+         this pin has capacitance =     0.1009 loads(pF)
+
+      DELAY_EQUATION (pin b2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   1.3500   +   loads *   3.5800
+
+         delay hi-to-low(fall) =   1.1000   +   loads *   2.3500
+
+         this pin has capacitance =     0.1191 loads(pF)
+
+      DELAY_EQUATION (pin c1 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.9900   +   loads *   3.5900
+
+         delay hi-to-low(fall) =   0.9300   +   loads *   2.4900
+
+         this pin has capacitance =     0.1060 loads(pF)
+
+      DELAY_EQUATION (pin c2 to pin y, nanoseconds): 
+
+         delay low-to-hi(rise) =   0.8200   +   loads *   3.5800
+
+         delay hi-to-low(fall) =   0.7900   +   loads *   2.4800
+
+         this pin has capacitance =     0.1140 loads(pF)
+
+      WORST_CASE_DELAY_EQUATION 
+
+         delay low-to-hi(rise) =   1.7700   +   loads *   3.7500
+
+         delay hi-to-low(fall) =   1.2100   +   loads *   2.4900
+
+         this pin has capacitance =     0.1191 loads(pF) 

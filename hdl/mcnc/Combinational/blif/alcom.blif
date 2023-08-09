@@ -1,0 +1,96 @@
+.model source.pla
+.inputs v0 v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13 v14
+.outputs v15.0 v15.1 v15.2 v15.3 v15.4 v15.5 v15.6 v15.7 v15.8 v15.9 v15.10 \
+v15.11 v15.12 v15.13 v15.14 v15.15 v15.16 v15.17 v15.18 v15.19 v15.20 v15.21 \
+v15.22 v15.23 v15.24 v15.25 v15.26 v15.27 v15.28 v15.29 v15.30 v15.31 v15.32 \
+v15.33 v15.34 v15.35 v15.36 v15.37
+.names v0 v1 v2 v3 v4 v15.0
+10110 1
+10010 1
+.names v0 v1 v2 v3 v4 v15.1
+11010 1
+01010 1
+.names v0 v1 v2 v3 v4 v15.2
+01110 1
+10110 1
+00110 1
+.names v0 v1 v2 v3 v4 v5 v6 v15.3
+1---0-- 1
+01--0-- 1
+1----11 1
+00100-- 1
+00000-- 1
+.names v0 v1 v2 v3 v4 v15.4
+11010 1
+.names v0 v1 v2 v3 v4 v15.5
+01--0 1
+10--0 1
+111-0 1
+001-0 1
+11000 1
+00000 1
+.names v7 v8 v9 v10 v15.6
+0000 1
+.names v7 v8 v9 v10 v15.7
+0001 1
+.names v7 v8 v9 v10 v15.8
+0010 1
+.names v7 v8 v9 v10 v15.9
+0011 1
+.names v7 v8 v9 v10 v15.10
+0101 1
+.names v7 v8 v9 v10 v15.11
+0100 1
+.names v7 v8 v9 v10 v15.12
+0111 1
+.names v7 v8 v9 v10 v15.13
+1000 1
+.names v7 v8 v9 v10 v15.14
+1001 1
+.names v7 v8 v9 v10 v15.15
+1010 1
+.names v7 v8 v9 v10 v15.16
+1011 1
+.names v7 v8 v9 v10 v15.17
+1100 1
+.names v7 v8 v9 v10 v15.18
+1101 1
+.names v7 v8 v9 v10 v15.19
+1110 1
+.names v7 v8 v9 v10 v15.20
+1111 1
+.names v3 v11 v12 v13 v14 v15.21
+10000 1
+.names v3 v11 v12 v13 v14 v15.22
+10001 1
+.names v3 v11 v12 v13 v14 v15.23
+10010 1
+.names v3 v11 v12 v13 v14 v15.24
+10011 1
+.names v3 v11 v12 v13 v14 v15.25
+10100 1
+.names v3 v11 v12 v13 v14 v15.26
+10101 1
+.names v3 v11 v12 v13 v14 v15.27
+10110 1
+.names v3 v11 v12 v13 v14 v15.28
+10111 1
+.names v3 v11 v12 v13 v14 v15.29
+11000 1
+.names v3 v11 v12 v13 v14 v15.30
+11001 1
+.names v3 v11 v12 v13 v14 v15.31
+11010 1
+.names v3 v11 v12 v13 v14 v15.32
+11011 1
+.names v3 v11 v12 v13 v14 v15.33
+11100 1
+.names v7 v8 v9 v10 v15.34
+0110 1
+.names v3 v11 v12 v13 v14 v15.35
+11101 1
+.names v3 v11 v12 v13 v14 v15.36
+11110 1
+.names v3 v11 v12 v13 v14 v15.37
+11111 1
+.end

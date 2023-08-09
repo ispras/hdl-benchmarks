@@ -1,0 +1,63 @@
+.model CM162
+.inputs a b c d e f g h i j k l m n
+.outputs o p q r s
+.names a d0 e0 f0 o
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names b d0 g0 f0 p
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names g d0 p0 f0 q
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names h d0 q0 f0 r
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names n0 e s
+01 1
+.names j0 o0 d0
+00 1
+.names l0 i e0
+01 1
+10 1
+.names k0 o0 f0
+00 1
+.names m0 k g0
+11 1
+00 1
+.names d f j0
+1- 1
+-0 1
+.names d f k0
+0- 1
+-0 1
+.names c d e l0
+0-- 1
+-0- 1
+--0 1
+.names i l0 m0
+00 1
+.names j n n0
+0- 1
+-0 1
+.names n0 l0 o0
+00 1
+.names r0 l p0
+11 1
+00 1
+.names s0 m q0
+11 1
+00 1
+.names l0 i k r0
+000 1
+.names l l0 i k s0
+0000 1
+.end

@@ -1,0 +1,21 @@
+
+.i 1 
+.o 1 
+.p 16 
+.s 8
+0 st0 st0 0
+1 st0 st4 0
+0 st1 st0 1
+1 st1 st4 1
+0 st2 st1 0
+1 st2 st5 0
+0 st3 st1 1
+1 st3 st5 1
+0 st4 st2 0
+1 st4 st6 0
+0 st5 st2 1
+1 st5 st6 1
+0 st6 st3 0
+1 st6 st7 0
+0 st7 st3 1
+1 st7 st7 1

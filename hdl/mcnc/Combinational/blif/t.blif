@@ -1,0 +1,13 @@
+.model C17.iscas
+.inputs 1GAT(0) 2GAT(1) 3GAT(2) 6GAT(3) 7GAT(4)
+.outputs 22GAT(10) 23GAT(9)
+.names 1GAT(0) 2GAT(1) 3GAT(2) [2] 22GAT(10)
+1-1- 1
+-1-1 1
+.names 2GAT(1) 7GAT(4) [2] 23GAT(9)
+1-1 1
+-11 1
+.names 3GAT(2) 6GAT(3) [2]
+0- 1
+-0 1
+.end

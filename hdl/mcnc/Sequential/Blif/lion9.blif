@@ -1,0 +1,46 @@
+.model lion9.kiss2
+.inputs v0 v1
+.outputs v6.4
+.latch    v6.0 v2   0
+.latch    v6.1 v3   0
+.latch    v6.2 v4   1
+.latch    v6.3 v5   0
+.names [17] v6.4
+0 1
+.names [9] v6.0
+0 1
+.names [11] v6.1
+0 1
+.names [13] v6.2
+0 1
+.names [15] v6.3
+0 1
+.names v0 v1 v3 v5 [0]
+0001 1
+.names v1 v5 [1]
+10 1
+.names v0 v1 v3 [2]
+001 1
+.names v3 v4 [3]
+11 1
+.names v0 v5 [4]
+00 1
+.names v0 v1 v5 [5]
+111 1
+.names v0 v1 v5 [6]
+101 1
+.names v0 v3 v5 [7]
+011 1
+.names v3 v5 [8]
+01 1
+.names [0] [9]
+0 1
+.names [1] [2] [6] [7] [11]
+0000 1
+.names [0] [4] [5] [7] [13]
+0000 1
+.names [2] [5] [6] [8] [15]
+0000 1
+.names [3] [5] [6] [7] [8] [17]
+00000 1
+.end

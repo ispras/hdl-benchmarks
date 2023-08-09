@@ -1,0 +1,36 @@
+
+.model CM85 ;
+
+	.date 910103085121 ;	# January 3 1991, 08:51.21
+
+	.inputs  a b c d e f g h i j k ;
+	.outputs l m n ;
+
+	l = n0' + v0' t0' ;
+	m = v0' w0' ;
+	n = l0' + v0' u0' ;
+	v0 = q0' + h0' ;
+	t0 = j + k' ;
+	n0 = m0' j0' + h0' j0' ;
+	w0 = j k' + j' k ;
+	u0 = j' + k ;
+	l0 = k0' i0' + h0' i0' ;
+	u = e' d ;
+	v = u' c' + b' c' ;
+	w = e d' ;
+	x = w' a' + b' a' ;
+	a0 = d' e' + d e ;
+	d0 = f + g' ;
+	e0 = f' + g ;
+	f0 = a0' + b' ;
+	g0 = f g' + f' g ;
+	h0 = f0' g0' ;
+	i0 = v' + e0' f0' ;
+	j0 = x' + f0' d0' ;
+	k0 = i' h ;
+	m0 = i h' ;
+	q0 = h' i' + h i ;
+
+
+.endmodel CM85 ;
+

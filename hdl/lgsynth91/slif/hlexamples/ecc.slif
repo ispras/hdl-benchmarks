@@ -1,0 +1,989 @@
+
+.model ecc ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  CLK RESET new_data[0:0] data_in[0:0] data_in[1:1] data_in[2:2] 
+	         data_in[3:3] data_in[4:4] data_in[5:5] data_in[6:6] 
+	         data_in[7:7] error[0:0] ;
+	.outputs data_out[0:0] data_out[1:1] data_out[2:2] data_out[3:3] 
+	         data_out[4:4] data_out[5:5] data_out[6:6] data_out[7:7] 
+	         detected_error[0:0] detected_error[1:1] encoder_out[0:0] 
+	         decoder_in[0:0] data_ready[0:0] out_ready[0:0] ;
+
+	.call INST1 encode (CLK, RESET, data_in[0:0], data_in[1:1], 
+	         data_in[2:2], data_in[3:3], data_in[4:4], data_in[5:5], 
+	         data_in[6:6], data_in[7:7], new_data[0:0] ;;INST1.DN, 
+	         encoder_out[0:0], data_ready[0:0] ) ;
+	.call INST2 noise (error[0:0], encoder_out[0:0] ;;decoder_in[0:0] ) ;
+	.call INST3 decode (CLK, RESET, decoder_in[0:0], data_ready[0:0] ;;
+	         INST3.DN, data_out[0:0], data_out[1:1], data_out[2:2], 
+	         data_out[3:3], data_out[4:4], data_out[5:5], data_out[6:6], 
+	         data_out[7:7], detected_error[0:0], detected_error[1:1], 
+	         out_ready[0:0] ) ;
+
+
+.endmodel ecc ;
+
+
+.model encode ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  CLK RESET data_in[0:0] data_in[1:1] data_in[2:2] data_in[3:3] 
+	         data_in[4:4] data_in[5:5] data_in[6:6] data_in[7:7] 
+	         new_data[0:0] ;
+	.outputs DN encoder_out[0:0] data_ready[0:0] ;
+
+	.call encode_1 encode_1 (new_data[0:0] ;;SL1_3' ) ;
+	.call encode_2 encode_2 (new_data[0:0] ;;T3[0:0] ) ;
+	.call encode_3 encode_3 (T4[0:0], T4[3:3], T4[6:6] ;;M2[0:0], M2[1:1], 
+	         M2[2:2] ) ;
+	.call encode_4 encode_4 (T4[0:0], T4[1:1], T4[2:2] ;;M5[0:0], M5[1:1], 
+	         M5[2:2], M5[3:3] ) ;
+	.call encode_5 encode_5 (T4[1:1], T4[4:4], T4[7:7] ;;M7[0:0], M7[1:1], 
+	         M7[2:2] ) ;
+	.call encode_6 encode_6 (T7[0:0], T4[3:3], T4[4:4], T4[5:5] ;;M10[0:0], 
+	         M10[1:1], M10[2:2], M10[3:3] ) ;
+	.call encode_7 encode_7 (T4[6:6], T4[7:7] ;;M11[0:0], M11[1:1], 
+	         M11[2:2] ) ;
+	.call encode_8 encode_8 (T4[2:2], T4[5:5] ;;M13[0:0], M13[1:1], 
+	         M13[2:2] ) ;
+	.call encode_9 encode_9 (T10[0:0], T4[6:6], T4[7:7] ;;M16[0:0], 
+	         M16[1:1], M16[2:2], M16[3:3] ) ;
+	.call FF_SR_EN1 FF_SR_EN (data_in[0:0], RQ1_4, CLK, 0, RESET ;;T4[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (data_in[1:1], RQ1_4, CLK, 0, RESET ;;T4[1:1] ) ;
+	.call FF_SR_EN3 FF_SR_EN (data_in[2:2], RQ1_4, CLK, 0, RESET ;;T4[2:2] ) ;
+	.call FF_SR_EN4 FF_SR_EN (data_in[3:3], RQ1_4, CLK, 0, RESET ;;T4[3:3] ) ;
+	.call FF_SR_EN5 FF_SR_EN (data_in[4:4], RQ1_4, CLK, 0, RESET ;;T4[4:4] ) ;
+	.call FF_SR_EN6 FF_SR_EN (data_in[5:5], RQ1_4, CLK, 0, RESET ;;T4[5:5] ) ;
+	.call FF_SR_EN7 FF_SR_EN (data_in[6:6], RQ1_4, CLK, 0, RESET ;;T4[6:6] ) ;
+	.call FF_SR_EN8 FF_SR_EN (data_in[7:7], RQ1_4, CLK, 0, RESET ;;T4[7:7] ) ;
+	.call FF_SR_EN9 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_9, CLK, 
+	         0, RESET ;;T7[0:0] ) ;
+	.call FF_SR_EN10 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_14, 
+	         CLK, 0, RESET ;;T10[0:0] ) ;
+	.call FF_SR_EN11 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_20, 
+	         CLK, 0, RESET ;;T13[0:0] ) ;
+	.call FF_SR_EN12 FF_SR_EN (auto_ENCODER_3[0].ob0[0:0], DN_Latch1_5, 
+	         CLK, 0, RESET ;;T5[0:0] ) ;
+	.call FF_SR_EN13 FF_SR_EN (auto_ENCODER_3[0].ob0[0:0], DN_Latch1_7, 
+	         CLK, 0, RESET ;;T6[0:0] ) ;
+	.call FF_SR_EN14 FF_SR_EN (auto_ENCODER_3[0].ob0[0:0], DN_Latch1_10, 
+	         CLK, 0, RESET ;;T8[0:0] ) ;
+	.call FF_SR_EN15 FF_SR_EN (auto_ENCODER_3[0].ob0[0:0], DN_Latch1_12, 
+	         CLK, 0, RESET ;;T9[0:0] ) ;
+	.call FF_SR_EN16 FF_SR_EN (auto_ENCODER_3[0].ob0[0:0], DN_Latch1_16, 
+	         CLK, 0, RESET ;;T11[0:0] ) ;
+	.call FF_SR_EN17 FF_SR_EN (auto_ENCODER_3[0].ob0[0:0], DN_Latch1_18, 
+	         CLK, 0, RESET ;;T12[0:0] ) ;
+	.call FF_EN_data_ready0 FF_EN (RQ1_21, data_ready_en[0:0], CLK, RESET ;;
+	         data_ready[0:0] ) ;
+	.call FF_EN_encoder_out0 FF_EN (encoder_out_in[0:0], 
+	         encoder_out_en[0:0], CLK, RESET ;;encoder_out[0:0] ) ;
+	.call auto_ENCODER_4[0] ENCODER_4 (auto_ENCODER_4[0].ib0[0:0], 
+	         auto_ENCODER_4[0].ib0[1:1], auto_ENCODER_4[0].ib0[2:2], 
+	         auto_ENCODER_4[0].ib0[3:3] ;;auto_ENCODER_4[0].ob0[0:0] ) ;
+	.call auto_ENCODER_3[0] ENCODER_3 (auto_ENCODER_3[0].ib0[0:0], 
+	         auto_ENCODER_3[0].ib0[1:1], auto_ENCODER_3[0].ib0[2:2] ;;
+	         auto_ENCODER_3[0].ob0[0:0] ) ;
+	.call Sw1_3 FF_EN (Sw1_3_i, 1, CLK, RESET ;;Sr1_3' ) ;
+	.call TcL1_3[1] FF_EN (TcL1_3_i[1], 1, CLK, RESET ;;EN1_9 ) ;
+	.call TcL1_3[2] FF_EN (TcL1_3_i[2], 1, CLK, RESET ;;DN1_9 ) ;
+	.call TcL1_3[3] FF_EN (TcL1_3_i[3], 1, CLK, RESET ;;DN1_7 ) ;
+	.call TcL1_3[4] FF_EN (TcL1_3_i[4], 1, CLK, RESET ;;DN1_20 ) ;
+	.call TcL1_3[5] FF_EN (TcL1_3_i[5], 1, CLK, RESET ;;EN1_16 ) ;
+	.call TcL1_3[6] FF_EN (TcL1_3_i[6], 1, CLK, RESET ;;EN1_18 ) ;
+	.call TcL1_3[7] FF_EN (TcL1_3_i[7], 1, CLK, RESET ;;EN1_23 ) ;
+	.call TcL1_3[8] FF_EN (TcL1_3_i[8], 1, CLK, RESET ;;EN1_24 ) ;
+	.call TcL1_3[9] FF_EN (TcL1_3_i[9], 1, CLK, RESET ;;EN1_25 ) ;
+	.call TcL1_3[10] FF_EN (TcL1_3_i[10], 1, CLK, RESET ;;EN1_26 ) ;
+	.call TcL1_3[11] FF_EN (TcL1_3_i[11], 1, CLK, RESET ;;EN1_27 ) ;
+	.call TcL1_3[12] FF_EN (TcL1_3_i[12], 1, CLK, RESET ;;EN1_28 ) ;
+	.call TcL1_3[13] FF_EN (TcL1_3_i[13], 1, CLK, RESET ;;EN1_29 ) ;
+	.call TcL1_3[14] FF_EN (TcL1_3_i[14], 1, CLK, RESET ;;EN1_30 ) ;
+	.call TcL1_3[15] FF_EN (TcL1_3_i[15], 1, CLK, RESET ;;EN1_31 ) ;
+	.call TcL1_3[16] FF_EN (TcL1_3_i[16], 1, CLK, RESET ;;EN1_32 ) ;
+	.call TcL1_3[17] FF_EN (TcL1_3_i[17], 1, CLK, RESET ;;EN1_33 ) ;
+	.call TcL1_3[18] FF_EN (TcL1_3_i[18], 1, CLK, RESET ;;EN1_34 ) ;
+	.call TcL1_3[19] FF_EN (TcL1_3_i[19], 1, CLK, RESET ;;EN1_35 ) ;
+	.call TcL1_3[20] FF_EN (TcL1_3_i[20], 1, CLK, RESET ;;EN1_36 ) ;
+	.call TcL1_3[21] FF_EN (TcL1_3_i[21], 1, CLK, RESET ;;EN1_37 ) ;
+	.call TcL1_3[22] FF_EN (TcL1_3_i[22], 1, CLK, RESET ;;DN ) ;
+	.call TcL1_3[23] FF_EN (TcL1_3_i[23], 1, CLK, RESET ;;RQ1_39 ) ;
+	.call FF_EN.1_3_LC FF_EN (LC1_3_i, 1, CLK, RESET ;;LC1_3 ) ;
+	.call LBr1_3_1 FF_EN (SL1_3', LBr1_3_e, CLK, RESET ;;LBr1_3[1] ) ;
+	.call Sw2_2 FF_EN (Sw2_2_i, 1, CLK, RESET ;;Sr2_2' ) ;
+	.call FF_EN.2_2_La FF_EN (AK2_2, 1, CLK, RESET ;;Lak2_2 ) ;
+	data_ready_en[0:0] = RQ1_21 + RQ1_22 ;
+	encoder_out_in[0:0] = T4[0:0] RQ1_23 + T4[1:1] RQ1_24 + T4[2:2] RQ1_25 
+		+ T4[3:3] RQ1_26 + T4[4:4] RQ1_27 + T4[5:5] RQ1_28 + T4[6:6] 
+		RQ1_29 + T4[7:7] RQ1_30 + T5[0:0] RQ1_32 + T8[0:0] RQ1_33 + 
+		T11[0:0] RQ1_34 + T6[0:0] RQ1_35 + T9[0:0] RQ1_36 + T12[0:0] 
+		RQ1_37 + T13[0:0] RQ1_38 ;
+	encoder_out_en[0:0] = RQ1_23 + RQ1_24 + RQ1_25 + RQ1_26 + RQ1_27 + 
+		RQ1_28 + RQ1_29 + RQ1_30 + RQ1_31 + RQ1_32 + RQ1_33 + RQ1_34 + 
+		RQ1_35 + RQ1_36 + RQ1_37 + RQ1_38 ;
+	auto_ENCODER_4[0].ib0[0:0] = M5[0:0] RQ1_9 + M10[0:0] RQ1_14 + M16[0:0] 
+		RQ1_20 ;
+	auto_ENCODER_4[0].ib0[1:1] = M5[1:1] RQ1_9 + M10[1:1] RQ1_14 + M16[1:1] 
+		RQ1_20 ;
+	auto_ENCODER_4[0].ib0[2:2] = M5[2:2] RQ1_9 + M10[2:2] RQ1_14 + M16[2:2] 
+		RQ1_20 ;
+	auto_ENCODER_4[0].ib0[3:3] = M5[3:3] RQ1_9 + M10[3:3] RQ1_14 + M16[3:3] 
+		RQ1_20 ;
+	auto_ENCODER_3[0].ib0[0:0] = T4[0:0] RQ1_5 + M2[0:0] RQ1_7 + T4[3:3] 
+		RQ1_10 + M7[0:0] RQ1_12 + M11[0:0] RQ1_16 + M13[0:0] RQ1_18 ;
+	auto_ENCODER_3[0].ib0[1:1] = T4[1:1] RQ1_5 + M2[1:1] RQ1_7 + T4[4:4] 
+		RQ1_10 + M7[1:1] RQ1_12 + M11[1:1] RQ1_16 + M13[1:1] RQ1_18 ;
+	auto_ENCODER_3[0].ib0[2:2] = T4[2:2] RQ1_5 + M2[2:2] RQ1_7 + T4[5:5] 
+		RQ1_10 + M7[2:2] RQ1_12 + M11[2:2] RQ1_16 + M13[2:2] RQ1_18 ;
+	RQ1_3 = Sr1_3 SL1_3' ;
+	Sw1_3_i = DN' ( Sr1_3' + Sr1_3 ( SL1_3 + AK1_3 ) ) ;
+	TcL1_3_i[1] = DN' ( EN1_4 + EN1_9 ) ;
+	TcL1_3_i[2] = DN' ( EN1_9 + DN1_9 ) ;
+	TcL1_3_i[3] = DN' ( DN1_9 + DN1_7 ) ;
+	TcL1_3_i[4] = DN' ( DN1_7 + DN1_20 ) ;
+	TcL1_3_i[5] = DN' ( DN1_20 + EN1_16 ) ;
+	TcL1_3_i[6] = DN' ( EN1_16 + EN1_18 ) ;
+	TcL1_3_i[7] = DN' ( EN1_18 + EN1_23 ) ;
+	TcL1_3_i[8] = DN' ( EN1_23 + EN1_24 ) ;
+	TcL1_3_i[9] = DN' ( EN1_24 + EN1_25 ) ;
+	TcL1_3_i[10] = DN' ( EN1_25 + EN1_26 ) ;
+	TcL1_3_i[11] = DN' ( EN1_26 + EN1_27 ) ;
+	TcL1_3_i[12] = DN' ( EN1_27 + EN1_28 ) ;
+	TcL1_3_i[13] = DN' ( EN1_28 + EN1_29 ) ;
+	TcL1_3_i[14] = DN' ( EN1_29 + EN1_30 ) ;
+	TcL1_3_i[15] = DN' ( EN1_30 + EN1_31 ) ;
+	TcL1_3_i[16] = DN' ( EN1_31 + EN1_32 ) ;
+	TcL1_3_i[17] = DN' ( EN1_32 + EN1_33 ) ;
+	TcL1_3_i[18] = DN' ( EN1_33 + EN1_34 ) ;
+	TcL1_3_i[19] = DN' ( EN1_34 + EN1_35 ) ;
+	TcL1_3_i[20] = DN' ( EN1_35 + EN1_36 ) ;
+	TcL1_3_i[21] = DN' ( EN1_36 + EN1_37 ) ;
+	TcL1_3_i[22] = DN' ( EN1_37 + DN ) ;
+	TcL1_3_i[23] = DN' ( DN + RQ1_39 ) ;
+	LC1_3_i = DN' ( RQ1_3 + LC1_3 ) ;
+	LBr1_3_e = RQ1_3 LC1_3' ;
+	RQ4_2 = RQ1_3 SL1_3 LC1_3' ;
+	AK1_3 = RQ2_3 + RQ4_2 ;
+	RQ1_4 = EN1_4 EN1_9' ;
+	RQ1_5 = EN1_9 DN1_9' ;
+	DN_Latch1_5 = EN1_9 DN1_9' ;
+	RQ1_7 = DN1_9 DN1_7' ;
+	DN_Latch1_7 = DN1_9 DN1_7' ;
+	RQ1_9 = EN1_9 DN1_9' ;
+	DN_Latch1_9 = EN1_9 DN1_9' ;
+	RQ1_10 = DN1_7 DN1_20' ;
+	DN_Latch1_10 = DN1_7 DN1_20' ;
+	RQ1_12 = DN1_20 EN1_16' ;
+	DN_Latch1_12 = DN1_20 EN1_16' ;
+	RQ1_14 = DN1_9 DN1_7' ;
+	DN_Latch1_14 = DN1_9 DN1_7' ;
+	RQ1_16 = EN1_16 EN1_18' ;
+	DN_Latch1_16 = EN1_16 EN1_18' ;
+	RQ1_18 = EN1_18 EN1_23' ;
+	DN_Latch1_18 = EN1_18 EN1_23' ;
+	RQ1_20 = DN1_7 DN1_20' ;
+	DN_Latch1_20 = DN1_7 DN1_20' ;
+	RQ1_21 = EN1_23 EN1_24' ;
+	RQ1_22 = EN1_24 EN1_25' ;
+	RQ1_23 = EN1_23 EN1_24' ;
+	RQ1_24 = EN1_24 EN1_25' ;
+	RQ1_25 = EN1_25 EN1_26' ;
+	RQ1_26 = EN1_26 EN1_27' ;
+	RQ1_27 = EN1_27 EN1_28' ;
+	RQ1_28 = EN1_28 EN1_29' ;
+	RQ1_29 = EN1_29 EN1_30' ;
+	RQ1_30 = EN1_30 EN1_31' ;
+	RQ1_31 = EN1_31 EN1_32' ;
+	RQ1_32 = EN1_32 EN1_33' ;
+	RQ1_33 = EN1_33 EN1_34' ;
+	RQ1_34 = EN1_34 EN1_35' ;
+	RQ1_35 = EN1_35 EN1_36' ;
+	RQ1_36 = EN1_36 EN1_37' ;
+	RQ1_37 = EN1_37 DN' ;
+	RQ1_38 = DN RQ1_39' ;
+	RQ2_2 = Sr2_2 EN2_2 ;
+	RQ2_3 = Sr2_2' + Sr2_2 EN2_2 AK2_2 ;
+	Sw2_2_i = DN' ( Sr2_2' + Sr2_2 EN2_2 AK2_2 ) ;
+	AK2_2 = T3[0:0] RQ3_3 ;
+	RQ3_3 = RQ2_2 Lak2_2' ;
+	EN1_4 = Sr1_3' + Sr1_3 SL1_3 ;
+	EN2_2 = RQ1_3 ( LC1_3' SL1_3' + LC1_3 LBr1_3[1] ) ;
+
+
+.endmodel encode ;
+
+
+.model encode_1 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  new_data[0:0] ;
+	.outputs T1[0:0] ;
+	.net new_data[0:0]' T1[0:0] ;
+
+
+
+.endmodel encode_1 ;
+
+
+.model encode_2 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  new_data[0:0] ;
+	.outputs T3[0:0] ;
+	.net new_data[0:0] T3[0:0] ;
+
+
+
+.endmodel encode_2 ;
+
+
+.model encode_3 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T4[0:0] T4[3:3] T4[6:6] ;
+	.outputs M2[0:0] M2[1:1] M2[2:2] ;
+	.net T4[0:0] M2[0:0] ;
+	.net T4[3:3] M2[1:1] ;
+	.net T4[6:6] M2[2:2] ;
+
+
+
+.endmodel encode_3 ;
+
+
+.model encode_4 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T4[0:0] T4[1:1] T4[2:2] ;
+	.outputs M5[0:0] M5[1:1] M5[2:2] M5[3:3] ;
+	.net 0 M5[0:0] ;
+	.net T4[0:0] M5[1:1] ;
+	.net T4[1:1] M5[2:2] ;
+	.net T4[2:2] M5[3:3] ;
+
+
+
+.endmodel encode_4 ;
+
+
+.model encode_5 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T4[1:1] T4[4:4] T4[7:7] ;
+	.outputs M7[0:0] M7[1:1] M7[2:2] ;
+	.net T4[1:1] M7[0:0] ;
+	.net T4[4:4] M7[1:1] ;
+	.net T4[7:7] M7[2:2] ;
+
+
+
+.endmodel encode_5 ;
+
+
+.model encode_6 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T7[0:0] T4[3:3] T4[4:4] T4[5:5] ;
+	.outputs M10[0:0] M10[1:1] M10[2:2] M10[3:3] ;
+	.net T7[0:0] M10[0:0] ;
+	.net T4[3:3] M10[1:1] ;
+	.net T4[4:4] M10[2:2] ;
+	.net T4[5:5] M10[3:3] ;
+
+
+
+.endmodel encode_6 ;
+
+
+.model encode_7 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T4[6:6] T4[7:7] ;
+	.outputs M11[0:0] M11[1:1] M11[2:2] ;
+	.net T4[6:6] M11[0:0] ;
+	.net T4[7:7] M11[1:1] ;
+	.net 0 M11[2:2] ;
+
+
+
+.endmodel encode_7 ;
+
+
+.model encode_8 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T4[2:2] T4[5:5] ;
+	.outputs M13[0:0] M13[1:1] M13[2:2] ;
+	.net T4[2:2] M13[0:0] ;
+	.net T4[5:5] M13[1:1] ;
+	.net 0 M13[2:2] ;
+
+
+
+.endmodel encode_8 ;
+
+
+.model encode_9 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T10[0:0] T4[6:6] T4[7:7] ;
+	.outputs M16[0:0] M16[1:1] M16[2:2] M16[3:3] ;
+	.net T10[0:0] M16[0:0] ;
+	.net T4[6:6] M16[1:1] ;
+	.net T4[7:7] M16[2:2] ;
+	.net 0 M16[3:3] ;
+
+
+
+.endmodel encode_9 ;
+
+
+.model FF_SR_EN ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  din den clk set res ;
+	.outputs dout ;
+
+	latchin = set + res' ( din den + dout den' ) ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_SR_EN ;
+
+
+.model FF_EN ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  din den clk res ;
+	.outputs dout ;
+
+	latchin = dout res' den' + din res' den ;
+	dout = @D(latchin, clk) ;
+
+
+.endmodel FF_EN ;
+
+
+.model ENCODER_4 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  indata[0:0] indata[1:1] indata[2:2] indata[3:3] ;
+	.outputs return_value[0:0] ;
+
+	.call ENCODER_4_1 ENCODER_4_1 (indata[0:0], indata[1:1], indata[2:2], 
+	         indata[3:3] ;;return_value[0:0] ) ;
+
+
+.endmodel ENCODER_4 ;
+
+
+.model ENCODER_4_1 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  indata[0:0] indata[1:1] indata[2:2] indata[3:3] ;
+	.outputs T3[0:0] ;
+
+	T1[0:0] = indata[0:0] indata[1:1]' + indata[0:0]' indata[1:1] ;
+	T2[0:0] = T1[0:0] indata[2:2]' + T1[0:0]' indata[2:2] ;
+	T3[0:0] = T2[0:0] indata[3:3]' + T2[0:0]' indata[3:3] ;
+
+
+.endmodel ENCODER_4_1 ;
+
+
+.model ENCODER_3 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  indata[0:0] indata[1:1] indata[2:2] ;
+	.outputs return_value[0:0] ;
+
+	.call ENCODER_3_1 ENCODER_3_1 (indata[0:0], indata[1:1], indata[2:2] ;;
+	         return_value[0:0] ) ;
+
+
+.endmodel ENCODER_3 ;
+
+
+.model ENCODER_3_1 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  indata[0:0] indata[1:1] indata[2:2] ;
+	.outputs T2[0:0] ;
+
+	T1[0:0] = indata[0:0] indata[1:1]' + indata[0:0]' indata[1:1] ;
+	T2[0:0] = T1[0:0] indata[2:2]' + T1[0:0]' indata[2:2] ;
+
+
+.endmodel ENCODER_3_1 ;
+
+
+.model noise ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  error[0:0] encoder_out[0:0] ;
+	.outputs decoder_in[0:0] ;
+
+	.call noise_1 noise_1 (encoder_out[0:0], error[0:0] ;;decoder_in[0:0] ) ;
+
+
+.endmodel noise ;
+
+
+.model noise_1 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  encoder_out[0:0] error[0:0] ;
+	.outputs T1[0:0] ;
+
+	T1[0:0] = encoder_out[0:0] error[0:0]' + encoder_out[0:0]' error[0:0] ;
+
+
+.endmodel noise_1 ;
+
+
+.model decode ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  CLK RESET decoder_in[0:0] data_ready[0:0] ;
+	.outputs DN data_out[0:0] data_out[1:1] data_out[2:2] data_out[3:3] 
+	         data_out[4:4] data_out[5:5] data_out[6:6] data_out[7:7] 
+	         err[0:0] err[1:1] out_ready[0:0] ;
+
+	.call decode_1 decode_1 (data_ready[0:0] ;;SL1_3' ) ;
+	.call decode_2 decode_2 (data_ready[0:0] ;;T16[0:0] ) ;
+	.call decode_3 decode_3 (T17[0:0], T18[0:0], T19[0:0], T26[0:0] ;;
+	         M3[0:0], M3[1:1], M3[2:2], M3[3:3] ) ;
+	.call decode_4 decode_4 (T17[0:0], T20[0:0], T23[0:0], T29[0:0] ;;
+	         M6[0:0], M6[1:1], M6[2:2], M6[3:3] ) ;
+	.call decode_5 decode_5 (T32[0:0], T17[0:0], T18[0:0], T19[0:0] ;;
+	         M9[0:0], M9[1:1], M9[2:2], M9[3:3] ) ;
+	.call decode_6 decode_6 (T20[0:0], T21[0:0], T22[0:0], T27[0:0] ;;
+	         M12[0:0], M12[1:1], M12[2:2], M12[3:3] ) ;
+	.call decode_7 decode_7 (T18[0:0], T21[0:0], T24[0:0], T30[0:0] ;;
+	         M15[0:0], M15[1:1], M15[2:2], M15[3:3] ) ;
+	.call decode_8 decode_8 (T35[0:0], T20[0:0], T21[0:0], T22[0:0] ;;
+	         M18[0:0], M18[1:1], M18[2:2], M18[3:3] ) ;
+	.call decode_9 decode_9 (T23[0:0], T24[0:0], T25[0:0], T28[0:0] ;;
+	         M21[0:0], M21[1:1], M21[2:2], M21[3:3] ) ;
+	.call decode_10 decode_10 (T19[0:0], T22[0:0], T25[0:0], T31[0:0] ;;
+	         M24[0:0], M24[1:1], M24[2:2], M24[3:3] ) ;
+	.call decode_11 decode_11 (T38[0:0], T23[0:0], T24[0:0], T25[0:0] ;;
+	         M27[0:0], M27[1:1], M27[2:2], M27[3:3] ) ;
+	.call decode_12 decode_12 (T41[0:0], T33[0:0], T36[0:0], T39[0:0], 
+	         T34[0:0], T37[0:0], T40[0:0], T17[0:0], T18[0:0], T19[0:0], 
+	         T20[0:0], T21[0:0], T22[0:0], T23[0:0], T24[0:0] ;;T1[0:0], 
+	         T2[0:0], T3[0:0], T4[0:0], T46[0:0], T5[0:0], T47[0:0], 
+	         T6[0:0], T48[0:0], T7[0:0], T8[0:0], T49[0:0], T9[0:0], 
+	         T50[0:0], T10[0:0], T51[0:0], T11[0:0], T12[0:0], T52[0:0], 
+	         T13[0:0], T53[0:0] ) ;
+	.call decode_13 decode_13 (T1[0:0], T24[0:0], T23[0:0], T22[0:0], 
+	         T21[0:0], T20[0:0], T19[0:0], T18[0:0], T17[0:0], T3[0:0], 
+	         T4[0:0], T46[0:0], T5[0:0], T47[0:0], T6[0:0], T48[0:0], 
+	         T7[0:0], T8[0:0], T49[0:0], T9[0:0], T50[0:0], T10[0:0], 
+	         T51[0:0], T11[0:0], T12[0:0], T52[0:0], T13[0:0], T53[0:0] ;;
+	         M30[0:0], M30[1:1], M30[2:2], M30[3:3], M30[4:4], M30[5:5], 
+	         M30[6:6], M30[7:7] ) ;
+	.call decode_14 decode_14 (T1[0:0], T2[0:0] ;;M31[0:0], M31[1:1] ) ;
+	.call FF_SR_EN1 FF_SR_EN (decoder_in[0:0], RQ1_4, CLK, 0, RESET ;;
+	         T17[0:0] ) ;
+	.call FF_SR_EN2 FF_SR_EN (decoder_in[0:0], RQ1_5, CLK, 0, RESET ;;
+	         T18[0:0] ) ;
+	.call FF_SR_EN3 FF_SR_EN (decoder_in[0:0], RQ1_6, CLK, 0, RESET ;;
+	         T19[0:0] ) ;
+	.call FF_SR_EN4 FF_SR_EN (decoder_in[0:0], RQ1_7, CLK, 0, RESET ;;
+	         T20[0:0] ) ;
+	.call FF_SR_EN5 FF_SR_EN (decoder_in[0:0], RQ1_8, CLK, 0, RESET ;;
+	         T21[0:0] ) ;
+	.call FF_SR_EN6 FF_SR_EN (decoder_in[0:0], RQ1_9, CLK, 0, RESET ;;
+	         T22[0:0] ) ;
+	.call FF_SR_EN7 FF_SR_EN (decoder_in[0:0], RQ1_10, CLK, 0, RESET ;;
+	         T23[0:0] ) ;
+	.call FF_SR_EN8 FF_SR_EN (decoder_in[0:0], RQ1_11, CLK, 0, RESET ;;
+	         T24[0:0] ) ;
+	.call FF_SR_EN9 FF_SR_EN (decoder_in[0:0], RQ1_12, CLK, 0, RESET ;;
+	         T25[0:0] ) ;
+	.call FF_SR_EN10 FF_SR_EN (decoder_in[0:0], RQ1_13, CLK, 0, RESET ;;
+	         T26[0:0] ) ;
+	.call FF_SR_EN11 FF_SR_EN (decoder_in[0:0], RQ1_14, CLK, 0, RESET ;;
+	         T27[0:0] ) ;
+	.call FF_SR_EN12 FF_SR_EN (decoder_in[0:0], RQ1_15, CLK, 0, RESET ;;
+	         T28[0:0] ) ;
+	.call FF_SR_EN13 FF_SR_EN (decoder_in[0:0], RQ1_16, CLK, 0, RESET ;;
+	         T29[0:0] ) ;
+	.call FF_SR_EN14 FF_SR_EN (decoder_in[0:0], RQ1_17, CLK, 0, RESET ;;
+	         T30[0:0] ) ;
+	.call FF_SR_EN15 FF_SR_EN (decoder_in[0:0], RQ1_18, CLK, 0, RESET ;;
+	         T31[0:0] ) ;
+	.call FF_SR_EN16 FF_SR_EN (decoder_in[0:0], RQ1_19, CLK, 0, RESET ;;
+	         T32[0:0] ) ;
+	.call FF_SR_EN17 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_21, 
+	         CLK, 0, RESET ;;T33[0:0] ) ;
+	.call FF_SR_EN18 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_23, 
+	         CLK, 0, RESET ;;T34[0:0] ) ;
+	.call FF_SR_EN19 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_25, 
+	         CLK, 0, RESET ;;T35[0:0] ) ;
+	.call FF_SR_EN20 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_27, 
+	         CLK, 0, RESET ;;T36[0:0] ) ;
+	.call FF_SR_EN21 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_29, 
+	         CLK, 0, RESET ;;T37[0:0] ) ;
+	.call FF_SR_EN22 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_31, 
+	         CLK, 0, RESET ;;T38[0:0] ) ;
+	.call FF_SR_EN23 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_33, 
+	         CLK, 0, RESET ;;T39[0:0] ) ;
+	.call FF_SR_EN24 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_35, 
+	         CLK, 0, RESET ;;T40[0:0] ) ;
+	.call FF_SR_EN25 FF_SR_EN (auto_ENCODER_4[0].ob0[0:0], DN_Latch1_37, 
+	         CLK, 0, RESET ;;T41[0:0] ) ;
+	.call FF_EN_data_out0 FF_EN (data_out_in[0:0], RQ1_40, CLK, RESET ;;
+	         data_out[0:0] ) ;
+	.call FF_EN_data_out1 FF_EN (data_out_in[1:1], RQ1_40, CLK, RESET ;;
+	         data_out[1:1] ) ;
+	.call FF_EN_data_out2 FF_EN (data_out_in[2:2], RQ1_40, CLK, RESET ;;
+	         data_out[2:2] ) ;
+	.call FF_EN_data_out3 FF_EN (data_out_in[3:3], RQ1_40, CLK, RESET ;;
+	         data_out[3:3] ) ;
+	.call FF_EN_data_out4 FF_EN (data_out_in[4:4], RQ1_40, CLK, RESET ;;
+	         data_out[4:4] ) ;
+	.call FF_EN_data_out5 FF_EN (data_out_in[5:5], RQ1_40, CLK, RESET ;;
+	         data_out[5:5] ) ;
+	.call FF_EN_data_out6 FF_EN (data_out_in[6:6], RQ1_40, CLK, RESET ;;
+	         data_out[6:6] ) ;
+	.call FF_EN_data_out7 FF_EN (data_out_in[7:7], RQ1_40, CLK, RESET ;;
+	         data_out[7:7] ) ;
+	.call FF_EN_err0 FF_EN (err_in[0:0], RQ1_42, CLK, RESET ;;err[0:0] ) ;
+	.call FF_EN_err1 FF_EN (err_in[1:1], RQ1_42, CLK, RESET ;;err[1:1] ) ;
+	.call FF_EN_out_ready0 FF_EN (RQ1_43, out_ready_en[0:0], CLK, RESET ;;
+	         out_ready[0:0] ) ;
+	.call auto_ENCODER_4[0] ENCODER_4 (auto_ENCODER_4[0].ib0[0:0], 
+	         auto_ENCODER_4[0].ib0[1:1], auto_ENCODER_4[0].ib0[2:2], 
+	         auto_ENCODER_4[0].ib0[3:3] ;;auto_ENCODER_4[0].ob0[0:0] ) ;
+	.call Sw1_3 FF_EN (Sw1_3_i, 1, CLK, RESET ;;Sr1_3' ) ;
+	.call TcL1_3[1] FF_EN (TcL1_3_i[1], 1, CLK, RESET ;;EN1_5 ) ;
+	.call TcL1_3[2] FF_EN (TcL1_3_i[2], 1, CLK, RESET ;;EN1_6 ) ;
+	.call TcL1_3[3] FF_EN (TcL1_3_i[3], 1, CLK, RESET ;;EN1_7 ) ;
+	.call TcL1_3[4] FF_EN (TcL1_3_i[4], 1, CLK, RESET ;;EN1_8 ) ;
+	.call TcL1_3[5] FF_EN (TcL1_3_i[5], 1, CLK, RESET ;;EN1_9 ) ;
+	.call TcL1_3[6] FF_EN (TcL1_3_i[6], 1, CLK, RESET ;;DN1_9 ) ;
+	.call TcL1_3[7] FF_EN (TcL1_3_i[7], 1, CLK, RESET ;;EN1_11 ) ;
+	.call TcL1_3[8] FF_EN (TcL1_3_i[8], 1, CLK, RESET ;;EN1_12 ) ;
+	.call TcL1_3[9] FF_EN (TcL1_3_i[9], 1, CLK, RESET ;;EN1_13 ) ;
+	.call TcL1_3[10] FF_EN (TcL1_3_i[10], 1, CLK, RESET ;;EN1_14 ) ;
+	.call TcL1_3[11] FF_EN (TcL1_3_i[11], 1, CLK, RESET ;;EN1_15 ) ;
+	.call TcL1_3[12] FF_EN (TcL1_3_i[12], 1, CLK, RESET ;;EN1_16 ) ;
+	.call TcL1_3[13] FF_EN (TcL1_3_i[13], 1, CLK, RESET ;;EN1_17 ) ;
+	.call TcL1_3[14] FF_EN (TcL1_3_i[14], 1, CLK, RESET ;;EN1_18 ) ;
+	.call TcL1_3[15] FF_EN (TcL1_3_i[15], 1, CLK, RESET ;;EN1_19 ) ;
+	.call TcL1_3[16] FF_EN (TcL1_3_i[16], 1, CLK, RESET ;;RQ1_34 ) ;
+	.call TcL1_3[17] FF_EN (TcL1_3_i[17], 1, CLK, RESET ;;EN1_23 ) ;
+	.call TcL1_3[18] FF_EN (TcL1_3_i[18], 1, CLK, RESET ;;EN1_25 ) ;
+	.call TcL1_3[19] FF_EN (TcL1_3_i[19], 1, CLK, RESET ;;RQ1_30 ) ;
+	.call TcL1_3[20] FF_EN (TcL1_3_i[20], 1, CLK, RESET ;;EN1_29 ) ;
+	.call TcL1_3[21] FF_EN (TcL1_3_i[21], 1, CLK, RESET ;;EN1_31 ) ;
+	.call TcL1_3[22] FF_EN (TcL1_3_i[22], 1, CLK, RESET ;;RQ1_36 ) ;
+	.call TcL1_3[23] FF_EN (TcL1_3_i[23], 1, CLK, RESET ;;EN1_35 ) ;
+	.call TcL1_3[24] FF_EN (TcL1_3_i[24], 1, CLK, RESET ;;EN1_37 ) ;
+	.call TcL1_3[25] FF_EN (TcL1_3_i[25], 1, CLK, RESET ;;EN1_43 ) ;
+	.call TcL1_3[26] FF_EN (TcL1_3_i[26], 1, CLK, RESET ;;DN ) ;
+	.call TcL1_3[27] FF_EN (TcL1_3_i[27], 1, CLK, RESET ;;RQ1_45 ) ;
+	.call FF_EN.1_3_LC FF_EN (LC1_3_i, 1, CLK, RESET ;;LC1_3 ) ;
+	.call LBr1_3_1 FF_EN (SL1_3', LBr1_3_e, CLK, RESET ;;LBr1_3[1] ) ;
+	.call Sw2_2 FF_EN (Sw2_2_i, 1, CLK, RESET ;;Sr2_2' ) ;
+	.call FF_EN.2_2_La FF_EN (AK2_2, 1, CLK, RESET ;;Lak2_2 ) ;
+	data_out_in[0:0] = M30[0:0] RQ1_40 ;
+	data_out_in[1:1] = M30[1:1] RQ1_40 ;
+	data_out_in[2:2] = M30[2:2] RQ1_40 ;
+	data_out_in[3:3] = M30[3:3] RQ1_40 ;
+	data_out_in[4:4] = M30[4:4] RQ1_40 ;
+	data_out_in[5:5] = M30[5:5] RQ1_40 ;
+	data_out_in[6:6] = M30[6:6] RQ1_40 ;
+	data_out_in[7:7] = M30[7:7] RQ1_40 ;
+	err_in[0:0] = M31[0:0] RQ1_42 ;
+	err_in[1:1] = M31[1:1] RQ1_42 ;
+	out_ready_en[0:0] = RQ1_43 + RQ1_44 ;
+	auto_ENCODER_4[0].ib0[0:0] = M3[0:0] RQ1_21 + M6[0:0] RQ1_23 + M9[0:0] 
+		RQ1_25 + M12[0:0] RQ1_27 + M15[0:0] RQ1_29 + M18[0:0] RQ1_31 + 
+		M21[0:0] RQ1_33 + M24[0:0] RQ1_35 + M27[0:0] RQ1_37 ;
+	auto_ENCODER_4[0].ib0[1:1] = M3[1:1] RQ1_21 + M6[1:1] RQ1_23 + M9[1:1] 
+		RQ1_25 + M12[1:1] RQ1_27 + M15[1:1] RQ1_29 + M18[1:1] RQ1_31 + 
+		M21[1:1] RQ1_33 + M24[1:1] RQ1_35 + M27[1:1] RQ1_37 ;
+	auto_ENCODER_4[0].ib0[2:2] = M3[2:2] RQ1_21 + M6[2:2] RQ1_23 + M9[2:2] 
+		RQ1_25 + M12[2:2] RQ1_27 + M15[2:2] RQ1_29 + M18[2:2] RQ1_31 + 
+		M21[2:2] RQ1_33 + M24[2:2] RQ1_35 + M27[2:2] RQ1_37 ;
+	auto_ENCODER_4[0].ib0[3:3] = M3[3:3] RQ1_21 + M6[3:3] RQ1_23 + M9[3:3] 
+		RQ1_25 + M12[3:3] RQ1_27 + M15[3:3] RQ1_29 + M18[3:3] RQ1_31 + 
+		M21[3:3] RQ1_33 + M24[3:3] RQ1_35 + M27[3:3] RQ1_37 ;
+	RQ1_3 = Sr1_3 SL1_3' ;
+	Sw1_3_i = DN' ( Sr1_3' + Sr1_3 ( SL1_3 + AK1_3 ) ) ;
+	TcL1_3_i[1] = DN' ( EN1_4 + EN1_5 ) ;
+	TcL1_3_i[2] = DN' ( EN1_5 + EN1_6 ) ;
+	TcL1_3_i[3] = DN' ( EN1_6 + EN1_7 ) ;
+	TcL1_3_i[4] = DN' ( EN1_7 + EN1_8 ) ;
+	TcL1_3_i[5] = DN' ( EN1_8 + EN1_9 ) ;
+	TcL1_3_i[6] = DN' ( EN1_9 + DN1_9 ) ;
+	TcL1_3_i[7] = DN' ( DN1_9 + EN1_11 ) ;
+	TcL1_3_i[8] = DN' ( EN1_11 + EN1_12 ) ;
+	TcL1_3_i[9] = DN' ( EN1_12 + EN1_13 ) ;
+	TcL1_3_i[10] = DN' ( EN1_13 + EN1_14 ) ;
+	TcL1_3_i[11] = DN' ( EN1_14 + EN1_15 ) ;
+	TcL1_3_i[12] = DN' ( EN1_15 + EN1_16 ) ;
+	TcL1_3_i[13] = DN' ( EN1_16 + EN1_17 ) ;
+	TcL1_3_i[14] = DN' ( EN1_17 + EN1_18 ) ;
+	TcL1_3_i[15] = DN' ( EN1_18 + EN1_19 ) ;
+	TcL1_3_i[16] = DN' ( EN1_19 + RQ1_34 ) ;
+	TcL1_3_i[17] = DN' ( RQ1_34 + EN1_23 ) ;
+	TcL1_3_i[18] = DN' ( EN1_23 + EN1_25 ) ;
+	TcL1_3_i[19] = DN' ( EN1_25 + RQ1_30 ) ;
+	TcL1_3_i[20] = DN' ( RQ1_30 + EN1_29 ) ;
+	TcL1_3_i[21] = DN' ( EN1_29 + EN1_31 ) ;
+	TcL1_3_i[22] = DN' ( EN1_31 + RQ1_36 ) ;
+	TcL1_3_i[23] = DN' ( RQ1_36 + EN1_35 ) ;
+	TcL1_3_i[24] = DN' ( EN1_35 + EN1_37 ) ;
+	TcL1_3_i[25] = DN' ( EN1_37 + EN1_43 ) ;
+	TcL1_3_i[26] = DN' ( EN1_43 + DN ) ;
+	TcL1_3_i[27] = DN' ( DN + RQ1_45 ) ;
+	LC1_3_i = DN' ( RQ1_3 + LC1_3 ) ;
+	LBr1_3_e = RQ1_3 LC1_3' ;
+	RQ4_2 = RQ1_3 SL1_3 LC1_3' ;
+	AK1_3 = RQ2_3 + RQ4_2 ;
+	RQ1_4 = EN1_4 EN1_5' ;
+	RQ1_5 = EN1_5 EN1_6' ;
+	RQ1_6 = EN1_6 EN1_7' ;
+	RQ1_7 = EN1_7 EN1_8' ;
+	RQ1_8 = EN1_8 EN1_9' ;
+	RQ1_9 = EN1_9 DN1_9' ;
+	RQ1_10 = DN1_9 EN1_11' ;
+	RQ1_11 = EN1_11 EN1_12' ;
+	RQ1_12 = EN1_12 EN1_13' ;
+	RQ1_13 = EN1_13 EN1_14' ;
+	RQ1_14 = EN1_14 EN1_15' ;
+	RQ1_15 = EN1_15 EN1_16' ;
+	RQ1_16 = EN1_16 EN1_17' ;
+	RQ1_17 = EN1_17 EN1_18' ;
+	RQ1_18 = EN1_18 EN1_19' ;
+	RQ1_19 = EN1_19 RQ1_34' ;
+	RQ1_21 = RQ1_34 EN1_23' ;
+	DN_Latch1_21 = RQ1_34 EN1_23' ;
+	RQ1_23 = EN1_23 EN1_25' ;
+	DN_Latch1_23 = EN1_23 EN1_25' ;
+	RQ1_25 = EN1_25 RQ1_30' ;
+	DN_Latch1_25 = EN1_25 RQ1_30' ;
+	RQ1_27 = RQ1_30 EN1_29' ;
+	DN_Latch1_27 = RQ1_30 EN1_29' ;
+	RQ1_29 = EN1_29 EN1_31' ;
+	DN_Latch1_29 = EN1_29 EN1_31' ;
+	RQ1_31 = EN1_31 RQ1_36' ;
+	DN_Latch1_31 = EN1_31 RQ1_36' ;
+	RQ1_33 = RQ1_36 EN1_35' ;
+	DN_Latch1_33 = RQ1_36 EN1_35' ;
+	RQ1_35 = EN1_35 EN1_37' ;
+	DN_Latch1_35 = EN1_35 EN1_37' ;
+	RQ1_37 = EN1_37 EN1_43' ;
+	DN_Latch1_37 = EN1_37 EN1_43' ;
+	RQ1_40 = EN1_43 DN' ;
+	RQ1_42 = EN1_43 DN' ;
+	RQ1_43 = EN1_43 DN' ;
+	RQ1_44 = DN RQ1_45' ;
+	RQ2_2 = Sr2_2 EN2_2 ;
+	RQ2_3 = Sr2_2' + Sr2_2 EN2_2 AK2_2 ;
+	Sw2_2_i = DN' ( Sr2_2' + Sr2_2 EN2_2 AK2_2 ) ;
+	AK2_2 = T16[0:0] RQ3_3 ;
+	RQ3_3 = RQ2_2 Lak2_2' ;
+	EN1_4 = Sr1_3' + Sr1_3 SL1_3 ;
+	EN2_2 = RQ1_3 ( LC1_3' SL1_3' + LC1_3 LBr1_3[1] ) ;
+
+
+.endmodel decode ;
+
+
+.model decode_1 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  data_ready[0:0] ;
+	.outputs T14[0:0] ;
+	.net data_ready[0:0]' T14[0:0] ;
+
+
+
+.endmodel decode_1 ;
+
+
+.model decode_2 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  data_ready[0:0] ;
+	.outputs T16[0:0] ;
+	.net data_ready[0:0] T16[0:0] ;
+
+
+
+.endmodel decode_2 ;
+
+
+.model decode_3 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T17[0:0] T18[0:0] T19[0:0] T26[0:0] ;
+	.outputs M3[0:0] M3[1:1] M3[2:2] M3[3:3] ;
+	.net T17[0:0] M3[0:0] ;
+	.net T18[0:0] M3[1:1] ;
+	.net T19[0:0] M3[2:2] ;
+	.net T26[0:0] M3[3:3] ;
+
+
+
+.endmodel decode_3 ;
+
+
+.model decode_4 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T17[0:0] T20[0:0] T23[0:0] T29[0:0] ;
+	.outputs M6[0:0] M6[1:1] M6[2:2] M6[3:3] ;
+	.net T17[0:0] M6[0:0] ;
+	.net T20[0:0] M6[1:1] ;
+	.net T23[0:0] M6[2:2] ;
+	.net T29[0:0] M6[3:3] ;
+
+
+
+.endmodel decode_4 ;
+
+
+.model decode_5 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T32[0:0] T17[0:0] T18[0:0] T19[0:0] ;
+	.outputs M9[0:0] M9[1:1] M9[2:2] M9[3:3] ;
+	.net T32[0:0] M9[0:0] ;
+	.net T17[0:0] M9[1:1] ;
+	.net T18[0:0] M9[2:2] ;
+	.net T19[0:0] M9[3:3] ;
+
+
+
+.endmodel decode_5 ;
+
+
+.model decode_6 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T20[0:0] T21[0:0] T22[0:0] T27[0:0] ;
+	.outputs M12[0:0] M12[1:1] M12[2:2] M12[3:3] ;
+	.net T20[0:0] M12[0:0] ;
+	.net T21[0:0] M12[1:1] ;
+	.net T22[0:0] M12[2:2] ;
+	.net T27[0:0] M12[3:3] ;
+
+
+
+.endmodel decode_6 ;
+
+
+.model decode_7 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T18[0:0] T21[0:0] T24[0:0] T30[0:0] ;
+	.outputs M15[0:0] M15[1:1] M15[2:2] M15[3:3] ;
+	.net T18[0:0] M15[0:0] ;
+	.net T21[0:0] M15[1:1] ;
+	.net T24[0:0] M15[2:2] ;
+	.net T30[0:0] M15[3:3] ;
+
+
+
+.endmodel decode_7 ;
+
+
+.model decode_8 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T35[0:0] T20[0:0] T21[0:0] T22[0:0] ;
+	.outputs M18[0:0] M18[1:1] M18[2:2] M18[3:3] ;
+	.net T35[0:0] M18[0:0] ;
+	.net T20[0:0] M18[1:1] ;
+	.net T21[0:0] M18[2:2] ;
+	.net T22[0:0] M18[3:3] ;
+
+
+
+.endmodel decode_8 ;
+
+
+.model decode_9 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T23[0:0] T24[0:0] T25[0:0] T28[0:0] ;
+	.outputs M21[0:0] M21[1:1] M21[2:2] M21[3:3] ;
+	.net T23[0:0] M21[0:0] ;
+	.net T24[0:0] M21[1:1] ;
+	.net T25[0:0] M21[2:2] ;
+	.net T28[0:0] M21[3:3] ;
+
+
+
+.endmodel decode_9 ;
+
+
+.model decode_10 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T19[0:0] T22[0:0] T25[0:0] T31[0:0] ;
+	.outputs M24[0:0] M24[1:1] M24[2:2] M24[3:3] ;
+	.net T19[0:0] M24[0:0] ;
+	.net T22[0:0] M24[1:1] ;
+	.net T25[0:0] M24[2:2] ;
+	.net T31[0:0] M24[3:3] ;
+
+
+
+.endmodel decode_10 ;
+
+
+.model decode_11 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T38[0:0] T23[0:0] T24[0:0] T25[0:0] ;
+	.outputs M27[0:0] M27[1:1] M27[2:2] M27[3:3] ;
+	.net T38[0:0] M27[0:0] ;
+	.net T23[0:0] M27[1:1] ;
+	.net T24[0:0] M27[2:2] ;
+	.net T25[0:0] M27[3:3] ;
+
+
+
+.endmodel decode_11 ;
+
+
+.model decode_12 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T41[0:0] T33[0:0] T36[0:0] T39[0:0] T34[0:0] T37[0:0] T40[0:0] 
+	         T17[0:0] T18[0:0] T19[0:0] T20[0:0] T21[0:0] T22[0:0] T23[0:0] 
+	         T24[0:0] ;
+	.outputs T1[0:0] T2[0:0] T3[0:0] T4[0:0] T46[0:0] T5[0:0] T47[0:0] 
+	         T6[0:0] T48[0:0] T7[0:0] T8[0:0] T49[0:0] T9[0:0] T50[0:0] 
+	         T10[0:0] T51[0:0] T11[0:0] T12[0:0] T52[0:0] T13[0:0] T53[0:0] ;
+	.net T41[0:0]' T1[0:0] ;
+	.net T33[0:0] T3[0:0] ;
+	.net T36[0:0] T7[0:0] ;
+	.net T39[0:0] T11[0:0] ;
+	.net T34[0:0] T12[0:0] T8[0:0] T4[0:0] ;
+	.net T37[0:0] T13[0:0] T9[0:0] T5[0:0] ;
+	.net T40[0:0] T10[0:0] T6[0:0] ;
+	.net T17[0:0]' T46[0:0] ;
+	.net T18[0:0]' T47[0:0] ;
+	.net T19[0:0]' T48[0:0] ;
+	.net T20[0:0]' T49[0:0] ;
+	.net T21[0:0]' T50[0:0] ;
+	.net T22[0:0]' T51[0:0] ;
+	.net T23[0:0]' T52[0:0] ;
+	.net T24[0:0]' T53[0:0] ;
+
+	T2[0:0] = T43[0:0] T44[0:0] ;
+	T43[0:0] = T33[0:0]' T36[0:0]' T39[0:0]' ;
+	T44[0:0] = T34[0:0]' T37[0:0]' T40[0:0]' ;
+
+
+.endmodel decode_12 ;
+
+
+.model decode_13 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T1[0:0] T24[0:0] T23[0:0] T22[0:0] T21[0:0] T20[0:0] T19[0:0] 
+	         T18[0:0] T17[0:0] T3[0:0] T4[0:0] T46[0:0] T5[0:0] T47[0:0] 
+	         T6[0:0] T48[0:0] T7[0:0] T8[0:0] T49[0:0] T9[0:0] T50[0:0] 
+	         T10[0:0] T51[0:0] T11[0:0] T12[0:0] T52[0:0] T13[0:0] T53[0:0] ;
+	.outputs M30[0:0] M30[1:1] M30[2:2] M30[3:3] M30[4:4] M30[5:5] M30[6:6] 
+	         M30[7:7] ;
+
+	X9[0:0] = T3[0:0] T24[0:0] + T3[0:0]' X23[0:0] ;
+	X10[0:0] = T3[0:0] T23[0:0] + T3[0:0]' X24[0:0] ;
+	X11[0:0] = T3[0:0] T22[0:0] + T3[0:0]' X25[0:0] ;
+	X12[0:0] = T3[0:0] T21[0:0] + T3[0:0]' X26[0:0] ;
+	X13[0:0] = T3[0:0] T20[0:0] + T3[0:0]' X27[0:0] ;
+	X14[0:0] = T3[0:0] X17[0:0] + T3[0:0]' T19[0:0] ;
+	X15[0:0] = T3[0:0] X18[0:0] + T3[0:0]' T18[0:0] ;
+	X16[0:0] = T3[0:0] X19[0:0] + T3[0:0]' T17[0:0] ;
+	X17[0:0] = T4[0:0] T19[0:0] + T4[0:0]' X20[0:0] ;
+	X18[0:0] = T4[0:0] T18[0:0] + T4[0:0]' X21[0:0] ;
+	X19[0:0] = T4[0:0] T46[0:0] + T4[0:0]' T17[0:0] ;
+	X20[0:0] = T5[0:0] T19[0:0] + T5[0:0]' X22[0:0] ;
+	X21[0:0] = T5[0:0] T47[0:0] + T5[0:0]' T18[0:0] ;
+	X22[0:0] = T6[0:0] T48[0:0] + T6[0:0]' T19[0:0] ;
+	X23[0:0] = T7[0:0] T24[0:0] + T7[0:0]' X34[0:0] ;
+	X24[0:0] = T7[0:0] T23[0:0] + T7[0:0]' X35[0:0] ;
+	X25[0:0] = T7[0:0] X28[0:0] + T7[0:0]' T22[0:0] ;
+	X26[0:0] = T7[0:0] X29[0:0] + T7[0:0]' T21[0:0] ;
+	X27[0:0] = T7[0:0] X30[0:0] + T7[0:0]' T20[0:0] ;
+	X28[0:0] = T8[0:0] T22[0:0] + T8[0:0]' X31[0:0] ;
+	X29[0:0] = T8[0:0] T21[0:0] + T8[0:0]' X32[0:0] ;
+	X30[0:0] = T8[0:0] T49[0:0] + T8[0:0]' T20[0:0] ;
+	X31[0:0] = T9[0:0] T22[0:0] + T9[0:0]' X33[0:0] ;
+	X32[0:0] = T9[0:0] T50[0:0] + T9[0:0]' T21[0:0] ;
+	X33[0:0] = T10[0:0] T51[0:0] + T10[0:0]' T22[0:0] ;
+	X34[0:0] = T11[0:0] X36[0:0] + T11[0:0]' T24[0:0] ;
+	X35[0:0] = T11[0:0] X37[0:0] + T11[0:0]' T23[0:0] ;
+	X36[0:0] = T12[0:0] T24[0:0] + T12[0:0]' X38[0:0] ;
+	X37[0:0] = T12[0:0] T52[0:0] + T12[0:0]' T23[0:0] ;
+	X38[0:0] = T13[0:0] T53[0:0] + T13[0:0]' T24[0:0] ;
+	M30[0:0] = T1[0:0] T17[0:0] + T1[0:0]' X16[0:0] ;
+	M30[1:1] = T1[0:0] T18[0:0] + T1[0:0]' X15[0:0] ;
+	M30[2:2] = T1[0:0] T19[0:0] + T1[0:0]' X14[0:0] ;
+	M30[3:3] = T1[0:0] T20[0:0] + T1[0:0]' X13[0:0] ;
+	M30[4:4] = T1[0:0] T21[0:0] + T1[0:0]' X12[0:0] ;
+	M30[5:5] = T1[0:0] T22[0:0] + T1[0:0]' X11[0:0] ;
+	M30[6:6] = T1[0:0] T23[0:0] + T1[0:0]' X10[0:0] ;
+	M30[7:7] = T1[0:0] T24[0:0] + T1[0:0]' X9[0:0] ;
+
+
+.endmodel decode_13 ;
+
+
+.model decode_14 ;
+
+	.date 910104115955 ;	# January 4 1991, 11:59.55
+
+	.inputs  T1[0:0] T2[0:0] ;
+	.outputs M31[0:0] M31[1:1] ;
+
+	M31[0:0] = T1[0:0]' + T1[0:0] T2[0:0]' ;
+	M31[1:1] = T1[0:0] T2[0:0]' ;
+
+
+.endmodel decode_14 ;
+

@@ -1,0 +1,2087 @@
+
+.model elliptic ;
+
+	.date 910109114448 ;	# January 9 1991, 11:44.48
+
+	.inputs  CLK RESET reset[0:0] ;
+	.inouts  inp[0:0] inp[1:1] inp[2:2] inp[3:3] inp[4:4] inp[5:5] inp[6:6] 
+	         inp[7:7] inp[8:8] inp[9:9] inp[10:10] inp[11:11] inp[12:12] 
+	         inp[13:13] inp[14:14] inp[15:15] sv2[0:0] sv2[1:1] sv2[2:2] 
+	         sv2[3:3] sv2[4:4] sv2[5:5] sv2[6:6] sv2[7:7] sv2[8:8] sv2[9:9] 
+	         sv2[10:10] sv2[11:11] sv2[12:12] sv2[13:13] sv2[14:14] 
+	         sv2[15:15] sv13[0:0] sv13[1:1] sv13[2:2] sv13[3:3] sv13[4:4] 
+	         sv13[5:5] sv13[6:6] sv13[7:7] sv13[8:8] sv13[9:9] sv13[10:10] 
+	         sv13[11:11] sv13[12:12] sv13[13:13] sv13[14:14] sv13[15:15] 
+	         sv18[0:0] sv18[1:1] sv18[2:2] sv18[3:3] sv18[4:4] sv18[5:5] 
+	         sv18[6:6] sv18[7:7] sv18[8:8] sv18[9:9] sv18[10:10] sv18[11:11] 
+	         sv18[12:12] sv18[13:13] sv18[14:14] sv18[15:15] sv26[0:0] 
+	         sv26[1:1] sv26[2:2] sv26[3:3] sv26[4:4] sv26[5:5] sv26[6:6] 
+	         sv26[7:7] sv26[8:8] sv26[9:9] sv26[10:10] sv26[11:11] 
+	         sv26[12:12] sv26[13:13] sv26[14:14] sv26[15:15] sv33[0:0] 
+	         sv33[1:1] sv33[2:2] sv33[3:3] sv33[4:4] sv33[5:5] sv33[6:6] 
+	         sv33[7:7] sv33[8:8] sv33[9:9] sv33[10:10] sv33[11:11] 
+	         sv33[12:12] sv33[13:13] sv33[14:14] sv33[15:15] sv38[0:0] 
+	         sv38[1:1] sv38[2:2] sv38[3:3] sv38[4:4] sv38[5:5] sv38[6:6] 
+	         sv38[7:7] sv38[8:8] sv38[9:9] sv38[10:10] sv38[11:11] 
+	         sv38[12:12] sv38[13:13] sv38[14:14] sv38[15:15] sv39[0:0] 
+	         sv39[1:1] sv39[2:2] sv39[3:3] sv39[4:4] sv39[5:5] sv39[6:6] 
+	         sv39[7:7] sv39[8:8] sv39[9:9] sv39[10:10] sv39[11:11] 
+	         sv39[12:12] sv39[13:13] sv39[14:14] sv39[15:15] ;
+	.outputs DN over[0:0] ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1870_zz_3056 CMOS3_1870 (rega[8:8], RQ3_13, regb[8:8], 
+	         RQ3_14 ;;zz_3056' ) ;
+	.call CMOS3_1870_zz_3053 CMOS3_1870 (regc[8:8], RQ3_20, regd[8:8], 
+	         RQ3_23 ;;zz_3053' ) ;
+	.call CMOS3_1870_zz_3049 CMOS3_1870 (rege[8:8], RQ3_30, regf[8:8], 
+	         RQ3_35 ;;zz_3049' ) ;
+	.call CMOS3_1870_zz_3046 CMOS3_1870 (regg[8:8], RQ3_37, regh[8:8], 
+	         RQ3_38 ;;zz_3046' ) ;
+	.call CMOS3_1870_zz_2281 CMOS3_1870 (rega[10:10], RQ3_13, 
+	         regb[10:10], RQ3_14 ;;zz_2281' ) ;
+	.call CMOS3_1870_zz_2278 CMOS3_1870 (regc[10:10], RQ3_20, 
+	         regd[10:10], RQ3_23 ;;zz_2278' ) ;
+	.call CMOS3_1870_zz_2274 CMOS3_1870 (rege[10:10], RQ3_30, 
+	         regf[10:10], RQ3_35 ;;zz_2274' ) ;
+	.call CMOS3_1870_zz_2271 CMOS3_1870 (regg[10:10], RQ3_37, 
+	         regh[10:10], RQ3_38 ;;zz_2271' ) ;
+	.call CMOS3_1870_zz_2197 CMOS3_1870 (rege[11:11], RQ3_30, 
+	         regf[11:11], RQ3_35 ;;zz_2197' ) ;
+	.call CMOS3_1870_zz_2194 CMOS3_1870 (regg[11:11], RQ3_37, 
+	         regh[11:11], RQ3_38 ;;zz_2194' ) ;
+	.call CMOS3_1870_zz_2204 CMOS3_1870 (rega[11:11], RQ3_13, 
+	         regb[11:11], RQ3_14 ;;zz_2204' ) ;
+	.call CMOS3_1870_zz_2201 CMOS3_1870 (regc[11:11], RQ3_20, 
+	         regd[11:11], RQ3_23 ;;zz_2201' ) ;
+	.call CMOS3_1870_zz_2136 CMOS3_1870 (rega[12:12], RQ3_13, 
+	         regb[12:12], RQ3_14 ;;zz_2136' ) ;
+	.call CMOS3_1870_zz_2133 CMOS3_1870 (regc[12:12], RQ3_20, 
+	         regd[12:12], RQ3_23 ;;zz_2133' ) ;
+	.call CMOS3_1870_zz_2129 CMOS3_1870 (rege[12:12], RQ3_30, 
+	         regf[12:12], RQ3_35 ;;zz_2129' ) ;
+	.call CMOS3_1870_zz_2126 CMOS3_1870 (regg[12:12], RQ3_37, 
+	         regh[12:12], RQ3_38 ;;zz_2126' ) ;
+	.call CMOS3_1870_zz_3922 CMOS3_1870 (rega[2:2], RQ3_13, regb[2:2], 
+	         RQ3_14 ;;zz_3922' ) ;
+	.call CMOS3_1870_zz_3919 CMOS3_1870 (regc[2:2], RQ3_20, regd[2:2], 
+	         RQ3_23 ;;zz_3919' ) ;
+	.call CMOS3_1870_zz_3915 CMOS3_1870 (rege[2:2], RQ3_30, regf[2:2], 
+	         RQ3_35 ;;zz_3915' ) ;
+	.call CMOS3_1870_zz_3912 CMOS3_1870 (regg[2:2], RQ3_37, regh[2:2], 
+	         RQ3_38 ;;zz_3912' ) ;
+	.call CMOS3_1870_zz_4059 CMOS3_1870 (rega[0:0], RQ3_13, regb[0:0], 
+	         RQ3_14 ;;zz_4059' ) ;
+	.call CMOS3_1870_zz_4056 CMOS3_1870 (regc[0:0], RQ3_20, regd[0:0], 
+	         RQ3_23 ;;zz_4056' ) ;
+	.call CMOS3_1870_zz_4052 CMOS3_1870 (rege[0:0], RQ3_30, regf[0:0], 
+	         RQ3_35 ;;zz_4052' ) ;
+	.call CMOS3_1870_zz_4049 CMOS3_1870 (regg[0:0], RQ3_37, regh[0:0], 
+	         RQ3_38 ;;zz_4049' ) ;
+	.call CMOS3_1870_zz_730 CMOS3_1870 (rega[1:1], RQ3_13, regb[1:1], 
+	         RQ3_14 ;;zz_730' ) ;
+	.call CMOS3_1870_zz_727 CMOS3_1870 (regc[1:1], RQ3_20, regd[1:1], 
+	         RQ3_23 ;;zz_727' ) ;
+	.call CMOS3_1870_zz_723 CMOS3_1870 (rege[1:1], RQ3_30, regf[1:1], 
+	         RQ3_35 ;;zz_723' ) ;
+	.call CMOS3_1870_zz_720 CMOS3_1870 (regg[1:1], RQ3_37, regh[1:1], 
+	         RQ3_38 ;;zz_720' ) ;
+	.call CMOS3_1870_zz_1699 CMOS3_1870 (rege[13:13], RQ3_30, 
+	         regf[13:13], RQ3_35 ;;zz_1699' ) ;
+	.call CMOS3_1870_zz_1696 CMOS3_1870 (regg[13:13], RQ3_37, 
+	         regh[13:13], RQ3_38 ;;zz_1696' ) ;
+	.call CMOS3_1870_zz_1706 CMOS3_1870 (rega[13:13], RQ3_13, 
+	         regb[13:13], RQ3_14 ;;zz_1706' ) ;
+	.call CMOS3_1870_zz_1703 CMOS3_1870 (regc[13:13], RQ3_20, 
+	         regd[13:13], RQ3_23 ;;zz_1703' ) ;
+	.call CMOS3_1870_zz_1631 CMOS3_1870 (rega[14:14], RQ3_13, 
+	         regb[14:14], RQ3_14 ;;zz_1631' ) ;
+	.call CMOS3_1870_zz_1628 CMOS3_1870 (regc[14:14], RQ3_20, 
+	         regd[14:14], RQ3_23 ;;zz_1628' ) ;
+	.call CMOS3_1870_zz_1624 CMOS3_1870 (rege[14:14], RQ3_30, 
+	         regf[14:14], RQ3_35 ;;zz_1624' ) ;
+	.call CMOS3_1870_zz_1621 CMOS3_1870 (regg[14:14], RQ3_37, 
+	         regh[14:14], RQ3_38 ;;zz_1621' ) ;
+	.call CMOS3_1870_zz_3587 CMOS3_1870 (rega[4:4], RQ3_13, regb[4:4], 
+	         RQ3_14 ;;zz_3587' ) ;
+	.call CMOS3_1870_zz_3584 CMOS3_1870 (regc[4:4], RQ3_20, regd[4:4], 
+	         RQ3_23 ;;zz_3584' ) ;
+	.call CMOS3_1870_zz_3580 CMOS3_1870 (rege[4:4], RQ3_30, regf[4:4], 
+	         RQ3_35 ;;zz_3580' ) ;
+	.call CMOS3_1870_zz_3577 CMOS3_1870 (regg[4:4], RQ3_37, regh[4:4], 
+	         RQ3_38 ;;zz_3577' ) ;
+	.call CMOS3_1870_zz_510 CMOS3_1870 (rega[3:3], RQ3_13, regb[3:3], 
+	         RQ3_14 ;;zz_510' ) ;
+	.call CMOS3_1870_zz_507 CMOS3_1870 (regc[3:3], RQ3_20, regd[3:3], 
+	         RQ3_23 ;;zz_507' ) ;
+	.call CMOS3_1870_zz_503 CMOS3_1870 (rege[3:3], RQ3_30, regf[3:3], 
+	         RQ3_35 ;;zz_503' ) ;
+	.call CMOS3_1870_zz_500 CMOS3_1870 (regg[3:3], RQ3_37, regh[3:3], 
+	         RQ3_38 ;;zz_500' ) ;
+	.call CMOS3_1870_zz_1514 CMOS3_1870 (rega[15:15], RQ3_13, 
+	         regb[15:15], RQ3_14 ;;zz_1514' ) ;
+	.call CMOS3_1870_zz_1511 CMOS3_1870 (regc[15:15], RQ3_20, 
+	         regd[15:15], RQ3_23 ;;zz_1511' ) ;
+	.call CMOS3_1870_zz_1507 CMOS3_1870 (rege[15:15], RQ3_30, 
+	         regf[15:15], RQ3_35 ;;zz_1507' ) ;
+	.call CMOS3_1870_zz_1504 CMOS3_1870 (regg[15:15], RQ3_37, 
+	         regh[15:15], RQ3_38 ;;zz_1504' ) ;
+	.call CMOS3_1870_zz_373 CMOS3_1870 (rega[5:5], RQ3_13, regb[5:5], 
+	         RQ3_14 ;;zz_373' ) ;
+	.call CMOS3_1870_zz_370 CMOS3_1870 (regc[5:5], RQ3_20, regd[5:5], 
+	         RQ3_23 ;;zz_370' ) ;
+	.call CMOS3_1870_zz_366 CMOS3_1870 (rege[5:5], RQ3_30, regf[5:5], 
+	         RQ3_35 ;;zz_366' ) ;
+	.call CMOS3_1870_zz_363 CMOS3_1870 (regg[5:5], RQ3_37, regh[5:5], 
+	         RQ3_38 ;;zz_363' ) ;
+	.call CMOS3_1870_zz_3360 CMOS3_1870 (rega[6:6], RQ3_13, regb[6:6], 
+	         RQ3_14 ;;zz_3360' ) ;
+	.call CMOS3_1870_zz_3357 CMOS3_1870 (regc[6:6], RQ3_20, regd[6:6], 
+	         RQ3_23 ;;zz_3357' ) ;
+	.call CMOS3_1870_zz_3353 CMOS3_1870 (rege[6:6], RQ3_30, regf[6:6], 
+	         RQ3_35 ;;zz_3353' ) ;
+	.call CMOS3_1870_zz_3350 CMOS3_1870 (regg[6:6], RQ3_37, regh[6:6], 
+	         RQ3_38 ;;zz_3350' ) ;
+	.call CMOS3_1870_zz_264 CMOS3_1870 (rega[7:7], RQ3_13, regb[7:7], 
+	         RQ3_14 ;;zz_264' ) ;
+	.call CMOS3_1870_zz_261 CMOS3_1870 (regc[7:7], RQ3_20, regd[7:7], 
+	         RQ3_23 ;;zz_261' ) ;
+	.call CMOS3_1870_zz_257 CMOS3_1870 (rege[7:7], RQ3_30, regf[7:7], 
+	         RQ3_35 ;;zz_257' ) ;
+	.call CMOS3_1870_zz_254 CMOS3_1870 (regg[7:7], RQ3_37, regh[7:7], 
+	         RQ3_38 ;;zz_254' ) ;
+	.call CMOS3_1870_zz_115 CMOS3_1870 (rega[9:9], RQ3_13, regb[9:9], 
+	         RQ3_14 ;;zz_115' ) ;
+	.call CMOS3_1870_zz_112 CMOS3_1870 (regc[9:9], RQ3_20, regd[9:9], 
+	         RQ3_23 ;;zz_112' ) ;
+	.call CMOS3_1870_zz_108 CMOS3_1870 (rege[9:9], RQ3_30, regf[9:9], 
+	         RQ3_35 ;;zz_108' ) ;
+	.call CMOS3_1870_zz_105 CMOS3_1870 (regg[9:9], RQ3_37, regh[9:9], 
+	         RQ3_38 ;;zz_105' ) ;
+	.call CMOS3_1830_rege[0:0] CMOS3_1830 (FF_SR_EN65_FF_SR_EN.latchin, 
+	         CLK ;;rege[0:0], rege[0:0]' ) ;
+	.call CMOS3_1830_Sr1_2 CMOS3_1830 (Sw1_2_FF_EN.latchin', CLK ;;
+	         Sr1_2, Sr1_2' ) ;
+	.call CMOS3_1830_rega[11:11] CMOS3_1830 (FF_SR_EN12_FF_SR_EN.latchin, 
+	         CLK ;;rega[11:11], rega[11:11]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[8:8] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN24_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[8:8]' ) ;
+	.call CMOS3_1830_regd[8:8] CMOS3_1830 (FF_SR_EN57_FF_SR_EN.latchin, 
+	         CLK ;;regd[8:8], regd[8:8]' ) ;
+	.call CMOS3_1830_rega[10:10] CMOS3_1830 (FF_SR_EN11_FF_SR_EN.latchin, 
+	         CLK ;;rega[10:10], rega[10:10]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.LBr1_3[1] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0]_L_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.LBr1_3[1]' ) ;
+	.call CMOS3_1830_rege[2:2] CMOS3_1830 (FF_SR_EN67_FF_SR_EN.latchin, 
+	         CLK ;;rege[2:2], rege[2:2]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[6:6] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN26_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[6:6]' ) ;
+	.call CMOS3_1830_rege[4:4] CMOS3_1830 (FF_SR_EN69_FF_SR_EN.latchin, 
+	         CLK ;;rege[4:4], rege[4:4]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[4:4] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN28_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[4:4]' ) ;
+	.call CMOS3_1830_rege[6:6] CMOS3_1830 (FF_SR_EN71_FF_SR_EN.latchin, 
+	         CLK ;;rege[6:6], rege[6:6]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[2:2] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN30_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[2:2]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.DN1_5 CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.TcL1_3[1]_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.DN1_5, 
+	         auto_smultiply_16[0]_smultiply_16.DN1_5' ) ;
+	.call CMOS3_1830_AK3_13 CMOS3_1830 (
+	         FF_EN.auto_smultiply_16[0]_FF_EN.latchin, CLK ;;AK3_13' ) ;
+	.call CMOS3_1830_regf[0:0] CMOS3_1830 (FF_SR_EN81_FF_SR_EN.latchin, 
+	         CLK ;;regf[0:0], regf[0:0]' ) ;
+	.call CMOS3_1830_rega[1:1] CMOS3_1830 (FF_SR_EN2_FF_SR_EN.latchin, 
+	         CLK ;;rega[1:1], rega[1:1]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.DN2_2 CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.TcL2_1[1]_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.DN2_2, 
+	         auto_smultiply_16[0]_smultiply_16.DN2_2' ) ;
+	.call CMOS3_1830_rege[8:8] CMOS3_1830 (FF_SR_EN73_FF_SR_EN.latchin, 
+	         CLK ;;rege[8:8], rege[8:8]' ) ;
+	.call CMOS3_1830_regf[2:2] CMOS3_1830 (FF_SR_EN83_FF_SR_EN.latchin, 
+	         CLK ;;regf[2:2], regf[2:2]' ) ;
+	.call CMOS3_1830_rega[3:3] CMOS3_1830 (FF_SR_EN4_FF_SR_EN.latchin, 
+	         CLK ;;rega[3:3], rega[3:3]' ) ;
+	.call CMOS3_1830_DN3_9 CMOS3_1830 (TcL3_1[4]_FF_EN.latchin, CLK ;;
+	         DN3_9, DN3_9' ) ;
+	.call CMOS3_1830_DN3_7 CMOS3_1830 (TcL3_1[3]_FF_EN.latchin, CLK ;;
+	         DN3_7, DN3_7' ) ;
+	.call CMOS3_1830_DN3_4 CMOS3_1830 (TcL3_1[2]_FF_EN.latchin, CLK ;;
+	         DN3_4, DN3_4' ) ;
+	.call CMOS3_1830_DN3_2 CMOS3_1830 (TcL3_1[1]_FF_EN.latchin, CLK ;;
+	         DN3_2, DN3_2' ) ;
+	.call CMOS3_1830_regf[4:4] CMOS3_1830 (FF_SR_EN85_FF_SR_EN.latchin, 
+	         CLK ;;regf[4:4], regf[4:4]' ) ;
+	.call CMOS3_1830_rega[5:5] CMOS3_1830 (FF_SR_EN6_FF_SR_EN.latchin, 
+	         CLK ;;rega[5:5], rega[5:5]' ) ;
+	.call CMOS3_1830_regf[6:6] CMOS3_1830 (FF_SR_EN87_FF_SR_EN.latchin, 
+	         CLK ;;regf[6:6], regf[6:6]' ) ;
+	.call CMOS3_1830_regg[0:0] CMOS3_1830 (FF_SR_EN97_FF_SR_EN.latchin, 
+	         CLK ;;regg[0:0], regg[0:0]' ) ;
+	.call CMOS3_1830_regf[8:8] CMOS3_1830 (FF_SR_EN89_FF_SR_EN.latchin, 
+	         CLK ;;regf[8:8], regf[8:8]' ) ;
+	.call CMOS3_1830_regg[2:2] CMOS3_1830 (FF_SR_EN99_FF_SR_EN.latchin, 
+	         CLK ;;regg[2:2], regg[2:2]' ) ;
+	.call CMOS3_1830_DN2_2 CMOS3_1830 (TcL2_1[1]_FF_EN.latchin, CLK ;;
+	         DN2_2, DN2_2' ) ;
+	.call CMOS3_1830_regg[4:4] CMOS3_1830 (FF_SR_EN101_FF_SR_EN.latchin, 
+	         CLK ;;regg[4:4], regg[4:4]' ) ;
+	.call CMOS3_1830_regg[6:6] CMOS3_1830 (FF_SR_EN103_FF_SR_EN.latchin, 
+	         CLK ;;regg[6:6], regg[6:6]' ) ;
+	.call CMOS3_1830_rega[7:7] CMOS3_1830 (FF_SR_EN8_FF_SR_EN.latchin, 
+	         CLK ;;rega[7:7], rega[7:7]' ) ;
+	.call CMOS3_1830_regb[1:1] CMOS3_1830 (FF_SR_EN18_FF_SR_EN.latchin, 
+	         CLK ;;regb[1:1], regb[1:1]' ) ;
+	.call CMOS3_1830_GFDN_3 CMOS3_1830 (TcL3_38[7]_FF_EN.latchin, CLK ;;
+	         GFDN_3, GFDN_3' ) ;
+	.call CMOS3_1830_rega[9:9] CMOS3_1830 (FF_SR_EN10_FF_SR_EN.latchin, 
+	         CLK ;;rega[9:9], rega[9:9]' ) ;
+	.call CMOS3_1830_regb[3:3] CMOS3_1830 (FF_SR_EN20_FF_SR_EN.latchin, 
+	         CLK ;;regb[3:3], regb[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[10:10] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN22_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[10:10]' ) ;
+	.call CMOS3_1830_DN1_4 CMOS3_1830 (TcL1_2[2]_FF_EN.latchin, CLK ;;
+	         DN1_4, DN1_4' ) ;
+	.call CMOS3_1830_over[0:0] CMOS3_1830 (FF_EN_over0_FF_EN.latchin, CLK ;;
+	         over[0:0], over[0:0]' ) ;
+	.call CMOS3_1830_regb[5:5] CMOS3_1830 (FF_SR_EN22_FF_SR_EN.latchin, 
+	         CLK ;;regb[5:5], regb[5:5]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[11:11] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN21_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.count[11:11]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[12:12] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN20_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.count[12:12]' ) ;
+	.call CMOS3_1830_regb[7:7] CMOS3_1830 (FF_SR_EN24_FF_SR_EN.latchin, 
+	         CLK ;;regb[7:7], regb[7:7]' ) ;
+	.call CMOS3_1830_regh[0:0] CMOS3_1830 (FF_SR_EN113_FF_SR_EN.latchin, 
+	         CLK ;;regh[0:0], regh[0:0]' ) ;
+	.call CMOS3_1830_regc[1:1] CMOS3_1830 (FF_SR_EN34_FF_SR_EN.latchin, 
+	         CLK ;;regc[1:1], regc[1:1]' ) ;
+	.call CMOS3_1830_regg[8:8] CMOS3_1830 (FF_SR_EN105_FF_SR_EN.latchin, 
+	         CLK ;;regg[8:8], regg[8:8]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[13:13] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN19_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.count[13:13]' ) ;
+	.call CMOS3_1830_regh[2:2] CMOS3_1830 (FF_SR_EN115_FF_SR_EN.latchin, 
+	         CLK ;;regh[2:2], regh[2:2]' ) ;
+	.call CMOS3_1830_regb[9:9] CMOS3_1830 (FF_SR_EN26_FF_SR_EN.latchin, 
+	         CLK ;;regb[9:9], regb[9:9]' ) ;
+	.call CMOS3_1830_regc[3:3] CMOS3_1830 (FF_SR_EN36_FF_SR_EN.latchin, 
+	         CLK ;;regc[3:3], regc[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[14:14] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN18_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.count[14:14]' ) ;
+	.call CMOS3_1830_regh[4:4] CMOS3_1830 (FF_SR_EN117_FF_SR_EN.latchin, 
+	         CLK ;;regh[4:4], regh[4:4]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.Sr1_3 CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.Sw1_3_FF_EN.latchin', CLK ;;
+	         auto_smultiply_16[0]_smultiply_16.Sr1_3, 
+	         auto_smultiply_16[0]_smultiply_16.Sr1_3' ) ;
+	.call CMOS3_1830_regc[5:5] CMOS3_1830 (FF_SR_EN38_FF_SR_EN.latchin, 
+	         CLK ;;regc[5:5], regc[5:5]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[15:15] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN17_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[15:15], 
+	         auto_smultiply_16[0]_smultiply_16.count[15:15]' ) ;
+	.call CMOS3_1830_regh[6:6] CMOS3_1830 (FF_SR_EN119_FF_SR_EN.latchin, 
+	         CLK ;;regh[6:6], regh[6:6]' ) ;
+	.call CMOS3_1830_regh[8:8] CMOS3_1830 (FF_SR_EN121_FF_SR_EN.latchin, 
+	         CLK ;;regh[8:8], regh[8:8]' ) ;
+	.call CMOS3_1830_DN CMOS3_1830 (TcL1_2[1]_FF_EN.latchin, CLK ;;DN, 
+	         DN' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.Sr2_3 CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.Sw2_3_FF_EN.latchin', CLK ;;
+	         auto_smultiply_16[0]_smultiply_16.Sr2_3, 
+	         auto_smultiply_16[0]_smultiply_16.Sr2_3' ) ;
+	.call CMOS3_1830_regc[7:7] CMOS3_1830 (FF_SR_EN40_FF_SR_EN.latchin, 
+	         CLK ;;regc[7:7], regc[7:7]' ) ;
+	.call CMOS3_1830_regd[1:1] CMOS3_1830 (FF_SR_EN50_FF_SR_EN.latchin, 
+	         CLK ;;regd[1:1], regd[1:1]' ) ;
+	.call CMOS3_1830_regc[9:9] CMOS3_1830 (FF_SR_EN42_FF_SR_EN.latchin, 
+	         CLK ;;regc[9:9], regc[9:9]' ) ;
+	.call CMOS3_1830_regd[3:3] CMOS3_1830 (FF_SR_EN52_FF_SR_EN.latchin, 
+	         CLK ;;regd[3:3], regd[3:3]' ) ;
+	.call CMOS3_1830_regd[5:5] CMOS3_1830 (FF_SR_EN54_FF_SR_EN.latchin, 
+	         CLK ;;regd[5:5], regd[5:5]' ) ;
+	.call CMOS3_1830_regd[7:7] CMOS3_1830 (FF_SR_EN56_FF_SR_EN.latchin, 
+	         CLK ;;regd[7:7], regd[7:7]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[9:9] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN23_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.count[9:9]' ) ;
+	.call CMOS3_1830_rege[1:1] CMOS3_1830 (FF_SR_EN66_FF_SR_EN.latchin, 
+	         CLK ;;rege[1:1], rege[1:1]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[7:7] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN25_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.count[7:7]' ) ;
+	.call CMOS3_1830_regd[9:9] CMOS3_1830 (FF_SR_EN58_FF_SR_EN.latchin, 
+	         CLK ;;regd[9:9], regd[9:9]' ) ;
+	.call CMOS3_1830_rege[3:3] CMOS3_1830 (FF_SR_EN68_FF_SR_EN.latchin, 
+	         CLK ;;rege[3:3], rege[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[5:5] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN27_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.count[5:5]' ) ;
+	.call CMOS3_1830_rege[5:5] CMOS3_1830 (FF_SR_EN70_FF_SR_EN.latchin, 
+	         CLK ;;rege[5:5], rege[5:5]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[3:3] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN29_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.count[3:3]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.count[1:1] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN31_FF_SR_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.count[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.count[1:1]' ) ;
+	.call CMOS3_1830_rege[7:7] CMOS3_1830 (FF_SR_EN72_FF_SR_EN.latchin, 
+	         CLK ;;rege[7:7], rege[7:7]' ) ;
+	.call CMOS3_1830_rega[0:0] CMOS3_1830 (FF_SR_EN1_FF_SR_EN.latchin, 
+	         CLK ;;rega[0:0], rega[0:0]' ) ;
+	.call CMOS3_1830_regf[1:1] CMOS3_1830 (FF_SR_EN82_FF_SR_EN.latchin, 
+	         CLK ;;regf[1:1], regf[1:1]' ) ;
+	.call CMOS3_1830_rega[2:2] CMOS3_1830 (FF_SR_EN3_FF_SR_EN.latchin, 
+	         CLK ;;rega[2:2], rega[2:2]' ) ;
+	.call CMOS3_1830_rege[9:9] CMOS3_1830 (FF_SR_EN74_FF_SR_EN.latchin, 
+	         CLK ;;rege[9:9], rege[9:9]' ) ;
+	.call CMOS3_1830_regf[3:3] CMOS3_1830 (FF_SR_EN84_FF_SR_EN.latchin, 
+	         CLK ;;regf[3:3], regf[3:3]' ) ;
+	.call CMOS3_1830_rega[4:4] CMOS3_1830 (FF_SR_EN5_FF_SR_EN.latchin, 
+	         CLK ;;rega[4:4], rega[4:4]' ) ;
+	.call CMOS3_1830_LBr1_2[0] CMOS3_1830 (LBr1_2_0_FF_EN.latchin, CLK ;;
+	         LBr1_2[0]' ) ;
+	.call CMOS3_1830_regf[5:5] CMOS3_1830 (FF_SR_EN86_FF_SR_EN.latchin, 
+	         CLK ;;regf[5:5], regf[5:5]' ) ;
+	.call CMOS3_1830_LC1_2 CMOS3_1830 (FF_EN.1_2_LC_FF_EN.latchin, CLK ;;
+	         LC1_2' ) ;
+	.call CMOS3_1830_rega[6:6] CMOS3_1830 (FF_SR_EN7_FF_SR_EN.latchin, 
+	         CLK ;;rega[6:6], rega[6:6]' ) ;
+	.call CMOS3_1830_EN3_39 CMOS3_1830 (TcL3_38[1]_FF_EN.latchin, CLK ;;
+	         EN3_39, EN3_39' ) ;
+	.call CMOS3_1830_EN3_36 CMOS3_1830 (TcL3_37[1]_FF_EN.latchin, CLK ;;
+	         EN3_36' ) ;
+	.call CMOS3_1830_EN3_34 CMOS3_1830 (TcL3_35[1]_FF_EN.latchin, CLK ;;
+	         EN3_34' ) ;
+	.call CMOS3_1830_regf[7:7] CMOS3_1830 (FF_SR_EN88_FF_SR_EN.latchin, 
+	         CLK ;;regf[7:7], regf[7:7]' ) ;
+	.call CMOS3_1830_EN3_28 CMOS3_1830 (TcL3_30[1]_FF_EN.latchin, CLK ;;
+	         EN3_28, EN3_28' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.LC1_3 CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_EN.1_3_LC_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.LC1_3' ) ;
+	.call CMOS3_1830_EN3_22 CMOS3_1830 (TcL3_23[1]_FF_EN.latchin, CLK ;;
+	         EN3_22, EN3_22' ) ;
+	.call CMOS3_1830_EN3_19 CMOS3_1830 (TcL3_20[1]_FF_EN.latchin, CLK ;;
+	         EN3_19, EN3_19' ) ;
+	.call CMOS3_1830_regg[1:1] CMOS3_1830 (FF_SR_EN98_FF_SR_EN.latchin, 
+	         CLK ;;regg[1:1], regg[1:1]' ) ;
+	.call CMOS3_1830_EN3_16 CMOS3_1830 (TcL3_14[1]_FF_EN.latchin, CLK ;;
+	         EN3_16, EN3_16' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.Lak2_3 CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_EN.2_3_La_FF_EN.latchin, 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.Lak2_3, 
+	         auto_smultiply_16[0]_smultiply_16.Lak2_3' ) ;
+	.call CMOS3_1830_regf[9:9] CMOS3_1830 (FF_SR_EN90_FF_SR_EN.latchin, 
+	         CLK ;;regf[9:9], regf[9:9]' ) ;
+	.call CMOS3_1830_regg[3:3] CMOS3_1830 (FF_SR_EN100_FF_SR_EN.latchin, 
+	         CLK ;;regg[3:3], regg[3:3]' ) ;
+	.call CMOS3_1830_regg[5:5] CMOS3_1830 (FF_SR_EN102_FF_SR_EN.latchin, 
+	         CLK ;;regg[5:5], regg[5:5]' ) ;
+	.call CMOS3_1830_DN3_46 CMOS3_1830 (TcL3_38[6]_FF_EN.latchin, CLK ;;
+	         DN3_46' ) ;
+	.call CMOS3_1830_DN3_44 CMOS3_1830 (TcL3_38[5]_FF_EN.latchin, CLK ;;
+	         DN3_44, DN3_44' ) ;
+	.call CMOS3_1830_DN3_42 CMOS3_1830 (TcL3_38[4]_FF_EN.latchin, CLK ;;
+	         DN3_42, DN3_42' ) ;
+	.call CMOS3_1830_DN3_39 CMOS3_1830 (TcL3_38[2]_FF_EN.latchin, CLK ;;
+	         DN3_39, DN3_39' ) ;
+	.call CMOS3_1830_DN3_40 CMOS3_1830 (TcL3_38[3]_FF_EN.latchin, CLK ;;
+	         DN3_40, DN3_40' ) ;
+	.call CMOS3_1830_DN3_29 CMOS3_1830 (TcL3_30[3]_FF_EN.latchin, CLK ;;
+	         DN3_29' ) ;
+	.call CMOS3_1830_regb[0:0] CMOS3_1830 (FF_SR_EN17_FF_SR_EN.latchin, 
+	         CLK ;;regb[0:0], regb[0:0]' ) ;
+	.call CMOS3_1830_DN3_28 CMOS3_1830 (TcL3_30[2]_FF_EN.latchin, CLK ;;
+	         DN3_28, DN3_28' ) ;
+	.call CMOS3_1830_DN3_26 CMOS3_1830 (TcL3_23[4]_FF_EN.latchin, CLK ;;
+	         DN3_26' ) ;
+	.call CMOS3_1830_DN3_25 CMOS3_1830 (TcL3_23[3]_FF_EN.latchin, CLK ;;
+	         DN3_25, DN3_25' ) ;
+	.call CMOS3_1830_DN3_22 CMOS3_1830 (TcL3_23[2]_FF_EN.latchin, CLK ;;
+	         DN3_22, DN3_22' ) ;
+	.call CMOS3_1830_DN3_19 CMOS3_1830 (TcL3_20[2]_FF_EN.latchin, CLK ;;
+	         DN3_19' ) ;
+	.call CMOS3_1830_DN3_17 CMOS3_1830 (TcL3_14[3]_FF_EN.latchin, CLK ;;
+	         DN3_17' ) ;
+	.call CMOS3_1830_DN3_16 CMOS3_1830 (TcL3_14[2]_FF_EN.latchin, CLK ;;
+	         DN3_16, DN3_16' ) ;
+	.call CMOS3_1830_rega[8:8] CMOS3_1830 (FF_SR_EN9_FF_SR_EN.latchin, 
+	         CLK ;;rega[8:8], rega[8:8]' ) ;
+	.call CMOS3_1830_DN3_12 CMOS3_1830 (TcL3_1[6]_FF_EN.latchin, CLK ;;
+	         DN3_12' ) ;
+	.call CMOS3_1830_DN3_11 CMOS3_1830 (TcL3_1[5]_FF_EN.latchin, CLK ;;
+	         DN3_11, DN3_11' ) ;
+	.call CMOS3_1830_regb[2:2] CMOS3_1830 (FF_SR_EN19_FF_SR_EN.latchin, 
+	         CLK ;;regb[2:2], regb[2:2]' ) ;
+	.call CMOS3_1830_regh[15:15] CMOS3_1830 (FF_SR_EN128_FF_SR_EN.latchin, 
+	         CLK ;;regh[15:15], regh[15:15]' ) ;
+	.call CMOS3_1830_regb[4:4] CMOS3_1830 (FF_SR_EN21_FF_SR_EN.latchin, 
+	         CLK ;;regb[4:4], regb[4:4]' ) ;
+	.call CMOS3_1830_regg[15:15] CMOS3_1830 (FF_SR_EN112_FF_SR_EN.latchin, 
+	         CLK ;;regg[15:15], regg[15:15]' ) ;
+	.call CMOS3_1830_regh[14:14] CMOS3_1830 (FF_SR_EN127_FF_SR_EN.latchin, 
+	         CLK ;;regh[14:14], regh[14:14]' ) ;
+	.call CMOS3_1830_regb[6:6] CMOS3_1830 (FF_SR_EN23_FF_SR_EN.latchin, 
+	         CLK ;;regb[6:6], regb[6:6]' ) ;
+	.call CMOS3_1830_auto_smultiply_16[0]_smultiply_16.T4[0:0] CMOS3_1830 (
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN32_FF_SR_EN.latchin', 
+	         CLK ;;auto_smultiply_16[0]_smultiply_16.T4[0:0]' ) ;
+	.call CMOS3_1830_regg[7:7] CMOS3_1830 (FF_SR_EN104_FF_SR_EN.latchin, 
+	         CLK ;;regg[7:7], regg[7:7]' ) ;
+	.call CMOS3_1830_regc[0:0] CMOS3_1830 (FF_SR_EN33_FF_SR_EN.latchin, 
+	         CLK ;;regc[0:0], regc[0:0]' ) ;
+	.call CMOS3_1830_regh[1:1] CMOS3_1830 (FF_SR_EN114_FF_SR_EN.latchin, 
+	         CLK ;;regh[1:1], regh[1:1]' ) ;
+	.call CMOS3_1830_regb[8:8] CMOS3_1830 (FF_SR_EN25_FF_SR_EN.latchin, 
+	         CLK ;;regb[8:8], regb[8:8]' ) ;
+	.call CMOS3_1830_regc[2:2] CMOS3_1830 (FF_SR_EN35_FF_SR_EN.latchin, 
+	         CLK ;;regc[2:2], regc[2:2]' ) ;
+	.call CMOS3_1830_regg[9:9] CMOS3_1830 (FF_SR_EN106_FF_SR_EN.latchin, 
+	         CLK ;;regg[9:9], regg[9:9]' ) ;
+	.call CMOS3_1830_regh[3:3] CMOS3_1830 (FF_SR_EN116_FF_SR_EN.latchin, 
+	         CLK ;;regh[3:3], regh[3:3]' ) ;
+	.call CMOS3_1830_regc[4:4] CMOS3_1830 (FF_SR_EN37_FF_SR_EN.latchin, 
+	         CLK ;;regc[4:4], regc[4:4]' ) ;
+	.call CMOS3_1830_regh[5:5] CMOS3_1830 (FF_SR_EN118_FF_SR_EN.latchin, 
+	         CLK ;;regh[5:5], regh[5:5]' ) ;
+	.call CMOS3_1830_regc[6:6] CMOS3_1830 (FF_SR_EN39_FF_SR_EN.latchin, 
+	         CLK ;;regc[6:6], regc[6:6]' ) ;
+	.call CMOS3_1830_regh[13:13] CMOS3_1830 (FF_SR_EN126_FF_SR_EN.latchin, 
+	         CLK ;;regh[13:13], regh[13:13]' ) ;
+	.call CMOS3_1830_regf[15:15] CMOS3_1830 (FF_SR_EN96_FF_SR_EN.latchin, 
+	         CLK ;;regf[15:15], regf[15:15]' ) ;
+	.call CMOS3_1830_regh[7:7] CMOS3_1830 (FF_SR_EN120_FF_SR_EN.latchin, 
+	         CLK ;;regh[7:7], regh[7:7]' ) ;
+	.call CMOS3_1830_regg[14:14] CMOS3_1830 (FF_SR_EN111_FF_SR_EN.latchin, 
+	         CLK ;;regg[14:14], regg[14:14]' ) ;
+	.call CMOS3_1830_regf[14:14] CMOS3_1830 (FF_SR_EN95_FF_SR_EN.latchin, 
+	         CLK ;;regf[14:14], regf[14:14]' ) ;
+	.call CMOS3_1830_regg[13:13] CMOS3_1830 (FF_SR_EN110_FF_SR_EN.latchin, 
+	         CLK ;;regg[13:13], regg[13:13]' ) ;
+	.call CMOS3_1830_rege[15:15] CMOS3_1830 (FF_SR_EN80_FF_SR_EN.latchin, 
+	         CLK ;;rege[15:15], rege[15:15]' ) ;
+	.call CMOS3_1830_regh[12:12] CMOS3_1830 (FF_SR_EN125_FF_SR_EN.latchin, 
+	         CLK ;;regh[12:12], regh[12:12]' ) ;
+	.call CMOS3_1830_regd[15:15] CMOS3_1830 (FF_SR_EN64_FF_SR_EN.latchin, 
+	         CLK ;;regd[15:15], regd[15:15]' ) ;
+	.call CMOS3_1830_Sr3_38 CMOS3_1830 (Sw3_38_FF_EN.latchin', CLK ;;
+	         Sr3_38' ) ;
+	.call CMOS3_1830_regh[9:9] CMOS3_1830 (FF_SR_EN122_FF_SR_EN.latchin, 
+	         CLK ;;regh[9:9], regh[9:9]' ) ;
+	.call CMOS3_1830_Sr3_37 CMOS3_1830 (Sw3_37_FF_EN.latchin', CLK ;;
+	         Sr3_37' ) ;
+	.call CMOS3_1830_rege[14:14] CMOS3_1830 (FF_SR_EN79_FF_SR_EN.latchin, 
+	         CLK ;;rege[14:14], rege[14:14]' ) ;
+	.call CMOS3_1830_Sr3_35 CMOS3_1830 (Sw3_35_FF_EN.latchin', CLK ;;
+	         Sr3_35' ) ;
+	.call CMOS3_1830_regh[11:11] CMOS3_1830 (FF_SR_EN124_FF_SR_EN.latchin, 
+	         CLK ;;regh[11:11], regh[11:11]' ) ;
+	.call CMOS3_1830_regf[13:13] CMOS3_1830 (FF_SR_EN94_FF_SR_EN.latchin, 
+	         CLK ;;regf[13:13], regf[13:13]' ) ;
+	.call CMOS3_1830_Sr3_30 CMOS3_1830 (Sw3_30_FF_EN.latchin', CLK ;;
+	         Sr3_30' ) ;
+	.call CMOS3_1830_regg[12:12] CMOS3_1830 (FF_SR_EN109_FF_SR_EN.latchin, 
+	         CLK ;;regg[12:12], regg[12:12]' ) ;
+	.call CMOS3_1830_Sr3_23 CMOS3_1830 (Sw3_23_FF_EN.latchin', CLK ;;
+	         Sr3_23' ) ;
+	.call CMOS3_1830_regc[15:15] CMOS3_1830 (FF_SR_EN48_FF_SR_EN.latchin, 
+	         CLK ;;regc[15:15], regc[15:15]' ) ;
+	.call CMOS3_1830_Sr3_20 CMOS3_1830 (Sw3_20_FF_EN.latchin', CLK ;;
+	         Sr3_20' ) ;
+	.call CMOS3_1830_regf[12:12] CMOS3_1830 (FF_SR_EN93_FF_SR_EN.latchin, 
+	         CLK ;;regf[12:12], regf[12:12]' ) ;
+	.call CMOS3_1830_regd[14:14] CMOS3_1830 (FF_SR_EN63_FF_SR_EN.latchin, 
+	         CLK ;;regd[14:14], regd[14:14]' ) ;
+	.call CMOS3_1830_Sr3_14 CMOS3_1830 (Sw3_14_FF_EN.latchin', CLK ;;
+	         Sr3_14' ) ;
+	.call CMOS3_1830_Sr3_13 CMOS3_1830 (Sw3_13_FF_EN.latchin', CLK ;;
+	         Sr3_13, Sr3_13' ) ;
+	.call CMOS3_1830_regg[11:11] CMOS3_1830 (FF_SR_EN108_FF_SR_EN.latchin, 
+	         CLK ;;regg[11:11], regg[11:11]' ) ;
+	.call CMOS3_1830_rege[13:13] CMOS3_1830 (FF_SR_EN78_FF_SR_EN.latchin, 
+	         CLK ;;rege[13:13], rege[13:13]' ) ;
+	.call CMOS3_1830_regh[10:10] CMOS3_1830 (FF_SR_EN123_FF_SR_EN.latchin, 
+	         CLK ;;regh[10:10], regh[10:10]' ) ;
+	.call CMOS3_1830_regb[15:15] CMOS3_1830 (FF_SR_EN32_FF_SR_EN.latchin, 
+	         CLK ;;regb[15:15], regb[15:15]' ) ;
+	.call CMOS3_1830_regd[13:13] CMOS3_1830 (FF_SR_EN62_FF_SR_EN.latchin, 
+	         CLK ;;regd[13:13], regd[13:13]' ) ;
+	.call CMOS3_1830_rege[12:12] CMOS3_1830 (FF_SR_EN77_FF_SR_EN.latchin, 
+	         CLK ;;rege[12:12], rege[12:12]' ) ;
+	.call CMOS3_1830_regc[14:14] CMOS3_1830 (FF_SR_EN47_FF_SR_EN.latchin, 
+	         CLK ;;regc[14:14], regc[14:14]' ) ;
+	.call CMOS3_1830_regf[11:11] CMOS3_1830 (FF_SR_EN92_FF_SR_EN.latchin, 
+	         CLK ;;regf[11:11], regf[11:11]' ) ;
+	.call CMOS3_1830_regb[14:14] CMOS3_1830 (FF_SR_EN31_FF_SR_EN.latchin, 
+	         CLK ;;regb[14:14], regb[14:14]' ) ;
+	.call CMOS3_1830_regd[0:0] CMOS3_1830 (FF_SR_EN49_FF_SR_EN.latchin, 
+	         CLK ;;regd[0:0], regd[0:0]' ) ;
+	.call CMOS3_1830_regg[10:10] CMOS3_1830 (FF_SR_EN107_FF_SR_EN.latchin, 
+	         CLK ;;regg[10:10], regg[10:10]' ) ;
+	.call CMOS3_1830_regc[13:13] CMOS3_1830 (FF_SR_EN46_FF_SR_EN.latchin, 
+	         CLK ;;regc[13:13], regc[13:13]' ) ;
+	.call CMOS3_1830_rega[15:15] CMOS3_1830 (FF_SR_EN16_FF_SR_EN.latchin, 
+	         CLK ;;rega[15:15], rega[15:15]' ) ;
+	.call CMOS3_1830_regf[10:10] CMOS3_1830 (FF_SR_EN91_FF_SR_EN.latchin, 
+	         CLK ;;regf[10:10], regf[10:10]' ) ;
+	.call CMOS3_1830_regd[12:12] CMOS3_1830 (FF_SR_EN61_FF_SR_EN.latchin, 
+	         CLK ;;regd[12:12], regd[12:12]' ) ;
+	.call CMOS3_1830_regc[8:8] CMOS3_1830 (FF_SR_EN41_FF_SR_EN.latchin, 
+	         CLK ;;regc[8:8], regc[8:8]' ) ;
+	.call CMOS3_1830_rege[11:11] CMOS3_1830 (FF_SR_EN76_FF_SR_EN.latchin, 
+	         CLK ;;rege[11:11], rege[11:11]' ) ;
+	.call CMOS3_1830_rega[14:14] CMOS3_1830 (FF_SR_EN15_FF_SR_EN.latchin, 
+	         CLK ;;rega[14:14], rega[14:14]' ) ;
+	.call CMOS3_1830_regd[2:2] CMOS3_1830 (FF_SR_EN51_FF_SR_EN.latchin, 
+	         CLK ;;regd[2:2], regd[2:2]' ) ;
+	.call CMOS3_1830_regd[11:11] CMOS3_1830 (FF_SR_EN60_FF_SR_EN.latchin, 
+	         CLK ;;regd[11:11], regd[11:11]' ) ;
+	.call CMOS3_1830_regb[13:13] CMOS3_1830 (FF_SR_EN30_FF_SR_EN.latchin, 
+	         CLK ;;regb[13:13], regb[13:13]' ) ;
+	.call CMOS3_1830_regc[12:12] CMOS3_1830 (FF_SR_EN45_FF_SR_EN.latchin, 
+	         CLK ;;regc[12:12], regc[12:12]' ) ;
+	.call CMOS3_1830_rege[10:10] CMOS3_1830 (FF_SR_EN75_FF_SR_EN.latchin, 
+	         CLK ;;rege[10:10], rege[10:10]' ) ;
+	.call CMOS3_1830_regb[12:12] CMOS3_1830 (FF_SR_EN29_FF_SR_EN.latchin, 
+	         CLK ;;regb[12:12], regb[12:12]' ) ;
+	.call CMOS3_1830_regd[4:4] CMOS3_1830 (FF_SR_EN53_FF_SR_EN.latchin, 
+	         CLK ;;regd[4:4], regd[4:4]' ) ;
+	.call CMOS3_1830_regc[11:11] CMOS3_1830 (FF_SR_EN44_FF_SR_EN.latchin, 
+	         CLK ;;regc[11:11], regc[11:11]' ) ;
+	.call CMOS3_1830_rega[13:13] CMOS3_1830 (FF_SR_EN14_FF_SR_EN.latchin, 
+	         CLK ;;rega[13:13], rega[13:13]' ) ;
+	.call CMOS3_1830_regd[10:10] CMOS3_1830 (FF_SR_EN59_FF_SR_EN.latchin, 
+	         CLK ;;regd[10:10], regd[10:10]' ) ;
+	.call CMOS3_1830_rega[12:12] CMOS3_1830 (FF_SR_EN13_FF_SR_EN.latchin, 
+	         CLK ;;rega[12:12], rega[12:12]' ) ;
+	.call CMOS3_1830_regb[11:11] CMOS3_1830 (FF_SR_EN28_FF_SR_EN.latchin, 
+	         CLK ;;regb[11:11], regb[11:11]' ) ;
+	.call CMOS3_1830_regd[6:6] CMOS3_1830 (FF_SR_EN55_FF_SR_EN.latchin, 
+	         CLK ;;regd[6:6], regd[6:6]' ) ;
+	.call CMOS3_1830_regc[10:10] CMOS3_1830 (FF_SR_EN43_FF_SR_EN.latchin, 
+	         CLK ;;regc[10:10], regc[10:10]' ) ;
+	.call CMOS3_1830_regb[10:10] CMOS3_1830 (FF_SR_EN27_FF_SR_EN.latchin, 
+	         CLK ;;regb[10:10], regb[10:10]' ) ;
+	.call CMOS3_1130_FF_SR_EN115_FF_SR_EN.latchin CMOS3_1130 (regh[2:2]', 
+	         RQ2_9, RESET ;;FF_SR_EN115_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN13_FF_SR_EN.latchin CMOS3_1130 (rega[12:12]', 
+	         RQ2_2, RESET ;;FF_SR_EN13_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN128_FF_SR_EN.latchin CMOS3_1130 (
+	         regh[15:15]', RQ2_9, RESET ;;FF_SR_EN128_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN20_FF_SR_EN.latchin CMOS3_1130 (regb[3:3]', 
+	         RQ2_3, RESET ;;FF_SR_EN20_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN60_FF_SR_EN.latchin CMOS3_1130 (regd[11:11]', 
+	         RQ2_5, RESET ;;FF_SR_EN60_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN58_FF_SR_EN.latchin CMOS3_1130 (regd[9:9]', 
+	         RQ2_5, RESET ;;FF_SR_EN58_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN21_FF_SR_EN.latchin CMOS3_1130 (regb[4:4]', 
+	         RQ2_3, RESET ;;FF_SR_EN21_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN19_FF_SR_EN.latchin CMOS3_1130 (regb[2:2]', 
+	         RQ2_3, RESET ;;FF_SR_EN19_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN35_FF_SR_EN.latchin CMOS3_1130 (regc[2:2]', 
+	         RQ2_4, RESET ;;FF_SR_EN35_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN46_FF_SR_EN.latchin CMOS3_1130 (regc[13:13]', 
+	         RQ2_4, RESET ;;FF_SR_EN46_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN106_FF_SR_EN.latchin CMOS3_1130 (regg[9:9]', 
+	         RQ2_8, RESET ;;FF_SR_EN106_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN41_FF_SR_EN.latchin CMOS3_1130 (regc[8:8]', 
+	         RQ2_4, RESET ;;FF_SR_EN41_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN39_FF_SR_EN.latchin CMOS3_1130 (regc[6:6]', 
+	         RQ2_4, RESET ;;FF_SR_EN39_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN31_FF_SR_EN.latchin CMOS3_1130 (regb[14:14]', 
+	         RQ2_3, RESET ;;FF_SR_EN31_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN29_FF_SR_EN.latchin CMOS3_1130 (regb[12:12]', 
+	         RQ2_3, RESET ;;FF_SR_EN29_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL1_2[2]_FF_EN.latchin CMOS3_1130 (DN1_4', DN, 
+	         RESET ;;TcL1_2[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_5072 CMOS3_1130 (over[0:0]', over_en[0:0], RESET ;;
+	         zz_5072 ) ;
+	.call CMOS3_1130_zz_5070 CMOS3_1130 (RQ1_3', RESET, over_en[0:0]' ;;
+	         zz_5070 ) ;
+	.call CMOS3_1130_TcL3_14[1]_FF_EN.latchin CMOS3_1130 (zz_4465', 
+	         RESET, GFDN_3 ;;TcL3_14[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN23_FF_SR_EN.latchin CMOS3_1130 (regb[6:6]', 
+	         RQ2_3, RESET ;;FF_SR_EN23_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN61_FF_SR_EN.latchin CMOS3_1130 (regd[12:12]', 
+	         RQ2_5, RESET ;;FF_SR_EN61_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN59_FF_SR_EN.latchin CMOS3_1130 (regd[10:10]', 
+	         RQ2_5, RESET ;;FF_SR_EN59_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN47_FF_SR_EN.latchin CMOS3_1130 (regc[14:14]', 
+	         RQ2_4, RESET ;;FF_SR_EN47_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_16[0]_smultiply_16.FF_EN.1_3_LC_FF_EN.latchin CMOS3_1130 (
+	         zz_1768', RESET, auto_smultiply_16[0].DN ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_EN.1_3_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_14[3]_FF_EN.latchin CMOS3_1130 (zz_4405', 
+	         RESET, GFDN_3 ;;TcL3_14[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_1[5]_FF_EN.latchin CMOS3_1130 (zz_2963', RESET, 
+	         GFDN_3 ;;TcL3_1[5]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[7]_FF_EN.latchin CMOS3_1130 (DN3_46', RESET, 
+	         GFDN_3 ;;TcL3_38[7]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN86_FF_SR_EN.latchin CMOS3_1130 (regf[5:5]', 
+	         RQ2_7, RESET ;;FF_SR_EN86_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN15_FF_SR_EN.latchin CMOS3_1130 (rega[14:14]', 
+	         RQ2_2, RESET ;;FF_SR_EN15_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN11_FF_SR_EN.latchin CMOS3_1130 (rega[10:10]', 
+	         RQ2_2, RESET ;;FF_SR_EN11_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN104_FF_SR_EN.latchin CMOS3_1130 (regg[7:7]', 
+	         RQ2_8, RESET ;;FF_SR_EN104_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[3]_FF_EN.latchin CMOS3_1130 (zz_1634', 
+	         RESET, GFDN_3 ;;TcL3_38[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN71_FF_SR_EN.latchin CMOS3_1130 (rege[6:6]', 
+	         RQ2_6, RESET ;;FF_SR_EN71_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN69_FF_SR_EN.latchin CMOS3_1130 (rege[4:4]', 
+	         RQ2_6, RESET ;;FF_SR_EN69_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_1[4]_FF_EN.latchin CMOS3_1130 (zz_3035', RESET, 
+	         GFDN_3 ;;TcL3_1[4]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN48_FF_SR_EN.latchin CMOS3_1130 (regc[15:15]', 
+	         RQ2_4, RESET ;;FF_SR_EN48_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[5]_FF_EN.latchin CMOS3_1130 (zz_1557', 
+	         RESET, GFDN_3 ;;TcL3_38[5]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN3_FF_SR_EN.latchin CMOS3_1130 (rega[2:2]', 
+	         RQ2_2, RESET ;;FF_SR_EN3_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN122_FF_SR_EN.latchin CMOS3_1130 (regh[9:9]', 
+	         RQ2_9, RESET ;;FF_SR_EN122_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN32_FF_SR_EN.latchin CMOS3_1130 (regb[15:15]', 
+	         RQ2_3, RESET ;;FF_SR_EN32_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN53_FF_SR_EN.latchin CMOS3_1130 (regd[4:4]', 
+	         RQ2_5, RESET ;;FF_SR_EN53_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN17_FF_SR_EN.latchin CMOS3_1130 (regb[0:0]', 
+	         RQ2_3, RESET ;;FF_SR_EN17_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN127_FF_SR_EN.latchin CMOS3_1130 (
+	         regh[14:14]', RQ2_9, RESET ;;FF_SR_EN127_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_16[0]_smultiply_16.LD2_3 CMOS3_1130 (
+	         auto_smultiply_16[0]_smultiply_16.Sr2_3', 
+	         auto_smultiply_16[0]_smultiply_16.Lak2_3, 
+	         auto_smultiply_16[0]_smultiply_16.DN2_2' ;;
+	         auto_smultiply_16[0]_smultiply_16.LD2_3 ) ;
+	.call CMOS3_1130_FF_SR_EN111_FF_SR_EN.latchin CMOS3_1130 (
+	         regg[14:14]', RQ2_8, RESET ;;FF_SR_EN111_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN109_FF_SR_EN.latchin CMOS3_1130 (
+	         regg[12:12]', RQ2_8, RESET ;;FF_SR_EN109_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN97_FF_SR_EN.latchin CMOS3_1130 (regg[0:0]', 
+	         RQ2_8, RESET ;;FF_SR_EN97_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN65_FF_SR_EN.latchin CMOS3_1130 (rege[0:0]', 
+	         RQ2_6, RESET ;;FF_SR_EN65_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN44_FF_SR_EN.latchin CMOS3_1130 (regc[11:11]', 
+	         RQ2_4, RESET ;;FF_SR_EN44_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN126_FF_SR_EN.latchin CMOS3_1130 (
+	         regh[13:13]', RQ2_9, RESET ;;FF_SR_EN126_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN12_FF_SR_EN.latchin CMOS3_1130 (rega[11:11]', 
+	         RQ2_2, RESET ;;FF_SR_EN12_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN8_FF_SR_EN.latchin CMOS3_1130 (rega[7:7]', 
+	         RQ2_2, RESET ;;FF_SR_EN8_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN74_FF_SR_EN.latchin CMOS3_1130 (rege[9:9]', 
+	         RQ2_6, RESET ;;FF_SR_EN74_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN57_FF_SR_EN.latchin CMOS3_1130 (regd[8:8]', 
+	         RQ2_5, RESET ;;FF_SR_EN57_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN91_FF_SR_EN.latchin CMOS3_1130 (regf[10:10]', 
+	         RQ2_7, RESET ;;FF_SR_EN91_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN89_FF_SR_EN.latchin CMOS3_1130 (regf[8:8]', 
+	         RQ2_7, RESET ;;FF_SR_EN89_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN72_FF_SR_EN.latchin CMOS3_1130 (rege[7:7]', 
+	         RQ2_6, RESET ;;FF_SR_EN72_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN70_FF_SR_EN.latchin CMOS3_1130 (rege[5:5]', 
+	         RQ2_6, RESET ;;FF_SR_EN70_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN68_FF_SR_EN.latchin CMOS3_1130 (rege[3:3]', 
+	         RQ2_6, RESET ;;FF_SR_EN68_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_1[6]_FF_EN.latchin CMOS3_1130 (zz_2886', RESET, 
+	         GFDN_3 ;;TcL3_1[6]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN124_FF_SR_EN.latchin CMOS3_1130 (
+	         regh[11:11]', RQ2_9, RESET ;;FF_SR_EN124_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN10_FF_SR_EN.latchin CMOS3_1130 (rega[9:9]', 
+	         RQ2_2, RESET ;;FF_SR_EN10_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_20[1]_FF_EN.latchin CMOS3_1130 (zz_1747', 
+	         RESET, GFDN_3 ;;TcL3_20[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_2413 CMOS3_1130 (auto_smultiply_16[0].ib1[15:15]', 
+	         auto_smultiply_16[0].ib1[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_14_T1[0:0]' ;;
+	         zz_2413 ) ;
+	.call CMOS3_1130_FF_SR_EN117_FF_SR_EN.latchin CMOS3_1130 (regh[4:4]', 
+	         RQ2_9, RESET ;;FF_SR_EN117_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN103_FF_SR_EN.latchin CMOS3_1130 (regg[6:6]', 
+	         RQ2_8, RESET ;;FF_SR_EN103_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_30[1]_FF_EN.latchin CMOS3_1130 (zz_337', RESET, 
+	         GFDN_3 ;;TcL3_30[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_zz_4367 CMOS3_1130 (LBr1_2[0]', LBr1_2_e, RESET ;;
+	         zz_4367 ) ;
+	.call CMOS3_1130_zz_4365 CMOS3_1130 (LBr1_2_e', RESET, reset[0:0] ;;
+	         zz_4365 ) ;
+	.call CMOS3_1130_FF_SR_EN30_FF_SR_EN.latchin CMOS3_1130 (regb[13:13]', 
+	         RQ2_3, RESET ;;FF_SR_EN30_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN28_FF_SR_EN.latchin CMOS3_1130 (regb[11:11]', 
+	         RQ2_3, RESET ;;FF_SR_EN28_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[6]_FF_EN.latchin CMOS3_1130 (zz_1482', 
+	         RESET, GFDN_3 ;;TcL3_38[6]_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_3_T5[0:0] CMOS3_1130 (
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0], zz_3965, 
+	         auto_smultiply_16[0]_smultiply_16.T4[1:1] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_3_T5[0:0]' ) ;
+	.call CMOS3_1130_FF_SR_EN102_FF_SR_EN.latchin CMOS3_1130 (regg[5:5]', 
+	         RQ2_8, RESET ;;FF_SR_EN102_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN76_FF_SR_EN.latchin CMOS3_1130 (rege[11:11]', 
+	         RQ2_6, RESET ;;FF_SR_EN76_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[4]_FF_EN.latchin CMOS3_1130 (zz_1584', 
+	         RESET, GFDN_3 ;;TcL3_38[4]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL1_2[1]_FF_EN.latchin CMOS3_1130 (RESET, DN, 
+	         Sr1_2 ;;TcL1_2[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN16_FF_SR_EN.latchin CMOS3_1130 (rega[15:15]', 
+	         RQ2_2, RESET ;;FF_SR_EN16_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN90_FF_SR_EN.latchin CMOS3_1130 (regf[9:9]', 
+	         RQ2_7, RESET ;;FF_SR_EN90_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN88_FF_SR_EN.latchin CMOS3_1130 (regf[7:7]', 
+	         RQ2_7, RESET ;;FF_SR_EN88_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN54_FF_SR_EN.latchin CMOS3_1130 (regd[5:5]', 
+	         RQ2_5, RESET ;;FF_SR_EN54_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN22_FF_SR_EN.latchin CMOS3_1130 (regb[5:5]', 
+	         RQ2_3, RESET ;;FF_SR_EN22_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_23[2]_FF_EN.latchin CMOS3_1130 (zz_3266', 
+	         RESET, GFDN_3 ;;TcL3_23[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_37[1]_FF_EN.latchin CMOS3_1130 (zz_2335', 
+	         RESET, GFDN_3 ;;TcL3_37[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN123_FF_SR_EN.latchin CMOS3_1130 (
+	         regh[10:10]', RQ2_9, RESET ;;FF_SR_EN123_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN45_FF_SR_EN.latchin CMOS3_1130 (regc[12:12]', 
+	         RQ2_4, RESET ;;FF_SR_EN45_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN36_FF_SR_EN.latchin CMOS3_1130 (regc[3:3]', 
+	         RQ2_4, RESET ;;FF_SR_EN36_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN7_FF_SR_EN.latchin CMOS3_1130 (rega[6:6]', 
+	         RQ2_2, RESET ;;FF_SR_EN7_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN6_FF_SR_EN.latchin CMOS3_1130 (rega[5:5]', 
+	         RQ2_2, RESET ;;FF_SR_EN6_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN51_FF_SR_EN.latchin CMOS3_1130 (regd[2:2]', 
+	         RQ2_5, RESET ;;FF_SR_EN51_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN49_FF_SR_EN.latchin CMOS3_1130 (regd[0:0]', 
+	         RQ2_5, RESET ;;FF_SR_EN49_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN56_FF_SR_EN.latchin CMOS3_1130 (regd[7:7]', 
+	         RQ2_5, RESET ;;FF_SR_EN56_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN113_FF_SR_EN.latchin CMOS3_1130 (regh[0:0]', 
+	         RQ2_9, RESET ;;FF_SR_EN113_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN27_FF_SR_EN.latchin CMOS3_1130 (regb[10:10]', 
+	         RQ2_3, RESET ;;FF_SR_EN27_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN9_FF_SR_EN.latchin CMOS3_1130 (rega[8:8]', 
+	         RQ2_2, RESET ;;FF_SR_EN9_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN101_FF_SR_EN.latchin CMOS3_1130 (regg[4:4]', 
+	         RQ2_8, RESET ;;FF_SR_EN101_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL2_1[1]_FF_EN.latchin CMOS3_1130 (DN2_2', GFDN_2, 
+	         RESET ;;TcL2_1[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN110_FF_SR_EN.latchin CMOS3_1130 (
+	         regg[13:13]', RQ2_8, RESET ;;FF_SR_EN110_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN108_FF_SR_EN.latchin CMOS3_1130 (
+	         regg[11:11]', RQ2_8, RESET ;;FF_SR_EN108_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN67_FF_SR_EN.latchin CMOS3_1130 (rege[2:2]', 
+	         RQ2_6, RESET ;;FF_SR_EN67_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN95_FF_SR_EN.latchin CMOS3_1130 (regf[14:14]', 
+	         RQ2_7, RESET ;;FF_SR_EN95_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN121_FF_SR_EN.latchin CMOS3_1130 (regh[8:8]', 
+	         RQ2_9, RESET ;;FF_SR_EN121_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN119_FF_SR_EN.latchin CMOS3_1130 (regh[6:6]', 
+	         RQ2_9, RESET ;;FF_SR_EN119_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN84_FF_SR_EN.latchin CMOS3_1130 (regf[3:3]', 
+	         RQ2_7, RESET ;;FF_SR_EN84_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN77_FF_SR_EN.latchin CMOS3_1130 (rege[12:12]', 
+	         RQ2_6, RESET ;;FF_SR_EN77_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_zz_1821 CMOS3_1130 (GFDN_2, Sr1_2', GFDN_3 ;;
+	         zz_1821' ) ;
+	.call CMOS3_1130_TcL3_30[3]_FF_EN.latchin CMOS3_1130 (zz_221', RESET, 
+	         GFDN_3 ;;TcL3_30[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_23[3]_FF_EN.latchin CMOS3_1130 (zz_3062', 
+	         RESET, GFDN_3 ;;TcL3_23[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_23[1]_FF_EN.latchin CMOS3_1130 (zz_3363', 
+	         RESET, GFDN_3 ;;TcL3_23[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN92_FF_SR_EN.latchin CMOS3_1130 (regf[11:11]', 
+	         RQ2_7, RESET ;;FF_SR_EN92_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[1]_FF_EN.latchin CMOS3_1130 (zz_1723', 
+	         RESET, GFDN_3 ;;TcL3_38[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN26_FF_SR_EN.latchin CMOS3_1130 (regb[9:9]', 
+	         RQ2_3, RESET ;;FF_SR_EN26_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN93_FF_SR_EN.latchin CMOS3_1130 (regf[12:12]', 
+	         RQ2_7, RESET ;;FF_SR_EN93_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN120_FF_SR_EN.latchin CMOS3_1130 (regh[7:7]', 
+	         RQ2_9, RESET ;;FF_SR_EN120_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN118_FF_SR_EN.latchin CMOS3_1130 (regh[5:5]', 
+	         RQ2_9, RESET ;;FF_SR_EN118_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN75_FF_SR_EN.latchin CMOS3_1130 (rege[10:10]', 
+	         RQ2_6, RESET ;;FF_SR_EN75_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_1[3]_FF_EN.latchin CMOS3_1130 (zz_3126', RESET, 
+	         GFDN_3 ;;TcL3_1[3]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN33_FF_SR_EN.latchin CMOS3_1130 (regc[0:0]', 
+	         RQ2_4, RESET ;;FF_SR_EN33_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_16[0]_smultiply_16.TcL1_3[1]_FF_EN.latchin CMOS3_1130 (
+	         auto_smultiply_16[0]_smultiply_16.DN1_5', 
+	         auto_smultiply_16[0].DN, RESET ;;
+	         auto_smultiply_16[0]_smultiply_16.TcL1_3[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN125_FF_SR_EN.latchin CMOS3_1130 (
+	         regh[12:12]', RQ2_9, RESET ;;FF_SR_EN125_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN112_FF_SR_EN.latchin CMOS3_1130 (
+	         regg[15:15]', RQ2_8, RESET ;;FF_SR_EN112_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_14[2]_FF_EN.latchin CMOS3_1130 (zz_4440', 
+	         RESET, GFDN_3 ;;TcL3_14[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_1[2]_FF_EN.latchin CMOS3_1130 (zz_3274', RESET, 
+	         GFDN_3 ;;TcL3_1[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN5_FF_SR_EN.latchin CMOS3_1130 (rega[4:4]', 
+	         RQ2_2, RESET ;;FF_SR_EN5_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN83_FF_SR_EN.latchin CMOS3_1130 (regf[2:2]', 
+	         RQ2_7, RESET ;;FF_SR_EN83_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN14_FF_SR_EN.latchin CMOS3_1130 (rega[13:13]', 
+	         RQ2_2, RESET ;;FF_SR_EN14_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_16[0]_smultiply_16.RQ1_3 CMOS3_1130 (
+	         auto_smultiply_16[0]_smultiply_16.Sr1_3', 
+	         auto_smultiply_16[0]_smultiply_16.Br1_3[0], 
+	         auto_smultiply_16[0].EN' ;;
+	         auto_smultiply_16[0]_smultiply_16.RQ1_3 ) ;
+	.call CMOS3_1130_FF_SR_EN37_FF_SR_EN.latchin CMOS3_1130 (regc[4:4]', 
+	         RQ2_4, RESET ;;FF_SR_EN37_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN1_FF_SR_EN.latchin CMOS3_1130 (rega[0:0]', 
+	         RQ2_2, RESET ;;FF_SR_EN1_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN107_FF_SR_EN.latchin CMOS3_1130 (
+	         regg[10:10]', RQ2_8, RESET ;;FF_SR_EN107_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN42_FF_SR_EN.latchin CMOS3_1130 (regc[9:9]', 
+	         RQ2_4, RESET ;;FF_SR_EN42_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN105_FF_SR_EN.latchin CMOS3_1130 (regg[8:8]', 
+	         RQ2_8, RESET ;;FF_SR_EN105_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN96_FF_SR_EN.latchin CMOS3_1130 (regf[15:15]', 
+	         RQ2_7, RESET ;;FF_SR_EN96_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN55_FF_SR_EN.latchin CMOS3_1130 (regd[6:6]', 
+	         RQ2_5, RESET ;;FF_SR_EN55_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_EN.1_2_LC_FF_EN.latchin CMOS3_1130 (zz_3956', 
+	         RESET, DN ;;FF_EN.1_2_LC_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_35[1]_FF_EN.latchin CMOS3_1130 (zz_4072', 
+	         RESET, GFDN_3 ;;TcL3_35[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN99_FF_SR_EN.latchin CMOS3_1130 (regg[2:2]', 
+	         RQ2_8, RESET ;;FF_SR_EN99_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN62_FF_SR_EN.latchin CMOS3_1130 (regd[13:13]', 
+	         RQ2_5, RESET ;;FF_SR_EN62_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN24_FF_SR_EN.latchin CMOS3_1130 (regb[7:7]', 
+	         RQ2_3, RESET ;;FF_SR_EN24_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN81_FF_SR_EN.latchin CMOS3_1130 (regf[0:0]', 
+	         RQ2_7, RESET ;;FF_SR_EN81_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN79_FF_SR_EN.latchin CMOS3_1130 (rege[14:14]', 
+	         RQ2_6, RESET ;;FF_SR_EN79_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN73_FF_SR_EN.latchin CMOS3_1130 (rege[8:8]', 
+	         RQ2_6, RESET ;;FF_SR_EN73_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_zz_1418 CMOS3_1130 (
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3[1]', 
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3_e, RESET ;;zz_1418 ) ;
+	.call CMOS3_1130_zz_1416 CMOS3_1130 (
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0]', RESET, 
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3_e' ;;zz_1416 ) ;
+	.call CMOS3_1130_FF_SR_EN64_FF_SR_EN.latchin CMOS3_1130 (regd[15:15]', 
+	         RQ2_5, RESET ;;FF_SR_EN64_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN63_FF_SR_EN.latchin CMOS3_1130 (regd[14:14]', 
+	         RQ2_5, RESET ;;FF_SR_EN63_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN80_FF_SR_EN.latchin CMOS3_1130 (rege[15:15]', 
+	         RQ2_6, RESET ;;FF_SR_EN80_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN78_FF_SR_EN.latchin CMOS3_1130 (rege[13:13]', 
+	         RQ2_6, RESET ;;FF_SR_EN78_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN94_FF_SR_EN.latchin CMOS3_1130 (regf[13:13]', 
+	         RQ2_7, RESET ;;FF_SR_EN94_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN43_FF_SR_EN.latchin CMOS3_1130 (regc[10:10]', 
+	         RQ2_4, RESET ;;FF_SR_EN43_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN85_FF_SR_EN.latchin CMOS3_1130 (regf[4:4]', 
+	         RQ2_7, RESET ;;FF_SR_EN85_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN116_FF_SR_EN.latchin CMOS3_1130 (regh[3:3]', 
+	         RQ2_9, RESET ;;FF_SR_EN116_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN52_FF_SR_EN.latchin CMOS3_1130 (regd[3:3]', 
+	         RQ2_5, RESET ;;FF_SR_EN52_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_23[4]_FF_EN.latchin CMOS3_1130 (zz_3024', 
+	         RESET, GFDN_3 ;;TcL3_23[4]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN87_FF_SR_EN.latchin CMOS3_1130 (regf[6:6]', 
+	         RQ2_7, RESET ;;FF_SR_EN87_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN4_FF_SR_EN.latchin CMOS3_1130 (rega[3:3]', 
+	         RQ2_2, RESET ;;FF_SR_EN4_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_38[2]_FF_EN.latchin CMOS3_1130 (zz_1682', 
+	         RESET, GFDN_3 ;;TcL3_38[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_1[1]_FF_EN.latchin CMOS3_1130 (zz_3414', RESET, 
+	         GFDN_3 ;;TcL3_1[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_auto_smultiply_16[0]_smultiply_16.TcL2_1[1]_FF_EN.latchin CMOS3_1130 (
+	         zz_4884', RESET, auto_smultiply_16[0]_smultiply_16.GFDN_2 ;;
+	         auto_smultiply_16[0]_smultiply_16.TcL2_1[1]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN25_FF_SR_EN.latchin CMOS3_1130 (regb[8:8]', 
+	         RQ2_3, RESET ;;FF_SR_EN25_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN100_FF_SR_EN.latchin CMOS3_1130 (regg[3:3]', 
+	         RQ2_8, RESET ;;FF_SR_EN100_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_20[2]_FF_EN.latchin CMOS3_1130 (zz_1683', 
+	         RESET, GFDN_3 ;;TcL3_20[2]_FF_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN40_FF_SR_EN.latchin CMOS3_1130 (regc[7:7]', 
+	         RQ2_4, RESET ;;FF_SR_EN40_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_FF_SR_EN38_FF_SR_EN.latchin CMOS3_1130 (regc[5:5]', 
+	         RQ2_4, RESET ;;FF_SR_EN38_FF_SR_EN.latchin ) ;
+	.call CMOS3_1130_TcL3_30[2]_FF_EN.latchin CMOS3_1130 (zz_252', RESET, 
+	         GFDN_3 ;;TcL3_30[2]_FF_EN.latchin ) ;
+	.call CMOS3_1120_zz_2963 CMOS3_1120 (DN3_9, DN3_11 ;;zz_2963' ) ;
+	.call CMOS3_1120_FF_SR_EN18_FF_SR_EN.latchin CMOS3_1120 (zz_5712', 
+	         RESET ;;FF_SR_EN18_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_3126 CMOS3_1120 (DN3_4, DN3_7 ;;zz_3126' ) ;
+	.call CMOS3_1120_zz_5087 CMOS3_1120 (RQ2_5, regd[1:1] ;;zz_5087' ) ;
+	.call CMOS3_1120_zz_2886 CMOS3_1120 (DN3_11, DN3_12 ;;zz_2886' ) ;
+	.call CMOS3_1120_zz_4884 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.EN2_2, 
+	         auto_smultiply_16[0]_smultiply_16.DN2_2 ;;zz_4884' ) ;
+	.call CMOS3_1120_FF_SR_EN2_FF_SR_EN.latchin CMOS3_1120 (zz_5468', 
+	         RESET ;;FF_SR_EN2_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_3062 CMOS3_1120 (DN3_22, DN3_25 ;;zz_3062' ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10] CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.count[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[9:9] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10]' ) ;
+	.call CMOS3_1120_FF_SR_EN34_FF_SR_EN.latchin CMOS3_1120 (zz_5401', 
+	         RESET ;;FF_SR_EN34_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_3035 CMOS3_1120 (DN3_7, DN3_9 ;;zz_3035' ) ;
+	.call CMOS3_1120_zz_3024 CMOS3_1120 (DN3_25, DN3_26 ;;zz_3024' ) ;
+	.call CMOS3_1120_EN3_2 CMOS3_1120 (Sr1_2', zz_5223' ;;EN3_2 ) ;
+	.call CMOS3_1120_FF_SR_EN50_FF_SR_EN.latchin CMOS3_1120 (zz_5087', 
+	         RESET ;;FF_SR_EN50_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.EN2_2 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.RQ1_3', zz_4977' ;;
+	         auto_smultiply_16[0]_smultiply_16.EN2_2 ) ;
+	.call CMOS3_1120_zz_4635 CMOS3_1120 (auto_smultiply_16[0].ib1[4:4]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0]' ;;
+	         zz_4635 ) ;
+	.call CMOS3_1120_zz_4558 CMOS3_1120 (auto_smultiply_16[0].ib1[7:7]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0]' ;;
+	         zz_4558 ) ;
+	.call CMOS3_1120_over_en[0:0] CMOS3_1120 (RQ1_3, RQ1_4 ;;
+	         over_en[0:0]' ) ;
+	.call CMOS3_1120_zz_2471 CMOS3_1120 (auto_smultiply_16[0].ib1[8:8]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0]' ;;
+	         zz_2471 ) ;
+	.call CMOS3_1120_zz_4465 CMOS3_1120 (EN3_16, Sr3_14' ;;zz_4465' ) ;
+	.call CMOS3_1120_zz_4440 CMOS3_1120 (EN3_16, DN3_16 ;;zz_4440' ) ;
+	.call CMOS3_1120_zz_4405 CMOS3_1120 (DN3_16, DN3_17 ;;zz_4405' ) ;
+	.call CMOS3_1120_zz_2376 CMOS3_1120 (auto_smultiply_16[0].ib1[11:11]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0]' ;;
+	         zz_2376 ) ;
+	.call CMOS3_1120_zz_2335 CMOS3_1120 (EN3_36, Sr3_37' ;;zz_2335' ) ;
+	.call CMOS3_1120_zz_942 CMOS3_1120 (RQ2_6, rege[1:1] ;;zz_942' ) ;
+	.call CMOS3_1120_zz_87 CMOS3_1120 (RQ2_9, regh[1:1] ;;zz_87' ) ;
+	.call CMOS3_1120_zz_873 CMOS3_1120 (AK3_13', Sr3_13 ;;zz_873 ) ;
+	.call CMOS3_1120_zz_3956 CMOS3_1120 (Sr1_2, LC1_2 ;;zz_3956' ) ;
+	.call CMOS3_1120_zz_871 CMOS3_1120 (zz_873, Sr3_14' ;;zz_871' ) ;
+	.call CMOS3_1120_zz_870 CMOS3_1120 (auto_smultiply_16[0].ib1[2:2]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0]' ;;
+	         zz_870 ) ;
+	.call CMOS3_1120_zz_2144 CMOS3_1120 (EN3_36', AK3_13' ;;zz_2144 ) ;
+	.call CMOS3_1120_zz_2142 CMOS3_1120 (zz_2144, Sr3_38' ;;zz_2142' ) ;
+	.call CMOS3_1120_zz_2139 CMOS3_1120 (zz_2141, Sr3_20' ;;zz_2139' ) ;
+	.call CMOS3_1120_zz_2141 CMOS3_1120 (DN3_17', AK3_13' ;;zz_2141 ) ;
+	.call CMOS3_1120_RQ2_9 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_9 ) ;
+	.call CMOS3_1120_RQ2_8 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_8 ) ;
+	.call CMOS3_1120_RQ2_7 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_7 ) ;
+	.call CMOS3_1120_RQ2_6 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_6 ) ;
+	.call CMOS3_1120_RQ2_5 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_5 ) ;
+	.call CMOS3_1120_RQ2_4 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_4 ) ;
+	.call CMOS3_1120_RQ2_3 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_3 ) ;
+	.call CMOS3_1120_RQ2_2 CMOS3_1120 (GFDN_2', DN2_2 ;;RQ2_2 ) ;
+	.call CMOS3_1120_zz_818 CMOS3_1120 (RQ2_8, regg[1:1] ;;zz_818' ) ;
+	.call CMOS3_1120_zz_4072 CMOS3_1120 (EN3_34, Sr3_35' ;;zz_4072' ) ;
+	.call CMOS3_1120_zz_4069 CMOS3_1120 (auto_smultiply_16[0].ib1[12:12]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0]' ;;
+	         zz_4069 ) ;
+	.call CMOS3_1120_zz_4068 CMOS3_1120 (auto_smultiply_16[0].ib1[5:5]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0]' ;;
+	         zz_4068 ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.FF_EN.2_3_La_FF_EN.latchin CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.AK2_3', RESET ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_EN.2_3_La_FF_EN.latchin ) ;
+	.call CMOS3_1120_zz_1817 CMOS3_1120 (EN3_34', AK3_13' ;;zz_1817 ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8] CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.count[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[7:7] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8]' ) ;
+	.call CMOS3_1120_zz_1815 CMOS3_1120 (zz_1817, Sr3_37' ;;zz_1815' ) ;
+	.call CMOS3_1120_RQ1_4 CMOS3_1120 (DN', DN1_4 ;;RQ1_4 ) ;
+	.call CMOS3_1120_RQ1_3 CMOS3_1120 (DN, Sr1_2 ;;RQ1_3 ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6] CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.count[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[5:5] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6]' ) ;
+	.call CMOS3_1120_zz_1768 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.RQ1_3, 
+	         auto_smultiply_16[0]_smultiply_16.LC1_3 ;;zz_1768' ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4] CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.count[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[3:3] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4]' ) ;
+	.call CMOS3_1120_zz_1747 CMOS3_1120 (EN3_19, Sr3_20' ;;zz_1747' ) ;
+	.call CMOS3_1120_zz_658 CMOS3_1120 (auto_smultiply_16[0].ib1[9:9]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0]' ;;
+	         zz_658 ) ;
+	.call CMOS3_1120_zz_657 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.Br1_3[0], 
+	         auto_smultiply_16[0]_smultiply_16.GFDN_2 ;;zz_657' ) ;
+	.call CMOS3_1120_zz_654 CMOS3_1120 (zz_656, 
+	         auto_smultiply_16[0]_smultiply_16.Sr1_3' ;;zz_654' ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2] CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.count[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2]' ) ;
+	.call CMOS3_1120_zz_1723 CMOS3_1120 (EN3_39, Sr3_38' ;;zz_1723' ) ;
+	.call CMOS3_1120_zz_5712 CMOS3_1120 (RQ2_3, regb[1:1] ;;zz_5712' ) ;
+	.call CMOS3_1120_zz_1683 CMOS3_1120 (EN3_19, DN3_19 ;;zz_1683' ) ;
+	.call CMOS3_1120_zz_1682 CMOS3_1120 (EN3_39, DN3_39 ;;zz_1682' ) ;
+	.call CMOS3_1120_zz_586 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.DN2_2', 
+	         auto_smultiply_16[0]_smultiply_16.AK2_3' ;;zz_586 ) ;
+	.call CMOS3_1120_zz_584 CMOS3_1120 (zz_586, 
+	         auto_smultiply_16[0]_smultiply_16.Sr2_3' ;;zz_584' ) ;
+	.call CMOS3_1120_zz_1634 CMOS3_1120 (DN3_39, DN3_40 ;;zz_1634' ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_2_T5[0:0] CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.T4[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_2_T5[0:0] ) ;
+	.call CMOS3_1120_zz_1584 CMOS3_1120 (DN3_40, DN3_42 ;;zz_1584' ) ;
+	.call CMOS3_1120_zz_1557 CMOS3_1120 (DN3_42, DN3_44 ;;zz_1557' ) ;
+	.call CMOS3_1120_zz_432 CMOS3_1120 (DN3_12', AK3_13' ;;zz_432 ) ;
+	.call CMOS3_1120_zz_5492 CMOS3_1120 (auto_smultiply_16[0].ib1[14:14]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_14_T1[0:0]' ;;
+	         zz_5492 ) ;
+	.call CMOS3_1120_zz_430 CMOS3_1120 (zz_432, Sr3_13' ;;zz_430' ) ;
+	.call CMOS3_1120_zz_3508 CMOS3_1120 (DN3_19', AK3_13' ;;zz_3508 ) ;
+	.call CMOS3_1120_zz_3506 CMOS3_1120 (zz_3508, Sr3_23' ;;zz_3506' ) ;
+	.call CMOS3_1120_zz_5483 CMOS3_1120 (auto_smultiply_16[0].ib1[3:3]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0]' ;;
+	         zz_5483 ) ;
+	.call CMOS3_1120_zz_1482 CMOS3_1120 (DN3_44, DN3_46 ;;zz_1482' ) ;
+	.call CMOS3_1120_auto_smultiply_16[0]_smultiply_16.RQ2_2 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.EN2_2', 
+	         auto_smultiply_16[0]_smultiply_16.DN2_2 ;;
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2 ) ;
+	.call CMOS3_1120_zz_5468 CMOS3_1120 (RQ2_2, rega[1:1] ;;zz_5468' ) ;
+	.call CMOS3_1120_FF_SR_EN82_FF_SR_EN.latchin CMOS3_1120 (zz_1237', 
+	         RESET ;;FF_SR_EN82_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_337 CMOS3_1120 (EN3_28, Sr3_30' ;;zz_337' ) ;
+	.call CMOS3_1120_zz_3414 CMOS3_1120 (EN3_2, DN3_2 ;;zz_3414' ) ;
+	.call CMOS3_1120_zz_5401 CMOS3_1120 (RQ2_4, regc[1:1] ;;zz_5401' ) ;
+	.call CMOS3_1120_zz_3363 CMOS3_1120 (EN3_22, Sr3_23' ;;zz_3363' ) ;
+	.call CMOS3_1120_FF_SR_EN66_FF_SR_EN.latchin CMOS3_1120 (zz_942', 
+	         RESET ;;FF_SR_EN66_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_FF_SR_EN98_FF_SR_EN.latchin CMOS3_1120 (zz_818', 
+	         RESET ;;FF_SR_EN98_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_252 CMOS3_1120 (EN3_28, DN3_28 ;;zz_252' ) ;
+	.call CMOS3_1120_RQ3_38 CMOS3_1120 (Sr3_38', EN3_36' ;;RQ3_38 ) ;
+	.call CMOS3_1120_RQ3_37 CMOS3_1120 (Sr3_37', EN3_34' ;;RQ3_37 ) ;
+	.call CMOS3_1120_RQ3_35 CMOS3_1120 (Sr3_35', DN3_29' ;;RQ3_35 ) ;
+	.call CMOS3_1120_RQ3_30 CMOS3_1120 (Sr3_30', DN3_26' ;;RQ3_30 ) ;
+	.call CMOS3_1120_RQ3_23 CMOS3_1120 (Sr3_23', DN3_19' ;;RQ3_23 ) ;
+	.call CMOS3_1120_RQ3_20 CMOS3_1120 (Sr3_20', DN3_17' ;;RQ3_20 ) ;
+	.call CMOS3_1120_RQ3_14 CMOS3_1120 (Sr3_14', Sr3_13 ;;RQ3_14 ) ;
+	.call CMOS3_1120_RQ3_13 CMOS3_1120 (Sr3_13', DN3_12' ;;RQ3_13 ) ;
+	.call CMOS3_1120_zz_221 CMOS3_1120 (DN3_28, DN3_29 ;;zz_221' ) ;
+	.call CMOS3_1120_zz_5279 CMOS3_1120 (zz_5281, Sr3_30' ;;zz_5279' ) ;
+	.call CMOS3_1120_zz_5281 CMOS3_1120 (DN3_26', AK3_13' ;;zz_5281 ) ;
+	.call CMOS3_1120_zz_3274 CMOS3_1120 (DN3_2, DN3_4 ;;zz_3274' ) ;
+	.call CMOS3_1120_zz_1273 CMOS3_1120 (auto_smultiply_16[0].ib1[10:10]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0]' ;;
+	         zz_1273 ) ;
+	.call CMOS3_1120_zz_5267 CMOS3_1120 (auto_smultiply_16[0].ib1[6:6]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0]' ;;
+	         zz_5267 ) ;
+	.call CMOS3_1120_zz_3266 CMOS3_1120 (EN3_22, DN3_22 ;;zz_3266' ) ;
+	.call CMOS3_1120_zz_1237 CMOS3_1120 (RQ2_7, regf[1:1] ;;zz_1237' ) ;
+	.call CMOS3_1120_zz_5225 CMOS3_1120 (LC1_2, reset[0:0] ;;zz_5225 ) ;
+	.call CMOS3_1120_zz_5224 CMOS3_1120 (LC1_2', LBr1_2[0]' ;;zz_5224 ) ;
+	.call CMOS3_1120_zz_5223 CMOS3_1120 (zz_5225, zz_5224 ;;zz_5223' ) ;
+	.call CMOS3_1120_zz_5192 CMOS3_1120 (auto_smultiply_16[0].ib1[13:13]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0]' ;;
+	         zz_5192 ) ;
+	.call CMOS3_1120_zz_1188 CMOS3_1120 (zz_1190, Sr3_35' ;;zz_1188' ) ;
+	.call CMOS3_1120_zz_1190 CMOS3_1120 (DN3_29', AK3_13' ;;zz_1190 ) ;
+	.call CMOS3_1120_FF_SR_EN114_FF_SR_EN.latchin CMOS3_1120 (zz_87', 
+	         RESET ;;FF_SR_EN114_FF_SR_EN.latchin ) ;
+	.call CMOS3_1120_zz_4979 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0]', 
+	         auto_smultiply_16[0]_smultiply_16.LC1_3 ;;zz_4979 ) ;
+	.call CMOS3_1120_zz_4978 CMOS3_1120 (
+	         auto_smultiply_16[0]_smultiply_16.LC1_3', 
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3[1]' ;;zz_4978 ) ;
+	.call CMOS3_1120_zz_4977 CMOS3_1120 (zz_4979, zz_4978 ;;zz_4977' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_15_T5[0:0] CMOS3_1680 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_12_T5[0:0]', 
+	         zz_4183', zz_5247', zz_5592' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_15_T5[0:0]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_6_T5[0:0] CMOS3_1680 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_3_T5[0:0]', 
+	         zz_817', zz_5788', zz_4878' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_6_T5[0:0]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[0:0] CMOS3_1680 (zz_4059', 
+	         zz_4056', zz_4052', zz_4049' ;;
+	         auto_smultiply_16[0].ib1[0:0]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[2:2] CMOS3_1680 (zz_3922', 
+	         zz_3919', zz_3915', zz_3912' ;;
+	         auto_smultiply_16[0].ib1[2:2]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[4:4] CMOS3_1680 (zz_3587', 
+	         zz_3584', zz_3580', zz_3577' ;;
+	         auto_smultiply_16[0].ib1[4:4]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[6:6] CMOS3_1680 (zz_3360', 
+	         zz_3357', zz_3353', zz_3350' ;;
+	         auto_smultiply_16[0].ib1[6:6]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[8:8] CMOS3_1680 (zz_3056', 
+	         zz_3053', zz_3049', zz_3046' ;;
+	         auto_smultiply_16[0].ib1[8:8]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_12_T5[0:0] CMOS3_1680 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_9_T5[0:0]', 
+	         zz_5236', zz_5573', zz_2448' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_12_T5[0:0]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[10:10] CMOS3_1680 (zz_2281', 
+	         zz_2278', zz_2274', zz_2271' ;;
+	         auto_smultiply_16[0].ib1[10:10]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[11:11] CMOS3_1680 (zz_2204', 
+	         zz_2201', zz_2197', zz_2194' ;;
+	         auto_smultiply_16[0].ib1[11:11]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[12:12] CMOS3_1680 (zz_2136', 
+	         zz_2133', zz_2129', zz_2126' ;;
+	         auto_smultiply_16[0].ib1[12:12]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[13:13] CMOS3_1680 (zz_1706', 
+	         zz_1703', zz_1699', zz_1696' ;;
+	         auto_smultiply_16[0].ib1[13:13]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[15:15] CMOS3_1680 (zz_1514', 
+	         zz_1511', zz_1507', zz_1504' ;;
+	         auto_smultiply_16[0].ib1[15:15]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_9_T5[0:0] CMOS3_1680 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_6_T5[0:0]', 
+	         zz_3957', zz_2074', zz_1474' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_9_T5[0:0]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[1:1] CMOS3_1680 (zz_730', 
+	         zz_727', zz_723', zz_720' ;;auto_smultiply_16[0].ib1[1:1]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[3:3] CMOS3_1680 (zz_510', 
+	         zz_507', zz_503', zz_500' ;;auto_smultiply_16[0].ib1[3:3]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[5:5] CMOS3_1680 (zz_373', 
+	         zz_370', zz_366', zz_363' ;;auto_smultiply_16[0].ib1[5:5]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[7:7] CMOS3_1680 (zz_264', 
+	         zz_261', zz_257', zz_254' ;;auto_smultiply_16[0].ib1[7:7]' ) ;
+	.call CMOS3_1680_auto_smultiply_16[0].ib1[9:9] CMOS3_1680 (zz_115', 
+	         zz_112', zz_108', zz_105' ;;auto_smultiply_16[0].ib1[9:9]' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[13:13]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[12:12]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[11:11]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[10:10]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11] ) ;
+	.call CMOS3_1220_zz_4878 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_5_T5[0:0] ;;
+	         zz_4878' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[9:9] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[8:8]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[9:9] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[7:7] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[6:6]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[7:7] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0], 
+	         auto_smultiply_16[0].ib1[12:12]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0]' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[5:5] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[4:4]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[5:5] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[3:3] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[2:2]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[3:3] ) ;
+	.call CMOS3_1220_LBr1_2_e CMOS3_1220 (Sr1_2, LC1_2' ;;LBr1_2_e' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.LBr1_3_e CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.RQ1_3, 
+	         auto_smultiply_16[0]_smultiply_16.LC1_3' ;;
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3_e' ) ;
+	.call CMOS3_1220_zz_2479 CMOS3_1220 (RQ3_20', RQ3_23' ;;zz_2479 ) ;
+	.call CMOS3_1220_zz_4467 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.DN2_2, 
+	         auto_smultiply_16[0]_smultiply_16.AK2_3 ;;zz_4467' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.GFDN_2 CMOS3_1220 (
+	         zz_4467', auto_smultiply_16[0]_smultiply_16.Sr2_3 ;;
+	         auto_smultiply_16[0]_smultiply_16.GFDN_2 ) ;
+	.call CMOS3_1220_zz_2448 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_11_T5[0:0] ;;
+	         zz_2448' ) ;
+	.call CMOS3_1220_zz_2450 CMOS3_1220 (auto_smultiply_16[0].EN, 
+	         auto_smultiply_16[0]_smultiply_16.Br1_3[0] ;;zz_2450' ) ;
+	.call CMOS3_1220_zz_4183 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_12_T5[0:0] ;;
+	         zz_4183' ) ;
+	.call CMOS3_1220_zz_3957 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_6_T5[0:0] ;;
+	         zz_3957' ) ;
+	.call CMOS3_1220_zz_24 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_15_T5[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.T4[15:15] ;;zz_24 ) ;
+	.call CMOS3_1220_auto_smultiply_16[0].DN CMOS3_1220 (zz_2450', 
+	         auto_smultiply_16[0]_smultiply_16.Sr1_3 ;;
+	         auto_smultiply_16[0].DN ) ;
+	.call CMOS3_1220_zz_817 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_3_T5[0:0] ;;
+	         zz_817' ) ;
+	.call CMOS3_1220_zz_2074 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_7_T5[0:0] ;;
+	         zz_2074' ) ;
+	.call CMOS3_1220_zz_5788 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_4_T5[0:0] ;;
+	         zz_5788' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_2_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_16[0].ib1[0:0]', 
+	         auto_smultiply_16[0].ib1[1:1]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_2_T1[0:0] ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.FF_SR_EN32_FF_SR_EN.latchin CMOS3_1220 (
+	         zz_2021, RESET' ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN32_FF_SR_EN.latchin' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.T4[16:16] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.count[14:14]', 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.T4[16:16] ) ;
+	.call CMOS3_1220_zz_5592 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_14_T5[0:0] ;;
+	         zz_5592' ) ;
+	.call CMOS3_1220_zz_5573 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_10_T5[0:0] ;;
+	         zz_5573' ) ;
+	.call CMOS3_1220_zz_1474 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_8_T5[0:0] ;;
+	         zz_1474' ) ;
+	.call CMOS3_1220_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_14_T1[0:0] CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0], 
+	         auto_smultiply_16[0].ib1[13:13]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_14_T1[0:0]' ) ;
+	.call CMOS3_1220_zz_5247 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_13_T5[0:0] ;;
+	         zz_5247' ) ;
+	.call CMOS3_1220_zz_5236 CMOS3_1220 (
+	         auto_smultiply_16[0]_smultiply_16.T4[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_9_T5[0:0] ;;
+	         zz_5236' ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_12_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_11_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_12_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_4_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_3_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_4_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN21_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_5317 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN21_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN19_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_5314 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN19_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_9_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_8_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_9_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_11_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_10_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_11_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_8_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_7_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_8_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN22_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_4456 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN22_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN27_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_4171 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN27_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN23_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_4168 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN23_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_10_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_9_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_10_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN31_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_3424 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN31_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN29_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_3421 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN29_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN26_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_3142 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN26_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_15_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_14_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_15_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_7_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_6_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_7_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_3_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_2_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_3_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN25_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_2305 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN25_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN20_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_2105 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN20_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN18_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_2102 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN18_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_zz_656 CMOS3_1610 (zz_657', auto_smultiply_16[0].EN ;;
+	         zz_656 ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN24_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_2008 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN24_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN17_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1965 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN17_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_14_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_13_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_14_T5[0:0] ) ;
+	.call CMOS3_1610_FF_EN.auto_smultiply_16[0]_FF_EN.latchin CMOS3_1610 (
+	         RESET, auto_smultiply_16[0].DN ;;
+	         FF_EN.auto_smultiply_16[0]_FF_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_6_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_5_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_6_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.RQ1_5 CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.DN1_5, 
+	         auto_smultiply_16[0].DN ;;
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN30_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1095 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN30_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.FF_SR_EN28_FF_SR_EN.latchin CMOS3_1610 (
+	         RESET, zz_1092 ;;
+	         auto_smultiply_16[0]_smultiply_16.FF_SR_EN28_FF_SR_EN.latchin ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_13_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_12_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_13_T5[0:0] ) ;
+	.call CMOS3_1610_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_5_T5[0:0] CMOS3_1610 (
+	         auto_smultiply_16[0]_smultiply_16.T4[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_4_T5[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_5_T5[0:0] ) ;
+	.call CMOS3_1770_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_4_T1[0:0] CMOS3_1770 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_2_T1[0:0], 
+	         zz_870, zz_5483 ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_4_T1[0:0] ) ;
+	.call CMOS3_1770_Sw3_30_FF_EN.latchin CMOS3_1770 (zz_5279', RESET, 
+	         DN ;;Sw3_30_FF_EN.latchin' ) ;
+	.call CMOS3_1770_auto_smultiply_16[0]_smultiply_16.Sw1_3_FF_EN.latchin CMOS3_1770 (
+	         zz_654', RESET, auto_smultiply_16[0].DN ;;
+	         auto_smultiply_16[0]_smultiply_16.Sw1_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_14_FF_EN.latchin CMOS3_1770 (zz_871', RESET, DN ;;
+	         Sw3_14_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_37_FF_EN.latchin CMOS3_1770 (zz_1815', RESET, 
+	         DN ;;Sw3_37_FF_EN.latchin' ) ;
+	.call CMOS3_1770_auto_smultiply_16[0]_smultiply_16.Sw2_3_FF_EN.latchin CMOS3_1770 (
+	         zz_584', RESET, auto_smultiply_16[0].DN ;;
+	         auto_smultiply_16[0]_smultiply_16.Sw2_3_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_38_FF_EN.latchin CMOS3_1770 (zz_2142', RESET, 
+	         DN ;;Sw3_38_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_20_FF_EN.latchin CMOS3_1770 (zz_2139', RESET, 
+	         DN ;;Sw3_20_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw1_2_FF_EN.latchin CMOS3_1770 (zz_1821', RESET, DN ;;
+	         Sw1_2_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_35_FF_EN.latchin CMOS3_1770 (zz_1188', RESET, 
+	         DN ;;Sw3_35_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_23_FF_EN.latchin CMOS3_1770 (zz_3506', RESET, 
+	         DN ;;Sw3_23_FF_EN.latchin' ) ;
+	.call CMOS3_1770_Sw3_13_FF_EN.latchin CMOS3_1770 (zz_430', RESET, DN ;;
+	         Sw3_13_FF_EN.latchin' ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0], 
+	         auto_smultiply_16[0].ib1[4:4]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0], 
+	         auto_smultiply_16[0].ib1[2:2]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0], 
+	         auto_smultiply_16[0].ib1[5:5]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0], 
+	         auto_smultiply_16[0].ib1[11:11]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0], 
+	         auto_smultiply_16[0].ib1[3:3]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0], 
+	         auto_smultiply_16[0].ib1[6:6]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0] ) ;
+	.call CMOS3_1660_zz_3965 CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.T4[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.d_2_T5[0:0] ;;
+	         zz_3965 ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0], 
+	         auto_smultiply_16[0].ib1[10:10]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0], 
+	         auto_smultiply_16[0].ib1[7:7]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0], 
+	         auto_smultiply_16[0].ib1[9:9]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0] ) ;
+	.call CMOS3_1660_zz_1620 CMOS3_1660 (zz_1624', zz_1621' ;;zz_1620' ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0], 
+	         auto_smultiply_16[0].ib1[8:8]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0] ) ;
+	.call CMOS3_1660_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0] CMOS3_1660 (
+	         auto_smultiply_16[0].ib1[1:1]', 
+	         auto_smultiply_16[0].ib1[0:0]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0] ) ;
+	.call CMOS3_1350_zz_3142 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[6:6]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.count[6:6]_en ;;zz_3142 ) ;
+	.call CMOS3_1350_zz_1095 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[2:2]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.count[2:2]_en ;;zz_1095 ) ;
+	.call CMOS3_1350_zz_1092 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[4:4]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.count[4:4]_en ;;zz_1092 ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[0:0] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0]', 
+	         auto_smultiply_16[0].ib1[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[0:0] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[2:2] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[2:2], 
+	         auto_smultiply_16[0].ib1[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[2:2] ) ;
+	.call CMOS3_1350_zz_4456 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[10:10]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.count[10:10]_en ;;zz_4456 ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[4:4] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[4:4], 
+	         auto_smultiply_16[0].ib1[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[4:4] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[6:6] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[6:6], 
+	         auto_smultiply_16[0].ib1[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[6:6] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[8:8] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[8:8], 
+	         auto_smultiply_16[0].ib1[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[8:8] ) ;
+	.call CMOS3_1350_zz_2305 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[7:7]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.count[7:7]_en ;;zz_2305 ) ;
+	.call CMOS3_1350_zz_4171 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[5:5]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.count[5:5]_en ;;zz_4171 ) ;
+	.call CMOS3_1350_zz_4168 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[9:9]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.count[9:9]_en ;;zz_4168 ) ;
+	.call CMOS3_1350_zz_1965 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[15:15]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[15:15], 
+	         auto_smultiply_16[0]_smultiply_16.count[15:15]_en ;;zz_1965 ) ;
+	.call CMOS3_1350_zz_2105 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[12:12]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.count[12:12]_en ;;zz_2105 ) ;
+	.call CMOS3_1350_zz_2102 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[14:14]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.count[14:14]_en ;;zz_2102 ) ;
+	.call CMOS3_1350_zz_2021 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[0:0]_in, 
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0]', 
+	         auto_smultiply_16[0]_smultiply_16.count[0:0]_en ;;zz_2021 ) ;
+	.call CMOS3_1350_zz_2008 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[8:8]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.count[8:8]_en ;;zz_2008 ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.T2[0:0] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3[1], 
+	         auto_smultiply_16[0]_smultiply_16.LC1_3' ;;
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[10:10] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[10:10], 
+	         auto_smultiply_16[0].ib1[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[10:10] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[11:11] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[11:11], 
+	         auto_smultiply_16[0].ib1[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[11:11] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[1:1] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[1:1], 
+	         auto_smultiply_16[0].ib1[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[1:1] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[12:12] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[12:12], 
+	         auto_smultiply_16[0].ib1[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[12:12] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[3:3] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[3:3], 
+	         auto_smultiply_16[0].ib1[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[3:3] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[5:5] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[5:5], 
+	         auto_smultiply_16[0].ib1[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[5:5] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[13:13] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[13:13], 
+	         auto_smultiply_16[0].ib1[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[13:13] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.Br1_3[0] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0]', 
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3[1]', 
+	         auto_smultiply_16[0]_smultiply_16.LC1_3' ;;
+	         auto_smultiply_16[0]_smultiply_16.Br1_3[0] ) ;
+	.call CMOS3_1350_zz_3424 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[1:1]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.count[1:1]_en ;;zz_3424 ) ;
+	.call CMOS3_1350_zz_3421 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[3:3]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.count[3:3]_en ;;zz_3421 ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[14:14] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[14:14], 
+	         auto_smultiply_16[0].ib1[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[14:14] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[7:7] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[7:7], 
+	         auto_smultiply_16[0].ib1[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[7:7] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[15:15] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[15:15], 
+	         auto_smultiply_16[0].ib1[15:15], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[15:15] ) ;
+	.call CMOS3_1350_auto_smultiply_16[0]_smultiply_16.M1[9:9] CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[9:9], 
+	         auto_smultiply_16[0].ib1[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.M1[9:9] ) ;
+	.call CMOS3_1350_zz_5317 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[11:11]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.count[11:11]_en ;;zz_5317 ) ;
+	.call CMOS3_1350_zz_5314 CMOS3_1350 (
+	         auto_smultiply_16[0]_smultiply_16.count[13:13]_in, 
+	         auto_smultiply_16[0]_smultiply_16.count[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.count[13:13]_en ;;zz_5314 ) ;
+	.call CMOS3_1740_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_7_T1[0:0] CMOS3_1740 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_4_T1[0:0], 
+	         zz_4635, zz_4068, zz_5267 ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_7_T1[0:0] ) ;
+	.call CMOS3_1740_zz_2475 CMOS3_1740 (RQ3_30, RQ3_35, RQ3_37, RQ3_38 ;;
+	         zz_2475 ) ;
+	.call CMOS3_1740_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_13_T1[0:0] CMOS3_1740 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_10_T1[0:0], 
+	         zz_1273, zz_2376, zz_4069 ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_13_T1[0:0] ) ;
+	.call CMOS3_1740_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_10_T1[0:0] CMOS3_1740 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_7_T1[0:0], 
+	         zz_4558, zz_2471, zz_658 ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_10_T1[0:0] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[3:3] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.count[3:3] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[3:3] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[5:5] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.count[5:5] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[5:5] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[7:7] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.count[7:7] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[7:7] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[9:9] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.count[9:9] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[9:9] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[10:10] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.count[10:10] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[10:10] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[11:11] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.count[11:11] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[11:11] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[12:12] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.count[12:12] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[12:12] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[13:13] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.count[13:13] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[13:13] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[14:14] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.count[14:14] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[14:14] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[15:15] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.T4[16:16], 
+	         auto_smultiply_16[0]_smultiply_16.count[15:15] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[15:15] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[2:2] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.count[2:2] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[2:2] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[4:4] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.count[4:4] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[4:4] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[6:6] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.count[6:6] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[6:6] ) ;
+	.call CMOS3_2350_auto_smultiply_16[0]_smultiply_16.T4[8:8] CMOS3_2350 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.count[8:8] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[8:8] ) ;
+	.call CMOS3_1760_FF_EN_over0_FF_EN.latchin CMOS3_1760 (zz_5072, 
+	         zz_5070 ;;FF_EN_over0_FF_EN.latchin ) ;
+	.call CMOS3_1760_LBr1_2_0_FF_EN.latchin CMOS3_1760 (zz_4367, zz_4365 ;;
+	         LBr1_2_0_FF_EN.latchin ) ;
+	.call CMOS3_1760_auto_smultiply_16[0]_smultiply_16.T2[0:0]_L_FF_EN.latchin CMOS3_1760 (
+	         zz_1418, zz_1416 ;;
+	         auto_smultiply_16[0]_smultiply_16.T2[0:0]_L_FF_EN.latchin ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[9:9]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[9:9]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[7:7]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[7:7]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[5:5]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[5:5]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[3:3]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[3:3]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[1:1]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[1:1]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[8:8]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[8:8]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[15:15]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[15:15]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[6:6]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[6:6]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[14:14]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[14:14]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[4:4]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[4:4]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[13:13]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[13:13]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[2:2]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[2:2]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[12:12]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[12:12]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[0:0]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[0:0]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[11:11]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[11:11]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.count[10:10]_en CMOS3_1230 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3', 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ;;
+	         auto_smultiply_16[0]_smultiply_16.count[10:10]_en ) ;
+	.call CMOS3_1230_auto_smultiply_16[0]_smultiply_16.AK2_3 CMOS3_1230 (
+	         zz_24, 
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_15_T5[0:0]', 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3 ;;
+	         auto_smultiply_16[0]_smultiply_16.AK2_3' ) ;
+	.call CMOS3_1230_auto_smultiply_16[0].ib1[14:14] CMOS3_1230 (zz_1631', 
+	         zz_1628', zz_1620' ;;auto_smultiply_16[0].ib1[14:14] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[14:14]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[12:12]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[13:13]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[11:11]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_5_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[10:10] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_13_T1[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_3_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_6_T1[0:0]' ) ;
+	.call CMOS3_1310_LBr1_2_e CMOS3_1310 (LBr1_2_e' ;;LBr1_2_e ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.EN2_2 CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.EN2_2 ;;
+	         auto_smultiply_16[0]_smultiply_16.EN2_2' ) ;
+	.call CMOS3_1310_GFDN_2 CMOS3_1310 (GFDN_2 ;;GFDN_2' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.LD2_3 CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.LD2_3 ;;
+	         auto_smultiply_16[0]_smultiply_16.LD2_3' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.LBr1_3_e CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3_e' ;;
+	         auto_smultiply_16[0]_smultiply_16.LBr1_3_e ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_12_T1[0:0]' ) ;
+	.call CMOS3_1310_over_en[0:0] CMOS3_1310 (over_en[0:0]' ;;
+	         over_en[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_4_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[0:0]' ;;
+	         auto_smultiply_16[0].ib1[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_7_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[2:2] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[2:2]' ;;
+	         auto_smultiply_16[0].ib1[2:2] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[4:4] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[4:4]' ;;
+	         auto_smultiply_16[0].ib1[4:4] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[8:8] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[8:8]' ;;
+	         auto_smultiply_16[0].ib1[8:8] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.RQ1_5 CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[6:6] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[6:6]' ;;
+	         auto_smultiply_16[0].ib1[6:6] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_11_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.RQ2_2 CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2 ;;
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].EN CMOS3_1310 (
+	         auto_smultiply_16[0].EN' ;;auto_smultiply_16[0].EN ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_9_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0]' ;;
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[1:1] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[1:1]' ;;
+	         auto_smultiply_16[0].ib1[1:1] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_8_T1[0:0]' ) ;
+	.call CMOS3_1310_RQ3_23 CMOS3_1310 (RQ3_23 ;;RQ3_23' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[10:10] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[10:10]' ;;
+	         auto_smultiply_16[0].ib1[10:10] ) ;
+	.call CMOS3_1310_RQ3_20 CMOS3_1310 (RQ3_20 ;;RQ3_20' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[8:8] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_2_T1[0:0]' ) ;
+	.call CMOS3_1310_RQ1_3 CMOS3_1310 (RQ1_3 ;;RQ1_3' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[3:3] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[3:3]' ;;
+	         auto_smultiply_16[0].ib1[3:3] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.AK2_3 CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.AK2_3' ;;
+	         auto_smultiply_16[0]_smultiply_16.AK2_3 ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[6:6] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[5:5] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[5:5]' ;;
+	         auto_smultiply_16[0].ib1[5:5] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[9:9] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[9:9]' ;;
+	         auto_smultiply_16[0].ib1[9:9] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[11:11] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[11:11]' ;;
+	         auto_smultiply_16[0].ib1[11:11] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0] ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.d_10_T1[0:0]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[7:7] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[7:7]' ;;
+	         auto_smultiply_16[0].ib1[7:7] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[12:12] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[12:12]' ;;
+	         auto_smultiply_16[0].ib1[12:12] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[4:4] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2] CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2]' ;;
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_2_smultiply_16_2.c_T4[2:2] ) ;
+	.call CMOS3_1310_RESET CMOS3_1310 (RESET ;;RESET' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[13:13] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[13:13]' ;;
+	         auto_smultiply_16[0].ib1[13:13] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[14:14] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[14:14] ;;
+	         auto_smultiply_16[0].ib1[14:14]' ) ;
+	.call CMOS3_1310_auto_smultiply_16[0].ib1[15:15] CMOS3_1310 (
+	         auto_smultiply_16[0].ib1[15:15]' ;;
+	         auto_smultiply_16[0].ib1[15:15] ) ;
+	.call CMOS3_1310_auto_smultiply_16[0]_smultiply_16.RQ1_3 CMOS3_1310 (
+	         auto_smultiply_16[0]_smultiply_16.RQ1_3 ;;
+	         auto_smultiply_16[0]_smultiply_16.RQ1_3' ) ;
+	.call CMOS3_1140_auto_smultiply_16[0].EN CMOS3_1140 (RQ3_13, RQ3_14, 
+	         zz_2479, zz_2475 ;;auto_smultiply_16[0].EN' ) ;
+	.call CMOS3_1140_auto_smultiply_16[0]_smultiply_16.T1[0:0] CMOS3_1140 (
+	         auto_smultiply_16[0]_smultiply_16.smultiply_16_1_smultiply_16_1.c_13_T1[0:0], 
+	         zz_5192, zz_5492, zz_2413 ;;
+	         auto_smultiply_16[0]_smultiply_16.T1[0:0]' ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[9:9]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[9:9], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[9:9]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[7:7]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[7:7], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[7:7]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[5:5]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[5:5], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[5:5]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[3:3]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[3:3], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[3:3]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[1:1]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[1:1], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[1:1]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[8:8]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[8:8], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[8:8]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[15:15]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[15:15], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[15:15], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[15:15], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[15:15]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[6:6]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[6:6], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[6:6]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[14:14]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[14:14], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[14:14]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[4:4]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[4:4], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[4:4]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[13:13]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[13:13], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[13:13]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[2:2]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[2:2], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[2:2]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[12:12]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[12:12], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[12:12]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[0:0]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[0:0]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[11:11]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[11:11], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[11:11]_in ) ;
+	.call CMOS3_1810_auto_smultiply_16[0]_smultiply_16.count[10:10]_in CMOS3_1810 (
+	         auto_smultiply_16[0].ib1[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.RQ2_2, 
+	         auto_smultiply_16[0]_smultiply_16.T4[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.LD2_3, 
+	         auto_smultiply_16[0]_smultiply_16.M1[10:10], 
+	         auto_smultiply_16[0]_smultiply_16.RQ1_5 ;;
+	         auto_smultiply_16[0]_smultiply_16.count[10:10]_in ) ;
+	.call CMOS3_2310_auto_smultiply_16[0]_smultiply_16.T4[1:1] CMOS3_2310 (
+	         auto_smultiply_16[0]_smultiply_16.T4[0:0], 
+	         auto_smultiply_16[0]_smultiply_16.count[1:1] ;;
+	         auto_smultiply_16[0]_smultiply_16.T4[1:1] ) ;
+	.call CMOS3_1670_GFDN_2 CMOS3_1670 (Sr1_2, LC1_2', reset[0:0] ;;
+	         GFDN_2 ) ;
+
+.endmodel elliptic ;
+

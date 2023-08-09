@@ -1,0 +1,18 @@
+
+.model CM82 ;
+
+	.date 910103085120 ;	# January 3 1991, 08:51.20
+
+	.inputs  a b c d e ;
+	.outputs f g h ;
+
+	f = a s' + a' s ;
+	g = o' r' + o r ;
+	h = d e + o' e + o' d ;
+	s = b c' + b' c ;
+	o = b' c' + a' c' + a' b' ;
+	r = d e' + d' e ;
+
+
+.endmodel CM82 ;
+

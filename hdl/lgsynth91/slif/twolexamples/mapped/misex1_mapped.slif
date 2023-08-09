@@ -1,0 +1,99 @@
+
+.model misex1.pla ;
+
+	.date 910108183641 ;	# January 8 1991, 18:36.41
+
+	.inputs  dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip page rmwB ;
+	.outputs dmnst3B dmnst2B dmnst1B dmnst0B adctlp2B adctlp1B adctlp0B ;
+
+	.type COST %f ;
+	.type LOAD %f ;
+	.type DRIVE %d ;
+	.type DELAY (2 %f ) ;
+
+	.call CMOS3_1140_[31] CMOS3_1140 (dmpst1', yskip, dmpst0, dmpst2 ;;
+	         [31] ) ;
+	.call CMOS3_1140_[30] CMOS3_1140 (dmpst2', xskip, dmpst1, dmpst3 ;;
+	         [30] ) ;
+	.call CMOS3_1140_[26] CMOS3_1140 (page', dmpst0, dmpst1, dmpst3 ;;
+	         [26] ) ;
+	.call CMOS3_1140_[15] CMOS3_1140 (zz_16', xskip, dmpst0, dmpst1 ;;
+	         [15] ) ;
+	.call CMOS3_1140_[14] CMOS3_1140 (dmpst2', rmwB, dmpst1, dmpst3 ;;
+	         [14] ) ;
+	.call CMOS3_1140_[13] CMOS3_1140 (dmpst1', yskip, dmpst0, dmpst2 ;;
+	         [13] ) ;
+	.call CMOS3_1140_[11] CMOS3_1140 (zz_4', dmpst1, dmpst2, dmpst3 ;;
+	         [11] ) ;
+	.call CMOS3_1140_[10] CMOS3_1140 (zz_2', yskip, dmpst0, dmpst2 ;;
+	         [10] ) ;
+	.call CMOS3_1130_zz_66 CMOS3_1130 ([29], [30], [31] ;;zz_66' ) ;
+	.call CMOS3_1130_zz_60 CMOS3_1130 ([9], [10], [11] ;;zz_60' ) ;
+	.call CMOS3_1130_[29] CMOS3_1130 (zz_55', dmpst0, dmpst2 ;;[29] ) ;
+	.call CMOS3_1130_[9] CMOS3_1130 (zz_46', dmpst1, dmpst3 ;;[9] ) ;
+	.call CMOS3_1130_[25] CMOS3_1130 (zz_44', dmpst2, dmpst3 ;;[25] ) ;
+	.call CMOS3_1130_[24] CMOS3_1130 (zz_40', dmpst0, dmpst2 ;;[24] ) ;
+	.call CMOS3_1130_[19] CMOS3_1130 (dmpst0, dmpst1, dmpst3 ;;[19] ) ;
+	.call CMOS3_1130_[4] CMOS3_1130 (zz_28', dmpst1, dmpst2 ;;[4] ) ;
+	.call CMOS3_1130_[20] CMOS3_1130 (zz_26', dmpst1, dmpst2 ;;[20] ) ;
+	.call CMOS3_1130_[12] CMOS3_1130 (zz_7', dmpst0, dmpst2 ;;[12] ) ;
+	.call CMOS3_1230_adctlp2B CMOS3_1230 (zz_75', [18]', zz_74' ;;
+	         adctlp2B ) ;
+	.call CMOS3_1230_adctlp0B CMOS3_1230 ([27]', [28]', zz_66' ;;
+	         adctlp0B ) ;
+	.call CMOS3_1230_dmnst2B CMOS3_1230 ([2]', [3]', zz_63' ;;dmnst2B ) ;
+	.call CMOS3_1230_dmnst1B CMOS3_1230 ([7]', [8]', zz_60' ;;dmnst1B ) ;
+	.call CMOS3_1230_[28] CMOS3_1230 (dmpst3, dmpst0, zz_50 ;;[28]' ) ;
+	.call CMOS3_1230_[27] CMOS3_1230 (dmpst2, dmpst3', dmpst0 ;;[27]' ) ;
+	.call CMOS3_1230_[8] CMOS3_1230 (dmpst3, dmpst0, zz_41 ;;[8]' ) ;
+	.call CMOS3_1230_[7] CMOS3_1230 (dmpst2, dmpst3', dmpst0 ;;[7]' ) ;
+	.call CMOS3_1230_[3] CMOS3_1230 (dmpst1, dmpst0, zz_22 ;;[3]' ) ;
+	.call CMOS3_1230_[1] CMOS3_1230 (dmpst3, dmpst1, zz_17 ;;[1]' ) ;
+	.call CMOS3_1230_[0] CMOS3_1230 (dmpst2, dmpst1, zz_12 ;;[0]' ) ;
+	.call CMOS3_1220_dmnst3B CMOS3_1220 ([0]', [1]' ;;dmnst3B ) ;
+	.call CMOS3_1220_zz_7 CMOS3_1220 (dmpst3, dmpst1 ;;zz_7' ) ;
+	.call CMOS3_1220_zz_2 CMOS3_1220 (dmpst1, dmpst3' ;;zz_2' ) ;
+	.call CMOS3_1220_zz_55 CMOS3_1220 (dmpst3, dmpst1 ;;zz_55' ) ;
+	.call CMOS3_1220_zz_46 CMOS3_1220 (dmpst2, xskip ;;zz_46' ) ;
+	.call CMOS3_1220_zz_44 CMOS3_1220 (dmpst1, yskip ;;zz_44' ) ;
+	.call CMOS3_1220_zz_40 CMOS3_1220 (dmpst3, dmpst1 ;;zz_40' ) ;
+	.call CMOS3_1220_zz_28 CMOS3_1220 (dmpst3, dmpst0 ;;zz_28' ) ;
+	.call CMOS3_1220_zz_26 CMOS3_1220 (dmpst3, dmpst0 ;;zz_26' ) ;
+	.call CMOS3_1220_zz_16 CMOS3_1220 (dmpst2, dmpst3' ;;zz_16' ) ;
+	.call CMOS3_1220_[18] CMOS3_1220 (dmpst1, zz_24 ;;[18]' ) ;
+	.call CMOS3_1220_[2] CMOS3_1220 (dmpst2, zz_20 ;;[2]' ) ;
+	.call CMOS3_1610_zz_33 CMOS3_1610 (dmpst3, dmpst0 ;;zz_33 ) ;
+	.call CMOS3_1610_zz_21 CMOS3_1610 (dmpst3, dmpst0 ;;zz_21 ) ;
+	.call CMOS3_1610_zz_12 CMOS3_1610 (dmpst3, dmpst0 ;;zz_12 ) ;
+	.call CMOS3_1120_zz_74 CMOS3_1120 ([19], [20] ;;zz_74' ) ;
+	.call CMOS3_1120_zz_63 CMOS3_1120 ([4], zz_64 ;;zz_63' ) ;
+	.call CMOS3_1120_zz_50 CMOS3_1120 (dmpst1, dmpst2 ;;zz_50 ) ;
+	.call CMOS3_1120_zz_41 CMOS3_1120 (dmpst1, dmpst2 ;;zz_41 ) ;
+	.call CMOS3_1120_zz_36 CMOS3_1120 (dmpst1, dmpst2 ;;zz_36 ) ;
+	.call CMOS3_1120_zz_34 CMOS3_1120 (dmpst0, dmpst1 ;;zz_34 ) ;
+	.call CMOS3_1120_zz_31 CMOS3_1120 (dmpst2, dmpst3 ;;zz_31 ) ;
+	.call CMOS3_1120_zz_30 CMOS3_1120 (dmpst1, dmpst3 ;;zz_30 ) ;
+	.call CMOS3_1120_zz_24 CMOS3_1120 (dmpst0, dmpst2 ;;zz_24 ) ;
+	.call CMOS3_1120_zz_22 CMOS3_1120 (dmpst2, dmpst3 ;;zz_22 ) ;
+	.call CMOS3_1120_zz_19 CMOS3_1120 (dmpst1, dmpst3 ;;zz_19 ) ;
+	.call CMOS3_1120_zz_20 CMOS3_1120 (dmpst1, dmpst3 ;;zz_20 ) ;
+	.call CMOS3_1120_zz_17 CMOS3_1120 (dmpst0, dmpst2 ;;zz_17 ) ;
+	.call CMOS3_1660_zz_37 CMOS3_1660 (dmpst3, dmpst0 ;;zz_37 ) ;
+	.call CMOS3_1930_zz_64 CMOS3_1930 (dmpst1, yskip, zz_31, page, 
+	         dmpst3', zz_34 ;;zz_64 ) ;
+	.call CMOS3_1810_zz_71 CMOS3_1810 (dmpst2, zz_30, dmpst1, zz_33, 
+	         zz_37, zz_36 ;;zz_71 ) ;
+	.call CMOS3_1870_zz_75 CMOS3_1870 (dmpst2, zz_19, dmpst1, zz_21 ;;
+	         zz_75' ) ;
+	.call CMOS3_1310_dmpst3 CMOS3_1310 (dmpst3 ;;dmpst3' ) ;
+	.call CMOS3_1310_dmpst2 CMOS3_1310 (dmpst2 ;;dmpst2' ) ;
+	.call CMOS3_1310_dmpst1 CMOS3_1310 (dmpst1 ;;dmpst1' ) ;
+	.call CMOS3_1310_page CMOS3_1310 (page ;;page' ) ;
+	.call CMOS3_1760_zz_4 CMOS3_1760 (page, dmpst0 ;;zz_4' ) ;
+	.call CMOS3_1740_adctlp1B CMOS3_1740 (zz_71, [24], [25], [26] ;;
+	         adctlp1B ) ;
+	.call CMOS3_1740_dmnst0B CMOS3_1740 ([12], [13], [14], [15] ;;
+	         dmnst0B ) ;
+
+.endmodel misex1.pla ;
+

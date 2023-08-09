@@ -1,0 +1,125 @@
+	LGSynth91 - 1991 International Workshop on Logic Synthesis.
+
+		How To Obtain Benchmark Data
+
+The Logic Synthesis '91 benchmark data can be obtained from MCNC
+in one of two ways: by FTP over ARPA Net or by 9-track tape.
+
+1.0 ARPA Net FTP
+
+If you have access to an ARPA Net connection you may establish an FTP
+connection to host "mcnc.mcnc.org" and copy the files using the
+"get" command.  The login name is "anonymous" and the password is 
+any string (we ask that you use your name or home login id).
+The files are in the "/pub/benchmark/LGSynth91" directory.  
+
+The command sequence to establish a connection to the host machine is:
+
+	ftp mcnc.mcnc.org
+	anonymous 	(in response to the "Name" prompt)
+	(your id) 	(in response to the "password" prompt)
+
+
+FOR UNIX(tm) USERS:
+
+If you have a UNIX(tm) machine on the Arpanet,
+check to see if you have the "uncompress" and "tar"
+commands available. Shipping the benchmarks over in a
+compressed tar format is much faster than in individual
+ASCII files. The compressed and tarred benchmark data is
+in the file "LGSynth91.tar.Z".  If you have both commands, then do
+
+	cd pub/benchmark/LGSynth91
+	binary
+	get LGSynth91.tar.Z
+	bye
+
+on your local machine, uncompress the file with the commands
+	uncompress LGSynth91.tar.Z
+
+un-tar the files with the commands
+
+	tar -xvf LGSynth91.tar
+
+
+Users who do not have the "uncompress" command, but can still use "tar"
+should get the non-compressed tar file:
+
+	cd pub/benchmark/LGSynth91
+	binary
+	get LGSynth91.tar
+	bye
+
+un-tar the files with the commands
+
+	tar -xvf LGSynth91.tar
+
+
+FOR NON-UNIX USERS:
+
+If you do not have the "compress" and "tar" utilities available,
+you will have to copy the files explicitly. The actual ASCII files
+are stored under the following data directories:
+	cmlexamples, fsmexamples, slif, smlexamples, twolexamples
+
+And the slif directory itself has a number of sub-directories:
+	slif/fsmexamples, slif/fsmexamples/sim,
+	slif/hlexamples, slif/hlexamples/mapped ,slif/hlexamples/sim,
+	slif/mlexamples, slif/mlexamples/mapped, slif/mlexamples/sim,
+	slif/tech,
+	slif/twolexamples, slif/twolexamples/mapped, slif/twolexamples/sim
+
+Documentation is in "DOCUMENTATION"; a library is in "wkslibrary"
+To explicitly get all of the files:
+
+	cd pub/benchmark/LGSynth91
+	runique
+	get LGSynth91.readme
+	get LGSynth91.list
+	cd cmlexamples
+	mget *
+	cd ../fsmexamples
+	mget *
+	cd ../slif
+	mget *
+	cd fsmexamples
+	mget *
+	cd sim
+	mget *
+	cd ../../hlexamples
+	mget *
+	cd mapped
+	mget *
+	cd ../sim
+	mget *
+	cd ../../mlexamples
+	mget *
+	cd mapped
+	mget *
+	cd ../sim
+	mget *
+	cd ../../tech
+	mget *
+	cd ../twolexamples
+	mget *
+	cd mapped
+	mget *
+	cd ../../sim
+	mget *
+	cd ../smlexamples
+	mget *
+	cd ../twolexamples
+	mget *
+	cd ../wkslibrary
+	mget *
+	cd ../DOCUMENTATION
+	mget *
+	bye
+
+
+2.0 9-Track Tape, SUN-type workstation cartridge, DEC station cartridge.
+
+We are prepared to send you a tape in TAR format.  
+Contact benchmarks@mcnc.org for details.
+ACM SIGDA is providing funds to cover the cost of tapes and shipping,
+so there is no cost to you for this service.

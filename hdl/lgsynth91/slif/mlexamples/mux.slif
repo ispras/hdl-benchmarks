@@ -1,0 +1,23 @@
+
+.model mux ;
+
+	.date 910103085353 ;	# January 3 1991, 08:53.53
+
+	.inputs  a b c d e f g h i j k l m n o p q r s t u ;
+	.outputs v ;
+
+	v = u j0 ;
+	j0 = r' b0' f0' + q f0' g0' + r e0' g0' + q r g0' + q r' f0' + q' r e0' 
+		+ q' b0' e0' + q' r' b0' + b0' e0' f0' g0' ;
+	b0 = o' s' t + p' s' t' + n' s t' + n' p' t' + m' s t + o' p' s' + m' 
+		o' t + m' n' s + m' n' o' p' ;
+	e0 = k' s' t + l' s' t' + j' s t' + j' l' t' + i' s t + k' l' s' + i' 
+		k' t + i' j' s + i' j' k' l' ;
+	f0 = g' s' t + h' s' t' + f' s t' + f' h' t' + e' s t + g' h' s' + e' 
+		g' t + e' f' s + e' f' g' h' ;
+	g0 = c' s' t + d' s' t' + b' s t' + b' d' t' + a' s t + c' d' s' + a' 
+		c' t + a' b' s + a' b' c' d' ;
+
+
+.endmodel mux ;
+

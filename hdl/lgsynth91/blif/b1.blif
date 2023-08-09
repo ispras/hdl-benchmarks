@@ -1,0 +1,22 @@
+.model b1
+.inputs a b c
+.outputs d e f g
+.names n e
+0 1
+.names p f
+0 1
+.names c g
+0 1
+.names a b n
+11 1
+00 1
+.names a b c p
+01- 1
+10- 1
+1-1 1
+-11 1
+0-0 1
+-00 1
+.names c d
+1 1
+.end
