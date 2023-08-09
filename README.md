@@ -10,6 +10,8 @@ The project has the following catalog structure:
  - `bash` - Bash scripts directory
  - `hdl` - HDL benchmarks directory
    - `iwls05` - IWLS'2005 benchmarks
+   - `lgsynth91` - LGSynth'1991 benchmarks
+   - `mcnc` - MCNC'91 benchmarks
    - `quip` - Quartus University Interface Program (QUIP) benchmarks
    - `texas97` - Texas-97 benchmarks
    - `vcegar` - VCEGAR benchmarks
@@ -23,6 +25,18 @@ are fixed) and are used in this project:
  - [IWLS 2005 benchmarks](https://iwls.org/iwls2005/benchmarks.html) are collected
  by Christoph Albrecht, Cadence Research Laboratories at [Berkeley](https://www.berkeley.edu/)
  in June 2005 for the sake of [IWLS](iwls.org) conference;
+
+ - [LGSynth'91 benchmarks](https://ddd.fit.cvut.cz/www/prj/Benchmarks/LGSynth91.7z) (sometimes
+ called as IWLS'91) is a collection of examples used in conjunction with the 1991
+ Microelectronics Center of North Carolina (MCNC) International Workshop on Logic Synthesis
+ and the extension of the 1989 Logic Synthesis and Optimization Benchmarks User Guide, that were
+ collected by [Petr Fišer](https://ddd.fit.cvut.cz/www/prj/Benchmarks/index.php?page=contact),
+ Czech Technical University in Prague;
+
+ - [MCNC benchmarks](https://ddd.fit.cvut.cz/www/prj/Benchmarks/MCNC.7z) were published
+ for Microelectronics Center of North Carolina (MCNC) International Workshop on Logic Synthesis,
+ 1991, and were collected by [Petr Fišer](https://ddd.fit.cvut.cz/www/prj/Benchmarks/index.php?page=contact),
+ Czech Technical University in Prague;
 
  - [QUIP benchmarks](https://github.com/neilisaac/ece496/tree/master/reference/quip_toolkit-9.0/benchmarks) are developed in Altera (now [Intel](https://www.intel.com/content/www/us/en/homepage.html))
  company as a part of freely distributed [QUIP toolkit](https://github.com/neilisaac/ece496/tree/master/reference/quip_toolkit-9.0);
