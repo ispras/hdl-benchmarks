@@ -1,0 +1,997 @@
+.model s953.bench
+.inputs Rdy1RtHS1 Rdy2RtHS1 Rdy1BmHS1 Rdy2BmHS1 IInDoneHS1 RtTSHS1 TpArrayHS1 \
+OutputHS1 WantBmHS1 WantRtHS1 OutAvHS1 FullOHS1 FullIIHS1 Prog_2 Prog_1 Prog_0
+.outputs ReWhBufHS1 TgWhBufHS1 SeOutAvHS1 LdProgHS1 Mode2HS1 ReRtTSHS1 \
+ShftIIRHS1 NewTrHS1 Mode1HS1 ShftORHS1 ActRtHS1 Mode0HS1 TxHIInHS1 LxHIInHS1 \
+NewLineHS1 ActBmHS1 GoBmHS1 LoadOHHS1 DumpIIHS1 SeFullOHS1 GoRtHS1 LoadIIHHS1 \
+SeFullIIHS1
+.wire_load_slope 0.00
+.latch     II2 State_5  0
+.latch     II3 State_4  0
+.latch     II4 State_3  0
+.latch     II5 State_2  0
+.latch     II6 State_1  0
+.latch     II7 State_0  0
+.latch     II8 [8383]  0
+.latch     II9 [8388]  0
+.latch     II10 [8393]  0
+.latch     II11 [8389]  0
+.latch     II12 [8380]  0
+.latch     II13 [8378]  0
+.latch     II14 [8384]  0
+.latch     II15 [8381]  0
+.latch     II16 [8377]  0
+.latch     II17 [8387]  0
+.latch     II18 [8382]  0
+.latch     II19 [8379]  0
+.latch     II20 [8386]  0
+.latch     II21 [8385]  0
+.latch     II22 [8390]  0
+.latch     II23 [8394]  0
+.latch     II24 [8375]  0
+.latch     II25 [8392]  0
+.latch     II26 [8395]  0
+.latch     II27 [8374]  0
+.latch     II28 [8373]  0
+.latch     II29 [8376]  0
+.latch     II30 [8391]  0
+.names II711 II771 II769 II2
+0-- 1
+-0- 1
+--0 1
+.names II721 II723 II3
+0- 1
+-0 1
+.names II725 II381 II551 II4
+0-- 1
+-0- 1
+--0 1
+.names II733 II729 II731 II397 II5
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names II377 II779 II777 II6
+0-- 1
+-0- 1
+--0 1
+.names II311 II7
+0 1
+.names II655 II657 II8
+0- 1
+-0 1
+.names II377 II661 II659 II9
+0-- 1
+-0- 1
+--0 1
+.names II287 II10
+0 1
+.names II475 II669 II667 II11
+0-- 1
+-0- 1
+--0 1
+.names II377 II469 II12
+0- 1
+-0 1
+.names II415 II13
+0 1
+.names II671 II673 II14
+0- 1
+-0 1
+.names II796_1 II675 II15
+0- 1
+-0 1
+.names II323 II16
+0 1
+.names II294 II17
+0 1
+.names II295 II18
+0 1
+.names II371 II323 II19
+0- 1
+-0 1
+.names II297 II20
+0 1
+.names II689 II693 II691 II21
+0-- 1
+-0- 1
+--0 1
+.names II699 II695 II697 II481 II22
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names II300 II23
+0 1
+.names OutAvHS1 II326 II24
+00 1
+.names II814_1 II767 II25
+0- 1
+-0 1
+.names II303 II26
+0 1
+.names OutAvHS1 II275 II27
+00 1
+.names OutAvHS1 FullIIHS1 II28
+00 1
+.names II278 State_2 II441 II29
+000 1
+.names II829_1 II351 II30
+0- 1
+-0 1
+.names Rdy1BmHS1 II265
+0 1
+.names Rdy2BmHS1 II266
+0 1
+.names Rdy1RtHS1 II263
+0 1
+.names Rdy2RtHS1 II264
+0 1
+.names WantBmHS1 II271
+0 1
+.names WantRtHS1 II272
+0 1
+.names Prog_0 II284
+0 1
+.names Prog_1 II283
+0 1
+.names Prog_2 II282
+0 1
+.names FullIIHS1 II275
+0 1
+.names FullOHS1 II274
+0 1
+.names State_0 II281
+0 1
+.names State_1 II280
+0 1
+.names State_2 II279
+0 1
+.names State_3 II278
+0 1
+.names State_4 II277
+0 1
+.names State_5 II276
+0 1
+.names TpArrayHS1 II269
+0 1
+.names IInDoneHS1 II267
+0 1
+.names Rdy1RtHS1 Rdy2RtHS1 II345
+0- 1
+-0 1
+.names II345 II344
+0 1
+.names FullOHS1 FullIIHS1 II326
+00 1
+.names II326 II327
+0 1
+.names State_2 II511 II624
+00 1
+.names II624 II625
+0 1
+.names II280 II281 II495
+0- 1
+-0 1
+.names II495 II494
+0 1
+.names II280 State_0 II512
+00 1
+.names II512 II513
+0 1
+.names II276 II277 II509
+0- 1
+-0 1
+.names II509 II508
+0 1
+.names II276 State_3 II570
+00 1
+.names II570 II571
+0 1
+.names WantBmHS1 II493 II330
+0- 1
+-0 1
+.names II330 II331
+0 1
+.names II495 II509 II440
+00 1
+.names II440 II441
+0 1
+.names II279 II570 II505
+0- 1
+-0 1
+.names II505 II504
+0 1
+.names II857_1 II439 II338
+0- 1
+-0 1
+.names II338 II339
+0 1
+.names II276 II394 II482 II343
+0-- 1
+-0- 1
+--0 1
+.names II343 II342
+0 1
+.names State_2 II281 II508 II425
+0-- 1
+-0- 1
+--0 1
+.names II425 II424
+0 1
+.names State_3 II508 II487
+0- 1
+-0 1
+.names II487 II486
+0 1
+.names State_1 II505 II436
+00 1
+.names II436 II437
+0 1
+.names State_0 II505 II450
+00 1
+.names II450 II451
+0 1
+.names II279 II571 II458
+00 1
+.names II458 II459
+0 1
+.names State_4 II571 II534
+00 1
+.names II534 II535
+0 1
+.names II330 II1025_1 II555
+00 1
+.names II555 II554
+0 1
+.names State_2 II910_1 II391
+00 1
+.names II391 II390
+0 1
+.names II861_1 II861_2 II340
+0- 1
+-0 1
+.names II340 II341
+0 1
+.names II280 II425 II396
+00 1
+.names II396 II397
+0 1
+.names State_1 II425 II521 II414
+000 1
+.names II414 II415
+0 1
+.names State_0 II386 II487 II468
+000 1
+.names II468 II469
+0 1
+.names State_4 II281 II436 II323
+0-- 1
+-0- 1
+--0 1
+.names II323 II322
+0 1
+.names II284 II436 II399
+0- 1
+-0 1
+.names II399 II398
+0 1
+.names Prog_0 II450 II429
+0- 1
+-0 1
+.names II429 II428
+0 1
+.names II277 II327 II504 II453
+0-- 1
+-0- 1
+--0 1
+.names II453 II452
+0 1
+.names II374 II534 II445
+0- 1
+-0 1
+.names II445 II444
+0 1
+.names State_3 II396 II381
+0- 1
+-0 1
+.names II381 II380
+0 1
+.names State_0 II335 II399 II366
+000 1
+.names II366 II367
+0 1
+.names II493 II577 II474
+00 1
+.names II474 II475
+0 1
+.names Prog_2 II451 II430
+00 1
+.names II430 II431
+0 1
+.names FullIIHS1 II503 II434
+00 1
+.names II434 II435
+0 1
+.names Rdy1BmHS1 II503 II466
+00 1
+.names II466 II467
+0 1
+.names II279 II382 II371
+0- 1
+-0 1
+.names II371 II370
+0 1
+.names II281 II479 II376
+00 1
+.names II376 II377
+0 1
+.names Rdy1RtHS1 II432 II532 II359
+0-- 1
+-0- 1
+--0 1
+.names II359 II358
+0 1
+.names State_1 II500 II553
+0- 1
+-0 1
+.names II553 II552
+0 1
+.names II388 II1044_1 II567
+00 1
+.names II567 II566
+0 1
+.names II279 Prog_0 II416 II411
+0-- 1
+-0- 1
+--0 1
+.names II411 II410
+0 1
+.names II367 II543 II354
+00 1
+.names II354 II355
+0 1
+.names State_0 II407 II362
+00 1
+.names II362 II363
+0 1
+.names FullIIHS1 II431 II378
+00 1
+.names II378 II379
+0 1
+.names II431 II525 II422
+00 1
+.names II422 II423
+0 1
+.names II609 II511 II539 II328
+000 1
+.names II328 II329
+0 1
+.names II376 II682 II680 II295
+000 1
+.names Rdy2RtHS1 II362 II447
+0- 1
+-0 1
+.names II447 II446
+0 1
+.names II715 II713 II770
+0- 1
+-0 1
+.names II770 II771
+0 1
+.names II1132_1 II1132_2 II690
+0- 1
+-0 1
+.names II690 II691
+0 1
+.names II719 II717 II768
+0- 1
+-0 1
+.names II768 II769
+0 1
+.names II519 II545 II476
+00 1
+.names II476 II477
+0 1
+.names II284 II421 II404
+00 1
+.names II404 II405
+0 1
+.names II1087_1 II469 II660
+0- 1
+-0 1
+.names II660 II661
+0 1
+.names II376 II686 II684 II297
+000 1
+.names II1091_1 II329 II662
+0- 1
+-0 1
+.names II662 II663
+0 1
+.names II408 II678 II676 II294
+000 1
+.names II325 II477 II350
+00 1
+.names II350 II351
+0 1
+.names II737 II735 II778
+0- 1
+-0 1
+.names II778 II779
+0 1
+.names II742 II746 II744 II311
+000 1
+.names II750 II789_1 II287
+00 1
+.names II700 II810_1 II300
+00 1
+.names II706 II708 II303
+00 1
+.names Prog_1 Prog_0 II840_2
+11 1
+.names II263 II264 II873_1
+11 1
+.names II283 II284 II840_1
+11 1
+.names Prog_2 II284 II610
+00 1
+.names Rdy1RtHS1 II274 II612
+00 1
+.names II610 II612 II850_1
+11 1
+.names II277 II282 II335
+0- 1
+-0 1
+.names II335 II345 II963_1
+11 1
+.names Rdy1BmHS1 Rdy2BmHS1 II357
+0- 1
+-0 1
+.names II335 II357 II966_1
+11 1
+.names II840_1 II840_2 II325
+00 1
+.names Rdy2BmHS1 II325 II1025_1
+11 1
+.names II881_1 II881_2 II360
+0- 1
+-0 1
+.names II277 II360 II910_1
+11 1
+.names II523 II575 II614
+00 1
+.names WantRtHS1 II614 II850_2
+11 1
+.names II455 II457 II497
+0- 1
+-0 1
+.names II497 II570 II1044_1
+11 1
+.names II458 II512 II1077_1
+11 1
+.names State_1 II281 II506
+00 1
+.names II458 II506 II1083_1
+11 1
+.names II282 II283 II393
+0- 1
+-0 1
+.names II393 II414 II1170_1
+11 1
+.names RtTSHS1 II278 II521
+0- 1
+-0 1
+.names II424 II521 II1193_1
+11 1
+.names II486 II506 II1184_1
+11 1
+.names II276 Prog_2 II485 II382
+000 1
+.names Prog_0 II382 II1080_1
+11 1
+.names II284 II382 II1107_1
+11 1
+.names II279 II485 II418
+00 1
+.names State_5 II418 II1103_1
+11 1
+.names II345 II418 II1196_1
+11 1
+.names OutputHS1 II322 II1040_1
+11 1
+.names Prog_0 II322 II1103_2
+11 1
+.names II267 II322 II1180_1
+11 1
+.names FullOHS1 FullIIHS1 II317
+0- 1
+-0 1
+.names II317 II398 II1031_1
+11 1
+.names II399 II489 II529
+0- 1
+-0 1
+.names II357 II529 II1166_1
+11 1
+.names II282 II437 II412
+00 1
+.names II281 II412 II1160_1
+11 1
+.names II317 II428 II1034_1
+11 1
+.names II429 II491 II531
+0- 1
+-0 1
+.names II345 II531 II1163_1
+11 1
+.names II429 II539 II590
+00 1
+.names II282 II590 II1136_1
+11 1
+.names Prog_2 II452 II1166_2
+11 1
+.names II263 II466 II1173_1
+11 1
+.names II320 II459 II388
+00 1
+.names II277 II388 II1110_1
+11 1
+.names II267 II388 II1188_2
+11 1
+.names II267 II380 II1199_2
+11 1
+.names II345 II397 II580
+00 1
+.names II278 II580 II789_1
+11 1
+.names II269 II376 II1184_2
+11 1
+.names State_1 II376 II1188_1
+11 1
+.names II336 II367 II596
+00 1
+.names II274 II596 II1143_2
+11 1
+.names II315 II407 II493 II384
+000 1
+.names WantBmHS1 II384 II1100_1
+11 1
+.names II1047_1 II1047_2 II568
+0- 1
+-0 1
+.names II378 II568 II1128_1
+11 1
+.names II280 II358 II1056_1
+11 1
+.names State_4 II566 II1176_1
+11 1
+.names II1028_1 II355 II556
+0- 1
+-0 1
+.names II317 II556 II1097_1
+11 1
+.names II315 II363 II348
+00 1
+.names II348 II554 II1180_2
+11 1
+.names II331 II447 II600
+00 1
+.names Prog_0 II600 II1176_2
+11 1
+.names II274 II379 II525 II364
+000 1
+.names II1037_1 II439 II562
+0- 1
+-0 1
+.names II364 II562 II810_1
+11 1
+.names II338 II364 II1199_1
+11 1
+.names II344 II873_1 II353
+00 1
+.names II353 II404 II1143_1
+11 1
+.names II517 II545 II573
+0- 1
+-0 1
+.names II271 II573 II1140_1
+11 1
+.names II331 II517 II582
+00 1
+.names WantRtHS1 II582 II1094_1
+11 1
+.names Rdy1BmHS1 Prog_0 II1047_2
+1- 1
+-1 1
+.names IInDoneHS1 Prog_2 II881_1
+1- 1
+-1 1
+.names II264 II284 II1047_1
+1- 1
+-1 1
+.names II282 II326 II881_2
+1- 1
+-1 1
+.names Rdy1BmHS1 II266 II493
+0- 1
+-0 1
+.names Prog_0 II493 II857_1
+1- 1
+-1 1
+.names II274 Prog_2 II523
+0- 1
+-0 1
+.names FullIIHS1 II523 II834_1
+1- 1
+-1 1
+.names II279 II495 II892_1
+1- 1
+-1 1
+.names II473 II357 II336
+0- 1
+-0 1
+.names Prog_0 II336 II1037_1
+1- 1
+-1 1
+.names II266 II506 II457
+0- 1
+-0 1
+.names II265 II457 II861_2
+1- 1
+-1 1
+.names II269 II625 II892_2
+1- 1
+-1 1
+.names II495 II511 II320
+0- 1
+-0 1
+.names II279 II320 II896_1
+1- 1
+-1 1
+.names II264 II512 II455
+0- 1
+-0 1
+.names II263 II455 II861_1
+1- 1
+-1 1
+.names Prog_2 II482 II589
+0- 1
+-0 1
+.names State_0 II589 II1121_1
+1- 1
+-1 1
+.names II283 II323 II796_1
+1- 1
+-1 1
+.names II265 Rdy2BmHS1 II543
+0- 1
+-0 1
+.names State_0 II318 II436 II577
+0-- 1
+-0- 1
+--0 1
+.names II543 II577 II1203_2
+1- 1
+-1 1
+.names State_1 II318 II450 II449
+0-- 1
+-0- 1
+--0 1
+.names II263 Rdy2RtHS1 II537
+0- 1
+-0 1
+.names II449 II537 II1216_1
+1- 1
+-1 1
+.names II282 II415 II1113_1
+1- 1
+-1 1
+.names II279 II486 II479
+0- 1
+-0 1
+.names State_1 II479 II1118_1
+1- 1
+-1 1
+.names II390 II963_1 II463
+00 1
+.names State_5 II548 II491
+0- 1
+-0 1
+.names II463 II491 II1203_1
+1- 1
+-1 1
+.names II390 II966_1 II465
+00 1
+.names II506 II570 II489
+0- 1
+-0 1
+.names II465 II489 II1216_2
+1- 1
+-1 1
+.names II267 II371 II1154_1
+1- 1
+-1 1
+.names II367 II493 II1028_1
+1- 1
+-1 1
+.names II284 II430 II593
+0- 1
+-0 1
+.names Rdy2BmHS1 II274 II595
+0- 1
+-0 1
+.names II593 II595 II1132_1
+1- 1
+-1 1
+.names II281 II467 II1132_2
+1- 1
+-1 1
+.names II444 II1040_1 II565
+00 1
+.names II267 II565 II1148_1
+1- 1
+-1 1
+.names II412 II1031_1 II559
+00 1
+.names Rdy2BmHS1 II559 II1121_2
+1- 1
+-1 1
+.names II432 II1034_1 II561
+00 1
+.names Rdy2RtHS1 II561 II1125_1
+1- 1
+-1 1
+.names II370 II416 II526
+00 1
+.names Prog_0 II526 II1087_1
+1- 1
+-1 1
+.names FullOHS1 II355 II814_1
+1- 1
+-1 1
+.names II275 II354 II599
+0- 1
+-0 1
+.names II274 II599 II1157_1
+1- 1
+-1 1
+.names II274 II422 II421
+0- 1
+-0 1
+.names II339 II421 II1210_1
+1- 1
+-1 1
+.names II353 II422 II585
+0- 1
+-0 1
+.names Prog_0 II317 II587
+0- 1
+-0 1
+.names II585 II587 II1091_1
+1- 1
+-1 1
+.names WantRtHS1 II446 II547
+0- 1
+-0 1
+.names II271 II284 II575
+0- 1
+-0 1
+.names II547 II575 II829_1
+1- 1
+-1 1
+.names II271 II473 II498
+00 1
+.names II498 II547 II1213_1
+1- 1
+-1 1
+.names Rdy2BmHS1 WantBmHS1 II519
+0- 1
+-0 1
+.names II446 II1056_1 II579
+00 1
+.names II519 II579 II1207_1
+1- 1
+-1 1
+.names II405 II537 II1151_1
+1- 1
+-1 1
+.names State_1 State_0 II511
+0- 1
+-0 1
+.names II265 II266 II473
+0- 1
+-0 1
+.names II263 II274 II539
+0- 1
+-0 1
+.names II277 II280 II525
+0- 1
+-0 1
+.names II263 Rdy2RtHS1 II514
+00 1
+.names Prog_0 II514 II439
+0- 1
+-0 1
+.names II282 II506 II461
+0- 1
+-0 1
+.names II834_1 II277 II318
+0- 1
+-0 1
+.names State_0 II327 II357 II394
+000 1
+.names State_3 State_2 II525 II482
+000 1
+.names II892_1 II892_2 II372
+0- 1
+-0 1
+.names II896_1 II461 II374
+0- 1
+-0 1
+.names State_3 II513 II548
+00 1
+.names II277 II548 II485
+0- 1
+-0 1
+.names II277 II504 II503
+0- 1
+-0 1
+.names State_1 II347 II509 II442
+000 1
+.names II279 II442 II551
+0- 1
+-0 1
+.names II372 II486 II481
+0- 1
+-0 1
+.names II445 II381 II680
+0- 1
+-0 1
+.names State_4 II327 II532
+00 1
+.names II412 II532 II407
+0- 1
+-0 1
+.names II282 II451 II432
+00 1
+.names II281 II453 II500
+00 1
+.names II264 II333 II634
+00 1
+.names II634 II434 II494 II403
+0-- 1
+-0- 1
+--0 1
+.names II265 II434 II609
+0- 1
+-0 1
+.names II461 II535 II416
+00 1
+.names II1113_1 II343 II676
+0- 1
+-0 1
+.names II1118_1 II323 II682
+0- 1
+-0 1
+.names II1203_1 II1203_2 II738
+0- 1
+-0 1
+.names II1216_1 II1216_2 II746
+0- 1
+-0 1
+.names II1154_1 II403 II706
+0- 1
+-0 1
+.names II272 II362 II545
+0- 1
+-0 1
+.names II264 II358 II517
+0- 1
+-0 1
+.names II1166_1 II1166_2 II715
+00 1
+.names II470 II1163_1 II713
+00 1
+.names II500 II1173_1 II719
+00 1
+.names II322 II1170_1 II717
+00 1
+.names II470 II1110_1 II675
+00 1
+.names II1184_1 II1184_2 II725
+00 1
+.names II342 II1193_1 II733
+00 1
+.names II1188_1 II1188_2 II729
+00 1
+.names II540 II474 II731
+00 1
+.names II1148_1 II481 II702
+0- 1
+-0 1
+.names II1121_1 II1121_2 II684
+0- 1
+-0 1
+.names II1125_1 II441 II686
+0- 1
+-0 1
+.names II329 II423 II678
+0- 1
+-0 1
+.names II322 II1077_1 II655
+00 1
+.names II410 II1080_1 II657
+00 1
+.names II1103_1 II1103_2 II671
+00 1
+.names II410 II1107_1 II673
+00 1
+.names II1210_1 II551 II742
+0- 1
+-0 1
+.names II440 II1128_1 II689
+00 1
+.names II376 II1136_1 II693
+00 1
+.names II388 II1160_1 II711
+00 1
+.names II322 II1083_1 II659
+00 1
+.names II342 II1100_1 II669
+00 1
+.names II328 II1097_1 II667
+00 1
+.names II1213_1 II553 II744
+0- 1
+-0 1
+.names II1207_1 II477 II740
+0- 1
+-0 1
+.names II1176_1 II1176_2 II721
+00 1
+.names II1180_1 II1180_2 II723
+00 1
+.names II1199_1 II1199_2 II737
+00 1
+.names II552 II1196_1 II735
+00 1
+.names II1151_1 II329 II704
+0- 1
+-0 1
+.names II1143_1 II1143_2 II699
+00 1
+.names II408 II328 II695
+00 1
+.names II384 II1140_1 II697
+00 1
+.names II540 II1094_1 II665
+00 1
+.names II665 II663 II750
+0- 1
+-0 1
+.names II403 II351 II700
+0- 1
+-0 1
+.names II1157_1 II351 II708
+0- 1
+-0 1
+.names II740 II738 II777
+00 1
+.names II704 II702 II767
+00 1
+.names State_2 II280 II386
+00 1
+.names II272 II514 II315
+00 1
+.names State_3 II394 II347
+00 1
+.names II320 II335 II571 II470
+000 1
+.names II850_1 II850_2 II333
+00 1
+.names Rdy2RtHS1 II263 II449 II540
+000 1
+.names II341 II435 II523 II408
+000 1
+.end

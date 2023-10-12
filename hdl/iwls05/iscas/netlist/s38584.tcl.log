@@ -1,0 +1,331 @@
+Checking out license 'RTL_Compiler_RD'......   (0 seconds elapsed)
+Checking out license 'RTL_Compiler_Ultra'......   (0 seconds elapsed)
+                           Cadence RTL Compiler (RC)
+                    Version v05.10-b006_1, built May 13 2005
+                      This program is the confidential and
+                     proprietary property of Cadence, Inc.
+
+
+  Setting attribute of message 'VLOGPT-35': 'max_print' = 1
+  Setting attribute of root '/': 'library' = ../../library/GSCLib_3.0.lib
+  Elaborating top-level block 's38584_bench' from file '../rtl/s38584.v'.
+  Done elaborating 's38584_bench'.
+Deleting 151 sequential instances.  They do not transitively
+  drive any primary outputs.
+Mapping s38584_bench to gates.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g100_reg'.
+        : This optimization was enabled by the root attribute 'optimize_constant_0_flops'
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g113_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g114_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g115_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g116_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g120_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g124_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g125_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g126_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g127_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g12_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g134_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g135_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g44_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g53_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g54_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g56_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g57_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g64_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g72_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g73_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g84_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g90_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g91_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g92_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g99_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g22_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g2837_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g2841_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4165_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4169_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4809_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4812_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4815_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4818_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4999_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g5002_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g5005_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g5008_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g637_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g640_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g2712_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g4125_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g559_reg'.
+Deleting 10 sequential instances.  They do not transitively
+  drive any primary outputs.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g25_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g45_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g46_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g47_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g48_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g49_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g50_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g51_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g52_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g6_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g7_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g8_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g9_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g16_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g19_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g28_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g31_reg'.
+Deleting 52 sequential instances.  They do not transitively
+  drive any primary outputs.
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map     420078   -1598  g358_reg/CK --> g554_reg/D
+ area_map       411302   -1476  g358_reg/CK --> g554_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     411302   -1476         0 g358_reg/CK --> g554_reg/D
+ incr_delay     411616   -1369         0 g358_reg/CK --> g554_reg/D
+ incr_delay     411616   -1354         0 g358_reg/CK --> g554_reg/D
+
+  Done mapping s38584_bench
+  Synthesis succeeded.
+  Incrementally optimizing s38584_bench
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     411616   -1354         0 g358_reg/CK --> g554_reg/D
+ incr_delay     414705   -1024         0 g5016_reg/CK --> g5057_reg/D
+ incr_delay     416189   -1000         0 g753_reg/CK --> g554_reg/D
+ incr_delay     424940    -992         0 g1312_reg/CK --> g2269_reg/D
+ incr_delay     425907    -960         0 g718_reg/CK --> g790_reg/D
+ incr_delay     429184    -942         0 g1339_reg/CK --> g1526_reg/D
+ incr_delay     429728    -929         0 g209_reg/CK --> g1886_reg/D
+ incr_delay     430277    -918         0 g5703_reg/CK --> g5462_reg/D
+ incr_delay     430329    -913         0 g1008_reg/CK --> g1886_reg/D
+ incr_delay     431061    -910         0 g979_reg/CK --> g1056_reg/D
+ incr_delay     432488    -903         0 g1312_reg/CK --> g2295_reg/D
+ incr_delay     432582    -899         0 g1312_reg/CK --> g2429_reg/D
+ incr_delay     432681    -896         0 g1008_reg/CK --> g1886_reg/D
+ incr_delay     433883    -893         0 g6049_reg/CK --> g4831_reg/D
+ incr_delay     434045    -892         0 g3352_reg/CK --> g3333_reg/D
+ incr_delay     434380    -891         0 g4975_reg/CK --> g3333_reg/D
+ incr_delay     434401    -891         0 g4899_reg/CK --> g4578_reg/D
+ incr_delay     434495    -889         0 g1312_reg/CK --> g2429_reg/D
+ incr_delay     434699    -889         0 g969_reg/CK --> g1752_reg/D
+ init_drc       434699    -889         0 g969_reg/CK --> g1752_reg/D
+ init_area      434699    -889         0 g969_reg/CK --> g1752_reg/D
+ rem_buf        423821    -889         0 g969_reg/CK --> g1752_reg/D
+ rem_inv        407831    -889         0 g969_reg/CK --> g1752_reg/D
+ merge_bi       398584    -889         0 g482_reg/CK --> g160_reg/D
+ glob_area      397601    -889         0 g1312_reg/CK --> g2246_reg/D
+ area_down      397497    -889         0 g1312_reg/CK --> g2246_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     397497    -889         0 g1312_reg/CK --> g2246_reg/D
+ incr_delay     397497    -888         0 g969_reg/CK --> g1752_reg/D
+ init_drc       397497    -888         0 g969_reg/CK --> g1752_reg/D
+ init_area      397497    -888         0 g969_reg/CK --> g1752_reg/D
+ rem_buf        397058    -888         0 g3990_reg/CK --> g3808_reg/D
+ rem_inv        396462    -888         0 g3990_reg/CK --> g3808_reg/D
+ merge_bi       395829    -888         0 g482_reg/CK --> g160_reg/D
+ glob_area      395740    -888         0 g482_reg/CK --> g160_reg/D
+ area_down      395735    -888         0 g482_reg/CK --> g160_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     395735    -888         0 g482_reg/CK --> g160_reg/D
+ incr_delay     395746    -888         0 g969_reg/CK --> g1752_reg/D
+ init_area      395746    -888         0 g969_reg/CK --> g1752_reg/D
+ rem_buf        395599    -888         0 g969_reg/CK --> g1752_reg/D
+ rem_inv        395552    -888         0 g969_reg/CK --> g1752_reg/D
+ merge_bi       395437    -888         0 g969_reg/CK --> g1752_reg/D
+ glob_area      395406    -888         0 g969_reg/CK --> g1752_reg/D
+
+  Done mapping s38584_bench
+  Synthesis succeeded.
+============================================================
+  Generated by:           RTL Compiler (RC) v05.10-b006_1
+  Generated on:           Jun 07 2005  04:11:05 PM
+  Module:                 s38584_bench
+  Technology library:     gsclib 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+============================================================
+
+    Pin             Type     Fanout  Load  Slew   Delay   Arrival
+                                     (fF)  (ps)    (ps)    (ps)
+---------------------------------------------------------------------
+(clock clock)       launch                                     0 R
+g969_reg/CK                                    0               0 R
+g969_reg/Q          DFFSRX1       1   12.6    48     +89      89 R
+g71186/A                                              +0      89  
+g71186/Y            INVX2         3   25.0    35     +37     126 F
+g26_dup/B                                             +0     126  
+g26_dup/Y           NAND2X2       1    8.8    30     +29     155 R
+g72631/A                                              +0     155  
+g72631/Y            NAND4X1       3   24.3    83     +57     212 F
+g64983/B0                                             +0     212  
+g64983/Y            AOI21X1       2   20.5    90     +71     283 R
+g72555/A                                              +0     283  
+g72555/Y            NAND2X2       3   20.4    55     +56     340 F
+g72554/A                                              +0     340  
+g72554/Y            INVX1         1    6.3    28     +30     370 R
+g72553/A                                              +0     370  
+g72553/Y            NAND2X1       1    9.5    44     +42     412 F
+g72949/A                                              +0     412  
+g72949/Y            CLKBUFX3      7   62.8    56     +86     498 F
+g72948/A                                              +0     498  
+g72948/Y            INVX2         2   14.3    30     +31     529 R
+g63915/B                                              +0     529  
+g63915/Y            NOR2X1        1   10.3    44     +34     564 F
+g61410/S0                                             +0     564  
+g61410/Y            MX2X1         1    6.3    31     +70     634 F
+g61335/A0                                             +0     634  
+g61335/Y            OAI22X1       1   18.7    37    +112     746 R
+g1752_reg/D         DFFSRX1                           +0     746  
+g1752_reg/CK        setup                      0    +142     889 R
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock clock)       capture                                    0 R
+---------------------------------------------------------------------
+Timing slack :    -889ps (TIMING VIOLATION)
+Start-point  : g969_reg/CK
+End-point    : g1752_reg/D
+
+============================================================
+  Generated by:           RTL Compiler (RC) v05.10-b006_1
+  Generated on:           Jun 07 2005  04:11:05 PM
+  Module:                 s38584_bench
+  Technology library:     gsclib 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+============================================================
+
+                               
+  Gate   Instances     Area     Library  
+-----------------------------------------
+ADDHX1           3     407.721    gsclib 
+AND2X1         298    9346.174    gsclib 
+AOI21X1        262    8217.106    gsclib 
+AOI22X1        148    6189.064    gsclib 
+BUFX3           18     564.534    gsclib 
+CLKBUFX1        88    2299.968    gsclib 
+CLKBUFX2         7     219.541    gsclib 
+CLKBUFX3        21     658.623    gsclib 
+DFFSRX1       1178  190886.654    gsclib 
+INVX1          858   17939.922    gsclib 
+INVX2          107    2796.552    gsclib 
+INVX4           33    1034.979    gsclib 
+INVX8           19     993.168    gsclib 
+MX2X1          848   53191.648    gsclib 
+NAND2X1        682   17824.752    gsclib 
+NAND2X2         36    1317.240    gsclib 
+NAND3X1        396   14489.640    gsclib 
+NAND4X1        305   12754.490    gsclib 
+NOR2X1         611   15969.096    gsclib 
+NOR3X1          15     940.890    gsclib 
+OAI21X1        264   11039.952    gsclib 
+OAI22X1        135    8468.010    gsclib 
+OAI33X1          4     334.540    gsclib 
+OR2X1          194    6084.422    gsclib 
+OR4X1           18    1317.258    gsclib 
+XOR2X1         176   10119.824    gsclib 
+-----------------------------------------
+total         6724  395405.768           
+
+                                       
+   Type    Instances    Area    Area % 
+---------------------------------------
+sequential      1178 190886.654   48.3 
+inverter        1017  22764.621    5.8 
+buffer           134   3742.666    0.9 
+logic           4395 178011.827   45.0 
+---------------------------------------
+total           6724 395405.768  100.0 
+
+Normal exit.

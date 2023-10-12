@@ -1,0 +1,224 @@
+Checking out license 'RTL_Compiler_RD'......   (0 seconds elapsed)
+Checking out license 'RTL_Compiler_Ultra'......   (0 seconds elapsed)
+                           Cadence RTL Compiler (RC)
+                    Version v05.10-b006_1, built May 13 2005
+                      This program is the confidential and
+                     proprietary property of Cadence, Inc.
+
+
+  Setting attribute of message 'VLOGPT-35': 'max_print' = 1
+  Setting attribute of root '/': 'library' = ../../library/GSCLib_3.0.lib
+  Elaborating top-level block 's38417_bench' from file '../rtl/s38417.v'.
+  Done elaborating 's38417_bench'.
+Deleting 72 sequential instances.  They do not transitively
+  drive any primary outputs.
+Mapping s38417_bench to gates.
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map     520827   -1547  g2480_reg/CK --> g2342_reg/D
+ area_map       509532   -1538  g2214_reg/CK --> g2303_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     509532   -1538         0 g2214_reg/CK --> g2303_reg/D
+ incr_delay     510875   -1495         0 g823_reg/CK --> g933_reg/D
+ incr_delay     510891   -1491         0 g823_reg/CK --> g933_reg/D
+
+  Done mapping s38417_bench
+  Synthesis succeeded.
+  Incrementally optimizing s38417_bench
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     510891   -1491         0 g823_reg/CK --> g933_reg/D
+ incr_delay     512971   -1459         0 g823_reg/CK --> g933_reg/D
+ incr_delay     513253   -1455         0 g2214_reg/CK --> g2261_reg/D
+ incr_delay     513128   -1452         0 g2480_reg/CK --> g2348_reg/D
+ incr_delay     512903   -1451         0 g135_reg/CK --> g195_reg/D
+ incr_delay     513070   -1449         0 g2214_reg/CK --> g2261_reg/D
+ init_drc       513070   -1449         0 g2214_reg/CK --> g2261_reg/D
+ init_area      513070   -1449         0 g2214_reg/CK --> g2261_reg/D
+ rem_buf        506761   -1449         0 g2214_reg/CK --> g2261_reg/D
+ rem_inv        487352   -1449         0 g1786_reg/CK --> g1648_reg/D
+ merge_bi       480787   -1448         0 g823_reg/CK --> g891_reg/D
+ glob_area      480264   -1448         0 g545_reg/CK --> g2997_reg/D
+ area_down      480202   -1448         0 g2211_reg/CK --> g2395_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     480202   -1448         0 g2211_reg/CK --> g2395_reg/D
+ incr_delay     480667   -1443         0 g2214_reg/CK --> g2395_reg/D
+ incr_delay     480677   -1442         0 g405_reg/CK --> g270_reg/D
+ incr_delay     480750   -1441         0 g138_reg/CK --> g216_reg/D
+ incr_delay     480782   -1441         0 g135_reg/CK --> g216_reg/D
+ incr_delay     480965   -1439         0 g826_reg/CK --> g933_reg/D
+ incr_delay     480980   -1438         0 g2211_reg/CK --> g2261_reg/D
+ incr_delay     480986   -1438         0 g823_reg/CK --> g891_reg/D
+ init_drc       480986   -1438         0 g823_reg/CK --> g891_reg/D
+ init_area      480986   -1438         0 g823_reg/CK --> g891_reg/D
+ rem_buf        480604   -1438         0 g826_reg/CK --> g933_reg/D
+ rem_inv        479794   -1438         0 g135_reg/CK --> g216_reg/D
+ merge_bi       479464   -1438         0 g135_reg/CK --> g216_reg/D
+ glob_area      479308   -1438         0 g2211_reg/CK --> g2267_reg/D
+ area_down      479292   -1438         0 g2211_reg/CK --> g2267_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay     479292   -1438         0 g2211_reg/CK --> g2267_reg/D
+ incr_delay     479297   -1438         0 g823_reg/CK --> g891_reg/D
+ init_area      479297   -1438         0 g823_reg/CK --> g891_reg/D
+ rem_buf        479271   -1438         0 g823_reg/CK --> g891_reg/D
+ rem_inv        479172   -1438         0 g1520_reg/CK --> g1633_reg/D
+ merge_bi       479130   -1438         0 g1520_reg/CK --> g1633_reg/D
+ glob_area      479125   -1438         0 g1520_reg/CK --> g1633_reg/D
+ area_down      479114   -1438         0 g1520_reg/CK --> g1633_reg/D
+
+  Done mapping s38417_bench
+  Synthesis succeeded.
+============================================================
+  Generated by:           RTL Compiler (RC) v05.10-b006_1
+  Generated on:           Jun 07 2005  04:09:40 PM
+  Module:                 s38417_bench
+  Technology library:     gsclib 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+============================================================
+
+    Pin             Type    Fanout  Load  Slew   Delay   Arrival
+                                    (fF)  (ps)    (ps)    (ps)
+--------------------------------------------------------------------
+(clock clock)       launch                                    0 R
+g823_reg/CK                                   0               0 R
+g823_reg/Q          DFFSRX1      4   26.7    76    +114     114 R
+g70775/A                                             +0     114  
+g70775/Y            INVX1        4   32.0    71     +69     182 F
+g67192/B                                             +0     182  
+g67192/Y            NOR2X1       1    6.3    47     +44     226 R
+g67191/A                                             +0     226  
+g67191/Y            INVX1        1    8.9    28     +30     256 F
+g65876/A0                                            +0     256  
+g65876/Y            AOI22X1      1    7.9    62     +36     292 R
+g71342/A0                                            +0     292  
+g71342/Y            AOI21X1      3   18.8    88     +86     378 F
+g71195/A                                             +0     378  
+g71195/Y            INVX1        1    6.3    34     +37     415 R
+g71693/A                                             +0     415  
+g71693/Y            NAND2X1      1   12.5    54     +49     464 F
+g71691/B                                             +0     464  
+g71691/Y            NAND2X2      2   18.9    43     +42     506 R
+g64036/A                                             +0     506  
+g64036/Y            INVX1        1    6.3    23     +25     531 F
+g71335/A                                             +0     531  
+g71335/Y            NAND2X1      1    8.2    35     +28     559 R
+g71334/A                                             +0     559  
+g71334/Y            NAND3X1      1    8.1    38     +32     591 F
+g71331/C                                             +0     591  
+g71331/Y            NAND3X1      2   14.0    69     +63     654 R
+g70879/A                                             +0     654  
+g70879/Y            NOR2X1       1    8.0    44     +49     703 F
+g71409/B                                             +0     703  
+g71409/Y            NOR2X1       1    8.0    47     +40     742 R
+g71407/B                                             +0     742  
+g71407/Y            NOR2X1       2   12.5    51     +40     783 F
+g71404/B                                             +0     783  
+g71404/Y            NAND2X1      1    8.2    40     +40     822 R
+g71575/A                                             +0     822  
+g71575/Y            NAND3X1      2   16.0    56     +44     866 F
+g60415/B                                             +0     866  
+g60415/Y            NOR2X1       3   28.4   102     +81     947 R
+g60414/A                                             +0     947  
+g60414/Y            INVX1        1    6.3    36     +29     976 F
+g60280/A                                             +0     976  
+g60280/Y            NAND2X1      1   12.6    52     +38    1014 R
+g60279/A                                             +0    1014  
+g60279/Y            INVX2        2   25.2    36     +38    1052 F
+g60278/A                                             +0    1052  
+g60278/Y            INVX2        4   24.9    36     +34    1086 R
+g60200/B                                             +0    1086  
+g60200/Y            NAND2X1      1    8.1    40     +41    1127 F
+g60135/B0                                            +0    1127  
+g60135/Y            AOI21X1      3   18.9    84     +57    1184 R
+g59980/B                                             +0    1184  
+g59980/Y            MX2X1        1   18.7    52    +105    1289 R
+g903_reg/D          DFFSRX1                          +0    1289  
+g903_reg/CK         setup                     0    +149    1438 R
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock clock)       capture                                   0 R
+--------------------------------------------------------------------
+Timing slack :   -1438ps (TIMING VIOLATION)
+Start-point  : g823_reg/CK
+End-point    : g903_reg/D
+
+============================================================
+  Generated by:           RTL Compiler (RC) v05.10-b006_1
+  Generated on:           Jun 07 2005  04:09:40 PM
+  Module:                 s38417_bench
+  Technology library:     gsclib 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+============================================================
+
+                               
+  Gate   Instances     Area     Library  
+-----------------------------------------
+AND2X1         197    6178.511    gsclib 
+AOI21X1        447   14019.261    gsclib 
+AOI22X1        282   11792.676    gsclib 
+BUFX1            1      31.363    gsclib 
+BUFX3            4     125.452    gsclib 
+CLKBUFX1        54    1411.344    gsclib 
+CLKBUFX2         5     156.815    gsclib 
+CLKBUFX3        21     658.623    gsclib 
+DFFSRX1       1564  253435.252    gsclib 
+INVX1         1150   24045.350    gsclib 
+INVX2          123    3214.728    gsclib 
+INVX4           26     815.438    gsclib 
+INVX8            1      52.272    gsclib 
+MX2X1          635   39831.010    gsclib 
+NAND2X1       1232   32199.552    gsclib 
+NAND2X2         96    3512.640    gsclib 
+NAND3X1        336   12294.240    gsclib 
+NAND4X1        116    4850.888    gsclib 
+NOR2X1         828   21640.608    gsclib 
+NOR3X1           1      62.726    gsclib 
+OAI21X1        461   19278.098    gsclib 
+OAI22X1         23    1442.698    gsclib 
+OAI33X1          2     167.270    gsclib 
+OR2X1          415   13015.645    gsclib 
+OR4X1            3     219.543    gsclib 
+XOR2X1         255   14662.245    gsclib 
+-----------------------------------------
+total         8278  479114.248           
+
+                                       
+   Type    Instances    Area    Area % 
+---------------------------------------
+sequential      1564 253435.252   52.9 
+inverter        1300  28127.788    5.9 
+buffer            85   2383.597    0.5 
+logic           5329 195167.611   40.7 
+---------------------------------------
+total           8278 479114.248  100.0 
+
+Normal exit.

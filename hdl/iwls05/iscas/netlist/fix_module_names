@@ -1,0 +1,5 @@
+ls *.v | sed "s/\.v$//" | \
+while read fn ; do \
+    sed "s/module .*(/module $fn(/" $fn.v > __temp_$fn.v; \
+    mv __temp_$fn.v $fn.v; \
+done

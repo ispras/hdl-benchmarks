@@ -1,0 +1,540 @@
+Checking out license 'RTL_Compiler_RD'......   (1 seconds elapsed)
+Checking out license 'RTL_Compiler_Ultra'......   (0 seconds elapsed)
+                           Cadence RTL Compiler (RC)
+                    Version v05.10-b006_1, built May 13 2005
+                      This program is the confidential and
+                     proprietary property of Cadence, Inc.
+
+
+  Setting attribute of message 'VLOGPT-35': 'max_print' = 1
+  Setting attribute of root '/': 'library' = ../../library/GSCLib_3.0.lib
+  Elaborating top-level block 's15850_bench' from file '../rtl/s15850.v'.
+  Done elaborating 's15850_bench'.
+Deleting 11 sequential instances.  They do not transitively
+  drive any primary outputs.
+Mapping s15850_bench to gates.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g101_reg'.
+        : This optimization was enabled by the root attribute 'optimize_constant_0_flops'
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g102_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g103_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g104_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1170_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1173_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1176_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1179_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1182_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1185_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1188_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1191_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1194_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1197_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1200_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1203_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g126_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1527_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1570_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g28_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g29_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g30_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g31_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g41_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g42_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g43_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g44_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g45_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g46_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g47_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g48_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g578_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g579_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g580_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g581_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g582_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g583_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g584_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g585_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g586_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g587_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g588_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g589_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g82_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g83_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g85_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g86_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g87_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g886_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g889_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g88_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g892_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g895_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g898_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g89_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g901_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g904_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g907_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g90_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g910_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g913_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g916_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g919_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g91_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g922_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g925_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g92_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g93_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g94_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g95_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g96_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1035_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1038_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1041_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1044_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1047_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1050_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1053_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1056_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1059_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1062_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1065_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1955_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1956_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1957_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g755_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g756_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1700_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g746_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1690_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1696_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1703_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1707_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g745_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g750_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g754_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g802_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g806_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g810_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g814_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g818_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g822_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g826_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g837_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g841_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g845_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g849_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g853_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g857_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g861_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1357_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1958_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1810_reg'.
+Deleting 79 sequential instances.  They do not transitively
+  drive any primary outputs.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1068_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1071_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1074_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1077_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1080_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1083_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1086_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1089_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1092_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1095_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1098_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1610_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1642_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1645_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1648_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1651_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1654_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1657_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1660_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1663_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1666_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1669_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1721_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1724_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1727_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1730_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1733_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1811_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g336_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g339_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g33_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g342_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g345_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g348_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g34_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g351_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g354_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g357_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g35_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g360_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g363_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g366_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g36_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g37_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g38_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g39_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g40_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g49_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g52_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g55_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g58_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g61_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g64_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g67_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g70_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g73_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g76_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g79_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g991_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g995_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g999_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1003_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1007_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1011_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1015_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1019_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1023_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1027_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1032_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1736_reg'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'g1737_reg'.
+Deleting 154 sequential instances.  They do not transitively
+  drive any primary outputs.
+Deleting 4 sequential instances.  They do not transitively
+  drive any primary outputs.
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map      43746    -991  g369_reg/CK --> g976_reg/D
+ area_map        42952    -979  g435_reg/CK --> g976_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay      42952    -979         0 g435_reg/CK --> g976_reg/D
+ incr_delay      42999    -957         0 g435_reg/CK --> g971_reg/D
+ incr_delay      43020    -954         0 g435_reg/CK --> g971_reg/D
+
+  Done mapping s15850_bench
+  Synthesis succeeded.
+  Incrementally optimizing s15850_bench
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay      43020    -954         0 g435_reg/CK --> g971_reg/D
+ incr_delay      44138    -773         0 g452_reg/CK --> g981_reg/D
+ incr_delay      44138    -773         0 g452_reg/CK --> g981_reg/D
+ init_drc        44138    -773         0 g452_reg/CK --> g981_reg/D
+ init_area       44138    -773         0 g452_reg/CK --> g981_reg/D
+ rem_buf         43809    -773         0 g452_reg/CK --> g981_reg/D
+ rem_inv         43046    -773         0 g452_reg/CK --> g981_reg/D
+ merge_bi        42806    -773         0 g452_reg/CK --> g981_reg/D
+ glob_area       42758    -773         0 g452_reg/CK --> g981_reg/D
+ area_down       42753    -773         0 g452_reg/CK --> g981_reg/D
+
+Incremental optimization status
+===============================
+                         Worst  DRC Total 
+                 Total    Neg        Max 
+Operation         Area   Slack       Cap Worst Path
+-------------------------------------------------------------------------------
+ init_delay      42753    -773         0 g452_reg/CK --> g981_reg/D
+ init_drc        42753    -773         0 g452_reg/CK --> g981_reg/D
+ init_area       42753    -773         0 g452_reg/CK --> g981_reg/D
+
+  Done mapping s15850_bench
+  Synthesis succeeded.
+============================================================
+  Generated by:           RTL Compiler (RC) v05.10-b006_1
+  Generated on:           Jun 07 2005  03:06:19 PM
+  Module:                 s15850_bench
+  Technology library:     gsclib 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+============================================================
+
+    Pin             Type    Fanout  Load  Slew   Delay   Arrival
+                                    (fF)  (ps)    (ps)    (ps)
+--------------------------------------------------------------------
+(clock clock)       launch                                    0 R
+g452_reg/CK                                   0               0 R
+g452_reg/Q          DFFSRX1      2   14.1    49     +98      98 F
+g22218/A                                             +0      98  
+g22218/Y            NOR2X1       1    6.2    43     +42     140 R
+g22406/B                                             +0     140  
+g22406/Y            NAND2X1      1    7.8    39     +41     181 F
+g22405/A                                             +0     181  
+g22405/Y            NOR2X1       1    8.2    47     +44     225 R
+g22404/A                                             +0     225  
+g22404/Y            NAND3X1      1   12.6    47     +40     266 F
+g22365/A                                             +0     266  
+g22365/Y            NAND2X2      1   12.6    39     +30     296 R
+g29/A                                                +0     296  
+g29/Y               NAND2X2      3   18.8    46     +45     341 F
+g27_dup/A                                            +0     341  
+g27_dup/Y           NAND2X1      1    6.3    32     +30     372 R
+g39/A                                                +0     372  
+g39/Y               NAND2X1      1    8.2    39     +40     411 F
+g22294/A                                             +0     411  
+g22294/Y            NAND3X1      1   12.6    67     +45     457 R
+g22260/A                                             +0     457  
+g22260/Y            NAND2X2      1   12.6    42     +44     500 F
+g22259/A                                             +0     500  
+g22259/Y            INVX2        3   27.0    40     +37     538 R
+g22258/A                                             +0     538  
+g22258/Y            NAND2X1      1   12.5    52     +50     588 F
+g21281/B                                             +0     588  
+g21281/Y            NAND2X2      1   18.7    42     +41     629 R
+g981_reg/D          DFFSRX1                          +0     629  
+g981_reg/CK         setup                     0    +145     774 R
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock clock)       capture                                   0 R
+--------------------------------------------------------------------
+Timing slack :    -774ps (TIMING VIOLATION)
+Start-point  : g452_reg/CK
+End-point    : g981_reg/D
+
+============================================================
+  Generated by:           RTL Compiler (RC) v05.10-b006_1
+  Generated on:           Jun 07 2005  03:06:19 PM
+  Module:                 s15850_bench
+  Technology library:     gsclib 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+============================================================
+
+                              
+  Gate   Instances    Area     Library  
+----------------------------------------
+ADDHX1           1    135.907    gsclib 
+AND2X1          51   1599.513    gsclib 
+AOI21X1         17    533.171    gsclib 
+AOI22X1         14    585.452    gsclib 
+CLKBUFX1        18    470.448    gsclib 
+CLKBUFX2         1     31.363    gsclib 
+CLKBUFX3         2     62.726    gsclib 
+DFFSRX1        165  26737.095    gsclib 
+INVX1          122   2550.898    gsclib 
+INVX2            6    156.816    gsclib 
+INVX4            2     62.726    gsclib 
+NAND2X1         71   1855.656    gsclib 
+NAND2X2         10    365.900    gsclib 
+NAND3X1         20    731.800    gsclib 
+NAND4X1          8    334.544    gsclib 
+NOR2X1          81   2117.016    gsclib 
+OAI21X1         32   1338.176    gsclib 
+OAI33X1          2    167.270    gsclib 
+OR2X1           26    815.438    gsclib 
+OR4X1            2    146.362    gsclib 
+XOR2X1          34   1954.966    gsclib 
+----------------------------------------
+total          685  42753.243           
+
+                                      
+   Type    Instances    Area   Area % 
+--------------------------------------
+sequential       165 26737.095   62.5 
+inverter         130  2770.440    6.5 
+buffer            21   564.537    1.3 
+logic            369 12681.171   29.7 
+--------------------------------------
+total            685 42753.243  100.0 
+
+Normal exit.

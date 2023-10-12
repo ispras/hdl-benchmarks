@@ -1,0 +1,2 @@
+sed "s/DESIGN/$1/" rc.tcl > $1.tcl
+rc -f $1.tcl | tee $1.tcl.log

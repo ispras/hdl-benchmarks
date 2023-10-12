@@ -1,0 +1,256 @@
+.model s208.1.bench
+.inputs P.0 C.8 C.7 C.6 C.5 C.4 C.3 C.2 C.1 C.0
+.outputs Z
+.wire_load_slope 0.00
+.latch     I12 X.4  0
+.latch     I13 X.3  0
+.latch     I14 X.2  0
+.latch     I15 X.1  0
+.latch     I110 X.8  0
+.latch     I111 X.7  0
+.latch     I112 X.6  0
+.latch     I113 X.5  0
+.names I270.2 I270.3 Z
+1- 1
+-1 1
+.names I70.1 I62 I12
+0- 1
+-0 1
+.names I73.3 I73.4 I13
+1- 1
+-1 1
+.names I7.3 I7.4 I14
+00 1
+.names I88.3 I88.4 I15
+1- 1
+-1 1
+.names I167.1 I159 I110
+0- 1
+-0 1
+.names I170.1 I161 I111
+0- 1
+-0 1
+.names I105.3 I105.4 I112
+00 1
+.names I182.3 I182.4 I113
+1- 1
+-1 1
+.names I64 I48 I69
+00 1
+.names I69 I73.1
+0 1
+.names X.3 I73.2
+0 1
+.names X.1 P.0 I66
+0- 1
+-0 1
+.names I66 I7.1
+0 1
+.names X.2 I7.2
+0 1
+.names X.1 I88.1
+0 1
+.names P.0 I88.2
+0 1
+.names P.0 I48
+0 1
+.names X.4 I49
+0 1
+.names X.3 I50
+0 1
+.names I69 I68
+0 1
+.names X.5 I1.2 I163
+0- 1
+-0 1
+.names I163 I105.1
+0 1
+.names X.6 I105.2
+0 1
+.names X.5 I182.1
+0 1
+.names I2.1 P.0 I1.2
+11 1
+.names I1.2 I182.2
+0 1
+.names X.7 I148
+0 1
+.names X.6 I149
+0 1
+.names I148 I191.1 I162
+00 1
+.names I162 I161
+0 1
+.names I163 I164
+0 1
+.names P.0 I212
+0 1
+.names X.1 I213
+0 1
+.names X.2 I214
+0 1
+.names X.3 I215
+0 1
+.names X.4 I216
+0 1
+.names I213 P.0 I224
+0- 1
+-0 1
+.names I224 I225
+0 1
+.names P.0 I240
+0 1
+.names X.5 I241
+0 1
+.names X.6 I242
+0 1
+.names X.7 I243
+0 1
+.names X.8 I244
+0 1
+.names I241 P.0 I251
+0- 1
+-0 1
+.names I251 I252
+0 1
+.names I214 I224 P.2
+00 1
+.names P.2 I282
+0 1
+.names I215 I222 P.3
+00 1
+.names P.3 I283
+0 1
+.names C.2 I286
+0 1
+.names C.3 I287
+0 1
+.names I209.1 I206.2 P.6
+11 1
+.names P.6 I306
+0 1
+.names I209.1 I207.2 P.7
+11 1
+.names P.7 I307
+0 1
+.names C.6 I310
+0 1
+.names C.7 I311
+0 1
+.names I69 I73.2 I73.3
+11 1
+.names X.3 I73.1 I73.4
+11 1
+.names I66 I7.2 I7.3
+11 1
+.names X.2 I7.1 I7.4
+11 1
+.names X.1 I88.2 I88.3
+11 1
+.names P.0 I88.1 I88.4
+11 1
+.names I163 I105.2 I105.3
+11 1
+.names X.6 I105.1 I105.4
+11 1
+.names X.5 I182.2 I182.3
+11 1
+.names I1.2 I182.1 I182.4
+11 1
+.names I164 X.6 I191.1
+11 1
+.names I64 I49 I50 I2.1
+000 1
+.names X.4 X.2 X.3 X.1 I209.1
+0000 1
+.names I240 I241 I205.2
+00 1
+.names I209.1 I205.2 P.5
+11 1
+.names I242 I251 I206.2
+00 1
+.names I243 I249 I207.2
+00 1
+.names X.7 I249 I244 I208.2
+000 1
+.names I209.1 I208.2 P.8
+11 1
+.names I212 I213 P.1
+00 1
+.names P.1 C.1 I295.1
+11 1
+.names P.0 C.0 I295.2
+11 1
+.names P.5 C.5 I319.1
+11 1
+.names X.3 I222 I216 P.4
+000 1
+.names P.4 C.4 I319.2
+11 1
+.names P.8 C.8 I270.3
+11 1
+.names I68 X.4 I50 I70.1
+1-- 1
+-1- 1
+--1 1
+.names X.1 X.2 I64
+0- 1
+-0 1
+.names I64 I50 I48 I95.1
+1-- 1
+-1- 1
+--1 1
+.names I164 X.6 I165
+0- 1
+-0 1
+.names I165 X.8 I148 I167.1
+1-- 1
+-1- 1
+--1 1
+.names I165 X.7 I170.1
+1- 1
+-1 1
+.names I163 I149 I148 I188.1
+1-- 1
+-1- 1
+--1 1
+.names I283 I287 I291.1
+1- 1
+-1 1
+.names I282 I286 I291.2
+1- 1
+-1 1
+.names I307 I311 I315.1
+1- 1
+-1 1
+.names I306 I310 I315.2
+1- 1
+-1 1
+.names I291.1 I291.2 I290 I269.1
+0-- 1
+-0- 1
+--0 1
+.names I315.1 I315.2 I314 I269.2
+0-- 1
+-0- 1
+--0 1
+.names I269.1 I269.2 I270.2
+1- 1
+-1 1
+.names I95.1 X.4 I62
+0- 1
+-0 1
+.names I188.1 X.8 I159
+0- 1
+-0 1
+.names I225 I214 I222
+0- 1
+-0 1
+.names I252 I242 I249
+0- 1
+-0 1
+.names I295.1 I295.2 I290
+00 1
+.names I319.1 I319.2 I314
+00 1
+.end

@@ -1,0 +1,546 @@
+.model s510.bench
+.inputs john cnt13 cnt21 cnt284 pcnt6 cnt261 cnt44 pcnt12 pcnt17 cnt591 cnt45 \
+cnt567 pcnt27 cnt283 cnt272 cnt10 cnt511 pcnt241 cnt509
+.outputs csm pclr pc cclr vsync cblank csync
+.wire_load_slope 0.00
+.latch     II2 st_5  0
+.latch     II3 st_4  0
+.latch     II4 st_3  0
+.latch     II5 st_2  0
+.latch     II6 st_1  0
+.latch     II7 st_0  0
+.names II555 II798 csm
+00 1
+.names II917_1 II917_2 pclr
+0- 1
+-0 1
+.names II921_1 II837 pc
+0- 1
+-0 1
+.names II486 II877 II546 II390 cclr
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names II914_1 II855 II867 vsync
+0-- 1
+-0- 1
+--0 1
+.names II928_1 II841 cblank
+0- 1
+-0 1
+.names II924_1 II924_2 II881 csync
+0-- 1
+-0- 1
+--0 1
+.names II900_1 II821 II2
+0- 1
+-0 1
+.names II903_1 II903_2 II823 II3
+0-- 1
+-0- 1
+--0 1
+.names II278 II274 II270 II266 II4
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names II282 II889 II827 II298 II5
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names II909_1 II899 II895 II6
+0-- 1
+-0- 1
+--0 1
+.names II778 II782 II887 II7
+0-- 1
+-0- 1
+--0 1
+.names cnt44 II68
+0 1
+.names cnt261 II67
+0 1
+.names cnt511 II78
+0 1
+.names cnt567 II73
+0 1
+.names st_0 II61
+0 1
+.names st_1 II60
+0 1
+.names st_2 II59
+0 1
+.names st_3 II58
+0 1
+.names st_4 II57
+0 1
+.names st_5 II56
+0 1
+.names pcnt12 II69
+0 1
+.names pcnt17 II70
+0 1
+.names st_0 st_1 II555
+00 1
+.names II555 II554
+0 1
+.names st_1 st_2 II590
+0- 1
+-0 1
+.names II590 II591
+0 1
+.names st_0 st_2 II595
+00 1
+.names II595 II594
+0 1
+.names II61 st_2 II547
+00 1
+.names II547 II546
+0 1
+.names II61 st_3 II666
+0- 1
+-0 1
+.names II666 II667
+0 1
+.names II56 II57 II474
+0- 1
+-0 1
+.names II474 II475
+0 1
+.names II56 II58 II59 II799
+000 1
+.names II799 II798
+0 1
+.names II57 II547 II494
+0- 1
+-0 1
+.names II494 II495
+0 1
+.names st_3 II535 II466
+0- 1
+-0 1
+.names II466 II467
+0 1
+.names II458 II594 II463
+00 1
+.names II463 II462
+0 1
+.names II936_1 II936_2 II131
+00 1
+.names II131 II130
+0 1
+.names II663 st_2 II566
+0- 1
+-0 1
+.names II566 II567
+0 1
+.names II58 II551 II482
+0- 1
+-0 1
+.names II482 II483
+0 1
+.names II574 II59 II531
+00 1
+.names II531 II530
+0 1
+.names st_4 II498 II487
+00 1
+.names II487 II486
+0 1
+.names II95 II57 II606
+0- 1
+-0 1
+.names II606 II607
+0 1
+.names II95 st_4 II638 II779
+000 1
+.names II779 II778
+0 1
+.names II985_1 II463 II346
+0- 1
+-0 1
+.names II346 II347
+0 1
+.names II563 II940_1 II205
+00 1
+.names II205 II204
+0 1
+.names II954_1 II954_2 II217
+00 1
+.names II217 II216
+0 1
+.names cnt272 st_2 II936_2
+11 1
+.names cnt10 st_5 II946_1
+11 1
+.names john st_4 II946_2
+11 1
+.names cnt591 II59 II936_1
+11 1
+.names II59 II555 II1089_1
+11 1
+.names II70 cnt284 II1044_1
+11 1
+.names II61 st_1 II578
+0- 1
+-0 1
+.names II578 st_3 II943_1
+11 1
+.names II61 st_1 II675
+00 1
+.names II56 II675 II1102_2
+11 1
+.names II458 II59 II671
+00 1
+.names st_5 II671 II1059_1
+11 1
+.names II61 II57 II551
+00 1
+.names II551 II671 II1071_1
+11 1
+.names II60 II551 II1106_1
+11 1
+.names st_1 II58 II663
+00 1
+.names II551 II663 II1123_1
+11 1
+.names II511 II587 II498
+0- 1
+-0 1
+.names II498 II57 II967_1
+11 1
+.names II458 II56 II570
+0- 1
+-0 1
+.names II570 st_0 st_2 II1055_1
+111 1
+.names II590 st_0 II535
+00 1
+.names cnt13 II56 II598
+0- 1
+-0 1
+.names II535 II598 II1062_1
+11 1
+.names st_3 st_2 II578 II795
+000 1
+.names II69 cnt44 II618
+0- 1
+-0 1
+.names II795 II618 II1120_1
+11 1
+.names II587 II591 II95
+00 1
+.names II61 II56 II603
+00 1
+.names II95 II603 II1116_1
+11 1
+.names II463 cnt283 II950_2
+11 1
+.names II554 II658 II455
+00 1
+.names II455 cnt45 II950_1
+11 1
+.names st_5 II455 II1102_1
+11 1
+.names st_1 st_2 II587
+00 1
+.names II933_1 II56 II104
+0- 1
+-0 1
+.names cnt45 II587 II104 II954_2
+111 1
+.names II742 II590 II543
+00 1
+.names cnt284 pcnt17 II490
+0- 1
+-0 1
+.names II543 II490 II58 II1081_1
+111 1
+.names II57 II543 II1106_2
+11 1
+.names II495 II60 II940_1
+11 1
+.names II546 II60 II539
+00 1
+.names II104 II539 II1077_1
+11 1
+.names II795 II57 II694
+0- 1
+-0 1
+.names II563 II59 II698
+0- 1
+-0 1
+.names II694 II698 II988_1
+11 1
+.names II554 st_5 II574 II787
+000 1
+.names II787 II130 II1085_1
+11 1
+.names st_5 cnt509 II567 II954_1
+111 1
+.names st_2 II483 II1081_2
+11 1
+.names II958_1 II958_2 II230
+0- 1
+-0 1
+.names II61 II230 II1116_2
+11 1
+.names II962_1 II962_2 II810 II232
+0-- 1
+-0- 1
+--0 1
+.names II475 II232 II1065_1
+11 1
+.names II213 II814 II710 II714 II234
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names st_4 II234 II1113_1
+11 1
+.names II58 II204 II1055_2
+11 1
+.names II61 II216 II1085_2
+11 1
+.names cnt21 st_0 II1038_1
+1- 1
+-1 1
+.names pcnt27 II73 II985_1
+1- 1
+-1 1
+.names II60 II61 II914_1
+1- 1
+-1 1
+.names st_4 II590 II1068_1
+1- 1
+-1 1
+.names II57 II58 II933_1
+1- 1
+-1 1
+.names II57 II59 II958_1
+1- 1
+-1 1
+.names II739 st_2 II642
+0- 1
+-0 1
+.names cnt284 II642 II958_2
+1- 1
+-1 1
+.names II474 II666 II924_2
+1- 1
+-1 1
+.names II547 II739 II478
+0- 1
+-0 1
+.names II58 II478 II903_2
+1- 1
+-1 1
+.names st_4 II478 II1092_1
+1- 1
+-1 1
+.names st_3 st_1 II458
+0- 1
+-0 1
+.names II458 II494 st_5 II917_1
+1-- 1
+-1- 1
+--1 1
+.names II494 II570 II921_1
+1- 1
+-1 1
+.names pcnt241 II78 II627
+00 1
+.names II466 II627 II909_1
+1- 1
+-1 1
+.names II466 II78 II962_2
+1- 1
+-1 1
+.names II535 II58 II506
+0- 1
+-0 1
+.names cnt13 II506 II1095_1
+1- 1
+-1 1
+.names II946_1 II946_2 II209
+00 1
+.names II506 II209 II1099_1
+1- 1
+-1 1
+.names II482 II590 II917_2
+1- 1
+-1 1
+.names II658 II56 II559
+00 1
+.names II559 II487 II982_1
+1- 1
+-1 1
+.names II475 II546 II1074_1
+1- 1
+-1 1
+.names II475 II578 II1095_2
+1- 1
+-1 1
+.names II495 II603 II970_1
+1- 1
+-1 1
+.names II595 II943_1 II207
+00 1
+.names II56 II207 II900_1
+1- 1
+-1 1
+.names II56 st_0 II742
+0- 1
+-0 1
+.names II606 II742 II903_1
+1- 1
+-1 1
+.names II462 II73 II962_1
+1- 1
+-1 1
+.names II531 II483 II975_1
+1- 1
+-1 1
+.names II638 II1044_1 II747
+00 1
+.names II483 II747 II978_1
+1- 1
+-1 1
+.names st_0 II530 II928_1
+1- 1
+-1 1
+.names II61 II530 II1110_1
+1- 1
+-1 1
+.names II583 II607 II731
+00 1
+.names st_0 II731 II924_1
+1- 1
+-1 1
+.names st_2 II58 II658
+0- 1
+-0 1
+.names II58 cnt21 II595 II814
+0-- 1
+-0- 1
+--0 1
+.names st_3 II57 II574
+0- 1
+-0 1
+.names st_3 st_5 II511
+00 1
+.names II511 st_0 II638
+0- 1
+-0 1
+.names st_5 st_1 II739
+00 1
+.names st_5 II547 II458 II774
+0-- 1
+-0- 1
+--0 1
+.names II511 II60 II583
+00 1
+.names st_0 II583 II390
+0- 1
+-0 1
+.names II1068_1 II642 II834
+0- 1
+-0 1
+.names II578 II56 II563
+00 1
+.names II56 II667 II274
+0- 1
+-0 1
+.names pcnt6 cnt284 II455 II810
+0-- 1
+-0- 1
+--0 1
+.names II67 II559 II675 II782
+0-- 1
+-0- 1
+--0 1
+.names II1092_1 II566 II870
+0- 1
+-0 1
+.names II539 II574 II298
+0- 1
+-0 1
+.names II467 cnt10 II710
+0- 1
+-0 1
+.names II1038_1 II567 II714
+0- 1
+-0 1
+.names II982_1 II61 II326
+0- 1
+-0 1
+.names II487 II1071_1 II837
+00 1
+.names II475 st_2 II615
+00 1
+.names st_3 II615 II270
+0- 1
+-0 1
+.names II1074_1 II530 II838
+0- 1
+-0 1
+.names II1095_1 II1095_2 II774 II872
+0-- 1
+-0- 1
+--0 1
+.names II970_1 st_1 II266
+0- 1
+-0 1
+.names II1102_1 II1102_2 II551 II877
+000 1
+.names II950_1 II950_2 II213
+00 1
+.names II975_1 II60 II278
+0- 1
+-0 1
+.names II978_1 st_1 II282
+0- 1
+-0 1
+.names II259 II1059_1 II823
+00 1
+.names II615 st_3 II855
+00 1
+.names II834 II1089_1 II867
+00 1
+.names II799 II1077_1 II841
+00 1
+.names II1081_1 II1081_2 II861
+00 1
+.names II1110_1 II861 II326 II884
+0-- 1
+-0- 1
+--0 1
+.names II1116_1 II1116_2 II870 II889
+000 1
+.names II531 II1062_1 II827
+00 1
+.names II1106_1 II1106_2 II838 II881
+000 1
+.names II872 II347 II1123_1 II899
+000 1
+.names II884 II1120_1 II895
+00 1
+.names II1055_1 II1055_2 II821
+00 1
+.names II1085_1 II1085_2 II863
+00 1
+.names II371 II1065_1 II831
+00 1
+.names II1099_1 II863 II831 II874
+0-- 1
+-0- 1
+--0 1
+.names II874 II1113_1 II887
+00 1
+.names st_0 II967_1 II259
+00 1
+.names II68 II988_1 II371
+00 1
+.end

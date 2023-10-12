@@ -1,0 +1,135 @@
+#! /usr/bin/perl
+
+sub clean($) {
+  my $t = shift;
+  $t =~ s'.*/'';
+  $t =~ s/\W/_/g;
+  return $t;
+}
+
+MAIN:
+while (<>) {
+  while(s/\\\n$//) {
+    $t = <>;
+    $_ .= $t;
+  }
+  s/^\s+//;
+  if(/^\.model\s+(.+)/) {
+    $modname = clean($1);
+    next MAIN;
+  }
+  elsif(/^\.inputs\s+(.+)/) {
+    @pis = ('blif_clk_net', 'blif_reset_net', (split ' ', $1));
+    @pis = map { clean($_) } @pis;
+    foreach $i (@pis) {
+      $sig{$i} = 1;
+    }
+    next MAIN;
+  }
+  elsif(/^\.outputs\s+(.+)/) {
+    @pos = (split ' ', $1);
+    @pos = map { clean($_) } @pos;
+    foreach $i (@pos) {
+      $sig{$i} = 2;
+    }
+    next MAIN;
+  }
+  elsif(/^\.latch\s+(.+)/) {
+    @lat = (split ' ', $1);
+    @lat = map { clean($_) } @lat;
+    die 'unsupported latch' unless($#lat == 2);
+    if(!$sig{@lat[0]}) {
+      $sig{@lat[0]} = 4;
+    }
+    $sig{@lat[1]} = 8;
+    push @ffs, (join ' ', @lat);
+    next MAIN;
+  }
+  elsif(/^\.names\s+(.+)/) {
+    @names = (split ' ', $1);
+    @names = map { clean($_) } @names;
+    foreach $i (@names) {
+      if(!$sig{$i}) {
+	$sig{$i} = 4;
+      }
+    }
+    $out = pop @names;
+    $func{$out} = '';
+    next MAIN;
+  }
+  elsif(/^[^.]/) {
+    $t = '(';
+    @tab = (split ' ', $_);
+    die 'offset found' unless(@tab[1] eq '1');
+    @tab = (split //, $tab[0]);
+    die 'mismatch table size' unless ($#tab == $#names);
+    $didone = 0;
+    for($i = 0; $i <= $#tab; ++$i) {
+      if($tab[$i] eq '0') {
+	$t .= '&' if($didone);
+	$t .= ('(~' . $names[$i] . ')');
+	$didone = 1;
+      }
+      elsif($tab[$i] eq '1') {
+	$t .= '&' if($didone);
+	$t .= ($names[$i]);
+	$didone = 1;
+      }
+      else {
+	die 'malformed table' unless($tab[$i] eq '-');
+      }
+    }
+    $t .= ')';
+    if($func{$out}) {
+      $func{$out} .= ('|'. $t);
+    }
+    else {
+      $func{$out} = $t;
+    }
+    next MAIN;
+  }
+  elsif(/^.end/) {
+    last;
+  }
+  else {
+    print STDERR "unknown $_";
+  }
+}
+
+$t = join ",\n  ", (@pis, @pos);
+print "module $modname(\n  $t);\n";
+foreach $i (@pis) {
+  print "input $i;\n";
+}
+foreach $i (@pos) {
+  print "output $i;\n";
+}
+foreach $i (@ffs) {
+  @t = (split ' ', $i);
+  $t = $t[1];
+  print "reg $t;\n";
+}
+foreach $i (keys %sig) {
+  if($sig{$i} == 4) {
+    print "wire $i;\n";
+  }
+}
+
+foreach $i (@ffs) {
+  @t = (split ' ', $i);
+  $in = $t[0];
+  $out = $t[1];
+  $r = $t[2];
+  print "always @(posedge blif_clk_net or posedge blif_reset_net)\n";
+  print "  if(blif_reset_net == 1)\n";
+  print "    $out <= $r;\n";
+  print "  else\n";
+  print "    $out <= $in;\n";
+}
+
+foreach $i (keys %func) {
+  $t = $func{$i};
+  print "assign $i = $t;\n";
+}
+
+print "endmodule\n";

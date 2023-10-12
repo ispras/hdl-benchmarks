@@ -1,0 +1,1 @@
+cat design_list| while read fn; do run_one $fn; done
