@@ -22,7 +22,7 @@ The project has the following catalog structure:
 The following public benchmarks are updated (several bugs and formatting issues
 are fixed) and are used in this project:
 
- - [IWLS 2005 benchmarks](https://iwls.org/iwls2005/benchmarks.html) are collected
+ - [IWLS 2005 benchmarks](https://iwls.org/iwls2005/benchmarks.html) were collected
  by Christoph Albrecht, Cadence Research Laboratories at [Berkeley](https://www.berkeley.edu/)
  in June 2005 for the sake of [IWLS](iwls.org) conference;
 
@@ -38,18 +38,28 @@ are fixed) and are used in this project:
  1991, and were collected by [Petr Fišer](https://ddd.fit.cvut.cz/www/prj/Benchmarks/index.php?page=contact),
  Czech Technical University in Prague;
 
- - [QUIP benchmarks](https://github.com/neilisaac/ece496/tree/master/reference/quip_toolkit-9.0/benchmarks) are developed in Altera (now [Intel](https://www.intel.com/content/www/us/en/homepage.html))
+ - [QUIP benchmarks](https://github.com/neilisaac/ece496/tree/master/reference/quip_toolkit-9.0/benchmarks)
+ were developed in Altera (now [Intel](https://www.intel.com/content/www/us/en/homepage.html))
  company as a part of freely distributed [QUIP toolkit](https://github.com/neilisaac/ece496/tree/master/reference/quip_toolkit-9.0);
 
  - [Texas-97 Benchmarks](https://ptolemy.berkeley.edu/projects/embedded/research/vis/texas-97)
- are developed at the [University of Texas](https://www.utexas.edu/) as a part
+ were developed at the [University of Texas](https://www.utexas.edu/) as a part
  of the formal verification course of Dr. Adnan Aziz;
 
  - [VCEGAR Benchmarks](http://www.cprover.org/hardware/benchmarks/vcegar-benchmarks.tgz)
- are developed at the [University of Oxford](http://www.ox.ac.uk/) by the system
+ were developed at the [University of Oxford](http://www.ox.ac.uk/) by the system
  verification team led by Daniel Kroening as a test suite for the VCEGAR
  (now [EBMC](http://www.cprover.org/ebmc/)) tool;
 
  - [Verilog2SMV Benchmarks](https://es-static.fbk.eu/tools/verilog2smv/dload/date2016-experiments.tar.bz2)
- are developed at the [Bruno Kessler Foundation](https://www.fbk.eu/en/) by a team
+ were developed at the [Bruno Kessler Foundation](https://www.fbk.eu/en/) by a team
  of researchers as a test suite for the [Verilog2SMV](https://es-static.fbk.eu/tools/verilog2smv/) tool.
+
+Several benchmarks are included as submodules:
+
+ - [EPFL benchmarks](https://www.epfl.ch/labs/lsi/page-102566-en-html/benchmarks)
+ were developed at [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/en/)
+ and consist of 23 natively combinational circuits designed to challenge
+ modern logic optimization tools. The benchmark suite is divided into arithmetic,
+ random/control and MtM (More than ten Milion gates) parts. Each circuit
+ is distributed in Verilog, VHDL, BLIF and AIGER formats.

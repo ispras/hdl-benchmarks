@@ -1,0 +1,3 @@
+[submodule "hdl/epfl"]
+	path = hdl/epfl
+	url = https://github.com/lsils/benchmarks.git
