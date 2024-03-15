@@ -9,6 +9,7 @@ The project has the following catalog structure:
 
  - `bash` - Bash scripts directory
  - `hdl` - HDL benchmarks directory
+   - `iscas85` - ISCAS'85 benchmarks
    - `iwls05` - IWLS'2005 benchmarks
    - `lgsynth91` - LGSynth'1991 benchmarks
    - `mcnc` - MCNC'91 benchmarks
@@ -21,6 +22,11 @@ The project has the following catalog structure:
 
 The following public benchmarks are updated (several bugs and formatting issues
 are fixed) and are used in this project:
+
+ - [ISCAS'85 benchmarks](https://sportlab.usc.edu/~msabrishami/benchmarks.html) was proposed
+ by M. Hansen, H. Yalcin, and J. P. Hayes, at the paper "Unveiling the ISCAS-85 Benchmarks:
+ A Case Study in Reverse Engineering," IEEE Design and Test, vol. 16, no. 3, pp. 72-80, July-Sept. 1999.
+ The current version was published by [SPORT Lab, University of Southern California](https://sportlab.usc.edu/~msabrishami/benchmarks.html).
 
  - [IWLS 2005 benchmarks](https://iwls.org/iwls2005/benchmarks.html) were collected
  by Christoph Albrecht, Cadence Research Laboratories at [Berkeley](https://www.berkeley.edu/)
