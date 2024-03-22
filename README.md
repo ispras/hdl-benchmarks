@@ -9,6 +9,7 @@ The project has the following catalog structure:
 
  - `bash` - Bash scripts directory
  - `hdl` - HDL benchmarks directory
+   - `iccad-2015` - ICCAD-2015 CAD Contest Benchmark Suite
    - `iscas85` - ISCAS'85 benchmarks
    - `iwls05` - IWLS'2005 benchmarks
    - `lgsynth91` - LGSynth'1991 benchmarks
@@ -22,6 +23,11 @@ The project has the following catalog structure:
 
 The following public benchmarks are updated (several bugs and formatting issues
 are fixed) and are used in this project:
+
+ - [ICCAD 2015 CAD Contest Benchmark Suite](https://iccad-contest.org/2015/problem_B/default.htm)
+ is a test suite for solutions of Large-scale Equivalence Checking and Function Correction
+ problem that took part in the [CAD Contest](https://iccad-contest.org/2015/CAD-contest-at-ICCAD2015/index.html)
+ during ICCAD 2015 Conference.
 
  - [ISCAS'85 benchmarks](https://sportlab.usc.edu/~msabrishami/benchmarks.html) was proposed
  by M. Hansen, H. Yalcin, and J. P. Hayes, at the paper "Unveiling the ISCAS-85 Benchmarks:
