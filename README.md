@@ -9,7 +9,8 @@ The project has the following catalog structure:
 
  - `bash` - Bash scripts directory
  - `hdl` - HDL benchmarks directory
-   - `iccad-2015` - ICCAD-2015 CAD Contest Benchmark Suite
+   - `epfl` - EPFL combinational benchmark suite
+   - `iccad-2015` - ICCAD-2015 CAD Contest benchmark suite
    - `iscas85` - ISCAS'85 benchmarks
    - `iwls05` - IWLS'2005 benchmarks
    - `lgsynth91` - LGSynth'1991 benchmarks
@@ -24,15 +25,19 @@ The project has the following catalog structure:
 The following public benchmarks are updated (several bugs and formatting issues
 are fixed) and are used in this project:
 
+ - [EPFL Combinational Benchmark Suite](https://github.com/lsils/benchmarks) was
+ explained in the paper [The EPFL Combinational Benchmark Suite](https://infoscience.epfl.ch/record/207551/files/IWLS15.pdf),
+ presented at the [International Workshop on Logic Synthesis 2015](http://www.iwls.org/iwls2015/);
+
  - [ICCAD 2015 CAD Contest Benchmark Suite](https://iccad-contest.org/2015/problem_B/default.htm)
  is a test suite for solutions of Large-scale Equivalence Checking and Function Correction
  problem that took part in the [CAD Contest](https://iccad-contest.org/2015/CAD-contest-at-ICCAD2015/index.html)
- during ICCAD 2015 Conference.
+ during ICCAD 2015 Conference;
 
  - [ISCAS'85 benchmarks](https://sportlab.usc.edu/~msabrishami/benchmarks.html) was proposed
  by M. Hansen, H. Yalcin, and J. P. Hayes, at the paper "Unveiling the ISCAS-85 Benchmarks:
  A Case Study in Reverse Engineering," IEEE Design and Test, vol. 16, no. 3, pp. 72-80, July-Sept. 1999.
- The current version was published by [SPORT Lab, University of Southern California](https://sportlab.usc.edu/~msabrishami/benchmarks.html).
+ The current version was published by [SPORT Lab, University of Southern California](https://sportlab.usc.edu/~msabrishami/benchmarks.html);
 
  - [IWLS 2005 benchmarks](https://iwls.org/iwls2005/benchmarks.html) were collected
  by Christoph Albrecht, Cadence Research Laboratories at [Berkeley](https://www.berkeley.edu/)
