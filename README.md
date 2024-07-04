@@ -1,7 +1,6 @@
 # hdl-benchmarks
 
-Collection of HDL modules, subsystems and microprocessors (benchmarks)
-that are used for related tools testing.
+Digital hardware modules & projects (i.e. benchmarks) are used for EDA tools evaluation.
 
 ## Structure
 
