@@ -6,19 +6,17 @@ Digital hardware modules & projects (i.e. benchmarks) are used for EDA tools eva
 
 The project has the following catalog structure:
 
-- `bash` - Bash scripts directory
-- `hdl` - HDL benchmarks directory
-  - `epfl` - EPFL combinational benchmark suite
-  - `iccad-2015` - ICCAD-2015 CAD Contest benchmark suite
-  - `iscas85` - ISCAS'85 benchmarks
-  - `iscas89` - ISCAS'89 benchmarks
-  - `iwls05` - IWLS'2005 benchmarks
-  - `lgsynth91` - LGSynth'1991 benchmarks
-  - `mcnc` - MCNC'91 benchmarks
-  - `quip` - Quartus University Interface Program (QUIP) benchmarks
-  - `texas97` - Texas-97 benchmarks
-  - `vcegar` - VCEGAR benchmarks
-  - `verilog2smv` - Verilog2SMV benchmarks
+- `epfl` - EPFL combinational benchmark suite
+- `iccad-2015` - ICCAD-2015 CAD Contest benchmark suite
+- `iscas85` - ISCAS'85 benchmarks
+- `iscas89` - ISCAS'89 benchmarks
+- `iwls05` - IWLS'2005 benchmarks
+- `lgsynth91` - LGSynth'1991 benchmarks
+- `mcnc` - MCNC'91 benchmarks
+- `quip` - Quartus University Interface Program (QUIP) benchmarks
+- `texas97` - Texas-97 benchmarks
+- `vcegar` - VCEGAR benchmarks
+- `verilog2smv` - Verilog2SMV benchmarks
 
 ## Benchmarks
 
