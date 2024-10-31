@@ -1,2 +1,3 @@
+*.pat linguist-language=TestPattern
 *.v linguist-language=Verilog
 *.vh linguist-language=Verilog
