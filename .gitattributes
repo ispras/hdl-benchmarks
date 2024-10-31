@@ -1,3 +1,4 @@
+*.ctl linguist-language=CTL
 *.pat linguist-language=TestPattern
 *.v linguist-language=Verilog
 *.vh linguist-language=Verilog
