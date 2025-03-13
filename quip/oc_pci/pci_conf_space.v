@@ -95,6 +95,7 @@
 //
 
 `include "pci_constants.v"
+`include "pci_sync_module.v"
 
 // synopsys translate_off
 `include "timescale.v"

@@ -1,3 +1,4 @@
+`include "dsp_core.v"
 
 module DSP_CORE_top (
     CMAinx, CM_rd0, CM_rd1, CM_rd2, CM_rd3, CM_rd4, CM_rd5, CM_rd6, 

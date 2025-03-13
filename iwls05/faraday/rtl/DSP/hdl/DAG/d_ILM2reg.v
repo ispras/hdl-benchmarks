@@ -1,19 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`include "gtech_mux.v"
+`include "gtech_mux2.v"
+`include "reg14l.v"
 
 `define del 1
 `include "x_def.v"

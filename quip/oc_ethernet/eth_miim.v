@@ -78,6 +78,9 @@
 //
 
 `include "timescale.v"
+`include "eth_clockgen.v"
+`include "eth_shiftreg.v"
+`include "eth_outputcontrol.v"
 
 
 module eth_miim

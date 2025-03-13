@@ -1,41 +1,19 @@
-
-
-
-
-
-
+`include "gtclk_not.v"
+`include "gtclk_buf.v"
+`include "gtclk_mux2.v"
+`include "gtech_and_not.v"
+`include "gtech_nor2.v"
+`include "reg16lc.v"
+`include "gtclk_0a21.v"
+`include "gtech_not.v"
+`include "gtclk_fjk3.v"
+`include "gtclk_or2.v"
+`include "oneshot.v"
+`include "gtech_and3.v"
+`include "gtclk_nand3.v"
+`include "reg12lc.v"
 
 `include "x_def.v"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module CLKC (/* -------- Inputs : --------- */
 P_RSTn, HRST, OSCin, X_PWDn, TMODE,

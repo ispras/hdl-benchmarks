@@ -32,6 +32,9 @@
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
 
+`include "crp.v"
+`include "key_sel.v"
+
 module des(desOut, desIn, key, decrypt, clk);
 output	[63:0]	desOut;
 input	[63:0]	desIn;

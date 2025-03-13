@@ -72,6 +72,11 @@
 //synopsys translate_on
 
 `include "vga_defines.v"
+`include "vga_clkgen.v"
+`include "vga_tgen.v"
+`include "vga_colproc.v"
+`include "vga_fifo_dc.v"
+`include "vga_fifo.v"
 
 module vga_pgen (
 	clk_i, ctrl_ven, ctrl_HSyncL, Thsync, Thgdel, Thgate, Thlen,

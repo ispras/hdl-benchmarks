@@ -85,7 +85,9 @@
 /*
 */ 
 
-
+`include "sdramcnt.v"
+`include "hostcont.v"
+`include "micro.v"
 
 module os_sdram16(
             // SYSTEM LEVEL CONNECTIONS

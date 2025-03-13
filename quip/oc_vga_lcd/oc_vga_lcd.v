@@ -78,6 +78,8 @@
 `include "timescale.v"
 //synopsys translate_on
 `include "vga_defines.v"
+`include "vga_wb_master.v"
+`include "vga_wb_slave.v"
 
 module oc_vga_lcd (
 	wb_clk_i, wb_rst_i, rst_i, wb_inta_o,

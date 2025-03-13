@@ -1,4 +1,4 @@
-module soft(clk, d, ena, adata, clrn, q);
+module soft_module(clk, d, ena, adata, clrn, q);
   input clk;
   input d;
   input ena;

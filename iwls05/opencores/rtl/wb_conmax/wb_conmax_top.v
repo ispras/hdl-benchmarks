@@ -61,6 +61,10 @@
 
 `include "wb_conmax_defines.v"
 
+`include "wb_conmax_master_if.v"
+`include "wb_conmax_slave_if.v"
+`include "wb_conmax_rf.v"
+
 module wb_conmax_top(
 	clk_i, rst_i,
 

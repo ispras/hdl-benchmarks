@@ -6,7 +6,9 @@
 `define BUS_ADDR      3'd2
 `define BUS_ADDRDATA  3'd3
 `define BUS_DATA      3'd4
-
+`define RDY 		  3'd4
+`define ERR 		  3'd3
+`define WAT 		  3'd1
 
 
 // modific for default master etc....

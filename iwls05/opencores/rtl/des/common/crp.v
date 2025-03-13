@@ -32,6 +32,15 @@
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
 
+`include "sbox1.v"
+`include "sbox2.v"
+`include "sbox3.v"
+`include "sbox4.v"
+`include "sbox5.v"
+`include "sbox6.v"
+`include "sbox7.v"
+`include "sbox8.v"
+
 module  crp(P, R, K_sub);
 output	[1:32]	P;
 input	[1:32]	R;

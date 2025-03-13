@@ -1,36 +1,6 @@
+`include "mfa.v"
+
 module mcsa6 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ( 
 
@@ -49,30 +19,6 @@ output S;
 wire S00; 
 wire S01; 
 wire S1; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 mfa mfa00 ( 

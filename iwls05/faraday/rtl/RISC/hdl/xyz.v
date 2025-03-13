@@ -1,146 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module dalu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 (SYSCLK, TMODE, RESET_D1_R_N, CLMI_RHOLD,
 REGA_E_R, REGBI_E_R,
@@ -388,7 +246,7 @@ Aluop_E_R <= ALUOP_E_P;
 function [31:0] lshift;
 input [4:0] inamt;
 input [31:0] in;
-input type;
+input type_;
 
 reg [31:0] temp1, temp2, temp3, temp4;
 reg [4:0] amount;
@@ -396,7 +254,7 @@ reg [4:0] amount;
 begin
 
 
-amount = (type == `RALU_L_LUI) ? 5'b10000 : inamt;
+amount = (type_ == `RALU_L_LUI) ? 5'b10000 : inamt;
 
 temp1 = amount[0] ? {in[30:0], 1'b0} : in;
 temp2 = amount[1] ? {temp1[29:0], 2'b00} : temp1;
@@ -414,13 +272,13 @@ endfunction
 function [31:0] rshift;
 input [4:0] amount;
 input [31:0] in;
-input type;
+input type_;
 
 reg [31:0] temp1, temp2, temp3, temp4;
 reg sign;
 
 begin
-sign = (type == `RALU_ARITH) ? in[31] : 1'b0;
+sign = (type_ == `RALU_ARITH) ? in[31] : 1'b0;
 
 temp1 = amount[0] ? {{1{sign}}, in[31:1]} : in;
 temp2 = amount[1] ? {{2{sign}}, temp1[31:2]} : temp1;
@@ -434,10 +292,3 @@ endfunction
 
 
 endmodule
-
-
-
-
-
-
-

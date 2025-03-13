@@ -35,6 +35,7 @@
 //licensors. No other licenses, including any licenses needed under any third
 //party's intellectual property, are provided herein.
 
+`include "spram512x24.v"
 
 // synopsys translate_off
 `timescale 1 ps / 1 ps

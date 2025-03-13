@@ -1,0 +1,65 @@
+//NOTE: no-implementation module stub
+
+module AUTOctl (
+    input GRST,
+    `ifdef FD_EVB
+    input PERICLK,
+    `else
+    input DSPCLK,
+    `endif
+    input GO_E,
+    input MFRX0_E,
+    input MFTX0_E,
+    input MFRX1_E,
+    input MFTX1_E,
+    input MFSPT_E,
+    input ICE_ST,
+    input STBY,
+    input DSreq,
+    input DWRcyc,
+    input PWRcyc,
+    input DRDcyc,
+    input PRDcyc,
+    input BOOT,
+    input T0Sreq,
+    input R0Sreq,
+    input [15:0] RX0,
+    input [15:0] TX0,
+    input T1Sreq,
+    input R1Sreq,
+    input [15:0] RX1,
+    input [15:0] TX1,
+    input BSreq,
+    input BDMRD_cyc,
+    input BDMWR_cyc,
+    input BPMRD_cyc,
+    input BPMWR_cyc,
+    input BM_cyc,
+    input ECYC,
+    `ifdef FD_DFT
+    input SCAN_TEST,
+    `endif
+    input STEAL,
+    input SREQ,
+    input DMSreqx_wr,
+    input PMSreqx_wr,
+    input DMSreqx_rd,
+    input PMSreqx_rd,
+    input DSack,
+    input DSreqx,
+    input T0Sreqx,
+    input R0Sreqx,
+    input T0Sack,
+    input R0Sack,
+    input T1Sreqx,
+    input R1Sreqx,
+    input T1Sack,
+    input R1Sack,
+    input spt0DMD_oe,
+    input spt1DMD_oe,
+    input BSack,
+    input BSreqx,
+    output [15:0] autoDMD_do
+);
+
+endmodule

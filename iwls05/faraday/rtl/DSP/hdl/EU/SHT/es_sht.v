@@ -1,4 +1,7 @@
-
+`include "es_array.v"
+`include "es_dec.v"
+`include "es_exp.v"
+`include "es_reg.v"
 
 
 

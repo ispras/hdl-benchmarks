@@ -1,3 +1,5 @@
+`include "dpram128x24_bb.v"
+
 module dpram128x24 (
 	data,
 	wren,

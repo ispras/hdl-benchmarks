@@ -1,106 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`include "cdefgh.v"
 
 module lbc_async
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 (
@@ -142,35 +42,16 @@ reg Ack3;
 
 `include "lxr_symbols.vh"
 
-
-
-
-
-
-
-
-
 reg RESET_X_IR_N;
 always @ (posedge CLOCKII)
 RESET_X_IR_N <= RESET_D1_IR_N;
 wire RESET_D2_IR_N = RESET_X_IR_N;
 
 
-
-
-
-
-
 reg RESET_X_OR_N;
 always @ (posedge CLOCKOI)
 RESET_X_OR_N <= RESET_D1_OR_N;
 wire RESET_D2_OR_N = RESET_X_OR_N;
-
-
-
-
-
-
 
 
 always @(ACKI or Go2 or Go3)

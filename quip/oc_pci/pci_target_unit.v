@@ -100,6 +100,9 @@
 // PCI target unit consists of modules that together form datapath
 // between external WISHBONE slaves and external PCI initiators
 `include "pci_constants.v"
+`include "pci_wb_master.v"
+`include "pci_pciw_pcir_fifos.v"
+`include "pci_target32_interface.v"
 
 // synopsys translate_off
 `include "timescale.v"

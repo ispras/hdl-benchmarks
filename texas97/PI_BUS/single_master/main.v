@@ -39,8 +39,6 @@ module main (clk);
 endmodule
 
 `include "master2.v"
-`include "bus.v"
-`include "slave.v"
  
 
 			  

@@ -79,6 +79,13 @@
 //synopsys translate_on
 `include "vga_defines.v"
 
+`include "vga_wb_slave.v"
+`include "vga_wb_master.v"
+`include "vga_csm_pb.v"
+`include "vga_pgen.v"
+`include "vga_fifo_dc.v"
+
+
 module vga_enh_top (
 	wb_clk_i, wb_rst_i, rst_i, wb_inta_o,
 	wbs_adr_i, wbs_dat_i, wbs_dat_o, wbs_sel_i, wbs_we_i, wbs_stb_i, wbs_cyc_i, wbs_ack_o, wbs_rty_o, wbs_err_o,

@@ -1,89 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`include "lxr_symbols.vh"
-`include "core_symbols.vh"
+`include "../include/lxr_symbols.vh"
+`include "../include/core_symbols.vh"
+`include "abc.v"
+`include "stu.v"
+`include "pqr.v"
+`include "nop.v"
+`include "includes.v"
 
 module core
 

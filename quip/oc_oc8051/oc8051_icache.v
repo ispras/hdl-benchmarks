@@ -78,6 +78,7 @@
 // synopsys translate_on
 
 `include "oc8051_defines.v"
+`include "dpram_256x8.v"
 
 module oc8051_icache (rst, clk, 
              adr_i, dat_o, stb_i, ack_o, cyc_i,

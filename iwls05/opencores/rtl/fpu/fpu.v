@@ -58,6 +58,12 @@ Rounding Modes (rmode):
 
 */
 
+`include "primitives.v"
+`include "except.v"
+`include "pre_norm.v"
+`include "pre_norm_fmul.v"
+`include "post_norm.v"
+
 
 module fpu( clk, rmode, fpu_op, opa, opb, out, inf, snan, qnan, ine, overflow, underflow, zero, div_by_zero);
 input		clk;
@@ -485,22 +491,22 @@ wire	[2:0]	fop;
 wire	[4:0]	ldza_del;
 wire	[49:0]	quo_del;
 
-delay1  #0 ud000(clk, underflow_fmul1, mul_uf_del);
-delay1  #0 ud001(clk, underflow_fmul_r[0], uf2_del);
-delay1  #0 ud002(clk, underflow_fmul_r[1], ufb2_del);
-delay1  #0 ud003(clk, underflow_d, underflow_d_del);
+delay1   ud000(clk, underflow_fmul1, mul_uf_del);
+delay1   ud001(clk, underflow_fmul_r[0], uf2_del);
+delay1   ud002(clk, underflow_fmul_r[1], ufb2_del);
+delay1   ud003(clk, underflow_d, underflow_d_del);
 //delay1  #0 ud004(clk, test.u0.u4.exp_out1_co, co_del);
-delay1  #0 ud005(clk, underflow_fmul_r[2], ufc2_del);
-delay1 #30 ud006(clk, out_d, out_d_del);
+delay1   ud005(clk, underflow_fmul_r[2], ufc2_del);
+delay1  ud006(clk, out_d, out_d_del);
 
-delay1  #0 ud007(clk, overflow_fasu, ov_fasu_del);
-delay1  #0 ud008(clk, overflow_fmul, ov_fmul_del);
+delay1   ud007(clk, overflow_fasu, ov_fasu_del);
+delay1   ud008(clk, overflow_fmul, ov_fmul_del);
 
-delay1  #2 ud009(clk, fpu_op_r3, fop);
+delay1   ud009(clk, fpu_op_r3, fop);
 
-delay3  #4 ud010(clk, div_opa_ldz_d, ldza_del);
+delay3   ud010(clk, div_opa_ldz_d, ldza_del);
 
-delay1  #49 ud012(clk, quo, quo_del);
+delay1   ud012(clk, quo, quo_del);
 
 /*always @(test.error_event)
    begin

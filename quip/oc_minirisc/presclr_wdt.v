@@ -25,6 +25,8 @@
 
 `timescale 1ns / 10ps
 
+`include "alu.v"
+
 // Prescaler and Wachdog Counter
 module presclr_wdt(clk, rst, tcki, option, tmr0_we, tmr0_cnt_en, wdt_en, wdt_clr, wdt_to);
 input		clk;

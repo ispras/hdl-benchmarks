@@ -38,7 +38,8 @@
 
 
 
-`include "DMA_DEFINE.vh" 
+`include "DMA_DEFINE.vh"
+`include "dma_rrarb.v"
 
 module dma_chsel 
 ( 

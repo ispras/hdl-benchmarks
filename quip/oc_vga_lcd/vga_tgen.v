@@ -62,6 +62,8 @@
 `include "timescale.v"
 //synopsys translate_on
 
+`include "vga_vtim.v"
+
 module vga_tgen(
 	clk, clk_ena, rst,
 	Thsync, Thgdel, Thgate, Thlen, Tvsync, Tvgdel, Tvgate, Tvlen,

@@ -1,3 +1,5 @@
+`include "ADC162H90A_dtop.v"
+`include "ADDA162H90A_atop.v"
 
 module FXADDA162H90A ( 
                        // Analog Pads 

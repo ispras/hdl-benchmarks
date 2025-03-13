@@ -95,6 +95,7 @@
 //
 
 `include "pci_constants.v"
+`include "pci_pciw_fifo_control.v"
 
 // synopsys translate_off
 `include "timescale.v"

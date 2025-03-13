@@ -7,6 +7,16 @@
 //
 //
 /////////////////////////////////////////////////////////////////
+
+`include "nut_003_lut.v"
+`include "nut_003_m178.v"
+`include "carry_sum.v"
+`include "carry.v"
+`include "dffea_lib.v"
+`include "nut_003_spastic_pilot.v"
+`include "cascade.v"
+
+
 module nut_003 (
 // inputs
  alpha, bravo, charlie, delta, echo, foxtrot,

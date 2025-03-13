@@ -1,4 +1,10 @@
-
+`include "dec.v"
+`include "psq.v"
+`include "btb.v"
+`include "btb_mem.v"
+`include "rtb_mem.v"
+`include "eu.v"
+`include "dag.v"
 
 
 
@@ -220,7 +226,7 @@ SCAN_TEST,
 `endif
 PPclr_h, GO_D, GO_Ex, GO_Cx, Prderr_Eg,
 /*TRAP_Eg,*/ ICE_ST, redoSTI_h,
-ASTAT[6], Ctrue,
+ASTAT, Ctrue,
 Upd_IR, SPC[23:0], SBP_EN, /*HALT_Eg,*/ enTYP3,
 
 
@@ -369,7 +375,7 @@ IR[17:0], IRE[14:0],
 
 
 Term[3:0],
-MSTAT[0], MSTAT[3], MSTAT[4], CE, MSTAT[2],
+MSTAT, CE,
 VpopST_Eg, popASTATo[7:0], RSTtext_h,
 BIASRND,
 `ifdef FD_DFT
@@ -391,7 +397,7 @@ MFDAG1_E, Post1_E, imAddr_R, DAG1D_R, DAG2D_R,
 DAG1_EN, Double_R, idBR_R, Post2_E, MFDAG2_E,
 DAG2_EN, DAG2P_R, DMAen_R,
 IRE[3:0], IR[17:0],
-MSTAT[1], redoSTI_h, redoEX_h, PwriteI_Eg, DwriteI_Eg,
+MSTAT, redoSTI_h, redoEX_h, PwriteI_Eg, DwriteI_Eg,
 accPM_E, redoM_h,
 STEAL, T0Sreqx, T1Sreqx, R0Sreqx, R1Sreqx,
 SREQ, T0sack, T1sack, R0sack, R1sack,

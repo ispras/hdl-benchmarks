@@ -32,6 +32,9 @@
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
 
+`include "crp.v"
+`include "key_sel.v"
+
 module oc_des_perf_opt(desOut, desIn, key, clk);
 output	[63:0]	desOut;
 input	[63:0]	desIn;

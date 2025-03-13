@@ -30,6 +30,9 @@
 //// POSSIBILITY OF SUCH DAMAGE.                                 ////
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
+
+`include "oc_des_area_opt.v"
+
 module test;
 
 reg		clk;

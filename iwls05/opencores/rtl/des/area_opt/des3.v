@@ -32,6 +32,9 @@
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
 
+`include "crp.v"
+`include "key_sel3.v"
+
 module des3(desOut, desIn, key1, key2, key3, decrypt, roundSel, clk);
 output	[63:0]	desOut;
 input	[63:0]	desIn;

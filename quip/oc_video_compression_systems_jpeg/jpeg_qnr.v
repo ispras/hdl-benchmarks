@@ -58,6 +58,8 @@
 `include "timescale.v"
 //synopsys translate_on
 
+`include "div_su.v"
+
 module jpeg_qnr(clk, ena, rst, dstrb, din, qnt_val, qnt_cnt, dout, douten);
 
 	//

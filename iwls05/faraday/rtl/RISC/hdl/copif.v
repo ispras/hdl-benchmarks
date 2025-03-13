@@ -1,0 +1,42 @@
+//NOTE: no-implementation module stub
+
+module copif (
+    input wire SYSCLK,
+    input wire TMODE,
+    input wire SEN,
+    input wire RESET1N,
+    input wire INSTM32_S_R_N,
+    output wire EXCEPTION,
+    output wire X_HALT_R,
+    input wire COPNO,
+    input wire INSTIF,
+    input wire ISTALLIF,
+    output wire IMISS,
+    output wire DMISS,
+    output wire IVAL,
+    output wire DVAL,
+    input wire CMEMOPM,
+    input wire CONDINN,
+    input wire CPCONDN,
+    input wire CRDADDR,
+    output wire RHOLD,
+    output wire CRDGEN,
+    output wire CRDCON,
+    output wire CRDDATA,
+    input wire CWRADDR,
+    output wire CWRGEN,
+    output wire CWRCON,
+    output wire CWRDATA,
+    output wire CNTINST,
+    output wire CNTIMISS,
+    output wire CNTISTALL,
+    output wire CNTDMISS,
+    output wire CNTDSTALL,
+    output wire CNTDLOAD,
+    output wire CNTDSTORE,
+    input wire DBUSM,
+    output wire CDRIVERM,
+    output wire CRDDATAM
+);
+
+endmodule

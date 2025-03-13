@@ -32,6 +32,8 @@
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
 
+`include "des.v"
+
 module des3(desOut, desIn, key1, key2, key3, decrypt, clk); 
 output	[63:0]	desOut;
 input	[63:0]	desIn;

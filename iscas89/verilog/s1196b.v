@@ -4,6 +4,23 @@
 //# 141 inverters
 //# 388 gates (118 ANDs + 119 NANDs + 101 ORs + 50 NORs)
 
+//NOTE: copied from iscas89/verilog/s1196a.v
+
+module dff (CK,Q,D);
+input CK,D;
+output Q;
+
+  wire NM,NCK;
+  trireg NQ,M;
+
+  nmos N7 (M,D,NCK);
+  not P3 (NM,M);
+  nmos N9 (NQ,NM,CK);
+  not P5 (Q,NQ);
+  not P1 (NCK,CK);
+
+endmodule
+
 module s1196(GND,VDD,CK,G0,G1,G10,G11,G12,G13,G2,G3,G4,G45,G5,G530,G532,G535,
   G537,G539,
   G542,G546,G547,G548,G549,G550,G551,G552,G6,G7,G8,G9);

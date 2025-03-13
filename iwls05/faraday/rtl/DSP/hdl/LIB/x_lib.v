@@ -1,12 +1,18 @@
-
-
-
-
-
-
-
+`include "gtech_nor3.v"
+`include "gtech_or_not.v"
 `include "x_def.v"
 
+module GtCLK_NOR2 ( Z, A, B );
+input A, B;
+output Z;
+GTECH_NOR2 Gtclk1 (.Z(Z), .A(A), .B(B));
+endmodule
+
+module GtCLK_NOT ( Z, A );
+input A;
+output Z;
+GTECH_NOT Gtclk1 (.Z(Z), .A(A));
+endmodule
 
 module DMDbuf (I, O);
 
