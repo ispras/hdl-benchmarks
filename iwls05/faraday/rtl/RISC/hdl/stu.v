@@ -1,107 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`include "jkl.v"
+`include "pcont_cop0.v"
+`include "jpt.v"
+`include "abc.v"
 
 module cop0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 `include "core_symbols.vh"
 `include "lxr_symbols.vh"
@@ -478,25 +380,6 @@ pcont_cop0 PCONT2
 .CP0_M16IADDRB1_I (CP0_M16IADDRB1_I),
 .CLMI_RHOLD (CLMI_RHOLD),
 .CLMI_SELINST_S_P (CLMI_SELINST_S_P[`CLMI_SEL_INST_HI:0]));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 jpt jpt

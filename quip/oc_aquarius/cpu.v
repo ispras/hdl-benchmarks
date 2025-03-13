@@ -59,6 +59,10 @@
 
 `include "timescale.v"
 `include "defines.v"
+`include "decode.v"
+`include "mult.v"
+`include "datapath.v"
+`include "mem.v"
 
 //*************************************************
 // Module Definition

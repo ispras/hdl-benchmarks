@@ -39,6 +39,9 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
+
+`include "dpram_32x32_bb.v"
+
 module dpram_256x8_bb (
 	data,
 	wren,

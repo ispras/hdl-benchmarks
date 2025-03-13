@@ -1,4 +1,4 @@
-
+`include "reg12lc.v"
 `include "x_def.v"
 module PIO(
 

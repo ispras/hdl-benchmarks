@@ -1,3 +1,5 @@
+`include "dpram_256x8_bb.v"
+
 module dpram_32x32 (
 	data_a,
 	wren_a,

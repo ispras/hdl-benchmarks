@@ -59,6 +59,9 @@
 `include "timescale.v"
 //synopsys translate_on
 
+`include "dct.v"
+`include "zigzag.v"
+
 module fdct(clk, ena, rst, dstrb, din, dout, douten);
 
 	//

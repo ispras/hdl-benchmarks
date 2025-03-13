@@ -67,6 +67,7 @@
 
 `include "timescale.v"
 `include "defines.v"
+`include "register.v"
 
 //*************************************************
 // Module Definition

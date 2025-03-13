@@ -61,6 +61,8 @@
 
 `include "wb_conmax_defines.v"
 
+`include "wb_conmax_pri_dec.v"
+
 module wb_conmax_pri_enc(
 		valid,
 		pri0, pri1, pri2, pri3,

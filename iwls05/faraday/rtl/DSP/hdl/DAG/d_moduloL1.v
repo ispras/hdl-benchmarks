@@ -1,22 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`include "d_csa_d.v"
 
 `define del 1
 `include "x_def.v"

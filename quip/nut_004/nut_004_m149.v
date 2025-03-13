@@ -1,3 +1,5 @@
+`timescale 1 ps / 1 ps
+
 // 2 ins 1 outs
 module nut_004_m149 (clock,reset,ins,outs);
 input clock,reset;

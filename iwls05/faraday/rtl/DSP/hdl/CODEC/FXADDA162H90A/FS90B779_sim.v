@@ -1,6 +1,7 @@
 
 //`include "/home/msd/users/cjm1173/ad/FS90B717_b/src/include/header.v"
 `include "header.v"
+`include "FS90B779.v"
 // DEFINES
 `define DEBUG			1	       
 `define SIM_ITER	        100           
@@ -12,46 +13,99 @@
 // TOP MODULE
 module FS90B779_sim ();
 
-reg     resetb, xti, non_duty_clk;
-reg     [10:0]    counter;
-reg              slot_clk;
-reg              right_clk;
-reg              lrcin;
-reg              xtwrite ;
-reg              xt_en ;
-reg              [8:0]  xtdata ;
-reg               [6:0]  xtaddr ;
-wire 		RESET;
-wire             lrcout;
-integer          i;
-reg    [15:0]    dac_left_data  [0:5199];
-reg    [15:0]    dac_right_data [0:5199];
-reg    [15:0]    l_d; 
-reg    [15:0]    r_d; 
+reg resetb, xti, non_duty_clk;
+reg [10:0] counter;
+reg slot_clk;
+reg right_clk;
+reg lrcin;
+reg xtwrite;
+reg xt_en;
+reg [8:0] xtdata;
+reg [6:0] xtaddr;
+wire RESET;
+wire lrcout;
+integer i;
+reg [15:0] dac_left_data  [0:5199];
+reg [15:0] dac_right_data [0:5199];
+reg [15:0] l_d;
+reg [15:0] r_d;
 
-reg    bit_clkb;
-wire   xbclk;
-wire   xlrcin;
-wire   xlrcout;
-reg    xdin;
-wire   i2s_format_on;
-wire   deemphasis_on;
-wire   mute;
+reg bit_clkb;
+wire xbclk;
+wire xlrcin;
+wire xlrcout;
+reg xdin;
+wire i2s_format_on;
+wire deemphasis_on;
+wire mute;
 
+wire mode_256;
+wire mode_128;
+wire mode_272;
+wire mode_136;
+wire mode_1024;
+wire mode_512;
+wire mode_1088;
+wire mode_544;
 
+wire mclk_mode_2;
+wire mclk_mode_1;
+wire mclk_mode_0;
 
-wire             mode_256 ;
-wire             mode_128 ;
-wire             mode_272 ;
-wire             mode_136 ;
-wire             mode_1024 ;
-wire             mode_512 ;
-wire             mode_1088 ;
-wire             mode_544 ;
-
-wire            mclk_mode_2 ;
-wire 		mclk_mode_1 ;
-wire		mclk_mode_0 ;
+FS90B779 top (.lrcin(xlrcin),
+              .lrcout(xlrcout),
+              .din(xdin),
+              .dout(xdout),
+              .bclk(xbclk),
+              .MCLK(xti),
+              .MASTER(1'b0),
+              .LHM(1'b0),
+              .RHM(1'b0),
+              .INSEL(1'b0),
+              .MICB(1'b0),
+              .MICIN(1'b0),
+              .loopback(1'b0),
+              .VCM(1'b0),
+              .ROUT(ROUT),
+              .LOUT(LOUT),
+              .RESET(RESET),
+              .MCLK_MODE_2(1'b0),
+              .MCLK_MODE_1(1'b0),
+              .MCLK_MODE_0(1'b1),
+              .ADC_PD(1'b0),
+              .DAC_PD(1'b0),
+              .LHV_6(1'b1),
+              .LHV_5(1'b1),
+              .LHV_4(1'b1),
+              .LHV_3(1'b1),
+              .LHV_2(1'b0),
+              .LHV_1(1'b0),
+              .LHV_0(1'b1),
+              .RHV_6(1'b1),
+              .RHV_5(1'b1),
+              .RHV_4(1'b1),
+              .RHV_3(1'b1),
+              .RHV_2(1'b0),
+              .RHV_1(1'b0),
+              .RHV_0(1'b0),
+              .LIM(1'b1),
+              .RIM(1'b1),
+              .LIV_4(1'b1),
+              .LIV_3(1'b0),
+              .LIV_2(1'b1),
+              .LIV_1(1'b1),
+              .LIV_0(1'b1),
+              .RIV_4(1'b1),
+              .RIV_3(1'b0),
+              .RIV_2(1'b1),
+              .RIV_1(1'b1),
+              .RIV_0(1'b1),
+              .STE(1'b0),
+              .STA_1(1'b0),
+              .STA_0(1'b0),
+              .DAC(1'b1),
+              .BYP(1'b1),
+              .MICM(1'b1));
 
 assign    RESET= !resetb;
 assign    mclk_mode_2=top.MCLK_MODE_2;
@@ -182,71 +236,6 @@ assign #200 xbclk = top.MASTER ? 1'bZ :
 
 
 wire right_channel, left_channel, common_pin;
-
-
-
-FS90B779  top       (.lrcin(xlrcin),
-                    .lrcout(xlrcout),
-                    .din(xdin),
-                    .dout(xdout),
-                    .bclk(xbclk),
-                    .MCLK(xti),
-                    .MASTER(1'b0),
-                    .LHM(1'b0),
-                    .RHM(1'b0),
-                    .INSEL(1'b0),
-                    .MICB(1'b0),
-                    .MICIN(1'b0),
-                    .loopback(1'b0),
-                    .VCM(1'b0),
-                    .ROUT(ROUT),
-                    .LOUT(LOUT),
-                    .RESET(RESET),
-                    .MCLK_MODE_2  (1'b0) ,
-                    .MCLK_MODE_1  (1'b0) ,
-                    .MCLK_MODE_0  (1'b1) ,
-                    .ADC_PD      (1'b0) ,
-                    .DAC_PD      (1'b0) ,
-                      .LHV_6 (1'b1),
-                                  .LHV_5 (1'b1),
-                                  .LHV_4 (1'b1),
-                                  .LHV_3 (1'b1),
-                                  .LHV_2 (1'b0),
-                                  .LHV_1 (1'b0),
-                                  .LHV_0 (1'b1),
-                                  .RHV_6 (1'b1),
-                                  .RHV_5 (1'b1),
-                                  .RHV_4 (1'b1),
-                                  .RHV_3 (1'b1),
-                                  .RHV_2 (1'b0),
-                                  .RHV_1 (1'b0),
-                                  .RHV_0 (1'b0),
-                                  .LIM (1'b1),
-                                  .RIM (1'b1),
-                                  .LIV_4 (1'b1),
-                                  .LIV_3 (1'b0),
-                                  .LIV_2 (1'b1),
-                                  .LIV_1 (1'b1),
-                                  .LIV_0 (1'b1),
-                                  .RIV_4 (1'b1),
-                                  .RIV_3 (1'b0),
-                                  .RIV_2 (1'b1),
-                                  .RIV_1 (1'b1),
-                                  .RIV_0 (1'b1),
-                                  .STE (1'b0),
-                                  .STA_1 (1'b0),
-                                  .STA_0 (1'b0),
-                                  .DAC (1'b1),
-                                  .BYP (1'b1),
-                    .MICM(1'b1));
-                    
-                    
-                    
-                    
-                   
-                    
-                       
-
 
 integer k;
 

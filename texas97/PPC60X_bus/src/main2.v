@@ -1,4 +1,7 @@
 
+`include "mem.v"
+
+
 module main(clk);
 
 	input		clk;

@@ -29,6 +29,10 @@
 //----------------------------------------------------------------------------
 
 `include "header.v"
+`include "shifter.v"
+`include "adder.v"
+`include "mem.v"
+
 
 module fip_cordic_rca(CosX,SinX,theta,Sign,clock,reset);
 

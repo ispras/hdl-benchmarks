@@ -1,3 +1,5 @@
+`include "decode.v"
+
 module MCLK_Delay (MCLK, MCLK_1delay, MCLK_2delay);
 input              MCLK;
 output             MCLK_1delay;

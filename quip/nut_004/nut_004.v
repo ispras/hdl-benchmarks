@@ -5,6 +5,19 @@
 //
 //
 /////////////////////////////////////////////////////////////////
+
+`include "nut_004_lut.v"
+`include "nut_004_m149.v"
+`include "exp.v"
+`include "dffea_lib.v"
+`include "carry_sum.v"
+`include "nut_004_rom_jesus.v"
+`include "nut_004_word_swap.v"
+`include "soft.v"
+`include "cascade.v"
+`include "lcell.v"
+`include "carry.v"
+
 module nut_004 (
 // inputs
  bravo, charlie, delta, oscar, papa, quebec,
@@ -12829,7 +12842,7 @@ begin
 end
 
 wire salmon_mickey_outwire;
-soft bust_doobie (barney,salmon_mickey_outwire);
+soft_module bust_doobie (barney,salmon_mickey_outwire);
 
 always @(salmon_mickey_outwire)
 begin
@@ -12854,7 +12867,7 @@ begin
 end
 
 wire weevil_tako_outwire;
-soft winner_bambi (broadway,weevil_tako_outwire);
+soft_module winner_bambi (broadway,weevil_tako_outwire);
 
 always @(weevil_tako_outwire)
 begin
@@ -12887,7 +12900,7 @@ begin
 end
 
 wire skinner_ohno_outwire;
-soft Iwin_odin (gnd,skinner_ohno_outwire);
+soft_module Iwin_odin (gnd,skinner_ohno_outwire);
 
 always @(skinner_ohno_outwire)
 begin

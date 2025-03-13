@@ -1,41 +1,13 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `include "DMA_DEFINE.vh" 
+
+`include "dma_ahbdec.v"
+`include "dma_ahbmst.v"
+`include "dma_ahbmux.v"
+`include "dma_ahbslv.v"
+`include "dma_chsel.v"
+`include "dma_ctlrf.v"
+`include "dma_engine.v"
+`include "dma_fifo.v"
 
 module dma_top 
 ( 

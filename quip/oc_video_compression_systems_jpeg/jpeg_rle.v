@@ -65,6 +65,9 @@
 `include "timescale.v"
 //synopsys translate_on
 
+`include "jpeg_rle1.v"
+`include "jpeg_rzs.v"
+
 module jpeg_rle(clk, rst, ena, dstrb, din, size, rlen, amp, douten, bstart);
 
 	//

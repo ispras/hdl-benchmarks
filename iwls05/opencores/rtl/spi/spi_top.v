@@ -38,6 +38,8 @@
 ////                                                              ////
 //////////////////////////////////////////////////////////////////////
 
+`include "spi_clgen.v"
+`include "spi_shift.v"
 
 `include "spi_defines.v"
 `include "timescale.v"

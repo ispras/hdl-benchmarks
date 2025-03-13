@@ -58,6 +58,9 @@
 //
 
 `include "timescale.v"
+`include "aes_key_expand_128.v"
+`include "aes_sbox.v"
+`include "aes_rcon.v"
 
 module aes_cipher_top(clk, rst, ld, done, key, text_in, text_out );
 input		clk, rst;

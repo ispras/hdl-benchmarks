@@ -69,6 +69,10 @@
 `include "timescale.v"
 // synopsys translate_on
 
+`include "pci_io_mux_ad_en_crit.v"
+`include "pci_io_mux_ad_load_crit.v"
+`include "pci_rst_int.v"
+
 module pci_io_mux
 (
     reset_in,

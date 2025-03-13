@@ -1,3 +1,5 @@
+`include "spram512x32_bb.v"
+
 module spram512x32 (
 	address,
 	clock,

@@ -61,6 +61,8 @@
 
 `include "timescale.v"
 `include "defines.v"
+`include "sasc_top.v"
+`include "sasc_brg.v"
 
 //======================================================
 // UART : Asynchronous Serial Interface

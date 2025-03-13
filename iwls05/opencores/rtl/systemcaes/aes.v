@@ -49,6 +49,11 @@
 // First import
 //
 
+`include "sbox.v"
+`include "subbytes.v"
+`include "mixcolum.v"
+`include "keysched.v"
+
 module aes(clk,reset,load_i,decrypt_i,data_i,key_i,ready_o,data_o);
 input clk;
 input reset;

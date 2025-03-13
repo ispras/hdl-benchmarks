@@ -1,4 +1,5 @@
 `include "x_def.v"
+`include "gtclk_nand2.v"
 
 module Glogic(/* input */
 T_RSTn,

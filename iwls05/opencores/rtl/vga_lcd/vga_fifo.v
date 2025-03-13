@@ -132,41 +132,41 @@ module vga_fifo (
 	   input [aw:1] q;
 	   case (aw)
 	       2: lsb = ~q[2];
-	       3: lsb = &q[aw-1:1] ^ ~(q[3] ^ q[2]);
-	       4: lsb = &q[aw-1:1] ^ ~(q[4] ^ q[3]);
-	       5: lsb = &q[aw-1:1] ^ ~(q[5] ^ q[3]);
-	       6: lsb = &q[aw-1:1] ^ ~(q[6] ^ q[5]);
-	       7: lsb = &q[aw-1:1] ^ ~(q[7] ^ q[6]);
-	       8: lsb = &q[aw-1:1] ^ ~(q[8] ^ q[6] ^ q[5] ^ q[4]);
-	       9: lsb = &q[aw-1:1] ^ ~(q[9] ^ q[5]);
-	      10: lsb = &q[aw-1:1] ^ ~(q[10] ^ q[7]);
-	      11: lsb = &q[aw-1:1] ^ ~(q[11] ^ q[9]);
-	      12: lsb = &q[aw-1:1] ^ ~(q[12] ^ q[6] ^ q[4] ^ q[1]);
-	      13: lsb = &q[aw-1:1] ^ ~(q[13] ^ q[4] ^ q[3] ^ q[1]);
-	      14: lsb = &q[aw-1:1] ^ ~(q[14] ^ q[5] ^ q[3] ^ q[1]);
-	      15: lsb = &q[aw-1:1] ^ ~(q[15] ^ q[14]);
-	      16: lsb = &q[aw-1:1] ^ ~(q[16] ^ q[15] ^ q[13] ^ q[4]);
+	       3: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	       4: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	       5: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	       6: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	       7: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	       8: lsb = &q[aw-1:1] ^ ~(q ^ q ^ q ^ q);
+	       9: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	      10: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	      11: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	      12: lsb = &q[aw-1:1] ^ ~(q ^ q ^ q ^ q);
+	      13: lsb = &q[aw-1:1] ^ ~(q ^ q ^ q ^ q);
+	      14: lsb = &q[aw-1:1] ^ ~(q ^ q ^ q ^ q);
+	      15: lsb = &q[aw-1:1] ^ ~(q ^ q);
+	      16: lsb = &q[aw-1:1] ^ ~(q ^ q ^ q ^ q);
 	   endcase
 	endfunction
 `else
 	function lsb;
 	   input [aw:1] q;
 	   case (aw)
-	       2: lsb = ~q[2];
-	       3: lsb = ~(q[3] ^ q[2]);
-	       4: lsb = ~(q[4] ^ q[3]);
-	       5: lsb = ~(q[5] ^ q[3]);
-	       6: lsb = ~(q[6] ^ q[5]);
-	       7: lsb = ~(q[7] ^ q[6]);
-	       8: lsb = ~(q[8] ^ q[6] ^ q[5] ^ q[4]);
-	       9: lsb = ~(q[9] ^ q[5]);
-	      10: lsb = ~(q[10] ^ q[7]);
-	      11: lsb = ~(q[11] ^ q[9]);
-	      12: lsb = ~(q[12] ^ q[6] ^ q[4] ^ q[1]);
-	      13: lsb = ~(q[13] ^ q[4] ^ q[3] ^ q[1]);
-	      14: lsb = ~(q[14] ^ q[5] ^ q[3] ^ q[1]);
-	      15: lsb = ~(q[15] ^ q[14]);
-	      16: lsb = ~(q[16] ^ q[15] ^ q[13] ^ q[4]);
+	       2: lsb = ~q;
+	       3: lsb = ~(q ^ q);
+	       4: lsb = ~(q ^ q);
+	       5: lsb = ~(q ^ q);
+	       6: lsb = ~(q ^ q);
+	       7: lsb = ~(q ^ q);
+	       8: lsb = ~(q ^ q ^ q ^ q);
+	       9: lsb = ~(q ^ q);
+	      10: lsb = ~(q ^ q);
+	      11: lsb = ~(q ^ q);
+	      12: lsb = ~(q ^ q ^ q ^ q);
+	      13: lsb = ~(q ^ q ^ q ^ q);
+	      14: lsb = ~(q ^ q ^ q ^ q);
+	      15: lsb = ~(q ^ q);
+	      16: lsb = ~(q ^ q ^ q ^ q);
 	   endcase
 	endfunction
 `endif

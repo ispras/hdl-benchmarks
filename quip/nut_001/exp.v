@@ -1,3 +1,5 @@
+//NOTE: copied from quip/nut_001/exp.v
+
 /* ***********************************************************************
   The Free IP Project
   Free-RISC8 -- Verilog 8-bit Microcontroller

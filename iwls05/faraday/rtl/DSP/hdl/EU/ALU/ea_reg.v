@@ -17,6 +17,8 @@
 `define del 1
 
 `include "x_def.v"
+`include "reg16l.v"
+`include "dmdbuf.v"
 
 module EA_REG (/* IN */
 DSPCLK, SHADOW, Xop0_E, zeroAX, zeroAY,

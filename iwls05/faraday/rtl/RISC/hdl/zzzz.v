@@ -1,86 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`include "lx1.v"
 
 `include "lxr_symbols.vh"
 
@@ -106,494 +24,6 @@ output DATA_OUT;
 endmodule // tsyncram_4x32
 
 module frisc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1282,23 +712,11 @@ lx1 lx1
 .SL_SLEEPSYS_C2_R ( SL_SLEEPSYS_C2_R ),
 .SL_SLEEPSYS_C3_R ( SL_SLEEPSYS_R ),
 
-
-
-
 .BUSCLK ( `LX2_BUSCLK_ ),
 
 .BUSCLKF ( `LX2_BUSCLKF_ ),
 .SL_SLEEPBUS_C2_BR ( SL_SLEEPBUS_C2_BR ),
 .SL_SLEEPBUS_C3_BR ( SL_SLEEPBUS_BR ),
-
-
-
-
-
-
-
-
-
 
 .ResetN ( ResetN ),
 .RESET_PWRON_N ( CResetN ),
@@ -1315,32 +733,15 @@ lx1 lx1
 
 .CFG_MEMFULLWORD ( CFG_MEMFULLWORD ),
 
-
-
-
-
-
-
-
 .CFG_LBCSYNCMODE ( CFG_LBCSYNCMODE ),
-
-
 
 .CFG_LBCWBDISABLE ( CFG_LBCWBDISABLE ),
 
-
-
 .CFG_EJTNMINUS1 ( CFG_EJTNMINUS1 ),
-
-
 
 .CFG_EJTMLOG2 ( CFG_EJTMLOG2 ),
 
-
-
 .CFG_EJTBIT0M16 ( CFG_EJTBIT0M16 ),
-
-
 
 .JTAG_TDO_NR (JTAG_TDO_NR),
 .JTAG_TDI (JTAG_TDI),
@@ -1349,23 +750,13 @@ lx1 lx1
 .JTAG_TRST_N (JTAG_TRST_N),
 .JTAG_RST_N (JTAG_RST_N),
 
-
-
-
-
 .JPT_PCST_DR (JPT_PCST_DR),
 .JPT_TPC_DR (JPT_TPC_DR),
 .EJT_DCLK (EJT_DCLK),
 
-
-
 .CFG_EJDIS (CFG_EJDIS),
 
-
-
 .CFG_DWDISW (CFG_DWDISW),
-
-
 
 .Cond_in1 ( Cond_in1 ),
 .C1rd_data ( C1rd_data ),
@@ -1378,8 +769,6 @@ lx1 lx1
 .C1wr_con ( C1wr_con ),
 .C1wr_data ( C1wr_data ),
 
-
-
 .Cond_in2 ( Cond_in2 ),
 .C2rd_data ( C2rd_data ),
 .C2rd_addr ( C2rd_addr ),
@@ -1390,8 +779,6 @@ lx1 lx1
 .C2wr_gen ( C2wr_gen ),
 .C2wr_con ( C2wr_con ),
 .C2wr_data ( C2wr_data ),
-
-
 
 .Cond_in3 ( Cond_in3 ),
 .C3rd_data ( C3rd_data ),
@@ -1411,8 +798,6 @@ lx1 lx1
 .C3cnt_dload ( C3cnt_dload ),
 .C3cnt_dstore ( C3cnt_dstore ),
 
-
-
 .CEI_INSTM32_S_R_N ( CEI_INSTM32_S_R_N ),
 .CE1_RES_E ( `CE1_RES_E_ ),
 .CEI_CE1HOLD ( CEI_CE1HOLD ),
@@ -1422,9 +807,6 @@ lx1 lx1
 .CEI_CE1OP_S_R ( CEI_CE1OP_S_R ),
 .CEI_CE1AOP_E_R ( CEI_CE1AOP_E_R),
 .CEI_CE1BOP_E_R ( CEI_CE1BOP_E_R),
-
-
-
 
 .LDataI ( LDataI ),
 .LIrdyI ( LIrdyI ),
@@ -1446,22 +828,13 @@ lx1 lx1
 .LXoe ( LXoe ),
 .LDoe ( LDoe ),
 
-
-
-
-
 .EXT_ICREQRAM_R (`EXT_ICREQRAM_R_),
 .IC_GNTRAM_R ( IC_GNTRAM_R ),
-
-
 
 .IC_TAGINDEX ( IC_TAGINDEX ),
 .ICR_TAGRD0 ( {ICR_TAGRD0 `IC_TAG_RD_FILL_}),
 
-
 .IC_TAGWR0 ( {IC_TAGWR0, IC_TAGWR0UNUSED}),
-
-
 
 .IC_TAG0WE ( IC_TAG0WE ),
 .IC_TAG0WEN ( IC_TAG0WEN ),
@@ -1479,19 +852,9 @@ lx1 lx1
 .IC_INST0CS ( IC_INST0CS ),
 .IC_INST0CSN ( IC_INST0CSN ),
 
-
-
-
-
-
 .CFG_ICOFF ( 1'b0 ),
 .ICR_TAGMASK (`IC_TAG_MASK ),
 .ICR_INST0RD ( ICR_INST0RD ),
-
-
-
-
-
 
 .IW_VALIDINDEX ( IW_VALIDINDEX ),
 
@@ -1517,17 +880,11 @@ lx1 lx1
 .EXT_IWREQRAM_R (`EXT_IWREQRAM_R_),
 .IW_GNTRAM_R ( IW_GNTRAM_R ),
 
-
 .CFG_IWBASE ( CFG_IWBASE ),
 .CFG_IWTOP ( CFG_IWTOP ),
 
-
-
-
 .EXT_DCREQRAM_R (`EXT_DCREQRAM_R_),
 .DC_GNTRAM_R ( DC_GNTRAM_R ),
-
-
 
 .DC_TAGINDEX ( DC_TAGINDEX ),
 
@@ -1555,10 +912,6 @@ lx1 lx1
 .DCR_TAGRD ( {DCR_TAGRD `DC_TAG_RD_FILL_}),
 .DCR_DATARD ( DCR_DATARD ),
 
-
-
-
-
 .DW_DATAINDEX ( DW_DATAINDEX ),
 .DWR_DATARD ( DWR_DATARD ),
 .DW_DATAWR ( DW_DATAWR ),
@@ -1575,16 +928,9 @@ lx1 lx1
 .CFG_DWBASE ( CFG_DWBASE ),
 .CFG_DWTOP ( CFG_DWTOP ),
 
-
-
-
-
 .EXT_SLEEPREQ_R ( EXT_SLEEPREQ_R ),
 
-
-
 .CFG_SLEEPENABLE ( CFG_SLEEPENABLE ),
-
 
 .IntreqN ( IntreqN )
 

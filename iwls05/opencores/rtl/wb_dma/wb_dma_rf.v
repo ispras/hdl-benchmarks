@@ -94,6 +94,8 @@
 
 `include "wb_dma_defines.v"
 
+`include "wb_dma_ch_rf.v"
+
 module wb_dma_rf(clk, rst,
 
 	// WISHBONE Access

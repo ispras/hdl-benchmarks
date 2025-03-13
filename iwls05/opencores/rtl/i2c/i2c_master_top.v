@@ -75,6 +75,7 @@
 // synopsys translate_on
 
 `include "i2c_master_defines.v"
+`include "i2c_master_byte_ctrl.v"
 
 module i2c_master_top(
 	wb_clk_i, wb_rst_i, arst_i, wb_adr_i, wb_dat_i, wb_dat_o,

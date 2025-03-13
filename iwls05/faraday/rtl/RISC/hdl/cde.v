@@ -1,96 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`include "bcdefg.v"
 module lbc_data
-
-
-
-
-
-
-
-
 
 
 (
@@ -614,7 +523,7 @@ wire [`LBC_NWRITES:0] wdummyhito;
 
 
 
-fifo_data #(`LBC_WRITES, 35) write_data
+fifo_data write_data
 (
 .CLOCKI (SYSCLK),
 .DATAI ({CBUS_DSZ, CBUS_DDM, ddata}),
@@ -638,7 +547,7 @@ wire [`LBC_NWRITES:0] addrhit;
 
 assign LD_FCTLHIT = addrhit | uchit;
 
-fifo_data #(`LBC_WRITES, 1, 0) write_uc
+fifo_data write_uc
 (
 .CLOCKI (SYSCLK),
 .DATAI (CBUS_DUC),
@@ -651,7 +560,7 @@ fifo_data #(`LBC_WRITES, 1, 0) write_uc
 .RESET_D1_R_N (RESET_D1_R_N)
 );
 
-fifo_data #(`LBC_WRITES) write_addr
+fifo_data write_addr
 (
 .CLOCKI (SYSCLK),
 .DATAI (CBUS_DADDR),
@@ -668,7 +577,7 @@ fifo_data #(`LBC_WRITES) write_addr
 wire [`LBC_NREADS:0] rdummyhito;
 
 
-fifo_data #(`LBC_READS, 34) read_data
+fifo_data read_data
 (
 .CLOCKI (BUSCLK),
 .DATAI ({Lid_LR, Lej_LR, LBUS_DATA}),

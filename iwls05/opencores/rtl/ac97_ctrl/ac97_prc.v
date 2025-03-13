@@ -78,6 +78,7 @@
 //
 
 `include "ac97_defines.v"
+`include "ac97_fifo_ctrl.v"
 
 module ac97_prc(clk, rst,
 

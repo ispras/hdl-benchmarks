@@ -39,6 +39,9 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
+
+`include "altsyncram.v"
+
 module eth_spram_256x32_bb (
 	address,
 	clock,

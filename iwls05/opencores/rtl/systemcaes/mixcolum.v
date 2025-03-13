@@ -49,6 +49,7 @@
 // First import
 //
 
+`include "word_mixcolum.v"
 
 module mixcolum(clk,reset,decrypt_i,start_i,data_i,ready_o,data_o);
 input clk;

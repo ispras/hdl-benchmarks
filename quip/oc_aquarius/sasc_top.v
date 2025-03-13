@@ -63,6 +63,7 @@
 //
 
 `include "timescale.v"
+`include "sasc_fifo4.v"
 
 /*
 Serial IO Interface

@@ -31,6 +31,8 @@
 ////                                                             ////
 /////////////////////////////////////////////////////////////////////
 
+`include "des.v"
+
 module test;
 
 reg		clk;
@@ -133,7 +135,6 @@ assign	key1 = tmp[143:136];
 assign	key0 = tmp[135:128];
 assign	des_in = tmp[127:64];
 assign	exp_out_d = tmp[63:0];
-
 
 des u0( .desOut(desOut), .desIn(des_in), .key(key), .clk(clk));
 

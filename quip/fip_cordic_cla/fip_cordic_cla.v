@@ -31,6 +31,9 @@
 
 // MH
 `include "header.v"
+`include "shifter.v"
+`include "adder.v"
+`include "mem.v"
 
 module fip_cordic_cla(CosX,SinX,theta,Sign,clock,reset);
 

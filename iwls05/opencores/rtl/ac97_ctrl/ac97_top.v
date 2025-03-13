@@ -77,6 +77,18 @@
 //
 
 `include "ac97_defines.v"
+`include "ac97_sout.v"
+`include "ac97_sin.v"
+`include "ac97_soc.v"
+`include "ac97_out_fifo.v"
+`include "ac97_wb_if.v"
+`include "ac97_rf.v"
+`include "ac97_prc.v"
+`include "ac97_cra.v"
+`include "ac97_dma_if.v"
+`include "ac97_int.v"
+`include "ac97_in_fifo.v"
+`include "ac97_rst.v"
 
 module ac97_top(clk_i, rst_i,
 

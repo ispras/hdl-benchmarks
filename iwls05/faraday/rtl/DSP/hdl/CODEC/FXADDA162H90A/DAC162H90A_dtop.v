@@ -1,3 +1,8 @@
+`include "fir_8x.v"
+`include "MCLK_Delay.v"
+`include "decode.v"
+`include "ram_32_44.v"
+
 module DAC162H90A_dtop ( RESET, 
                          MCLK, 
                          DATA_LATCH,

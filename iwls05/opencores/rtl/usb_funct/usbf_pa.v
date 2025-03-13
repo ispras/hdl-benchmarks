@@ -93,6 +93,8 @@
 
 `include "usbf_defines.v"
 
+`include "usbf_crc16.v"
+
 module usbf_pa(	clk, rst,
 
 		// UTMI TX I/F

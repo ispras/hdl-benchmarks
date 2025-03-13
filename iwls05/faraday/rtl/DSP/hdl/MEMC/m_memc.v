@@ -3,8 +3,8 @@
 
 
 
-
-
+`include "mreg16mc.v"
+`include "dma_modes.v"
 `include "x_def.v"
 
 module MEMC (/* ------------ Inputs : ------------- */

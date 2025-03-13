@@ -90,6 +90,10 @@
 //
 
 `include "wb_dma_defines.v"
+`include "wb_dma_rf.v"
+`include "wb_dma_ch_sel.v"
+`include "wb_dma_de.v"
+`include "wb_dma_wb_if.v"
 
 module oc_wb_dma(clk_i, rst_i,
 

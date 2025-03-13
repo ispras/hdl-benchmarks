@@ -91,6 +91,7 @@
 //
 
 `include "mc_defines.v"
+`include "mc_rd_fifo.v"
 
 module mc_dp(	clk, rst, csc, 
 		wb_cyc_i, mem_wb_ack_o, wb_data_i, wb_data_o,

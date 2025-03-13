@@ -61,6 +61,8 @@
 //
 //
 
+`include "timescale.v"
+
 module pci_wbs_wbb3_2_wbb2
 (
     wb_clk_i,

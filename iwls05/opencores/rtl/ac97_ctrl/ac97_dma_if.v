@@ -78,6 +78,7 @@
 //
 
 `include "ac97_defines.v"
+`include "ac97_dma_req.v"
 
 module ac97_dma_if(clk, rst,
 		o3_status, o4_status, o6_status, o7_status, o8_status, o9_status,

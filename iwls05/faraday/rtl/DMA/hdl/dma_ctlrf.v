@@ -39,6 +39,7 @@
 
 
 `include "DMA_DEFINE.vh" 
+`include "dma_chrf.v"
 
 module dma_ctlrf 
 ( 

@@ -58,6 +58,8 @@
 //
 
 `include "timescale.v"
+`include "aes_key_expand_128.v"
+`include "aes_inv_sbox.v"
 
 module oc_aes_core_inv (clk, rst, kld, ld, done, key, text_in, text_out );
 input		clk, rst;

@@ -1,6 +1,12 @@
 
 //`include define.v
 
+<<<<<<< HEAD
+`include "mem.v"
+=======
+`include "cpu.v"
+>>>>>>> 8072c14ffe950f490f1872c9fc725d3ca61eced9
+
 module main(clk);
    
 	input		clk;

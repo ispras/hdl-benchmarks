@@ -1,5 +1,7 @@
-
-
+`include "em_dec.v"
+`include "em_reg.v"
+`include "em_core.v"
+`include "em_mvovf.v"
 
 
 

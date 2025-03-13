@@ -15,6 +15,10 @@
 /*--------------------------------------------------------------*/
 
 `include "x_def.v"
+`include "d_ILM1reg.v"
+`include "d_ILM2reg.v"
+`include "d_moduloL1.v"
+`include "d_moduloL2.v"
 
 module DAG(/*------------------- Inputs ------------------------*/
  DSPCLK, T_RST, GO_E, GO_C, EX_en, STBY,

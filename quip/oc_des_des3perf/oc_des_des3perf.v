@@ -1,3 +1,5 @@
+`include "des3.v"
+
 module oc_des_des3perf(desOut, desIn, key1, key2, key3, decrypt, clk); 
 output	[63:0]	desOut;
 input	[63:0]	desIn;

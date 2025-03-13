@@ -2,21 +2,13 @@
 
 
 
-
-
-
+`include "x_lib.v"
 `include "x_def.v"
 
 module GtCLK_OR_NOT ( Z, A, B );
 input A, B;
 output Z;
 GTECH_OR_NOT Gtclk1 (.Z(Z), .B(B), .A(A));
-endmodule
-
-module GtCLK_NOT ( Z, A );
-input A;
-output Z;
-GTECH_NOT Gtclk1 (.Z(Z), .A(A));
 endmodule
 
 module GtCLK_AND3 ( Z, A, B, C );
@@ -36,12 +28,6 @@ module GtCLK_NOR3 ( Z, A, B, C );
 input A, B, C;
 output Z;
 GTECH_NOR3 Gtclk1 (.Z(Z), .A(A), .B(B), .C(C));
-endmodule
-
-module GtCLK_NOR2 ( Z, A, B );
-input A, B;
-output Z;
-GTECH_NOR2 Gtclk1 (.Z(Z), .A(A), .B(B));
 endmodule
 
 module GtCLK_MUX2 ( Z, A, B, S );

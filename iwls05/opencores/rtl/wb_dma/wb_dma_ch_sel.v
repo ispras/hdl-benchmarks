@@ -95,6 +95,9 @@
 
 `include "wb_dma_defines.v"
 
+`include "wb_dma_ch_pri_enc.v"
+`include "wb_dma_ch_arb.v"
+
 module wb_dma_ch_sel(clk, rst,
 
 	// DMA Request Lines

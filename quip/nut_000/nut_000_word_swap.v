@@ -1,3 +1,5 @@
+`timescale 1 ps / 1 ps
+
 /////////////////////////////////////////////////////////////////
 // Altera Corporation
 // Param comb WORD_SWAPPER helper circuit.

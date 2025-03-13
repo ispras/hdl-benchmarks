@@ -83,6 +83,8 @@
 
 `include "bus_commands.v"
 `include "pci_constants.v"
+`include "pci_pci_decoder.v"
+`include "pci_target32_sm.v"
 
 // synopsys translate_off
 `include "timescale.v"
