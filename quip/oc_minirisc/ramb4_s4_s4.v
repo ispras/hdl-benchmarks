@@ -3,14 +3,14 @@ module RAMB4_S4_S4 (CLKA, CLKB, RSTB, RSTA, DOA, ADDRA, DIA, ENA, WEA, DOB, ADDR
   input CLKB;
   input RSTB;
   input RSTA;
-  output DOA;
-  output ADDRA;
+  output [3:0] DOA;
+  output [9:0] ADDRA;
   input DIA;
   output ENA;
   input WEA;
-  output DOB;
-  output ADDRB;
-  output DIB;
+  output [3:0] DOB;
+  output [9:0] ADDRB;
+  output [3:0] DIB;
   output ENB;
   output WEB;
 endmodule
