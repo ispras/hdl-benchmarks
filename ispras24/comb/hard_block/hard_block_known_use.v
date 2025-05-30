@@ -8,5 +8,5 @@ module hard_block_known_use(A, B, S, Y);
   output [WIDTH-1:0] Y;
   
   hard_block_known hard_block_known_u(.A(A), .B(B), .S(S), .Y(Y));
-  
+
 endmodule
