@@ -20,7 +20,7 @@ Verilog examples for the following operations and primitives:
   * NOT (`!`).
 * multiplexers and demultiplexers:
   * demultiplexer (`demux`);
-  * multiplexer (`mux`) (fully and partially connected);
+  * multiplexer (`mux`);
   * parallel multiplexer (`pmux`);
   * bitwise multiplexer (`bmux`).
 * bitwise:
