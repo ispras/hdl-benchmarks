@@ -109,12 +109,6 @@
 
 `include "usbf_defines.v"
 
-`include "usbf_utmi_if.v"
-`include "usbf_pl.v"
-`include "usbf_mem_arb.v"
-`include "usbf_rf.v"
-`include "usbf_wb.v"
-
 module usbf_top(// WISHBONE Interface
 		clk_i, rst_i, wb_addr_i, wb_data_i, wb_data_o,
 		wb_ack_o, wb_we_i, wb_stb_i, wb_cyc_i, inta_o, intb_o,

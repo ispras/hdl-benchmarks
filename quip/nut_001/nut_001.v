@@ -5,17 +5,6 @@
 //
 //
 /////////////////////////////////////////////////////////////////
-
-`include "nut_001_lut.v"
-`include "nut_001_deuteronomy.v"
-`include "carry_sum.v"
-`include "lcell.v"
-`include "cascade.v"
-`include "dffea_lib.v"
-`include "nut_001_rom_tattoo.v"
-`include "exp.v"
-`include "soft.v"
-
 module nut_001 (
 // inputs
  bravo, charlie, delta, echo, november, oscar,
@@ -21237,7 +21226,7 @@ begin
 end
 
 wire homer_donkey_outwire;
-soft_module kaisha_yak (would_husks,homer_donkey_outwire);
+soft kaisha_yak (would_husks,homer_donkey_outwire);
 
 always @(homer_donkey_outwire)
 begin
@@ -21279,7 +21268,7 @@ begin
 end
 
 wire tuna_bracket_outwire;
-soft_module balloon_yoku (tattoo_bloom,tuna_bracket_outwire);
+soft balloon_yoku (tattoo_bloom,tuna_bracket_outwire);
 
 always @(tuna_bracket_outwire)
 begin
@@ -21287,7 +21276,7 @@ begin
 end
 
 wire arcade_chuck_outwire;
-soft_module mao_willem (furnace_kilo,arcade_chuck_outwire);
+soft mao_willem (furnace_kilo,arcade_chuck_outwire);
 
 always @(arcade_chuck_outwire)
 begin

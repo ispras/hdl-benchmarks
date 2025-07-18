@@ -58,11 +58,6 @@ Rounding Modes (rmode):
 
 */
 
-`include "except.v"
-`include "pre_norm.v"
-`include "pre_norm_fmul.v"
-`include "primitives.v"
-`include "post_norm.v"
 
 module oc_fpu( clk, rmode, fpu_op, opa, opb, out, inf, snan, qnan, ine, overflow, underflow, zero, div_by_zero);
 input		clk;

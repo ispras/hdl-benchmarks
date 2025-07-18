@@ -119,7 +119,6 @@
 //
 
 `include "mc_defines.v"
-`include "mc_cs_rf.v"
 
 module mc_rf(clk, rst,
 

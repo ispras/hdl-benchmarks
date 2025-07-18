@@ -1,5 +1,3 @@
-`timescale 1 ps / 1 ps
-
 /* ***********************************************************************
   The Free IP Project
   Free-RISC8 -- Verilog 8-bit Microcontroller

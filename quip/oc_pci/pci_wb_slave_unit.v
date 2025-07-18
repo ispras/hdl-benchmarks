@@ -81,11 +81,6 @@
 // Wishbone slave unit consists of modules that together form datapath
 // between external WISHBONE masters and external PCI targets
 `include "pci_constants.v"
-`include "pci_wb_slave.v"
-`include "pci_wb_addr_mux.v"
-`include "pci_delayed_write_reg.v"
-`include "pci_master32_sm_if.v"
-`include "pci_master32_sm.v"
 
 // synopsys translate_off
 `include "timescale.v"

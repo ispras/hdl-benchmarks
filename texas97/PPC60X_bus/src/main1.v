@@ -1,8 +1,6 @@
 
 //`include define.v
 
-`include "cpu.v"
-
 module main(clk);
    
 	input		clk;

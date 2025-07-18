@@ -15,7 +15,6 @@
 /*--------------------------------------------------------------*/
 
 `include "x_def.v"
-`include "em_psel_part.v"
 
 module EM_CORE(/* IN */
 unsignX_E, unsignY_E, FracMode_E,

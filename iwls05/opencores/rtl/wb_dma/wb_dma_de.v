@@ -86,8 +86,6 @@
 
 `include "wb_dma_defines.v"
 
-`include "wb_dma_inc30r.v"
-
 module wb_dma_de(clk, rst,
 
 	// WISHBONE MASTER INTERFACE 0

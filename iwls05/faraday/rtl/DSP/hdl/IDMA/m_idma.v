@@ -6,7 +6,7 @@
 
 
 `include "x_def.v"
-`include "delaya.v"
+
 
 
 

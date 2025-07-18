@@ -69,7 +69,7 @@ module bcu( sys_clk, iResetn, cache_DBUS_reg, iIcache_address, iDcache_address,
 
 // cache read interfaces
    	output `memory_bus cache_DBUS_reg;	// Data satisfying a read request.
-	reg `memory_bus cache_DBUS_reg;
+	reg cache_DBUS_reg;
 
 	input `address
 		iIcache_address, 	// Assert whenever

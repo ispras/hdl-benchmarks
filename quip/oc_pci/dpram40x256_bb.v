@@ -39,9 +39,6 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-
-`include "altsyncram.v"
-
 module dpram40x256_bb (
 	data_a,
 	wren_a,

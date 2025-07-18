@@ -59,8 +59,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-`include "dct_mac.v"
-
 module dctu(clk, ena, ddgo, x, y, ddin, dout);
 
 	parameter coef_width = 16;

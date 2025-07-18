@@ -73,8 +73,6 @@
 // module provides synchronization mechanism between requesting and completing side of the bridge
 `include "pci_constants.v"
 `include "bus_commands.v"
-`include "pci_synchronizer_flop.v"
-
 
 // synopsys translate_off
 `include "timescale.v"

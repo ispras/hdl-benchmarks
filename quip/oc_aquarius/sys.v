@@ -59,7 +59,6 @@
 
 `include "timescale.v"
 `include "defines.v"
-`include "clk_gate.v"
 
 //======================================================
 // SYS : System resources

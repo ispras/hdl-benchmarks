@@ -81,11 +81,6 @@
 //
 
 `include "pci_constants.v"
-`include "pci_target32_clk_en.v"
-`include "pci_target32_trdy_crit.v"
-`include "pci_target32_stop_crit.v"
-`include "pci_async_reset_flop.v"
-`include "pci_target32_devs_crit.v"
 
 // synopsys translate_off
 `include "timescale.v"

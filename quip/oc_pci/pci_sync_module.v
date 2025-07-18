@@ -59,8 +59,6 @@
 //
 //
 
-`include "pci_delayed_sync.v"
-
 // synopsys translate_off
 `include "timescale.v"
 // synopsys translate_on

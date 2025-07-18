@@ -3,8 +3,8 @@
 
 
 
-`include "ereg15lc.v"
-`include "reg8lci.v"
+
+
 `include "x_def.v"
 
 

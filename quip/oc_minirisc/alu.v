@@ -25,8 +25,6 @@
 
 `timescale 1ns / 10ps
 
-`include "register_file.v"
-
 module alu(s1, s2, mask, out, op, c_in, c, dc, z);
 input  [7:0]	s1, s2, mask;
 output [7:0]	out;

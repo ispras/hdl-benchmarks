@@ -1,9 +1,106 @@
-`include "rstuv.v"
-`include "ijklm.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 `include "lxr_symbols.vh"
 `include "lmi_symbols.vh"
 
 module lmi_dram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (
 CLK, TMODE, RESET_D1_R_N, DISABLEC, CFG_DWDISW,
@@ -30,12 +127,43 @@ DW_DATAWE, DW_DATAWEN, DW_DATARE, DW_DATAREN, DW_DATACS, DW_DATACSN,
 CONFIGBASE, CONFIGTOP
 );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 parameter BASE_HI = 31;
 parameter BASE_LO = `LM_BASE_LO;
 parameter TOP_HI = `LM_TOP_HI;
 parameter TOP_LO = 4;
 parameter DATA_INDEX_HI = `DW_ADDR_HI;
 parameter DATA_INDEX_LO = 2;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 input CLK;

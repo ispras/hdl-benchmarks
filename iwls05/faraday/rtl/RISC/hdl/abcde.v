@@ -1,4 +1,87 @@
-`include "abcd.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // == core/jpt.v; version 1.42; LX-4180 release 4.0 ==
 
 // Copyright 1997-2000, Lexra Inc.
@@ -333,8 +416,8 @@ module  jpt
   //     what is the issue?
   //
 
-  `include "../include/lxr_symbols.vh"
-  `include "../include/core_symbols.vh"
+  `include "lxr_symbols.vh"
+  `include "core_symbols.vh"
 
   // the following help auto-sense work:
 

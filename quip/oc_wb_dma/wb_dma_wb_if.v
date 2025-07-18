@@ -76,8 +76,6 @@
 //
 
 `include "wb_dma_defines.v"
-`include "wb_dma_wb_mast.v"
-`include "wb_dma_wb_slv.v"
 
 module wb_dma_wb_if(clk, rst,
 

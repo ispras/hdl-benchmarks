@@ -12,7 +12,6 @@
 
 `include "alu.h"
 `include "sdlx.h"
-`include "misc.v"
 
 
 module RegFile (

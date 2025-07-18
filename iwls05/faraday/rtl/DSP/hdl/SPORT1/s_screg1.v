@@ -1,9 +1,41 @@
-`include "reg12lc.v"
-`include "reg16lc.v"
-`include "sreg16mc.v"
-`include "reg11lc.v"
-`include "definitions.v"
+
+
+
+
+
+
+
 `include "x_def.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module SCreg1 (/* in */ RST, DSPCLK, selAUTO, selFSDIV, selSCLKDIV,
 selSCTL, selMWORD, AUTO_we, FSDIV_we, SCLKDIV_we,

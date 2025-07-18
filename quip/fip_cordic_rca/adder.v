@@ -29,9 +29,6 @@
 //----------------------------------------------------------------------------
 
 `include "header.v"
-`include "busmux21.v"
-`include "rca.v"
-`include "compl.v"
 
 module Adder (S, sign, Asign, A, B, AS);
         output [`REG_SIZE:0] S;

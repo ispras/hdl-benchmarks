@@ -114,15 +114,6 @@
 // synopsys translate_on
 
 `include "oc8051_defines.v"
-`include "oc8051_decoder.v"
-`include "oc8051_alu.v"
-`include "oc8051_ram_top.v"
-`include "oc8051_alu_src_sel.v"
-`include "oc8051_comp.v"
-`include "oc8051_cy_select.v"
-`include "oc8051_indi_addr.v"
-`include "oc8051_memory_interface.v"
-`include "oc8051_sfr.v"
 
 module oc_oc8051 (wb_rst_i, wb_clk_i,
 //interface to instruction rom

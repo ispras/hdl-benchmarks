@@ -75,8 +75,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-`include "vga_csm_pb.v"
-
 module vga_curproc (clk, rst_i, Thgate, Tvgate, idat, idat_wreq, 
 	cursor_xy, cursor_en, cursor_res, 
 	cursor_wadr, cursor_wdat, cursor_we,

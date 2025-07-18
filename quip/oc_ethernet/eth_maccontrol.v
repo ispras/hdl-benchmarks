@@ -86,8 +86,6 @@
 
 
 `include "timescale.v"
-`include "eth_receivecontrol.v"
-`include "eth_transmitcontrol.v"
 
 
 module eth_maccontrol (MTxClk, MRxClk, TxReset, RxReset, TPauseRq, TxDataIn, TxStartFrmIn, TxUsedDataIn, 

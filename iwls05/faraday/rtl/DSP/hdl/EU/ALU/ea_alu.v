@@ -18,13 +18,6 @@
 `define del 1
 `include "x_def.v"
 
-`include "ea_dec.v"
-`include "ea_reg.v"
-`include "ea_core.v"
-`include "reg16l.v"
-`include "gtech_mux2.v"
-`include "dmdbuf.v"
-
 
 module EA_ALU(/*------------------ Inputs -------------------*/
  DSPCLK, GO_E, GO_C, EX_en, EX_enc,

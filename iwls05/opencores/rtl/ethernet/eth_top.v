@@ -239,12 +239,7 @@
 
 `include "eth_defines.v"
 `include "timescale.v"
-`include "eth_miim.v"
-`include "eth_registers.v"
-`include "eth_maccontrol.v"
-`include "eth_rxethmac.v"
-`include "eth_wishbone.v"
-`include "eth_macstatus.v"
+
 
 module eth_top
 (

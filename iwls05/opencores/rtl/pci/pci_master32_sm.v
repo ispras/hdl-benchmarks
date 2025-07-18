@@ -66,15 +66,6 @@
 // synopsys translate_on
 `include "pci_constants.v"
 
-`include "pci_frame_crit.v"
-`include "pci_frame_load_crit.v"
-`include "pci_irdy_out_crit.v"
-`include "pci_mas_ad_load_crit.v"
-`include "pci_mas_ch_state_crit.v"
-`include "pci_mas_ad_en_crit.v"
-`include "pci_cbe_en_crit.v"
-`include "pci_frame_en_crit.v"
-
 module pci_master32_sm
 (
     // system inputs

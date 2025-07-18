@@ -102,7 +102,6 @@
 `include "timescale.v"
 // synopsys translate_on
 `include "pci_constants.v"
-`include "dpram40x256.v"
 
 module pci_pci_tpram
 (

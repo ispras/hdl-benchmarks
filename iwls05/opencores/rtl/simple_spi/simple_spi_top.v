@@ -74,8 +74,6 @@
 `include "timescale.v"
 // synopsys translate_on
 
-`include "fifo4.v"
-
 module simple_spi_top(
   // 8bit WISHBONE bus slave interface
   input  wire       clk_i,         // clock

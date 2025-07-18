@@ -107,9 +107,6 @@
 
 `include "usbf_defines.v"
 
-`include "usbf_ep_rf.v"
-`include "usbf_ep_rf_dummy.v"
-
 // Endpoint register File
 module usbf_rf(	clk, wclk, rst,
 

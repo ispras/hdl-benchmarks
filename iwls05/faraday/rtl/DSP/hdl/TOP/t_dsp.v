@@ -1,18 +1,8 @@
-`include "t_glogic.v"
-`include "t_clkctl.v"
-`include "t_core.v"
-`include "memc.v"
-`include "emc.v"
-`include "idma.v"
-`include "sport0.v"
-`include "sport1.v"
-`include "auto_ctl.v"
-`include "sice.v"
-`include "pio.v"
-`include "tm.v"
-`include "t_rego.v"
-`include "bdma.v"
-`include "mabufx.v"
+
+
+
+
+
 
 
 module DSP_CORE 
@@ -574,7 +564,7 @@ XTALoffn,
 CKR[15:0]); 
 
 
-CORE core (/* ------------ Inputs ----------*/
+CORE core (/* ------------ Inputs ----------*/ 
 
 `ifdef FD_EVB 
 CORECLK, 

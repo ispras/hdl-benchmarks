@@ -25,10 +25,6 @@
 
 *********************************************************************** */
 
-`include "regs.v"
-`include "alu.v"
-`include "idec.v"
-
 module fip_risc8 (
    clk,
    reset,

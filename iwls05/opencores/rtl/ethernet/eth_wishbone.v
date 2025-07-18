@@ -252,8 +252,6 @@
 
 `include "eth_defines.v"
 `include "timescale.v"
-`include "eth_spram_256x32.v"
-`include "eth_fifo.v"
 
 
 module eth_wishbone

@@ -73,12 +73,6 @@
 
 `include "vga_defines.v"
 
-`include "vga_clkgen.v"
-`include "vga_tgen.v"
-`include "vga_colproc.v"
-`include "vga_fifo.v"
-`include "vga_vtim.v"
-
 module vga_pgen (
 	clk_i, ctrl_ven, ctrl_HSyncL, Thsync, Thgdel, Thgate, Thlen,
 	ctrl_VSyncL, Tvsync, Tvgdel, Tvgate, Tvlen, ctrl_CSyncL, ctrl_BlankL,

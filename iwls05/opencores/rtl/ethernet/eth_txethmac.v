@@ -95,10 +95,6 @@
 //
 
 `include "timescale.v"
-`include "eth_txcounters.v"
-`include "eth_txstatem.v"
-`include "eth_random.v"
-`include "eth_crc.v"
 
 
 module eth_txethmac (MTxClk, Reset, TxStartFrm, TxEndFrm, TxUnderRun, TxData, CarrierSense, 

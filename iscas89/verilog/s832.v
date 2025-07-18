@@ -4,22 +4,7 @@
 //# 25 inverters
 //# 262 gates (78 ANDs + 54 NANDs + 64 ORs + 66 NORs)
 
-//NOTE: copied from iscas89/verilog/s832a.v
 
-module dff (CK,Q,D);
-input CK,D;
-output Q;
-
-  wire NM,NCK;
-  trireg NQ,M;
-
-  nmos N7 (M,D,NCK);
-  not P3 (NM,M);
-  nmos N9 (NQ,NM,CK);
-  not P5 (Q,NQ);
-  not P1 (NCK,CK);
-
-endmodule
 
 module s832(GND,VDD,CK,G0,G1,G10,G11,G12,G13,G14,G15,G16,G18,G2,G288,G290,G292,
   G296,G298,

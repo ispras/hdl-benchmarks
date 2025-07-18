@@ -26,8 +26,6 @@
 
 `timescale 1ns / 10ps
 
-`include "primitives.v"
-
 module register_file(	clk,
 			rf_rd_bnk, rf_rd_addr, rf_rd_data,
 			rf_we, rf_wr_bnk, rf_wr_addr, rf_wr_data);

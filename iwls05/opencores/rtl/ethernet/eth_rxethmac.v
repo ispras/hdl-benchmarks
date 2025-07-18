@@ -109,10 +109,6 @@
 //
 
 `include "timescale.v"
-`include "eth_rxstatem.v"
-`include "eth_rxcounters.v"
-`include "eth_rxaddrcheck.v"
-`include "eth_txethmac.v"
 
 
 module eth_rxethmac (MRxClk, MRxDV, MRxD, Reset, Transmitting, MaxFL, r_IFG, HugEn, DlyCrcEn, 

@@ -3639,7 +3639,7 @@ begin
             out_file = in_file;
         else
         begin
-            ifp = $fopen($sformatf("%s", in_file), "r");
+            ifp = $fopen(in_file, "r");
 
             if (ifp == `NULL)
             begin
@@ -3659,7 +3659,7 @@ begin
 
             if (!done)
             begin
-                ofp = $fopen($sformatf("%s", out_file), "w");
+                ofp = $fopen(out_file, "w");
 
                 if (ofp == `NULL)
                 begin
@@ -4239,7 +4239,7 @@ begin
             out_file = in_file;
         else
         begin
-            ifp = $fopen($sformatf("%s", in_file), "r");
+            ifp = $fopen(in_file, "r");
             if (ifp == `NULL)
             begin
                 $display("ERROR: cannot read %0s.", in_file);
@@ -4258,7 +4258,7 @@ begin
 
             if (!done)
             begin
-                ofp = $fopen($sformatf("%s", out_file), "w");
+                ofp = $fopen(out_file, "w");
                 if (ofp == `NULL)
                 begin
                     $display("ERROR : cannot write %0s.", out_file);

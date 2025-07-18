@@ -233,14 +233,7 @@
 
 `include "eth_defines.v"
 `include "timescale.v"
-`include "eth_miim.v"
-`include "eth_registers.v"
-`include "eth_maccontrol.v"
-`include "eth_txethmac.v"
-`include "eth_rxethmac.v"
-`include "eth_wishbone.v"
-`include "eth_macstatus.v"
-`include "eth_register.v"
+
 
 module oc_ethernet
 (

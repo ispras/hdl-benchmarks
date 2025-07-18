@@ -1,7 +1,109 @@
-`include "ghijk.v"
-`include "fghij.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module macd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 (
@@ -19,6 +121,95 @@ CFG_MACMODE_E_R
 
 `include "lxr_symbols.vh"
 `include "core_symbols.vh"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 input CLK;
 input RESET_DIS;
@@ -62,10 +253,7 @@ reg [3:0] CEopVld_E_R_C;
 
 
 reg [3:0] Res_E_R_C0;
-wire [3:0] Res_E_R_C0_wire;
-
 reg [3:2] Res_E_R_C1;
-wire [3:2] Res_E_R_C1_wire;
 
 reg [3:0] SrcA_E;
 reg [3:0] SrcB_E;
@@ -364,10 +552,7 @@ reg [39:0] SrcBusA_C;
 reg [39:0] SrcBusB_C;
 
 reg [39:0] ResBusH_A;
-wire [39:0] ResBusH_A_wire;
-
 reg [39:0] ResBusL_A;
-wire [39:0] ResBusL_A_wire;
 
 wire [71:0] M0Res;
 wire [71:0] M1Res;
@@ -1988,10 +2173,7 @@ assign Dest_Acc = (CMult_M3_R | M0Mult_M3_R | M1Mult_M3_R) ? Dest_M3_R :
 (CMult_M2_R | M0Mult_M2_R | M1Mult_M2_R) ? 4'b0000
 : Dest_A_R;
 
-assign ResBusH_A_wire = ResBusH_A;
-assign ResBusL_A_wire = ResBusL_A;
-assign Res_E_R_C0_wire = Res_E_R_C0;
-assign Res_E_R_C1_wire = Res_E_R_C1;
+
 
 macfile macfile
 (
@@ -2012,11 +2194,11 @@ macfile macfile
 
 .DDATAHI ( DDATAHI ),
 .DDATALO ( DDATALO ),
-.Res2HI ( ResBusH_A_wire ),
-.Res2LO ( ResBusL_A_wire ),
+.Res2HI ( ResBusH_A ),
+.Res2LO ( ResBusL_A ),
 
-.Res_E_R_C0 ( Res_E_R_C0_wire ),
-.Res_E_R_C1 ( Res_E_R_C1_wire ),
+.Res_E_R_C0 ( Res_E_R_C0 ),
+.Res_E_R_C1 ( Res_E_R_C1 ),
 .Rhold ( myRhold ),
 .Xcpn ( CEI_XCPN_M ),
 

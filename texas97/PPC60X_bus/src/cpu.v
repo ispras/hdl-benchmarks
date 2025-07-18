@@ -1,6 +1,5 @@
 
 `include "define.v"
-`include "arbiter.v"
 
 /*
  
@@ -451,7 +450,7 @@ module	cpu(	.clk(clk),
    // bus_request_fsm decides non determistically to request for the bus.
    
    wire [2:0] ran_bus_request_fsm;
-   assign ran_bus_request_fsm = ND_2(`BusRequestIDLE,`BusRequestNORMAL);
+   assign ran_bus_request_fsm = $ND(`BusRequestIDLE,`BusRequestNORMAL);
    
    initial	bus_request_fsm <= `BusRequestIDLE;
    
@@ -656,7 +655,7 @@ module	cpu(	.clk(clk),
    wire [4:0] ran_out_register_tt;
    wire [3:0] ran_out_num;
 
-   assign ran_out_num  = ND_16(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+   assign ran_out_num  = $ND(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
    assign ran_out_register_tt = (ran_out_num == 0) ? `XferTypeCLEAN_BLOCK :
 				(ran_out_num == 1) ? `XferTypeFLUSH_BLOCK :
 				(ran_out_num == 2) ? `XferTypeSYNC :
@@ -672,13 +671,13 @@ module	cpu(	.clk(clk),
 				(ran_out_num == 12) ? `XferTypeREAD :
 				(ran_out_num == 13) ? `XferTypeREAD_ATOMIC : `XferTypeRWITM_ATOMIC;
    wire ran_tbst_fsm;
-   assign ran_tbst_fsm = ND_2(0,1);
+   assign ran_tbst_fsm = $ND(0,1);
    wire ran_out_register_gbl_;
-   assign ran_out_register_gbl_ = ND_2(0,1);
+   assign ran_out_register_gbl_ = $ND(0,1);
    wire ran_out_register_ci_;
-   assign ran_out_register_ci_ = ND_2(0,1);
+   assign ran_out_register_ci_ = $ND(0,1);
    wire ran_out_register_wt_;
-   assign ran_out_register_wt_ = ND_2(0,1);
+   assign ran_out_register_wt_ = $ND(0,1);
    
    always @(posedge clk)
 
@@ -933,7 +932,7 @@ module	cpu(	.clk(clk),
    assign	SHD_	= shd_asserted_by_this_cpu ? 1'b0 : 1'b1;
    
         wire [2:0] ran_TSIZ;
-   assign ran_TSIZ = ND_8(0,1,2,3,4,5,6,7);
+   assign ran_TSIZ = $ND(0,1,2,3,4,5,6,7);
    assign	TSIZ	= we_are_current_address_bus_master ?
 			  (TBST_`asserted0 ? 3'b010 : ran_TSIZ) :
 			  3'b0;
@@ -947,11 +946,11 @@ module	cpu(	.clk(clk),
    // cycle following the assertion of AACK_ (Book IV, page 50).
    
    wire [2:0] ran_snoop_control_fsm;
-   assign ran_snoop_control_fsm = ND_2(`SnoopControlBOTH, `SnoopControlREADY);
+   assign ran_snoop_control_fsm = $ND(`SnoopControlBOTH, `SnoopControlREADY);
    wire [2:0] ran_snoop_control_fsm2;
-   assign ran_snoop_control_fsm2 = ND_4(`SnoopControlBOTH, `SnoopControlARTRY, `SnoopControlSHARED, `SnoopControlREADY);
+   assign ran_snoop_control_fsm2 = $ND(`SnoopControlBOTH, `SnoopControlARTRY, `SnoopControlSHARED, `SnoopControlREADY);
    wire [2:0] ran_snoop_control_fsm3;
-   assign ran_snoop_control_fsm3 = ND_2(`SnoopControlARTRY, `SnoopControlREADY);
+   assign ran_snoop_control_fsm3 = $ND(`SnoopControlARTRY, `SnoopControlREADY);
    
    initial	snoop_control_fsm <= `SnoopControlIDLE;
    always @(posedge clk) begin

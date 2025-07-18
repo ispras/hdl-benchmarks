@@ -1,15 +1,9 @@
-`timescale 1 ps / 1 ps
-
 /////////////////////////////////////////////////////////////////
 // Altera Corporation
 // 
 // LUT helper circuit.
 //   Uses LUT IO buffers to make SGATE LUT directly.
 /////////////////////////////////////////////////////////////////
-
-`include "lut_input.v"
-`include "lut_output.v"
-
 module nut_004_lut (din,mask,out);
 
 parameter LUT_SIZE = 4;

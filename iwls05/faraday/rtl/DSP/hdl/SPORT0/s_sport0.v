@@ -1,9 +1,9 @@
-`include "s_screg0.v"
-`include "s_scfg0.v"
-`include "s_txctl0.v"
-`include "s_rxctl0.v"
-`include "s_compand.v"
-`include "dmdbuf.v"
+
+
+
+
+
+
 
 `include "x_def.v"
 

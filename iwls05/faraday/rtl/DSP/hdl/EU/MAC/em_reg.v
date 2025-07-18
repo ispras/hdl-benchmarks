@@ -1,10 +1,6 @@
-`include "dmdbuf.v"
-`include "reg2d16l.v"
-`include "reg16l.v"
-`include "gtech_mux4.v"
-`include "gtech_mux8.v"
-`include "reg2d8l.v"
-`include "reg9l.v"
+
+
+
 
 
 
