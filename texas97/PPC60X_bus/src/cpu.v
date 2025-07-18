@@ -672,13 +672,13 @@ module	cpu(	.clk(clk),
 				(ran_out_num == 12) ? `XferTypeREAD :
 				(ran_out_num == 13) ? `XferTypeREAD_ATOMIC : `XferTypeRWITM_ATOMIC;
    wire ran_tbst_fsm;
-   assign ran_tbst_fsm = ND_2(0,1);
+   assign ran_tbst_fsm = ND(0,1);
    wire ran_out_register_gbl_;
-   assign ran_out_register_gbl_ = ND_2(0,1);
+   assign ran_out_register_gbl_ = ND(0,1);
    wire ran_out_register_ci_;
-   assign ran_out_register_ci_ = ND_2(0,1);
+   assign ran_out_register_ci_ = ND(0,1);
    wire ran_out_register_wt_;
-   assign ran_out_register_wt_ = ND_2(0,1);
+   assign ran_out_register_wt_ = ND(0,1);
    
    always @(posedge clk)
 
@@ -947,11 +947,11 @@ module	cpu(	.clk(clk),
    // cycle following the assertion of AACK_ (Book IV, page 50).
    
    wire [2:0] ran_snoop_control_fsm;
-   assign ran_snoop_control_fsm = ND_2(`SnoopControlBOTH, `SnoopControlREADY);
+   assign ran_snoop_control_fsm = ND(`SnoopControlBOTH, `SnoopControlREADY);
    wire [2:0] ran_snoop_control_fsm2;
    assign ran_snoop_control_fsm2 = ND_4(`SnoopControlBOTH, `SnoopControlARTRY, `SnoopControlSHARED, `SnoopControlREADY);
    wire [2:0] ran_snoop_control_fsm3;
-   assign ran_snoop_control_fsm3 = ND_2(`SnoopControlARTRY, `SnoopControlREADY);
+   assign ran_snoop_control_fsm3 = ND(`SnoopControlARTRY, `SnoopControlREADY);
    
    initial	snoop_control_fsm <= `SnoopControlIDLE;
    always @(posedge clk) begin

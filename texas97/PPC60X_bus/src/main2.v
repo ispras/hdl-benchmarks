@@ -1,5 +1,5 @@
 
-`include "cpu.v"
+`include "mem.v"
 
 
 module main(clk);

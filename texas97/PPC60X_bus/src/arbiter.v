@@ -1,8 +1,10 @@
 
 `include "define.v"
-
+<<<<<<< HEAD
+`include "cpu.v"
+=======
 `include "mem.v"
-
+>>>>>>> 8072c14ffe950f490f1872c9fc725d3ca61eced9
 
 /*	The main idea of this module is to randomly assign the address bus grant, using
 	BG1_ and BG2_, to at most one of the cpus.  Originally we used two fairness
@@ -168,7 +170,7 @@ module	arb2(	.clk(clk),
 			 arbiter_fsm == `ArbiterStatusGRANTED2_AACK);
 
    wire ran_DBG1_reg_;
-   assign ran_DBG1_reg_ = ND_2(0,1);
+   assign ran_DBG1_reg_ = ND(0,1);
    
 	reg DBG1_reg_;
 	initial DBG1_reg_ <= 1;

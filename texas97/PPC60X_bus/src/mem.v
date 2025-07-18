@@ -1,6 +1,9 @@
 `include "define.v"
-
+<<<<<<< HEAD
+`include "arbiter.v"
+=======
 `include "include.lib"
+>>>>>>> 8072c14ffe950f490f1872c9fc725d3ca61eced9
 
 module	mem(	.clk(clk),
 		.TS_(TS_),
