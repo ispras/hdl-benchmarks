@@ -68,13 +68,6 @@
 `include "pci_constants.v"
 `include "bus_commands.v"
 
-`include "bus_commands.v"
-`include "pci_par_crit.v"
-`include "pci_perr_crit.v"
-`include "pci_perr_en_crit.v"
-`include "pci_serr_en_crit.v"
-`include "pci_serr_crit.v"
-
 module pci_parity_check
 (
     reset_in,

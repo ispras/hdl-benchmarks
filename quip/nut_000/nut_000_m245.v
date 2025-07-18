@@ -1,5 +1,3 @@
-`timescale 1 ps / 1 ps
-
 // 35 ins 33 outs
 module nut_000_m245 (clock,reset,ins,outs);
 input clock,reset;

@@ -1,8 +1,8 @@
-`include "reg12lc.v"
-`include "reg16lc.v"
-`include "sreg16mc.v"
-`include "reg11lc.v"
-`include "definitions.v"
+
+
+
+
+
 
 
 `include "x_def.v"

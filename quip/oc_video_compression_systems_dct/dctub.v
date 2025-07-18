@@ -59,8 +59,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-`include "dctu.v"
-
 module dctub(clk, ena, ddgo, x, y, ddin,
 		dout0, dout1, dout2, dout3, dout4, dout5, dout6, dout7);
 

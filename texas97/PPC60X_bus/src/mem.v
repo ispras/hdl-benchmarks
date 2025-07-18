@@ -1,9 +1,4 @@
 `include "define.v"
-<<<<<<< HEAD
-`include "arbiter.v"
-=======
-`include "include.lib"
->>>>>>> 8072c14ffe950f490f1872c9fc725d3ca61eced9
 
 module	mem(	.clk(clk),
 		.TS_(TS_),
@@ -58,7 +53,7 @@ module	mem(	.clk(clk),
 
 	reg hold_ta;
 
-        assign ran_address_status = ND_2(`AddrStatusAACK_WAIT,`AddrStatusAACK);
+        assign ran_address_status = $ND(`AddrStatusAACK_WAIT,`AddrStatusAACK);
    
 	initial hold_ta <= 0;
 
@@ -208,7 +203,7 @@ module	mem(	.clk(clk),
 			!valid_artry &&
 			!must_delay_ta ) ? ta_reg_ : 1;
    wire ran_ta_reg_;
-   assign ran_ta_reg_ = ND_2(0,1);
+   assign ran_ta_reg_ = $ND(0,1);
    
 	
 	initial ta_reg_ <= 1;
@@ -225,7 +220,7 @@ module	mem(	.clk(clk),
 	*/
    wire ran_DRTRY_;
    
-   assign ran_DRTRY_ = ND_2(0,1);
+   assign ran_DRTRY_ = $ND(0,1);
    
 	reg DRTRY_;
 	initial DRTRY_ <= 1;

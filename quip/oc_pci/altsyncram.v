@@ -8,7 +8,6 @@ module altsyncram
     parameter power_up_uninitialized = "TRUE",
     parameter byte_size = 8,
     parameter width_byteena_a = 4,
-    parameter width_byteena_b = 4,
     parameter numwords_a = 128,
     parameter numwords_b = 128,
     parameter width_a = 32,     // Data Width in bits
@@ -16,13 +15,9 @@ module altsyncram
     parameter widthad_a = 7,     // Address Width in bits
     parameter widthad_b = 7,     // Address Width in bits
     parameter address_reg_b = "CLOCK0",
-    parameter wrcontrol_wraddress_reg_b = "CLOCK0",
-    parameter indata_reg_b = 0,
     parameter outdata_reg_b = 0,
     parameter indata_aclr_a = "NONE",
-    parameter indata_aclr_b = "NONE",
     parameter wrcontrol_aclr_a = "NONE",
-    parameter wrcontrol_aclr_b = "NONE",
     parameter address_aclr_a = "NONE",
     parameter address_aclr_b = "NONE",
     parameter outdata_aclr_b = "NONE",

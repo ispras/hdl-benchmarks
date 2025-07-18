@@ -12,7 +12,6 @@
 
 `include "alu.h"
 `include "pdlx.h"
-`include "misc.v"
 
 
 module RegFile (
@@ -62,7 +61,7 @@ wire    rw0  = WrtReg ==  0 && RegWrite,
 	rw7  = WrtReg ==  7 && RegWrite;
    
 
-Register R0  ( r0, 4'b0000, rw0, Clk),
+ Register R0  ( r0, 4'b0000, rw0, Clk),
         R1  ( r1, WrtData, rw1, Clk),
          R2  ( r2, WrtData, rw2, Clk),
          R3  ( r3, WrtData, rw3, Clk),

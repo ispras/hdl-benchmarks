@@ -58,7 +58,6 @@
 
 `include "eth_defines.v"
 `include "timescale.v"
-`include "dpram_16x32.v"
 
 module eth_fifo (data_in, data_out, clk, reset, write, read, clear, almost_full, full, almost_empty, empty, cnt);
 

@@ -2,12 +2,9 @@
 
 
 
-`include "x_lib.v"
 
-`include "c_lpstk.v"
-`include "c_pcstk.v"
-`include "c_cntstk.v"
-`include "c_ststk.v"
+
+
 `include "x_def.v"
 
 

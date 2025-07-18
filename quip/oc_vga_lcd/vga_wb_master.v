@@ -95,8 +95,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-`include "vga_pgen.v"
-
 module vga_wb_master (clk_i, rst_i, nrst_i,
 	cyc_o, stb_o, cti_o, bte_o, we_o, adr_o, sel_o, ack_i, err_i, dat_i, sint,
 	ctrl_ven, ctrl_cd, ctrl_vbl, ctrl_vbsw, busy,

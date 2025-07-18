@@ -96,16 +96,6 @@
 // synopsys translate_on
 
 `include "oc8051_defines.v"
-`include "oc8051_acc.v"
-`include "oc8051_b_register.v"
-`include "oc8051_sp.v"
-`include "oc8051_dptr.v"
-`include "oc8051_psw.v"
-`include "oc8051_ports.v"
-`include "oc8051_uart.v"
-`include "oc8051_int.v"
-`include "oc8051_tc.v"
-`include "oc8051_tc2.v"
 
 
 module oc8051_sfr (rst, clk,

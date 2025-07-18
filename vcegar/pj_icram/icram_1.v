@@ -42,7 +42,7 @@ module main (
         input [1:0] we ;
         input clk ;
         input enable;
-        output [63:0] do;
+        output[63:0] do;
 
         // ram instantiated
         reg [7:0] ic_ram [`ic_size:0] ;

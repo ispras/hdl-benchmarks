@@ -87,7 +87,6 @@
 //
 
 `include "wb_dma_defines.v"
-`include "wb_dma_pri_enc_sub.v"
 
 // Priority Encoder
 //

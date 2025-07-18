@@ -78,8 +78,6 @@
 `include "bus_commands.v"
 `include "pci_constants.v"
 
-`include "pci_target_unit.v"
-
 // synopsys translate_off
 `include "timescale.v"
 // synopsys translate_on

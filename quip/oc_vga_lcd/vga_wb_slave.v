@@ -82,7 +82,6 @@
 `include "timescale.v"
 //synopsys translate_on
 `include "vga_defines.v"
-`include "vga_cur_cregs.v"
 
 module vga_wb_slave(
 	clk_i, rst_i, arst_i, adr_i, dat_i, dat_o, sel_i, we_i, stb_i, cyc_i, ack_o, rty_o, err_o, inta_o,

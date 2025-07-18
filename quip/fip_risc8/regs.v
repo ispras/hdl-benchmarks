@@ -28,8 +28,6 @@
 `define DEBUG_SHOWREADS
 `define DEBUG_SHOWWRITES
 
-`include "dram.v"
-
 // Memory Map:
 //
 // PIC Data Memory addressing is complicated.  See the Data Book for full explanation..

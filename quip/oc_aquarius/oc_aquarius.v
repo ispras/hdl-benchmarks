@@ -60,12 +60,6 @@
 
 `include "timescale.v"
 `include "defines.v"
-`include "cpu.v"
-`include "mem.v"
-`include "pio.v"
-`include "uart.v"
-`include "sys.v"
-`include "memory.v"
 
 //******************************
 // Top Module

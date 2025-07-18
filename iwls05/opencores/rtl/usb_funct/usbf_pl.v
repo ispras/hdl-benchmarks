@@ -99,10 +99,6 @@
 
 `include "usbf_defines.v"
 
-`include "usbf_pd.v"
-`include "usbf_idma.v"
-`include "usbf_pe.v"
-
 module usbf_pl(	clk, rst,
 
 		// UTMI Interface

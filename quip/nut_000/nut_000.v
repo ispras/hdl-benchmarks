@@ -4,18 +4,6 @@
 // 73 inputs 232 outputs
 //
 /////////////////////////////////////////////////////////////////
-
-`include "nut_000_lut.v"
-`include "nut_000_m245.v"
-`include "carry_sum.v"
-`include "nut_000_word_swap.v"
-`include "lcell.v"
-`include "carry.v"
-`include "cascade.v"
-`include "dffea_lib.v"
-`include "soft.v"
-`include "exp.v"
-
 module nut_000 (
 // inputs
  alpha, bravo, charlie, hotel, adbcensor, gojira,
@@ -14125,7 +14113,7 @@ begin
 end
 
 wire lamer_webvan_outwire;
-soft_module english_pyro (loser_curious,lamer_webvan_outwire);
+soft english_pyro (loser_curious,lamer_webvan_outwire);
 
 always @(lamer_webvan_outwire)
 begin

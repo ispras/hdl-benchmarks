@@ -6,17 +6,6 @@
 //
 //
 /////////////////////////////////////////////////////////////////
-
-`include "carry.v"
-`include "carry_sum.v"
-`include "dffea_lib.v"
-`include "nut_002_lut.v"
-`include "nut_002_m270.v"
-`include "nut_002_hagrid_neon.v"
-`include "nut_002_m47.v"
-`include "nut_002_rarest.v"
-`include "soft.v"
-
 module nut_002 (
 // inputs
  bravo, charlie, delta, echo, quebec, romeo,
@@ -10411,7 +10400,7 @@ begin
 end
 
 wire sun_milhouse_outwire;
-soft_module criminal_newt (moody,sun_milhouse_outwire);
+soft criminal_newt (moody,sun_milhouse_outwire);
 
 always @(sun_milhouse_outwire)
 begin

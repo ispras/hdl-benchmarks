@@ -49,8 +49,6 @@
 // First import
 //
 
-`include "byte_mixcolum.v"
-
 module word_mixcolum(in,outx,outy);
 input [31:0] in;
 output [31:0] outx;

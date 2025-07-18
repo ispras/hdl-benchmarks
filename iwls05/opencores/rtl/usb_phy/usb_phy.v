@@ -74,9 +74,6 @@
 
 `include "timescale.v"
 
-`include "usb_tx_phy.v"
-`include "usb_rx_phy.v"
-
 module usb_phy(clk, rst, phy_tx_mode, usb_rst,
 	
 		// Transciever Interface

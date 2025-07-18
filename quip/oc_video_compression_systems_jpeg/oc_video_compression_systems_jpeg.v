@@ -61,10 +61,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-`include "fdct.v"
-`include "jpeg_qnr.v"
-`include "jpeg_rle.v"
-
 module oc_video_compression_systems_jpeg (
 	clk,
 	ena,

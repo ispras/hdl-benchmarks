@@ -1,11 +1,3 @@
-`include "opq.v"
-`include "hijklm.v"
-`include "klmnop.v"
-`include "jklmno.v"
-`include"dmux.v"
-`include"dalu.v"
-`include"daddr.v"
-
 module ralu
 
 

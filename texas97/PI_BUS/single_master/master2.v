@@ -14,12 +14,6 @@
 `define HW_REQ  2'd1
 `define HW_WAT  2'd2
 
-`include "slave.v"
-`include "bus.v"
-
-`define RTR   3'd5
-`define RDM   3'd2
-
 module
    master_controller(clk,A,OPC,DIN,DOUT,LOCK,READ,REQ,GNT,TOUT,ACK);
    input clk;
@@ -48,7 +42,7 @@ module
    wire [0:29] 	 mst_addr;
    
 
-   master_hw M_HW(mst_rd,mst_wr,mst_lock,mst_size,mst_addr,st_mst_last_data,st_mst_restart,st_mst_abort,clk);
+   master_hw M_HW(mst_rd,mst_wr,mst_lock,mst_size,mst_addr,st_mst_last_data,st_mst_restart,st_mst_restart,st_mst_abort,clk);
 
    reg [2:0] state;
    reg 		 lock_tmp;
@@ -284,8 +278,8 @@ module
    reg [1:0] statem;
    initial begin
       statem = `HW_IDLE;
-      togglerw = ND_2(0,1);
-      counter = ND_16(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+      togglerw = $ND(0,1);
+      counter = $ND(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
       mstrd = 0;
       mstwr = 0;
             
@@ -293,8 +287,8 @@ module
    
    assign mst_rd = mstrd;
    assign mst_wr = mstwr;
-   assign mst_size = ND_2(0,1);
-   assign mst_lock = ND_2(0,1);
+   assign mst_size = $ND(0,1);
+   assign mst_lock = $ND(0,1);
    assign mst_addr = {30{1'b1}};
   
    always @(posedge clk) begin

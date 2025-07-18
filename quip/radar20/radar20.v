@@ -1,5 +1,3 @@
-`include "obj_q.v"
-
 module mega01( clk, in, out );
    input clk;
    input in;

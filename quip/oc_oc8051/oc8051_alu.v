@@ -86,8 +86,6 @@
 // synopsys translate_on
 
 `include "oc8051_defines.v"
-`include "oc8051_multiply.v"
-`include "oc8051_divide.v"
 
 
 

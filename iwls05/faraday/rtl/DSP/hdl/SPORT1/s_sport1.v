@@ -1,9 +1,26 @@
-`include "s_screg1.v"
-`include "s_scfg1.v"
-`include "s_txctl1.v"
-`include "s_rxctl1.v"
-`include "dmdbuf.v"
+
+
+
+
+
+
+
 `include "x_def.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module SPORT1 (/* -------- Inputs : --------- */
 RDx,

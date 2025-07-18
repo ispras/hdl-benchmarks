@@ -26,9 +26,6 @@
 
 `timescale 1ns / 10ps
 
-`include "oc_minirisc.v"
-`include "ramb4_s4_s4.v"
-
 module oc_minirisc_top(
    clk, rst_in,
    porta, portb, portc,

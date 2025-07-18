@@ -58,8 +58,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-`include "dctub.v"
-
 module dct(
 	clk,
 	ena,

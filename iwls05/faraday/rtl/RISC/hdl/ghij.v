@@ -1,6 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 `include "lxr_symbols.vh"
-`include "ghi.v"
-`include "ijk.v"
 
 module lx1
 
@@ -974,7 +1056,7 @@ jtag_tap tap
 
 .JTAG_TRST_N (JTAG_TRST_N),
 
-.JTAG_SCANOUT (jtag_scanout),
+.JTAG_SCANOUT (1'b0),
 
 
 .JTAG_ESCANOUT (JTAG_ESCANOUT),
@@ -989,7 +1071,7 @@ jtag_tap tap
 
 .RESET_PWRON_N (`LX_RESET_PWRON_C1_N_));
 
-assign jtag_scanout = 1'b0;
+
 
 
 

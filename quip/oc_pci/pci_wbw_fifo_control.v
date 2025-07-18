@@ -82,7 +82,6 @@
 /* FIFO_CONTROL module provides read/write address and status generation for
    FIFOs implemented with standard dual port SRAM cells in ASIC or FPGA designs */
 `include "pci_constants.v"
-`include "pci_wbr_fifo_control.v"
 // synopsys translate_off
 `include "timescale.v"
 // synopsys translate_on

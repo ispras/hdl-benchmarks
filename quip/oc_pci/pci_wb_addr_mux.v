@@ -61,7 +61,6 @@
 
 // module provides instantiation of address decoders and address multiplexer for various number of implemented wishbone images
 `include "pci_constants.v"
-`include "pci_wb_decoder.v"
 // synopsys translate_off
 `include "timescale.v"
 // synopsys translate_on

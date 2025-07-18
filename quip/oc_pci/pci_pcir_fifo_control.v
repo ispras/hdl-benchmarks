@@ -86,7 +86,6 @@
    FIFOs implemented with standard dual port SRAM cells in ASIC or FPGA designs */
 
 `include "pci_constants.v"
-`include "pci_wbw_wbr_fifos.v"
 
 // synopsys translate_off
 `include "timescale.v"

@@ -1,6 +1,4 @@
 `include "x_def.v"
-`include "x_parsm.v"
-`include "idebn.v"
 
 module SPARSER (/* In  */ RSTn, ICK, nSTBx, nAufdx,
                 /* Out */ Busy, IMS,

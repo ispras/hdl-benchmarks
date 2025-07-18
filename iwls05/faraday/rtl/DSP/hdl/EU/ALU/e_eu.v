@@ -1,7 +1,8 @@
-`include "ea_alu.v"
-`include "es_sht.v"
-`include "em_mac.v"
-`include "ec_cun.v"
+
+
+
+
+
 
 
 /*--------------------------------------------------------------*/ 

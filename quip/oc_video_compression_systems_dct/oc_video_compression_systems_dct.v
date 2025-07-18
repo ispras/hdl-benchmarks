@@ -63,8 +63,6 @@
 `include "timescale.v"
 // synopsys translate_on
 
-`include "fdct.v"
-
 module oc_video_compression_systems_dct (clk, ena, rst, dstrb, din, dout, den);
 
 	input clk;

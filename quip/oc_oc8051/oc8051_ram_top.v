@@ -75,7 +75,7 @@
 // synopsys translate_on
 
 `include "oc8051_defines.v"
-`include "oc8051_icache.v"
+
 
 module oc8051_ram_top (clk, 
                        rst, 

@@ -1,7 +1,7 @@
-`include "gtclk_not.v"
-`include "gtech_not.v"
-`include "gtclk_mux2.v"
-`include "gtech_mux2.v"
+
+
+
+
 
 
 

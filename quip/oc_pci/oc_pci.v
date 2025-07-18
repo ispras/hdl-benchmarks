@@ -109,13 +109,6 @@
 //
 
 `include "pci_constants.v"
-`include "pci_wbs_wbb3_2_wbb2.v"
-`include "pci_wb_slave_unit.v"
-`include "pci_io_mux.v"
-`include "pci_cur_out_reg.v"
-`include "pci_parity_check.v"
-`include "pci_in_reg.v"
-
 
 // synopsys translate_off
 `include "timescale.v"

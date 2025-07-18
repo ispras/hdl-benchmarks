@@ -4,15 +4,6 @@
 `define ADDRESS   2'd1
 `define DATA_WAIT 2'd2
 
-`include "include.lib"
-
-`define IDLE  3'd0
-`define WAT   3'd1
-`define RDM   3'd2
-`define ERR   3'd3
-`define RDY   3'd4
-`define RTR   3'd5
-
 module pi_state_machine( clk, Din, A, ACK, OPC, READ, filled, data_ready, error, TOUT, Dout, SEL_0);
    //input slave_abort;
    input [0:31] Din;
@@ -242,9 +233,9 @@ module dummyslavedevice ( filled, error, data_ready);
    //  wire   randchoice;
    //   assign randchoice = $ND(0,1);
 
-   assign  filled =ND_2(0,1);
-   assign  data_ready = ND_2(0,1);
-   assign  error =ND_2(0,1);
+   assign  filled =$ND(0,1);
+   assign  data_ready = $ND(0,1);
+   assign  error =$ND(0,1);
 
    /*
     always @(posedge clk)

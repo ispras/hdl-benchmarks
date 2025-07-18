@@ -1,4 +1,4 @@
-`include "x_def.v"
+
 
 module WRIAR (/* In  */ RST, ICK, Prdy, eqLen,
               /* Out */ IMSi, SCNTRup, IDoe_h, Srdy_h);

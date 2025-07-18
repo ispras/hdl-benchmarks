@@ -1,6 +1,112 @@
-`include "defg.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module lbc_lbus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (
 
@@ -423,5 +529,13 @@ lbc_mux req_mux
 .LEG0 (Req_P)
 );
 
+endmodule
+
+
+module lbc_and (OUT, IN1, IN2);
+output OUT;
+input IN1, IN2;
+
+assign OUT = IN1 & IN2;
 endmodule
 

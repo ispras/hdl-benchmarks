@@ -565,32 +565,32 @@ wire	[7:0]	shr, shl, exp_div_del;
 
 //delay2 #26 ud000(clk, test.u0.fracta, fracta_del);
 //delay2 #26 ud001(clk, test.u0.fractb, fractb_del);
-delay1   ud002(clk, {g,r,s}, grs_del);
-delay1   ud004(clk, dn, dn_del);
-delay1   ud005(clk, exp_in, exp_in_del);
-delay1   ud007(clk, exp_out_rnd, exp_out_del);
-delay1  ud009(clk, fract_in, fract_in_del);
-delay1   ud010(clk, overflow, overflow_del);
-delay1   ud011(clk, exp_ovf, exp_ovf_del);
-delay1  ud014(clk, fract_out, fract_out_x_del);
-delay1  ud015(clk, fract_trunc, trunc_xx_del);
-delay1 	 ud017(clk, exp_rnd_adj2a, exp_rnd_adj2a_del);
-delay1   ud019(clk, div_opa_ldz, div_opa_ldz_del);
+delay1  #2 ud002(clk, {g,r,s}, grs_del);
+delay1  #0 ud004(clk, dn, dn_del);
+delay1  #7 ud005(clk, exp_in, exp_in_del);
+delay1  #7 ud007(clk, exp_out_rnd, exp_out_del);
+delay1 #47 ud009(clk, fract_in, fract_in_del);
+delay1  #0 ud010(clk, overflow, overflow_del);
+delay1  #1 ud011(clk, exp_ovf, exp_ovf_del);
+delay1 #22 ud014(clk, fract_out, fract_out_x_del);
+delay1 #24 ud015(clk, fract_trunc, trunc_xx_del);
+delay1 	#0 ud017(clk, exp_rnd_adj2a, exp_rnd_adj2a_del);
+delay1  #4 ud019(clk, div_opa_ldz, div_opa_ldz_del);
 //delay3 #23 ud020(clk, test.u0.fdiv_opa[49:26],	fracta_div_del);
 //delay3 #23 ud021(clk, test.u0.fractb_mul,	fractb_div_del);
-delay1 	 ud023(clk, div_inf, div_inf_del);
-delay1   ud024(clk, fi_ldz_2, fi_ldz_2_del);
-delay1 	 ud025(clk, inf_out, inf_out_del);
-delay1 	 ud026(clk, max_num, max_num_del);
-delay1 	 ud027(clk, fi_ldz, fi_ldz_del);
-delay1   ud028(clk, rem_00, rx_del);
+delay1 	#0 ud023(clk, div_inf, div_inf_del);
+delay1  #7 ud024(clk, fi_ldz_2, fi_ldz_2_del);
+delay1 	#0 ud025(clk, inf_out, inf_out_del);
+delay1 	#0 ud026(clk, max_num, max_num_del);
+delay1 	#5 ud027(clk, fi_ldz, fi_ldz_del);
+delay1  #0 ud028(clk, rem_00, rx_del);
 
-delay1   ud029(clk, left_right, lr);
-delay1   ud030(clk, shift_right, shr);
-delay1   ud031(clk, shift_left, shl);
-delay1  ud032(clk, fract_out_rnd2a, fract_out_rnd2a_del);
+delay1  #0 ud029(clk, left_right, lr);
+delay1  #7 ud030(clk, shift_right, shr);
+delay1  #7 ud031(clk, shift_left, shl);
+delay1 #22 ud032(clk, fract_out_rnd2a, fract_out_rnd2a_del);
 
-delay1   ud033(clk, exp_div, exp_div_del);
+delay1  #7 ud033(clk, exp_div, exp_div_del);
 
 /*always @(test.error_event)
    begin

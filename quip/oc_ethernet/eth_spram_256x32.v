@@ -1,5 +1,3 @@
-`include "eth_spram_256x32_bb.v"
-
 module eth_spram_256x32 (clk, rst, ce, we, oe, addr, di, do);
 
 	input           clk;  // Clock, rising edge

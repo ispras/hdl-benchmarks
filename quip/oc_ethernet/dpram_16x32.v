@@ -1,5 +1,3 @@
-`include "dpram_16x32_bb.v"
-
 module dpram_16x32 (
 	data,
 	wren,

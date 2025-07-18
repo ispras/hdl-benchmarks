@@ -26,8 +26,6 @@
 
 `timescale 1ns / 10ps
 
-`include "presclr_wdt.v"
-
 module oc_minirisc(
    clk,
    rst_in,

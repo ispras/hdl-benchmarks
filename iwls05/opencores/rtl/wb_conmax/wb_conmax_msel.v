@@ -61,9 +61,6 @@
 
 `include "wb_conmax_defines.v"
 
-`include "wb_conmax_pri_enc.v"
-`include "wb_conmax_arb.v"
-
 module wb_conmax_msel(
 		clk_i, rst_i,
 		conf, req, sel, next

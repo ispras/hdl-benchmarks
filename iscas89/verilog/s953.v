@@ -4,22 +4,6 @@
 //# 84 inverters
 //# 311 gates (49 ANDs + 114 NANDs + 36 ORs + 112 NORs)
 
-//NOTE: copied from iscas89/verilog/s953a.v
-
-module dff (CK,Q,D);
-input CK,D;
-output Q;
-
-  wire NM,NCK;
-  trireg NQ,M;
-
-  nmos N7 (M,D,NCK);
-  not P3 (NM,M);
-  nmos N9 (NQ,NM,CK);
-  not P5 (Q,NQ);
-  not P1 (NCK,CK);
-
-endmodule
 
 module s953(GND,VDD,CK,ActBmHS1,ActRtHS1,DumpIIHS1,FullIIHS1,FullOHS1,GoBmHS1,
   GoRtHS1,

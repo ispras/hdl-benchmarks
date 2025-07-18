@@ -1,4 +1,86 @@
-`include "abcde.v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module lmi_lbc_cbi
 
@@ -48,8 +130,8 @@ module lmi_lbc_cbi
   C_EXCEPTION_M, CP0_IEJORDM_I, CP0_JCTRLDM_M_R, X_HALT_R
   );
 
-`include "../include/lxr_symbols.vh"
-`include "../include/core_symbols.vh"
+`include "lxr_symbols.vh"
+`include "core_symbols.vh"
 
   input         IDCLOCKI;
   input         RESET_D1_R_N;
