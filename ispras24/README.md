@@ -50,11 +50,8 @@ Verilog examples for the following operations and primitives:
   * greater than (`>`);
   * greater than or equal (`>=`);
   * less than (`<`);
-  * less than or equal (`<=`).
+  * less than or equal (`<=`);
 * look ahead and carry (`lcu`).
-* hard block instantiations:
-  * defined;
-  * undefined.
 
 * latch (`Dlatch`);
 * Set-Reset latch (`DlatchSR`);
