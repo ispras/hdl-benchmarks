@@ -10,6 +10,7 @@ The project has the following catalog structure:
 - `iccad-2015` - ICCAD-2015 CAD Contest benchmark suite
 - `iscas85` - ISCAS'85 benchmarks
 - `iscas89` - ISCAS'89 benchmarks
+- `ispras` - ISPRAS benchmarks
 - `ispras24` - ISPRAS'24 benchmarks
 - `iwls05` - IWLS'2005 benchmarks
 - `lgsynth91` - LGSynth'1991 benchmarks
@@ -45,6 +46,9 @@ are fixed) and are used in this project:
  Symposium on Circuits and Systems, pp. 1929-1934, May 1989.
  The current version was published by [Santosh S Malagi](https://github.com/santoshsmalagi/Benchmarks)
  and [Maxim Jenihhin](https://pld.ttu.ee/~maksim/benchmarks/);
+
+- ISPRAS benchmarks were developed at [Ivannikov Institute for System Programming of the Russian Academy of Sciences](https://www.ispras.ru/)
+ through different research activities on hardware design, synthesis and verification.
 
 - ISPRAS'24 benchmarks were developed at [Ivannikov Institute for System Programming of the Russian Academy of Sciences](https://www.ispras.ru/)
  by a team of researchers as a test suite for a (System)Verilog translator.
