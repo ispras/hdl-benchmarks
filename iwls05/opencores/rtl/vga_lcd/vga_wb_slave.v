@@ -208,10 +208,10 @@ module vga_wb_slave(
 	parameter [REG_ADR_HIBIT : 0] VBARB_ADR = 6'b00_0110;
 	parameter [REG_ADR_HIBIT : 0] C0XY_ADR  = 6'b00_1100;
 	parameter [REG_ADR_HIBIT : 0] C0BAR_ADR = 6'b00_1101;
-	parameter [REG_ADR_HIBIT : 0] CCR0_ADR  = 6'b01_0???;
+	parameter [REG_ADR_HIBIT : 0] CCR0_ADR  = 6'b01_0000;
 	parameter [REG_ADR_HIBIT : 0] C1XY_ADR  = 6'b01_1100;
 	parameter [REG_ADR_HIBIT : 0] C1BAR_ADR = 6'b01_1101;
-	parameter [REG_ADR_HIBIT : 0] CCR1_ADR  = 6'b10_0???;
+	parameter [REG_ADR_HIBIT : 0] CCR1_ADR  = 6'b10_0000;
 
 
 	reg [31:0] ctrl, stat, htim, vtim, hvlen;
@@ -460,6 +460,3 @@ module vga_wb_slave(
 	always @(posedge clk_i)
 	  inta_o <= #1 (hint & hie) | (vint & vie) | (vbsint & vbsie) | (cbsint & cbsie) | luint | sint;
 endmodule
-
-
-
