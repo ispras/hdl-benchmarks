@@ -1,5 +1,3 @@
-
-
 module ADC162H90A_dtop ( RESET,
                          MCLK,
                          DATA_LATCH,

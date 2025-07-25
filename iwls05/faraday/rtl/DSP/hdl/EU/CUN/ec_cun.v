@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 `include "x_def.v"
 module EC_CUN(/*--------------------- Input ---------------------*/
  DSPCLK, GO_E, GO_C, EX_en, T_RST, DMDin,

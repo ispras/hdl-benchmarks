@@ -1,4 +1,3 @@
-
 module DSP_CORE_top (
     CMAinx, CM_rd0, CM_rd1, CM_rd2, CM_rd3, CM_rd4, CM_rd5, CM_rd6, 
     CM_rd7, CM_rdm, CM_wd, DMAinx, DM_rd0, DM_rd1, DM_rd2, DM_rd3, 

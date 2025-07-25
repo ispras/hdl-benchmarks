@@ -1,15 +1,4 @@
-
-
-
-
-
-
-
 `include "x_def.v"
-
-
-
-
 
 module BDMA (/* ---------- Inputs : ---------- */
  BSreqx, BSack,

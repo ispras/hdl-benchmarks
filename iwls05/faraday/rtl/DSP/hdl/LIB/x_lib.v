@@ -1,12 +1,16 @@
-
-
-
-
-
-
-
 `include "x_def.v"
 
+module GtCLK_NOR2 ( Z, A, B );
+input A, B;
+output Z;
+GTECH_NOR2 Gtclk1 (.Z(Z), .A(A), .B(B));
+endmodule
+
+module GtCLK_NOT ( Z, A );
+input A;
+output Z;
+GTECH_NOT Gtclk1 (.Z(Z), .A(A));
+endmodule
 
 module DMDbuf (I, O);
 
@@ -1278,7 +1282,7 @@ module SW10201A ( A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI
                   DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16, DO17, DO18, DO19, DO20, DO21,
                   DO22, DO23, DO24, DO25, OE, WEB);
 
-input A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI0, DI1, DI2, DI3, DI4, DI5, DI6, DI7, DI8, 
+input A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, CKA, CKB, CSA, CSB, DI0, DI1, DI2, DI3, DI4, DI5, DI6, DI7, DI8,
       DI9, DI10, DI11, DI12, DI13, DI14, DI15, DI16, DI17, DI18, DI19, DI20, DI21, DI22, DI23, DI24, DI25, OE, WEB;
 output DO0, DO1, DO2, DO3, DO4, DO5, DO6, DO7, DO8, DO9, DO10, DO11, DO12, DO13, DO14, DO15, DO16,
        DO17, DO18, DO19, DO20, DO21, DO22, DO23, DO24, DO25;

@@ -49,7 +49,6 @@
 // First import
 //
 
-
 module des(clk,reset,load_i,decrypt_i,data_i,key_i,data_o,ready_o);
 input clk;
 input reset;

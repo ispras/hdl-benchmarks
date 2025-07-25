@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 `include "x_def.v"
 
 module GtCLK_OR_NOT ( Z, A, B );

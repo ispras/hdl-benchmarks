@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-
+`include "x_def.v"
 
 module CM4k (datai, datao, addr, cs, web, oe, ck); 
 

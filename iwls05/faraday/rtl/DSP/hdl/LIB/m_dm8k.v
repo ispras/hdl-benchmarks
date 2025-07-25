@@ -1,13 +1,6 @@
+`include "x_def.v"
 
-
-
-
-
-
-
-
-
-module DM8k (datai, datao, addr, cs, web, oe, ck); 
+module DM8k (datai, datao, addr, cs, web, oe, ck);
 
 output [15:0] datao; 
 input [15:0] datai; 

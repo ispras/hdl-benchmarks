@@ -46,6 +46,9 @@
 // Extracted distributed RAM module from wb/pci_tpram.v to its own file
 //
 //
+
+`timescale  1 ps / 1 ps
+
 module pci_ram_16x40d (data_out, we, data_in, read_address, write_address, wclk);
     parameter addr_width = 4 ;
     output [39:0] data_out;

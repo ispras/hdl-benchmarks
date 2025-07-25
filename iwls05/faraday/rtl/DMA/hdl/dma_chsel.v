@@ -1,44 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`include "DMA_DEFINE.vh" 
+`include "DMA_DEFINE.vh"
 
 module dma_chsel 
 ( 

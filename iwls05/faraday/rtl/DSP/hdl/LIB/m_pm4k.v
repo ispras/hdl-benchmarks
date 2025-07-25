@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-
+`include "x_def.v"
 
 module PM4k (datai, datao, addr, cs, web, oe, ck); 
 

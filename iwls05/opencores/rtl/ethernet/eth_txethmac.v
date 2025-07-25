@@ -96,7 +96,6 @@
 
 `include "timescale.v"
 
-
 module eth_txethmac (MTxClk, Reset, TxStartFrm, TxEndFrm, TxUnderRun, TxData, CarrierSense, 
                      Collision, Pad, CrcEn, FullD, HugEn, DlyCrcEn, MinFL, MaxFL, IPGT, 
                      IPGR1, IPGR2, CollValid, MaxRet, NoBckof, ExDfrEn, 

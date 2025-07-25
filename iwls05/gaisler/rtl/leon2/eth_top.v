@@ -66,7 +66,6 @@
 //
 //
 
-
 module eth_clockgen(Clk, Reset, Divider, MdcEn, MdcEn_n, Mdc);
 
 parameter Tp=1;

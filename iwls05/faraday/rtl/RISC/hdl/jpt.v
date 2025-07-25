@@ -1,0 +1,33 @@
+module jpt (
+    input wire JPT_DBM2PCSTSET_P,
+    input wire [11:0] JPT_PCST_DR,
+    input wire [8:1] JPT_TPC_DR,
+    input wire JPT_HALT_M_R_C,
+    input wire CLK,
+    input wire TMODE,
+    input wire RESET_D1_R_N,
+    input wire [1:0] CFG_EJTMLOG2,
+    input wire CFG_EJTBIT0M16,
+    input wire EJT_DREN_R,
+    input wire CFG_INSTM16EN,
+    input wire CP0_JCTRLDM_I_R,
+    input wire CP0_JCTRLDM_M_R,
+    input wire EJC_ECRPCAS_R,
+    input wire EJC_DCRTM_R,
+    input wire EJC_PCTRON_R,
+    input wire CP0_JPINDJ_E_R,
+    input wire [1:0] CP0_JPTYPE_M_R,
+    input wire CP0_JXCPN_M_R,
+    input wire CP0_JTRIG_M_R,
+    input wire CP0_XCPN_M,
+    input wire [2:0] CP0_XCPNVEC_M,
+    input wire [31:1] CP0_IVATGT_I_R,
+    input wire [31:1] CP0_IVATGT_S_R,
+    input wire [7:0] MMU_IASTGT_I_R,
+    input wire [7:0] MMU_IASTGT_S_R,
+    input wire CP0_INSTM32_I_R_N,
+    input wire CP0_INSTM32_S_R_N,
+    input wire CLMI_JPTHOLD
+);
+
+endmodule

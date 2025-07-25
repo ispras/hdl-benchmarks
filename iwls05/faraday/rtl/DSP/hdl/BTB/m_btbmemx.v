@@ -1,21 +1,4 @@
-
-
-
-
-
-
-
 `include "x_def.v"
-
-
-
-
-
-
-
-
-
-
 
 module BTBmem (clk, wa, web, cs, wd, ra, rd
 `ifdef FD_DFT

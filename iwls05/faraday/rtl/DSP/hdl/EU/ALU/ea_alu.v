@@ -18,7 +18,6 @@
 `define del 1
 `include "x_def.v"
 
-
 module EA_ALU(/*------------------ Inputs -------------------*/
  DSPCLK, GO_E, GO_C, EX_en, EX_enc,
 R_in_E,

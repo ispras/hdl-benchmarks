@@ -1,25 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module COMPAND (/* in */ DTYPE0, RX0, TX0, 
 expRX0, logTX0); 
 

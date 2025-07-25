@@ -58,7 +58,6 @@ Rounding Modes (rmode):
 
 */
 
-
 module fpu( clk, rmode, fpu_op, opa, opb, out, inf, snan, qnan, ine, overflow, underflow, zero, div_by_zero);
 input		clk;
 input	[1:0]	rmode;
@@ -408,7 +407,7 @@ assign mul_00 = (fpu_op_r3==3'b010) & (opa_00 | opb_00);
 assign div_00 = (fpu_op_r3==3'b011) & (opa_00 | opb_inf);
 
 assign out_fixed = (	(qnan_d | snan_d) |
-			(ind_d & !fasu_op_r2) | 
+			(ind_d & !fasu_op_r2) |
 			((fpu_op_r3==3'b011) & opb_00 & opa_00) |
 			(((opa_inf & opb_00) | (opb_inf & opa_00 )) & fpu_op_r3==3'b010)
 		   )  ? QNAN : INF;
@@ -431,7 +430,7 @@ always @(posedge clk)
 									sign_fasu_r;
 
 // Exception Outputs
-assign ine_mula = ((inf_mul_r |  inf_mul2 | opa_inf | opb_inf) & (rmode_r3==2'h1) & 
+assign ine_mula = ((inf_mul_r |  inf_mul2 | opa_inf | opb_inf) & (rmode_r3==2'h1) &
 		!((opa_inf & opb_00) | (opb_inf & opa_00 )) & fpu_op_r3[1]);
 
 assign ine_mul  = (ine_mula | ine_d | inf_fmul | out_d_00 | overflow_d | underflow_d) &
@@ -485,22 +484,22 @@ wire	[2:0]	fop;
 wire	[4:0]	ldza_del;
 wire	[49:0]	quo_del;
 
-delay1  #0 ud000(clk, underflow_fmul1, mul_uf_del);
-delay1  #0 ud001(clk, underflow_fmul_r[0], uf2_del);
-delay1  #0 ud002(clk, underflow_fmul_r[1], ufb2_del);
-delay1  #0 ud003(clk, underflow_d, underflow_d_del);
+delay1   ud000(clk, underflow_fmul1, mul_uf_del);
+delay1   ud001(clk, underflow_fmul_r[0], uf2_del);
+delay1   ud002(clk, underflow_fmul_r[1], ufb2_del);
+delay1   ud003(clk, underflow_d, underflow_d_del);
 //delay1  #0 ud004(clk, test.u0.u4.exp_out1_co, co_del);
-delay1  #0 ud005(clk, underflow_fmul_r[2], ufc2_del);
-delay1 #30 ud006(clk, out_d, out_d_del);
+delay1   ud005(clk, underflow_fmul_r[2], ufc2_del);
+delay1  ud006(clk, out_d, out_d_del);
 
-delay1  #0 ud007(clk, overflow_fasu, ov_fasu_del);
-delay1  #0 ud008(clk, overflow_fmul, ov_fmul_del);
+delay1   ud007(clk, overflow_fasu, ov_fasu_del);
+delay1   ud008(clk, overflow_fmul, ov_fmul_del);
 
-delay1  #2 ud009(clk, fpu_op_r3, fop);
+delay1   ud009(clk, fpu_op_r3, fop);
 
-delay3  #4 ud010(clk, div_opa_ldz_d, ldza_del);
+delay3   ud010(clk, div_opa_ldz_d, ldza_del);
 
-delay1  #49 ud012(clk, quo, quo_del);
+delay1   ud012(clk, quo, quo_del);
 
 /*always @(test.error_event)
    begin
@@ -523,7 +522,7 @@ always @(posedge clk)
 						(((opa_inf & opb_00) | (opb_inf & opa_00 )) & fpu_op_r3==3'b010)
 					   );
 
-assign inf_fmul = 	(((inf_mul_r | inf_mul2) & (rmode_r3==2'h0)) | opa_inf | opb_inf) & 
+assign inf_fmul = 	(((inf_mul_r | inf_mul2) & (rmode_r3==2'h0)) | opa_inf | opb_inf) &
 			!((opa_inf & opb_00) | (opb_inf & opa_00 )) &
 			fpu_op_r3==3'b010;
 

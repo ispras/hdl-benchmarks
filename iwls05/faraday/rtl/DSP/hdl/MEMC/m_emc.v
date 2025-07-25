@@ -1,15 +1,4 @@
-
-
-
-
-
-
-
 `include "x_def.v"
-
-
-
-
 
 module EMC (/* ------------ Inputs : ------------- */
 DSPCLK, T_RST, PPclr_h, DMD, selECM,

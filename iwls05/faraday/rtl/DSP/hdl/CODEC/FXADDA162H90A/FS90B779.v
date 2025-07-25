@@ -2,8 +2,6 @@
 // MODULE:	Top Module 
 
 /*********************************************************/
-
-
 module FS90B779 ( bclk, din, dout, lrcin, lrcout,lrcin_o, lrcout_o,bclk_o,
                   MCLK, RESET,
                   RLINEIN, LLINEIN, MICIN,

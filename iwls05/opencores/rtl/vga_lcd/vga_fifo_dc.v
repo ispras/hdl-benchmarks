@@ -68,7 +68,6 @@
 `include "timescale.v"
 //synopsys translate_on
 
-
 /*
 
   Dual clock FIFO.

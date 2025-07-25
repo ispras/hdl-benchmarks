@@ -168,7 +168,6 @@
 `include "eth_defines.v"
 `include "timescale.v"
 
-
 module eth_registers( DataIn, Address, Rw, Cs, Clk, Reset, DataOut, 
                       r_RecSmall, r_Pad, r_HugEn, r_CrcEn, r_DlyCrcEn, 
                       r_FullD, r_ExDfrEn, r_NoBckof, r_LoopBck, r_IFG, 

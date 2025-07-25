@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 `include "x_def.v"
 
 
