@@ -10,6 +10,6 @@ module hard_block_unknown_use_cat(A1, A2, B, S, Y);
 
   output [WIDTH_B-1:0] Y;
   
-  hard_block_unknown hard_block_unknown_u(.A({A1, A2}), .B(B), .S(S), .Y(Y));
+  hard_block hard_block_unknown_u(.A({A1, A2}), .B(B), .S(S), .Y(Y));
   
 endmodule

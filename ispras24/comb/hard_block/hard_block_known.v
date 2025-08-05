@@ -1,4 +1,4 @@
-module hard_block_known(A, B, S, Y);
+module hard_block(A, B, S, Y);
 
   parameter WIDTH = 4;
 
