@@ -114,7 +114,6 @@
 `define CP0_CVSTAG 9 
 `define CP0_RESREG 10 
 
-
 `define CP0_WPCSEL 3 
 
 `define CP0_SEL_PC_S 0 
@@ -456,7 +455,7 @@
 `define M16_RR 6'b101101 
 `define M16_SUB_RR 4:0 
 
-`define M16_JREG 5'b00000 
+`define M16_JREG 5'b00000
 
 `define M16_JRX 3'b000 
 `define M16_JRA 3'b001 

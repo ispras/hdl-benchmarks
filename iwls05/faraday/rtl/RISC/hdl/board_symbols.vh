@@ -30,7 +30,6 @@
 `define MemFullWord 1'b1 
 `endif 
 
-
 `ifdef BUSCLK 
 `else 
 `define BUSCLK (1*`SYSCLK) 
