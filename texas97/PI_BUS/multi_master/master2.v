@@ -42,8 +42,7 @@ module
    wire 	 st_mst_abort;
    wire [0:29] 	 mst_addr;
    
-
-   master_hw M_HW(mst_rd,mst_wr,mst_lock,mst_size,mst_addr,st_mst_last_data,st_mst_restart,st_mst_restart,st_mst_abort,clk);
+   master_hw M_HW(mst_rd,mst_wr,mst_lock,mst_size,mst_addr,st_mst_last_data,st_mst_restart,st_mst_abort,clk);
 
    reg [2:0] state;
    reg 		 lock_tmp;
