@@ -8,6 +8,7 @@ The project has the following catalog structure:
 
 - `epfl` - EPFL combinational benchmark suite
 - `iccad-2015` - ICCAD-2015 CAD Contest benchmark suite
+- `iccad-2017` - ICCAD-2017 CAD Contest benchmark suite
 - `iscas85` - ISCAS'85 benchmarks
 - `iscas89` - ISCAS'89 benchmarks
 - `ispras` - ISPRAS benchmarks
@@ -33,6 +34,11 @@ are fixed) and are used in this project:
  is a test suite for solutions of Large-scale Equivalence Checking and Function Correction
  problem that took part in the [CAD Contest](https://iccad-contest.org/2015/CAD-contest-at-ICCAD2015/index.html)
  during ICCAD 2015 Conference;
+
+- [ICCAD 2017 CAD Contest Benchmark Suite](https://www.iccad-contest.org/2017/Problem%20A_Ching-Yi.pdf)
+ is a test suite for solutions of Resource-aware Patch Generation
+ problem that took part in the [CAD Contest](https://www.iccad-contest.org/2017/index.html)
+ during ICCAD 2017 Conference;
 
 - [ISCAS'85 benchmarks](https://sportlab.usc.edu/~msabrishami/benchmarks.html) was proposed
  by M. Hansen, H. Yalcin, and J. P. Hayes, at the paper "Unveiling the ISCAS-85 Benchmarks:
