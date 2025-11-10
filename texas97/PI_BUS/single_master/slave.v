@@ -1,5 +1,8 @@
 //typedef enum {RESET, ADDRESS, DATA_WAIT} slave_status;
-
+`define IDLE 3'b000
+`define RDY  3'b001
+`define WAT  3'b010
+`define ERR  3'b100
 `define RESET     2'd0
 `define ADDRESS   2'd1
 `define DATA_WAIT 2'd2
@@ -231,11 +234,11 @@ module dummyslavedevice ( filled, error, data_ready);
    //  reg   r_error;
    //  reg   r_data_ready;
    //  wire   randchoice;
-   //   assign randchoice = $ND(0,1);
+   //   assign randchoice = ND_2(0,1);
 
-   assign  filled =$ND(0,1);
-   assign  data_ready = $ND(0,1);
-   assign  error =$ND(0,1);
+   assign  filled =ND_2(0,1);
+   assign  data_ready = ND_2(0,1);
+   assign  error =ND_2(0,1);
 
    /*
     always @(posedge clk)

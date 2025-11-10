@@ -6,6 +6,12 @@
 `define BUS_ADDR      3'd2
 `define BUS_ADDRDATA  3'd3
 `define BUS_DATA      3'd4
+`define IDLE 3'b000
+`define RDY  3'b001
+`define WAT  3'b010
+`define ERR  3'b100
+`define RTR  3'b100
+`define RDM  3'b100
 
 // modific for default master etc....
 module
