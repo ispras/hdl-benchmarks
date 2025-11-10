@@ -13,7 +13,12 @@
 `define HW_IDLE 2'd0
 `define HW_REQ  2'd1
 `define HW_WAT  2'd2
-
+`define IDLE 3'b000
+`define RDY  3'b001
+`define WAT  3'b010
+`define ERR  3'b100
+`define RTR  3'b100
+`define RDM  3'b100
 
 module
    master_controller(clk,A,OPC,DIN,DOUT,LOCK,READ,REQ,GNT,TOUT,ACK);
@@ -278,8 +283,8 @@ module
    reg [1:0] statem;
    initial begin
       statem = `HW_IDLE;
-      togglerw = $ND(0,1);
-      counter = $ND(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+      togglerw = ND_2(0,1);
+      counter = ND_16(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
       mstrd = 0;
       mstwr = 0;
             
@@ -287,8 +292,8 @@ module
    
    assign mst_rd = mstrd;
    assign mst_wr = mstwr;
-   assign mst_size = $ND(0,1);
-   assign mst_lock = $ND(0,1);
+   assign mst_size = ND_2(0,1);
+   assign mst_lock = ND_2(0,1);
    assign mst_addr = {30{1'b1}};
   
    always @(posedge clk) begin

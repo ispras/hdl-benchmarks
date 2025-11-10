@@ -52,6 +52,8 @@ reg	[63:0]	des_exp[0:17];
 
 integer	i;
 
+reg		decrypt;
+
 always @(posedge clk)
 	des_exp[0] <= #1 exp_out_d;
 
@@ -63,6 +65,8 @@ always @(posedge clk)
 initial
    begin
 	clk=0;
+	decrypt=0;
+	
 	//            Key            Test data           Out data
 	x[00]=192'h0000000000000000_0000000000000000_8CA64DE9C1B123A7;
 	x[01]=192'hFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_7359B2163E4EDC58;
@@ -103,7 +107,7 @@ initial
 
 	$display("\n\nStarting DES Test ...\n");
 	
-	for(select=0;select<50;select=select+1)
+	for(select=0;select<34;select=select+1)
 	   begin
 	   	tmp=x[select];
 		//for(cnt=0;cnt<15;cnt=cnt+1)	@(posedge clk);
@@ -118,7 +122,7 @@ initial
 	$display("\nDES Test Done ...\n\n");
 	
 	$finish;
-   end // end of innitial
+   end // end of initial
 
 always #100 clk=~clk;
 
@@ -134,7 +138,12 @@ assign	key0 = tmp[135:128];
 assign	des_in = tmp[127:64];
 assign	exp_out_d = tmp[63:0];
 
-
-des u0( .desOut(desOut), .desIn(des_in), .key(key), .clk(clk));
+des u0( 
+    .desOut(desOut), 
+    .desIn(des_in), 
+    .key(key), 
+    .clk(clk),
+    .decrypt(decrypt)
+);
 
 endmodule

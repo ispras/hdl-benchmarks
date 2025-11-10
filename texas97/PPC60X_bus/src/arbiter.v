@@ -165,7 +165,7 @@ module	arb2(	.clk(clk),
 			 arbiter_fsm == `ArbiterStatusGRANTED2_AACK);
 
    wire ran_DBG1_reg_;
-   assign ran_DBG1_reg_ = $ND(0,1);
+   assign ran_DBG1_reg_ = ND_2(0,1);
    
 	reg DBG1_reg_;
 	initial DBG1_reg_ <= 1;
