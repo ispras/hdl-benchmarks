@@ -1,0 +1,5 @@
+spi_defines.v
+spi_shift.v
+timescale.v
+spi_clgen.v
+spi_top.v

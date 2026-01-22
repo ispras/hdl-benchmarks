@@ -1,0 +1,16 @@
+usbf_defines.v
+usbf_pl.v
+usbf_wb.v
+usbf_crc16.v
+usbf_mem_arb.v
+usbf_rf.v
+usbf_utmi_if.v
+usbf_ep_rf_dummy.v
+usbf_idma.v
+usbf_pd.v
+usbf_pe.v
+usbf_utmi_ls.v
+usbf_ep_rf.v
+usbf_crc5.v
+usbf_pa.v
+usbf_top.v

@@ -1,0 +1,13 @@
+common/crp.v
+common/sbox1.v
+common/sbox2.v
+common/sbox3.v
+common/sbox4.v
+common/sbox5.v
+common/sbox6.v
+common/sbox7.v
+common/sbox8.v
+area_opt/des.v
+area_opt/key_sel.v
+area_opt/key_sel3.v
+area_opt/des3.v
