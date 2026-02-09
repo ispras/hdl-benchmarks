@@ -66,8 +66,8 @@ reg [127:0] data_o;
 reg [7:0] sbox_data_o;
 reg sbox_decrypt_o;
 
-reg [4:0] state;
-reg [4:0] next_state;
+reg [3:0] state;
+reg [3:0] next_state;
 reg [127:0] data_reg;
 reg [127:0] next_data_reg;
 reg next_ready_o;
@@ -218,7 +218,7 @@ sbox_data_o = (data_array[0]);
 end
 
 			end
-		16:
+		15:
 begin
 			data_reg_var[15]=sbox_data_i;
 		//Makeshiftrowsstage
