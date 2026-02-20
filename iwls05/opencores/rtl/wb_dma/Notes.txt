@@ -1,0 +1,1 @@
+File 'wb_dma_ch_pri_enc.v', line 377-378: parameter 'pri_sel' in a sensitivity list

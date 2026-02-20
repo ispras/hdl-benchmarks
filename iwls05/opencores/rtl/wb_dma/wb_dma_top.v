@@ -119,7 +119,7 @@ module wb_dma_top(clk_i, rst_i,
 // chXX_conf = { CBUF, ED, ARS, EN }
 parameter		rf_addr = 0;
 parameter	[1:0]	pri_sel = 2'h0;
-parameter		ch_count = 1;
+parameter		ch_count = 31;
 parameter	[3:0]	ch0_conf = 4'h1;
 parameter	[3:0]	ch1_conf = 4'h0;
 parameter	[3:0]	ch2_conf = 4'h0;
@@ -217,7 +217,7 @@ input		wb1_rty_i;
 // Misc Signals
 input	[ch_count-1:0]	dma_req_i;
 input	[ch_count-1:0]	dma_nd_i;
-output	[ch_count-1:0]	dma_ack_o;
+output	[ch_count:0]	dma_ack_o;
 input	[ch_count-1:0]	dma_rest_i;
 output			inta_o;
 output			intb_o;

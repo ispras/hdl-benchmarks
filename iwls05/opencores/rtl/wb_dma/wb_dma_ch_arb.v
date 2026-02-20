@@ -2150,6 +2150,8 @@ always@(state or req or advance)
 			else
 			if(req[29])	next_state = grant29;
 		   end
+		  default:
+		   next_state = grant0;
 	endcase
    end
 
